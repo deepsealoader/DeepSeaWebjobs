@@ -65,6 +65,11 @@
       <artifactId>HUB_PRODUCT</artifactId>
       <version>0.1.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.example.deepsea.job</groupId>
+      <artifactId>SAL_PRODUCT</artifactId>
+      <version>0.1.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>${talend.job.finalName}</finalName>

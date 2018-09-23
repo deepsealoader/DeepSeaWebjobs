@@ -9,7 +9,7 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ JOB_BUILD_MASTER_VAULT ---
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] Copying 1 resource
+[INFO] Copying 2 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ JOB_BUILD_MASTER_VAULT ---
 [INFO] Not compiling main sources
@@ -35,7 +35,7 @@ o  'null:null'
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1.055 s
-[INFO] Finished at: 2018-09-22T21:10:59+08:00
-[INFO] Final Memory: 11M/227M
+[INFO] Total time: 1.519 s
+[INFO] Finished at: 2018-09-23T20:09:13+08:00
+[INFO] Final Memory: 11M/226M
 [INFO] ------------------------------------------------------------------------

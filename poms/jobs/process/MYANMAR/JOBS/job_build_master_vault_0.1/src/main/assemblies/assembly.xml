@@ -185,7 +185,6 @@
 				<include>org.talend.libraries:jboss-serialization</include>
 				<include>org.talend.libraries:postgresql-8.3-603.jdbc3</include>
 				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
-				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
 				<include>org.talend.libraries:trove</include>
 				<include>org.talend.libraries:advancedPersistentLookupLib-1.2</include>
 			</includes>
@@ -207,6 +206,7 @@
 			<includes>
 				<include>org.example.deepsea.job:SAT_PRODUCT</include>
 				<include>org.example.deepsea.job:HUB_PRODUCT</include>
+				<include>org.example.deepsea.job:SAL_PRODUCT</include>
 				<include>org.example.deepsea.job:JOB_BUILD_MASTER_VAULT</include>
 			</includes>
 			<outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>
