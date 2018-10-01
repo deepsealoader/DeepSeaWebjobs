@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_e5u5IMClEeipbvJffRKaTQ" comment="connectionComment" label="connectionLabel" dataPackage="_e5u5IcClEeipbvJffRKaTQ" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_e5u5IcClEeipbvJffRKaTQ" dataManager="_e5u5IMClEeipbvJffRKaTQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_e5u5IsClEeipbvJffRKaTQ" id="_g5tM0MClEeipbvJffRKaTQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5I8ClEeipbvJffRKaTQ" name="hub_id" id="284" label="hubId" length="-1" precision="-1" sourceType="INT4" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_e5u5JMClEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5JcClEeipbvJffRKaTQ" name="source" id="285" label="source" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_e5u5JsClEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5J8ClEeipbvJffRKaTQ" name="code" id="286" label="code" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_e5u5KMClEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5KcClEeipbvJffRKaTQ" name="parent_code" id="287" label="parentCode" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_e5u5KsClEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5K8ClEeipbvJffRKaTQ" name="organization_code" id="288" label="organizationCode" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_e5u5LMClEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5LcClEeipbvJffRKaTQ" name="name_en" id="289" label="nameEn" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_e5u5LsClEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5L8ClEeipbvJffRKaTQ" name="name_lo" id="290" label="nameLo" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_e5u5MMClEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5McClEeipbvJffRKaTQ" name="level" id="291" label="level" length="-1" precision="-1" sourceType="INT4" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_e5u5MsClEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_e5u5M8ClEeipbvJffRKaTQ" name="hierarchy_name" id="292" label="hierarchyName" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_e5u5NMClEeipbvJffRKaTQ"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

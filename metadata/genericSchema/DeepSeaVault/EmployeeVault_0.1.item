@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_DKjp4MCFEeikjKnyntMfTA" comment="connectionComment" label="connectionLabel" dataPackage="_DKjp4cCFEeikjKnyntMfTA" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_DKjp4cCFEeikjKnyntMfTA" dataManager="_DKjp4MCFEeikjKnyntMfTA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_DKjp4sCFEeikjKnyntMfTA" id="_EYKsgMCFEeikjKnyntMfTA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp48CFEeikjKnyntMfTA" name="hub_id" id="7537" label="hubId" length="-1" precision="-1" sourceType="INT4" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_DKjp5MCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp5cCFEeikjKnyntMfTA" name="source" id="7538" label="source" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DKjp5sCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp58CFEeikjKnyntMfTA" name="code" id="7539" label="code" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DKjp6MCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp6cCFEeikjKnyntMfTA" name="organization_code" id="7540" label="organizationCode" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DKjp6sCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp68CFEeikjKnyntMfTA" name="name_en" id="7541" label="nameEn" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DKjp7MCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp7cCFEeikjKnyntMfTA" name="name_lo" id="7542" label="nameLo" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_DKjp7sCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp78CFEeikjKnyntMfTA" name="visa" id="7543" label="visa" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_DKjp8MCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp8cCFEeikjKnyntMfTA" name="email" id="7544" label="email" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DKjp8sCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp88CFEeikjKnyntMfTA" name="arrival_date" id="7545" label="arrivalDate" length="-1" precision="-1" sourceType="TIMESTAMP" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_DKjp9MCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp9cCFEeikjKnyntMfTA" name="departure_date" id="7546" label="departureDate" length="-1" precision="-1" sourceType="TIMESTAMP" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_DKjp9sCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp98CFEeikjKnyntMfTA" name="job_title_en" id="7547" label="jobTitleEn" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_DKjp-MCFEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp-cCFEeikjKnyntMfTA" name="job_title_lo" id="7548" label="jobTitleLo" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_DKjp-sCFEeikjKnyntMfTA"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

@@ -12,12 +12,24 @@
     <module>code/routines</module>
     <module>jobs/process/test2_0.1</module>
     <module>jobs/process/Samples/querygeospatialsample_0.1</module>
-    <module>jobs/process/MYANMAR/SATS/sat_product_0.1</module>
     <module>jobs/process/MYANMAR/JOBS/job_sales_daily_to_monthly_0.1</module>
     <module>jobs/process/Samples/fishersetsample_0.1</module>
-    <module>jobs/process/MYANMAR/HUBS/hub_product_0.1</module>
-    <module>jobs/process/MYANMAR/JOBS/job_build_master_vault_0.1</module>
     <module>jobs/process/MYANMAR/SALS/sal_product_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/test_0.1</module>
+    <module>jobs/process/MYANMAR/SATS/sat_market_0.1</module>
+    <module>jobs/process/MYANMAR/SATS/sat_product_0.1</module>
+    <module>jobs/process/MYANMAR/SATS/sat_geography_0.1</module>
+    <module>jobs/process/MYANMAR/LINKS/link_tables_0.1</module>
+    <module>jobs/process/MYANMAR/SALS/sal_tables_0.1</module>
+    <module>jobs/process/MYANMAR/HUBS/hub_table_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/build_master_hubs_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/build_master_sats_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/build_master_links_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/build_master_vault_0.1</module>
+    <module>jobs/process/MYANMAR/SATS/sat_organization_0.1</module>
+    <module>jobs/process/MYANMAR/SATS/sat_employee_0.1</module>
+    <module>jobs/process/copy_of_mongotest_0.1</module>
+    <module>jobs/process/mongotest_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>

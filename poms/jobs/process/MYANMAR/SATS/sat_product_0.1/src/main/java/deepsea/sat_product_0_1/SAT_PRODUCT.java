@@ -50,9 +50,9 @@ import java.util.Comparator;
 @SuppressWarnings("unused")
 
 /**
- * Job: SAT_PRODUCT Purpose: Update Product SAT<br>
- * Description: Update Product SAT <br>
- * @author romualdrousseau@gmail.com
+ * Job: SAT_PRODUCT Purpose: <br>
+ * Description:  <br>
+ * @author user@talend.com
  * @version 7.0.1.20180411_1414
  * @status 
  */
@@ -134,6 +134,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(TYPE != null){
+				
+					this.setProperty("TYPE", TYPE.toString());
+				
+			}
+			
 			if(SHEET_NAME != null){
 				
 					this.setProperty("SHEET_NAME", SHEET_NAME.toString());
@@ -143,6 +149,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 			if(SOURCE != null){
 				
 					this.setProperty("SOURCE", SOURCE.toString());
+				
+			}
+			
+			if(TABLE != null){
+				
+					this.setProperty("TABLE", TABLE.toString());
 				
 			}
 			
@@ -156,6 +168,10 @@ public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
 	return this.POSTGRES_HOSTNAME;
 }
+public String TYPE;
+public String getTYPE(){
+	return this.TYPE;
+}
 public String SHEET_NAME;
 public String getSHEET_NAME(){
 	return this.SHEET_NAME;
@@ -163,6 +179,10 @@ public String getSHEET_NAME(){
 public String SOURCE;
 public String getSOURCE(){
 	return this.SOURCE;
+}
+public String TABLE;
+public String getTABLE(){
+	return this.TABLE;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -200,7 +220,7 @@ private RunStat runStat = new RunStat();
 		globalMap.put(KEY_DB_DATASOURCES_RAW, new java.util.HashMap<String, javax.sql.DataSource>(dataSources));
 	}
 
-	MetterCatcherUtils tFlowMeterCatcher_1 = new MetterCatcherUtils("_psQyAK6mEei-0OOsSSYPJA", "0.1");
+	MetterCatcherUtils tFlowMeterCatcher_1 = new MetterCatcherUtils("_tRfBgL-XEeip__KOlv70Sw", "0.1");
 
 private final java.io.ByteArrayOutputStream baos = new java.io.ByteArrayOutputStream();
 private final java.io.PrintStream errorMessagePS = new java.io.PrintStream(new java.io.BufferedOutputStream(baos));
@@ -358,6 +378,15 @@ private class TalendException extends Exception {
 					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tFilterColumns_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tFlowMeter_13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -428,6 +457,15 @@ private class TalendException extends Exception {
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
 					tDBConnection_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tSetGlobalVar_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tSetGlobalVar_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tPostjob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -528,6 +566,11 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
+			public void tSetGlobalVar_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
 			public void tPostjob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
@@ -560,9 +603,9 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
     static byte[] commonByteArray_DEEPSEA_SAT_PRODUCT = new byte[0];
 
 	
-			    public Integer hubId;
+			    public int hubId;
 
-				public Integer getHubId () {
+				public int getHubId () {
 					return this.hubId;
 				}
 				
@@ -632,15 +675,15 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					return this.nameLevel5;
 				}
 				
-			    public Float packageTablet;
+			    public float packageTablet;
 
-				public Float getPackageTablet () {
+				public float getPackageTablet () {
 					return this.packageTablet;
 				}
 				
-			    public Float stdBoxCoef;
+			    public float stdBoxCoef;
 
-				public Float getStdBoxCoef () {
+				public float getStdBoxCoef () {
 					return this.stdBoxCoef;
 				}
 				
@@ -656,58 +699,38 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					return this.therapeuticClass;
 				}
 				
-			    public String Attribute1;
+			    public String attribute1;
 
 				public String getAttribute1 () {
-					return this.Attribute1;
+					return this.attribute1;
 				}
 				
-			    public String Attribute2;
+			    public String attribute2;
 
 				public String getAttribute2 () {
-					return this.Attribute2;
+					return this.attribute2;
 				}
 				
-			    public String Attribute3;
+			    public String attribute3;
 
 				public String getAttribute3 () {
-					return this.Attribute3;
+					return this.attribute3;
 				}
 				
-			    public String Attribute4;
+			    public String attribute4;
 
 				public String getAttribute4 () {
-					return this.Attribute4;
+					return this.attribute4;
 				}
 				
-			    public String Attribute5;
+			    public String attribute5;
 
 				public String getAttribute5 () {
-					return this.Attribute5;
+					return this.attribute5;
 				}
 				
 
 
-	private Integer readInteger(ObjectInputStream dis) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-	    	intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
 
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
@@ -747,7 +770,7 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 
         		int length = 0;
 		
-						this.hubId = readInteger(dis);
+			        this.hubId = dis.readInt();
 					
 					this.source = readString(dis);
 					
@@ -771,33 +794,23 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					this.nameLevel5 = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.packageTablet = null;
-           				} else {
-           			    	this.packageTablet = dis.readFloat();
-           				}
+			        this.packageTablet = dis.readFloat();
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.stdBoxCoef = null;
-           				} else {
-           			    	this.stdBoxCoef = dis.readFloat();
-           				}
+			        this.stdBoxCoef = dis.readFloat();
 					
 					this.manufacturerName = readString(dis);
 					
 					this.therapeuticClass = readString(dis);
 					
-					this.Attribute1 = readString(dis);
+					this.attribute1 = readString(dis);
 					
-					this.Attribute2 = readString(dis);
+					this.attribute2 = readString(dis);
 					
-					this.Attribute3 = readString(dis);
+					this.attribute3 = readString(dis);
 					
-					this.Attribute4 = readString(dis);
+					this.attribute4 = readString(dis);
 					
-					this.Attribute5 = readString(dis);
+					this.attribute5 = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -817,9 +830,9 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
         try {
 
 		
-					// Integer
+					// int
 				
-						writeInteger(this.hubId,dos);
+		            	dos.writeInt(this.hubId);
 					
 					// String
 				
@@ -865,23 +878,13 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 				
 						writeString(this.nameLevel5,dos);
 					
-					// Float
+					// float
 				
-						if(this.packageTablet == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeFloat(this.packageTablet);
-		            	}
+		            	dos.writeFloat(this.packageTablet);
 					
-					// Float
+					// float
 				
-						if(this.stdBoxCoef == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeFloat(this.stdBoxCoef);
-		            	}
+		            	dos.writeFloat(this.stdBoxCoef);
 					
 					// String
 				
@@ -893,23 +896,23 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					// String
 				
-						writeString(this.Attribute1,dos);
+						writeString(this.attribute1,dos);
 					
 					// String
 				
-						writeString(this.Attribute2,dos);
+						writeString(this.attribute2,dos);
 					
 					// String
 				
-						writeString(this.Attribute3,dos);
+						writeString(this.attribute3,dos);
 					
 					// String
 				
-						writeString(this.Attribute4,dos);
+						writeString(this.attribute4,dos);
 					
 					// String
 				
-						writeString(this.Attribute5,dos);
+						writeString(this.attribute5,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -940,11 +943,11 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
-		sb.append(",Attribute1="+Attribute1);
-		sb.append(",Attribute2="+Attribute2);
-		sb.append(",Attribute3="+Attribute3);
-		sb.append(",Attribute4="+Attribute4);
-		sb.append(",Attribute5="+Attribute5);
+		sb.append(",attribute1="+attribute1);
+		sb.append(",attribute2="+attribute2);
+		sb.append(",attribute3="+attribute3);
+		sb.append(",attribute4="+attribute4);
+		sb.append(",attribute5="+attribute5);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -985,14 +988,14 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 
 }
 
-public static class row8Struct implements routines.system.IPersistableRow<row8Struct> {
+public static class row10Struct implements routines.system.IPersistableRow<row10Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_SAT_PRODUCT = new byte[0];
     static byte[] commonByteArray_DEEPSEA_SAT_PRODUCT = new byte[0];
 
 	
-			    public Integer hubId;
+			    public int hubId;
 
-				public Integer getHubId () {
+				public int getHubId () {
 					return this.hubId;
 				}
 				
@@ -1062,15 +1065,15 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.nameLevel5;
 				}
 				
-			    public Float packageTablet;
+			    public float packageTablet;
 
-				public Float getPackageTablet () {
+				public float getPackageTablet () {
 					return this.packageTablet;
 				}
 				
-			    public Float stdBoxCoef;
+			    public float stdBoxCoef;
 
-				public Float getStdBoxCoef () {
+				public float getStdBoxCoef () {
 					return this.stdBoxCoef;
 				}
 				
@@ -1086,58 +1089,38 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.therapeuticClass;
 				}
 				
-			    public String Attribute1;
+			    public String attribute1;
 
 				public String getAttribute1 () {
-					return this.Attribute1;
+					return this.attribute1;
 				}
 				
-			    public String Attribute2;
+			    public String attribute2;
 
 				public String getAttribute2 () {
-					return this.Attribute2;
+					return this.attribute2;
 				}
 				
-			    public String Attribute3;
+			    public String attribute3;
 
 				public String getAttribute3 () {
-					return this.Attribute3;
+					return this.attribute3;
 				}
 				
-			    public String Attribute4;
+			    public String attribute4;
 
 				public String getAttribute4 () {
-					return this.Attribute4;
+					return this.attribute4;
 				}
 				
-			    public String Attribute5;
+			    public String attribute5;
 
 				public String getAttribute5 () {
-					return this.Attribute5;
+					return this.attribute5;
 				}
 				
 
 
-	private Integer readInteger(ObjectInputStream dis) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-	    	intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
 
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
@@ -1177,7 +1160,7 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 
         		int length = 0;
 		
-						this.hubId = readInteger(dis);
+			        this.hubId = dis.readInt();
 					
 					this.source = readString(dis);
 					
@@ -1201,33 +1184,23 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 					this.nameLevel5 = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.packageTablet = null;
-           				} else {
-           			    	this.packageTablet = dis.readFloat();
-           				}
+			        this.packageTablet = dis.readFloat();
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.stdBoxCoef = null;
-           				} else {
-           			    	this.stdBoxCoef = dis.readFloat();
-           				}
+			        this.stdBoxCoef = dis.readFloat();
 					
 					this.manufacturerName = readString(dis);
 					
 					this.therapeuticClass = readString(dis);
 					
-					this.Attribute1 = readString(dis);
+					this.attribute1 = readString(dis);
 					
-					this.Attribute2 = readString(dis);
+					this.attribute2 = readString(dis);
 					
-					this.Attribute3 = readString(dis);
+					this.attribute3 = readString(dis);
 					
-					this.Attribute4 = readString(dis);
+					this.attribute4 = readString(dis);
 					
-					this.Attribute5 = readString(dis);
+					this.attribute5 = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -1247,9 +1220,9 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
         try {
 
 		
-					// Integer
+					// int
 				
-						writeInteger(this.hubId,dos);
+		            	dos.writeInt(this.hubId);
 					
 					// String
 				
@@ -1295,23 +1268,13 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 				
 						writeString(this.nameLevel5,dos);
 					
-					// Float
+					// float
 				
-						if(this.packageTablet == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeFloat(this.packageTablet);
-		            	}
+		            	dos.writeFloat(this.packageTablet);
 					
-					// Float
+					// float
 				
-						if(this.stdBoxCoef == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeFloat(this.stdBoxCoef);
-		            	}
+		            	dos.writeFloat(this.stdBoxCoef);
 					
 					// String
 				
@@ -1323,23 +1286,23 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 					// String
 				
-						writeString(this.Attribute1,dos);
+						writeString(this.attribute1,dos);
 					
 					// String
 				
-						writeString(this.Attribute2,dos);
+						writeString(this.attribute2,dos);
 					
 					// String
 				
-						writeString(this.Attribute3,dos);
+						writeString(this.attribute3,dos);
 					
 					// String
 				
-						writeString(this.Attribute4,dos);
+						writeString(this.attribute4,dos);
 					
 					// String
 				
-						writeString(this.Attribute5,dos);
+						writeString(this.attribute5,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -1370,11 +1333,401 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
-		sb.append(",Attribute1="+Attribute1);
-		sb.append(",Attribute2="+Attribute2);
-		sb.append(",Attribute3="+Attribute3);
-		sb.append(",Attribute4="+Attribute4);
-		sb.append(",Attribute5="+Attribute5);
+		sb.append(",attribute1="+attribute1);
+		sb.append(",attribute2="+attribute2);
+		sb.append(",attribute3="+attribute3);
+		sb.append(",attribute4="+attribute4);
+		sb.append(",attribute5="+attribute5);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row10Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class row8Struct implements routines.system.IPersistableRow<row8Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_SAT_PRODUCT = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_SAT_PRODUCT = new byte[0];
+
+	
+			    public int hubId;
+
+				public int getHubId () {
+					return this.hubId;
+				}
+				
+			    public String source;
+
+				public String getSource () {
+					return this.source;
+				}
+				
+			    public String codeLevel1;
+
+				public String getCodeLevel1 () {
+					return this.codeLevel1;
+				}
+				
+			    public String codeLevel2;
+
+				public String getCodeLevel2 () {
+					return this.codeLevel2;
+				}
+				
+			    public String codeLevel3;
+
+				public String getCodeLevel3 () {
+					return this.codeLevel3;
+				}
+				
+			    public String codeLevel4;
+
+				public String getCodeLevel4 () {
+					return this.codeLevel4;
+				}
+				
+			    public String codeLevel5;
+
+				public String getCodeLevel5 () {
+					return this.codeLevel5;
+				}
+				
+			    public String nameLevel1;
+
+				public String getNameLevel1 () {
+					return this.nameLevel1;
+				}
+				
+			    public String nameLevel2;
+
+				public String getNameLevel2 () {
+					return this.nameLevel2;
+				}
+				
+			    public String nameLevel3;
+
+				public String getNameLevel3 () {
+					return this.nameLevel3;
+				}
+				
+			    public String nameLevel4;
+
+				public String getNameLevel4 () {
+					return this.nameLevel4;
+				}
+				
+			    public String nameLevel5;
+
+				public String getNameLevel5 () {
+					return this.nameLevel5;
+				}
+				
+			    public float packageTablet;
+
+				public float getPackageTablet () {
+					return this.packageTablet;
+				}
+				
+			    public float stdBoxCoef;
+
+				public float getStdBoxCoef () {
+					return this.stdBoxCoef;
+				}
+				
+			    public String manufacturerName;
+
+				public String getManufacturerName () {
+					return this.manufacturerName;
+				}
+				
+			    public String therapeuticClass;
+
+				public String getTherapeuticClass () {
+					return this.therapeuticClass;
+				}
+				
+			    public String attribute1;
+
+				public String getAttribute1 () {
+					return this.attribute1;
+				}
+				
+			    public String attribute2;
+
+				public String getAttribute2 () {
+					return this.attribute2;
+				}
+				
+			    public String attribute3;
+
+				public String getAttribute3 () {
+					return this.attribute3;
+				}
+				
+			    public String attribute4;
+
+				public String getAttribute4 () {
+					return this.attribute4;
+				}
+				
+			    public String attribute5;
+
+				public String getAttribute5 () {
+					return this.attribute5;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_SAT_PRODUCT.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_SAT_PRODUCT.length == 0) {
+   					commonByteArray_DEEPSEA_SAT_PRODUCT = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_SAT_PRODUCT = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_SAT_PRODUCT, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_SAT_PRODUCT, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_SAT_PRODUCT) {
+
+        	try {
+
+        		int length = 0;
+		
+			        this.hubId = dis.readInt();
+					
+					this.source = readString(dis);
+					
+					this.codeLevel1 = readString(dis);
+					
+					this.codeLevel2 = readString(dis);
+					
+					this.codeLevel3 = readString(dis);
+					
+					this.codeLevel4 = readString(dis);
+					
+					this.codeLevel5 = readString(dis);
+					
+					this.nameLevel1 = readString(dis);
+					
+					this.nameLevel2 = readString(dis);
+					
+					this.nameLevel3 = readString(dis);
+					
+					this.nameLevel4 = readString(dis);
+					
+					this.nameLevel5 = readString(dis);
+					
+			        this.packageTablet = dis.readFloat();
+					
+			        this.stdBoxCoef = dis.readFloat();
+					
+					this.manufacturerName = readString(dis);
+					
+					this.therapeuticClass = readString(dis);
+					
+					this.attribute1 = readString(dis);
+					
+					this.attribute2 = readString(dis);
+					
+					this.attribute3 = readString(dis);
+					
+					this.attribute4 = readString(dis);
+					
+					this.attribute5 = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// int
+				
+		            	dos.writeInt(this.hubId);
+					
+					// String
+				
+						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.codeLevel1,dos);
+					
+					// String
+				
+						writeString(this.codeLevel2,dos);
+					
+					// String
+				
+						writeString(this.codeLevel3,dos);
+					
+					// String
+				
+						writeString(this.codeLevel4,dos);
+					
+					// String
+				
+						writeString(this.codeLevel5,dos);
+					
+					// String
+				
+						writeString(this.nameLevel1,dos);
+					
+					// String
+				
+						writeString(this.nameLevel2,dos);
+					
+					// String
+				
+						writeString(this.nameLevel3,dos);
+					
+					// String
+				
+						writeString(this.nameLevel4,dos);
+					
+					// String
+				
+						writeString(this.nameLevel5,dos);
+					
+					// float
+				
+		            	dos.writeFloat(this.packageTablet);
+					
+					// float
+				
+		            	dos.writeFloat(this.stdBoxCoef);
+					
+					// String
+				
+						writeString(this.manufacturerName,dos);
+					
+					// String
+				
+						writeString(this.therapeuticClass,dos);
+					
+					// String
+				
+						writeString(this.attribute1,dos);
+					
+					// String
+				
+						writeString(this.attribute2,dos);
+					
+					// String
+				
+						writeString(this.attribute3,dos);
+					
+					// String
+				
+						writeString(this.attribute4,dos);
+					
+					// String
+				
+						writeString(this.attribute5,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("hubId="+String.valueOf(hubId));
+		sb.append(",source="+source);
+		sb.append(",codeLevel1="+codeLevel1);
+		sb.append(",codeLevel2="+codeLevel2);
+		sb.append(",codeLevel3="+codeLevel3);
+		sb.append(",codeLevel4="+codeLevel4);
+		sb.append(",codeLevel5="+codeLevel5);
+		sb.append(",nameLevel1="+nameLevel1);
+		sb.append(",nameLevel2="+nameLevel2);
+		sb.append(",nameLevel3="+nameLevel3);
+		sb.append(",nameLevel4="+nameLevel4);
+		sb.append(",nameLevel5="+nameLevel5);
+		sb.append(",packageTablet="+String.valueOf(packageTablet));
+		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
+		sb.append(",manufacturerName="+manufacturerName);
+		sb.append(",therapeuticClass="+therapeuticClass);
+		sb.append(",attribute1="+attribute1);
+		sb.append(",attribute2="+attribute2);
+		sb.append(",attribute3="+attribute3);
+		sb.append(",attribute4="+attribute4);
+		sb.append(",attribute5="+attribute5);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -1420,36 +1773,6 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
     static byte[] commonByteArray_DEEPSEA_SAT_PRODUCT = new byte[0];
 
 	
-			    public String NameLevel1;
-
-				public String getNameLevel1 () {
-					return this.NameLevel1;
-				}
-				
-			    public String NameLevel2;
-
-				public String getNameLevel2 () {
-					return this.NameLevel2;
-				}
-				
-			    public String NameLevel3;
-
-				public String getNameLevel3 () {
-					return this.NameLevel3;
-				}
-				
-			    public String NameLevel4;
-
-				public String getNameLevel4 () {
-					return this.NameLevel4;
-				}
-				
-			    public String NameLevel5;
-
-				public String getNameLevel5 () {
-					return this.NameLevel5;
-				}
-				
 			    public String CodeLevel1;
 
 				public String getCodeLevel1 () {
@@ -1480,15 +1803,45 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					return this.CodeLevel5;
 				}
 				
-			    public Float Package;
+			    public String NameLevel1;
 
-				public Float getPackage () {
+				public String getNameLevel1 () {
+					return this.NameLevel1;
+				}
+				
+			    public String NameLevel2;
+
+				public String getNameLevel2 () {
+					return this.NameLevel2;
+				}
+				
+			    public String NameLevel3;
+
+				public String getNameLevel3 () {
+					return this.NameLevel3;
+				}
+				
+			    public String NameLevel4;
+
+				public String getNameLevel4 () {
+					return this.NameLevel4;
+				}
+				
+			    public String NameLevel5;
+
+				public String getNameLevel5 () {
+					return this.NameLevel5;
+				}
+				
+			    public float Package;
+
+				public float getPackage () {
 					return this.Package;
 				}
 				
-			    public Float StdBoxCoef;
+			    public float StdBoxCoef;
 
-				public Float getStdBoxCoef () {
+				public float getStdBoxCoef () {
 					return this.StdBoxCoef;
 				}
 				
@@ -1575,16 +1928,6 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 
         		int length = 0;
 		
-					this.NameLevel1 = readString(dis);
-					
-					this.NameLevel2 = readString(dis);
-					
-					this.NameLevel3 = readString(dis);
-					
-					this.NameLevel4 = readString(dis);
-					
-					this.NameLevel5 = readString(dis);
-					
 					this.CodeLevel1 = readString(dis);
 					
 					this.CodeLevel2 = readString(dis);
@@ -1595,19 +1938,19 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 					this.CodeLevel5 = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.Package = null;
-           				} else {
-           			    	this.Package = dis.readFloat();
-           				}
+					this.NameLevel1 = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.StdBoxCoef = null;
-           				} else {
-           			    	this.StdBoxCoef = dis.readFloat();
-           				}
+					this.NameLevel2 = readString(dis);
+					
+					this.NameLevel3 = readString(dis);
+					
+					this.NameLevel4 = readString(dis);
+					
+					this.NameLevel5 = readString(dis);
+					
+			        this.Package = dis.readFloat();
+					
+			        this.StdBoxCoef = dis.readFloat();
 					
 					this.ManufacturerName = readString(dis);
 					
@@ -1643,26 +1986,6 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		
 					// String
 				
-						writeString(this.NameLevel1,dos);
-					
-					// String
-				
-						writeString(this.NameLevel2,dos);
-					
-					// String
-				
-						writeString(this.NameLevel3,dos);
-					
-					// String
-				
-						writeString(this.NameLevel4,dos);
-					
-					// String
-				
-						writeString(this.NameLevel5,dos);
-					
-					// String
-				
 						writeString(this.CodeLevel1,dos);
 					
 					// String
@@ -1681,23 +2004,33 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 				
 						writeString(this.CodeLevel5,dos);
 					
-					// Float
+					// String
 				
-						if(this.Package == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeFloat(this.Package);
-		            	}
+						writeString(this.NameLevel1,dos);
 					
-					// Float
+					// String
 				
-						if(this.StdBoxCoef == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeFloat(this.StdBoxCoef);
-		            	}
+						writeString(this.NameLevel2,dos);
+					
+					// String
+				
+						writeString(this.NameLevel3,dos);
+					
+					// String
+				
+						writeString(this.NameLevel4,dos);
+					
+					// String
+				
+						writeString(this.NameLevel5,dos);
+					
+					// float
+				
+		            	dos.writeFloat(this.Package);
+					
+					// float
+				
+		            	dos.writeFloat(this.StdBoxCoef);
 					
 					// String
 				
@@ -1740,16 +2073,16 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("NameLevel1="+NameLevel1);
-		sb.append(",NameLevel2="+NameLevel2);
-		sb.append(",NameLevel3="+NameLevel3);
-		sb.append(",NameLevel4="+NameLevel4);
-		sb.append(",NameLevel5="+NameLevel5);
-		sb.append(",CodeLevel1="+CodeLevel1);
+		sb.append("CodeLevel1="+CodeLevel1);
 		sb.append(",CodeLevel2="+CodeLevel2);
 		sb.append(",CodeLevel3="+CodeLevel3);
 		sb.append(",CodeLevel4="+CodeLevel4);
 		sb.append(",CodeLevel5="+CodeLevel5);
+		sb.append(",NameLevel1="+NameLevel1);
+		sb.append(",NameLevel2="+NameLevel2);
+		sb.append(",NameLevel3="+NameLevel3);
+		sb.append(",NameLevel4="+NameLevel4);
+		sb.append(",NameLevel5="+NameLevel5);
 		sb.append(",Package="+String.valueOf(Package));
 		sb.append(",StdBoxCoef="+String.valueOf(StdBoxCoef));
 		sb.append(",ManufacturerName="+ManufacturerName);
@@ -1804,36 +2137,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
     static byte[] commonByteArray_DEEPSEA_SAT_PRODUCT = new byte[0];
 
 	
-			    public String NameLevel1;
-
-				public String getNameLevel1 () {
-					return this.NameLevel1;
-				}
-				
-			    public String NameLevel2;
-
-				public String getNameLevel2 () {
-					return this.NameLevel2;
-				}
-				
-			    public String NameLevel3;
-
-				public String getNameLevel3 () {
-					return this.NameLevel3;
-				}
-				
-			    public String NameLevel4;
-
-				public String getNameLevel4 () {
-					return this.NameLevel4;
-				}
-				
-			    public String NameLevel5;
-
-				public String getNameLevel5 () {
-					return this.NameLevel5;
-				}
-				
 			    public String CodeLevel1;
 
 				public String getCodeLevel1 () {
@@ -1862,6 +2165,36 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 
 				public String getCodeLevel5 () {
 					return this.CodeLevel5;
+				}
+				
+			    public String NameLevel1;
+
+				public String getNameLevel1 () {
+					return this.NameLevel1;
+				}
+				
+			    public String NameLevel2;
+
+				public String getNameLevel2 () {
+					return this.NameLevel2;
+				}
+				
+			    public String NameLevel3;
+
+				public String getNameLevel3 () {
+					return this.NameLevel3;
+				}
+				
+			    public String NameLevel4;
+
+				public String getNameLevel4 () {
+					return this.NameLevel4;
+				}
+				
+			    public String NameLevel5;
+
+				public String getNameLevel5 () {
+					return this.NameLevel5;
 				}
 				
 			    public String Package;
@@ -1959,16 +2292,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 
         		int length = 0;
 		
-					this.NameLevel1 = readString(dis);
-					
-					this.NameLevel2 = readString(dis);
-					
-					this.NameLevel3 = readString(dis);
-					
-					this.NameLevel4 = readString(dis);
-					
-					this.NameLevel5 = readString(dis);
-					
 					this.CodeLevel1 = readString(dis);
 					
 					this.CodeLevel2 = readString(dis);
@@ -1978,6 +2301,16 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					this.CodeLevel4 = readString(dis);
 					
 					this.CodeLevel5 = readString(dis);
+					
+					this.NameLevel1 = readString(dis);
+					
+					this.NameLevel2 = readString(dis);
+					
+					this.NameLevel3 = readString(dis);
+					
+					this.NameLevel4 = readString(dis);
+					
+					this.NameLevel5 = readString(dis);
 					
 					this.Package = readString(dis);
 					
@@ -2017,26 +2350,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		
 					// String
 				
-						writeString(this.NameLevel1,dos);
-					
-					// String
-				
-						writeString(this.NameLevel2,dos);
-					
-					// String
-				
-						writeString(this.NameLevel3,dos);
-					
-					// String
-				
-						writeString(this.NameLevel4,dos);
-					
-					// String
-				
-						writeString(this.NameLevel5,dos);
-					
-					// String
-				
 						writeString(this.CodeLevel1,dos);
 					
 					// String
@@ -2054,6 +2367,26 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					// String
 				
 						writeString(this.CodeLevel5,dos);
+					
+					// String
+				
+						writeString(this.NameLevel1,dos);
+					
+					// String
+				
+						writeString(this.NameLevel2,dos);
+					
+					// String
+				
+						writeString(this.NameLevel3,dos);
+					
+					// String
+				
+						writeString(this.NameLevel4,dos);
+					
+					// String
+				
+						writeString(this.NameLevel5,dos);
 					
 					// String
 				
@@ -2104,16 +2437,16 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("NameLevel1="+NameLevel1);
-		sb.append(",NameLevel2="+NameLevel2);
-		sb.append(",NameLevel3="+NameLevel3);
-		sb.append(",NameLevel4="+NameLevel4);
-		sb.append(",NameLevel5="+NameLevel5);
-		sb.append(",CodeLevel1="+CodeLevel1);
+		sb.append("CodeLevel1="+CodeLevel1);
 		sb.append(",CodeLevel2="+CodeLevel2);
 		sb.append(",CodeLevel3="+CodeLevel3);
 		sb.append(",CodeLevel4="+CodeLevel4);
 		sb.append(",CodeLevel5="+CodeLevel5);
+		sb.append(",NameLevel1="+NameLevel1);
+		sb.append(",NameLevel2="+NameLevel2);
+		sb.append(",NameLevel3="+NameLevel3);
+		sb.append(",NameLevel4="+NameLevel4);
+		sb.append(",NameLevel5="+NameLevel5);
 		sb.append(",Package="+Package);
 		sb.append(",StdBoxCoef="+StdBoxCoef);
 		sb.append(",ManufacturerName="+ManufacturerName);
@@ -2691,7 +3024,9 @@ out1Struct row7 = out1;
 row3Struct row3 = new row3Struct();
 row2Struct row2 = new row2Struct();
 row8Struct row8 = new row8Struct();
-row8Struct row9 = row8;
+row10Struct row10 = new row10Struct();
+row10Struct row9 = row10;
+
 
 
 
@@ -2747,15 +3082,11 @@ String dbschema_tDBOutput_1 = null;
 
 String tableName_tDBOutput_1 = null;
 if(dbschema_tDBOutput_1 == null || dbschema_tDBOutput_1.trim().length() == 0) {
-	tableName_tDBOutput_1 = "sat_product";
+	tableName_tDBOutput_1 = (String) globalMap.get("SAT_TABLE");
 } else {
-	tableName_tDBOutput_1 = dbschema_tDBOutput_1 + "\".\"" + "sat_product";
+	tableName_tDBOutput_1 = dbschema_tDBOutput_1 + "\".\"" + (String) globalMap.get("SAT_TABLE");
 }
 
-        int updateKeyCount_tDBOutput_1 = 2;
-        if(updateKeyCount_tDBOutput_1 < 1) {
-            throw new RuntimeException("For update, Schema must have a key");
-        }
 int nb_line_tDBOutput_1 = 0;
 int nb_line_update_tDBOutput_1 = 0;
 int nb_line_inserted_tDBOutput_1 = 0;
@@ -2777,13 +3108,13 @@ String dbUser_tDBOutput_1 = null;
 	
 
 
+   int batchSize_tDBOutput_1 = 10000;
+   int batchSizeCounter_tDBOutput_1=0;
 
 int count_tDBOutput_1=0;
-	    java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement("SELECT COUNT(1) FROM \"" + tableName_tDBOutput_1 + "\" WHERE \"hub_id\" = ? AND \"source\" = ?");
 	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"codelevel1\",\"codelevel2\",\"codelevel3\",\"codelevel4\",\"codelevel5\",\"namelevel1\",\"namelevel2\",\"namelevel3\",\"namelevel4\",\"namelevel5\",\"package\",\"std_box_coef\",\"manufacturer_name\",\"therapeutic_class\",\"attribute1\",\"attribute2\",\"attribute3\",\"attribute4\",\"attribute5\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	    java.sql.PreparedStatement pstmtInsert_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
-	    String update_tDBOutput_1 = "UPDATE \"" + tableName_tDBOutput_1 + "\" SET \"codelevel1\" = ?,\"codelevel2\" = ?,\"codelevel3\" = ?,\"codelevel4\" = ?,\"codelevel5\" = ?,\"namelevel1\" = ?,\"namelevel2\" = ?,\"namelevel3\" = ?,\"namelevel4\" = ?,\"namelevel5\" = ?,\"package\" = ?,\"std_box_coef\" = ?,\"manufacturer_name\" = ?,\"therapeutic_class\" = ?,\"attribute1\" = ?,\"attribute2\" = ?,\"attribute3\" = ?,\"attribute4\" = ?,\"attribute5\" = ? WHERE \"hub_id\" = ? AND \"source\" = ?";
-	    java.sql.PreparedStatement pstmtUpdate_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(update_tDBOutput_1);
+	    
+	    java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
 	    
 
  
@@ -2815,7 +3146,7 @@ int count_tDBOutput_1=0;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row10" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -2838,6 +3169,53 @@ int count_tDBOutput_1=0;
 
 /**
  * [tFlowMeter_13 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFilterColumns_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFilterColumns_1", false);
+		start_Hash.put("tFilterColumns_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tFilterColumns_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tFilterColumns_1 = 0;
+		
+    	class BytesLimit65535_tFilterColumns_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFilterColumns_1().limitLog4jByte();
+
+
+ int nb_line_tFilterColumns_1 = 0;
+ 
+
+
+
+/**
+ * [tFilterColumns_1 begin ] stop
  */
 
 
@@ -3273,7 +3651,7 @@ out1Struct out1_tmp = new out1Struct();
 	                	
 	                
 	                	
-							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.metadata.type' : 'ProductHierarchy', 'sheetName' : '" + context.getSHEET_NAME() + "' } }"));
+							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.metadata.type' : '" + context.getTYPE() + "', 'sheetName' : '" + context.getSHEET_NAME() + "' } }"));
 						
 	                	
 	                
@@ -3678,16 +4056,16 @@ if(out1 != null) {
 
 		
     List<org.bson.Document> doc_tExtractFields_1 = (List<org.bson.Document>) row7.fields;
-    row3.NameLevel1 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel1");
-    row3.NameLevel2 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel2");
-    row3.NameLevel3 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel3");
-    row3.NameLevel4 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel4");
-    row3.NameLevel5 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel5");
     row3.CodeLevel1 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "CodeLevel1");
     row3.CodeLevel2 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "CodeLevel2");
     row3.CodeLevel3 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "CodeLevel3");
     row3.CodeLevel4 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "CodeLevel4");
     row3.CodeLevel5 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "CodeLevel5");
+    row3.NameLevel1 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel1");
+    row3.NameLevel2 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel2");
+    row3.NameLevel3 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel3");
+    row3.NameLevel4 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel4");
+    row3.NameLevel5 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "NameLevel5");
     row3.Package = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "Package");
     row3.StdBoxCoef = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "StdBoxCoef");
     row3.ManufacturerName = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "ManufacturerName");
@@ -3761,51 +4139,6 @@ if(row3 != null) {
   row2 = new row2Struct();
   boolean bHasError_tConvertType_1 = false;             
           try {
-              if ("".equals(row3.NameLevel1)){  
-                row3.NameLevel1 = null;
-              }
-              row2.NameLevel1=TypeConvert.String2String(row3.NameLevel1);            
-          } catch(java.lang.Exception e){
-            bHasError_tConvertType_1 = true;            
-              System.err.println(e.getMessage());          
-          }           
-          try {
-              if ("".equals(row3.NameLevel2)){  
-                row3.NameLevel2 = null;
-              }
-              row2.NameLevel2=TypeConvert.String2String(row3.NameLevel2);            
-          } catch(java.lang.Exception e){
-            bHasError_tConvertType_1 = true;            
-              System.err.println(e.getMessage());          
-          }           
-          try {
-              if ("".equals(row3.NameLevel3)){  
-                row3.NameLevel3 = null;
-              }
-              row2.NameLevel3=TypeConvert.String2String(row3.NameLevel3);            
-          } catch(java.lang.Exception e){
-            bHasError_tConvertType_1 = true;            
-              System.err.println(e.getMessage());          
-          }           
-          try {
-              if ("".equals(row3.NameLevel4)){  
-                row3.NameLevel4 = null;
-              }
-              row2.NameLevel4=TypeConvert.String2String(row3.NameLevel4);            
-          } catch(java.lang.Exception e){
-            bHasError_tConvertType_1 = true;            
-              System.err.println(e.getMessage());          
-          }           
-          try {
-              if ("".equals(row3.NameLevel5)){  
-                row3.NameLevel5 = null;
-              }
-              row2.NameLevel5=TypeConvert.String2String(row3.NameLevel5);            
-          } catch(java.lang.Exception e){
-            bHasError_tConvertType_1 = true;            
-              System.err.println(e.getMessage());          
-          }           
-          try {
               if ("".equals(row3.CodeLevel1)){  
                 row3.CodeLevel1 = null;
               }
@@ -3851,10 +4184,55 @@ if(row3 != null) {
               System.err.println(e.getMessage());          
           }           
           try {
+              if ("".equals(row3.NameLevel1)){  
+                row3.NameLevel1 = null;
+              }
+              row2.NameLevel1=TypeConvert.String2String(row3.NameLevel1);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.NameLevel2)){  
+                row3.NameLevel2 = null;
+              }
+              row2.NameLevel2=TypeConvert.String2String(row3.NameLevel2);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.NameLevel3)){  
+                row3.NameLevel3 = null;
+              }
+              row2.NameLevel3=TypeConvert.String2String(row3.NameLevel3);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.NameLevel4)){  
+                row3.NameLevel4 = null;
+              }
+              row2.NameLevel4=TypeConvert.String2String(row3.NameLevel4);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.NameLevel5)){  
+                row3.NameLevel5 = null;
+              }
+              row2.NameLevel5=TypeConvert.String2String(row3.NameLevel5);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
               if ("".equals(row3.Package)){  
                 row3.Package = null;
               }
-              row2.Package=TypeConvert.String2Float(row3.Package);            
+              row2.Package=TypeConvert.String2float(row3.Package);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -3863,7 +4241,7 @@ if(row3 != null) {
               if ("".equals(row3.StdBoxCoef)){  
                 row3.StdBoxCoef = null;
               }
-              row2.StdBoxCoef=TypeConvert.String2Float(row3.StdBoxCoef);            
+              row2.StdBoxCoef=TypeConvert.String2float(row3.StdBoxCoef);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -4135,11 +4513,11 @@ row8_tmp.packageTablet = row2.Package ;
 row8_tmp.stdBoxCoef = row2.StdBoxCoef ;
 row8_tmp.manufacturerName = row2.ManufacturerName ;
 row8_tmp.therapeuticClass = row2.TherapeuticClass ;
-row8_tmp.Attribute1 = row2.Attribute1 ;
-row8_tmp.Attribute2 = row2.Attribute2 ;
-row8_tmp.Attribute3 = row2.Attribute3 ;
-row8_tmp.Attribute4 = row2.Attribute4 ;
-row8_tmp.Attribute5 = row2.Attribute5 ;
+row8_tmp.attribute1 = row2.Attribute1 ;
+row8_tmp.attribute2 = row2.Attribute2 ;
+row8_tmp.attribute3 = row2.Attribute3 ;
+row8_tmp.attribute4 = row2.Attribute4 ;
+row8_tmp.attribute5 = row2.Attribute5 ;
 row8 = row8_tmp;
 }  // closing inner join bracket (2)
 // ###############################
@@ -4192,14 +4570,14 @@ if(row8 != null) {
 
 	
 	/**
-	 * [tFlowMeter_13 main ] start
+	 * [tFilterColumns_1 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tFlowMeter_13";
+	currentComponent="tFilterColumns_1";
 
 	
 
@@ -4214,10 +4592,130 @@ if(row8 != null) {
 			
 
 		
+	
+
+	row10.hubId = row8.hubId;
+
+	
+	row10.source = row8.source;
+
+	
+	row10.codeLevel1 = row8.codeLevel1;
+
+	
+	row10.codeLevel2 = row8.codeLevel2;
+
+	
+	row10.codeLevel3 = row8.codeLevel3;
+
+	
+	row10.codeLevel4 = row8.codeLevel4;
+
+	
+	row10.codeLevel5 = row8.codeLevel5;
+
+	
+	row10.nameLevel1 = row8.nameLevel1;
+
+	
+	row10.nameLevel2 = row8.nameLevel2;
+
+	
+	row10.nameLevel3 = row8.nameLevel3;
+
+	
+	row10.nameLevel4 = row8.nameLevel4;
+
+	
+	row10.nameLevel5 = row8.nameLevel5;
+
+	
+	row10.packageTablet = row8.packageTablet;
+
+	
+	row10.stdBoxCoef = row8.stdBoxCoef;
+
+	
+	row10.manufacturerName = row8.manufacturerName;
+
+	
+	row10.therapeuticClass = row8.therapeuticClass;
+
+	
+	row10.attribute1 = row8.attribute1;
+
+	
+	row10.attribute2 = row8.attribute2;
+
+	
+	row10.attribute3 = row8.attribute3;
+
+	
+	row10.attribute4 = row8.attribute4;
+
+	
+	row10.attribute5 = row8.attribute5;
+
+	
+    nb_line_tFilterColumns_1++;
+
+ 
+
+
+	tos_count_tFilterColumns_1++;
+
+/**
+ * [tFilterColumns_1 main ] stop
+ */
+	
+	/**
+	 * [tFilterColumns_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFilterColumns_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFilterColumns_1 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tFlowMeter_13 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_13";
+
+	
+
+			//row10
+			//row10
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row10"+iterateId,1, 1);
+				} 
+			
+
+		
 
     count_tFlowMeter_13++; 
  
-     row9 = row8;
+     row9 = row10;
 
 
 	tos_count_tFlowMeter_13++;
@@ -4274,259 +4772,144 @@ if(row8 != null) {
 
 
         whetherReject_tDBOutput_1 = false;
-                    if(row9.hubId == null) {
-pstmt_tDBOutput_1.setNull(1, java.sql.Types.INTEGER);
-} else {pstmt_tDBOutput_1.setInt(1, row9.hubId);
-}
+                    pstmt_tDBOutput_1.setInt(1, row9.hubId);
 
                     if(row9.source == null) {
 pstmt_tDBOutput_1.setNull(2, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(2, row9.source);
 }
 
-
-            java.sql.ResultSet rs_tDBOutput_1 = pstmt_tDBOutput_1.executeQuery();
-            int checkCount_tDBOutput_1 = -1;
-            while(rs_tDBOutput_1.next()) {
-                checkCount_tDBOutput_1 = rs_tDBOutput_1.getInt(1);
-            }
-            if(checkCount_tDBOutput_1 > 0) {
-                        if(row9.codeLevel1 == null) {
-pstmtUpdate_tDBOutput_1.setNull(1, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(1, row9.codeLevel1);
+                    if(row9.codeLevel1 == null) {
+pstmt_tDBOutput_1.setNull(3, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(3, row9.codeLevel1);
 }
 
-                        if(row9.codeLevel2 == null) {
-pstmtUpdate_tDBOutput_1.setNull(2, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(2, row9.codeLevel2);
+                    if(row9.codeLevel2 == null) {
+pstmt_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(4, row9.codeLevel2);
 }
 
-                        if(row9.codeLevel3 == null) {
-pstmtUpdate_tDBOutput_1.setNull(3, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(3, row9.codeLevel3);
+                    if(row9.codeLevel3 == null) {
+pstmt_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(5, row9.codeLevel3);
 }
 
-                        if(row9.codeLevel4 == null) {
-pstmtUpdate_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(4, row9.codeLevel4);
+                    if(row9.codeLevel4 == null) {
+pstmt_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(6, row9.codeLevel4);
 }
 
-                        if(row9.codeLevel5 == null) {
-pstmtUpdate_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(5, row9.codeLevel5);
+                    if(row9.codeLevel5 == null) {
+pstmt_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(7, row9.codeLevel5);
 }
 
-                        if(row9.nameLevel1 == null) {
-pstmtUpdate_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(6, row9.nameLevel1);
+                    if(row9.nameLevel1 == null) {
+pstmt_tDBOutput_1.setNull(8, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(8, row9.nameLevel1);
 }
 
-                        if(row9.nameLevel2 == null) {
-pstmtUpdate_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(7, row9.nameLevel2);
+                    if(row9.nameLevel2 == null) {
+pstmt_tDBOutput_1.setNull(9, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(9, row9.nameLevel2);
 }
 
-                        if(row9.nameLevel3 == null) {
-pstmtUpdate_tDBOutput_1.setNull(8, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(8, row9.nameLevel3);
+                    if(row9.nameLevel3 == null) {
+pstmt_tDBOutput_1.setNull(10, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(10, row9.nameLevel3);
 }
 
-                        if(row9.nameLevel4 == null) {
-pstmtUpdate_tDBOutput_1.setNull(9, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(9, row9.nameLevel4);
+                    if(row9.nameLevel4 == null) {
+pstmt_tDBOutput_1.setNull(11, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(11, row9.nameLevel4);
 }
 
-                        if(row9.nameLevel5 == null) {
-pstmtUpdate_tDBOutput_1.setNull(10, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(10, row9.nameLevel5);
+                    if(row9.nameLevel5 == null) {
+pstmt_tDBOutput_1.setNull(12, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(12, row9.nameLevel5);
 }
 
-                        if(row9.packageTablet == null) {
-pstmtUpdate_tDBOutput_1.setNull(11, java.sql.Types.FLOAT);
-} else {pstmtUpdate_tDBOutput_1.setFloat(11, row9.packageTablet);
+                    pstmt_tDBOutput_1.setFloat(13, row9.packageTablet);
+
+                    pstmt_tDBOutput_1.setFloat(14, row9.stdBoxCoef);
+
+                    if(row9.manufacturerName == null) {
+pstmt_tDBOutput_1.setNull(15, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(15, row9.manufacturerName);
 }
 
-                        if(row9.stdBoxCoef == null) {
-pstmtUpdate_tDBOutput_1.setNull(12, java.sql.Types.FLOAT);
-} else {pstmtUpdate_tDBOutput_1.setFloat(12, row9.stdBoxCoef);
+                    if(row9.therapeuticClass == null) {
+pstmt_tDBOutput_1.setNull(16, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(16, row9.therapeuticClass);
 }
 
-                        if(row9.manufacturerName == null) {
-pstmtUpdate_tDBOutput_1.setNull(13, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(13, row9.manufacturerName);
+                    if(row9.attribute1 == null) {
+pstmt_tDBOutput_1.setNull(17, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(17, row9.attribute1);
 }
 
-                        if(row9.therapeuticClass == null) {
-pstmtUpdate_tDBOutput_1.setNull(14, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(14, row9.therapeuticClass);
+                    if(row9.attribute2 == null) {
+pstmt_tDBOutput_1.setNull(18, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(18, row9.attribute2);
 }
 
-                        if(row9.Attribute1 == null) {
-pstmtUpdate_tDBOutput_1.setNull(15, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(15, row9.Attribute1);
+                    if(row9.attribute3 == null) {
+pstmt_tDBOutput_1.setNull(19, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(19, row9.attribute3);
 }
 
-                        if(row9.Attribute2 == null) {
-pstmtUpdate_tDBOutput_1.setNull(16, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(16, row9.Attribute2);
+                    if(row9.attribute4 == null) {
+pstmt_tDBOutput_1.setNull(20, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(20, row9.attribute4);
 }
 
-                        if(row9.Attribute3 == null) {
-pstmtUpdate_tDBOutput_1.setNull(17, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(17, row9.Attribute3);
+                    if(row9.attribute5 == null) {
+pstmt_tDBOutput_1.setNull(21, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(21, row9.attribute5);
 }
 
-                        if(row9.Attribute4 == null) {
-pstmtUpdate_tDBOutput_1.setNull(18, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(18, row9.Attribute4);
-}
-
-                        if(row9.Attribute5 == null) {
-pstmtUpdate_tDBOutput_1.setNull(19, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(19, row9.Attribute5);
-}
-
-                        if(row9.hubId == null) {
-pstmtUpdate_tDBOutput_1.setNull(20 + count_tDBOutput_1, java.sql.Types.INTEGER);
-} else {pstmtUpdate_tDBOutput_1.setInt(20 + count_tDBOutput_1, row9.hubId);
-}
-
-                        if(row9.source == null) {
-pstmtUpdate_tDBOutput_1.setNull(21 + count_tDBOutput_1, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tDBOutput_1.setString(21 + count_tDBOutput_1, row9.source);
-}
-
-                try {
-					
-                    updatedCount_tDBOutput_1 = updatedCount_tDBOutput_1 + pstmtUpdate_tDBOutput_1.executeUpdate();
-                    nb_line_tDBOutput_1++;
-					
-                } catch(java.lang.Exception e) {
-					
-                    whetherReject_tDBOutput_1 = true;
-                        nb_line_tDBOutput_1++;
-                            System.err.print(e.getMessage());
-                }
-            } else {
-                        if(row9.hubId == null) {
-pstmtInsert_tDBOutput_1.setNull(1, java.sql.Types.INTEGER);
-} else {pstmtInsert_tDBOutput_1.setInt(1, row9.hubId);
-}
-
-                        if(row9.source == null) {
-pstmtInsert_tDBOutput_1.setNull(2, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(2, row9.source);
-}
-
-                        if(row9.codeLevel1 == null) {
-pstmtInsert_tDBOutput_1.setNull(3, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(3, row9.codeLevel1);
-}
-
-                        if(row9.codeLevel2 == null) {
-pstmtInsert_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(4, row9.codeLevel2);
-}
-
-                        if(row9.codeLevel3 == null) {
-pstmtInsert_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(5, row9.codeLevel3);
-}
-
-                        if(row9.codeLevel4 == null) {
-pstmtInsert_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(6, row9.codeLevel4);
-}
-
-                        if(row9.codeLevel5 == null) {
-pstmtInsert_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(7, row9.codeLevel5);
-}
-
-                        if(row9.nameLevel1 == null) {
-pstmtInsert_tDBOutput_1.setNull(8, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(8, row9.nameLevel1);
-}
-
-                        if(row9.nameLevel2 == null) {
-pstmtInsert_tDBOutput_1.setNull(9, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(9, row9.nameLevel2);
-}
-
-                        if(row9.nameLevel3 == null) {
-pstmtInsert_tDBOutput_1.setNull(10, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(10, row9.nameLevel3);
-}
-
-                        if(row9.nameLevel4 == null) {
-pstmtInsert_tDBOutput_1.setNull(11, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(11, row9.nameLevel4);
-}
-
-                        if(row9.nameLevel5 == null) {
-pstmtInsert_tDBOutput_1.setNull(12, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(12, row9.nameLevel5);
-}
-
-                        if(row9.packageTablet == null) {
-pstmtInsert_tDBOutput_1.setNull(13, java.sql.Types.FLOAT);
-} else {pstmtInsert_tDBOutput_1.setFloat(13, row9.packageTablet);
-}
-
-                        if(row9.stdBoxCoef == null) {
-pstmtInsert_tDBOutput_1.setNull(14, java.sql.Types.FLOAT);
-} else {pstmtInsert_tDBOutput_1.setFloat(14, row9.stdBoxCoef);
-}
-
-                        if(row9.manufacturerName == null) {
-pstmtInsert_tDBOutput_1.setNull(15, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(15, row9.manufacturerName);
-}
-
-                        if(row9.therapeuticClass == null) {
-pstmtInsert_tDBOutput_1.setNull(16, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(16, row9.therapeuticClass);
-}
-
-                        if(row9.Attribute1 == null) {
-pstmtInsert_tDBOutput_1.setNull(17, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(17, row9.Attribute1);
-}
-
-                        if(row9.Attribute2 == null) {
-pstmtInsert_tDBOutput_1.setNull(18, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(18, row9.Attribute2);
-}
-
-                        if(row9.Attribute3 == null) {
-pstmtInsert_tDBOutput_1.setNull(19, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(19, row9.Attribute3);
-}
-
-                        if(row9.Attribute4 == null) {
-pstmtInsert_tDBOutput_1.setNull(20, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(20, row9.Attribute4);
-}
-
-                        if(row9.Attribute5 == null) {
-pstmtInsert_tDBOutput_1.setNull(21, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tDBOutput_1.setString(21, row9.Attribute5);
-}
-
-                try {
-					
-                    insertedCount_tDBOutput_1 = insertedCount_tDBOutput_1 + pstmtInsert_tDBOutput_1.executeUpdate();
-                    nb_line_tDBOutput_1++;
-					
-                } catch(java.lang.Exception e) {
-					
-                    whetherReject_tDBOutput_1 = true;
-                        nb_line_tDBOutput_1++;
-                            System.err.print(e.getMessage());
-                }
-            }
+			
+    		pstmt_tDBOutput_1.addBatch();
+    		nb_line_tDBOutput_1++;
+    		  
+    		  batchSizeCounter_tDBOutput_1++;
+    		  
             if(!whetherReject_tDBOutput_1) {
             }
+    			if ((batchSize_tDBOutput_1 > 0) && (batchSize_tDBOutput_1 <= batchSizeCounter_tDBOutput_1)) {
+                try {
+						int countSum_tDBOutput_1 = 0;
+						    
+						for(int countEach_tDBOutput_1: pstmt_tDBOutput_1.executeBatch()) {
+							countSum_tDBOutput_1 += (countEach_tDBOutput_1 < 0 ? 0 : countEach_tDBOutput_1);
+						}
+				    	
+				    		insertedCount_tDBOutput_1 += countSum_tDBOutput_1;
+				    	
+            	    	batchSizeCounter_tDBOutput_1 = 0;
+                }catch (java.sql.BatchUpdateException e_tDBOutput_1){
+				    	java.sql.SQLException ne_tDBOutput_1 = e_tDBOutput_1.getNextException(),sqle_tDBOutput_1=null;
+				    	String errormessage_tDBOutput_1;
+						if (ne_tDBOutput_1 != null) {
+							// build new exception to provide the original cause
+							sqle_tDBOutput_1 = new java.sql.SQLException(e_tDBOutput_1.getMessage() + "\ncaused by: " + ne_tDBOutput_1.getMessage(), ne_tDBOutput_1.getSQLState(), ne_tDBOutput_1.getErrorCode(), ne_tDBOutput_1);
+							errormessage_tDBOutput_1 = sqle_tDBOutput_1.getMessage();
+						}else{
+							errormessage_tDBOutput_1 = e_tDBOutput_1.getMessage();
+						}
+				    	
+				    	int countSum_tDBOutput_1 = 0;
+						for(int countEach_tDBOutput_1: e_tDBOutput_1.getUpdateCounts()) {
+							countSum_tDBOutput_1 += (countEach_tDBOutput_1 < 0 ? 0 : countEach_tDBOutput_1);
+						}
+						
+				    		insertedCount_tDBOutput_1 += countSum_tDBOutput_1;
+				    	
+				    	System.err.println(errormessage_tDBOutput_1);
+				    	
+					}
+    			}
+    		
 
  
 
@@ -4598,6 +4981,29 @@ pstmtInsert_tDBOutput_1.setNull(21, java.sql.Types.VARCHAR);
 
 /**
  * [tFlowMeter_13 process_data_end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFilterColumns_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFilterColumns_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFilterColumns_1 process_data_end ] stop
  */
 
 } // End of branch "row8"
@@ -4974,6 +5380,38 @@ end_Hash.put("tMap_2", System.currentTimeMillis());
 
 	
 	/**
+	 * [tFilterColumns_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFilterColumns_1";
+
+	
+
+globalMap.put("tFilterColumns_1_NB_LINE",nb_line_tFilterColumns_1);
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row8"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tFilterColumns_1", true);
+end_Hash.put("tFilterColumns_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFilterColumns_1 end ] stop
+ */
+
+	
+	/**
 	 * [tFlowMeter_13 end ] start
 	 */
 
@@ -4985,11 +5423,11 @@ end_Hash.put("tMap_2", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("row8", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
+	tFlowMeterCatcher_1.addMessage("row10", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row8"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row10"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -5020,13 +5458,42 @@ end_Hash.put("tFlowMeter_13", System.currentTimeMillis());
 
 
 
-        if(pstmtUpdate_tDBOutput_1 != null){
-            pstmtUpdate_tDBOutput_1.close();
-        }
-        if(pstmtInsert_tDBOutput_1 != null){
-            pstmtInsert_tDBOutput_1.close();
-        }
+	    try {
+				int countSum_tDBOutput_1 = 0;
+				if (pstmt_tDBOutput_1 != null && batchSizeCounter_tDBOutput_1 > 0) {
+						
+					for(int countEach_tDBOutput_1: pstmt_tDBOutput_1.executeBatch()) {
+						countSum_tDBOutput_1 += (countEach_tDBOutput_1 < 0 ? 0 : countEach_tDBOutput_1);
+					}
+						
+				}
+		    	
+		    		insertedCount_tDBOutput_1 += countSum_tDBOutput_1;
+		    	
+	    }catch (java.sql.BatchUpdateException e_tDBOutput_1){
+	    	java.sql.SQLException ne_tDBOutput_1 = e_tDBOutput_1.getNextException(),sqle_tDBOutput_1=null;
+	    	String errormessage_tDBOutput_1;
+			if (ne_tDBOutput_1 != null) {
+				// build new exception to provide the original cause
+				sqle_tDBOutput_1 = new java.sql.SQLException(e_tDBOutput_1.getMessage() + "\ncaused by: " + ne_tDBOutput_1.getMessage(), ne_tDBOutput_1.getSQLState(), ne_tDBOutput_1.getErrorCode(), ne_tDBOutput_1);
+				errormessage_tDBOutput_1 = sqle_tDBOutput_1.getMessage();
+			}else{
+				errormessage_tDBOutput_1 = e_tDBOutput_1.getMessage();
+			}
+	    	
+	    	int countSum_tDBOutput_1 = 0;
+			for(int countEach_tDBOutput_1: e_tDBOutput_1.getUpdateCounts()) {
+				countSum_tDBOutput_1 += (countEach_tDBOutput_1 < 0 ? 0 : countEach_tDBOutput_1);
+			}
+			
+	    		insertedCount_tDBOutput_1 += countSum_tDBOutput_1;
+	    	
+	    	System.err.println(errormessage_tDBOutput_1);
+	    	
+		}
+	    
         if(pstmt_tDBOutput_1 != null) {
+        		
             pstmt_tDBOutput_1.close();
         }
 
@@ -5066,6 +5533,9 @@ end_Hash.put("tDBOutput_1", System.currentTimeMillis());
 /**
  * [tDBOutput_1 end ] stop
  */
+
+
+
 
 
 
@@ -5244,6 +5714,27 @@ end_Hash.put("tDBOutput_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tFilterColumns_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFilterColumns_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFilterColumns_1 finally ] stop
+ */
+
+	
+	/**
 	 * [tFlowMeter_13 finally ] start
 	 */
 
@@ -5287,6 +5778,9 @@ end_Hash.put("tDBOutput_1", System.currentTimeMillis());
 /**
  * [tDBOutput_1 finally ] stop
  */
+
+
+
 
 
 
@@ -5883,8 +6377,7 @@ public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) thr
 		    
 			java.sql.Statement stmt_tDBInput_2 = conn_tDBInput_2.createStatement();
 
-		    String dbquery_tDBInput_2 = "select distinct\n	hash\nfrom\n	hub_product inner join sat_product on hub_product.id=sat_product.hub_id\nwhere\n	hub_product."
-+"source='" + context.getSOURCE() + "'";
+		    String dbquery_tDBInput_2 = "select distinct\n	hash\nfrom\n	" + globalMap.get("HUB_TABLE") + " as a inner join " + globalMap.get("SAT_TABLE") + " as b on a.id=b.hub_id\nwhere\n	a.source='" + context.getSOURCE() + "'";
 			
 
             	globalMap.put("tDBInput_2_QUERY",dbquery_tDBInput_2);
@@ -6596,7 +7089,7 @@ public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) thr
 		    
 			java.sql.Statement stmt_tDBInput_1 = conn_tDBInput_1.createStatement();
 
-		    String dbquery_tDBInput_1 = "SELECT \n	id,\n	business_key\nFROM\n	hub_product\nWHERE\n	source='" + context.getSOURCE() + "'";
+		    String dbquery_tDBInput_1 = "SELECT \n	id,\n	business_key\nFROM\n	hub_" + context.getTABLE() + "\nWHERE\n	source='" + context.getSOURCE() + "'";
 			
 
             	globalMap.put("tDBInput_1_QUERY",dbquery_tDBInput_1);
@@ -7383,6 +7876,7 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 
 
 
+		
 
 
 	
@@ -7539,6 +8033,10 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 ok_Hash.put("tDBConnection_1", true);
 end_Hash.put("tDBConnection_1", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk9", 0, "ok");
+				}
+				tSetGlobalVar_1Process(globalMap);
 
 
 
@@ -7596,6 +8094,206 @@ end_Hash.put("tDBConnection_1", System.currentTimeMillis());
 		
 
 		globalMap.put("tDBConnection_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tSetGlobalVar_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tSetGlobalVar_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tSetGlobalVar_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tSetGlobalVar_1", false);
+		start_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+		int tos_count_tSetGlobalVar_1 = 0;
+		
+    	class BytesLimit65535_tSetGlobalVar_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tSetGlobalVar_1().limitLog4jByte();
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_1 begin ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+globalMap.put("HUB_TABLE", "hub_" + context.getTABLE());
+globalMap.put("SAT_TABLE", "sat_" + context.getTABLE());
+
+ 
+
+
+	tos_count_tSetGlobalVar_1++;
+
+/**
+ * [tSetGlobalVar_1 main ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+ 
+
+ok_Hash.put("tSetGlobalVar_1", true);
+end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tSetGlobalVar_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tSetGlobalVar_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tSetGlobalVar_1_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -9415,12 +10113,18 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
+				    context.setContextType("TYPE", "id_String");
+				
+                context.TYPE=(String) context.getProperty("TYPE");
 				    context.setContextType("SHEET_NAME", "id_String");
 				
                 context.SHEET_NAME=(String) context.getProperty("SHEET_NAME");
 				    context.setContextType("SOURCE", "id_String");
 				
                 context.SOURCE=(String) context.getProperty("SOURCE");
+				    context.setContextType("TABLE", "id_String");
+				
+                context.TABLE=(String) context.getProperty("TABLE");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -9432,10 +10136,14 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
+            }if (parentContextMap.containsKey("TYPE")) {
+                context.TYPE = (String) parentContextMap.get("TYPE");
             }if (parentContextMap.containsKey("SHEET_NAME")) {
                 context.SHEET_NAME = (String) parentContextMap.get("SHEET_NAME");
             }if (parentContextMap.containsKey("SOURCE")) {
                 context.SOURCE = (String) parentContextMap.get("SOURCE");
+            }if (parentContextMap.containsKey("TABLE")) {
+                context.TABLE = (String) parentContextMap.get("TABLE");
             }
         }
 
@@ -9743,6 +10451,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     202734 characters generated by Talend Open Studio for Big Data 
- *     on the September 23, 2018 8:09:10 PM CST
+ *     222119 characters generated by Talend Open Studio for Big Data 
+ *     on the 28 September, 2018 5:22:25 PM CEST
  ************************************************************************************************/

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_alDa4MCEEeikjKnyntMfTA" comment="connectionComment" label="connectionLabel" dataPackage="_alDa4cCEEeikjKnyntMfTA"/>
+  <TalendMetadata:GenericPackage xmi:id="_alDa4cCEEeikjKnyntMfTA" dataManager="_alDa4MCEEeikjKnyntMfTA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_alDa4sCEEeikjKnyntMfTA" id="_1y99sMCEEeikjKnyntMfTA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_alEB8MCEEeikjKnyntMfTA" name="Market" id="7068" label="Market" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_alEB8cCEEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_alEB8sCEEeikjKnyntMfTA" name="TherapeuticClass" id="7069" label="TherapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_alEB88CEEeikjKnyntMfTA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_alEB9MCEEeikjKnyntMfTA" name="CoeffMarket" id="7070" label="CoeffMarket" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_alEB9cCEEeikjKnyntMfTA"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

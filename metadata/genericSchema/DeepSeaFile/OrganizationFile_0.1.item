@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_RP1NkMCoEeipbvJffRKaTQ" comment="connectionComment" label="connectionLabel" dataPackage="_RP1NkcCoEeipbvJffRKaTQ"/>
+  <TalendMetadata:GenericPackage xmi:id="_RP1NkcCoEeipbvJffRKaTQ" dataManager="_RP1NkMCoEeipbvJffRKaTQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_RP1NksCoEeipbvJffRKaTQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RP1Nk8CoEeipbvJffRKaTQ" name="ServierCode" id="8338" label="ServierCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RP1NlMCoEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RP1NlcCoEeipbvJffRKaTQ" name="ServierParentCode" id="8339" label="ServierParentCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_RP1NlsCoEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RP1Nl8CoEeipbvJffRKaTQ" name="DepartmentCode" id="8340" label="DepartmentCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_RP1NmMCoEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RP1NmcCoEeipbvJffRKaTQ" name="Name_En" id="8341" label="Name_En" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RP1NmsCoEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RP1Nm8CoEeipbvJffRKaTQ" name="Name_Lo" id="8342" label="Name_Lo" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_RP1NnMCoEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RP1NncCoEeipbvJffRKaTQ" name="Level" id="8343" label="Level" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RP1NnsCoEeipbvJffRKaTQ"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>
