@@ -12,7 +12,6 @@
     <module>code/routines</module>
     <module>jobs/process/test2_0.1</module>
     <module>jobs/process/Samples/querygeospatialsample_0.1</module>
-    <module>jobs/process/MYANMAR/JOBS/job_sales_daily_to_monthly_0.1</module>
     <module>jobs/process/Samples/fishersetsample_0.1</module>
     <module>jobs/process/MYANMAR/SALS/sal_product_0.1</module>
     <module>jobs/process/MYANMAR/JOBS/test_0.1</module>
@@ -28,8 +27,9 @@
     <module>jobs/process/MYANMAR/JOBS/build_master_vault_0.1</module>
     <module>jobs/process/MYANMAR/SATS/sat_organization_0.1</module>
     <module>jobs/process/MYANMAR/SATS/sat_employee_0.1</module>
-    <module>jobs/process/copy_of_mongotest_0.1</module>
     <module>jobs/process/mongotest_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/update_one_month_sales_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/sales_daily_to_monthly_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>
