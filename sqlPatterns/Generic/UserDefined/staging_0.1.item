@@ -1,0 +1,26 @@
+{
+    $project: {
+        'file': {
+            $arrayElemAt: [{
+                $filter: {
+                    input: { $objectToArray: '$file' },
+                    cond: { $eq: [ '$$this.k', {$literal:'$id'} ] } }
+                },
+                0
+            ]},
+        'fields': { 
+            $arrayToObject: {
+                $filter: {
+                    input: {
+                        $map: {
+                            input: '$fields',
+                            in: { 'k': '$$this.tag', 'v': '$$this.value' }
+                        }
+                    },
+                    cond: { $eq: [ '$$this.k', 'hash' ] }
+                }
+            }
+        },
+        '_id': 0
+    }
+}

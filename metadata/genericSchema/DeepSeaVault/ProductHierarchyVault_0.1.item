@@ -39,7 +39,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKicCpEeipbvJffRKaTQ" name="namelevel5" id="10704" label="nameLevel5" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_jyQKisCpEeipbvJffRKaTQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKi8CpEeipbvJffRKaTQ" name="package" id="10705" label="packageTablet" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKi8CpEeipbvJffRKaTQ" name="package_unit" id="10705" label="packageUnit" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
         <initialValue xmi:id="_jyQKjMCpEeipbvJffRKaTQ"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKjcCpEeipbvJffRKaTQ" name="std_box_coef" id="10706" label="stdBoxCoef" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">

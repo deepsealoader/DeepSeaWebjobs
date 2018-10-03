@@ -9,13 +9,13 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oFcCnEeipbvJffRKaTQ" name="source" id="4599" label="source" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_QZ0oFsCnEeipbvJffRKaTQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oF8CnEeipbvJffRKaTQ" name="market" id="4600" label="Market" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oF8CnEeipbvJffRKaTQ" name="market" id="4600" label="market" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_QZ0oGMCnEeipbvJffRKaTQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oGcCnEeipbvJffRKaTQ" name="therapeutic_class" id="4601" label="TherapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oGcCnEeipbvJffRKaTQ" name="therapeutic_class" id="4601" label="therapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_QZ0oGsCnEeipbvJffRKaTQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oG8CnEeipbvJffRKaTQ" name="market_coef" id="4602" label="MarketCoef" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oG8CnEeipbvJffRKaTQ" name="market_coef" id="4602" label="marketCoef" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
         <initialValue xmi:id="_QZ0oHMCnEeipbvJffRKaTQ"/>
       </feature>
     </ownedElement>

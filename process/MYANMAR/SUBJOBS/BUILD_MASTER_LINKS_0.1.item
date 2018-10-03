@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="BUILD_MASTER_VAULT"/>
   </context>
   <context confirmationNeeded="false" name="Production">
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:8080"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="MONGODB"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="POSTGRES"/>
+    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="BUILD_MASTER_VAULT"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -119,7 +127,7 @@
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="SAL_TABLES"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_nQaEUL-hEeip__KOlv70Sw"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="0.1"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
@@ -130,15 +138,17 @@
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Mega&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ServierCode&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;servierCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ProviderCode&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;providerCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;product&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.producthierarchy.servier&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.producthierarchy.mega&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -166,9 +176,9 @@
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ProductHierarchy&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;TherapeuticClass&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;therapeuticClass&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;CodeLevel3&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;codeLevel3&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;market&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
@@ -177,6 +187,8 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;product&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.producthierarchy.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -204,9 +216,9 @@
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Employee&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;GeographyCode&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;geographyCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ServierCode&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;servierCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;geography&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
@@ -215,6 +227,8 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;employee&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.employee.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -242,9 +256,9 @@
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Employee&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;OrganizationCode&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;organizationCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ServierCode&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;servierCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;organization&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
@@ -253,6 +267,8 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;employee&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.employee.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -280,9 +296,9 @@
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;GeographyHierarchy&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;OrganizationCode&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;organizationCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ServierCode&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;servierCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;organization&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
@@ -291,6 +307,8 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;geography&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.geographyhierarchy.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
