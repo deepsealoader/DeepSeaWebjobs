@@ -298,7 +298,6 @@
       <relatedItems xmi:id="_T-BfcsYJEeisWJyp2N1_qQ" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_T-Bfc8YJEeisWJyp2N1_qQ" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_T-BfdMYJEeisWJyp2N1_qQ" id="TalendString" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_T-BfdcYJEeisWJyp2N1_qQ" id="JSON" version="Latest" type="routine"/>
       <relatedItems xmi:id="_T-BfdsYJEeisWJyp2N1_qQ" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_T-Bfd8YJEeisWJyp2N1_qQ" id="DataOperation" version="Latest" type="routine"/>
       <relatedItems xmi:id="_T-BfeMYJEeisWJyp2N1_qQ" id="StringHandling" version="Latest" type="routine"/>
@@ -322,7 +321,18 @@
       <relatedItems xmi:id="_-4654MZIEeihsYnM51-9wA" id="_szwHkKUHEeid_Nwiehd5Zg" version="Latest" type="job"/>
       <relatedItems xmi:id="_JG__YMa1EeifZpKmns2VLA" id="MongodbOperation" version="Latest" type="routine"/>
     </ItemsRelations>
-    <deletedFolders>code/routines/mongodb</deletedFolders>
+    <ItemsRelations xmi:id="_hmcJsMd5Eei9NsvRQQ7SFA">
+      <baseItem xmi:id="_hmcJscd5Eei9NsvRQQ7SFA" id="_A3w7wMdzEei9NsvRQQ7SFA" version="0.1" type="job"/>
+      <relatedItems xmi:id="_hmcJssd5Eei9NsvRQQ7SFA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_hmcJs8d5Eei9NsvRQQ7SFA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_hmcJtMd5Eei9NsvRQQ7SFA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_hmcJtcd5Eei9NsvRQQ7SFA" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_hmcJtsd5Eei9NsvRQQ7SFA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_hmcJt8d5Eei9NsvRQQ7SFA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_hmcJuMd5Eei9NsvRQQ7SFA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_hmcJucd5Eei9NsvRQQ7SFA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_hmcJusd5Eei9NsvRQQ7SFA" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_HJ0ZAK6jEeiC2aJINdmZJQ" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
     <migrationTask xmi:id="_HJ0ZAa6jEeiC2aJINdmZJQ" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_HJ0ZAq6jEeiC2aJINdmZJQ" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>

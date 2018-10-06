@@ -116,16 +116,15 @@
     <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
-    <routinesParameter id="_V4hrkKRPEeiWcdBBK0_aCw" name="DataOperation"/>
-    <routinesParameter id="_WCITgKRPEeiWcdBBK0_aCw" name="Mathematical"/>
-    <routinesParameter id="_WCSEgKRPEeiWcdBBK0_aCw" name="Numeric"/>
-    <routinesParameter id="_WCbOcKRPEeiWcdBBK0_aCw" name="Relational"/>
-    <routinesParameter id="_WCkYYKRPEeiWcdBBK0_aCw" name="StringHandling"/>
-    <routinesParameter id="_WCtiUKRPEeiWcdBBK0_aCw" name="TalendDataGenerator"/>
-    <routinesParameter id="_WC2sQKRPEeiWcdBBK0_aCw" name="TalendDate"/>
-    <routinesParameter id="_WDYQsKRPEeiWcdBBK0_aCw" name="TalendStringUtil"/>
-    <routinesParameter id="_WC_PIKRPEeiWcdBBK0_aCw" name="TalendString"/>
-    <routinesParameter id="_mwG7YKUNEeid_Nwiehd5Zg" name="JSON"/>
+    <routinesParameter id="_HdLZ4K6jEeiC2aJINdmZJQ" name="DataOperation"/>
+    <routinesParameter id="_HYegEK6jEeiC2aJINdmZJQ" name="Mathematical"/>
+    <routinesParameter id="_HdAawK6jEeiC2aJINdmZJQ" name="Numeric"/>
+    <routinesParameter id="_HdHIcK6jEeiC2aJINdmZJQ" name="Relational"/>
+    <routinesParameter id="_HdF6UK6jEeiC2aJINdmZJQ" name="StringHandling"/>
+    <routinesParameter id="_HdI9oK6jEeiC2aJINdmZJQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_HdEsMK6jEeiC2aJINdmZJQ" name="TalendDate"/>
+    <routinesParameter id="_HcwjIK6jEeiC2aJINdmZJQ" name="TalendStringUtil"/>
+    <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
   </parameters>
   <node componentName="tMongoDBConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMongoDBConnection_1" show="false"/>
