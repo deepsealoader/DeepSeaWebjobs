@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_mAt0YM_DEeib9oVpaXTd6w" comment="connectionComment" label="connectionLabel" dataPackage="_mAt0Yc_DEeib9oVpaXTd6w" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_mAt0Yc_DEeib9oVpaXTd6w" dataManager="_mAt0YM_DEeib9oVpaXTd6w">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_mAt0Ys_DEeib9oVpaXTd6w" id="_vFckQM_DEeib9oVpaXTd6w" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0Y8_DEeib9oVpaXTd6w" name="hub_id" id="22650" label="hubId" length="-1" precision="-1" sourceType="" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_mAt0ZM_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0Zc_DEeib9oVpaXTd6w" name="source" id="22651" label="source" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_mAt0Zs_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0Z8_DEeib9oVpaXTd6w" name="locality" id="29579" label="locality" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_mAt0aM_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0ac_DEeib9oVpaXTd6w" name="admin_area1" id="29580" label="adminArea1" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_mAt0as_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0a8_DEeib9oVpaXTd6w" name="customer_code" id="29581" label="customerCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_mAt0bM_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0bc_DEeib9oVpaXTd6w" name="customer_name" id="29582" label="customerName" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_mAt0bs_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0b8_DEeib9oVpaXTd6w" name="customer_type" id="29583" label="customerType" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_mAt0cM_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0cc_DEeib9oVpaXTd6w" name="product_code" id="29584" label="productCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_mAt0cs_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0c8_DEeib9oVpaXTd6w" name="product_name" id="29585" label="productName" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_mAt0dM_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0dc_DEeib9oVpaXTd6w" name="amount" id="29586" label="amount" length="-1" precision="-1" sourceType="" talendType="id_Float">
+        <initialValue xmi:id="_mAt0ds_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0d8_DEeib9oVpaXTd6w" name="quantity" id="29587" label="quantity" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
+        <initialValue xmi:id="_mAt0eM_DEeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0ec_DEeib9oVpaXTd6w" name="sales_date" id="29588" label="date" length="-1" precision="-1" sourceType="" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_mAt0es_DEeib9oVpaXTd6w"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

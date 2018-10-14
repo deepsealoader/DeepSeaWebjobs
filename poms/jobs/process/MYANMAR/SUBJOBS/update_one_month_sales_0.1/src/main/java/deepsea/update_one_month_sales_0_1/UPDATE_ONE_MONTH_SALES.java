@@ -4407,16 +4407,16 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -4512,9 +4512,9 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -4560,11 +4560,11 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -4613,8 +4613,8 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -4680,16 +4680,16 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -4785,9 +4785,9 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -4833,11 +4833,11 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -4886,8 +4886,8 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -4953,16 +4953,16 @@ public static class orgRowStruct implements routines.system.IPersistableRow<orgR
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -5058,9 +5058,9 @@ public static class orgRowStruct implements routines.system.IPersistableRow<orgR
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -5106,11 +5106,11 @@ public static class orgRowStruct implements routines.system.IPersistableRow<orgR
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -5159,8 +5159,8 @@ public static class orgRowStruct implements routines.system.IPersistableRow<orgR
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -5226,16 +5226,16 @@ public static class newRowStruct implements routines.system.IPersistableRow<newR
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -5331,9 +5331,9 @@ public static class newRowStruct implements routines.system.IPersistableRow<newR
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -5379,11 +5379,11 @@ public static class newRowStruct implements routines.system.IPersistableRow<newR
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -5432,8 +5432,8 @@ public static class newRowStruct implements routines.system.IPersistableRow<newR
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -5499,16 +5499,16 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -5604,9 +5604,9 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -5652,11 +5652,11 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -5705,8 +5705,8 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -7005,8 +7005,8 @@ newRowStruct newRow_tmp = new newRowStruct();
     List<org.bson.Document> doc_tExtractFields_1 = (List<org.bson.Document>) row1.fields;
     row2.hash = row1.hash;
     row2.num = row1.num;
-    row2.location = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "location");
-    row2.province = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "province");
+    row2.locality = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "locality");
+    row2.adminArea1 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "adminArea1");
     row2.customerCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "customerCode");
     row2.customerName = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "customerName");
     row2.customerType = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "customerType");
@@ -7220,8 +7220,8 @@ if(!rejectedInnerJoin_tMap_1 ) {
 // # Output table : 'orgRow'
 orgRow_tmp.hash = row9.hash ;
 orgRow_tmp.num = row9.num ;
-orgRow_tmp.location = row9.location ;
-orgRow_tmp.province = row9.province ;
+orgRow_tmp.locality = row9.locality ;
+orgRow_tmp.adminArea1 = row9.adminArea1 ;
 orgRow_tmp.customerCode = row9.customerCode ;
 orgRow_tmp.customerName = row9.customerName ;
 orgRow_tmp.customerType = row9.customerType ;
@@ -7239,8 +7239,8 @@ orgRow = orgRow_tmp;
 if( rejectedInnerJoin_tMap_1 ) {
 newRow_tmp.hash = row2.hash;
 newRow_tmp.num = row2.num ;
-newRow_tmp.location = row2.location;
-newRow_tmp.province = row2.province;
+newRow_tmp.locality = row2.locality ;
+newRow_tmp.adminArea1 = row2.adminArea1 ;
 newRow_tmp.customerCode = row2.customerCode;
 newRow_tmp.customerName = row2.customerName;
 newRow_tmp.customerType = row2.customerType;
@@ -7384,8 +7384,8 @@ if(orgRow != null) {
                         String[] rowtFileOutputDelimited_2=new String[12];
                             rowtFileOutputDelimited_2[0]=row11.hash == null ? null : row11.hash;
                             rowtFileOutputDelimited_2[1]=String.valueOf(row11.num);
-                            rowtFileOutputDelimited_2[2]=row11.location == null ? null : row11.location;
-                            rowtFileOutputDelimited_2[3]=row11.province == null ? null : row11.province;
+                            rowtFileOutputDelimited_2[2]=row11.locality == null ? null : row11.locality;
+                            rowtFileOutputDelimited_2[3]=row11.adminArea1 == null ? null : row11.adminArea1;
                             rowtFileOutputDelimited_2[4]=row11.customerCode == null ? null : row11.customerCode;
                             rowtFileOutputDelimited_2[5]=row11.customerName == null ? null : row11.customerName;
                             rowtFileOutputDelimited_2[6]=row11.customerType == null ? null : row11.customerType;
@@ -7568,8 +7568,8 @@ if(newRow != null) {
                         String[] rowtFileOutputDelimited_1=new String[12];
                             rowtFileOutputDelimited_1[0]=row12.hash == null ? null : row12.hash;
                             rowtFileOutputDelimited_1[1]=String.valueOf(row12.num);
-                            rowtFileOutputDelimited_1[2]=row12.location == null ? null : row12.location;
-                            rowtFileOutputDelimited_1[3]=row12.province == null ? null : row12.province;
+                            rowtFileOutputDelimited_1[2]=row12.locality == null ? null : row12.locality;
+                            rowtFileOutputDelimited_1[3]=row12.adminArea1 == null ? null : row12.adminArea1;
                             rowtFileOutputDelimited_1[4]=row12.customerCode == null ? null : row12.customerCode;
                             rowtFileOutputDelimited_1[5]=row12.customerName == null ? null : row12.customerName;
                             rowtFileOutputDelimited_1[6]=row12.customerType == null ? null : row12.customerType;
@@ -8282,16 +8282,16 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -8387,9 +8387,9 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -8435,11 +8435,11 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -8488,8 +8488,8 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -8555,16 +8555,16 @@ public static class totalRowStruct implements routines.system.IPersistableRow<to
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -8660,9 +8660,9 @@ public static class totalRowStruct implements routines.system.IPersistableRow<to
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -8708,11 +8708,11 @@ public static class totalRowStruct implements routines.system.IPersistableRow<to
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -8761,8 +8761,8 @@ public static class totalRowStruct implements routines.system.IPersistableRow<to
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -8828,16 +8828,16 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -8933,9 +8933,9 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -8981,11 +8981,11 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -9034,8 +9034,8 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -9101,16 +9101,16 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -9206,9 +9206,9 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 			        this.num = dis.readLong();
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -9254,11 +9254,11 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -9307,8 +9307,8 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -9448,9 +9448,9 @@ totalRowStruct row13 = totalRow;
 		
 		xlsxTool_tFileOutputExcel_3.addCellValue("num");
 		
-		xlsxTool_tFileOutputExcel_3.addCellValue("location");
+		xlsxTool_tFileOutputExcel_3.addCellValue("locality");
 		
-		xlsxTool_tFileOutputExcel_3.addCellValue("province");
+		xlsxTool_tFileOutputExcel_3.addCellValue("adminArea1");
 		
 		xlsxTool_tFileOutputExcel_3.addCellValue("customerCode");
 		
@@ -9548,7 +9548,7 @@ totalRowStruct row13 = totalRow;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -9557,7 +9557,7 @@ totalRowStruct row13 = totalRow;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -9772,9 +9772,9 @@ int nb_line_tUnite_1 = 0;
 					
 							row7.num = 0;
 					
-							row7.location = null;
+							row7.locality = null;
 					
-							row7.province = null;
+							row7.adminArea1 = null;
 					
 							row7.customerCode = null;
 					
@@ -9862,14 +9862,14 @@ int nb_line_tUnite_1 = 0;
 						
 						
 							
-									row7.location = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row7.locality = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 									
 							
 						
 						}else{
 						
 							
-								row7.location = null;
+								row7.locality = null;
 							
 						
 						}
@@ -9884,14 +9884,14 @@ int nb_line_tUnite_1 = 0;
 						
 						
 							
-									row7.province = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row7.adminArea1 = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 									
 							
 						
 						}else{
 						
 							
-								row7.province = null;
+								row7.adminArea1 = null;
 							
 						
 						}
@@ -10158,14 +10158,6 @@ if(row7 != null) {
 
 	
 
-			//row8
-			//row7
-
-
-			
-
-		
-
 			//row7
 			//row7
 
@@ -10177,6 +10169,14 @@ if(row7 != null) {
 			
 
 		
+
+			//row8
+			//row7
+
+
+			
+
+		
 //////////
  
 
@@ -10185,8 +10185,8 @@ if(row7 != null) {
 								
 			totalRow.hash = row7.hash;								
 			totalRow.num = row7.num;								
-			totalRow.location = row7.location;								
-			totalRow.province = row7.province;								
+			totalRow.locality = row7.locality;								
+			totalRow.adminArea1 = row7.adminArea1;								
 			totalRow.customerCode = row7.customerCode;								
 			totalRow.customerName = row7.customerName;								
 			totalRow.customerType = row7.customerType;								
@@ -10321,17 +10321,17 @@ if(row7 != null) {
 									
 							xlsxTool_tFileOutputExcel_3.addCellValue(Double.parseDouble(String.valueOf(row13.num)));
 									   				
-	    				if(row13.location != null) {
+	    				if(row13.locality != null) {
     				
-							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.location));
+							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.locality));
 	    				} else {
 	    					xlsxTool_tFileOutputExcel_3.addCellNullValue();
 	    				}
 					
 									   				
-	    				if(row13.province != null) {
+	    				if(row13.adminArea1 != null) {
     				
-							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.province));
+							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.adminArea1));
 	    				} else {
 	    					xlsxTool_tFileOutputExcel_3.addCellNullValue();
 	    				}
@@ -10753,9 +10753,9 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 					
 							row8.num = 0;
 					
-							row8.location = null;
+							row8.locality = null;
 					
-							row8.province = null;
+							row8.adminArea1 = null;
 					
 							row8.customerCode = null;
 					
@@ -10843,14 +10843,14 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 							
-									row8.location = rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2];
+									row8.locality = rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2];
 									
 							
 						
 						}else{
 						
 							
-								row8.location = null;
+								row8.locality = null;
 							
 						
 						}
@@ -10865,14 +10865,14 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 							
-									row8.province = rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2];
+									row8.adminArea1 = rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2];
 									
 							
 						
 						}else{
 						
 							
-								row8.province = null;
+								row8.adminArea1 = null;
 							
 						
 						}
@@ -11139,6 +11139,14 @@ if(row8 != null) {
 
 	
 
+			//row7
+			//row8
+
+
+			
+
+		
+
 			//row8
 			//row8
 
@@ -11150,14 +11158,6 @@ if(row8 != null) {
 			
 
 		
-
-			//row7
-			//row8
-
-
-			
-
-		
 //////////
  
 
@@ -11166,8 +11166,8 @@ if(row8 != null) {
 								
 			totalRow.hash = row8.hash;								
 			totalRow.num = row8.num;								
-			totalRow.location = row8.location;								
-			totalRow.province = row8.province;								
+			totalRow.locality = row8.locality;								
+			totalRow.adminArea1 = row8.adminArea1;								
 			totalRow.customerCode = row8.customerCode;								
 			totalRow.customerName = row8.customerName;								
 			totalRow.customerType = row8.customerType;								
@@ -11302,17 +11302,17 @@ if(row8 != null) {
 									
 							xlsxTool_tFileOutputExcel_3.addCellValue(Double.parseDouble(String.valueOf(row13.num)));
 									   				
-	    				if(row13.location != null) {
+	    				if(row13.locality != null) {
     				
-							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.location));
+							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.locality));
 	    				} else {
 	    					xlsxTool_tFileOutputExcel_3.addCellNullValue();
 	    				}
 					
 									   				
-	    				if(row13.province != null) {
+	    				if(row13.adminArea1 != null) {
     				
-							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.province));
+							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.adminArea1));
 	    				} else {
 	    					xlsxTool_tFileOutputExcel_3.addCellNullValue();
 	    				}
@@ -11560,13 +11560,13 @@ end_Hash.put("tFileInputDelimited_2", System.currentTimeMillis());
 globalMap.put("tUnite_1_NB_LINE", nb_line_tUnite_1);
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row8"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row7"+iterateId,2, 0); 
 			 	}
 			}
 		
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row7"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row8"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -11885,16 +11885,16 @@ public static class row9Struct implements routines.system.IPersistableComparable
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -11989,8 +11989,8 @@ public static class row9Struct implements routines.system.IPersistableComparable
 
 		other.hash = this.hash;
 	            other.num = this.num;
-	            other.location = this.location;
-	            other.province = this.province;
+	            other.locality = this.locality;
+	            other.adminArea1 = this.adminArea1;
 	            other.customerCode = this.customerCode;
 	            other.customerName = this.customerName;
 	            other.customerType = this.customerType;
@@ -12121,9 +12121,9 @@ public static class row9Struct implements routines.system.IPersistableComparable
 
 			int length = 0;
 		
-						this.location = readString(dis,ois);
+						this.locality = readString(dis,ois);
 					
-						this.province = readString(dis,ois);
+						this.adminArea1 = readString(dis,ois);
 					
 						this.customerCode = readString(dis,ois);
 					
@@ -12159,9 +12159,9 @@ public static class row9Struct implements routines.system.IPersistableComparable
         try {
 
 		
-						writeString(this.location, dos, oos);
+						writeString(this.locality, dos, oos);
 					
-						writeString(this.province, dos, oos);
+						writeString(this.adminArea1, dos, oos);
 					
 						writeString(this.customerCode, dos, oos);
 					
@@ -12193,8 +12193,8 @@ public static class row9Struct implements routines.system.IPersistableComparable
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -12272,16 +12272,16 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
 					return this.num;
 				}
 				
-			    public String location;
+			    public String locality;
 
-				public String getLocation () {
-					return this.location;
+				public String getLocality () {
+					return this.locality;
 				}
 				
-			    public String province;
+			    public String adminArea1;
 
-				public String getProvince () {
-					return this.province;
+				public String getAdminArea1 () {
+					return this.adminArea1;
 				}
 				
 			    public String customerCode;
@@ -12377,9 +12377,9 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
 					
 					this.num = readString(dis);
 					
-					this.location = readString(dis);
+					this.locality = readString(dis);
 					
-					this.province = readString(dis);
+					this.adminArea1 = readString(dis);
 					
 					this.customerCode = readString(dis);
 					
@@ -12425,11 +12425,11 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
 					
 					// String
 				
-						writeString(this.location,dos);
+						writeString(this.locality,dos);
 					
 					// String
 				
-						writeString(this.province,dos);
+						writeString(this.adminArea1,dos);
 					
 					// String
 				
@@ -12478,8 +12478,8 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+num);
-		sb.append(",location="+location);
-		sb.append(",province="+province);
+		sb.append(",locality="+locality);
+		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
 		sb.append(",customerName="+customerName);
 		sb.append(",customerType="+customerType);
@@ -13062,8 +13062,8 @@ row9Struct row9 = new row9Struct();
     List<org.bson.Document> doc_tExtractFields_2 = (List<org.bson.Document>) row5.fields;
     row6.hash = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "hash");
     row6.num = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "num");
-    row6.location = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "location");
-    row6.province = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "province");
+    row6.locality = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "locality");
+    row6.adminArea1 = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "adminArea1");
     row6.customerCode = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "customerCode");
     row6.customerName = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "customerName");
     row6.customerType = utility_tExtractFields_2.UnPivot(doc_tExtractFields_2, "tag", "value", "customerType");
@@ -13148,13 +13148,13 @@ if(row6 != null) {
               System.err.println(e.getMessage());          
           }           
           try {
-              row9.location=TypeConvert.String2String(row6.location);            
+              row9.locality=TypeConvert.String2String(row6.locality);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
           }           
           try {
-              row9.province=TypeConvert.String2String(row6.province);            
+              row9.adminArea1=TypeConvert.String2String(row6.adminArea1);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -13279,9 +13279,9 @@ if(row9 != null) {
 				
 				row9_HashRow.num = row9.num;
 				
-				row9_HashRow.location = row9.location;
+				row9_HashRow.locality = row9.locality;
 				
-				row9_HashRow.province = row9.province;
+				row9_HashRow.adminArea1 = row9.adminArea1;
 				
 				row9_HashRow.customerCode = row9.customerCode;
 				
@@ -15165,6 +15165,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     342917 characters generated by Talend Open Studio for Big Data 
- *     on the 4 October, 2018 12:36:51 PM SGT
+ *     328078 characters generated by Talend Open Studio for Big Data 
+ *     on the October 15, 2018 2:59:00 AM CST
  ************************************************************************************************/

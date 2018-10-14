@@ -3,26 +3,26 @@
   <TalendMetadata:GenericSchemaConnection xmi:id="_mVnw0MCCEeikjKnyntMfTA" comment="connectionComment" label="connectionLabel" dataPackage="_mVnw0cCCEeikjKnyntMfTA"/>
   <TalendMetadata:GenericPackage xmi:id="_mVnw0cCCEeikjKnyntMfTA" dataManager="_mVnw0MCCEeikjKnyntMfTA">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_mVnw0sCCEeikjKnyntMfTA" id="_vs2UAMCEEeikjKnyntMfTA" label="metadata">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mVnw08CCEeikjKnyntMfTA" name="ServierCode" id="2105" label="ServierCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_mVnw1MCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DnDdQM6qEeiznP0ccyyRWw" name="servierCode" label="servierCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DnDdQc6qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mVnw1cCCEeikjKnyntMfTA" name="ServierParentCode" id="2106" label="ServierParentCode" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_mVnw1sCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DnDdQs6qEeiznP0ccyyRWw" name="servierParentCode" label="servierParentCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_DnDdQ86qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mVnw18CCEeikjKnyntMfTA" name="OrganizationCode" id="2107" label="OrganizationCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_mVnw2MCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DnDdRM6qEeiznP0ccyyRWw" name="organizationCode" label="organizationCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DnDdRc6qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mVnw2cCCEeikjKnyntMfTA" name="Name_En" id="2108" label="Name_En" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_mVnw2sCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DnDdRs6qEeiznP0ccyyRWw" name="nameEn" label="nameEn" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DnDdR86qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mVnw28CCEeikjKnyntMfTA" name="Name_Lo" id="2109" label="Name_Lo" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_mVnw3MCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DnDdSM6qEeiznP0ccyyRWw" name="nameLo" label="nameLo" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_DnDdSc6qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mVnw3cCCEeikjKnyntMfTA" name="Level" id="2110" label="Level" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_mVnw3sCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DnDdSs6qEeiznP0ccyyRWw" name="level" label="level" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DnDdS86qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mVnw38CCEeikjKnyntMfTA" name="HierarchyName" id="2111" label="HierarchyName" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_mVnw4MCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DnDdTM6qEeiznP0ccyyRWw" name="hierarchyName" label="hierarchyName" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_DnDdTc6qEeiznP0ccyyRWw"/>
       </feature>
     </ownedElement>
   </TalendMetadata:GenericPackage>

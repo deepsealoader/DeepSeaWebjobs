@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_CrH18M6pEeiznP0ccyyRWw" name="repository.metadataGenericSchema" dataPackage="_CrH18c6pEeiznP0ccyyRWw" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_CrH18c6pEeiznP0ccyyRWw" name="repository.metadataGenericSchema" dataManager="_CrH18M6pEeiznP0ccyyRWw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_CrH18s6pEeiznP0ccyyRWw" id="_9AWEcM6oEeiznP0ccyyRWw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MidugM6pEeiznP0ccyyRWw" name="hub_id" label="hubId" length="-1" precision="-1" sourceType="" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_Midugc6pEeiznP0ccyyRWw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Midugs6pEeiznP0ccyyRWw" name="source" label="source" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_Midug86pEeiznP0ccyyRWw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_MiduhM6pEeiznP0ccyyRWw" name="code" label="servierCode" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_Miduhc6pEeiznP0ccyyRWw"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Miduhs6pEeiznP0ccyyRWw" name="name" label="name" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_Miduh86pEeiznP0ccyyRWw"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

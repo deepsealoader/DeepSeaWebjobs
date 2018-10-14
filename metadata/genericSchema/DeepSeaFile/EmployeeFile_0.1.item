@@ -3,35 +3,35 @@
   <TalendMetadata:GenericSchemaConnection xmi:id="_gIxNAMCCEeikjKnyntMfTA" comment="connectionComment" label="connectionLabel" dataPackage="_gIxNAcCCEeikjKnyntMfTA"/>
   <TalendMetadata:GenericPackage xmi:id="_gIxNAcCCEeikjKnyntMfTA" dataManager="_gIxNAMCCEeikjKnyntMfTA">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_gIxNAsCCEeikjKnyntMfTA" id="_csMGgMCEEeikjKnyntMfTA" label="metadata">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIxNA8CCEeikjKnyntMfTA" name="ServierCode" id="1491" label="ServierCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_gIybIMCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnAM6pEeiznP0ccyyRWw" name="servierCode" label="servierCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_6xhnAc6pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCMMCCEeikjKnyntMfTA" name="OrganizationCode" id="1492" label="OrganizationCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_gIzCMcCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnAs6pEeiznP0ccyyRWw" name="organizationCode" label="organizationCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_6xhnA86pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCMsCCEeikjKnyntMfTA" name="Name_En" id="1494" label="Name_En" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_gIzCM8CCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnBM6pEeiznP0ccyyRWw" name="nameEn" label="nameEn" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_6xhnBc6pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCNMCCEeikjKnyntMfTA" name="Name_Lo" id="1495" label="Name_Lo" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_gIzCNcCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnBs6pEeiznP0ccyyRWw" name="nameLo" label="nameLo" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_6xhnB86pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCNsCCEeikjKnyntMfTA" name="Visa" id="1496" label="Visa" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_gIzCN8CCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnCM6pEeiznP0ccyyRWw" name="visa" label="visa" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_6xhnCc6pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCOMCCEeikjKnyntMfTA" name="Email" id="1782" label="Email" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
-        <initialValue xmi:id="_gIzCOcCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnCs6pEeiznP0ccyyRWw" name="email" label="email" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_6xhnC86pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCOsCCEeikjKnyntMfTA" name="ArrivalDate" id="1783" label="ArrivalDate" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_gIzCO8CCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnDM6pEeiznP0ccyyRWw" name="arrivalDate" label="arrivalDate" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_6xhnDc6pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCPMCCEeikjKnyntMfTA" name="DepartureDate" id="1863" label="DepartureDate" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_gIzCPcCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnDs6pEeiznP0ccyyRWw" name="departureDate" label="departureDate" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_6xhnD86pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCPsCCEeikjKnyntMfTA" name="JobTitle_En" id="1784" label="JobTitle_En" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_gIzCP8CCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnEM6pEeiznP0ccyyRWw" name="jobTitleEn" label="jobTitleEn" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_6xhnEc6pEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gIzCQMCCEeikjKnyntMfTA" name="JobTitle_Lo" id="1785" label="JobTitle_Lo" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_gIzCQcCCEeikjKnyntMfTA"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6xhnEs6pEeiznP0ccyyRWw" name="jobTitleLo" label="jobTitleLo" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_6xhnE86pEeiznP0ccyyRWw"/>
       </feature>
     </ownedElement>
   </TalendMetadata:GenericPackage>

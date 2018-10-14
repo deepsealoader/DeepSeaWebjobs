@@ -16,6 +16,14 @@
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="POSTGRES"/>
     <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="BUILD_MASTER_VAULT"/>
   </context>
+  <context confirmationNeeded="false" name="Development">
+    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="BUILD_MASTER_VAULT"/>
+    <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:4040"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -147,13 +155,12 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.producthierarchy.servier&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.producthierarchy.mega&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="SAL_PRODUCT_MEGA"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_4"/>
   </node>
@@ -186,13 +193,12 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;product&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.producthierarchy.servier&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="LINK_MARKET_PRODUCT"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
@@ -225,13 +231,12 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;employee&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.employee.servier&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="LINK_GEOGRAPHY_EMPLOYEE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_2"/>
   </node>
@@ -264,13 +269,12 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;employee&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.employee.servier&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="LINK_ORGANIZATION_EMPLOYEE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_3"/>
   </node>
@@ -303,13 +307,12 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;geography&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;myanmar.master.geographyhierarchy.servier&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="LINK_ORGANIZATION_GEOGRAPHY"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_5"/>
   </node>

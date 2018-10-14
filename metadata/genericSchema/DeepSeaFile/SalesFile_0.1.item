@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_lh-yUM-1Eeib9oVpaXTd6w" comment="connectionComment" label="connectionLabel" dataPackage="_lh-yUc-1Eeib9oVpaXTd6w"/>
+  <TalendMetadata:GenericPackage xmi:id="_lh-yUc-1Eeib9oVpaXTd6w" dataManager="_lh-yUM-1Eeib9oVpaXTd6w">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_lh-yUs-1Eeib9oVpaXTd6w" id="_n-jicM-1Eeib9oVpaXTd6w" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yU8-1Eeib9oVpaXTd6w" name="hash" id="3" label="hash" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_lh-yVM-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yVc-1Eeib9oVpaXTd6w" name="num" id="4" label="num" length="-1" precision="-1" sourceType="" talendType="id_Long" nullable="false">
+        <initialValue xmi:id="_lh-yVs-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yV8-1Eeib9oVpaXTd6w" name="locality" id="5" label="locality" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_lh-yWM-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yWc-1Eeib9oVpaXTd6w" name="adminArea1" id="6" label="adminArea1" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_lh-yWs-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yW8-1Eeib9oVpaXTd6w" name="customerCode" id="7" label="customerCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_lh-yXM-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yXc-1Eeib9oVpaXTd6w" name="customerName" id="8" label="customerName" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_lh-yXs-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yX8-1Eeib9oVpaXTd6w" name="customerType" id="9" label="customerType" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_lh-yYM-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yYc-1Eeib9oVpaXTd6w" name="productCode" id="10" label="productCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_lh-yYs-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yY8-1Eeib9oVpaXTd6w" name="productName" id="11" label="productName" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_lh-yZM-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yZc-1Eeib9oVpaXTd6w" name="amount" id="12" label="amount" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_lh-yZs-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yZ8-1Eeib9oVpaXTd6w" name="quantity" id="13" label="quantity" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_lh-yaM-1Eeib9oVpaXTd6w"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yac-1Eeib9oVpaXTd6w" name="date" id="14" label="date" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_lh-yas-1Eeib9oVpaXTd6w"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

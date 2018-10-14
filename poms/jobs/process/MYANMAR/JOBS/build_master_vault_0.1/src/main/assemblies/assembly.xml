@@ -179,14 +179,15 @@
 			<includes>
 				<include>org.talend.libraries:dom4j-1.6.1</include>
 				<include>org.talend.libraries:log4j-1.2.16</include>
-				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
 				<include>org.example.deepsea.code:routines</include>
 				<include>org.talend.libraries:commons-collections-3.2.2</include>
 				<include>org.talend.libraries:log4j-1.2.15</include>
 				<include>org.talend.libraries:jboss-serialization</include>
 				<include>org.talend.libraries:postgresql-8.3-603.jdbc3</include>
 				<include>org.talend.libraries:jersey-client-1.4</include>
+				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
 				<include>org.talend.libraries:trove</include>
+				<include>org.talend.libraries:commons-lang-2.6</include>
 				<include>org.talend.libraries:advancedPersistentLookupLib-1.2</include>
 				<include>org.talend.libraries:jersey-core-1.4</include>
 			</includes>
@@ -210,13 +211,14 @@
 				<include>org.example.deepsea.job:BUILD_MASTER_SATS</include>
 				<include>org.example.deepsea.job:SAT_PRODUCT</include>
 				<include>org.example.deepsea.job:BUILD_MASTER_HUBS</include>
+				<include>org.example.deepsea.job:dSendException</include>
 				<include>org.example.deepsea.job:SAT_MARKET</include>
 				<include>org.example.deepsea.job:SAT_EMPLOYEE</include>
 				<include>org.example.deepsea.job:SAT_ORGANIZATION</include>
-				<include>org.example.deepsea.job:HUB_TABLE</include>
-				<include>org.example.deepsea.job:SAL_TABLES</include>
+				<include>org.example.deepsea.job:HUB_MASTER</include>
+				<include>org.example.deepsea.job:SAL_MASTER</include>
 				<include>org.example.deepsea.job:SAT_GEOGRAPHY</include>
-				<include>org.example.deepsea.job:LINK_TABLES</include>
+				<include>org.example.deepsea.job:LINK_MASTER</include>
 				<include>org.example.deepsea.job:BUILD_MASTER_VAULT</include>
 			</includes>
 			<outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>

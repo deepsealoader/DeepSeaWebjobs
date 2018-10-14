@@ -598,17 +598,8 @@ public void tRunJob_4Process(final java.util.Map<String, Object> globalMap) thro
 		
 		parentContextMap_tRunJob_4.put("SOURCE2", obj_tRunJob_4);
 	
-		obj_tRunJob_4 = context.getWEBJOB_NAME();
-		if(obj_tRunJob_4!=null) {
-			paraList_tRunJob_4.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_4));
-		} else {
-			paraList_tRunJob_4.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_4.put("WEBJOB_NAME", obj_tRunJob_4);
 	
-	
-		deepsea.sal_tables_0_1.SAL_TABLES childJob_tRunJob_4 = new deepsea.sal_tables_0_1.SAL_TABLES();
+		deepsea.sal_master_0_1.SAL_MASTER childJob_tRunJob_4 = new deepsea.sal_master_0_1.SAL_MASTER();
 	    // pass DataSources
 	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_4 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
 	            .get(KEY_DB_DATASOURCES);
@@ -981,17 +972,8 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
 		
 		parentContextMap_tRunJob_1.put("SOURCE2", obj_tRunJob_1);
 	
-		obj_tRunJob_1 = context.getWEBJOB_NAME();
-		if(obj_tRunJob_1!=null) {
-			paraList_tRunJob_1.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
-		} else {
-			paraList_tRunJob_1.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_1.put("WEBJOB_NAME", obj_tRunJob_1);
 	
-	
-		deepsea.link_tables_0_1.LINK_TABLES childJob_tRunJob_1 = new deepsea.link_tables_0_1.LINK_TABLES();
+		deepsea.link_master_0_1.LINK_MASTER childJob_tRunJob_1 = new deepsea.link_master_0_1.LINK_MASTER();
 	    // pass DataSources
 	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_1 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
 	            .get(KEY_DB_DATASOURCES);
@@ -1364,17 +1346,8 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 		
 		parentContextMap_tRunJob_2.put("SOURCE2", obj_tRunJob_2);
 	
-		obj_tRunJob_2 = context.getWEBJOB_NAME();
-		if(obj_tRunJob_2!=null) {
-			paraList_tRunJob_2.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
-		} else {
-			paraList_tRunJob_2.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_2.put("WEBJOB_NAME", obj_tRunJob_2);
 	
-	
-		deepsea.link_tables_0_1.LINK_TABLES childJob_tRunJob_2 = new deepsea.link_tables_0_1.LINK_TABLES();
+		deepsea.link_master_0_1.LINK_MASTER childJob_tRunJob_2 = new deepsea.link_master_0_1.LINK_MASTER();
 	    // pass DataSources
 	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_2 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
 	            .get(KEY_DB_DATASOURCES);
@@ -1747,17 +1720,8 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
 		
 		parentContextMap_tRunJob_3.put("SOURCE2", obj_tRunJob_3);
 	
-		obj_tRunJob_3 = context.getWEBJOB_NAME();
-		if(obj_tRunJob_3!=null) {
-			paraList_tRunJob_3.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_3));
-		} else {
-			paraList_tRunJob_3.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_3.put("WEBJOB_NAME", obj_tRunJob_3);
 	
-	
-		deepsea.link_tables_0_1.LINK_TABLES childJob_tRunJob_3 = new deepsea.link_tables_0_1.LINK_TABLES();
+		deepsea.link_master_0_1.LINK_MASTER childJob_tRunJob_3 = new deepsea.link_master_0_1.LINK_MASTER();
 	    // pass DataSources
 	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_3 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
 	            .get(KEY_DB_DATASOURCES);
@@ -2130,17 +2094,8 @@ public void tRunJob_5Process(final java.util.Map<String, Object> globalMap) thro
 		
 		parentContextMap_tRunJob_5.put("SOURCE2", obj_tRunJob_5);
 	
-		obj_tRunJob_5 = context.getWEBJOB_NAME();
-		if(obj_tRunJob_5!=null) {
-			paraList_tRunJob_5.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_5));
-		} else {
-			paraList_tRunJob_5.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_5.put("WEBJOB_NAME", obj_tRunJob_5);
 	
-	
-		deepsea.link_tables_0_1.LINK_TABLES childJob_tRunJob_5 = new deepsea.link_tables_0_1.LINK_TABLES();
+		deepsea.link_master_0_1.LINK_MASTER childJob_tRunJob_5 = new deepsea.link_master_0_1.LINK_MASTER();
 	    // pass DataSources
 	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_5 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
 	            .get(KEY_DB_DATASOURCES);
@@ -2943,6 +2898,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     92082 characters generated by Talend Open Studio for Big Data 
- *     on the 4 October, 2018 12:33:17 PM SGT
+ *     87289 characters generated by Talend Open Studio for Big Data 
+ *     on the October 15, 2018 2:58:27 AM CST
  ************************************************************************************************/
