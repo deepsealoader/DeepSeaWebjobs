@@ -62,6 +62,11 @@
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
+      <artifactId>CHECK_SCHEMA</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.deepsea.job</groupId>
       <artifactId>BUILD_SALES_LINKS</artifactId>
       <version>0.1.0</version>
     </dependency>

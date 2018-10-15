@@ -190,6 +190,7 @@
 				<include>org.example.deepsea.code:routines</include>
 				<include>org.talend.libraries:jersey-core-1.4</include>
 				<include>org.talend.libraries:jersey-client-1.4</include>
+				<include>org.talend.libraries:talendcsv</include>
 			</includes>
 			<!-- without version for talend libraries -->
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}

@@ -732,6 +732,12 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 					return this.source;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -858,6 +864,8 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 					
 					this.source = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -908,6 +916,10 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 					// String
 				
 						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -969,6 +981,7 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 		sb.append("[");
 		sb.append("hubId="+String.valueOf(hubId));
 		sb.append(",source="+source);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -1034,6 +1047,12 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 
 				public String getSource () {
 					return this.source;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
 				}
 				
 			    public String locality;
@@ -1174,6 +1193,8 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 					
 					this.source = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -1228,6 +1249,10 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 					// String
 				
 						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -1297,6 +1322,7 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 		sb.append("[");
 		sb.append("hubId="+String.valueOf(hubId));
 		sb.append(",source="+source);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -1366,6 +1392,12 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					return this.source;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -1492,6 +1524,8 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					this.source = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -1542,6 +1576,10 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					// String
 				
 						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -1603,6 +1641,7 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 		sb.append("[");
 		sb.append("hubId="+String.valueOf(hubId));
 		sb.append(",source="+source);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -1670,6 +1709,12 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					return this.source;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -1796,6 +1841,8 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					
 					this.source = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -1846,6 +1893,10 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					// String
 				
 						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -1907,6 +1958,7 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 		sb.append("[");
 		sb.append("hubId="+String.valueOf(hubId));
 		sb.append(",source="+source);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -1974,6 +2026,12 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.source;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -2100,6 +2158,8 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 					this.source = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -2150,6 +2210,10 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					// String
 				
 						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -2211,6 +2275,7 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		sb.append("[");
 		sb.append("hubId="+String.valueOf(hubId));
 		sb.append(",source="+source);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -2276,6 +2341,12 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 
 				public long getNum () {
 					return this.num;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
 				}
 				
 			    public String locality;
@@ -2404,6 +2475,8 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -2454,6 +2527,10 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -2515,6 +2592,7 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -2580,6 +2658,12 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 
 				public long getNum () {
 					return this.num;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
 				}
 				
 			    public String locality;
@@ -2687,6 +2771,8 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -2732,6 +2818,10 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -2788,6 +2878,7 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -3661,7 +3752,7 @@ String dbUser_tDBOutput_1 = null;
    int batchSizeCounter_tDBOutput_1=0;
 
 int count_tDBOutput_1=0;
-	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"locality\",\"admin_area1\",\"customer_code\",\"customer_name\",\"customer_type\",\"product_code\",\"product_name\",\"amount\",\"quantity\",\"sales_date\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"geography_code\",\"locality\",\"admin_area1\",\"customer_code\",\"customer_name\",\"customer_type\",\"product_code\",\"product_name\",\"amount\",\"quantity\",\"sales_date\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	    
 	    java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
 	    
@@ -3861,6 +3952,21 @@ int count_tDBOutput_1=0;
 			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
 			errorCodeThrough = 0;
 			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"source:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.geographyCode != null
+		&& (!"".equals(row9.geographyCode))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.geographyCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"geographyCode:");
 			errorMessageThrough = "";	try {
 		if(
 		row9.locality != null
@@ -4950,6 +5056,7 @@ if(out1 != null) {
     List<org.bson.Document> doc_tExtractFields_1 = (List<org.bson.Document>) row7.fields;
     row3.hash = row7.hash;
     row3.num = row7.num;
+    row3.geographyCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "geographyCode");
     row3.locality = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "locality");
     row3.adminArea1 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "adminArea1");
     row3.customerCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "customerCode");
@@ -5034,6 +5141,15 @@ if(row3 != null) {
           }           
           try {
               row2.num=TypeConvert.long2long(row3.num);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.geographyCode)){  
+                row3.geographyCode = null;
+              }
+              row2.geographyCode=TypeConvert.String2String(row3.geographyCode);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -5320,6 +5436,7 @@ if(!rejectedInnerJoin_tMap_2 ) {
 // # Output table : 'row8'
 row8_tmp.hubId = row5.id ;
 row8_tmp.source = context.getSOURCE();
+row8_tmp.geographyCode = row2.geographyCode ;
 row8_tmp.locality = row2.locality ;
 row8_tmp.adminArea1 = row2.adminArea1 ;
 row8_tmp.customerCode = row2.customerCode ;
@@ -5410,6 +5527,9 @@ if(row8 != null) {
 
 	
 	row10.source = row8.source;
+
+	
+	row10.geographyCode = row8.geographyCode;
 
 	
 	row10.locality = row8.locality;
@@ -5559,6 +5679,7 @@ if(row8 != null) {
 		row14 = new row14Struct();
 		row14.hubId = row9.hubId;
 		row14.source = row9.source;
+		row14.geographyCode = row9.geographyCode;
 		row14.locality = row9.locality;
 		row14.adminArea1 = row9.adminArea1;
 		row14.customerCode = row9.customerCode;
@@ -5574,6 +5695,7 @@ if(row8 != null) {
 		exception1 = new exception1Struct();
 		exception1.hubId = row9.hubId;
 		exception1.source = row9.source;
+		exception1.geographyCode = row9.geographyCode;
 		exception1.locality = row9.locality;
 		exception1.adminArea1 = row9.adminArea1;
 		exception1.customerCode = row9.customerCode;
@@ -5657,52 +5779,57 @@ pstmt_tDBOutput_1.setNull(2, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(2, row14.source);
 }
 
-                    if(row14.locality == null) {
+                    if(row14.geographyCode == null) {
 pstmt_tDBOutput_1.setNull(3, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(3, row14.locality);
+} else {pstmt_tDBOutput_1.setString(3, row14.geographyCode);
+}
+
+                    if(row14.locality == null) {
+pstmt_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(4, row14.locality);
 }
 
                     if(row14.adminArea1 == null) {
-pstmt_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(4, row14.adminArea1);
+pstmt_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(5, row14.adminArea1);
 }
 
                     if(row14.customerCode == null) {
-pstmt_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(5, row14.customerCode);
+pstmt_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(6, row14.customerCode);
 }
 
                     if(row14.customerName == null) {
-pstmt_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(6, row14.customerName);
+pstmt_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(7, row14.customerName);
 }
 
                     if(row14.customerType == null) {
-pstmt_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(7, row14.customerType);
+pstmt_tDBOutput_1.setNull(8, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(8, row14.customerType);
 }
 
                     if(row14.productCode == null) {
-pstmt_tDBOutput_1.setNull(8, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(8, row14.productCode);
+pstmt_tDBOutput_1.setNull(9, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(9, row14.productCode);
 }
 
                     if(row14.productName == null) {
-pstmt_tDBOutput_1.setNull(9, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(9, row14.productName);
+pstmt_tDBOutput_1.setNull(10, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(10, row14.productName);
 }
 
                     if(row14.amount == null) {
-pstmt_tDBOutput_1.setNull(10, java.sql.Types.FLOAT);
-} else {pstmt_tDBOutput_1.setFloat(10, row14.amount);
+pstmt_tDBOutput_1.setNull(11, java.sql.Types.FLOAT);
+} else {pstmt_tDBOutput_1.setFloat(11, row14.amount);
 }
 
-                    pstmt_tDBOutput_1.setFloat(11, row14.quantity);
+                    pstmt_tDBOutput_1.setFloat(12, row14.quantity);
 
                     if(row14.date != null) {
-pstmt_tDBOutput_1.setTimestamp(12, new java.sql.Timestamp(row14.date.getTime()));
+pstmt_tDBOutput_1.setTimestamp(13, new java.sql.Timestamp(row14.date.getTime()));
 } else {
-pstmt_tDBOutput_1.setNull(12, java.sql.Types.TIMESTAMP);
+pstmt_tDBOutput_1.setNull(13, java.sql.Types.TIMESTAMP);
 }
 
 			
@@ -13678,6 +13805,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     283187 characters generated by Talend Open Studio for Big Data 
- *     on the October 15, 2018 10:35:22 AM CST
+ *     286627 characters generated by Talend Open Studio for Big Data 
+ *     on the October 15, 2018 4:56:22 PM CST
  ************************************************************************************************/

@@ -417,6 +417,7 @@
       <relatedItems xmi:id="_zt1PMM_EEeib9oVpaXTd6w" id="_Vw0JMM_BEeib9oVpaXTd6w" version="Latest" type="job"/>
       <relatedItems xmi:id="_zt1PMc_EEeib9oVpaXTd6w" id="_ht0VcM-7Eeib9oVpaXTd6w" version="Latest" type="job"/>
       <relatedItems xmi:id="_55tZQM_dEeib9oVpaXTd6w" id="_1EHjUM_dEeib9oVpaXTd6w" version="Latest" type="job"/>
+      <relatedItems xmi:id="_U-WCoNA-Eei2putC5JowCA" id="_vm5rENA9Eei2putC5JowCA" version="Latest" type="job"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_KfzyMM_FEeib9oVpaXTd6w">
       <baseItem xmi:id="_KfzyMc_FEeib9oVpaXTd6w" id="_KfrPUM_FEeib9oVpaXTd6w" version="0.1" type="job"/>
@@ -473,6 +474,34 @@
       <relatedItems xmi:id="_Zc1zas_fEeib9oVpaXTd6w" id="TalendDataGenerator" version="Latest" type="routine"/>
       <relatedItems xmi:id="_Zc1za8_fEeib9oVpaXTd6w" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_Zc1zbM_fEeib9oVpaXTd6w" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_vm9VcNA9Eei2putC5JowCA">
+      <baseItem xmi:id="_vm9VcdA9Eei2putC5JowCA" id="_vm5rENA9Eei2putC5JowCA" version="0.1" type="job"/>
+      <relatedItems xmi:id="_vm9VctA9Eei2putC5JowCA" id="_EqQw8L73EeiwTrrgdMnqWg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_vm9Vc9A9Eei2putC5JowCA" id="_5-bpkM_PEeib9oVpaXTd6w" version="0.1" type="job"/>
+      <relatedItems xmi:id="_vm9VdNA9Eei2putC5JowCA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98gNA9Eei2putC5JowCA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98gdA9Eei2putC5JowCA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98gtA9Eei2putC5JowCA" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98g9A9Eei2putC5JowCA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98hNA9Eei2putC5JowCA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98hdA9Eei2putC5JowCA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98htA9Eei2putC5JowCA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98h9A9Eei2putC5JowCA" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_vm98iNA9Eei2putC5JowCA" id="_lh22gM-1Eeib9oVpaXTd6w - metadata" version="Latest" type="schema"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_ojvU4NA-Eei2putC5JowCA">
+      <baseItem xmi:id="_ojvU4dA-Eei2putC5JowCA" id="_ojF0oNA-Eei2putC5JowCA" version="0.1" type="job"/>
+      <relatedItems xmi:id="_ojvU4tA-Eei2putC5JowCA" id="_EqQw8L73EeiwTrrgdMnqWg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_ojvU5NA-Eei2putC5JowCA" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ojvU5dA-Eei2putC5JowCA" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ojvU5tA-Eei2putC5JowCA" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ojvU59A-Eei2putC5JowCA" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ojvU6NA-Eei2putC5JowCA" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ojvU6dA-Eei2putC5JowCA" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ojvU6tA-Eei2putC5JowCA" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ojvU69A-Eei2putC5JowCA" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ojvU7NA-Eei2putC5JowCA" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_HJ0ZAK6jEeiC2aJINdmZJQ" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
     <migrationTask xmi:id="_HJ0ZAa6jEeiC2aJINdmZJQ" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>

@@ -9,6 +9,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0Zc_DEeib9oVpaXTd6w" name="source" id="22651" label="source" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_mAt0Zs_DEeib9oVpaXTd6w"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__8C4ENA-Eei2putC5JowCA" name="geography_code" label="geographyCode" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0Z8_DEeib9oVpaXTd6w" name="locality" id="29579" label="locality" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_mAt0aM_DEeib9oVpaXTd6w"/>
       </feature>

@@ -465,15 +465,6 @@ private class TalendException extends Exception {
 					tDBCommit_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tRunJob_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tRunJob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -1040,149 +1031,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
      * Compare keys
      */
     public int compareTo(row11Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
-public static class exception2Struct implements routines.system.IPersistableRow<exception2Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_LINK_SALES_GEOGRAPHY = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_LINK_SALES_GEOGRAPHY = new byte[0];
-
-	
-			    public String id;
-
-				public String getId () {
-					return this.id;
-				}
-				
-			    public String oldValue;
-
-				public String getOldValue () {
-					return this.oldValue;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_LINK_SALES_GEOGRAPHY.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_LINK_SALES_GEOGRAPHY.length == 0) {
-   					commonByteArray_DEEPSEA_LINK_SALES_GEOGRAPHY = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_LINK_SALES_GEOGRAPHY = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_LINK_SALES_GEOGRAPHY, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_LINK_SALES_GEOGRAPHY, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_LINK_SALES_GEOGRAPHY) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.id = readString(dis);
-					
-					this.oldValue = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.id,dos);
-					
-					// String
-				
-						writeString(this.oldValue,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("id="+id);
-		sb.append(",oldValue="+oldValue);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(exception2Struct other) {
 
 		int returnValue = -1;
 		
@@ -2448,7 +2296,6 @@ row7Struct row5 = row7;
 row10Struct row10 = new row10Struct();
 row11Struct row11 = new row11Struct();
 row11Struct row12 = row11;
-exception2Struct exception2 = new exception2Struct();
 exception1Struct exception1 = new exception1Struct();
 
 
@@ -2596,53 +2443,6 @@ int count_tDBOutput_2=0;
 
 
 
-
-	
-	/**
-	 * [tRunJob_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tRunJob_2", false);
-		start_Hash.put("tRunJob_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tRunJob_2";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("exception2" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tRunJob_2 = 0;
-		
-    	class BytesLimit65535_tRunJob_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tRunJob_2().limitLog4jByte();
-
-
- 
-
-
-
-/**
- * [tRunJob_2 begin ] stop
- */
-
-
-
 	
 	/**
 	 * [tMap_2 begin ] start
@@ -2705,7 +2505,6 @@ Var__tMap_2__Struct Var__tMap_2 = new Var__tMap_2__Struct();
 // ###############################
 // # Outputs initialization
 row11Struct row11_tmp = new row11Struct();
-exception2Struct exception2_tmp = new exception2Struct();
 // ###############################
 
         
@@ -3991,7 +3790,6 @@ Var__tMap_2__Struct Var = Var__tMap_2;// ###############################
         // # Output tables
 
 row11 = null;
-exception2 = null;
 
 if(!rejectedInnerJoin_tMap_2 ) {
 
@@ -4000,16 +3798,7 @@ row11_tmp.source = row10.source;
 row11_tmp.hubId1 = row10.hubId1 ;
 row11_tmp.hubId2 = row2.id;
 row11 = row11_tmp;
-} // closing inner join bracket (1)
-// ###### START REJECTS ##### 
-
-// # Output reject table : 'exception2'
-// # Filter conditions 
-if( rejectedInnerJoin_tMap_2 ) {
-exception2_tmp.id = row10.id ;
-exception2_tmp.oldValue = row10.businessKey2b;
-exception2 = exception2_tmp;
-} // closing filter/reject
+}  // closing inner join bracket (2)
 // ###############################
 
 } // end of Var scope
@@ -4267,266 +4056,6 @@ pstmt_tDBOutput_2.setNull(1, java.sql.Types.VARCHAR);
  */
 
 } // End of branch "row11"
-
-
-
-
-// Start of branch "exception2"
-if(exception2 != null) { 
-
-
-
-	
-	/**
-	 * [tRunJob_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
-			//exception2
-			//exception2
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("exception2"+iterateId,1, 1);
-				} 
-			
-
-		
-	java.util.List<String> paraList_tRunJob_2 = new java.util.ArrayList<String>();
-	
-	        			paraList_tRunJob_2.add("--father_pid="+pid);
-	      			
-	        			paraList_tRunJob_2.add("--root_pid="+rootPid);
-	      			
-	        			paraList_tRunJob_2.add("--father_node=tRunJob_2");
-	      			
-	        			paraList_tRunJob_2.add("--context=Production");
-	      			
-	//for feature:10589
-	
-		paraList_tRunJob_2.add("--stat_port=" + portStats);
-	
-
-	if(resuming_logs_dir_path != null){
-		paraList_tRunJob_2.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
-	}
-	String childResumePath_tRunJob_2 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
-	String tRunJobName_tRunJob_2 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
-	if("tRunJob_2".equals(tRunJobName_tRunJob_2) && childResumePath_tRunJob_2 != null){
-		paraList_tRunJob_2.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
-	}
-	paraList_tRunJob_2.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_2");
-	
-	java.util.Map<String, Object> parentContextMap_tRunJob_2 = new java.util.HashMap<String, Object>();
-
-	
-		
-		context.synchronizeContext();
-		
-			parentContextMap_tRunJob_2.put("WEBJOB_NAME", context.WEBJOB_NAME);
-			paraList_tRunJob_2.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("COLLECTION", context.COLLECTION);
-			paraList_tRunJob_2.add("--context_type " + "COLLECTION" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("BUSINESS_KEY", context.BUSINESS_KEY);
-			paraList_tRunJob_2.add("--context_type " + "BUSINESS_KEY" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("TABLE1", context.TABLE1);
-			paraList_tRunJob_2.add("--context_type " + "TABLE1" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("SOURCE1", context.SOURCE1);
-			paraList_tRunJob_2.add("--context_type " + "SOURCE1" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("TABLE2", context.TABLE2);
-			paraList_tRunJob_2.add("--context_type " + "TABLE2" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("SOURCE2", context.SOURCE2);
-			paraList_tRunJob_2.add("--context_type " + "SOURCE2" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("COUNTRY", context.COUNTRY);
-			paraList_tRunJob_2.add("--context_type " + "COUNTRY" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
-			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
-			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
-			paraList_tRunJob_2.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
-			paraList_tRunJob_2.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
-		 
-		java.util.Enumeration<?> propertyNames_tRunJob_2 = context.propertyNames();
-		while (propertyNames_tRunJob_2.hasMoreElements()) {
-			String key_tRunJob_2 = (String) propertyNames_tRunJob_2.nextElement();
-			Object value_tRunJob_2 = (Object) context.get(key_tRunJob_2);
-			if(value_tRunJob_2!=null) {  
-				paraList_tRunJob_2.add("--context_param " + key_tRunJob_2 + "=" + value_tRunJob_2);
-			} else {
-				paraList_tRunJob_2.add("--context_param " + key_tRunJob_2 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-			}
-			
-		}
-		
-
-	Object obj_tRunJob_2 = null;
-
-	
-		obj_tRunJob_2 = globalMap.get("COUNTRY_ID");
-		if(obj_tRunJob_2!=null) {
-			paraList_tRunJob_2.add("--context_param COUNTRY_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
-		} else {
-			paraList_tRunJob_2.add("--context_param COUNTRY_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_2.put("COUNTRY_ID", obj_tRunJob_2);
-	
-		obj_tRunJob_2 = globalMap.get("WEBJOB_ID");
-		if(obj_tRunJob_2!=null) {
-			paraList_tRunJob_2.add("--context_param WEBJOB_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
-		} else {
-			paraList_tRunJob_2.add("--context_param WEBJOB_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_2.put("WEBJOB_ID", obj_tRunJob_2);
-	
-		obj_tRunJob_2 = exception2.id;
-		if(obj_tRunJob_2!=null) {
-			paraList_tRunJob_2.add("--context_param RECORD_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
-		} else {
-			paraList_tRunJob_2.add("--context_param RECORD_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_2.put("RECORD_ID", obj_tRunJob_2);
-	
-		obj_tRunJob_2 = "num";
-		if(obj_tRunJob_2!=null) {
-			paraList_tRunJob_2.add("--context_param FIELD_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
-		} else {
-			paraList_tRunJob_2.add("--context_param FIELD_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_2.put("FIELD_NAME", obj_tRunJob_2);
-	
-		obj_tRunJob_2 = exception2.oldValue;
-		if(obj_tRunJob_2!=null) {
-			paraList_tRunJob_2.add("--context_param FIELD_VALUE=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
-		} else {
-			paraList_tRunJob_2.add("--context_param FIELD_VALUE=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_2.put("FIELD_VALUE", obj_tRunJob_2);
-	
-		obj_tRunJob_2 = "business key not found in source " + context.getSOURCE2();
-		if(obj_tRunJob_2!=null) {
-			paraList_tRunJob_2.add("--context_param REASON=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
-		} else {
-			paraList_tRunJob_2.add("--context_param REASON=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_2.put("REASON", obj_tRunJob_2);
-	
-	
-		deepsea.dsendexception_0_1.dSendException childJob_tRunJob_2 = new deepsea.dsendexception_0_1.dSendException();
-	    // pass DataSources
-	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_2 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
-	            .get(KEY_DB_DATASOURCES);
-	    if (null != talendDataSources_tRunJob_2) {
-	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_2 = new java.util.HashMap<String, javax.sql.DataSource>();
-	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_2 : talendDataSources_tRunJob_2
-			        .entrySet()) {
-	            dataSources_tRunJob_2.put(talendDataSourceEntry_tRunJob_2.getKey(),
-	                    talendDataSourceEntry_tRunJob_2.getValue().getRawDataSource());
-	        }
-	        childJob_tRunJob_2.setDataSources(dataSources_tRunJob_2);
-	    }
-		  
-			childJob_tRunJob_2.parentContextMap = parentContextMap_tRunJob_2;
-		  
-		
-		String[][] childReturn_tRunJob_2 = childJob_tRunJob_2.runJob((String[]) paraList_tRunJob_2.toArray(new String[paraList_tRunJob_2.size()]));
-		
-	  	
-				((java.util.Map)threadLocal.get()).put("errorCode", childJob_tRunJob_2.getErrorCode());
-			
-	            
-	    	if(childJob_tRunJob_2.getErrorCode() == null){
-				globalMap.put("tRunJob_2_CHILD_RETURN_CODE", childJob_tRunJob_2.getStatus() != null && ("failure").equals(childJob_tRunJob_2.getStatus()) ? 1 : 0);
-	    	}else{
-				globalMap.put("tRunJob_2_CHILD_RETURN_CODE", childJob_tRunJob_2.getErrorCode());
-		    }
-		    if (childJob_tRunJob_2.getExceptionStackTrace() != null) { 
-		    	globalMap.put("tRunJob_2_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_2.getExceptionStackTrace());
-		    }
-	  
-			 
-				if (childJob_tRunJob_2.getErrorCode() != null || ("failure").equals(childJob_tRunJob_2.getStatus())) {
-	        		throw new RuntimeException("Child job running failed.\n"+childJob_tRunJob_2.getException().getClass().getName() + ": " + childJob_tRunJob_2.getException().getMessage());
-				}
-			
-	  	
-
- 
-
-
-	tos_count_tRunJob_2++;
-
-/**
- * [tRunJob_2 main ] stop
- */
-	
-	/**
-	 * [tRunJob_2 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_2 process_data_begin ] stop
- */
-	
-	/**
-	 * [tRunJob_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_2 process_data_end ] stop
- */
-
-} // End of branch "exception2"
 
 
 
@@ -5305,40 +4834,6 @@ end_Hash.put("tDBOutput_2", System.currentTimeMillis());
 
 
 
-	
-	/**
-	 * [tRunJob_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("exception2"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tRunJob_2", true);
-end_Hash.put("tRunJob_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tRunJob_2 end ] stop
- */
-
-
-
-
 
 
 
@@ -5593,30 +5088,6 @@ end_Hash.put("tRunJob_1", System.currentTimeMillis());
 
 
 
-
-
-
-
-	
-	/**
-	 * [tRunJob_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_2 finally ] stop
- */
 
 
 
@@ -6910,7 +6381,7 @@ public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) thr
 
 			   		// connection name:row2
 			   		// source node:tDBInput_1 - inputs:(after_tMongoDBInput_1) outputs:(row2,row2) | target node:tAdvancedHash_row2 - inputs:(row2) outputs:()
-			   		// linked node: tMap_2 - inputs:(row10,row2) outputs:(row11,exception2)
+			   		// linked node: tMap_2 - inputs:(row10,row2) outputs:(row11)
 			   
 			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row2 = 
 			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -13037,6 +12508,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     267178 characters generated by Talend Open Studio for Big Data 
- *     on the October 15, 2018 10:35:21 AM CST
+ *     253267 characters generated by Talend Open Studio for Big Data 
+ *     on the October 15, 2018 4:56:22 PM CST
  ************************************************************************************************/
