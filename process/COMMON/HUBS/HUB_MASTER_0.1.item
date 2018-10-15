@@ -478,9 +478,9 @@
       <elementValue elementRef="PARAM_NAME_COLUMN" value="RECORD_ID"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="row1.id"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="FIELD_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="exception1.errorMessage.split(&quot;:&quot;)[0]"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getBUSINESS_KEY()"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="FIELD_VALUE"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="exception1.businessKey"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="REASON"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Schema invalid:&quot; + exception1.errorMessage"/>
     </elementParameter>

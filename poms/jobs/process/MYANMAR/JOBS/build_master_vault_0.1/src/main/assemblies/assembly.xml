@@ -207,18 +207,20 @@
 		<dependencySet>
 			<outputDirectory>${talend.job.name}</outputDirectory>
 			<includes>
-				<include>org.example.deepsea.job:BUILD_MASTER_LINKS</include>
 				<include>org.example.deepsea.job:BUILD_MASTER_SATS</include>
-				<include>org.example.deepsea.job:SAT_PRODUCT</include>
+				<include>org.example.deepsea.job:SAT_MARKET</include>
 				<include>org.example.deepsea.job:BUILD_MASTER_HUBS</include>
 				<include>org.example.deepsea.job:dSendException</include>
-				<include>org.example.deepsea.job:SAT_MARKET</include>
-				<include>org.example.deepsea.job:SAT_EMPLOYEE</include>
-				<include>org.example.deepsea.job:SAT_ORGANIZATION</include>
+				<include>org.example.deepsea.job:SAT_CUSTOMER</include>
 				<include>org.example.deepsea.job:HUB_MASTER</include>
 				<include>org.example.deepsea.job:SAL_MASTER</include>
 				<include>org.example.deepsea.job:SAT_GEOGRAPHY</include>
 				<include>org.example.deepsea.job:LINK_MASTER</include>
+				<include>org.example.deepsea.job:SAT_PRODUCT</include>
+				<include>org.example.deepsea.job:BUILD_MASTER_LINKS</include>
+				<include>org.example.deepsea.job:SAT_EMPLOYEE</include>
+				<include>org.example.deepsea.job:SAT_SOURCE_CHANNEL</include>
+				<include>org.example.deepsea.job:SAT_ORGANIZATION</include>
 				<include>org.example.deepsea.job:BUILD_MASTER_VAULT</include>
 			</includes>
 			<outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>

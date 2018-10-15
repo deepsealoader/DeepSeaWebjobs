@@ -57,12 +57,12 @@
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
-      <artifactId>SAL_TABLES</artifactId>
+      <artifactId>SAL_MASTER</artifactId>
       <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
-      <artifactId>LINK_TABLES</artifactId>
+      <artifactId>LINK_MASTER</artifactId>
       <version>0.1.0</version>
     </dependency>
   </dependencies>
