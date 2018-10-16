@@ -494,17 +494,6 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 		tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tMongoDBOutput_1_error(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		((java.util.Map) threadLocal.get()).put("status", "failure");
-
-		tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
 	public void tDBInput_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -692,15 +681,15 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 		tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tWriteJSONField_1_Out_error(Exception exception,
+	public void tMongoDBOutput_1_In_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
-		tWriteJSONField_1_In_error(exception, errorComponent, globalMap);
+		tMongoDBOutput_1_Out_error(exception, errorComponent, globalMap);
 
 	}
 
-	public void tWriteJSONField_1_In_error(Exception exception,
+	public void tMongoDBOutput_1_Out_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -865,7 +854,7 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 
 	}
 
-	public void tWriteJSONField_1_In_onSubJobError(Exception exception,
+	public void tMongoDBOutput_1_Out_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1654,6 +1643,342 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 		}
 
 		globalMap.put("tFlowMeterCatcher_1_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row9Struct implements
+			routines.system.IPersistableRow<row9Struct> {
+		final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[0];
+		static byte[] commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String _id;
+
+		public String get_id() {
+			return this._id;
+		}
+
+		public String geographyCode;
+
+		public String getGeographyCode() {
+			return this.geographyCode;
+		}
+
+		public String locality;
+
+		public String getLocality() {
+			return this.locality;
+		}
+
+		public String adminArea1;
+
+		public String getAdminArea1() {
+			return this.adminArea1;
+		}
+
+		public String customerCode;
+
+		public String getCustomerCode() {
+			return this.customerCode;
+		}
+
+		public String customerName;
+
+		public String getCustomerName() {
+			return this.customerName;
+		}
+
+		public String customerType;
+
+		public String getCustomerType() {
+			return this.customerType;
+		}
+
+		public String productCode;
+
+		public String getProductCode() {
+			return this.productCode;
+		}
+
+		public String productName;
+
+		public String getProductName() {
+			return this.productName;
+		}
+
+		public String amount;
+
+		public String getAmount() {
+			return this.amount;
+		}
+
+		public String quantity;
+
+		public String getQuantity() {
+			return this.quantity;
+		}
+
+		public String date;
+
+		public String getDate() {
+			return this.date;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime * result
+						+ ((this._id == null) ? 0 : this._id.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row9Struct other = (row9Struct) obj;
+
+			if (this._id == null) {
+				if (other._id != null)
+					return false;
+
+			} else if (!this._id.equals(other._id))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row9Struct other) {
+
+			other._id = this._id;
+			other.geographyCode = this.geographyCode;
+			other.locality = this.locality;
+			other.adminArea1 = this.adminArea1;
+			other.customerCode = this.customerCode;
+			other.customerName = this.customerName;
+			other.customerType = this.customerType;
+			other.productCode = this.productCode;
+			other.productName = this.productName;
+			other.amount = this.amount;
+			other.quantity = this.quantity;
+			other.date = this.date;
+
+		}
+
+		public void copyKeysDataTo(row9Struct other) {
+
+			other._id = this._id;
+
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE.length) {
+					if (length < 1024
+							&& commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE.length == 0) {
+						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[1024];
+					} else {
+						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE,
+						0, length);
+				strReturn = new String(
+						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE, 0,
+						length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_DEEPSEA_GENERATE_GEOGRAPHY_CODE) {
+
+				try {
+
+					int length = 0;
+
+					this._id = readString(dis);
+
+					this.geographyCode = readString(dis);
+
+					this.locality = readString(dis);
+
+					this.adminArea1 = readString(dis);
+
+					this.customerCode = readString(dis);
+
+					this.customerName = readString(dis);
+
+					this.customerType = readString(dis);
+
+					this.productCode = readString(dis);
+
+					this.productName = readString(dis);
+
+					this.amount = readString(dis);
+
+					this.quantity = readString(dis);
+
+					this.date = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this._id, dos);
+
+				// String
+
+				writeString(this.geographyCode, dos);
+
+				// String
+
+				writeString(this.locality, dos);
+
+				// String
+
+				writeString(this.adminArea1, dos);
+
+				// String
+
+				writeString(this.customerCode, dos);
+
+				// String
+
+				writeString(this.customerName, dos);
+
+				// String
+
+				writeString(this.customerType, dos);
+
+				// String
+
+				writeString(this.productCode, dos);
+
+				// String
+
+				writeString(this.productName, dos);
+
+				// String
+
+				writeString(this.amount, dos);
+
+				// String
+
+				writeString(this.quantity, dos);
+
+				// String
+
+				writeString(this.date, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("_id=" + _id);
+			sb.append(",geographyCode=" + geographyCode);
+			sb.append(",locality=" + locality);
+			sb.append(",adminArea1=" + adminArea1);
+			sb.append(",customerCode=" + customerCode);
+			sb.append(",customerName=" + customerName);
+			sb.append(",customerType=" + customerType);
+			sb.append(",productCode=" + productCode);
+			sb.append(",productName=" + productName);
+			sb.append(",amount=" + amount);
+			sb.append(",quantity=" + quantity);
+			sb.append(",date=" + date);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row9Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this._id, other._id);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
 	}
 
 	public static class row5Struct implements
@@ -3353,65 +3678,66 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 				row2Struct row2 = new row2Struct();
 				row10Struct row10 = new row10Struct();
 				row10Struct row5 = row10;
+				row10Struct row9 = row10;
 
 				/**
-				 * [tWriteJSONField_1_Out begin ] start
+				 * [tMongoDBOutput_1_In begin ] start
 				 */
 
-				ok_Hash.put("tWriteJSONField_1_Out", false);
-				start_Hash.put("tWriteJSONField_1_Out",
+				ok_Hash.put("tMongoDBOutput_1_In", false);
+				start_Hash.put("tMongoDBOutput_1_In",
 						System.currentTimeMillis());
 
-				currentVirtualComponent = "tWriteJSONField_1";
+				currentVirtualComponent = "tMongoDBOutput_1";
 
-				currentComponent = "tWriteJSONField_1_Out";
+				currentComponent = "tMongoDBOutput_1_In";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row5" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
 
 					}
 				}
 
-				int tos_count_tWriteJSONField_1_Out = 0;
+				int tos_count_tMongoDBOutput_1_In = 0;
 
-				class BytesLimit65535_tWriteJSONField_1_Out {
+				class BytesLimit65535_tMongoDBOutput_1_In {
 					public void limitLog4jByte() throws Exception {
 
 					}
 				}
 
-				new BytesLimit65535_tWriteJSONField_1_Out().limitLog4jByte();
+				new BytesLimit65535_tMongoDBOutput_1_In().limitLog4jByte();
 				// tWriteXMLFieldOut_begin
-				int nb_line_tWriteJSONField_1_Out = 0;
-				boolean needRoot_tWriteJSONField_1_Out = true;
+				int nb_line_tMongoDBOutput_1_In = 0;
+				boolean needRoot_tMongoDBOutput_1_In = true;
 
-				String strCompCache_tWriteJSONField_1_Out = null;
+				String strCompCache_tMongoDBOutput_1_In = null;
 
-				java.util.Queue<row8Struct> listGroupby_tWriteJSONField_1_Out = new java.util.concurrent.ConcurrentLinkedQueue<row8Struct>();
+				java.util.Queue<String> listGroupby_tMongoDBOutput_1_In = new java.util.concurrent.ConcurrentLinkedQueue<String>();
 
-				class ThreadXMLField_tWriteJSONField_1_Out extends Thread {
+				class ThreadXMLField_tMongoDBOutput_1_In extends Thread {
 
-					java.util.Queue<row8Struct> queue;
+					java.util.Queue<String> queue;
 
 					java.util.List<java.util.Map<String, String>> flows;
 					java.lang.Exception lastException;
 					String currentComponent;
 
-					ThreadXMLField_tWriteJSONField_1_Out(java.util.Queue q) {
+					ThreadXMLField_tMongoDBOutput_1_In(java.util.Queue q) {
 						this.queue = q;
-						globalMap.put("queue_tWriteJSONField_1_In", queue);
+						globalMap.put("queue_tMongoDBOutput_1_Out", queue);
 						lastException = null;
 					}
 
-					ThreadXMLField_tWriteJSONField_1_Out(java.util.Queue q,
+					ThreadXMLField_tMongoDBOutput_1_In(java.util.Queue q,
 							java.util.List<java.util.Map<String, String>> l) {
 						this.queue = q;
 						this.flows = l;
 						lastException = null;
-						globalMap.put("queue_tWriteJSONField_1_In", queue);
-						globalMap.put("flows_tWriteJSONField_1_In", flows);
+						globalMap.put("queue_tMongoDBOutput_1_Out", queue);
+						globalMap.put("flows_tMongoDBOutput_1_Out", flows);
 					}
 
 					public java.lang.Exception getLastException() {
@@ -3425,7 +3751,7 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 					@Override
 					public void run() {
 						try {
-							tWriteJSONField_1_InProcess(globalMap);
+							tMongoDBOutput_1_OutProcess(globalMap);
 						} catch (TalendException te) {
 							this.lastException = te.getException();
 							this.currentComponent = te.getCurrentComponent();
@@ -3433,15 +3759,15 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 					}
 				}
 
-				ThreadXMLField_tWriteJSONField_1_Out txf_tWriteJSONField_1_Out = new ThreadXMLField_tWriteJSONField_1_Out(
-						listGroupby_tWriteJSONField_1_Out);
+				ThreadXMLField_tMongoDBOutput_1_In txf_tMongoDBOutput_1_In = new ThreadXMLField_tMongoDBOutput_1_In(
+						listGroupby_tMongoDBOutput_1_In);
 
-				txf_tWriteJSONField_1_Out.start();
+				txf_tMongoDBOutput_1_In.start();
 
-				java.util.List<java.util.List<String>> groupbyList_tWriteJSONField_1_Out = new java.util.ArrayList<java.util.List<String>>();
-				java.util.Map<String, String> valueMap_tWriteJSONField_1_Out = new java.util.HashMap<String, String>();
+				java.util.List<java.util.List<String>> groupbyList_tMongoDBOutput_1_In = new java.util.ArrayList<java.util.List<String>>();
+				java.util.Map<String, String> valueMap_tMongoDBOutput_1_In = new java.util.HashMap<String, String>();
 
-				class NestXMLTool_tWriteJSONField_1_Out {
+				class NestXMLTool_tMongoDBOutput_1_In {
 					public void parseAndAdd(org.dom4j.Element nestRoot,
 							String value) {
 						try {
@@ -3501,23 +3827,63 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 						}
 					}
 				}
-				NestXMLTool_tWriteJSONField_1_Out nestXMLTool_tWriteJSONField_1_Out = new NestXMLTool_tWriteJSONField_1_Out();
+				NestXMLTool_tMongoDBOutput_1_In nestXMLTool_tMongoDBOutput_1_In = new NestXMLTool_tMongoDBOutput_1_In();
 
-				row10Struct rowStructOutput_tWriteJSONField_1_Out = new row10Struct();
+				row10Struct rowStructOutput_tMongoDBOutput_1_In = new row10Struct();
 				// sort group root element for judgement of group
-				java.util.List<org.dom4j.Element> groupElementList_tWriteJSONField_1_Out = new java.util.ArrayList<org.dom4j.Element>();
-				org.dom4j.Element root4Group_tWriteJSONField_1_Out = null;
-				org.dom4j.Document doc_tWriteJSONField_1_Out = org.dom4j.DocumentHelper
+				java.util.List<org.dom4j.Element> groupElementList_tMongoDBOutput_1_In = new java.util.ArrayList<org.dom4j.Element>();
+				org.dom4j.Element root4Group_tMongoDBOutput_1_In = null;
+				org.dom4j.Document doc_tMongoDBOutput_1_In = org.dom4j.DocumentHelper
 						.createDocument();
-				org.dom4j.io.OutputFormat format_tWriteJSONField_1_Out = org.dom4j.io.OutputFormat
+				org.dom4j.io.OutputFormat format_tMongoDBOutput_1_In = org.dom4j.io.OutputFormat
 						.createCompactFormat();
-				format_tWriteJSONField_1_Out.setNewLineAfterDeclaration(false);
-				format_tWriteJSONField_1_Out.setTrimText(false);
-				format_tWriteJSONField_1_Out.setEncoding("ISO-8859-15");
-				int[] orders_tWriteJSONField_1_Out = new int[1];
+				format_tMongoDBOutput_1_In.setNewLineAfterDeclaration(false);
+				format_tMongoDBOutput_1_In.setTrimText(false);
+				format_tMongoDBOutput_1_In.setEncoding("ISO-8859-15");
+				int[] orders_tMongoDBOutput_1_In = new int[1];
 
 				/**
-				 * [tWriteJSONField_1_Out begin ] stop
+				 * [tMongoDBOutput_1_In begin ] stop
+				 */
+
+				/**
+				 * [tLogRow_2 begin ] start
+				 */
+
+				ok_Hash.put("tLogRow_2", false);
+				start_Hash.put("tLogRow_2", System.currentTimeMillis());
+
+				currentComponent = "tLogRow_2";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row5" + iterateId, 0, 0);
+
+					}
+				}
+
+				int tos_count_tLogRow_2 = 0;
+
+				class BytesLimit65535_tLogRow_2 {
+					public void limitLog4jByte() throws Exception {
+
+					}
+				}
+
+				new BytesLimit65535_tLogRow_2().limitLog4jByte();
+
+				// /////////////////////
+
+				final String OUTPUT_FIELD_SEPARATOR_tLogRow_2 = "|";
+				java.io.PrintStream consoleOut_tLogRow_2 = null;
+
+				StringBuilder strBuffer_tLogRow_2 = null;
+				int nb_line_tLogRow_2 = 0;
+				// /////////////////////
+
+				/**
+				 * [tLogRow_2 begin ] stop
 				 */
 
 				/**
@@ -3767,7 +4133,7 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 						.get("db_tMongoDBConnection_1");
 
 				com.mongodb.client.MongoCollection<org.bson.Document> coll_tMongoDBInput_1 = db_tMongoDBInput_1
-						.getCollection("transactions.records");
+						.getCollection("test.talend");
 
 				try {
 					// Add warning if an index is not in the query.
@@ -3822,13 +4188,6 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 				aggregationStages
 						.add(org.bson.Document
 								.parse("{ $addFields: {'file': {$mergeObjects: '$file'}} }"));
-
-				aggregationStages.add(org.bson.Document
-						.parse("{ $match : {'file.country.$id': ObjectId('"
-								+ globalMap.get("COUNTRY_ID").toString()
-								+ "'), 'file.collection.$id' : ObjectId('"
-								+ globalMap.get("COLLECTION_ID").toString()
-								+ "')} }"));
 
 				com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_1 = coll_tMongoDBInput_1
 						.aggregate(aggregationStages).allowDiskUse(false)
@@ -4249,7 +4608,7 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 								row10 = null;
 
 								// # Output table : 'row10'
-								row10_tmp._id = "ObjectId(\"" + row2.id + "\")";
+								row10_tmp._id = row2.id;
 								row10_tmp.geographyCode = row3.geographyCode;
 								row10_tmp.locality = row2.locality;
 								row10_tmp.adminArea1 = row2.adminArea1;
@@ -4321,12 +4680,10 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 								 */
 
 								/**
-								 * [tWriteJSONField_1_Out main ] start
+								 * [tLogRow_2 main ] start
 								 */
 
-								currentVirtualComponent = "tWriteJSONField_1";
-
-								currentComponent = "tWriteJSONField_1_Out";
+								currentComponent = "tLogRow_2";
 
 								// row5
 								// row5
@@ -4336,402 +4693,379 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 											+ iterateId, 1, 1);
 								}
 
-								if (txf_tWriteJSONField_1_Out
-										.getLastException() != null) {
-									currentComponent = txf_tWriteJSONField_1_Out
+								// /////////////////////
+
+								strBuffer_tLogRow_2 = new StringBuilder();
+
+								if (row5._id != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5._id));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.geographyCode != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.geographyCode));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.locality != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.locality));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.adminArea1 != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.adminArea1));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.customerCode != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.customerCode));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.customerName != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.customerName));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.customerType != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.customerType));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.productCode != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.productCode));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.productName != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.productName));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.amount != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.amount));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.quantity != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.quantity));
+
+								} //
+
+								strBuffer_tLogRow_2.append("|");
+
+								if (row5.date != null) { //
+
+									strBuffer_tLogRow_2.append(String
+											.valueOf(row5.date));
+
+								} //
+
+								if (globalMap.get("tLogRow_CONSOLE") != null) {
+									consoleOut_tLogRow_2 = (java.io.PrintStream) globalMap
+											.get("tLogRow_CONSOLE");
+								} else {
+									consoleOut_tLogRow_2 = new java.io.PrintStream(
+											new java.io.BufferedOutputStream(
+													System.out));
+									globalMap.put("tLogRow_CONSOLE",
+											consoleOut_tLogRow_2);
+								}
+								consoleOut_tLogRow_2
+										.println(strBuffer_tLogRow_2.toString());
+								consoleOut_tLogRow_2.flush();
+								nb_line_tLogRow_2++;
+								// ////
+
+								// ////
+
+								// /////////////////////
+
+								row9 = row5;
+
+								tos_count_tLogRow_2++;
+
+								/**
+								 * [tLogRow_2 main ] stop
+								 */
+
+								/**
+								 * [tLogRow_2 process_data_begin ] start
+								 */
+
+								currentComponent = "tLogRow_2";
+
+								/**
+								 * [tLogRow_2 process_data_begin ] stop
+								 */
+
+								/**
+								 * [tMongoDBOutput_1_In main ] start
+								 */
+
+								currentVirtualComponent = "tMongoDBOutput_1";
+
+								currentComponent = "tMongoDBOutput_1_In";
+
+								// row9
+								// row9
+
+								if (execStat) {
+									runStat.updateStatOnConnection("row9"
+											+ iterateId, 1, 1);
+								}
+
+								if (txf_tMongoDBOutput_1_In.getLastException() != null) {
+									currentComponent = txf_tMongoDBOutput_1_In
 											.getCurrentComponent();
-									throw txf_tWriteJSONField_1_Out
+									throw txf_tMongoDBOutput_1_In
 											.getLastException();
 								}
-								nb_line_tWriteJSONField_1_Out++;
-								valueMap_tWriteJSONField_1_Out.clear();
-								valueMap_tWriteJSONField_1_Out.put("_id",
-										(row5._id.toString()));
-								valueMap_tWriteJSONField_1_Out
+								nb_line_tMongoDBOutput_1_In++;
+								valueMap_tMongoDBOutput_1_In.clear();
+								valueMap_tMongoDBOutput_1_In.put("_id",
+										(row9._id.toString()));
+								valueMap_tMongoDBOutput_1_In
 										.put("geographyCode",
-												(row5.geographyCode != null ? row5.geographyCode
+												(row9.geographyCode != null ? row9.geographyCode
 														.toString() : null));
-								valueMap_tWriteJSONField_1_Out.put(
+								valueMap_tMongoDBOutput_1_In.put(
 										"locality",
-										(row5.locality != null ? row5.locality
+										(row9.locality != null ? row9.locality
 												.toString() : null));
-								valueMap_tWriteJSONField_1_Out
+								valueMap_tMongoDBOutput_1_In
 										.put("adminArea1",
-												(row5.adminArea1 != null ? row5.adminArea1
+												(row9.adminArea1 != null ? row9.adminArea1
 														.toString() : null));
-								valueMap_tWriteJSONField_1_Out
+								valueMap_tMongoDBOutput_1_In
 										.put("customerCode",
-												(row5.customerCode != null ? row5.customerCode
+												(row9.customerCode != null ? row9.customerCode
 														.toString() : null));
-								valueMap_tWriteJSONField_1_Out
+								valueMap_tMongoDBOutput_1_In
 										.put("customerName",
-												(row5.customerName != null ? row5.customerName
+												(row9.customerName != null ? row9.customerName
 														.toString() : null));
-								valueMap_tWriteJSONField_1_Out
+								valueMap_tMongoDBOutput_1_In
 										.put("customerType",
-												(row5.customerType != null ? row5.customerType
+												(row9.customerType != null ? row9.customerType
 														.toString() : null));
-								valueMap_tWriteJSONField_1_Out.put(
-										"productCode",
-										(row5.productCode.toString()));
-								valueMap_tWriteJSONField_1_Out
+								valueMap_tMongoDBOutput_1_In.put("productCode",
+										(row9.productCode.toString()));
+								valueMap_tMongoDBOutput_1_In
 										.put("productName",
-												(row5.productName != null ? row5.productName
+												(row9.productName != null ? row9.productName
 														.toString() : null));
-								valueMap_tWriteJSONField_1_Out.put(
+								valueMap_tMongoDBOutput_1_In.put(
 										"amount",
-										(row5.amount != null ? row5.amount
+										(row9.amount != null ? row9.amount
 												.toString() : null));
-								valueMap_tWriteJSONField_1_Out.put("quantity",
-										(row5.quantity.toString()));
-								valueMap_tWriteJSONField_1_Out.put("date",
-										(row5.date.toString()));
-								String strTemp_tWriteJSONField_1_Out = "";
-								strTemp_tWriteJSONField_1_Out = strTemp_tWriteJSONField_1_Out
-										+ valueMap_tWriteJSONField_1_Out
-												.get("_id")
-										+ valueMap_tWriteJSONField_1_Out.get(
-												"_id").length();
-								if (strCompCache_tWriteJSONField_1_Out == null) {
-									strCompCache_tWriteJSONField_1_Out = strTemp_tWriteJSONField_1_Out;
-
-									rowStructOutput_tWriteJSONField_1_Out._id = row5._id;
+								valueMap_tMongoDBOutput_1_In.put("quantity",
+										(row9.quantity.toString()));
+								valueMap_tMongoDBOutput_1_In.put("date",
+										(row9.date.toString()));
+								String strTemp_tMongoDBOutput_1_In = "";
+								if (strCompCache_tMongoDBOutput_1_In == null) {
+									strCompCache_tMongoDBOutput_1_In = strTemp_tMongoDBOutput_1_In;
 
 								} else {
-									// the data read is different from the data
-									// read last time.
-									if (!strCompCache_tWriteJSONField_1_Out
-											.equals(strTemp_tWriteJSONField_1_Out)) {
-										nestXMLTool_tWriteJSONField_1_Out
-												.replaceDefaultNameSpace(doc_tWriteJSONField_1_Out
-														.getRootElement());
-										java.io.StringWriter strWriter_tWriteJSONField_1_Out = new java.io.StringWriter();
-										org.dom4j.io.XMLWriter output_tWriteJSONField_1_Out = new org.dom4j.io.XMLWriter(
-												strWriter_tWriteJSONField_1_Out,
-												format_tWriteJSONField_1_Out);
-										output_tWriteJSONField_1_Out
-												.write(doc_tWriteJSONField_1_Out);
-										output_tWriteJSONField_1_Out.close();
+									nestXMLTool_tMongoDBOutput_1_In
+											.replaceDefaultNameSpace(doc_tMongoDBOutput_1_In
+													.getRootElement());
+									nestXMLTool_tMongoDBOutput_1_In
+											.removeEmptyElement(doc_tMongoDBOutput_1_In
+													.getRootElement());
+									java.io.StringWriter strWriter_tMongoDBOutput_1_In = new java.io.StringWriter();
+									org.dom4j.io.XMLWriter output_tMongoDBOutput_1_In = new org.dom4j.io.XMLWriter(
+											strWriter_tMongoDBOutput_1_In,
+											format_tMongoDBOutput_1_In);
+									output_tMongoDBOutput_1_In
+											.write(doc_tMongoDBOutput_1_In);
+									output_tMongoDBOutput_1_In.close();
 
-										row8Struct row_tWriteJSONField_1_Out = new row8Struct();
+									listGroupby_tMongoDBOutput_1_In
+											.add(strWriter_tMongoDBOutput_1_In
+													.toString());
 
-										row_tWriteJSONField_1_Out._id = rowStructOutput_tWriteJSONField_1_Out._id;
-
-										row_tWriteJSONField_1_Out.fields = strWriter_tWriteJSONField_1_Out
-												.toString();
-										listGroupby_tWriteJSONField_1_Out
-												.add(row_tWriteJSONField_1_Out);
-
-										doc_tWriteJSONField_1_Out
-												.clearContent();
-										needRoot_tWriteJSONField_1_Out = true;
-										for (int i_tWriteJSONField_1_Out = 0; i_tWriteJSONField_1_Out < orders_tWriteJSONField_1_Out.length; i_tWriteJSONField_1_Out++) {
-											orders_tWriteJSONField_1_Out[i_tWriteJSONField_1_Out] = 0;
-										}
-
-										if (groupbyList_tWriteJSONField_1_Out != null
-												&& groupbyList_tWriteJSONField_1_Out
-														.size() >= 0) {
-											groupbyList_tWriteJSONField_1_Out
-													.clear();
-										}
-										strCompCache_tWriteJSONField_1_Out = strTemp_tWriteJSONField_1_Out;
-										rowStructOutput_tWriteJSONField_1_Out._id = row5._id;
-
+									doc_tMongoDBOutput_1_In.clearContent();
+									needRoot_tMongoDBOutput_1_In = true;
+									for (int i_tMongoDBOutput_1_In = 0; i_tMongoDBOutput_1_In < orders_tMongoDBOutput_1_In.length; i_tMongoDBOutput_1_In++) {
+										orders_tMongoDBOutput_1_In[i_tMongoDBOutput_1_In] = 0;
 									}
+
+									if (groupbyList_tMongoDBOutput_1_In != null
+											&& groupbyList_tMongoDBOutput_1_In
+													.size() >= 0) {
+										groupbyList_tMongoDBOutput_1_In.clear();
+									}
+									strCompCache_tMongoDBOutput_1_In = strTemp_tMongoDBOutput_1_In;
 								}
 
-								org.dom4j.Element subTreeRootParent_tWriteJSONField_1_Out = null;
+								org.dom4j.Element subTreeRootParent_tMongoDBOutput_1_In = null;
 
 								// build root xml tree
-								if (needRoot_tWriteJSONField_1_Out) {
-									needRoot_tWriteJSONField_1_Out = false;
-									org.dom4j.Element root_tWriteJSONField_1_Out = doc_tWriteJSONField_1_Out
+								if (needRoot_tMongoDBOutput_1_In) {
+									needRoot_tMongoDBOutput_1_In = false;
+									org.dom4j.Element root_tMongoDBOutput_1_In = doc_tMongoDBOutput_1_In
 											.addElement("rootTag");
-									subTreeRootParent_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out;
-									root4Group_tWriteJSONField_1_Out = subTreeRootParent_tWriteJSONField_1_Out;
+									org.dom4j.Element root_0_tMongoDBOutput_1_In = root_tMongoDBOutput_1_In
+											.addElement("query");
+									org.dom4j.Element root_0_0_tMongoDBOutput_1_In = root_0_tMongoDBOutput_1_In
+											.addElement("_id");
+									if (valueMap_tMongoDBOutput_1_In.get("_id") != null) {
+										nestXMLTool_tMongoDBOutput_1_In
+												.setText(
+														root_0_0_tMongoDBOutput_1_In,
+														valueMap_tMongoDBOutput_1_In
+																.get("_id"));
+									}
+									root_0_0_tMongoDBOutput_1_In.addAttribute(
+											"type", "object");
+									org.dom4j.Element root_1_tMongoDBOutput_1_In = root_tMongoDBOutput_1_In
+											.addElement("data");
+									subTreeRootParent_tMongoDBOutput_1_In = root_1_tMongoDBOutput_1_In;
+									root4Group_tMongoDBOutput_1_In = subTreeRootParent_tMongoDBOutput_1_In;
 								} else {
-									subTreeRootParent_tWriteJSONField_1_Out = root4Group_tWriteJSONField_1_Out;
+									subTreeRootParent_tMongoDBOutput_1_In = root4Group_tMongoDBOutput_1_In;
 								}
 								// build group xml tree
 								// build loop xml tree
-								org.dom4j.Element loop_tWriteJSONField_1_Out = org.dom4j.DocumentHelper
+								org.dom4j.Element loop_tMongoDBOutput_1_In = org.dom4j.DocumentHelper
 										.createElement("fields");
-								if (orders_tWriteJSONField_1_Out[0] == 0) {
-									orders_tWriteJSONField_1_Out[0] = 0;
+								if (orders_tMongoDBOutput_1_In[0] == 0) {
+									orders_tMongoDBOutput_1_In[0] = 0;
 								}
-								if (1 < orders_tWriteJSONField_1_Out.length) {
-									orders_tWriteJSONField_1_Out[1] = 0;
+								if (1 < orders_tMongoDBOutput_1_In.length) {
+									orders_tMongoDBOutput_1_In[1] = 0;
 								}
-								subTreeRootParent_tWriteJSONField_1_Out
+								subTreeRootParent_tMongoDBOutput_1_In
 										.elements()
-										.add(orders_tWriteJSONField_1_Out[0]++,
-												loop_tWriteJSONField_1_Out);
-								org.dom4j.Element loop_0_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
+										.add(orders_tMongoDBOutput_1_In[0]++,
+												loop_tMongoDBOutput_1_In);
+								org.dom4j.Element loop_0_tMongoDBOutput_1_In = loop_tMongoDBOutput_1_In
 										.addElement("field");
-								org.dom4j.Element loop_0_0_tWriteJSONField_1_Out = loop_0_tWriteJSONField_1_Out
+								org.dom4j.Element loop_0_0_tMongoDBOutput_1_In = loop_0_tMongoDBOutput_1_In
 										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_0_0_tWriteJSONField_1_Out,
+								nestXMLTool_tMongoDBOutput_1_In.parseAndAdd(
+										loop_0_0_tMongoDBOutput_1_In,
 										"geographyCode");
-								org.dom4j.Element loop_0_1_tWriteJSONField_1_Out = loop_0_tWriteJSONField_1_Out
+								org.dom4j.Element loop_0_1_tMongoDBOutput_1_In = loop_0_tMongoDBOutput_1_In
 										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
+								if (valueMap_tMongoDBOutput_1_In
 										.get("geographyCode") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_0_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
+									nestXMLTool_tMongoDBOutput_1_In.setText(
+											loop_0_1_tMongoDBOutput_1_In,
+											valueMap_tMongoDBOutput_1_In
 													.get("geographyCode"));
 								}
-								org.dom4j.Element loop_0_2_tWriteJSONField_1_Out = loop_0_tWriteJSONField_1_Out
+								org.dom4j.Element loop_0_2_tMongoDBOutput_1_In = loop_0_tMongoDBOutput_1_In
 										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_0_2_tWriteJSONField_1_Out,
+								nestXMLTool_tMongoDBOutput_1_In.parseAndAdd(
+										loop_0_2_tMongoDBOutput_1_In,
 										"geographyCode");
-								org.dom4j.Element loop_1_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
+								org.dom4j.Element loop_1_tMongoDBOutput_1_In = loop_tMongoDBOutput_1_In
 										.addElement("field");
-								org.dom4j.Element loop_1_0_tWriteJSONField_1_Out = loop_1_tWriteJSONField_1_Out
+								org.dom4j.Element loop_1_0_tMongoDBOutput_1_In = loop_1_tMongoDBOutput_1_In
 										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_1_0_tWriteJSONField_1_Out,
+								nestXMLTool_tMongoDBOutput_1_In.parseAndAdd(
+										loop_1_0_tMongoDBOutput_1_In,
 										"locality");
-								org.dom4j.Element loop_1_1_tWriteJSONField_1_Out = loop_1_tWriteJSONField_1_Out
+								org.dom4j.Element loop_1_1_tMongoDBOutput_1_In = loop_1_tMongoDBOutput_1_In
 										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
+								if (valueMap_tMongoDBOutput_1_In
 										.get("locality") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_1_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
+									nestXMLTool_tMongoDBOutput_1_In.setText(
+											loop_1_1_tMongoDBOutput_1_In,
+											valueMap_tMongoDBOutput_1_In
 													.get("locality"));
 								}
-								org.dom4j.Element loop_1_2_tWriteJSONField_1_Out = loop_1_tWriteJSONField_1_Out
+								org.dom4j.Element loop_1_2_tMongoDBOutput_1_In = loop_1_tMongoDBOutput_1_In
 										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_1_2_tWriteJSONField_1_Out,
+								nestXMLTool_tMongoDBOutput_1_In.parseAndAdd(
+										loop_1_2_tMongoDBOutput_1_In,
 										"locality");
-								org.dom4j.Element loop_2_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_2_0_tWriteJSONField_1_Out = loop_2_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_2_0_tWriteJSONField_1_Out,
-										"adminArea1");
-								org.dom4j.Element loop_2_1_tWriteJSONField_1_Out = loop_2_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
-										.get("adminArea1") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_2_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("adminArea1"));
-								}
-								org.dom4j.Element loop_2_2_tWriteJSONField_1_Out = loop_2_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_2_2_tWriteJSONField_1_Out,
-										"adminArea1");
-								org.dom4j.Element loop_3_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_3_0_tWriteJSONField_1_Out = loop_3_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_3_0_tWriteJSONField_1_Out,
-										"customerCode");
-								org.dom4j.Element loop_3_1_tWriteJSONField_1_Out = loop_3_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
-										.get("customerCode") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_3_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("customerCode"));
-								}
-								org.dom4j.Element loop_3_2_tWriteJSONField_1_Out = loop_3_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_3_2_tWriteJSONField_1_Out,
-										"customerCode");
-								org.dom4j.Element loop_4_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_4_0_tWriteJSONField_1_Out = loop_4_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_4_0_tWriteJSONField_1_Out,
-										"customerName");
-								org.dom4j.Element loop_4_1_tWriteJSONField_1_Out = loop_4_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
-										.get("customerName") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_4_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("customerName"));
-								}
-								org.dom4j.Element loop_4_2_tWriteJSONField_1_Out = loop_4_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_4_2_tWriteJSONField_1_Out,
-										"customerName");
-								org.dom4j.Element loop_5_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_5_0_tWriteJSONField_1_Out = loop_5_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_5_0_tWriteJSONField_1_Out,
-										"customerType");
-								org.dom4j.Element loop_5_1_tWriteJSONField_1_Out = loop_5_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
-										.get("customerType") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_5_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("customerType"));
-								}
-								org.dom4j.Element loop_5_2_tWriteJSONField_1_Out = loop_5_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_5_2_tWriteJSONField_1_Out,
-										"customerType");
-								org.dom4j.Element loop_6_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_6_0_tWriteJSONField_1_Out = loop_6_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_6_0_tWriteJSONField_1_Out,
-										"productCode");
-								org.dom4j.Element loop_6_1_tWriteJSONField_1_Out = loop_6_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
-										.get("productCode") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_6_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("productCode"));
-								}
-								org.dom4j.Element loop_6_2_tWriteJSONField_1_Out = loop_6_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_6_2_tWriteJSONField_1_Out,
-										"productCode");
-								org.dom4j.Element loop_7_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_7_0_tWriteJSONField_1_Out = loop_7_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_7_0_tWriteJSONField_1_Out,
-										"productName");
-								org.dom4j.Element loop_7_1_tWriteJSONField_1_Out = loop_7_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
-										.get("productName") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_7_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("productName"));
-								}
-								org.dom4j.Element loop_7_2_tWriteJSONField_1_Out = loop_7_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_7_2_tWriteJSONField_1_Out,
-										"productName");
-								org.dom4j.Element loop_8_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_8_0_tWriteJSONField_1_Out = loop_8_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_8_0_tWriteJSONField_1_Out,
-										"amount");
-								org.dom4j.Element loop_8_1_tWriteJSONField_1_Out = loop_8_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
-										.get("amount") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_8_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("amount"));
-								}
-								org.dom4j.Element loop_8_2_tWriteJSONField_1_Out = loop_8_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_8_2_tWriteJSONField_1_Out,
-										"amount");
-								org.dom4j.Element loop_9_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_9_0_tWriteJSONField_1_Out = loop_9_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_9_0_tWriteJSONField_1_Out,
-										"quantity");
-								org.dom4j.Element loop_9_1_tWriteJSONField_1_Out = loop_9_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out
-										.get("quantity") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_9_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("quantity"));
-								}
-								org.dom4j.Element loop_9_2_tWriteJSONField_1_Out = loop_9_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out.parseAndAdd(
-										loop_9_2_tWriteJSONField_1_Out,
-										"quantity");
-								org.dom4j.Element loop_10_tWriteJSONField_1_Out = loop_tWriteJSONField_1_Out
-										.addElement("field");
-								org.dom4j.Element loop_10_0_tWriteJSONField_1_Out = loop_10_tWriteJSONField_1_Out
-										.addElement("name");
-								nestXMLTool_tWriteJSONField_1_Out
-										.parseAndAdd(
-												loop_10_0_tWriteJSONField_1_Out,
-												"date");
-								org.dom4j.Element loop_10_1_tWriteJSONField_1_Out = loop_10_tWriteJSONField_1_Out
-										.addElement("value");
-								if (valueMap_tWriteJSONField_1_Out.get("date") != null) {
-									nestXMLTool_tWriteJSONField_1_Out.setText(
-											loop_10_1_tWriteJSONField_1_Out,
-											valueMap_tWriteJSONField_1_Out
-													.get("date"));
-								}
-								org.dom4j.Element loop_10_2_tWriteJSONField_1_Out = loop_10_tWriteJSONField_1_Out
-										.addElement("tag");
-								nestXMLTool_tWriteJSONField_1_Out
-										.parseAndAdd(
-												loop_10_2_tWriteJSONField_1_Out,
-												"date");
 
-								tos_count_tWriteJSONField_1_Out++;
+								tos_count_tMongoDBOutput_1_In++;
 
 								/**
-								 * [tWriteJSONField_1_Out main ] stop
+								 * [tMongoDBOutput_1_In main ] stop
 								 */
 
 								/**
-								 * [tWriteJSONField_1_Out process_data_begin ]
+								 * [tMongoDBOutput_1_In process_data_begin ]
 								 * start
 								 */
 
-								currentVirtualComponent = "tWriteJSONField_1";
+								currentVirtualComponent = "tMongoDBOutput_1";
 
-								currentComponent = "tWriteJSONField_1_Out";
+								currentComponent = "tMongoDBOutput_1_In";
 
 								/**
-								 * [tWriteJSONField_1_Out process_data_begin ]
+								 * [tMongoDBOutput_1_In process_data_begin ]
 								 * stop
 								 */
 
 								/**
-								 * [tWriteJSONField_1_Out process_data_end ]
-								 * start
+								 * [tMongoDBOutput_1_In process_data_end ] start
 								 */
 
-								currentVirtualComponent = "tWriteJSONField_1";
+								currentVirtualComponent = "tMongoDBOutput_1";
 
-								currentComponent = "tWriteJSONField_1_Out";
+								currentComponent = "tMongoDBOutput_1_In";
 
 								/**
-								 * [tWriteJSONField_1_Out process_data_end ]
-								 * stop
+								 * [tMongoDBOutput_1_In process_data_end ] stop
+								 */
+
+								/**
+								 * [tLogRow_2 process_data_end ] start
+								 */
+
+								currentComponent = "tLogRow_2";
+
+								/**
+								 * [tLogRow_2 process_data_end ] stop
 								 */
 
 								/**
@@ -4947,50 +5281,17 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 				 */
 
 				/**
-				 * [tWriteJSONField_1_Out end ] start
+				 * [tLogRow_2 end ] start
 				 */
 
-				currentVirtualComponent = "tWriteJSONField_1";
+				currentComponent = "tLogRow_2";
 
-				currentComponent = "tWriteJSONField_1_Out";
+				// ////
+				// ////
+				globalMap.put("tLogRow_2_NB_LINE", nb_line_tLogRow_2);
 
-				if (nb_line_tWriteJSONField_1_Out > 0) {
-					nestXMLTool_tWriteJSONField_1_Out
-							.replaceDefaultNameSpace(doc_tWriteJSONField_1_Out
-									.getRootElement());
-					java.io.StringWriter strWriter_tWriteJSONField_1_Out = new java.io.StringWriter();
-					org.dom4j.io.XMLWriter output_tWriteJSONField_1_Out = new org.dom4j.io.XMLWriter(
-							strWriter_tWriteJSONField_1_Out,
-							format_tWriteJSONField_1_Out);
-					output_tWriteJSONField_1_Out
-							.write(doc_tWriteJSONField_1_Out);
-					output_tWriteJSONField_1_Out.close();
-					row8Struct row_tWriteJSONField_1_Out = new row8Struct();
+				// /////////////////////
 
-					row_tWriteJSONField_1_Out._id = rowStructOutput_tWriteJSONField_1_Out._id;
-
-					row_tWriteJSONField_1_Out.fields = strWriter_tWriteJSONField_1_Out
-							.toString();
-					listGroupby_tWriteJSONField_1_Out
-							.add(row_tWriteJSONField_1_Out);
-
-				}
-				globalMap.put("tWriteJSONField_1_Out_NB_LINE",
-						nb_line_tWriteJSONField_1_Out);
-				globalMap
-						.put("tWriteJSONField_1_In_FINISH"
-								+ (listGroupby_tWriteJSONField_1_Out == null ? ""
-										: listGroupby_tWriteJSONField_1_Out
-												.hashCode()), "true");
-
-				txf_tWriteJSONField_1_Out.join();
-				if (txf_tWriteJSONField_1_Out.getLastException() != null) {
-					currentComponent = txf_tWriteJSONField_1_Out
-							.getCurrentComponent();
-					throw txf_tWriteJSONField_1_Out.getLastException();
-				}
-
-				resourceMap.put("finish_tWriteJSONField_1_Out", true);
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
@@ -4998,16 +5299,69 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 					}
 				}
 
-				ok_Hash.put("tWriteJSONField_1_Out", true);
-				end_Hash.put("tWriteJSONField_1_Out",
-						System.currentTimeMillis());
+				ok_Hash.put("tLogRow_2", true);
+				end_Hash.put("tLogRow_2", System.currentTimeMillis());
+
+				/**
+				 * [tLogRow_2 end ] stop
+				 */
+
+				/**
+				 * [tMongoDBOutput_1_In end ] start
+				 */
+
+				currentVirtualComponent = "tMongoDBOutput_1";
+
+				currentComponent = "tMongoDBOutput_1_In";
+
+				if (nb_line_tMongoDBOutput_1_In > 0) {
+					nestXMLTool_tMongoDBOutput_1_In
+							.replaceDefaultNameSpace(doc_tMongoDBOutput_1_In
+									.getRootElement());
+					nestXMLTool_tMongoDBOutput_1_In
+							.removeEmptyElement(doc_tMongoDBOutput_1_In
+									.getRootElement());
+					java.io.StringWriter strWriter_tMongoDBOutput_1_In = new java.io.StringWriter();
+					org.dom4j.io.XMLWriter output_tMongoDBOutput_1_In = new org.dom4j.io.XMLWriter(
+							strWriter_tMongoDBOutput_1_In,
+							format_tMongoDBOutput_1_In);
+					output_tMongoDBOutput_1_In.write(doc_tMongoDBOutput_1_In);
+					output_tMongoDBOutput_1_In.close();
+					listGroupby_tMongoDBOutput_1_In
+							.add(strWriter_tMongoDBOutput_1_In.toString());
+
+				}
+				globalMap.put("tMongoDBOutput_1_In_NB_LINE",
+						nb_line_tMongoDBOutput_1_In);
+				globalMap.put("tMongoDBOutput_1_Out_FINISH"
+						+ (listGroupby_tMongoDBOutput_1_In == null ? ""
+								: listGroupby_tMongoDBOutput_1_In.hashCode()),
+						"true");
+
+				txf_tMongoDBOutput_1_In.join();
+				if (txf_tMongoDBOutput_1_In.getLastException() != null) {
+					currentComponent = txf_tMongoDBOutput_1_In
+							.getCurrentComponent();
+					throw txf_tMongoDBOutput_1_In.getLastException();
+				}
+
+				resourceMap.put("finish_tMongoDBOutput_1_In", true);
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row9" + iterateId, 2, 0);
+					}
+				}
+
+				ok_Hash.put("tMongoDBOutput_1_In", true);
+				end_Hash.put("tMongoDBOutput_1_In", System.currentTimeMillis());
 
 				if (execStat) {
 					runStat.updateStatOnConnection("OnComponentOk", 0, "ok");
 				}
 
 				/**
-				 * [tWriteJSONField_1_Out end ] stop
+				 * [tMongoDBOutput_1_In end ] stop
 				 */
 
 			}// end the resume
@@ -5098,33 +5452,43 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 				 */
 
 				/**
-				 * [tWriteJSONField_1_Out finally ] start
+				 * [tLogRow_2 finally ] start
 				 */
 
-				currentVirtualComponent = "tWriteJSONField_1";
+				currentComponent = "tLogRow_2";
 
-				currentComponent = "tWriteJSONField_1_Out";
+				/**
+				 * [tLogRow_2 finally ] stop
+				 */
 
-				java.util.Queue listGroupby_tWriteJSONField_1_Out = (java.util.Queue) globalMap
-						.get("queue_tWriteJSONField_1_In");
-				if (resourceMap.get("finish_tWriteJSONField_1_Out") == null) {
+				/**
+				 * [tMongoDBOutput_1_In finally ] start
+				 */
+
+				currentVirtualComponent = "tMongoDBOutput_1";
+
+				currentComponent = "tMongoDBOutput_1_In";
+
+				java.util.Queue listGroupby_tMongoDBOutput_1_In = (java.util.Queue) globalMap
+						.get("queue_tMongoDBOutput_1_Out");
+				if (resourceMap.get("finish_tMongoDBOutput_1_In") == null) {
 					globalMap
-							.put("tWriteJSONField_1_In_FINISH_WITH_EXCEPTION"
-									+ (listGroupby_tWriteJSONField_1_Out == null ? ""
-											: listGroupby_tWriteJSONField_1_Out
+							.put("tMongoDBOutput_1_Out_FINISH_WITH_EXCEPTION"
+									+ (listGroupby_tMongoDBOutput_1_In == null ? ""
+											: listGroupby_tMongoDBOutput_1_In
 													.hashCode()), "true");
 				}
 
-				if (listGroupby_tWriteJSONField_1_Out != null) {
+				if (listGroupby_tMongoDBOutput_1_In != null) {
 					globalMap
-							.put("tWriteJSONField_1_In_FINISH"
-									+ (listGroupby_tWriteJSONField_1_Out == null ? ""
-											: listGroupby_tWriteJSONField_1_Out
+							.put("tMongoDBOutput_1_Out_FINISH"
+									+ (listGroupby_tMongoDBOutput_1_In == null ? ""
+											: listGroupby_tMongoDBOutput_1_In
 													.hashCode()), "true");
 				}
 
 				/**
-				 * [tWriteJSONField_1_Out finally ] stop
+				 * [tMongoDBOutput_1_In finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -8738,402 +9102,10 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 		globalMap.put("tMongoDBInput_4_SUBPROCESS_STATE", 1);
 	}
 
-	public static class row9Struct implements
-			routines.system.IPersistableRow<row9Struct> {
-		final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[0];
-		static byte[] commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[0];
-		protected static final int DEFAULT_HASHCODE = 1;
-		protected static final int PRIME = 31;
-		protected int hashCode = DEFAULT_HASHCODE;
-		public boolean hashCodeDirty = true;
-
-		public String loopKey;
-
-		public String _id;
-
-		public String get_id() {
-			return this._id;
-		}
-
-		public String fields;
-
-		public String getFields() {
-			return this.fields;
-		}
-
-		@Override
-		public int hashCode() {
-			if (this.hashCodeDirty) {
-				final int prime = PRIME;
-				int result = DEFAULT_HASHCODE;
-
-				result = prime * result
-						+ ((this._id == null) ? 0 : this._id.hashCode());
-
-				this.hashCode = result;
-				this.hashCodeDirty = false;
-			}
-			return this.hashCode;
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			final row9Struct other = (row9Struct) obj;
-
-			if (this._id == null) {
-				if (other._id != null)
-					return false;
-
-			} else if (!this._id.equals(other._id))
-
-				return false;
-
-			return true;
-		}
-
-		public void copyDataTo(row9Struct other) {
-
-			other._id = this._id;
-			other.fields = this.fields;
-
-		}
-
-		public void copyKeysDataTo(row9Struct other) {
-
-			other._id = this._id;
-
-		}
-
-		private String readString(ObjectInputStream dis) throws IOException {
-			String strReturn = null;
-			int length = 0;
-			length = dis.readInt();
-			if (length == -1) {
-				strReturn = null;
-			} else {
-				if (length > commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE.length) {
-					if (length < 1024
-							&& commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE.length == 0) {
-						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[1024];
-					} else {
-						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[2 * length];
-					}
-				}
-				dis.readFully(commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE,
-						0, length);
-				strReturn = new String(
-						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE, 0,
-						length, utf8Charset);
-			}
-			return strReturn;
-		}
-
-		private void writeString(String str, ObjectOutputStream dos)
-				throws IOException {
-			if (str == null) {
-				dos.writeInt(-1);
-			} else {
-				byte[] byteArray = str.getBytes(utf8Charset);
-				dos.writeInt(byteArray.length);
-				dos.write(byteArray);
-			}
-		}
-
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_DEEPSEA_GENERATE_GEOGRAPHY_CODE) {
-
-				try {
-
-					int length = 0;
-
-					this._id = readString(dis);
-
-					this.fields = readString(dis);
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// String
-
-				writeString(this._id, dos);
-
-				// String
-
-				writeString(this.fields, dos);
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("_id=" + _id);
-			sb.append(",fields=" + fields);
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(row9Struct other) {
-
-			int returnValue = -1;
-
-			returnValue = checkNullsAndCompare(this._id, other._id);
-			if (returnValue != 0) {
-				return returnValue;
-			}
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(),
-						object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public static class row8Struct implements
-			routines.system.IPersistableRow<row8Struct> {
-		final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[0];
-		static byte[] commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[0];
-		protected static final int DEFAULT_HASHCODE = 1;
-		protected static final int PRIME = 31;
-		protected int hashCode = DEFAULT_HASHCODE;
-		public boolean hashCodeDirty = true;
-
-		public String loopKey;
-
-		public String _id;
-
-		public String get_id() {
-			return this._id;
-		}
-
-		public String fields;
-
-		public String getFields() {
-			return this.fields;
-		}
-
-		@Override
-		public int hashCode() {
-			if (this.hashCodeDirty) {
-				final int prime = PRIME;
-				int result = DEFAULT_HASHCODE;
-
-				result = prime * result
-						+ ((this._id == null) ? 0 : this._id.hashCode());
-
-				this.hashCode = result;
-				this.hashCodeDirty = false;
-			}
-			return this.hashCode;
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			final row8Struct other = (row8Struct) obj;
-
-			if (this._id == null) {
-				if (other._id != null)
-					return false;
-
-			} else if (!this._id.equals(other._id))
-
-				return false;
-
-			return true;
-		}
-
-		public void copyDataTo(row8Struct other) {
-
-			other._id = this._id;
-			other.fields = this.fields;
-
-		}
-
-		public void copyKeysDataTo(row8Struct other) {
-
-			other._id = this._id;
-
-		}
-
-		private String readString(ObjectInputStream dis) throws IOException {
-			String strReturn = null;
-			int length = 0;
-			length = dis.readInt();
-			if (length == -1) {
-				strReturn = null;
-			} else {
-				if (length > commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE.length) {
-					if (length < 1024
-							&& commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE.length == 0) {
-						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[1024];
-					} else {
-						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE = new byte[2 * length];
-					}
-				}
-				dis.readFully(commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE,
-						0, length);
-				strReturn = new String(
-						commonByteArray_DEEPSEA_GENERATE_GEOGRAPHY_CODE, 0,
-						length, utf8Charset);
-			}
-			return strReturn;
-		}
-
-		private void writeString(String str, ObjectOutputStream dos)
-				throws IOException {
-			if (str == null) {
-				dos.writeInt(-1);
-			} else {
-				byte[] byteArray = str.getBytes(utf8Charset);
-				dos.writeInt(byteArray.length);
-				dos.write(byteArray);
-			}
-		}
-
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_DEEPSEA_GENERATE_GEOGRAPHY_CODE) {
-
-				try {
-
-					int length = 0;
-
-					this._id = readString(dis);
-
-					this.fields = readString(dis);
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// String
-
-				writeString(this._id, dos);
-
-				// String
-
-				writeString(this.fields, dos);
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("_id=" + _id);
-			sb.append(",fields=" + fields);
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(row8Struct other) {
-
-			int returnValue = -1;
-
-			returnValue = checkNullsAndCompare(this._id, other._id);
-			if (returnValue != 0) {
-				return returnValue;
-			}
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(),
-						object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public void tWriteJSONField_1_InProcess(
+	public void tMongoDBOutput_1_OutProcess(
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tWriteJSONField_1_In_SUBPROCESS_STATE", 0);
+		globalMap.put("tMongoDBOutput_1_Out_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 		String currentVirtualComponent = null;
@@ -9154,530 +9126,367 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
-				row8Struct row8 = new row8Struct();
-				row8Struct row9 = row8;
-
 				/**
-				 * [tMongoDBOutput_1 begin ] start
+				 * [tMongoDBOutput_1_Out begin ] start
 				 */
 
-				ok_Hash.put("tMongoDBOutput_1", false);
-				start_Hash.put("tMongoDBOutput_1", System.currentTimeMillis());
-
-				currentComponent = "tMongoDBOutput_1";
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null) {
-
-						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
-
-					}
-				}
-
-				int tos_count_tMongoDBOutput_1 = 0;
-
-				class BytesLimit65535_tMongoDBOutput_1 {
-					public void limitLog4jByte() throws Exception {
-
-					}
-				}
-
-				new BytesLimit65535_tMongoDBOutput_1().limitLog4jByte();
-
-				int nb_line_tMongoDBOutput_1 = 0;
-
-				class DBObjectUtil_tMongoDBOutput_1 {
-
-					private org.bson.Document object = null;
-
-					// Put value to embedded document
-					// If have no embedded document, put the value to root
-					// document
-					public void put(String parentNode, String curentName,
-							Object value) {
-						if (parentNode == null || "".equals(parentNode)) {
-							object.put(curentName, value);
-						} else {
-							String objNames[] = parentNode.split("\\.");
-							org.bson.Document lastNode = getParentNode(
-									parentNode, objNames.length - 1);
-							lastNode.put(curentName, value);
-							org.bson.Document parenttNode = null;
-							for (int i = objNames.length - 1; i >= 0; i--) {
-								parenttNode = getParentNode(parentNode, i - 1);
-								parenttNode.put(objNames[i], lastNode);
-								lastNode = clone(parenttNode);
-							}
-							object = lastNode;
-						}
-					}
-
-					private org.bson.Document clone(org.bson.Document source) {
-						org.bson.Document to = new org.bson.Document();
-						for (java.util.Map.Entry<String, Object> cur : source
-								.entrySet()) {
-							to.append(cur.getKey(), cur.getValue());
-						}
-						return to;
-					}
-
-					// Get node(embedded document) by path configuration
-					public org.bson.Document getParentNode(String parentNode,
-							int index) {
-						org.bson.Document document = object;
-						if (parentNode == null || "".equals(parentNode)) {
-							return object;
-						} else {
-							String objNames[] = parentNode.split("\\.");
-							for (int i = 0; i <= index; i++) {
-								document = (org.bson.Document) document
-										.get(objNames[i]);
-								if (document == null) {
-									document = new org.bson.Document();
-									return document;
-								}
-								if (i == index) {
-									break;
-								}
-							}
-							return document;
-						}
-					}
-
-					public void putkeyNode(String parentNode,
-							String curentName, Object value) {
-						if (parentNode == null || "".equals(parentNode)
-								|| ".".equals(parentNode)) {
-							put(parentNode, curentName, value);
-						} else {
-							put("", parentNode + "." + curentName, value);
-						}
-					}
-
-					public org.bson.Document getObject() {
-						return this.object;
-					}
-
-					public void setObject(org.bson.Document object) {
-						this.object = object;
-					}
-
-				}
-
-				DBObjectUtil_tMongoDBOutput_1 updateObjectUtil_tMongoDBOutput_1 = new DBObjectUtil_tMongoDBOutput_1();
-				DBObjectUtil_tMongoDBOutput_1 queryObjectUtil_tMongoDBOutput_1 = new DBObjectUtil_tMongoDBOutput_1();
-				java.util.Map<String, String> pathMap_tMongoDBOutput_1 = new java.util.HashMap<String, String>();
-				com.mongodb.MongoClient mongo_tMongoDBOutput_1 = null;
-				com.mongodb.client.MongoDatabase db_tMongoDBOutput_1 = null;
-
-				pathMap_tMongoDBOutput_1.put("_id", "");
-
-				pathMap_tMongoDBOutput_1.put("fields", "");
-
-				mongo_tMongoDBOutput_1 = (com.mongodb.MongoClient) globalMap
-						.get("mongo_tMongoDBConnection_1");
-				db_tMongoDBOutput_1 = (com.mongodb.client.MongoDatabase) globalMap
-						.get("db_tMongoDBConnection_1");
-
-				com.mongodb.client.MongoCollection<org.bson.Document> coll_tMongoDBOutput_1 = db_tMongoDBOutput_1
-						.getCollection("transactions.record");
-
-				/**
-				 * [tMongoDBOutput_1 begin ] stop
-				 */
-
-				/**
-				 * [tLogRow_2 begin ] start
-				 */
-
-				ok_Hash.put("tLogRow_2", false);
-				start_Hash.put("tLogRow_2", System.currentTimeMillis());
-
-				currentComponent = "tLogRow_2";
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null) {
-
-						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
-
-					}
-				}
-
-				int tos_count_tLogRow_2 = 0;
-
-				class BytesLimit65535_tLogRow_2 {
-					public void limitLog4jByte() throws Exception {
-
-					}
-				}
-
-				new BytesLimit65535_tLogRow_2().limitLog4jByte();
-
-				// /////////////////////
-
-				final String OUTPUT_FIELD_SEPARATOR_tLogRow_2 = "|";
-				java.io.PrintStream consoleOut_tLogRow_2 = null;
-
-				StringBuilder strBuffer_tLogRow_2 = null;
-				int nb_line_tLogRow_2 = 0;
-				// /////////////////////
-
-				/**
-				 * [tLogRow_2 begin ] stop
-				 */
-
-				/**
-				 * [tWriteJSONField_1_In begin ] start
-				 */
-
-				ok_Hash.put("tWriteJSONField_1_In", false);
-				start_Hash.put("tWriteJSONField_1_In",
+				ok_Hash.put("tMongoDBOutput_1_Out", false);
+				start_Hash.put("tMongoDBOutput_1_Out",
 						System.currentTimeMillis());
 
-				currentVirtualComponent = "tWriteJSONField_1";
+				currentVirtualComponent = "tMongoDBOutput_1";
 
-				currentComponent = "tWriteJSONField_1_In";
+				currentComponent = "tMongoDBOutput_1_Out";
 
-				int tos_count_tWriteJSONField_1_In = 0;
+				int tos_count_tMongoDBOutput_1_Out = 0;
 
-				class BytesLimit65535_tWriteJSONField_1_In {
+				class BytesLimit65535_tMongoDBOutput_1_Out {
 					public void limitLog4jByte() throws Exception {
 
 					}
 				}
 
-				new BytesLimit65535_tWriteJSONField_1_In().limitLog4jByte();
+				new BytesLimit65535_tMongoDBOutput_1_Out().limitLog4jByte();
 
-				int nb_line_tWriteJSONField_1_In = 0;
-				net.sf.json.xml.XMLSerializer xmlSerializer_tWriteJSONField_1_In = new net.sf.json.xml.XMLSerializer();
-				xmlSerializer_tWriteJSONField_1_In.clearNamespaces();
-				xmlSerializer_tWriteJSONField_1_In.setSkipNamespaces(true);
-				xmlSerializer_tWriteJSONField_1_In
+				int nb_line_tMongoDBOutput_1_Out = 0;
+
+				com.mongodb.MongoClient mongo_tMongoDBOutput_1_Out = null;
+				com.mongodb.client.MongoDatabase db_tMongoDBOutput_1_Out = null;
+
+				mongo_tMongoDBOutput_1_Out = (com.mongodb.MongoClient) globalMap
+						.get("mongo_tMongoDBConnection_1");
+				db_tMongoDBOutput_1_Out = (com.mongodb.client.MongoDatabase) globalMap
+						.get("db_tMongoDBConnection_1");
+
+				com.mongodb.client.MongoCollection<org.bson.Document> coll_tMongoDBOutput_1_Out = db_tMongoDBOutput_1_Out
+						.getCollection("test.talend");
+
+				net.sf.json.xml.XMLSerializer xmlSerializer_tMongoDBOutput_1_Out = new net.sf.json.xml.XMLSerializer();
+				xmlSerializer_tMongoDBOutput_1_Out.clearNamespaces();
+				xmlSerializer_tMongoDBOutput_1_Out.setSkipNamespaces(true);
+				xmlSerializer_tMongoDBOutput_1_Out
 						.setForceTopLevelObject(false);
 
-				java.util.Queue<row8Struct> queue_tWriteJSONField_1_In = (java.util.Queue<row8Struct>) globalMap
-						.get("queue_tWriteJSONField_1_In");
+				java.util.Queue<String> queue_tMongoDBOutput_1_Out = (java.util.Queue<String>) globalMap
+						.get("queue_tMongoDBOutput_1_Out");
 
-				String readFinishMarkWithPipeId_tWriteJSONField_1_In = "tWriteJSONField_1_In_FINISH"
-						+ (queue_tWriteJSONField_1_In == null ? ""
-								: queue_tWriteJSONField_1_In.hashCode());
-				String str_tWriteJSONField_1_In = null;
+				String readFinishMarkWithPipeId_tMongoDBOutput_1_Out = "tMongoDBOutput_1_Out_FINISH"
+						+ (queue_tMongoDBOutput_1_Out == null ? ""
+								: queue_tMongoDBOutput_1_Out.hashCode());
+				String str_tMongoDBOutput_1_Out = null;
 
-				while (!globalMap
-						.containsKey(readFinishMarkWithPipeId_tWriteJSONField_1_In)
-						|| !queue_tWriteJSONField_1_In.isEmpty()) {
-					if (!queue_tWriteJSONField_1_In.isEmpty()) {
+				/**
+				 * Convert Date and Byte array in mongo DB format
+				 *
+				 */
+				class MongoDBTreeConverter_tMongoDBOutput_1_Out {
 
-						/**
-						 * [tWriteJSONField_1_In begin ] stop
-						 */
-
-						/**
-						 * [tWriteJSONField_1_In main ] start
-						 */
-
-						currentVirtualComponent = "tWriteJSONField_1";
-
-						currentComponent = "tWriteJSONField_1_In";
-
-						row8Struct result_tWriteJSONField_1_In = queue_tWriteJSONField_1_In
-								.poll();
-						str_tWriteJSONField_1_In = result_tWriteJSONField_1_In.fields;
-						row8._id = result_tWriteJSONField_1_In._id;
-						// Convert XML to JSON
-						net.sf.json.JSON json_tWriteJSONField_1_In = xmlSerializer_tWriteJSONField_1_In
-								.read(str_tWriteJSONField_1_In);
-						row8.fields = json_tWriteJSONField_1_In.toString();
-
-						nb_line_tWriteJSONField_1_In++;
-
-						tos_count_tWriteJSONField_1_In++;
-
-						/**
-						 * [tWriteJSONField_1_In main ] stop
-						 */
-
-						/**
-						 * [tWriteJSONField_1_In process_data_begin ] start
-						 */
-
-						currentVirtualComponent = "tWriteJSONField_1";
-
-						currentComponent = "tWriteJSONField_1_In";
-
-						/**
-						 * [tWriteJSONField_1_In process_data_begin ] stop
-						 */
-
-						/**
-						 * [tLogRow_2 main ] start
-						 */
-
-						currentComponent = "tLogRow_2";
-
-						// row8
-						// row8
-
-						if (execStat) {
-							runStat.updateStatOnConnection("row8" + iterateId,
-									1, 1);
+					/**
+					 * header method to ease javajet implementation.
+					 **/
+					public void processTree(Object currentElement,
+							String[] path, String pattern) {
+						if (currentElement instanceof org.bson.Document) {
+							// Start index at 1, in order to remove the first
+							// unwanted or empty string.
+							processTree((org.bson.Document) currentElement,
+									path, 1, pattern);
+						} else if (currentElement instanceof com.mongodb.BasicDBList) {
+							// Start index at 1, in order to remove the first
+							// unwanted or empty string.
+							processTree(
+									(com.mongodb.BasicDBList) currentElement,
+									path, 1, pattern);
 						}
+					}
 
-						// /////////////////////
-
-						strBuffer_tLogRow_2 = new StringBuilder();
-
-						if (row8._id != null) { //
-
-							strBuffer_tLogRow_2
-									.append(String.valueOf(row8._id));
-
-						} //
-
-						strBuffer_tLogRow_2.append("|");
-
-						if (row8.fields != null) { //
-
-							strBuffer_tLogRow_2.append(String
-									.valueOf(row8.fields));
-
-						} //
-
-						if (globalMap.get("tLogRow_CONSOLE") != null) {
-							consoleOut_tLogRow_2 = (java.io.PrintStream) globalMap
-									.get("tLogRow_CONSOLE");
+					public void processTree(org.bson.Document currentElement,
+							String[] path, int index, String pattern) {
+						if (index < path.length - 1) {
+							Object nextElement = currentElement
+									.get(path[index]);
+							if (nextElement instanceof org.bson.Document) {
+								processTree((org.bson.Document) nextElement,
+										path, index + 1, pattern);
+							} else if (nextElement instanceof com.mongodb.BasicDBList) {
+								processTree(
+										(com.mongodb.BasicDBList) nextElement,
+										path, index + 1, pattern);
+							} else if (nextElement == null && index > 0) {
+								// some loop are not reported by the XML tree
+								nextElement = currentElement
+										.get(path[index - 1]);
+								if (nextElement != null) {
+									if (nextElement instanceof org.bson.Document) {
+										processTree(
+												(org.bson.Document) nextElement,
+												path, index, pattern);
+									} else if (nextElement instanceof com.mongodb.BasicDBList) {
+										processTree(
+												(com.mongodb.BasicDBList) nextElement,
+												path, index, pattern);
+									}
+								}
+							}
 						} else {
-							consoleOut_tLogRow_2 = new java.io.PrintStream(
-									new java.io.BufferedOutputStream(System.out));
-							globalMap.put("tLogRow_CONSOLE",
-									consoleOut_tLogRow_2);
+							// process leaf
+							if (currentElement.get(path[path.length - 1]) instanceof com.mongodb.BasicDBList) {
+								// if the leaf is a list
+								com.mongodb.BasicDBList finalObjects = (com.mongodb.BasicDBList) currentElement
+										.get(path[path.length - 1]);
+								com.mongodb.BasicDBList convertedElements = new com.mongodb.BasicDBList();
+								for (Object finalObject : finalObjects) {
+									if (pattern == null) {
+										// no pattern, we want to parse to a
+										// byte array.
+										if (finalObject != null) {
+											convertedElements
+													.add(((String) finalObject)
+															.getBytes());
+										}
+									} else {
+										if (finalObject != null) {
+											convertedElements
+													.add(ParserUtils
+															.parseTo_Date(
+																	(String) finalObject,
+																	pattern));
+										}
+									}
+								}
+								finalObjects.clear();
+								finalObjects.addAll(convertedElements);
+							} else {
+								if (pattern == null) {
+									// no pattern, we want to parse to a byte
+									// array.
+									if (currentElement
+											.get(path[path.length - 1]) != null) {
+										currentElement
+												.put(path[path.length - 1],
+														((String) currentElement
+																.get(path[path.length - 1]))
+																.getBytes());
+									}
+								} else {
+									if (currentElement
+											.get(path[path.length - 1]) != null) {
+										currentElement
+												.put(path[path.length - 1],
+														ParserUtils
+																.parseTo_Date(
+																		(String) (currentElement)
+																				.get(path[path.length - 1]),
+																		pattern));
+									}
+								}
+							}
 						}
-						consoleOut_tLogRow_2.println(strBuffer_tLogRow_2
-								.toString());
-						consoleOut_tLogRow_2.flush();
-						nb_line_tLogRow_2++;
-						// ////
+					}
 
-						// ////
-
-						// /////////////////////
-
-						row9 = row8;
-
-						tos_count_tLogRow_2++;
-
-						/**
-						 * [tLogRow_2 main ] stop
-						 */
-
-						/**
-						 * [tLogRow_2 process_data_begin ] start
-						 */
-
-						currentComponent = "tLogRow_2";
-
-						/**
-						 * [tLogRow_2 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tMongoDBOutput_1 main ] start
-						 */
-
-						currentComponent = "tMongoDBOutput_1";
-
-						// row9
-						// row9
-
-						if (execStat) {
-							runStat.updateStatOnConnection("row9" + iterateId,
-									1, 1);
+					public void processTree(
+							com.mongodb.BasicDBList currentElements,
+							String[] path, int index, String pattern) {
+						if (index < path.length - 1) {
+							for (Object currentElement : currentElements) {
+								if (currentElement instanceof org.bson.Document) {
+									processTree(
+											(org.bson.Document) currentElement,
+											path, index + 1, pattern);
+								} else if (currentElement instanceof com.mongodb.BasicDBList) {
+									processTree(
+											(com.mongodb.BasicDBList) currentElement,
+											path, index + 1, pattern);
+								}
+							}
+						} else {
+							// process leaf
+							com.mongodb.BasicDBList convertedElements = new com.mongodb.BasicDBList();
+							for (Object finalObject : currentElements) {
+								if (finalObject instanceof org.bson.Document) {
+									org.bson.Document currentElement = (org.bson.Document) finalObject;
+									if (pattern == null) {
+										// no pattern, we want to parse to a
+										// byte array.
+										if (currentElement
+												.get(path[path.length - 1]) != null) {
+											currentElement
+													.put(path[path.length - 1],
+															((String) currentElement
+																	.get(path[path.length - 1]))
+																	.getBytes());
+										}
+									} else {
+										if (currentElement
+												.get(path[path.length - 1]) != null) {
+											currentElement
+													.put(path[path.length - 1],
+															ParserUtils
+																	.parseTo_Date(
+																			(String) (currentElement)
+																					.get(path[path.length - 1]),
+																			pattern));
+										}
+									}
+								} else { // loop with raw types
+									if (pattern == null) {
+										// no pattern, we want to parse to a
+										// byte array.
+										if (finalObject != null) {
+											convertedElements
+													.add(((String) finalObject)
+															.getBytes());
+										}
+									} else {
+										if (finalObject != null) {
+											convertedElements
+													.add(ParserUtils
+															.parseTo_Date(
+																	(String) finalObject,
+																	pattern));
+										}
+									}
+								}
+							}
+							if (convertedElements.size() > 0) {
+								currentElements.clear();
+								currentElements.addAll(convertedElements);
+							}
 						}
 
-						try {
-							updateObjectUtil_tMongoDBOutput_1
-									.setObject(new org.bson.Document());
+					}
+				}
+				MongoDBTreeConverter_tMongoDBOutput_1_Out mongoDBTreeConverter_tMongoDBOutput_1_Out = new MongoDBTreeConverter_tMongoDBOutput_1_Out();
+				while (!globalMap
+						.containsKey(readFinishMarkWithPipeId_tMongoDBOutput_1_Out)
+						|| !queue_tMongoDBOutput_1_Out.isEmpty()) {
+					if (!queue_tMongoDBOutput_1_Out.isEmpty()) {
+						str_tMongoDBOutput_1_Out = queue_tMongoDBOutput_1_Out
+								.poll();
+						// Convert XML to JSON
+						net.sf.json.JSON json_tMongoDBOutput_1_Out = xmlSerializer_tMongoDBOutput_1_Out
+								.read(str_tMongoDBOutput_1_Out);
+						nb_line_tMongoDBOutput_1_Out++;
 
-							queryObjectUtil_tMongoDBOutput_1
-									.setObject(new org.bson.Document());
-							int countKey_tMongoDBOutput_1 = 0;
+						/**
+						 * [tMongoDBOutput_1_Out begin ] stop
+						 */
 
-							queryObjectUtil_tMongoDBOutput_1.putkeyNode(
-									pathMap_tMongoDBOutput_1.get("_id"), "_id",
-									row9._id);
-							countKey_tMongoDBOutput_1++;
-							updateObjectUtil_tMongoDBOutput_1.put(
-									pathMap_tMongoDBOutput_1.get("_id"), "_id",
-									row9._id);
-							updateObjectUtil_tMongoDBOutput_1.put(
-									pathMap_tMongoDBOutput_1.get("fields"),
-									"fields", row9.fields);
-							org.bson.Document updateObj_tMongoDBOutput_1 = updateObjectUtil_tMongoDBOutput_1
-									.getObject();
+						/**
+						 * [tMongoDBOutput_1_Out main ] start
+						 */
 
-							if (countKey_tMongoDBOutput_1 <= 0) {
+						currentVirtualComponent = "tMongoDBOutput_1";
+
+						currentComponent = "tMongoDBOutput_1_Out";
+
+						org.bson.Document data_tMongoDBOutput_1_Out = org.bson.Document
+								.parse(json_tMongoDBOutput_1_Out.toString());
+
+						// Replace Date and Bytes by true mongoDB types.
+						Object tMongoDBOutput_1_Out_dbobject = data_tMongoDBOutput_1_Out;
+						String pathString_tMongoDBOutput_1_Out = "";
+						String[] path_tMongoDBOutput_1_Out;
+
+						org.bson.Document queryObj_tMongoDBOutput_1_Out = null;
+						if (data_tMongoDBOutput_1_Out != null) {
+
+							queryObj_tMongoDBOutput_1_Out = (org.bson.Document) data_tMongoDBOutput_1_Out
+									.get("query");
+							data_tMongoDBOutput_1_Out = (org.bson.Document) data_tMongoDBOutput_1_Out
+									.get("data");
+							if (data_tMongoDBOutput_1_Out != null
+									&& queryObj_tMongoDBOutput_1_Out != null) {
+
+								coll_tMongoDBOutput_1_Out
+										.updateOne(
+												queryObj_tMongoDBOutput_1_Out,
+												new org.bson.Document("$set",
+														data_tMongoDBOutput_1_Out),
+												new com.mongodb.client.model.UpdateOptions()
+														.upsert(true));
+							} else {
 
 								throw new Exception(
-										"Must have at least one key in schema");
+										"Data node or Query node configuration error! ");
 
-							} else {
-								org.bson.Document queryObj_tMongoDBOutput_1 = queryObjectUtil_tMongoDBOutput_1
-										.getObject();
-
-								coll_tMongoDBOutput_1.updateOne(
-										queryObj_tMongoDBOutput_1,
-										new org.bson.Document("$set",
-												updateObj_tMongoDBOutput_1));
 							}
 
-						} catch (Exception e_tMongoDBOutput_1) {
+						} else {
 
-							throw e_tMongoDBOutput_1;
+							throw new Exception(
+									"There no data in json,Please check the json configuration");
 
 						}
-						nb_line_tMongoDBOutput_1++;
 
-						tos_count_tMongoDBOutput_1++;
+						tos_count_tMongoDBOutput_1_Out++;
 
 						/**
-						 * [tMongoDBOutput_1 main ] stop
+						 * [tMongoDBOutput_1_Out main ] stop
 						 */
 
 						/**
-						 * [tMongoDBOutput_1 process_data_begin ] start
+						 * [tMongoDBOutput_1_Out process_data_begin ] start
 						 */
 
-						currentComponent = "tMongoDBOutput_1";
+						currentVirtualComponent = "tMongoDBOutput_1";
+
+						currentComponent = "tMongoDBOutput_1_Out";
 
 						/**
-						 * [tMongoDBOutput_1 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tMongoDBOutput_1 process_data_end ] start
-						 */
-
-						currentComponent = "tMongoDBOutput_1";
-
-						/**
-						 * [tMongoDBOutput_1 process_data_end ] stop
+						 * [tMongoDBOutput_1_Out process_data_begin ] stop
 						 */
 
 						/**
-						 * [tLogRow_2 process_data_end ] start
+						 * [tMongoDBOutput_1_Out process_data_end ] start
 						 */
 
-						currentComponent = "tLogRow_2";
+						currentVirtualComponent = "tMongoDBOutput_1";
+
+						currentComponent = "tMongoDBOutput_1_Out";
 
 						/**
-						 * [tLogRow_2 process_data_end ] stop
-						 */
-
-						/**
-						 * [tWriteJSONField_1_In process_data_end ] start
-						 */
-
-						currentVirtualComponent = "tWriteJSONField_1";
-
-						currentComponent = "tWriteJSONField_1_In";
-
-						/**
-						 * [tWriteJSONField_1_In process_data_end ] stop
+						 * [tMongoDBOutput_1_Out process_data_end ] stop
 						 */
 
 						/**
-						 * [tWriteJSONField_1_In end ] start
+						 * [tMongoDBOutput_1_Out end ] start
 						 */
 
-						currentVirtualComponent = "tWriteJSONField_1";
+						currentVirtualComponent = "tMongoDBOutput_1";
 
-						currentComponent = "tWriteJSONField_1_In";
+						currentComponent = "tMongoDBOutput_1_Out";
 
 					}
 				}
 
-				String readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In = "tWriteJSONField_1_In_FINISH_WITH_EXCEPTION"
-						+ (queue_tWriteJSONField_1_In == null ? ""
-								: queue_tWriteJSONField_1_In.hashCode());
+				String readFinishWithExceptionMarkWithPipeId_tMongoDBOutput_1_Out = "tMongoDBOutput_1_Out_FINISH_WITH_EXCEPTION"
+						+ (queue_tMongoDBOutput_1_Out == null ? ""
+								: queue_tMongoDBOutput_1_Out.hashCode());
 				if (globalMap
-						.containsKey(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In)) {
-					if (!(globalMap instanceof java.util.concurrent.ConcurrentHashMap)) {
-						globalMap
-								.put(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In,
-										null);// syn
-					}
+						.containsKey(readFinishWithExceptionMarkWithPipeId_tMongoDBOutput_1_Out)) {
 					globalMap
-							.remove(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In);
+							.put(readFinishWithExceptionMarkWithPipeId_tMongoDBOutput_1_Out,
+									null);// syn
+					globalMap
+							.remove(readFinishWithExceptionMarkWithPipeId_tMongoDBOutput_1_Out);
 					return;
 				}
-				globalMap.remove("queue_tWriteJSONField_1_In");
+				globalMap.remove("queue_tMongoDBOutput_1_Out");
 
-				if (!(globalMap instanceof java.util.concurrent.ConcurrentHashMap)) {
-					globalMap
-							.put(readFinishMarkWithPipeId_tWriteJSONField_1_In,
-									null);// syn
-				}
-				globalMap.remove(readFinishMarkWithPipeId_tWriteJSONField_1_In);
-
-				globalMap.put("tWriteJSONField_1_NB_LINE",
-						nb_line_tWriteJSONField_1_In);
-
-				ok_Hash.put("tWriteJSONField_1_In", true);
-				end_Hash.put("tWriteJSONField_1_In", System.currentTimeMillis());
-
-				/**
-				 * [tWriteJSONField_1_In end ] stop
-				 */
-
-				/**
-				 * [tLogRow_2 end ] start
-				 */
-
-				currentComponent = "tLogRow_2";
-
-				// ////
-				// ////
-				globalMap.put("tLogRow_2_NB_LINE", nb_line_tLogRow_2);
-
-				// /////////////////////
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null
-							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row8" + iterateId, 2, 0);
-					}
-				}
-
-				ok_Hash.put("tLogRow_2", true);
-				end_Hash.put("tLogRow_2", System.currentTimeMillis());
-
-				/**
-				 * [tLogRow_2 end ] stop
-				 */
-
-				/**
-				 * [tMongoDBOutput_1 end ] start
-				 */
-
-				currentComponent = "tMongoDBOutput_1";
+				globalMap.put(readFinishMarkWithPipeId_tMongoDBOutput_1_Out,
+						null);// syn
+				globalMap.remove(readFinishMarkWithPipeId_tMongoDBOutput_1_Out);
 
 				globalMap.put("tMongoDBOutput_1_NB_LINE",
-						nb_line_tMongoDBOutput_1);
+						nb_line_tMongoDBOutput_1_Out);
 
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null
-							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row9" + iterateId, 2, 0);
-					}
-				}
-
-				ok_Hash.put("tMongoDBOutput_1", true);
-				end_Hash.put("tMongoDBOutput_1", System.currentTimeMillis());
+				ok_Hash.put("tMongoDBOutput_1_Out", true);
+				end_Hash.put("tMongoDBOutput_1_Out", System.currentTimeMillis());
 
 				/**
-				 * [tMongoDBOutput_1 end ] stop
+				 * [tMongoDBOutput_1_Out end ] stop
 				 */
-
 			}// end the resume
 
 		} catch (java.lang.Exception e) {
@@ -9698,37 +9507,16 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 			try {
 
 				/**
-				 * [tWriteJSONField_1_In finally ] start
+				 * [tMongoDBOutput_1_Out finally ] start
 				 */
 
-				currentVirtualComponent = "tWriteJSONField_1";
+				currentVirtualComponent = "tMongoDBOutput_1";
 
-				currentComponent = "tWriteJSONField_1_In";
+				currentComponent = "tMongoDBOutput_1_Out";
 
 				/**
-				 * [tWriteJSONField_1_In finally ] stop
+				 * [tMongoDBOutput_1_Out finally ] stop
 				 */
-
-				/**
-				 * [tLogRow_2 finally ] start
-				 */
-
-				currentComponent = "tLogRow_2";
-
-				/**
-				 * [tLogRow_2 finally ] stop
-				 */
-
-				/**
-				 * [tMongoDBOutput_1 finally ] start
-				 */
-
-				currentComponent = "tMongoDBOutput_1";
-
-				/**
-				 * [tMongoDBOutput_1 finally ] stop
-				 */
-
 			} catch (java.lang.Exception e) {
 				// ignore
 			} catch (java.lang.Error error) {
@@ -9737,7 +9525,7 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tWriteJSONField_1_In_SUBPROCESS_STATE", 1);
+		globalMap.put("tMongoDBOutput_1_Out_SUBPROCESS_STATE", 1);
 	}
 
 	public String resuming_logs_dir_path = null;
@@ -10271,6 +10059,6 @@ public class GENERATE_GEOGRAPHY_CODE implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 264151 characters generated by Talend Open Studio for Big Data on the October
- * 15, 2018 4:10:43 PM CST
+ * 259995 characters generated by Talend Open Studio for Big Data on the October
+ * 16, 2018 8:35:33 AM CST
  ************************************************************************************************/

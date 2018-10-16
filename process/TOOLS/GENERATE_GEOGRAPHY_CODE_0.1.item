@@ -182,7 +182,7 @@
     <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" value="&quot;mongouser@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
-    <elementParameter field="TEXT" name="COLLECTION" value="&quot;transactions.records&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION" value="&quot;test.talend&quot;"/>
     <elementParameter field="CLOSED_LIST" name="QUERY_TYPE" value="AGGREGATION_QUERY"/>
     <elementParameter field="LABEL" name="NOTE_ISOLATION" value="Note : Surround String values in your query with single quotes&#xA;Note : If you are running on a Sharded Cluster, please make sure to include the shard key in the query."/>
     <elementParameter field="MEMO" name="QUERY" value="&quot;{{}, {_id:1, num: 1}}&quot;" show="false"/>
@@ -190,7 +190,6 @@
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $addFields: {'_fileRef': {$arrayToObject: {$map: {input: { $objectToArray: '$file' }, in: {k: {$cond:[{ $eq:[{'$substrCP':['$$this.k',0,1]},{$literal:'$'}] }, { $substrCP:['$$this.k',1,{$strLenCP:'$$this.k'}] }, '$$this.k'] }, v:'$$this.v'} } } } } }&quot;"/>
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $lookup: {from: 'transactions.files', localField: '_fileRef.id', foreignField: '_id', as: 'file'} }&quot;"/>
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $addFields: {'file': {$mergeObjects: '$file'}} }&quot;"/>
-      <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $match : {'file.country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'), 'file.collection.$id' : ObjectId('&quot; + globalMap.get(&quot;COLLECTION_ID&quot;).toString() + &quot;')} }&quot;"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
@@ -403,10 +402,10 @@
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row10">
-        <mapperTableEntries name="_id" expression="&quot;ObjectId(\&quot;&quot; + row2.id + &quot;\&quot;)&quot; " type="id_String"/>
+        <mapperTableEntries name="_id" expression="row2.id" type="id_String"/>
         <mapperTableEntries name="geographyCode" expression="row3.geographyCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="locality" expression="row2.locality " type="id_String" nullable="true"/>
         <mapperTableEntries name="adminArea1" expression="row2.adminArea1 " type="id_String" nullable="true"/>
@@ -595,9 +594,9 @@
     <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" value="&quot;mongouser@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
-    <elementParameter field="TEXT" name="COLLECTION" value="&quot;transactions.record&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION" value="&quot;test.talend&quot;"/>
     <elementParameter field="CHECK" name="DROP_COLLECTION_CREATE" value="false"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="SET"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPSERT_WITH_SET"/>
     <elementParameter field="CHECK" name="UPDATE_ALL" value="false" show="false"/>
     <elementParameter field="TABLE" name="MAPPING" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="_id"/>
@@ -644,19 +643,83 @@
       <elementValue elementRef="PATH" value="/rootTag"/>
       <elementValue elementRef="COLUMN" value=""/>
       <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
       <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="PATH" value="/rootTag/query"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="2"/>
+      <elementValue elementRef="PATH" value="/rootTag/query/_id"/>
+      <elementValue elementRef="COLUMN" value="_id"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="3"/>
+      <elementValue elementRef="PATH" value="type"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="object"/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="4"/>
+      <elementValue elementRef="PATH" value="/rootTag/data"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="5"/>
     </elementParameter>
     <elementParameter field="TABLE" name="GROUP" show="false"/>
-    <elementParameter field="TABLE" name="LOOP" show="false"/>
+    <elementParameter field="TABLE" name="LOOP" show="false">
+      <elementValue elementRef="PATH" value="/rootTag/data/fields"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="PATH" value="/rootTag/data/fields/field"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="PATH" value="/rootTag/data/fields/field/name"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="geographyCode"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="PATH" value="/rootTag/data/fields/field/value"/>
+      <elementValue elementRef="COLUMN" value="geographyCode"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="PATH" value="/rootTag/data/fields/field/tag"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="geographyCode"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="14"/>
+      <elementValue elementRef="PATH" value="/rootTag/data/fields/field"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="11"/>
+      <elementValue elementRef="PATH" value="/rootTag/data/fields/field/name"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="locality"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="12"/>
+      <elementValue elementRef="PATH" value="/rootTag/data/fields/field/value"/>
+      <elementValue elementRef="COLUMN" value="locality"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="13"/>
+      <elementValue elementRef="PATH" value="/rootTag/data/fields/field/tag"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="locality"/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="14"/>
+    </elementParameter>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CHECK" name="CREATE_EMPTY_ELEMENT" value="false"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="INPUT_COLUMN" value="_id"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="GROUPBYS"/>
     <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
-    <elementParameter field="TEXT" name="DATA_NODE" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="QUERY_NODE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATA_NODE" value="&quot;data&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_NODE" value="&quot;query&quot;"/>
     <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
