@@ -176,6 +176,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(WEBJOB_NAME != null){
+				
+					this.setProperty("WEBJOB_NAME", WEBJOB_NAME.toString());
+				
+			}
+			
 		}
 
 public String TYPE;
@@ -213,6 +219,10 @@ public String getMONGODB_HOSTNAME(){
 public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
 	return this.POSTGRES_HOSTNAME;
+}
+public String WEBJOB_NAME;
+public String getWEBJOB_NAME(){
+	return this.WEBJOB_NAME;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -426,6 +436,15 @@ private class TalendException extends Exception {
 					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tSchemaComplianceCheck_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tDBOutput_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -442,6 +461,15 @@ private class TalendException extends Exception {
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
 					tDBCommit_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tRunJob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tDBInput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -496,6 +524,42 @@ private class TalendException extends Exception {
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
 					tSetGlobalVar_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tMongoDBInput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tSetGlobalVar_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tMongoDBInput_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_3_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tSetGlobalVar_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_3_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tPostjob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -610,6 +674,16 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
+			public void tMongoDBInput_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tMongoDBInput_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
 			public void tPostjob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
@@ -641,6 +715,630 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 
 
+
+public static class row11Struct implements routines.system.IPersistableRow<row11Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_SAT_CUSTOMER = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[0];
+
+	
+			    public int hubId;
+
+				public int getHubId () {
+					return this.hubId;
+				}
+				
+			    public String source;
+
+				public String getSource () {
+					return this.source;
+				}
+				
+			    public String providerCode;
+
+				public String getProviderCode () {
+					return this.providerCode;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
+			    public String sourceChannelCode;
+
+				public String getSourceChannelCode () {
+					return this.sourceChannelCode;
+				}
+				
+			    public String nameEn;
+
+				public String getNameEn () {
+					return this.nameEn;
+				}
+				
+			    public String nameLo;
+
+				public String getNameLo () {
+					return this.nameLo;
+				}
+				
+			    public float geographyCoef;
+
+				public float getGeographyCoef () {
+					return this.geographyCoef;
+				}
+				
+			    public float splitNumber;
+
+				public float getSplitNumber () {
+					return this.splitNumber;
+				}
+				
+			    public String attribute1;
+
+				public String getAttribute1 () {
+					return this.attribute1;
+				}
+				
+			    public String attribute2;
+
+				public String getAttribute2 () {
+					return this.attribute2;
+				}
+				
+			    public String attribute3;
+
+				public String getAttribute3 () {
+					return this.attribute3;
+				}
+				
+			    public String attribute4;
+
+				public String getAttribute4 () {
+					return this.attribute4;
+				}
+				
+			    public String attribute5;
+
+				public String getAttribute5 () {
+					return this.attribute5;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_SAT_CUSTOMER.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_SAT_CUSTOMER.length == 0) {
+   					commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_SAT_CUSTOMER, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_SAT_CUSTOMER, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_SAT_CUSTOMER) {
+
+        	try {
+
+        		int length = 0;
+		
+			        this.hubId = dis.readInt();
+					
+					this.source = readString(dis);
+					
+					this.providerCode = readString(dis);
+					
+					this.geographyCode = readString(dis);
+					
+					this.sourceChannelCode = readString(dis);
+					
+					this.nameEn = readString(dis);
+					
+					this.nameLo = readString(dis);
+					
+			        this.geographyCoef = dis.readFloat();
+					
+			        this.splitNumber = dis.readFloat();
+					
+					this.attribute1 = readString(dis);
+					
+					this.attribute2 = readString(dis);
+					
+					this.attribute3 = readString(dis);
+					
+					this.attribute4 = readString(dis);
+					
+					this.attribute5 = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// int
+				
+		            	dos.writeInt(this.hubId);
+					
+					// String
+				
+						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.providerCode,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
+					
+					// String
+				
+						writeString(this.sourceChannelCode,dos);
+					
+					// String
+				
+						writeString(this.nameEn,dos);
+					
+					// String
+				
+						writeString(this.nameLo,dos);
+					
+					// float
+				
+		            	dos.writeFloat(this.geographyCoef);
+					
+					// float
+				
+		            	dos.writeFloat(this.splitNumber);
+					
+					// String
+				
+						writeString(this.attribute1,dos);
+					
+					// String
+				
+						writeString(this.attribute2,dos);
+					
+					// String
+				
+						writeString(this.attribute3,dos);
+					
+					// String
+				
+						writeString(this.attribute4,dos);
+					
+					// String
+				
+						writeString(this.attribute5,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("hubId="+String.valueOf(hubId));
+		sb.append(",source="+source);
+		sb.append(",providerCode="+providerCode);
+		sb.append(",geographyCode="+geographyCode);
+		sb.append(",sourceChannelCode="+sourceChannelCode);
+		sb.append(",nameEn="+nameEn);
+		sb.append(",nameLo="+nameLo);
+		sb.append(",geographyCoef="+String.valueOf(geographyCoef));
+		sb.append(",splitNumber="+String.valueOf(splitNumber));
+		sb.append(",attribute1="+attribute1);
+		sb.append(",attribute2="+attribute2);
+		sb.append(",attribute3="+attribute3);
+		sb.append(",attribute4="+attribute4);
+		sb.append(",attribute5="+attribute5);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row11Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class exception1Struct implements routines.system.IPersistableRow<exception1Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_SAT_CUSTOMER = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[0];
+
+	
+			    public int hubId;
+
+				public int getHubId () {
+					return this.hubId;
+				}
+				
+			    public String source;
+
+				public String getSource () {
+					return this.source;
+				}
+				
+			    public String providerCode;
+
+				public String getProviderCode () {
+					return this.providerCode;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
+			    public String sourceChannelCode;
+
+				public String getSourceChannelCode () {
+					return this.sourceChannelCode;
+				}
+				
+			    public String nameEn;
+
+				public String getNameEn () {
+					return this.nameEn;
+				}
+				
+			    public String nameLo;
+
+				public String getNameLo () {
+					return this.nameLo;
+				}
+				
+			    public float geographyCoef;
+
+				public float getGeographyCoef () {
+					return this.geographyCoef;
+				}
+				
+			    public float splitNumber;
+
+				public float getSplitNumber () {
+					return this.splitNumber;
+				}
+				
+			    public String attribute1;
+
+				public String getAttribute1 () {
+					return this.attribute1;
+				}
+				
+			    public String attribute2;
+
+				public String getAttribute2 () {
+					return this.attribute2;
+				}
+				
+			    public String attribute3;
+
+				public String getAttribute3 () {
+					return this.attribute3;
+				}
+				
+			    public String attribute4;
+
+				public String getAttribute4 () {
+					return this.attribute4;
+				}
+				
+			    public String attribute5;
+
+				public String getAttribute5 () {
+					return this.attribute5;
+				}
+				
+			    public String errorCode;
+
+				public String getErrorCode () {
+					return this.errorCode;
+				}
+				
+			    public String errorMessage;
+
+				public String getErrorMessage () {
+					return this.errorMessage;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_SAT_CUSTOMER.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_SAT_CUSTOMER.length == 0) {
+   					commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_SAT_CUSTOMER, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_SAT_CUSTOMER, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_SAT_CUSTOMER) {
+
+        	try {
+
+        		int length = 0;
+		
+			        this.hubId = dis.readInt();
+					
+					this.source = readString(dis);
+					
+					this.providerCode = readString(dis);
+					
+					this.geographyCode = readString(dis);
+					
+					this.sourceChannelCode = readString(dis);
+					
+					this.nameEn = readString(dis);
+					
+					this.nameLo = readString(dis);
+					
+			        this.geographyCoef = dis.readFloat();
+					
+			        this.splitNumber = dis.readFloat();
+					
+					this.attribute1 = readString(dis);
+					
+					this.attribute2 = readString(dis);
+					
+					this.attribute3 = readString(dis);
+					
+					this.attribute4 = readString(dis);
+					
+					this.attribute5 = readString(dis);
+					
+					this.errorCode = readString(dis);
+					
+					this.errorMessage = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// int
+				
+		            	dos.writeInt(this.hubId);
+					
+					// String
+				
+						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.providerCode,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
+					
+					// String
+				
+						writeString(this.sourceChannelCode,dos);
+					
+					// String
+				
+						writeString(this.nameEn,dos);
+					
+					// String
+				
+						writeString(this.nameLo,dos);
+					
+					// float
+				
+		            	dos.writeFloat(this.geographyCoef);
+					
+					// float
+				
+		            	dos.writeFloat(this.splitNumber);
+					
+					// String
+				
+						writeString(this.attribute1,dos);
+					
+					// String
+				
+						writeString(this.attribute2,dos);
+					
+					// String
+				
+						writeString(this.attribute3,dos);
+					
+					// String
+				
+						writeString(this.attribute4,dos);
+					
+					// String
+				
+						writeString(this.attribute5,dos);
+					
+					// String
+				
+						writeString(this.errorCode,dos);
+					
+					// String
+				
+						writeString(this.errorMessage,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("hubId="+String.valueOf(hubId));
+		sb.append(",source="+source);
+		sb.append(",providerCode="+providerCode);
+		sb.append(",geographyCode="+geographyCode);
+		sb.append(",sourceChannelCode="+sourceChannelCode);
+		sb.append(",nameEn="+nameEn);
+		sb.append(",nameLo="+nameLo);
+		sb.append(",geographyCoef="+String.valueOf(geographyCoef));
+		sb.append(",splitNumber="+String.valueOf(splitNumber));
+		sb.append(",attribute1="+attribute1);
+		sb.append(",attribute2="+attribute2);
+		sb.append(",attribute3="+attribute3);
+		sb.append(",attribute4="+attribute4);
+		sb.append(",attribute5="+attribute5);
+		sb.append(",errorCode="+errorCode);
+		sb.append(",errorMessage="+errorMessage);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(exception1Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
 
 public static class row9Struct implements routines.system.IPersistableRow<row9Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_SAT_CUSTOMER = new byte[0];
@@ -2322,6 +3020,12 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
     static byte[] commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -2375,6 +3079,8 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
 						this.fields = (Object) dis.readObject();
@@ -2402,6 +3108,10 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
 					// Object
@@ -2421,7 +3131,8 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 		sb.append(",fields="+String.valueOf(fields));
 	    sb.append("]");
 
@@ -2468,6 +3179,12 @@ public static class after_tMongoDBInput_1Struct implements routines.system.IPers
     static byte[] commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -2521,6 +3238,8 @@ public static class after_tMongoDBInput_1Struct implements routines.system.IPers
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
 						this.fields = (Object) dis.readObject();
@@ -2548,6 +3267,10 @@ public static class after_tMongoDBInput_1Struct implements routines.system.IPers
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
 					// Object
@@ -2567,7 +3290,8 @@ public static class after_tMongoDBInput_1Struct implements routines.system.IPers
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 		sb.append(",fields="+String.valueOf(fields));
 	    sb.append("]");
 
@@ -2641,6 +3365,9 @@ row2Struct row2 = new row2Struct();
 row8Struct row8 = new row8Struct();
 row10Struct row10 = new row10Struct();
 row10Struct row9 = row10;
+row11Struct row11 = new row11Struct();
+exception1Struct exception1 = new exception1Struct();
+
 
 
 
@@ -2671,7 +3398,7 @@ row10Struct row9 = row10;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row11" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -2738,6 +3465,379 @@ int count_tDBOutput_1=0;
 
 /**
  * [tDBOutput_1 begin ] stop
+ */
+
+
+
+
+	
+	/**
+	 * [tRunJob_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tRunJob_1", false);
+		start_Hash.put("tRunJob_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tRunJob_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("exception1" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tRunJob_1 = 0;
+		
+    	class BytesLimit65535_tRunJob_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tRunJob_1().limitLog4jByte();
+
+
+ 
+
+
+
+/**
+ * [tRunJob_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tSchemaComplianceCheck_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tSchemaComplianceCheck_1", false);
+		start_Hash.put("tSchemaComplianceCheck_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tSchemaComplianceCheck_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tSchemaComplianceCheck_1 = 0;
+		
+    	class BytesLimit65535_tSchemaComplianceCheck_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tSchemaComplianceCheck_1().limitLog4jByte();
+
+	class RowSetValueUtil_tSchemaComplianceCheck_1 {
+
+		boolean ifPassedThrough = true;
+		int errorCodeThrough = 0;
+		String errorMessageThrough = "";
+		int resultErrorCodeThrough = 0;
+		String resultErrorMessageThrough = "";
+		String tmpContentThrough = null;
+
+		boolean ifPassed = true;
+		int errorCode = 0;
+		String errorMessage = "";
+
+		void handleBigdecimalPrecision(String data, int iPrecision, int maxLength){
+			//number of digits before the decimal point(ignoring frontend zeroes)
+			int len1 = 0;
+			int len2 = 0;
+			ifPassed = true;
+			errorCode = 0;
+			errorMessage = "";
+			if(data.startsWith("-")){
+				data = data.substring(1);
+			}
+			data = org.apache.commons.lang.StringUtils.stripStart(data, "0");
+
+			if(data.indexOf(".") >= 0){
+				len1 = data.indexOf(".");
+				data = org.apache.commons.lang.StringUtils.stripEnd(data, "0");
+				len2 = data.length() - (len1 + 1);
+			}else{
+				len1 = data.length();
+			}
+
+			if (iPrecision < len2) {
+				ifPassed = false;
+				errorCode += 8;
+				errorMessage += "|precision Non-matches";
+			} else if (maxLength < len1 + iPrecision) {
+				ifPassed = false;
+				errorCode += 8;
+				errorMessage += "|invalid Length setting is unsuitable for Precision";
+			}
+		}
+
+		int handleErrorCode(int errorCode, int resultErrorCode){
+			if (errorCode > 0) {
+				if (resultErrorCode > 0) {
+					resultErrorCode = 16;
+				} else {
+					resultErrorCode = errorCode;
+				}
+			}
+			return resultErrorCode;
+		}
+
+		String handleErrorMessage(String errorMessage, String resultErrorMessage, String columnLabel){
+			if (errorMessage.length() > 0) {
+				if (resultErrorMessage.length() > 0) {
+					resultErrorMessage += ";"+ errorMessage.replaceFirst("\\|", columnLabel);
+				} else {
+					resultErrorMessage = errorMessage.replaceFirst("\\|", columnLabel);
+				}
+			}
+			return resultErrorMessage;
+		}
+
+		void reset(){
+			ifPassedThrough = true;
+			errorCodeThrough = 0;
+			errorMessageThrough = "";
+			resultErrorCodeThrough = 0;
+			resultErrorMessageThrough = "";
+			tmpContentThrough = null;
+
+			ifPassed = true;
+			errorCode = 0;
+			errorMessage = "";
+		}
+
+		void setRowValue_0(row10Struct row9) {
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"hubId:");
+			errorMessageThrough = "";
+	// validate nullable (empty as null)
+	if ((row9.source == null) || ("".equals(row9.source))) {
+		ifPassedThrough = false;
+		errorCodeThrough += 4;
+		errorMessageThrough += "|empty or null";
+	}	try {
+		if(
+		row9.source != null
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.source);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"source:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.providerCode != null
+		&& (!"".equals(row9.providerCode))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.providerCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"providerCode:");
+			errorMessageThrough = "";
+	// validate nullable (empty as null)
+	if ((row9.geographyCode == null) || ("".equals(row9.geographyCode))) {
+		ifPassedThrough = false;
+		errorCodeThrough += 4;
+		errorMessageThrough += "|empty or null";
+	}	try {
+		if(
+		row9.geographyCode != null
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.geographyCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"geographyCode:");
+			errorMessageThrough = "";
+	// validate nullable (empty as null)
+	if ((row9.sourceChannelCode == null) || ("".equals(row9.sourceChannelCode))) {
+		ifPassedThrough = false;
+		errorCodeThrough += 4;
+		errorMessageThrough += "|empty or null";
+	}	try {
+		if(
+		row9.sourceChannelCode != null
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.sourceChannelCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"sourceChannelCode:");
+			errorMessageThrough = "";
+	// validate nullable (empty as null)
+	if ((row9.nameEn == null) || ("".equals(row9.nameEn))) {
+		ifPassedThrough = false;
+		errorCodeThrough += 4;
+		errorMessageThrough += "|empty or null";
+	}	try {
+		if(
+		row9.nameEn != null
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.nameEn);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"nameEn:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.nameLo != null
+		&& (!"".equals(row9.nameLo))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.nameLo);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"nameLo:");
+			errorMessageThrough = "";
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"geographyCoef:");
+			errorMessageThrough = "";
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"splitNumber:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.attribute1 != null
+		&& (!"".equals(row9.attribute1))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.attribute1);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"attribute1:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.attribute2 != null
+		&& (!"".equals(row9.attribute2))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.attribute2);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"attribute2:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.attribute3 != null
+		&& (!"".equals(row9.attribute3))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.attribute3);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"attribute3:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.attribute4 != null
+		&& (!"".equals(row9.attribute4))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.attribute4);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"attribute4:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.attribute5 != null
+		&& (!"".equals(row9.attribute5))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.attribute5);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"attribute5:");
+			errorMessageThrough = "";
+		}
+	}
+	RowSetValueUtil_tSchemaComplianceCheck_1 rsvUtil_tSchemaComplianceCheck_1 = new RowSetValueUtil_tSchemaComplianceCheck_1();
+
+ 
+
+
+
+/**
+ * [tSchemaComplianceCheck_1 begin ] stop
  */
 
 
@@ -3256,22 +4356,17 @@ out1Struct out1_tmp = new out1Struct();
 	                	
 	                
 	                	
-							aggregationStages.add(org.bson.Document.parse("{ $lookup: {from: 'master.files', localField: '_fileRef.id', foreignField: '_id', as: '_file'} }"));
+							aggregationStages.add(org.bson.Document.parse("{ $lookup: {from: 'master.files', localField: '_fileRef.id', foreignField: '_id', as: 'file'} }"));
 						
 	                	
 	                
 	                	
-							aggregationStages.add(org.bson.Document.parse("{ $addFields: {'file': {$mergeObjects: '$_file'}} }"));
+							aggregationStages.add(org.bson.Document.parse("{ $addFields: {'file': {$mergeObjects: '$file'}} }"));
 						
 	                	
 	                
 	                	
 							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.metadata.type' : '" + context.getTYPE() + "', 'sheetName' : '" + context.getSHEET_NAME() + "' } }"));
-						
-	                	
-	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $project: { '_fileRef': 0, '_file': 0 } }"));
 						
 	                	
 	                
@@ -3316,6 +4411,7 @@ out1Struct out1_tmp = new out1Struct();
 				}
 				DBObjectInputUtil_tMongoDBInput_1 dbObjectInputUtil_tMongoDBInput_1=new DBObjectInputUtil_tMongoDBInput_1();
 				java.util.Map<String, String> pathMap_tMongoDBInput_1=new java.util.HashMap<String, String>();
+				pathMap_tMongoDBInput_1.put("id","");
 				pathMap_tMongoDBInput_1.put("hash","file");
 				pathMap_tMongoDBInput_1.put("fields","");
 
@@ -3324,6 +4420,12 @@ out1Struct out1_tmp = new out1Struct();
 				org.bson.Document o_tMongoDBInput_1 = cursor_tMongoDBInput_1.next();
 				nb_line_tMongoDBInput_1++;
 				Object valueObj_tMongoDBInput_1=null;
+                    valueObj_tMongoDBInput_1=dbObjectInputUtil_tMongoDBInput_1.getValue(pathMap_tMongoDBInput_1.get("id"),"_id",o_tMongoDBInput_1);
+				if(valueObj_tMongoDBInput_1!=null && valueObj_tMongoDBInput_1.toString().length() > 0) {
+					row1.id = valueObj_tMongoDBInput_1.toString();
+				}else{
+					row1.id = null;
+				}
                     valueObj_tMongoDBInput_1=dbObjectInputUtil_tMongoDBInput_1.getValue(pathMap_tMongoDBInput_1.get("hash"),"hash",o_tMongoDBInput_1);
 				if(valueObj_tMongoDBInput_1!=null && valueObj_tMongoDBInput_1.toString().length() > 0) {
 					row1.hash = valueObj_tMongoDBInput_1.toString();
@@ -4273,14 +5375,14 @@ if(row8 != null) {
 
 	
 	/**
-	 * [tDBOutput_1 main ] start
+	 * [tSchemaComplianceCheck_1 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tDBOutput_1";
+	currentComponent="tSchemaComplianceCheck_1";
 
 	
 
@@ -4295,69 +5397,166 @@ if(row8 != null) {
 			
 
 		
+	row11 = null;	exception1 = null;
+	rsvUtil_tSchemaComplianceCheck_1.setRowValue_0(row9);
+	if (rsvUtil_tSchemaComplianceCheck_1.ifPassedThrough) {
+		row11 = new row11Struct();
+		row11.hubId = row9.hubId;
+		row11.source = row9.source;
+		row11.providerCode = row9.providerCode;
+		row11.geographyCode = row9.geographyCode;
+		row11.sourceChannelCode = row9.sourceChannelCode;
+		row11.nameEn = row9.nameEn;
+		row11.nameLo = row9.nameLo;
+		row11.geographyCoef = row9.geographyCoef;
+		row11.splitNumber = row9.splitNumber;
+		row11.attribute1 = row9.attribute1;
+		row11.attribute2 = row9.attribute2;
+		row11.attribute3 = row9.attribute3;
+		row11.attribute4 = row9.attribute4;
+		row11.attribute5 = row9.attribute5;
+	}
+	if (!rsvUtil_tSchemaComplianceCheck_1.ifPassedThrough) {
+		exception1 = new exception1Struct();
+		exception1.hubId = row9.hubId;
+		exception1.source = row9.source;
+		exception1.providerCode = row9.providerCode;
+		exception1.geographyCode = row9.geographyCode;
+		exception1.sourceChannelCode = row9.sourceChannelCode;
+		exception1.nameEn = row9.nameEn;
+		exception1.nameLo = row9.nameLo;
+		exception1.geographyCoef = row9.geographyCoef;
+		exception1.splitNumber = row9.splitNumber;
+		exception1.attribute1 = row9.attribute1;
+		exception1.attribute2 = row9.attribute2;
+		exception1.attribute3 = row9.attribute3;
+		exception1.attribute4 = row9.attribute4;
+		exception1.attribute5 = row9.attribute5;
+		exception1.errorCode = String.valueOf(rsvUtil_tSchemaComplianceCheck_1.resultErrorCodeThrough);
+		exception1.errorMessage = rsvUtil_tSchemaComplianceCheck_1.resultErrorMessageThrough;
+	}
+	rsvUtil_tSchemaComplianceCheck_1.reset();
+
+ 
+
+
+	tos_count_tSchemaComplianceCheck_1++;
+
+/**
+ * [tSchemaComplianceCheck_1 main ] stop
+ */
+	
+	/**
+	 * [tSchemaComplianceCheck_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSchemaComplianceCheck_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSchemaComplianceCheck_1 process_data_begin ] stop
+ */
+// Start of branch "row11"
+if(row11 != null) { 
+
+
+
+	
+	/**
+	 * [tDBOutput_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBOutput_1";
+
+	
+
+			//row11
+			//row11
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row11"+iterateId,1, 1);
+				} 
+			
+
+		
 
 
 
         whetherReject_tDBOutput_1 = false;
-                    pstmt_tDBOutput_1.setInt(1, row9.hubId);
+                    pstmt_tDBOutput_1.setInt(1, row11.hubId);
 
-                    if(row9.source == null) {
+                    if(row11.source == null) {
 pstmt_tDBOutput_1.setNull(2, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(2, row9.source);
+} else {pstmt_tDBOutput_1.setString(2, row11.source);
 }
 
-                    if(row9.providerCode == null) {
+                    if(row11.providerCode == null) {
 pstmt_tDBOutput_1.setNull(3, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(3, row9.providerCode);
+} else {pstmt_tDBOutput_1.setString(3, row11.providerCode);
 }
 
-                    if(row9.geographyCode == null) {
+                    if(row11.geographyCode == null) {
 pstmt_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(4, row9.geographyCode);
+} else {pstmt_tDBOutput_1.setString(4, row11.geographyCode);
 }
 
-                    if(row9.sourceChannelCode == null) {
+                    if(row11.sourceChannelCode == null) {
 pstmt_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(5, row9.sourceChannelCode);
+} else {pstmt_tDBOutput_1.setString(5, row11.sourceChannelCode);
 }
 
-                    if(row9.nameEn == null) {
+                    if(row11.nameEn == null) {
 pstmt_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(6, row9.nameEn);
+} else {pstmt_tDBOutput_1.setString(6, row11.nameEn);
 }
 
-                    if(row9.nameLo == null) {
+                    if(row11.nameLo == null) {
 pstmt_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(7, row9.nameLo);
+} else {pstmt_tDBOutput_1.setString(7, row11.nameLo);
 }
 
-                    pstmt_tDBOutput_1.setFloat(8, row9.geographyCoef);
+                    pstmt_tDBOutput_1.setFloat(8, row11.geographyCoef);
 
-                    pstmt_tDBOutput_1.setFloat(9, row9.splitNumber);
+                    pstmt_tDBOutput_1.setFloat(9, row11.splitNumber);
 
-                    if(row9.attribute1 == null) {
+                    if(row11.attribute1 == null) {
 pstmt_tDBOutput_1.setNull(10, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(10, row9.attribute1);
+} else {pstmt_tDBOutput_1.setString(10, row11.attribute1);
 }
 
-                    if(row9.attribute2 == null) {
+                    if(row11.attribute2 == null) {
 pstmt_tDBOutput_1.setNull(11, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(11, row9.attribute2);
+} else {pstmt_tDBOutput_1.setString(11, row11.attribute2);
 }
 
-                    if(row9.attribute3 == null) {
+                    if(row11.attribute3 == null) {
 pstmt_tDBOutput_1.setNull(12, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(12, row9.attribute3);
+} else {pstmt_tDBOutput_1.setString(12, row11.attribute3);
 }
 
-                    if(row9.attribute4 == null) {
+                    if(row11.attribute4 == null) {
 pstmt_tDBOutput_1.setNull(13, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(13, row9.attribute4);
+} else {pstmt_tDBOutput_1.setString(13, row11.attribute4);
 }
 
-                    if(row9.attribute5 == null) {
+                    if(row11.attribute5 == null) {
 pstmt_tDBOutput_1.setNull(14, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(14, row9.attribute5);
+} else {pstmt_tDBOutput_1.setString(14, row11.attribute5);
 }
 
 			
@@ -4450,6 +5649,286 @@ pstmt_tDBOutput_1.setNull(14, java.sql.Types.VARCHAR);
 
 /**
  * [tDBOutput_1 process_data_end ] stop
+ */
+
+} // End of branch "row11"
+
+
+
+
+// Start of branch "exception1"
+if(exception1 != null) { 
+
+
+
+	
+	/**
+	 * [tRunJob_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_1";
+
+	
+
+			//exception1
+			//exception1
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("exception1"+iterateId,1, 1);
+				} 
+			
+
+		
+	java.util.List<String> paraList_tRunJob_1 = new java.util.ArrayList<String>();
+	
+	        			paraList_tRunJob_1.add("--father_pid="+pid);
+	      			
+	        			paraList_tRunJob_1.add("--root_pid="+rootPid);
+	      			
+	        			paraList_tRunJob_1.add("--father_node=tRunJob_1");
+	      			
+	        			paraList_tRunJob_1.add("--context=Development");
+	      			
+	//for feature:10589
+	
+		paraList_tRunJob_1.add("--stat_port=" + portStats);
+	
+
+	if(resuming_logs_dir_path != null){
+		paraList_tRunJob_1.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
+	}
+	String childResumePath_tRunJob_1 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
+	String tRunJobName_tRunJob_1 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
+	if("tRunJob_1".equals(tRunJobName_tRunJob_1) && childResumePath_tRunJob_1 != null){
+		paraList_tRunJob_1.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
+	}
+	paraList_tRunJob_1.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_1");
+	
+	java.util.Map<String, Object> parentContextMap_tRunJob_1 = new java.util.HashMap<String, Object>();
+
+	
+		
+		context.synchronizeContext();
+		
+			parentContextMap_tRunJob_1.put("TYPE", context.TYPE);
+			paraList_tRunJob_1.add("--context_type " + "TYPE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("SHEET_NAME", context.SHEET_NAME);
+			paraList_tRunJob_1.add("--context_type " + "SHEET_NAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("SOURCE", context.SOURCE);
+			paraList_tRunJob_1.add("--context_type " + "SOURCE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("TABLE", context.TABLE);
+			paraList_tRunJob_1.add("--context_type " + "TABLE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
+			paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
+			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_1.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
+		 
+		java.util.Enumeration<?> propertyNames_tRunJob_1 = context.propertyNames();
+		while (propertyNames_tRunJob_1.hasMoreElements()) {
+			String key_tRunJob_1 = (String) propertyNames_tRunJob_1.nextElement();
+			Object value_tRunJob_1 = (Object) context.get(key_tRunJob_1);
+			if(value_tRunJob_1!=null) {  
+				paraList_tRunJob_1.add("--context_param " + key_tRunJob_1 + "=" + value_tRunJob_1);
+			} else {
+				paraList_tRunJob_1.add("--context_param " + key_tRunJob_1 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+			}
+			
+		}
+		
+
+	Object obj_tRunJob_1 = null;
+
+	
+		obj_tRunJob_1 = globalMap.get("COUNTRY_ID");
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param COUNTRY_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param COUNTRY_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("COUNTRY_ID", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = globalMap.get("WEBJOB_ID");
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param WEBJOB_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param WEBJOB_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("WEBJOB_ID", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = row1.id;
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param RECORD_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param RECORD_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("RECORD_ID", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = exception1.errorMessage.split(":")[0];
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param FIELD_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param FIELD_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("FIELD_NAME", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = "";
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param FIELD_VALUE=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param FIELD_VALUE=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("FIELD_VALUE", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = "Schema invalid:" + exception1.errorMessage;
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param REASON=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param REASON=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("REASON", obj_tRunJob_1);
+	
+	
+		deepsea.dsendexception_0_1.dSendException childJob_tRunJob_1 = new deepsea.dsendexception_0_1.dSendException();
+	    // pass DataSources
+	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_1 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
+	            .get(KEY_DB_DATASOURCES);
+	    if (null != talendDataSources_tRunJob_1) {
+	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_1 = new java.util.HashMap<String, javax.sql.DataSource>();
+	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_1 : talendDataSources_tRunJob_1
+			        .entrySet()) {
+	            dataSources_tRunJob_1.put(talendDataSourceEntry_tRunJob_1.getKey(),
+	                    talendDataSourceEntry_tRunJob_1.getValue().getRawDataSource());
+	        }
+	        childJob_tRunJob_1.setDataSources(dataSources_tRunJob_1);
+	    }
+		  
+			childJob_tRunJob_1.parentContextMap = parentContextMap_tRunJob_1;
+		  
+		
+		String[][] childReturn_tRunJob_1 = childJob_tRunJob_1.runJob((String[]) paraList_tRunJob_1.toArray(new String[paraList_tRunJob_1.size()]));
+		
+	  	
+				((java.util.Map)threadLocal.get()).put("errorCode", childJob_tRunJob_1.getErrorCode());
+			
+	            
+	    	if(childJob_tRunJob_1.getErrorCode() == null){
+				globalMap.put("tRunJob_1_CHILD_RETURN_CODE", childJob_tRunJob_1.getStatus() != null && ("failure").equals(childJob_tRunJob_1.getStatus()) ? 1 : 0);
+	    	}else{
+				globalMap.put("tRunJob_1_CHILD_RETURN_CODE", childJob_tRunJob_1.getErrorCode());
+		    }
+		    if (childJob_tRunJob_1.getExceptionStackTrace() != null) { 
+		    	globalMap.put("tRunJob_1_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_1.getExceptionStackTrace());
+		    }
+	  
+			 
+				if (childJob_tRunJob_1.getErrorCode() != null || ("failure").equals(childJob_tRunJob_1.getStatus())) {
+	        		throw new RuntimeException("Child job running failed.\n"+childJob_tRunJob_1.getException().getClass().getName() + ": " + childJob_tRunJob_1.getException().getMessage());
+				}
+			
+	  	
+
+ 
+
+
+	tos_count_tRunJob_1++;
+
+/**
+ * [tRunJob_1 main ] stop
+ */
+	
+	/**
+	 * [tRunJob_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tRunJob_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_1 process_data_end ] stop
+ */
+
+} // End of branch "exception1"
+
+
+
+
+	
+	/**
+	 * [tSchemaComplianceCheck_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSchemaComplianceCheck_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSchemaComplianceCheck_1 process_data_end ] stop
  */
 
 
@@ -4937,6 +6416,37 @@ end_Hash.put("tFlowMeter_13", System.currentTimeMillis());
 
 	
 	/**
+	 * [tSchemaComplianceCheck_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSchemaComplianceCheck_1";
+
+	
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row9"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tSchemaComplianceCheck_1", true);
+end_Hash.put("tSchemaComplianceCheck_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tSchemaComplianceCheck_1 end ] stop
+ */
+
+	
+	/**
 	 * [tDBOutput_1 end ] start
 	 */
 
@@ -5006,7 +6516,7 @@ end_Hash.put("tFlowMeter_13", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row9"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row11"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -5025,6 +6535,43 @@ end_Hash.put("tDBOutput_1", System.currentTimeMillis());
 /**
  * [tDBOutput_1 end ] stop
  */
+
+
+
+
+	
+	/**
+	 * [tRunJob_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_1";
+
+	
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("exception1"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tRunJob_1", true);
+end_Hash.put("tRunJob_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tRunJob_1 end ] stop
+ */
+
+
+
 
 
 
@@ -5248,6 +6795,27 @@ end_Hash.put("tDBOutput_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tSchemaComplianceCheck_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSchemaComplianceCheck_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSchemaComplianceCheck_1 finally ] stop
+ */
+
+	
+	/**
 	 * [tDBOutput_1 finally ] start
 	 */
 
@@ -5270,6 +6838,33 @@ end_Hash.put("tDBOutput_1", System.currentTimeMillis());
 /**
  * [tDBOutput_1 finally ] stop
  */
+
+
+
+
+	
+	/**
+	 * [tRunJob_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_1 finally ] stop
+ */
+
+
+
 
 
 
@@ -7612,6 +9207,7 @@ public void tSetGlobalVar_1Process(final java.util.Map<String, Object> globalMap
 
 
 
+		
 
 
 	
@@ -7729,6 +9325,10 @@ globalMap.put("SAT_TABLE", "sat_" + context.getTABLE());
 ok_Hash.put("tSetGlobalVar_1", true);
 end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk11", 0, "ok");
+				}
+				tMongoDBInput_2Process(globalMap);
 
 
 
@@ -7786,6 +9386,1297 @@ end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
 		
 
 		globalMap.put("tSetGlobalVar_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+
+public static class row12Struct implements routines.system.IPersistableRow<row12Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_SAT_CUSTOMER = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[0];
+
+	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_SAT_CUSTOMER.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_SAT_CUSTOMER.length == 0) {
+   					commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_SAT_CUSTOMER, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_SAT_CUSTOMER, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_SAT_CUSTOMER) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.id = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.id,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("id="+id);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row12Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+public void tMongoDBInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tMongoDBInput_2_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		row12Struct row12 = new row12Struct();
+
+
+
+
+	
+	/**
+	 * [tSetGlobalVar_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tSetGlobalVar_2", false);
+		start_Hash.put("tSetGlobalVar_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tSetGlobalVar_2";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row12" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tSetGlobalVar_2 = 0;
+		
+    	class BytesLimit65535_tSetGlobalVar_2{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tSetGlobalVar_2().limitLog4jByte();
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_2 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tMongoDBInput_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tMongoDBInput_2", false);
+		start_Hash.put("tMongoDBInput_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tMongoDBInput_2";
+
+	
+		int tos_count_tMongoDBInput_2 = 0;
+		
+    	class BytesLimit65535_tMongoDBInput_2{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tMongoDBInput_2().limitLog4jByte();
+
+	int nb_line_tMongoDBInput_2 = 0;
+	
+		
+		
+			com.mongodb.MongoClient mongo_tMongoDBInput_2=null;
+			com.mongodb.client.MongoDatabase db_tMongoDBInput_2=null;
+		
+
+			
+			
+				
+				
+				mongo_tMongoDBInput_2=(com.mongodb.MongoClient)globalMap.get("mongo_tMongoDBConnection_1");
+				db_tMongoDBInput_2 = (com.mongodb.client.MongoDatabase) globalMap.get("db_tMongoDBConnection_1");
+				
+
+
+				
+				
+					com.mongodb.client.MongoCollection<org.bson.Document> coll_tMongoDBInput_2 = db_tMongoDBInput_2.getCollection("countries");
+				
+				
+				
+				try{
+					// Add warning if an index is not in the query.
+					boolean needIndexWarning = true;
+					String indexList = "";
+					
+					for (com.mongodb.DBObject index: coll_tMongoDBInput_2.listIndexes(com.mongodb.DBObject.class)) {
+					
+	                
+	                    for (String key: ((com.mongodb.DBObject)index.get("key")).keySet()) {
+	                        // The regexp is:
+	                        // - contain the db DBcolumnName between two backslashed quotes
+	                        // - is followed at some point by a colon
+	                        // - there is no comma between the the DBcolumnName and the colon
+	                        if  (("{'name': '" + context.getCOUNTRY() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
+	                            // We have an index, do not print error message
+	                            needIndexWarning = false;
+	                        } else {
+	                            // This index is not in the query, add it into the indexList
+	                            indexList += ", " + key;
+	                        }
+	                    }
+	                }
+	                if ((!"".equals(indexList)) && (needIndexWarning)) {
+	                    
+	                        System.err.println("tMongoDBInput_2 - The query does not contain any reference an index.  [" + indexList.substring(1) + " ]");
+	                        
+	                }
+	            }catch(com.mongodb.MongoException e){
+	            	// caught an exception after issuing the getIndexInfo()
+	            	// don't fail the whole job
+	            	// maybe due to authorization
+	            }
+
+	                
+	                
+					org.bson.Document myQuery_tMongoDBInput_2 = org.bson.Document.parse("{'name': '" + context.getCOUNTRY() + "'}, {'_id':1}");
+	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_2 = coll_tMongoDBInput_2.find(myQuery_tMongoDBInput_2).noCursorTimeout(false);
+					
+	                
+		  			
+		  			
+
+		  			 
+	                
+				
+				class DBObjectInputUtil_tMongoDBInput_2{
+					// Get the node value in embedded document, 
+					//If have no embedded document get root document node.
+					
+					public Object getValue(String parentNode,String currentName,org.bson.Document dbObject){
+						Object value=null;
+						if(dbObject==null){
+							return null;
+						}
+						if (parentNode == null || "".equals(parentNode)) {
+						    if ("*".equals(currentName)) {
+						        value = dbObject;
+						    } else if (dbObject.get(currentName)!=null){
+								value=dbObject.get(currentName);
+							}
+						}else{
+							String objNames[] = objNames = parentNode.split("\\.");
+							org.bson.Document currentObj=dbObject;
+							for(int i=0;i<objNames.length;i++){
+								currentObj=(org.bson.Document)currentObj.get(objNames[i]);
+								if(currentObj==null){
+									break;
+								}
+							}
+							if ("*".equals(currentName)) {
+                                value = currentObj;
+                            } else if(currentObj!=null){
+								value=currentObj.get(currentName);
+							}
+						}
+						return value;
+					}
+				}
+				DBObjectInputUtil_tMongoDBInput_2 dbObjectInputUtil_tMongoDBInput_2=new DBObjectInputUtil_tMongoDBInput_2();
+				java.util.Map<String, String> pathMap_tMongoDBInput_2=new java.util.HashMap<String, String>();
+				pathMap_tMongoDBInput_2.put("id","");
+						
+					com.mongodb.BasicDBObject orderBy_tMongoDBInput_2 = new com.mongodb.BasicDBObject();
+						
+		  		
+		  		orderBy_tMongoDBInput_2.put("num",1);
+						
+					fi_tMongoDBInput_2.sort(orderBy_tMongoDBInput_2);
+						
+				
+
+						
+					com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_2 = fi_tMongoDBInput_2.iterator();
+						
+				while (cursor_tMongoDBInput_2.hasNext()){
+				org.bson.Document o_tMongoDBInput_2 = cursor_tMongoDBInput_2.next();
+				nb_line_tMongoDBInput_2++;
+				Object valueObj_tMongoDBInput_2=null;
+                    valueObj_tMongoDBInput_2=dbObjectInputUtil_tMongoDBInput_2.getValue(pathMap_tMongoDBInput_2.get("id"),"_id",o_tMongoDBInput_2);
+				if(valueObj_tMongoDBInput_2!=null && valueObj_tMongoDBInput_2.toString().length() > 0) {
+					row12.id = valueObj_tMongoDBInput_2.toString();
+				}else{
+					row12.id = null;
+				}
+
+
+ 
+
+
+
+/**
+ * [tMongoDBInput_2 begin ] stop
+ */
+	
+	/**
+	 * [tMongoDBInput_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_2";
+
+	
+
+ 
+
+
+	tos_count_tMongoDBInput_2++;
+
+/**
+ * [tMongoDBInput_2 main ] stop
+ */
+	
+	/**
+	 * [tMongoDBInput_2 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tMongoDBInput_2 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_2";
+
+	
+
+			//row12
+			//row12
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row12"+iterateId,1, 1);
+				} 
+			
+
+		
+
+globalMap.put("COUNTRY_ID", row12.id);
+
+ 
+
+
+	tos_count_tSetGlobalVar_2++;
+
+/**
+ * [tSetGlobalVar_2 main ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_2 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_2 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_2 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_2 process_data_end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tMongoDBInput_2 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tMongoDBInput_2 process_data_end ] stop
+ */
+	
+	/**
+	 * [tMongoDBInput_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_2";
+
+	
+
+		}
+		
+globalMap.put("tMongoDBInput_2_NB_LINE", nb_line_tMongoDBInput_2);
+
+ 
+
+ok_Hash.put("tMongoDBInput_2", true);
+end_Hash.put("tMongoDBInput_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tMongoDBInput_2 end ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_2";
+
+	
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row12"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tSetGlobalVar_2", true);
+end_Hash.put("tSetGlobalVar_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tSetGlobalVar_2 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+				    			if(resumeEntryMethodName == null || globalResumeTicket){
+				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tMongoDBInput_2:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
+								}	    				    			
+					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("OnSubjobOk1", 0, "ok");
+								} 
+							
+							tMongoDBInput_3Process(globalMap); 
+						
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tMongoDBInput_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tMongoDBInput_2 finally ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_2 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tMongoDBInput_2_SUBPROCESS_STATE", 1);
+	}
+	
+
+
+public static class row16Struct implements routines.system.IPersistableRow<row16Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_SAT_CUSTOMER = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[0];
+
+	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_SAT_CUSTOMER.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_SAT_CUSTOMER.length == 0) {
+   					commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_SAT_CUSTOMER = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_SAT_CUSTOMER, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_SAT_CUSTOMER, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_SAT_CUSTOMER) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.id = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.id,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("id="+id);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row16Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+public void tMongoDBInput_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tMongoDBInput_3_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		row16Struct row16 = new row16Struct();
+
+
+
+
+	
+	/**
+	 * [tSetGlobalVar_3 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tSetGlobalVar_3", false);
+		start_Hash.put("tSetGlobalVar_3", System.currentTimeMillis());
+		
+	
+	currentComponent="tSetGlobalVar_3";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row16" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tSetGlobalVar_3 = 0;
+		
+    	class BytesLimit65535_tSetGlobalVar_3{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tSetGlobalVar_3().limitLog4jByte();
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_3 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tMongoDBInput_3 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tMongoDBInput_3", false);
+		start_Hash.put("tMongoDBInput_3", System.currentTimeMillis());
+		
+	
+	currentComponent="tMongoDBInput_3";
+
+	
+		int tos_count_tMongoDBInput_3 = 0;
+		
+    	class BytesLimit65535_tMongoDBInput_3{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tMongoDBInput_3().limitLog4jByte();
+
+	int nb_line_tMongoDBInput_3 = 0;
+	
+		
+		
+			com.mongodb.MongoClient mongo_tMongoDBInput_3=null;
+			com.mongodb.client.MongoDatabase db_tMongoDBInput_3=null;
+		
+
+			
+			
+				
+				
+				mongo_tMongoDBInput_3=(com.mongodb.MongoClient)globalMap.get("mongo_tMongoDBConnection_1");
+				db_tMongoDBInput_3 = (com.mongodb.client.MongoDatabase) globalMap.get("db_tMongoDBConnection_1");
+				
+
+
+				
+				
+					com.mongodb.client.MongoCollection<org.bson.Document> coll_tMongoDBInput_3 = db_tMongoDBInput_3.getCollection("webjobs");
+				
+				
+				
+				try{
+					// Add warning if an index is not in the query.
+					boolean needIndexWarning = true;
+					String indexList = "";
+					
+					for (com.mongodb.DBObject index: coll_tMongoDBInput_3.listIndexes(com.mongodb.DBObject.class)) {
+					
+	                
+	                    for (String key: ((com.mongodb.DBObject)index.get("key")).keySet()) {
+	                        // The regexp is:
+	                        // - contain the db DBcolumnName between two backslashed quotes
+	                        // - is followed at some point by a colon
+	                        // - there is no comma between the the DBcolumnName and the colon
+	                        if  (("{'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
+	                            // We have an index, do not print error message
+	                            needIndexWarning = false;
+	                        } else {
+	                            // This index is not in the query, add it into the indexList
+	                            indexList += ", " + key;
+	                        }
+	                    }
+	                }
+	                if ((!"".equals(indexList)) && (needIndexWarning)) {
+	                    
+	                        System.err.println("tMongoDBInput_3 - The query does not contain any reference an index.  [" + indexList.substring(1) + " ]");
+	                        
+	                }
+	            }catch(com.mongodb.MongoException e){
+	            	// caught an exception after issuing the getIndexInfo()
+	            	// don't fail the whole job
+	            	// maybe due to authorization
+	            }
+
+	                
+	                
+					org.bson.Document myQuery_tMongoDBInput_3 = org.bson.Document.parse("{'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}");
+	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_3 = coll_tMongoDBInput_3.find(myQuery_tMongoDBInput_3).noCursorTimeout(false);
+					
+	                
+		  			
+		  			
+
+		  			 
+	                
+				
+				class DBObjectInputUtil_tMongoDBInput_3{
+					// Get the node value in embedded document, 
+					//If have no embedded document get root document node.
+					
+					public Object getValue(String parentNode,String currentName,org.bson.Document dbObject){
+						Object value=null;
+						if(dbObject==null){
+							return null;
+						}
+						if (parentNode == null || "".equals(parentNode)) {
+						    if ("*".equals(currentName)) {
+						        value = dbObject;
+						    } else if (dbObject.get(currentName)!=null){
+								value=dbObject.get(currentName);
+							}
+						}else{
+							String objNames[] = objNames = parentNode.split("\\.");
+							org.bson.Document currentObj=dbObject;
+							for(int i=0;i<objNames.length;i++){
+								currentObj=(org.bson.Document)currentObj.get(objNames[i]);
+								if(currentObj==null){
+									break;
+								}
+							}
+							if ("*".equals(currentName)) {
+                                value = currentObj;
+                            } else if(currentObj!=null){
+								value=currentObj.get(currentName);
+							}
+						}
+						return value;
+					}
+				}
+				DBObjectInputUtil_tMongoDBInput_3 dbObjectInputUtil_tMongoDBInput_3=new DBObjectInputUtil_tMongoDBInput_3();
+				java.util.Map<String, String> pathMap_tMongoDBInput_3=new java.util.HashMap<String, String>();
+				pathMap_tMongoDBInput_3.put("id","");
+
+						
+					com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_3 = fi_tMongoDBInput_3.iterator();
+						
+				while (cursor_tMongoDBInput_3.hasNext()){
+				org.bson.Document o_tMongoDBInput_3 = cursor_tMongoDBInput_3.next();
+				nb_line_tMongoDBInput_3++;
+				Object valueObj_tMongoDBInput_3=null;
+                    valueObj_tMongoDBInput_3=dbObjectInputUtil_tMongoDBInput_3.getValue(pathMap_tMongoDBInput_3.get("id"),"_id",o_tMongoDBInput_3);
+				if(valueObj_tMongoDBInput_3!=null && valueObj_tMongoDBInput_3.toString().length() > 0) {
+					row16.id = valueObj_tMongoDBInput_3.toString();
+				}else{
+					row16.id = null;
+				}
+
+
+ 
+
+
+
+/**
+ * [tMongoDBInput_3 begin ] stop
+ */
+	
+	/**
+	 * [tMongoDBInput_3 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_3";
+
+	
+
+ 
+
+
+	tos_count_tMongoDBInput_3++;
+
+/**
+ * [tMongoDBInput_3 main ] stop
+ */
+	
+	/**
+	 * [tMongoDBInput_3 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tMongoDBInput_3 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_3 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_3";
+
+	
+
+			//row16
+			//row16
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row16"+iterateId,1, 1);
+				} 
+			
+
+		
+
+globalMap.put("WEBJOB_ID", row16.id);
+
+ 
+
+
+	tos_count_tSetGlobalVar_3++;
+
+/**
+ * [tSetGlobalVar_3 main ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_3 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_3 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_3 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_3 process_data_end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tMongoDBInput_3 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tMongoDBInput_3 process_data_end ] stop
+ */
+	
+	/**
+	 * [tMongoDBInput_3 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_3";
+
+	
+
+		}
+		
+globalMap.put("tMongoDBInput_3_NB_LINE", nb_line_tMongoDBInput_3);
+
+ 
+
+ok_Hash.put("tMongoDBInput_3", true);
+end_Hash.put("tMongoDBInput_3", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tMongoDBInput_3 end ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_3 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_3";
+
+	
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row16"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tSetGlobalVar_3", true);
+end_Hash.put("tSetGlobalVar_3", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tSetGlobalVar_3 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tMongoDBInput_3 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMongoDBInput_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tMongoDBInput_3 finally ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_3 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_3 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tMongoDBInput_3_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -9842,6 +12733,9 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
+				    context.setContextType("WEBJOB_NAME", "id_String");
+				
+                context.WEBJOB_NAME=(String) context.getProperty("WEBJOB_NAME");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -9867,6 +12761,8 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
+            }if (parentContextMap.containsKey("WEBJOB_NAME")) {
+                context.WEBJOB_NAME = (String) parentContextMap.get("WEBJOB_NAME");
             }
         }
 
@@ -10174,6 +13070,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     203964 characters generated by Talend Open Studio for Big Data 
- *     on the October 15, 2018 1:37:33 PM CST
+ *     269890 characters generated by Talend Open Studio for Big Data 
+ *     on the October 16, 2018 8:40:44 PM CST
  ************************************************************************************************/

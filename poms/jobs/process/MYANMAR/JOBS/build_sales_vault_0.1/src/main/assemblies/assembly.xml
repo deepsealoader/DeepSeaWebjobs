@@ -191,7 +191,6 @@
 				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
 				<include>org.talend.libraries:trove</include>
 				<include>org.talend.libraries:commons-lang-2.6</include>
-				<include>org.talend.libraries:talendcsv</include>
 			</includes>
 			<!-- without version for talend libraries -->
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}
@@ -210,9 +209,7 @@
 			<outputDirectory>${talend.job.name}</outputDirectory>
 			<includes>
 				<include>org.example.deepsea.job:dSendException</include>
-				<include>org.example.deepsea.job:LINK_SALES_GEOGRAPHY</include>
 				<include>org.example.deepsea.job:SAT_SALES</include>
-				<include>org.example.deepsea.job:CHECK_SCHEMA</include>
 				<include>org.example.deepsea.job:BUILD_SALES_LINKS</include>
 				<include>org.example.deepsea.job:HUB_SALES</include>
 				<include>org.example.deepsea.job:LINK_SALES</include>

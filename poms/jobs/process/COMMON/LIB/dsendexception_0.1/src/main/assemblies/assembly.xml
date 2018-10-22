@@ -186,11 +186,10 @@
 				<include>org.talend.libraries:log4j-1.2.15</include>
 				<include>org.talend.libraries:jboss-serialization</include>
 				<include>org.talend.libraries:postgresql-8.3-603.jdbc3</include>
-				<include>org.talend.libraries:advancedPersistentLookupLib-1.2</include>
 				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
-				<include>org.talend.libraries:commons-lang-2.6</include>
+				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
 				<include>org.talend.libraries:trove</include>
-				<include>org.talend.libraries:talendcsv</include>
+				<include>org.talend.libraries:advancedPersistentLookupLib-1.2</include>
 			</includes>
 			<!-- without version for talend libraries -->
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}

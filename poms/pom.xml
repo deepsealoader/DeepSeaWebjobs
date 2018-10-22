@@ -35,8 +35,8 @@
     <module>jobs/process/COMMON/LIB/dsendexception_0.1</module>
     <module>jobs/process/MYANMAR/SUBJOBS/build_sales_links_0.1</module>
     <module>jobs/process/MYANMAR/SUBJOBS/link_sales_geography_0.1</module>
-    <module>jobs/process/MYANMAR/SUBJOBS/check_schema_0.1</module>
-    <module>jobs/process/TOOLS/generate_geography_code_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/check_sales_schema_0.1</module>
+    <module>jobs/process/MYANMAR/JOBS/generate_geography_code_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>

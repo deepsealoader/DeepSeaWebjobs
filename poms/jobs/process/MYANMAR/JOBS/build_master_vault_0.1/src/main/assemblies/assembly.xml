@@ -209,8 +209,8 @@
 			<includes>
 				<include>org.example.deepsea.job:BUILD_MASTER_SATS</include>
 				<include>org.example.deepsea.job:SAT_MARKET</include>
-				<include>org.example.deepsea.job:BUILD_MASTER_HUBS</include>
 				<include>org.example.deepsea.job:dSendException</include>
+				<include>org.example.deepsea.job:BUILD_MASTER_HUBS</include>
 				<include>org.example.deepsea.job:SAT_CUSTOMER</include>
 				<include>org.example.deepsea.job:HUB_MASTER</include>
 				<include>org.example.deepsea.job:SAL_MASTER</include>

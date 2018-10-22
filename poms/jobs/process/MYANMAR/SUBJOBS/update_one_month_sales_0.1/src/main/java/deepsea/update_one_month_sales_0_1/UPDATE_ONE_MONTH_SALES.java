@@ -4407,6 +4407,12 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -4512,6 +4518,8 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -4557,6 +4565,10 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -4613,6 +4625,7 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -4680,6 +4693,12 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -4785,6 +4804,8 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -4830,6 +4851,10 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -4886,6 +4911,7 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -4953,6 +4979,12 @@ public static class orgRowStruct implements routines.system.IPersistableRow<orgR
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -5058,6 +5090,8 @@ public static class orgRowStruct implements routines.system.IPersistableRow<orgR
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -5103,6 +5137,10 @@ public static class orgRowStruct implements routines.system.IPersistableRow<orgR
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -5159,6 +5197,7 @@ public static class orgRowStruct implements routines.system.IPersistableRow<orgR
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -5226,6 +5265,12 @@ public static class newRowStruct implements routines.system.IPersistableRow<newR
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -5331,6 +5376,8 @@ public static class newRowStruct implements routines.system.IPersistableRow<newR
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -5376,6 +5423,10 @@ public static class newRowStruct implements routines.system.IPersistableRow<newR
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -5432,6 +5483,7 @@ public static class newRowStruct implements routines.system.IPersistableRow<newR
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -6171,7 +6223,7 @@ String fileName_tFileOutputDelimited_2 = "";
     boolean isFileGenerated_tFileOutputDelimited_2 = true;
     java.io.File filetFileOutputDelimited_2 = new java.io.File(fileName_tFileOutputDelimited_2);
     globalMap.put("tFileOutputDelimited_2_FILE_NAME",fileName_tFileOutputDelimited_2);
-                String[] headColutFileOutputDelimited_2=new String[12];
+                String[] headColutFileOutputDelimited_2=new String[13];
             class CSVBasicSet_tFileOutputDelimited_2{
                 private char field_Delim;
                 private char row_Delim;
@@ -6419,7 +6471,7 @@ String fileName_tFileOutputDelimited_1 = "";
     boolean isFileGenerated_tFileOutputDelimited_1 = true;
     java.io.File filetFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
     globalMap.put("tFileOutputDelimited_1_FILE_NAME",fileName_tFileOutputDelimited_1);
-                String[] headColutFileOutputDelimited_1=new String[12];
+                String[] headColutFileOutputDelimited_1=new String[13];
             class CSVBasicSet_tFileOutputDelimited_1{
                 private char field_Delim;
                 private char row_Delim;
@@ -7220,6 +7272,7 @@ if(!rejectedInnerJoin_tMap_1 ) {
 // # Output table : 'orgRow'
 orgRow_tmp.hash = row9.hash ;
 orgRow_tmp.num = row9.num ;
+orgRow_tmp.geographyCode = null;
 orgRow_tmp.locality = row9.locality ;
 orgRow_tmp.adminArea1 = row9.adminArea1 ;
 orgRow_tmp.customerCode = row9.customerCode ;
@@ -7239,6 +7292,7 @@ orgRow = orgRow_tmp;
 if( rejectedInnerJoin_tMap_1 ) {
 newRow_tmp.hash = row2.hash;
 newRow_tmp.num = row2.num ;
+newRow_tmp.geographyCode = null;
 newRow_tmp.locality = row2.locality ;
 newRow_tmp.adminArea1 = row2.adminArea1 ;
 newRow_tmp.customerCode = row2.customerCode;
@@ -7381,19 +7435,20 @@ if(orgRow != null) {
 		
 
 
-                        String[] rowtFileOutputDelimited_2=new String[12];
+                        String[] rowtFileOutputDelimited_2=new String[13];
                             rowtFileOutputDelimited_2[0]=row11.hash == null ? null : row11.hash;
                             rowtFileOutputDelimited_2[1]=String.valueOf(row11.num);
-                            rowtFileOutputDelimited_2[2]=row11.locality == null ? null : row11.locality;
-                            rowtFileOutputDelimited_2[3]=row11.adminArea1 == null ? null : row11.adminArea1;
-                            rowtFileOutputDelimited_2[4]=row11.customerCode == null ? null : row11.customerCode;
-                            rowtFileOutputDelimited_2[5]=row11.customerName == null ? null : row11.customerName;
-                            rowtFileOutputDelimited_2[6]=row11.customerType == null ? null : row11.customerType;
-                            rowtFileOutputDelimited_2[7]=row11.productCode == null ? null : row11.productCode;
-                            rowtFileOutputDelimited_2[8]=row11.productName == null ? null : row11.productName;
-                            rowtFileOutputDelimited_2[9]=row11.amount == null ? null : row11.amount;
-                            rowtFileOutputDelimited_2[10]=row11.quantity == null ? null : row11.quantity;
-                            rowtFileOutputDelimited_2[11]=row11.date == null ? null : row11.date;
+                            rowtFileOutputDelimited_2[2]=row11.geographyCode == null ? null : row11.geographyCode;
+                            rowtFileOutputDelimited_2[3]=row11.locality == null ? null : row11.locality;
+                            rowtFileOutputDelimited_2[4]=row11.adminArea1 == null ? null : row11.adminArea1;
+                            rowtFileOutputDelimited_2[5]=row11.customerCode == null ? null : row11.customerCode;
+                            rowtFileOutputDelimited_2[6]=row11.customerName == null ? null : row11.customerName;
+                            rowtFileOutputDelimited_2[7]=row11.customerType == null ? null : row11.customerType;
+                            rowtFileOutputDelimited_2[8]=row11.productCode == null ? null : row11.productCode;
+                            rowtFileOutputDelimited_2[9]=row11.productName == null ? null : row11.productName;
+                            rowtFileOutputDelimited_2[10]=row11.amount == null ? null : row11.amount;
+                            rowtFileOutputDelimited_2[11]=row11.quantity == null ? null : row11.quantity;
+                            rowtFileOutputDelimited_2[12]=row11.date == null ? null : row11.date;
                 nb_line_tFileOutputDelimited_2++;
                 resourceMap.put("nb_line_tFileOutputDelimited_2", nb_line_tFileOutputDelimited_2);
                                        CsvWritertFileOutputDelimited_2.writeNext(rowtFileOutputDelimited_2);
@@ -7565,19 +7620,20 @@ if(newRow != null) {
 		
 
 
-                        String[] rowtFileOutputDelimited_1=new String[12];
+                        String[] rowtFileOutputDelimited_1=new String[13];
                             rowtFileOutputDelimited_1[0]=row12.hash == null ? null : row12.hash;
                             rowtFileOutputDelimited_1[1]=String.valueOf(row12.num);
-                            rowtFileOutputDelimited_1[2]=row12.locality == null ? null : row12.locality;
-                            rowtFileOutputDelimited_1[3]=row12.adminArea1 == null ? null : row12.adminArea1;
-                            rowtFileOutputDelimited_1[4]=row12.customerCode == null ? null : row12.customerCode;
-                            rowtFileOutputDelimited_1[5]=row12.customerName == null ? null : row12.customerName;
-                            rowtFileOutputDelimited_1[6]=row12.customerType == null ? null : row12.customerType;
-                            rowtFileOutputDelimited_1[7]=row12.productCode == null ? null : row12.productCode;
-                            rowtFileOutputDelimited_1[8]=row12.productName == null ? null : row12.productName;
-                            rowtFileOutputDelimited_1[9]=row12.amount == null ? null : row12.amount;
-                            rowtFileOutputDelimited_1[10]=row12.quantity == null ? null : row12.quantity;
-                            rowtFileOutputDelimited_1[11]=row12.date == null ? null : row12.date;
+                            rowtFileOutputDelimited_1[2]=row12.geographyCode == null ? null : row12.geographyCode;
+                            rowtFileOutputDelimited_1[3]=row12.locality == null ? null : row12.locality;
+                            rowtFileOutputDelimited_1[4]=row12.adminArea1 == null ? null : row12.adminArea1;
+                            rowtFileOutputDelimited_1[5]=row12.customerCode == null ? null : row12.customerCode;
+                            rowtFileOutputDelimited_1[6]=row12.customerName == null ? null : row12.customerName;
+                            rowtFileOutputDelimited_1[7]=row12.customerType == null ? null : row12.customerType;
+                            rowtFileOutputDelimited_1[8]=row12.productCode == null ? null : row12.productCode;
+                            rowtFileOutputDelimited_1[9]=row12.productName == null ? null : row12.productName;
+                            rowtFileOutputDelimited_1[10]=row12.amount == null ? null : row12.amount;
+                            rowtFileOutputDelimited_1[11]=row12.quantity == null ? null : row12.quantity;
+                            rowtFileOutputDelimited_1[12]=row12.date == null ? null : row12.date;
                 nb_line_tFileOutputDelimited_1++;
                 resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
                                        CsvWritertFileOutputDelimited_1.writeNext(rowtFileOutputDelimited_1);
@@ -8282,6 +8338,12 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -8387,6 +8449,8 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -8432,6 +8496,10 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -8488,6 +8556,7 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -8555,6 +8624,12 @@ public static class totalRowStruct implements routines.system.IPersistableRow<to
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -8660,6 +8735,8 @@ public static class totalRowStruct implements routines.system.IPersistableRow<to
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -8705,6 +8782,10 @@ public static class totalRowStruct implements routines.system.IPersistableRow<to
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -8761,6 +8842,7 @@ public static class totalRowStruct implements routines.system.IPersistableRow<to
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -8828,6 +8910,12 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -8933,6 +9021,8 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -8978,6 +9068,10 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -9034,6 +9128,7 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -9101,6 +9196,12 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -9206,6 +9307,8 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 			        this.num = dis.readLong();
 					
+					this.geographyCode = readString(dis);
+					
 					this.locality = readString(dis);
 					
 					this.adminArea1 = readString(dis);
@@ -9251,6 +9354,10 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					// long
 				
 		            	dos.writeLong(this.num);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -9307,6 +9414,7 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -9447,6 +9555,8 @@ totalRowStruct row13 = totalRow;
 		xlsxTool_tFileOutputExcel_3.addCellValue("hash");
 		
 		xlsxTool_tFileOutputExcel_3.addCellValue("num");
+		
+		xlsxTool_tFileOutputExcel_3.addCellValue("geographyCode");
 		
 		xlsxTool_tFileOutputExcel_3.addCellValue("locality");
 		
@@ -9772,6 +9882,8 @@ int nb_line_tUnite_1 = 0;
 					
 							row7.num = 0;
 					
+							row7.geographyCode = null;
+					
 							row7.locality = null;
 					
 							row7.adminArea1 = null;
@@ -9862,6 +9974,28 @@ int nb_line_tUnite_1 = 0;
 						
 						
 							
+									row7.geographyCode = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									
+							
+						
+						}else{
+						
+							
+								row7.geographyCode = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_1 = 3;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length){
+						
+						
+							
 									row7.locality = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 									
 							
@@ -9876,7 +10010,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 3;
+						columnIndexWithD_tFileInputDelimited_1 = 4;
 						
 						
 						
@@ -9898,7 +10032,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 4;
+						columnIndexWithD_tFileInputDelimited_1 = 5;
 						
 						
 						
@@ -9920,7 +10054,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 5;
+						columnIndexWithD_tFileInputDelimited_1 = 6;
 						
 						
 						
@@ -9942,7 +10076,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 6;
+						columnIndexWithD_tFileInputDelimited_1 = 7;
 						
 						
 						
@@ -9964,7 +10098,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 7;
+						columnIndexWithD_tFileInputDelimited_1 = 8;
 						
 						
 						
@@ -9986,7 +10120,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 8;
+						columnIndexWithD_tFileInputDelimited_1 = 9;
 						
 						
 						
@@ -10008,7 +10142,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 9;
+						columnIndexWithD_tFileInputDelimited_1 = 10;
 						
 						
 						
@@ -10030,7 +10164,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 10;
+						columnIndexWithD_tFileInputDelimited_1 = 11;
 						
 						
 						
@@ -10052,7 +10186,7 @@ int nb_line_tUnite_1 = 0;
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_1 = 11;
+						columnIndexWithD_tFileInputDelimited_1 = 12;
 						
 						
 						
@@ -10185,6 +10319,7 @@ if(row7 != null) {
 								
 			totalRow.hash = row7.hash;								
 			totalRow.num = row7.num;								
+			totalRow.geographyCode = row7.geographyCode;								
 			totalRow.locality = row7.locality;								
 			totalRow.adminArea1 = row7.adminArea1;								
 			totalRow.customerCode = row7.customerCode;								
@@ -10320,6 +10455,14 @@ if(row7 != null) {
 					
 									
 							xlsxTool_tFileOutputExcel_3.addCellValue(Double.parseDouble(String.valueOf(row13.num)));
+									   				
+	    				if(row13.geographyCode != null) {
+    				
+							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.geographyCode));
+	    				} else {
+	    					xlsxTool_tFileOutputExcel_3.addCellNullValue();
+	    				}
+					
 									   				
 	    				if(row13.locality != null) {
     				
@@ -10753,6 +10896,8 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 					
 							row8.num = 0;
 					
+							row8.geographyCode = null;
+					
 							row8.locality = null;
 					
 							row8.adminArea1 = null;
@@ -10843,6 +10988,28 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 							
+									row8.geographyCode = rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2];
+									
+							
+						
+						}else{
+						
+							
+								row8.geographyCode = null;
+							
+						
+						}
+						
+						
+					
+						columnIndexWithD_tFileInputDelimited_2 = 3;
+						
+						
+						
+						if(columnIndexWithD_tFileInputDelimited_2 < rowtFileInputDelimited_2.length){
+						
+						
+							
 									row8.locality = rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2];
 									
 							
@@ -10857,7 +11024,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 3;
+						columnIndexWithD_tFileInputDelimited_2 = 4;
 						
 						
 						
@@ -10879,7 +11046,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 4;
+						columnIndexWithD_tFileInputDelimited_2 = 5;
 						
 						
 						
@@ -10901,7 +11068,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 5;
+						columnIndexWithD_tFileInputDelimited_2 = 6;
 						
 						
 						
@@ -10923,7 +11090,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 6;
+						columnIndexWithD_tFileInputDelimited_2 = 7;
 						
 						
 						
@@ -10945,7 +11112,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 7;
+						columnIndexWithD_tFileInputDelimited_2 = 8;
 						
 						
 						
@@ -10967,7 +11134,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 8;
+						columnIndexWithD_tFileInputDelimited_2 = 9;
 						
 						
 						
@@ -10989,7 +11156,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 9;
+						columnIndexWithD_tFileInputDelimited_2 = 10;
 						
 						
 						
@@ -11011,7 +11178,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 10;
+						columnIndexWithD_tFileInputDelimited_2 = 11;
 						
 						
 						
@@ -11033,7 +11200,7 @@ end_Hash.put("tFileInputDelimited_1", System.currentTimeMillis());
 						
 						
 					
-						columnIndexWithD_tFileInputDelimited_2 = 11;
+						columnIndexWithD_tFileInputDelimited_2 = 12;
 						
 						
 						
@@ -11166,6 +11333,7 @@ if(row8 != null) {
 								
 			totalRow.hash = row8.hash;								
 			totalRow.num = row8.num;								
+			totalRow.geographyCode = row8.geographyCode;								
 			totalRow.locality = row8.locality;								
 			totalRow.adminArea1 = row8.adminArea1;								
 			totalRow.customerCode = row8.customerCode;								
@@ -11301,6 +11469,14 @@ if(row8 != null) {
 					
 									
 							xlsxTool_tFileOutputExcel_3.addCellValue(Double.parseDouble(String.valueOf(row13.num)));
+									   				
+	    				if(row13.geographyCode != null) {
+    				
+							xlsxTool_tFileOutputExcel_3.addCellValue(String.valueOf(row13.geographyCode));
+	    				} else {
+	    					xlsxTool_tFileOutputExcel_3.addCellNullValue();
+	    				}
+					
 									   				
 	    				if(row13.locality != null) {
     				
@@ -11676,6 +11852,10 @@ end_Hash.put("tFlowMeter_18", System.currentTimeMillis());
 						
 					xlsxTool_tFileOutputExcel_3.setColAutoSize(columnIndex_tFileOutputExcel_3);
 	
+							columnIndex_tFileOutputExcel_3 = 12;
+						
+					xlsxTool_tFileOutputExcel_3.setColAutoSize(columnIndex_tFileOutputExcel_3);
+	
 	
 	
 	
@@ -11885,6 +12065,12 @@ public static class row9Struct implements routines.system.IPersistableComparable
 					return this.num;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String locality;
 
 				public String getLocality () {
@@ -11989,6 +12175,7 @@ public static class row9Struct implements routines.system.IPersistableComparable
 
 		other.hash = this.hash;
 	            other.num = this.num;
+	            other.geographyCode = this.geographyCode;
 	            other.locality = this.locality;
 	            other.adminArea1 = this.adminArea1;
 	            other.customerCode = this.customerCode;
@@ -12121,6 +12308,8 @@ public static class row9Struct implements routines.system.IPersistableComparable
 
 			int length = 0;
 		
+						this.geographyCode = readString(dis,ois);
+					
 						this.locality = readString(dis,ois);
 					
 						this.adminArea1 = readString(dis,ois);
@@ -12159,6 +12348,8 @@ public static class row9Struct implements routines.system.IPersistableComparable
         try {
 
 		
+						writeString(this.geographyCode, dos, oos);
+					
 						writeString(this.locality, dos, oos);
 					
 						writeString(this.adminArea1, dos, oos);
@@ -12193,6 +12384,7 @@ public static class row9Struct implements routines.system.IPersistableComparable
 		sb.append("[");
 		sb.append("hash="+hash);
 		sb.append(",num="+String.valueOf(num));
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
 		sb.append(",customerCode="+customerCode);
@@ -13278,6 +13470,8 @@ if(row9 != null) {
 				row9_HashRow.hash = row9.hash;
 				
 				row9_HashRow.num = row9.num;
+				
+				row9_HashRow.geographyCode = row9.geographyCode;
 				
 				row9_HashRow.locality = row9.locality;
 				
@@ -15165,6 +15359,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     328079 characters generated by Talend Open Studio for Big Data 
- *     on the October 15, 2018 1:38:08 PM CST
+ *     332733 characters generated by Talend Open Studio for Big Data 
+ *     on the October 16, 2018 8:44:57 PM CST
  ************************************************************************************************/

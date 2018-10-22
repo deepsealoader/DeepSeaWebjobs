@@ -16,7 +16,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0ac_DEeib9oVpaXTd6w" name="admin_area1" id="29580" label="adminArea1" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_mAt0as_DEeib9oVpaXTd6w"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0a8_DEeib9oVpaXTd6w" name="customer_code" id="29581" label="customerCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0a8_DEeib9oVpaXTd6w" name="customer_code" id="29581" label="customerCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_mAt0bM_DEeib9oVpaXTd6w"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0bc_DEeib9oVpaXTd6w" name="customer_name" id="29582" label="customerName" length="-1" precision="-1" sourceType="" talendType="id_String">

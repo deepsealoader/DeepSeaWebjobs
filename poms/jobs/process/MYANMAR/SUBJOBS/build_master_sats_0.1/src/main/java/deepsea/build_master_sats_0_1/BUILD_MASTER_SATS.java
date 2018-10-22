@@ -152,6 +152,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(WEBJOB_NAME != null){
+				
+					this.setProperty("WEBJOB_NAME", WEBJOB_NAME.toString());
+				
+			}
+			
 		}
 
 public String COUNTRY;
@@ -173,6 +179,10 @@ public String getMONGODB_HOSTNAME(){
 public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
 	return this.POSTGRES_HOSTNAME;
+}
+public String WEBJOB_NAME;
+public String getWEBJOB_NAME(){
+	return this.WEBJOB_NAME;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -534,6 +544,9 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_1.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_1 = context.propertyNames();
 		while (propertyNames_tRunJob_1.hasMoreElements()) {
@@ -838,6 +851,9 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_3.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_3.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_3.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_3.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_3 = context.propertyNames();
 		while (propertyNames_tRunJob_3.hasMoreElements()) {
@@ -1142,6 +1158,9 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_2.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_2.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_2 = context.propertyNames();
 		while (propertyNames_tRunJob_2.hasMoreElements()) {
@@ -1446,6 +1465,9 @@ public void tRunJob_7Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_7.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_7.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_7.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_7.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_7 = context.propertyNames();
 		while (propertyNames_tRunJob_7.hasMoreElements()) {
@@ -1462,6 +1484,15 @@ public void tRunJob_7Process(final java.util.Map<String, Object> globalMap) thro
 
 	Object obj_tRunJob_7 = null;
 
+	
+		obj_tRunJob_7 = context.getWEBJOB_NAME();
+		if(obj_tRunJob_7!=null) {
+			paraList_tRunJob_7.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_7));
+		} else {
+			paraList_tRunJob_7.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_7.put("WEBJOB_NAME", obj_tRunJob_7);
 	
 	
 		deepsea.sat_customer_0_1.SAT_CUSTOMER childJob_tRunJob_7 = new deepsea.sat_customer_0_1.SAT_CUSTOMER();
@@ -1750,6 +1781,9 @@ public void tRunJob_4Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_4.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_4.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_4.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_4.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_4 = context.propertyNames();
 		while (propertyNames_tRunJob_4.hasMoreElements()) {
@@ -2054,6 +2088,9 @@ public void tRunJob_5Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_5.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_5.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_5.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_5.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_5 = context.propertyNames();
 		while (propertyNames_tRunJob_5.hasMoreElements()) {
@@ -2357,6 +2394,9 @@ public void tRunJob_6Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_6.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_6.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_6.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_6.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_6 = context.propertyNames();
 		while (propertyNames_tRunJob_6.hasMoreElements()) {
@@ -2703,6 +2743,9 @@ end_Hash.put("tRunJob_6", System.currentTimeMillis());
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
+				    context.setContextType("WEBJOB_NAME", "id_String");
+				
+                context.WEBJOB_NAME=(String) context.getProperty("WEBJOB_NAME");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -2720,6 +2763,8 @@ end_Hash.put("tRunJob_6", System.currentTimeMillis());
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
+            }if (parentContextMap.containsKey("WEBJOB_NAME")) {
+                context.WEBJOB_NAME = (String) parentContextMap.get("WEBJOB_NAME");
             }
         }
 
@@ -2997,6 +3042,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     80955 characters generated by Talend Open Studio for Big Data 
- *     on the October 15, 2018 1:37:33 PM CST
+ *     82924 characters generated by Talend Open Studio for Big Data 
+ *     on the October 16, 2018 8:40:44 PM CST
  ************************************************************************************************/
