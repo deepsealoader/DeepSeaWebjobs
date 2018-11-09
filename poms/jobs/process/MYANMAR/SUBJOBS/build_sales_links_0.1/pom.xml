@@ -57,6 +57,11 @@
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
+      <artifactId>GENERATE_CUSTOMER_DIFF</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.deepsea.job</groupId>
       <artifactId>LINK_SALES</artifactId>
       <version>0.1.0</version>
     </dependency>

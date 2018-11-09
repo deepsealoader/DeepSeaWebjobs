@@ -164,24 +164,6 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(COUNTRY != null){
-				
-					this.setProperty("COUNTRY", COUNTRY.toString());
-				
-			}
-			
-			if(DEEPSEA_AUTH_TOKEN != null){
-				
-					this.setProperty("DEEPSEA_AUTH_TOKEN", DEEPSEA_AUTH_TOKEN.toString());
-				
-			}
-			
-			if(DEEPSEA_HOSTNAME != null){
-				
-					this.setProperty("DEEPSEA_HOSTNAME", DEEPSEA_HOSTNAME.toString());
-				
-			}
-			
 			if(MONGODB_HOSTNAME != null){
 				
 					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
@@ -194,9 +176,33 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(DEEPSEA_HOSTNAME != null){
+				
+					this.setProperty("DEEPSEA_HOSTNAME", DEEPSEA_HOSTNAME.toString());
+				
+			}
+			
+			if(DEEPSEA_AUTH_TOKEN != null){
+				
+					this.setProperty("DEEPSEA_AUTH_TOKEN", DEEPSEA_AUTH_TOKEN.toString());
+				
+			}
+			
+			if(COUNTRY != null){
+				
+					this.setProperty("COUNTRY", COUNTRY.toString());
+				
+			}
+			
 			if(EXCEPTION_IF_NO_LINK != null){
 				
 					this.setProperty("EXCEPTION_IF_NO_LINK", EXCEPTION_IF_NO_LINK.toString());
+				
+			}
+			
+			if(FORCE_UPDATE != null){
+				
+					this.setProperty("FORCE_UPDATE", FORCE_UPDATE.toString());
 				
 			}
 			
@@ -230,18 +236,6 @@ public String SOURCE2;
 public String getSOURCE2(){
 	return this.SOURCE2;
 }
-public String COUNTRY;
-public String getCOUNTRY(){
-	return this.COUNTRY;
-}
-public String DEEPSEA_AUTH_TOKEN;
-public String getDEEPSEA_AUTH_TOKEN(){
-	return this.DEEPSEA_AUTH_TOKEN;
-}
-public String DEEPSEA_HOSTNAME;
-public String getDEEPSEA_HOSTNAME(){
-	return this.DEEPSEA_HOSTNAME;
-}
 public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
 	return this.MONGODB_HOSTNAME;
@@ -250,9 +244,25 @@ public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
 	return this.POSTGRES_HOSTNAME;
 }
+public String DEEPSEA_HOSTNAME;
+public String getDEEPSEA_HOSTNAME(){
+	return this.DEEPSEA_HOSTNAME;
+}
+public String DEEPSEA_AUTH_TOKEN;
+public String getDEEPSEA_AUTH_TOKEN(){
+	return this.DEEPSEA_AUTH_TOKEN;
+}
+public String COUNTRY;
+public String getCOUNTRY(){
+	return this.COUNTRY;
+}
 public Boolean EXCEPTION_IF_NO_LINK;
 public Boolean getEXCEPTION_IF_NO_LINK(){
 	return this.EXCEPTION_IF_NO_LINK;
+}
+public Boolean FORCE_UPDATE;
+public Boolean getFORCE_UPDATE(){
+	return this.FORCE_UPDATE;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -4137,7 +4147,7 @@ if(exception1 != null) {
 	      			
 	        			paraList_tRunJob_1.add("--father_node=tRunJob_1");
 	      			
-	        			paraList_tRunJob_1.add("--context=Development");
+	        			paraList_tRunJob_1.add("--context=Production");
 	      			
 	//for feature:10589
 	
@@ -4181,23 +4191,26 @@ if(exception1 != null) {
 			parentContextMap_tRunJob_1.put("SOURCE2", context.SOURCE2);
 			paraList_tRunJob_1.add("--context_type " + "SOURCE2" + "=" + "id_String");
 		
-			parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
-			paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
-			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
-			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
-		
 			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
+			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
+			paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_1.put("EXCEPTION_IF_NO_LINK", context.EXCEPTION_IF_NO_LINK);
 			paraList_tRunJob_1.add("--context_type " + "EXCEPTION_IF_NO_LINK" + "=" + "id_Boolean");
+		
+			parentContextMap_tRunJob_1.put("FORCE_UPDATE", context.FORCE_UPDATE);
+			paraList_tRunJob_1.add("--context_type " + "FORCE_UPDATE" + "=" + "id_Boolean");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_1 = context.propertyNames();
 		while (propertyNames_tRunJob_1.hasMoreElements()) {
@@ -5714,7 +5727,7 @@ public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) thr
 		    
 			java.sql.Statement stmt_tDBInput_2 = conn_tDBInput_2.createStatement();
 
-		    String dbquery_tDBInput_2 = "SELECT DISTINCT\n	hash\nfrom\n	" + globalMap.get("HUB_TABLE2") + " as a inner join " + globalMap.get("LINK_TABLES") + " as b on a.id = b.hub_id2\nWHERE\n	a.source = '" + context.getSOURCE2() + "'";
+		    String dbquery_tDBInput_2 = "SELECT DISTINCT\n	hash\nfrom\n	" + globalMap.get("HUB_TABLE2") + " as a inner join " + globalMap.get("LINK_TABLES") + " as b on a.id = b.hub_id2\nWHERE\n	a.source = '" + context.getSOURCE2() + "' AND FALSE=" + context.getFORCE_UPDATE();
 			
 
             	globalMap.put("tDBInput_2_QUERY",dbquery_tDBInput_2);
@@ -12014,7 +12027,7 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Development";
+    public String contextStr = "Production";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -12172,27 +12185,34 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("SOURCE2", "id_String");
 				
                 context.SOURCE2=(String) context.getProperty("SOURCE2");
-				    context.setContextType("COUNTRY", "id_String");
-				
-                context.COUNTRY=(String) context.getProperty("COUNTRY");
-				    context.setContextType("DEEPSEA_AUTH_TOKEN", "id_String");
-				
-                context.DEEPSEA_AUTH_TOKEN=(String) context.getProperty("DEEPSEA_AUTH_TOKEN");
-				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
-				
-                context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
+				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
+				
+                context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
+				    context.setContextType("DEEPSEA_AUTH_TOKEN", "id_String");
+				
+                context.DEEPSEA_AUTH_TOKEN=(String) context.getProperty("DEEPSEA_AUTH_TOKEN");
+				    context.setContextType("COUNTRY", "id_String");
+				
+                context.COUNTRY=(String) context.getProperty("COUNTRY");
 				    context.setContextType("EXCEPTION_IF_NO_LINK", "id_Boolean");
 				
              try{
                  context.EXCEPTION_IF_NO_LINK=routines.system.ParserUtils.parseTo_Boolean (context.getProperty("EXCEPTION_IF_NO_LINK"));
              }catch(NumberFormatException e){
                  context.EXCEPTION_IF_NO_LINK=null;
+              }
+				    context.setContextType("FORCE_UPDATE", "id_Boolean");
+				
+             try{
+                 context.FORCE_UPDATE=routines.system.ParserUtils.parseTo_Boolean (context.getProperty("FORCE_UPDATE"));
+             }catch(NumberFormatException e){
+                 context.FORCE_UPDATE=null;
               }
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
@@ -12215,18 +12235,20 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.TABLE2 = (String) parentContextMap.get("TABLE2");
             }if (parentContextMap.containsKey("SOURCE2")) {
                 context.SOURCE2 = (String) parentContextMap.get("SOURCE2");
-            }if (parentContextMap.containsKey("COUNTRY")) {
-                context.COUNTRY = (String) parentContextMap.get("COUNTRY");
-            }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
-                context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
-            }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
-                context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
+            }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
+                context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
+            }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
+                context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
+            }if (parentContextMap.containsKey("COUNTRY")) {
+                context.COUNTRY = (String) parentContextMap.get("COUNTRY");
             }if (parentContextMap.containsKey("EXCEPTION_IF_NO_LINK")) {
                 context.EXCEPTION_IF_NO_LINK = (Boolean) parentContextMap.get("EXCEPTION_IF_NO_LINK");
+            }if (parentContextMap.containsKey("FORCE_UPDATE")) {
+                context.FORCE_UPDATE = (Boolean) parentContextMap.get("FORCE_UPDATE");
             }
         }
 
@@ -12534,6 +12556,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     252576 characters generated by Talend Open Studio for Big Data 
- *     on the October 16, 2018 8:44:45 PM CST
+ *     265858 characters generated by Talend Open Studio for Big Data 
+ *     on the 9 November, 2018 8:20:30 AM CST
  ************************************************************************************************/

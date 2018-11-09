@@ -24,18 +24,18 @@
 [INFO] Tests are skipped.
 [INFO] 
 [INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ CHECK_SALES_SCHEMA ---
-[INFO] Building jar: /home/romuald/Projects/Talend/TOS_BD/workspace/DEEPSEA/poms/jobs/process/MYANMAR/JOBS/check_sales_schema_0.1/target/check_sales_schema_0_1.jar
+[INFO] Building jar: C:\Users\RRU_CN1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\MYANMAR\JOBS\check_sales_schema_0.1\target\check_sales_schema_0_1.jar
 [INFO] 
 [INFO] --- maven-assembly-plugin:3.0.0:single (default) @ CHECK_SALES_SCHEMA ---
-[INFO] Reading assembly descriptor: /home/romuald/Projects/Talend/TOS_BD/workspace/DEEPSEA/poms/jobs/process/MYANMAR/JOBS/check_sales_schema_0.1/src/main/assemblies/assembly.xml
+[INFO] Reading assembly descriptor: C:\Users\RRU_CN1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\MYANMAR\JOBS\check_sales_schema_0.1/src/main/assemblies/assembly.xml
 [WARNING] The following patterns were never triggered in this artifact inclusion filter:
 o  'null:null'
 
-[INFO] Building zip: /home/romuald/Projects/Talend/TOS_BD/workspace/DEEPSEA/poms/jobs/process/MYANMAR/JOBS/check_sales_schema_0.1/target/check_sales_schema_0_1.zip
+[INFO] Building zip: C:\Users\RRU_CN1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\MYANMAR\JOBS\check_sales_schema_0.1\target\check_sales_schema_0_1.zip
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 1.085 s
-[INFO] Finished at: 2018-10-16T20:44:35+08:00
-[INFO] Final Memory: 11M/228M
+[INFO] Total time: 12.105 s
+[INFO] Finished at: 2018-11-07T10:41:26+08:00
+[INFO] Final Memory: 10M/157M
 [INFO] ------------------------------------------------------------------------
