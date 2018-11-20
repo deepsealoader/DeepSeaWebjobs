@@ -40,6 +40,23 @@
     <module>jobs/process/MYANMAR/JOBS/update_sales_vault_links_0.1</module>
     <module>jobs/process/MYANMAR/SUBJOBS/generate_customer_diff_0.1</module>
     <module>jobs/process/MYANMAR/SUBJOBS/generate_geography_code_0.1</module>
+    <module>jobs/process/VIETNAM/test2_0.1</module>
+    <module>jobs/process/VIETNAM/EXERCICES/build_raw_data_from_file_0.1</module>
+    <module>jobs/process/VIETNAM/EXERCICES/diff_raw_local_data_0.1</module>
+    <module>jobs/process/VIETNAM/EXERCICES/missing_invoice_days_0.1</module>
+    <module>jobs/process/VIETNAM/EXERCICES/stms_qc_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_stms_customer_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_stms_customer_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_stms_product_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_stms_product_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/build_all_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_stms_sales_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_stms_sales_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/LINKS/link_stms_product_sales_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/LINKS/link_stms_customer_sales_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_zuellig_sales_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/LINKS/link_zuellig_product_sales_0.1</module>
+    <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_zuellig_sales_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>
