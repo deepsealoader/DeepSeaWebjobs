@@ -15,6 +15,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp6cCFEeikjKnyntMfTA" name="organization_code" id="7540" label="organizationCode" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
         <initialValue xmi:id="_DKjp6sCFEeikjKnyntMfTA"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cny2IPVzEei2cPDh7zbmJg" name="geography_code" label="geographyCode" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_DKjp68CFEeikjKnyntMfTA" name="name_en" id="7541" label="nameEn" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
         <initialValue xmi:id="_DKjp7MCFEeikjKnyntMfTA"/>
       </feature>

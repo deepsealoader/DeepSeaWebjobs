@@ -671,6 +671,12 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					return this.organizationCode;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String nameEn;
 
 				public String getNameEn () {
@@ -789,6 +795,8 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					this.organizationCode = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.nameEn = readString(dis);
 					
 					this.nameLo = readString(dis);
@@ -841,6 +849,10 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					// String
 				
+						writeString(this.geographyCode,dos);
+					
+					// String
+				
 						writeString(this.nameEn,dos);
 					
 					// String
@@ -888,6 +900,7 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 		sb.append(",source="+source);
 		sb.append(",code="+code);
 		sb.append(",organizationCode="+organizationCode);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",nameEn="+nameEn);
 		sb.append(",nameLo="+nameLo);
 		sb.append(",visa="+visa);
@@ -965,6 +978,12 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					return this.organizationCode;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String nameEn;
 
 				public String getNameEn () {
@@ -1083,6 +1102,8 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					
 					this.organizationCode = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.nameEn = readString(dis);
 					
 					this.nameLo = readString(dis);
@@ -1135,6 +1156,10 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					
 					// String
 				
+						writeString(this.geographyCode,dos);
+					
+					// String
+				
 						writeString(this.nameEn,dos);
 					
 					// String
@@ -1182,6 +1207,7 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 		sb.append(",source="+source);
 		sb.append(",code="+code);
 		sb.append(",organizationCode="+organizationCode);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",nameEn="+nameEn);
 		sb.append(",nameLo="+nameLo);
 		sb.append(",visa="+visa);
@@ -1259,6 +1285,12 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.organizationCode;
 				}
 				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
 			    public String nameEn;
 
 				public String getNameEn () {
@@ -1377,6 +1409,8 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 					this.organizationCode = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.nameEn = readString(dis);
 					
 					this.nameLo = readString(dis);
@@ -1429,6 +1463,10 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 					// String
 				
+						writeString(this.geographyCode,dos);
+					
+					// String
+				
 						writeString(this.nameEn,dos);
 					
 					// String
@@ -1476,6 +1514,7 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		sb.append(",source="+source);
 		sb.append(",code="+code);
 		sb.append(",organizationCode="+organizationCode);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",nameEn="+nameEn);
 		sb.append(",nameLo="+nameLo);
 		sb.append(",visa="+visa);
@@ -1539,6 +1578,12 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 
 				public String getOrganizationCode () {
 					return this.organizationCode;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
 				}
 				
 			    public String nameEn;
@@ -1655,6 +1700,8 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 					this.organizationCode = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.nameEn = readString(dis);
 					
 					this.nameLo = readString(dis);
@@ -1696,6 +1743,10 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					// String
 				
 						writeString(this.organizationCode,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -1744,6 +1795,7 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append("[");
 		sb.append("servierCode="+servierCode);
 		sb.append(",organizationCode="+organizationCode);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",nameEn="+nameEn);
 		sb.append(",nameLo="+nameLo);
 		sb.append(",visa="+visa);
@@ -1807,6 +1859,12 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 
 				public String getOrganizationCode () {
 					return this.organizationCode;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
 				}
 				
 			    public String nameEn;
@@ -1902,6 +1960,8 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					this.organizationCode = readString(dis);
 					
+					this.geographyCode = readString(dis);
+					
 					this.nameEn = readString(dis);
 					
 					this.nameLo = readString(dis);
@@ -1943,6 +2003,10 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					// String
 				
 						writeString(this.organizationCode,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
 					
 					// String
 				
@@ -1991,6 +2055,7 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		sb.append("[");
 		sb.append("servierCode="+servierCode);
 		sb.append(",organizationCode="+organizationCode);
+		sb.append(",geographyCode="+geographyCode);
 		sb.append(",nameEn="+nameEn);
 		sb.append(",nameLo="+nameLo);
 		sb.append(",visa="+visa);
@@ -2655,7 +2720,7 @@ String dbUser_tDBOutput_1 = null;
    int batchSizeCounter_tDBOutput_1=0;
 
 int count_tDBOutput_1=0;
-	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"code\",\"organization_code\",\"name_en\",\"name_lo\",\"visa\",\"email\",\"arrival_date\",\"departure_date\",\"job_title_en\",\"job_title_lo\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"code\",\"organization_code\",\"geography_code\",\"name_en\",\"name_lo\",\"visa\",\"email\",\"arrival_date\",\"departure_date\",\"job_title_en\",\"job_title_lo\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	    
 	    java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
 	    
@@ -3601,6 +3666,7 @@ if(out1 != null) {
     List<org.bson.Document> doc_tExtractFields_1 = (List<org.bson.Document>) row7.fields;
     row3.servierCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "servierCode");
     row3.organizationCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "organizationCode");
+    row3.geographyCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "geographyCode");
     row3.nameEn = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "nameEn");
     row3.nameLo = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "nameLo");
     row3.visa = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "visa");
@@ -3686,6 +3752,15 @@ if(row3 != null) {
                 row3.organizationCode = null;
               }
               row2.organizationCode=TypeConvert.String2String(row3.organizationCode);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.geographyCode)){  
+                row3.geographyCode = null;
+              }
+              row2.geographyCode=TypeConvert.String2String(row3.geographyCode);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -3954,6 +4029,7 @@ row8_tmp.hubId = row5.id ;
 row8_tmp.source = context.getSOURCE();
 row8_tmp.code = row2.servierCode ;
 row8_tmp.organizationCode = row2.organizationCode ;
+row8_tmp.geographyCode = row2.geographyCode ;
 row8_tmp.nameEn = row2.nameEn ;
 row8_tmp.nameLo = row2.nameLo ;
 row8_tmp.visa = row2.visa ;
@@ -4048,6 +4124,9 @@ if(row8 != null) {
 
 	
 	row10.organizationCode = row8.organizationCode;
+
+	
+	row10.geographyCode = row8.geographyCode;
 
 	
 	row10.nameEn = row8.nameEn;
@@ -4206,46 +4285,51 @@ pstmt_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(4, row9.organizationCode);
 }
 
-                    if(row9.nameEn == null) {
+                    if(row9.geographyCode == null) {
 pstmt_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(5, row9.nameEn);
+} else {pstmt_tDBOutput_1.setString(5, row9.geographyCode);
+}
+
+                    if(row9.nameEn == null) {
+pstmt_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(6, row9.nameEn);
 }
 
                     if(row9.nameLo == null) {
-pstmt_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(6, row9.nameLo);
+pstmt_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(7, row9.nameLo);
 }
 
                     if(row9.visa == null) {
-pstmt_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(7, row9.visa);
+pstmt_tDBOutput_1.setNull(8, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(8, row9.visa);
 }
 
                     if(row9.email == null) {
-pstmt_tDBOutput_1.setNull(8, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(8, row9.email);
+pstmt_tDBOutput_1.setNull(9, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(9, row9.email);
 }
 
                     if(row9.arrivalDate != null) {
-pstmt_tDBOutput_1.setTimestamp(9, new java.sql.Timestamp(row9.arrivalDate.getTime()));
-} else {
-pstmt_tDBOutput_1.setNull(9, java.sql.Types.TIMESTAMP);
-}
-
-                    if(row9.departureDate != null) {
-pstmt_tDBOutput_1.setTimestamp(10, new java.sql.Timestamp(row9.departureDate.getTime()));
+pstmt_tDBOutput_1.setTimestamp(10, new java.sql.Timestamp(row9.arrivalDate.getTime()));
 } else {
 pstmt_tDBOutput_1.setNull(10, java.sql.Types.TIMESTAMP);
 }
 
+                    if(row9.departureDate != null) {
+pstmt_tDBOutput_1.setTimestamp(11, new java.sql.Timestamp(row9.departureDate.getTime()));
+} else {
+pstmt_tDBOutput_1.setNull(11, java.sql.Types.TIMESTAMP);
+}
+
                     if(row9.jobTitleEn == null) {
-pstmt_tDBOutput_1.setNull(11, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(11, row9.jobTitleEn);
+pstmt_tDBOutput_1.setNull(12, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(12, row9.jobTitleEn);
 }
 
                     if(row9.jobTitleLo == null) {
-pstmt_tDBOutput_1.setNull(12, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(12, row9.jobTitleLo);
+pstmt_tDBOutput_1.setNull(13, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(13, row9.jobTitleLo);
 }
 
 			
@@ -9546,7 +9630,7 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Development";
+    public String contextStr = "Default";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -10042,6 +10126,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     209713 characters generated by Talend Open Studio for Big Data 
- *     on the 7 November, 2018 10:40:10 AM CST
+ *     212012 characters generated by Talend Open Studio for Big Data 
+ *     on the 1 December, 2018 11:53:58 PM CST
  ************************************************************************************************/

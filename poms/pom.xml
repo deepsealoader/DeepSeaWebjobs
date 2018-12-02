@@ -28,7 +28,6 @@
     <module>jobs/process/COMMON/HUBS/hub_master_0.1</module>
     <module>jobs/process/COMMON/HUBS/hub_sales_0.1</module>
     <module>jobs/process/COMMON/SALS/sal_master_0.1</module>
-    <module>jobs/process/COMMON/LINKS/link_master_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_sales_0.1</module>
     <module>jobs/process/MYANMAR/JOBS/build_sales_vault_0.1</module>
     <module>jobs/process/COMMON/LINKS/link_sales_0.1</module>
@@ -57,6 +56,11 @@
     <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_zuellig_sales_0.1</module>
     <module>jobs/process/VIETNAM/DATAVAULT/LINKS/link_zuellig_product_sales_0.1</module>
     <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_zuellig_sales_0.1</module>
+    <module>jobs/process/MYANMAR/SATS/sat_target_0.1</module>
+    <module>jobs/process/MYANMAR/SATS/sat_sales_objective_0.1</module>
+    <module>jobs/process/COMMON/HUBS/hub_master_sales_objectives_0.1</module>
+    <module>jobs/process/COMMON/LINKS/link_master_0.1</module>
+    <module>jobs/process/COMMON/LINKS/link_master_sales_objective_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>
