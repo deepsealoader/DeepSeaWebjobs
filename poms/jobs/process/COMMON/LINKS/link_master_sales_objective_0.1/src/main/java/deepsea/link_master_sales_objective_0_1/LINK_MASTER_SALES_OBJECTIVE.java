@@ -1704,7 +1704,7 @@ public static class row5Struct implements routines.system.IPersistableRow<row5St
 
 }
 
-public static class copyOfrow11Struct implements routines.system.IPersistableRow<copyOfrow11Struct> {
+public static class row13Struct implements routines.system.IPersistableRow<row13Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_LINK_MASTER_SALES_OBJECTIVE = new byte[0];
     static byte[] commonByteArray_DEEPSEA_LINK_MASTER_SALES_OBJECTIVE = new byte[0];
 
@@ -1854,7 +1854,7 @@ public static class copyOfrow11Struct implements routines.system.IPersistableRow
     /**
      * Compare keys
      */
-    public int compareTo(copyOfrow11Struct other) {
+    public int compareTo(row13Struct other) {
 
 		int returnValue = -1;
 		
@@ -2729,8 +2729,8 @@ public void tMongoDBInput_1Process(final java.util.Map<String, Object> globalMap
 		row1Struct row1 = new row1Struct();
 row7Struct row7 = new row7Struct();
 row4Struct row4 = new row4Struct();
-copyOfrow11Struct copyOfrow11 = new copyOfrow11Struct();
-copyOfrow11Struct row5 = copyOfrow11;
+row13Struct row13 = new row13Struct();
+row13Struct row5 = row13;
 row10Struct row10 = new row10Struct();
 row11Struct row11 = new row11Struct();
 row11Struct row12 = row11;
@@ -3176,7 +3176,7 @@ exception1Struct exception1_tmp = new exception1Struct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("copyOfrow11" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row13" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -3254,7 +3254,7 @@ Var__tMap_3__Struct Var__tMap_3 = new Var__tMap_3__Struct();
 
 // ###############################
 // # Outputs initialization
-copyOfrow11Struct copyOfrow11_tmp = new copyOfrow11Struct();
+row13Struct row13_tmp = new row13Struct();
 // ###############################
 
         
@@ -3992,16 +3992,16 @@ Var__tMap_3__Struct Var = Var__tMap_3;// ###############################
         // ###############################
         // # Output tables
 
-copyOfrow11 = null;
+row13 = null;
 
 
-// # Output table : 'copyOfrow11'
-copyOfrow11_tmp.id = row4.id ;
-copyOfrow11_tmp.source = context.getSOURCE2();
-copyOfrow11_tmp.businessKey1 = context.getBUSINESS_KEY1().equals("productCode") ? row4.productCode : row4.businessKey1 ;
-copyOfrow11_tmp.businessKey2 = TalendString.unionString("*", TalendDate.formatDate("yyyyMMdd", TalendDate.parseDate("M/d/y", row4.fiscalStartDate)), row4.productCode, row4.market, row4.sourceCode, row4.geographyCode, row4.customerCode) ;
-copyOfrow11_tmp.hash = row4.hash;
-copyOfrow11 = copyOfrow11_tmp;
+// # Output table : 'row13'
+row13_tmp.id = row4.id ;
+row13_tmp.source = context.getSOURCE2();
+row13_tmp.businessKey1 = context.getBUSINESS_KEY1().equals("productCode") ? row4.productCode : row4.businessKey1 ;
+row13_tmp.businessKey2 = TalendString.unionString("*", TalendDate.formatDate("yyyyMMdd", TalendDate.parseDate("M/d/y", row4.fiscalStartDate)), row4.productCode, row4.market, row4.sourceCode, row4.geographyCode, row4.customerCode) ;
+row13_tmp.hash = row4.hash;
+row13 = row13_tmp;
 // ###############################
 
 } // end of Var scope
@@ -4045,8 +4045,8 @@ rejectedInnerJoin_tMap_3 = false;
 /**
  * [tMap_3 process_data_begin ] stop
  */
-// Start of branch "copyOfrow11"
-if(copyOfrow11 != null) { 
+// Start of branch "row13"
+if(row13 != null) { 
 
 
 
@@ -4063,13 +4063,13 @@ if(copyOfrow11 != null) {
 
 	
 
-			//copyOfrow11
-			//copyOfrow11
+			//row13
+			//row13
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("copyOfrow11"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row13"+iterateId,1, 1);
 				} 
 			
 
@@ -4077,7 +4077,7 @@ if(copyOfrow11 != null) {
 
     count_tFlowMeter_13++; 
  
-     row5 = copyOfrow11;
+     row5 = row13;
 
 
 	tos_count_tFlowMeter_13++;
@@ -4787,7 +4787,7 @@ if(exception2 != null) {
 	      			
 	        			paraList_tRunJob_2.add("--father_node=tRunJob_2");
 	      			
-	        			paraList_tRunJob_2.add("--context=Default");
+	        			paraList_tRunJob_2.add("--context=Production");
 	      			
 	//for feature:10589
 	
@@ -5076,7 +5076,7 @@ if(exception1 != null) {
 	      			
 	        			paraList_tRunJob_1.add("--father_node=tRunJob_1");
 	      			
-	        			paraList_tRunJob_1.add("--context=Default");
+	        			paraList_tRunJob_1.add("--context=Production");
 	      			
 	//for feature:10589
 	
@@ -5346,7 +5346,7 @@ if(exception1 != null) {
  * [tFlowMeter_13 process_data_end ] stop
  */
 
-} // End of branch "copyOfrow11"
+} // End of branch "row13"
 
 
 
@@ -5610,11 +5610,11 @@ end_Hash.put("tMap_3", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("copyOfrow11", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
+	tFlowMeterCatcher_1.addMessage("row13", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("copyOfrow11"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row13"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -12416,7 +12416,7 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Default";
+    public String contextStr = "Production";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -12932,6 +12932,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     278087 characters generated by Talend Open Studio for Big Data 
- *     on the 1 December, 2018 11:53:10 PM CST
+ *     277916 characters generated by Talend Open Studio for Big Data 
+ *     on the 3 December, 2018 6:17:23 PM AEDT
  ************************************************************************************************/

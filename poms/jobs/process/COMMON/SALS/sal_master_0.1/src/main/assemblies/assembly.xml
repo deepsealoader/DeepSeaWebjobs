@@ -189,6 +189,7 @@
 				<include>org.talend.libraries:postgresql-8.3-603.jdbc3</include>
 				<include>org.talend.libraries:trove</include>
 				<include>org.example.deepsea.code:routines</include>
+				<include>org.talend.libraries:commons-lang-2.6</include>
 			</includes>
 			<!-- without version for talend libraries -->
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}

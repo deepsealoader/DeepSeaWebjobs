@@ -1598,10 +1598,10 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					return this.nameLo;
 				}
 				
-			    public String visa;
+			    public String vISA;
 
-				public String getVisa () {
-					return this.visa;
+				public String getVISA () {
+					return this.vISA;
 				}
 				
 			    public String email;
@@ -1706,7 +1706,7 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 					this.nameLo = readString(dis);
 					
-					this.visa = readString(dis);
+					this.vISA = readString(dis);
 					
 					this.email = readString(dis);
 					
@@ -1758,7 +1758,7 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 					// String
 				
-						writeString(this.visa,dos);
+						writeString(this.vISA,dos);
 					
 					// String
 				
@@ -1798,7 +1798,7 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append(",geographyCode="+geographyCode);
 		sb.append(",nameEn="+nameEn);
 		sb.append(",nameLo="+nameLo);
-		sb.append(",visa="+visa);
+		sb.append(",vISA="+vISA);
 		sb.append(",email="+email);
 		sb.append(",arrivalDate="+String.valueOf(arrivalDate));
 		sb.append(",departureDate="+String.valueOf(departureDate));
@@ -1879,10 +1879,10 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					return this.nameLo;
 				}
 				
-			    public String visa;
+			    public String vISA;
 
-				public String getVisa () {
-					return this.visa;
+				public String getVISA () {
+					return this.vISA;
 				}
 				
 			    public String email;
@@ -1966,7 +1966,7 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					this.nameLo = readString(dis);
 					
-					this.visa = readString(dis);
+					this.vISA = readString(dis);
 					
 					this.email = readString(dis);
 					
@@ -2018,7 +2018,7 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					// String
 				
-						writeString(this.visa,dos);
+						writeString(this.vISA,dos);
 					
 					// String
 				
@@ -2058,7 +2058,7 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		sb.append(",geographyCode="+geographyCode);
 		sb.append(",nameEn="+nameEn);
 		sb.append(",nameLo="+nameLo);
-		sb.append(",visa="+visa);
+		sb.append(",vISA="+vISA);
 		sb.append(",email="+email);
 		sb.append(",arrivalDate="+arrivalDate);
 		sb.append(",departureDate="+departureDate);
@@ -2207,7 +2207,7 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 
 }
 
-public static class out1Struct implements routines.system.IPersistableRow<out1Struct> {
+public static class row11Struct implements routines.system.IPersistableRow<row11Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_SAT_EMPLOYEE = new byte[0];
     static byte[] commonByteArray_DEEPSEA_SAT_EMPLOYEE = new byte[0];
 
@@ -2278,7 +2278,7 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
     /**
      * Compare keys
      */
-    public int compareTo(out1Struct other) {
+    public int compareTo(row11Struct other) {
 
 		int returnValue = -1;
 		
@@ -2627,8 +2627,8 @@ public void tMongoDBInput_1Process(final java.util.Map<String, Object> globalMap
 		tDBInput_1Process(globalMap);
 
 		row1Struct row1 = new row1Struct();
-out1Struct out1 = new out1Struct();
-out1Struct row7 = out1;
+row11Struct row11 = new row11Struct();
+row11Struct row7 = row11;
 row3Struct row3 = new row3Struct();
 row2Struct row2 = new row2Struct();
 row8Struct row8 = new row8Struct();
@@ -3040,7 +3040,7 @@ row8Struct row8_tmp = new row8Struct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("out1" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row11" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -3128,7 +3128,7 @@ Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
 
 // ###############################
 // # Outputs initialization
-out1Struct out1_tmp = new out1Struct();
+row11Struct row11_tmp = new row11Struct();
 // ###############################
 
         
@@ -3523,17 +3523,17 @@ Var__tMap_1__Struct Var = Var__tMap_1;// ###############################
         // ###############################
         // # Output tables
 
-out1 = null;
+row11 = null;
 
 if(!rejectedInnerJoin_tMap_1 ) {
 } // closing inner join bracket (1)
 // ###### START REJECTS ##### 
 
-// # Output reject table : 'out1'
+// # Output reject table : 'row11'
 // # Filter conditions 
 if( rejectedInnerJoin_tMap_1 ) {
-out1_tmp.fields = row1.fields;
-out1 = out1_tmp;
+row11_tmp.fields = row1.fields;
+row11 = row11_tmp;
 } // closing filter/reject
 // ###############################
 
@@ -3578,8 +3578,8 @@ rejectedInnerJoin_tMap_1 = false;
 /**
  * [tMap_1 process_data_begin ] stop
  */
-// Start of branch "out1"
-if(out1 != null) { 
+// Start of branch "row11"
+if(row11 != null) { 
 
 
 
@@ -3596,13 +3596,13 @@ if(out1 != null) {
 
 	
 
-			//out1
-			//out1
+			//row11
+			//row11
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("out1"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row11"+iterateId,1, 1);
 				} 
 			
 
@@ -3610,7 +3610,7 @@ if(out1 != null) {
 
     count_tFlowMeter_11++; 
  
-     row7 = out1;
+     row7 = row11;
 
 
 	tos_count_tFlowMeter_11++;
@@ -3669,7 +3669,7 @@ if(out1 != null) {
     row3.geographyCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "geographyCode");
     row3.nameEn = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "nameEn");
     row3.nameLo = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "nameLo");
-    row3.visa = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "visa");
+    row3.vISA = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "vISA");
     row3.email = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "email");
     row3.arrivalDate = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "arrivalDate");
     row3.departureDate = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "departureDate");
@@ -3784,10 +3784,10 @@ if(row3 != null) {
               System.err.println(e.getMessage());          
           }           
           try {
-              if ("".equals(row3.visa)){  
-                row3.visa = null;
+              if ("".equals(row3.vISA)){  
+                row3.vISA = null;
               }
-              row2.visa=TypeConvert.String2String(row3.visa);            
+              row2.vISA=TypeConvert.String2String(row3.vISA);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -4032,7 +4032,7 @@ row8_tmp.organizationCode = row2.organizationCode ;
 row8_tmp.geographyCode = row2.geographyCode ;
 row8_tmp.nameEn = row2.nameEn ;
 row8_tmp.nameLo = row2.nameLo ;
-row8_tmp.visa = row2.visa ;
+row8_tmp.visa = row2.vISA ;
 row8_tmp.email = row2.email ;
 row8_tmp.arrivalDate = row2.arrivalDate ;
 row8_tmp.departureDate = row2.departureDate ;
@@ -4571,7 +4571,7 @@ pstmt_tDBOutput_1.setNull(13, java.sql.Types.VARCHAR);
  * [tFlowMeter_11 process_data_end ] stop
  */
 
-} // End of branch "out1"
+} // End of branch "row11"
 
 
 
@@ -4709,11 +4709,11 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("out1", new Integer(count_tFlowMeter_11), "null", "", "tFlowMeter_11");
+	tFlowMeterCatcher_1.addMessage("row11", new Integer(count_tFlowMeter_11), "null", "", "tFlowMeter_11");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("out1"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row11"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -5782,7 +5782,7 @@ public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) thr
 
 			   		// connection name:row4
 			   		// source node:tDBInput_2 - inputs:(after_tMongoDBInput_1) outputs:(row4,row4) | target node:tAdvancedHash_row4 - inputs:(row4) outputs:()
-			   		// linked node: tMap_1 - inputs:(row1,row4) outputs:(out1)
+			   		// linked node: tMap_1 - inputs:(row1,row4) outputs:(row11)
 			   
 			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row4 = 
 			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -9630,7 +9630,7 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Default";
+    public String contextStr = "Production";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -10126,6 +10126,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     212012 characters generated by Talend Open Studio for Big Data 
- *     on the 1 December, 2018 11:53:58 PM CST
+ *     212042 characters generated by Talend Open Studio for Big Data 
+ *     on the 3 December, 2018 6:17:25 PM AEDT
  ************************************************************************************************/

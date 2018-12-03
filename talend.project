@@ -826,6 +826,18 @@
       <relatedItems xmi:id="_aqf_2_VvEei2cPDh7zbmJg" id="TalendDate" version="Latest" type="routine"/>
       <relatedItems xmi:id="_aqf_3PVvEei2cPDh7zbmJg" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_59g7EPYEEeiEGOJeUBSp5A">
+      <baseItem xmi:id="_59hiIPYEEeiEGOJeUBSp5A" id="_wXSAoPYEEeiEGOJeUBSp5A" version="0.1" type="job"/>
+      <relatedItems xmi:id="_59hiIfYEEeiEGOJeUBSp5A" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_59hiIvYEEeiEGOJeUBSp5A" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_59hiI_YEEeiEGOJeUBSp5A" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_59hiJPYEEeiEGOJeUBSp5A" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_59hiJfYEEeiEGOJeUBSp5A" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_59hiJvYEEeiEGOJeUBSp5A" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_59hiJ_YEEeiEGOJeUBSp5A" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_59hiKPYEEeiEGOJeUBSp5A" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_59hiKfYEEeiEGOJeUBSp5A" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <deletedFolders>process/MYANMAR/LINKS</deletedFolders>
     <deletedFolders>process/MYANMAR/HUBS</deletedFolders>
     <migrationTask xmi:id="_HJ0ZAK6jEeiC2aJINdmZJQ" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
