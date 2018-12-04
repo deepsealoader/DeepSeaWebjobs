@@ -545,6 +545,15 @@ private class TalendException extends Exception {
 					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tFlowMeter_18_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tExtractFields_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -5193,7 +5202,7 @@ end_Hash.put("tMap_2", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("ou1", new Integer(count_tFlowMeter_11), "null", "", "tFlowMeter_11");
+	tFlowMeterCatcher_1.addMessage("Number of files deleted", new Integer(count_tFlowMeter_11), "null", "", "tFlowMeter_11");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -6497,6 +6506,178 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 
 }
 
+public static class row11Struct implements routines.system.IPersistableRow<row11Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_HUB_MASTER = new byte[0];
+
+	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
+			    public String source;
+
+				public String getSource () {
+					return this.source;
+				}
+				
+			    public String hash;
+
+				public String getHash () {
+					return this.hash;
+				}
+				
+			    public Object fields;
+
+				public Object getFields () {
+					return this.fields;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_HUB_MASTER.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_HUB_MASTER.length == 0) {
+   					commonByteArray_DEEPSEA_HUB_MASTER = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_HUB_MASTER = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_HUB_MASTER, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_HUB_MASTER, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_HUB_MASTER) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.id = readString(dis);
+					
+					this.source = readString(dis);
+					
+					this.hash = readString(dis);
+					
+						this.fields = (Object) dis.readObject();
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+			} catch(ClassNotFoundException eCNFE) {
+				 throw new RuntimeException(eCNFE);
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.id,dos);
+					
+					// String
+				
+						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.hash,dos);
+					
+					// Object
+				
+       			    	dos.writeObject(this.fields);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("id="+id);
+		sb.append(",source="+source);
+		sb.append(",hash="+hash);
+		sb.append(",fields="+String.valueOf(fields));
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row11Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
 public static class row7Struct implements routines.system.IPersistableRow<row7Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER = new byte[0];
     static byte[] commonByteArray_DEEPSEA_HUB_MASTER = new byte[0];
@@ -7012,11 +7193,13 @@ public void tMongoDBInput_1Process(final java.util.Map<String, Object> globalMap
 
 		row1Struct row1 = new row1Struct();
 row7Struct row7 = new row7Struct();
+row7Struct row11 = row7;
 row9Struct row9 = new row9Struct();
 row9Struct row5 = row9;
 row10Struct row10 = new row10Struct();
 exception1Struct exception1 = new exception1Struct();
 row15Struct row15 = new row15Struct();
+
 
 
 
@@ -7462,7 +7645,7 @@ int count_tDBOutput_2=0;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row11" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -7498,6 +7681,52 @@ int count_tDBOutput_2=0;
 
 /**
  * [tExtractFields_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFlowMeter_18 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFlowMeter_18", false);
+		start_Hash.put("tFlowMeter_18", System.currentTimeMillis());
+		
+	
+	currentComponent="tFlowMeter_18";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tFlowMeter_18 = 0;
+		
+    	class BytesLimit65535_tFlowMeter_18{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFlowMeter_18().limitLog4jByte();
+
+    int count_tFlowMeter_18 = 0; 
+ 
+
+
+
+/**
+ * [tFlowMeter_18 begin ] stop
  */
 
 
@@ -8030,14 +8259,14 @@ if(row7 != null) {
 
 	
 	/**
-	 * [tExtractFields_1 main ] start
+	 * [tFlowMeter_18 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tExtractFields_1";
+	currentComponent="tFlowMeter_18";
 
 	
 
@@ -8052,10 +8281,66 @@ if(row7 != null) {
 			
 
 		
-    List<org.bson.Document> doc_tExtractFields_1 = (List<org.bson.Document>) row7.fields;
-    row9.source = row7.source;  
+
+    count_tFlowMeter_18++; 
+ 
+     row11 = row7;
+
+
+	tos_count_tFlowMeter_18++;
+
+/**
+ * [tFlowMeter_18 main ] stop
+ */
+	
+	/**
+	 * [tFlowMeter_18 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_18 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tExtractFields_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tExtractFields_1";
+
+	
+
+			//row11
+			//row11
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row11"+iterateId,1, 1);
+				} 
+			
+
+		
+    List<org.bson.Document> doc_tExtractFields_1 = (List<org.bson.Document>) row11.fields;
+    row9.source = row11.source;  
     row9.businessKey = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", context.getBUSINESS_KEY());
-    row9.hash = row7.hash;  
+    row9.hash = row11.hash;  
     nb_line_tExtractFields_1++;
 
  
@@ -8798,6 +9083,29 @@ if(exception1 != null) {
  * [tExtractFields_1 process_data_end ] stop
  */
 
+
+
+	
+	/**
+	 * [tFlowMeter_18 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_18 process_data_end ] stop
+ */
+
 } // End of branch "row7"
 
 
@@ -8925,6 +9233,39 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tFlowMeter_18 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+	tFlowMeterCatcher_1.addMessage("Number of records read", new Integer(count_tFlowMeter_18), "null", "", "tFlowMeter_18");
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row7"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tFlowMeter_18", true);
+end_Hash.put("tFlowMeter_18", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFlowMeter_18 end ] stop
+ */
+
+	
+	/**
 	 * [tExtractFields_1 end ] start
 	 */
 
@@ -8941,7 +9282,7 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row7"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row11"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -8970,7 +9311,7 @@ end_Hash.put("tExtractFields_1", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("row9", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
+	tFlowMeterCatcher_1.addMessage("Number of records integrated", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -9194,6 +9535,9 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 
 
 
+
+
+
 				}//end the resume
 
 				
@@ -9260,6 +9604,27 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 
 /**
  * [tMap_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tFlowMeter_18 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_18 finally ] stop
  */
 
 	
@@ -9394,6 +9759,9 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 /**
  * [tDie_1 finally ] stop
  */
+
+
+
 
 
 
@@ -12634,6 +13002,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     268548 characters generated by Talend Open Studio for Big Data 
- *     on the 3 December, 2018 6:17:18 PM AEDT
+ *     275120 characters generated by Talend Open Studio for Big Data 
+ *     on the 4 December, 2018 11:39:54 AM AEDT
  ************************************************************************************************/

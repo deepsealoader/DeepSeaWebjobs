@@ -542,6 +542,15 @@ private class TalendException extends Exception {
 					tMongoDBInput_5_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tFlowMeter_18_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_5_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tMap_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -5166,7 +5175,7 @@ end_Hash.put("tMap_2", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("row9", new Integer(count_tFlowMeter_11), "null", "", "tFlowMeter_11");
+	tFlowMeterCatcher_1.addMessage("Number of files deleted", new Integer(count_tFlowMeter_11), "null", "", "tFlowMeter_11");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -5644,16 +5653,16 @@ public static class row5Struct implements routines.system.IPersistableRow<row5St
 					return this.source;
 				}
 				
-			    public String businessKey;
-
-				public String getBusinessKey () {
-					return this.businessKey;
-				}
-				
 			    public String hash;
 
 				public String getHash () {
 					return this.hash;
+				}
+				
+			    public String businessKey;
+
+				public String getBusinessKey () {
+					return this.businessKey;
 				}
 				
 
@@ -5699,9 +5708,9 @@ public static class row5Struct implements routines.system.IPersistableRow<row5St
 		
 					this.source = readString(dis);
 					
-					this.businessKey = readString(dis);
-					
 					this.hash = readString(dis);
+					
+					this.businessKey = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -5727,11 +5736,11 @@ public static class row5Struct implements routines.system.IPersistableRow<row5St
 					
 					// String
 				
-						writeString(this.businessKey,dos);
+						writeString(this.hash,dos);
 					
 					// String
 				
-						writeString(this.hash,dos);
+						writeString(this.businessKey,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -5747,8 +5756,8 @@ public static class row5Struct implements routines.system.IPersistableRow<row5St
 		sb.append(super.toString());
 		sb.append("[");
 		sb.append("source="+source);
-		sb.append(",businessKey="+businessKey);
 		sb.append(",hash="+hash);
+		sb.append(",businessKey="+businessKey);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -5800,16 +5809,16 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					return this.source;
 				}
 				
-			    public String businessKey;
-
-				public String getBusinessKey () {
-					return this.businessKey;
-				}
-				
 			    public String hash;
 
 				public String getHash () {
 					return this.hash;
+				}
+				
+			    public String businessKey;
+
+				public String getBusinessKey () {
+					return this.businessKey;
 				}
 				
 
@@ -5855,9 +5864,9 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 		
 					this.source = readString(dis);
 					
-					this.businessKey = readString(dis);
-					
 					this.hash = readString(dis);
+					
+					this.businessKey = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -5883,11 +5892,11 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					
 					// String
 				
-						writeString(this.businessKey,dos);
+						writeString(this.hash,dos);
 					
 					// String
 				
-						writeString(this.hash,dos);
+						writeString(this.businessKey,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -5903,8 +5912,8 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 		sb.append(super.toString());
 		sb.append("[");
 		sb.append("source="+source);
-		sb.append(",businessKey="+businessKey);
 		sb.append(",hash="+hash);
+		sb.append(",businessKey="+businessKey);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -5914,6 +5923,149 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
      * Compare keys
      */
     public int compareTo(row7Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class row13Struct implements routines.system.IPersistableRow<row13Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_HUB_SALES = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_HUB_SALES = new byte[0];
+
+	
+			    public String hash;
+
+				public String getHash () {
+					return this.hash;
+				}
+				
+			    public String num;
+
+				public String getNum () {
+					return this.num;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_HUB_SALES.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_HUB_SALES.length == 0) {
+   					commonByteArray_DEEPSEA_HUB_SALES = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_HUB_SALES = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_HUB_SALES, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_HUB_SALES, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_HUB_SALES) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.hash = readString(dis);
+					
+					this.num = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.hash,dos);
+					
+					// String
+				
+						writeString(this.num,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("hash="+hash);
+		sb.append(",num="+num);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row13Struct other) {
 
 		int returnValue = -1;
 		
@@ -6635,6 +6787,7 @@ public void tMongoDBInput_5Process(final java.util.Map<String, Object> globalMap
 row17Struct row17 = new row17Struct();
 row17Struct row12 = row17;
 row1Struct row1 = new row1Struct();
+row1Struct row13 = row1;
 row7Struct row7 = new row7Struct();
 row7Struct row5 = row7;
 
@@ -7351,11 +7504,11 @@ if(row17 != null) {
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
+	       				runStat.updateStatOnConnection("row13", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row7", 3, 0);
+	       				runStat.updateStatOnConnection("row1", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -7363,7 +7516,11 @@ if(row17 != null) {
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row1", 3, 0);
+	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row7", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -7371,6 +7528,7 @@ if(row17 != null) {
 					//Thread.sleep(1000);
 				}				
 			
+
 
 
 
@@ -7450,7 +7608,7 @@ String dbUser_tDBOutput_2 = null;
    int batchSizeCounter_tDBOutput_2=0;
 
 int count_tDBOutput_2=0;
-	    String insert_tDBOutput_2 = "INSERT INTO \"" + tableName_tDBOutput_2 + "\" (\"source\",\"business_key\",\"hash\") VALUES (?,?,?)";
+	    String insert_tDBOutput_2 = "INSERT INTO \"" + tableName_tDBOutput_2 + "\" (\"source\",\"hash\",\"business_key\") VALUES (?,?,?)";
 	    
 	    java.sql.PreparedStatement pstmt_tDBOutput_2 = conn_tDBOutput_2.prepareStatement(insert_tDBOutput_2);
 	    
@@ -7530,7 +7688,7 @@ int count_tDBOutput_2=0;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row13" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -7586,6 +7744,52 @@ row7Struct row7_tmp = new row7Struct();
 
 /**
  * [tMap_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFlowMeter_18 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFlowMeter_18", false);
+		start_Hash.put("tFlowMeter_18", System.currentTimeMillis());
+		
+	
+	currentComponent="tFlowMeter_18";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tFlowMeter_18 = 0;
+		
+    	class BytesLimit65535_tFlowMeter_18{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFlowMeter_18().limitLog4jByte();
+
+    int count_tFlowMeter_18 = 0; 
+ 
+
+
+
+/**
+ * [tFlowMeter_18 begin ] stop
  */
 
 
@@ -7811,6 +8015,62 @@ row7Struct row7_tmp = new row7Struct();
 
 	
 	/**
+	 * [tFlowMeter_18 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+			//row1
+			//row1
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row1"+iterateId,1, 1);
+				} 
+			
+
+		
+
+    count_tFlowMeter_18++; 
+ 
+     row13 = row1;
+
+
+	tos_count_tFlowMeter_18++;
+
+/**
+ * [tFlowMeter_18 main ] stop
+ */
+	
+	/**
+	 * [tFlowMeter_18 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_18 process_data_begin ] stop
+ */
+
+	
+	/**
 	 * [tMap_1 main ] start
 	 */
 
@@ -7822,13 +8082,13 @@ row7Struct row7_tmp = new row7Struct();
 
 	
 
-			//row1
-			//row1
+			//row13
+			//row13
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("row1"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row13"+iterateId,1, 1);
 				} 
 			
 
@@ -7858,8 +8118,8 @@ row7 = null;
 
 // # Output table : 'row7'
 row7_tmp.source = context.getSOURCE();
-row7_tmp.businessKey = row1.num;
-row7_tmp.hash = row1.hash;
+row7_tmp.hash = row13.hash;
+row7_tmp.businessKey = row13.num;
 row7 = row7_tmp;
 // ###############################
 
@@ -7998,14 +8258,14 @@ pstmt_tDBOutput_2.setNull(1, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_2.setString(1, row5.source);
 }
 
-                    if(row5.businessKey == null) {
+                    if(row5.hash == null) {
 pstmt_tDBOutput_2.setNull(2, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_2.setString(2, row5.businessKey);
+} else {pstmt_tDBOutput_2.setString(2, row5.hash);
 }
 
-                    if(row5.hash == null) {
+                    if(row5.businessKey == null) {
 pstmt_tDBOutput_2.setNull(3, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_2.setString(3, row5.hash);
+} else {pstmt_tDBOutput_2.setString(3, row5.businessKey);
 }
 
 			
@@ -8153,6 +8413,29 @@ pstmt_tDBOutput_2.setNull(3, java.sql.Types.VARCHAR);
 
 	
 	/**
+	 * [tFlowMeter_18 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_18 process_data_end ] stop
+ */
+
+
+
+	
+	/**
 	 * [tMongoDBInput_1 process_data_end ] start
 	 */
 
@@ -8202,6 +8485,39 @@ end_Hash.put("tMongoDBInput_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tFlowMeter_18 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+	tFlowMeterCatcher_1.addMessage("Number of records read", new Integer(count_tFlowMeter_18), "null", "", "tFlowMeter_18");
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row1"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tFlowMeter_18", true);
+end_Hash.put("tFlowMeter_18", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFlowMeter_18 end ] stop
+ */
+
+	
+	/**
 	 * [tMap_1 end ] start
 	 */
 
@@ -8224,7 +8540,7 @@ end_Hash.put("tMongoDBInput_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row1"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row13"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -8253,7 +8569,7 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("row7", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
+	tFlowMeterCatcher_1.addMessage("Number of records integrated", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -8363,6 +8679,9 @@ end_Hash.put("tDBOutput_2", System.currentTimeMillis());
 /**
  * [tDBOutput_2 end ] stop
  */
+
+
+
 
 
 
@@ -8562,7 +8881,7 @@ end_Hash.put("tMap_3", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("row17", new Integer(count_tFlowMeter_16), "null", "", "tFlowMeter_16");
+	tFlowMeterCatcher_1.addMessage("Number of files integrated", new Integer(count_tFlowMeter_16), "null", "", "tFlowMeter_16");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -8755,6 +9074,27 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tFlowMeter_18 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_18";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_18 finally ] stop
+ */
+
+	
+	/**
 	 * [tMap_1 finally ] start
 	 */
 
@@ -8819,6 +9159,9 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 /**
  * [tDBOutput_2 finally ] stop
  */
+
+
+
 
 
 
@@ -11556,7 +11899,7 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Production";
+    public String contextStr = "Default";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -12047,6 +12390,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     250687 characters generated by Talend Open Studio for Big Data 
- *     on the 3 December, 2018 11:37:01 PM AEDT
+ *     256764 characters generated by Talend Open Studio for Big Data 
+ *     on the 4 December, 2018 11:49:08 AM AEDT
  ************************************************************************************************/

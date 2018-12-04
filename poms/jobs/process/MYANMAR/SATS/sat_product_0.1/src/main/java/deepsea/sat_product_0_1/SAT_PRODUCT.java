@@ -525,6 +525,15 @@ private class TalendException extends Exception {
 					tDBClose_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tChronometerStop_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tChronometerStop_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tFlowMeterCatcher_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -612,6 +621,11 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tDBClose_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tChronometerStop_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -5275,7 +5289,7 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("out1", new Integer(count_tFlowMeter_11), "null", "", "tFlowMeter_11");
+	tFlowMeterCatcher_1.addMessage("Number of records read", new Integer(count_tFlowMeter_11), "null", "", "tFlowMeter_11");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -5453,7 +5467,7 @@ end_Hash.put("tFilterColumns_1", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("row10", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
+	tFlowMeterCatcher_1.addMessage("Number of records integrated", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -8761,6 +8775,7 @@ public void tDBClose_1Process(final java.util.Map<String, Object> globalMap) thr
 
 
 
+		
 
 
 	
@@ -8883,6 +8898,10 @@ public void tDBClose_1Process(final java.util.Map<String, Object> globalMap) thr
 ok_Hash.put("tDBClose_1", true);
 end_Hash.put("tDBClose_1", System.currentTimeMillis());
 
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk10", 0, "ok");
+				}
+				tChronometerStop_1Process(globalMap);
 
 
 
@@ -8940,6 +8959,217 @@ end_Hash.put("tDBClose_1", System.currentTimeMillis());
 		
 
 		globalMap.put("tDBClose_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tChronometerStop_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tChronometerStop_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tChronometerStop_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tChronometerStop_1", false);
+		start_Hash.put("tChronometerStop_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tChronometerStop_1";
+
+	
+		int tos_count_tChronometerStop_1 = 0;
+		
+    	class BytesLimit65535_tChronometerStop_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tChronometerStop_1().limitLog4jByte();
+	
+	long timetChronometerStop_1;
+	
+		timetChronometerStop_1 = System.currentTimeMillis() - startTime;
+		
+	   		System.out.print("[ tChronometerStop_1 ]  ");
+		
+	  	System.out.println("" + "  " + timetChronometerStop_1 + " milliseconds");
+	  	 
+	
+	Long currentTimetChronometerStop_1 = System.currentTimeMillis();
+	globalMap.put("tChronometerStop_1", currentTimetChronometerStop_1);
+	
+	globalMap.put("tChronometerStop_1_STOPTIME", currentTimetChronometerStop_1);
+	globalMap.put("tChronometerStop_1_DURATION", timetChronometerStop_1);
+ 
+
+
+
+/**
+ * [tChronometerStop_1 begin ] stop
+ */
+	
+	/**
+	 * [tChronometerStop_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStop_1";
+
+	
+
+ 
+
+
+	tos_count_tChronometerStop_1++;
+
+/**
+ * [tChronometerStop_1 main ] stop
+ */
+	
+	/**
+	 * [tChronometerStop_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStop_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tChronometerStop_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tChronometerStop_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStop_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tChronometerStop_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tChronometerStop_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStop_1";
+
+	
+
+ 
+
+ok_Hash.put("tChronometerStop_1", true);
+end_Hash.put("tChronometerStop_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tChronometerStop_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tChronometerStop_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStop_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tChronometerStop_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tChronometerStop_1_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -10496,6 +10726,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     223769 characters generated by Talend Open Studio for Big Data 
- *     on the 3 December, 2018 6:17:26 PM AEDT
+ *     228173 characters generated by Talend Open Studio for Big Data 
+ *     on the 4 December, 2018 11:40:00 AM AEDT
  ************************************************************************************************/

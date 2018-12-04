@@ -564,13 +564,13 @@ private class TalendException extends Exception {
 					tFlowMeterCatcher_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tDBInput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tMongoDBInput_6_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tMap_5_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -579,7 +579,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFlowMeter_24_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -588,7 +588,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFlowToIterate_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -597,7 +597,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tMongoDBInput_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -606,16 +606,16 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tMap_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tFlowMeter_29_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tExtractFields_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -624,16 +624,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tFlowMeter_13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tMap_4_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -642,7 +633,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tMap_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -651,7 +642,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFuzzyMatch_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -660,7 +651,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tMap_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -669,7 +660,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFlowMeter_22_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -678,7 +669,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFileOutputExcel_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -687,7 +678,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFileFetch_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -699,13 +690,13 @@ private class TalendException extends Exception {
 					tFileFetch_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tMongoDBInput_6_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tDBInput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
+					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tDBInput_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -744,13 +735,13 @@ private class TalendException extends Exception {
 					tDBInput_5_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tAdvancedHash_row8_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tAdvancedHash_row22_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
+					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tAdvancedHash_row3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -801,7 +792,7 @@ private class TalendException extends Exception {
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tPrejob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -874,7 +865,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tDBInput_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tMongoDBInput_6_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -884,7 +875,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tMongoDBInput_6_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tDBInput_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2007,7 +1998,7 @@ globalMap.put("LINK_TABLES", TalendString.unionString("_", "link", context.getTA
 globalMap.put("HUB_TABLE1", TalendString.unionString("_", "hub", context.getTABLE1()));
 globalMap.put("HUB_TABLE2", TalendString.unionString("_", "hub", context.getTABLE2()));
 globalMap.put("COUNTRY_ID", row14.id);
-globalMap.put("FILE_PATH", System.getProperty("java.io.tmpdir") + "/" + globalMap.get("COUNTRY_ID") + "/Customer_Diff.xlsx");
+globalMap.put("FILE_PATH", System.getProperty("java.io.tmpdir") + "/" + globalMap.get("COUNTRY_ID") + "/Customer.xlsx");
 
  
 
@@ -9179,162 +9170,6 @@ public static class row5Struct implements routines.system.IPersistableRow<row5St
 
 }
 
-public static class row9Struct implements routines.system.IPersistableRow<row9Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
-
-	
-			    public String businessKey;
-
-				public String getBusinessKey () {
-					return this.businessKey;
-				}
-				
-			    public String customerName;
-
-				public String getCustomerName () {
-					return this.customerName;
-				}
-				
-			    public String locality;
-
-				public String getLocality () {
-					return this.locality;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF.length == 0) {
-   					commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.businessKey = readString(dis);
-					
-					this.customerName = readString(dis);
-					
-					this.locality = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.businessKey,dos);
-					
-					// String
-				
-						writeString(this.customerName,dos);
-					
-					// String
-				
-						writeString(this.locality,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("businessKey="+businessKey);
-		sb.append(",customerName="+customerName);
-		sb.append(",locality="+locality);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row9Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
 public static class row7Struct implements routines.system.IPersistableRow<row7Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
@@ -9443,12 +9278,6 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 
 	
-			    public String hash;
-
-				public String getHash () {
-					return this.hash;
-				}
-				
 			    public Object fields;
 
 				public Object getFields () {
@@ -9458,36 +9287,6 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 
 
 
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF.length == 0) {
-   					commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
     public void readData(ObjectInputStream dis) {
 
 		synchronized(commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF) {
@@ -9496,8 +9295,6 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 
         		int length = 0;
 		
-					this.hash = readString(dis);
-					
 						this.fields = (Object) dis.readObject();
 					
         	} catch (IOException e) {
@@ -9521,10 +9318,6 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
         try {
 
 		
-					// String
-				
-						writeString(this.hash,dos);
-					
 					// Object
 				
        			    	dos.writeObject(this.fields);
@@ -9542,8 +9335,7 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
-		sb.append(",fields="+String.valueOf(fields));
+		sb.append("fields="+String.valueOf(fields));
 	    sb.append("]");
 
 	    return sb.toString();
@@ -9844,7 +9636,7 @@ public static class row24Struct implements routines.system.IPersistableRow<row24
 
 }
 
-public static class row22Struct implements routines.system.IPersistableRow<row22Struct> {
+public static class row8Struct implements routines.system.IPersistableRow<row8Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 
@@ -9942,7 +9734,7 @@ public static class row22Struct implements routines.system.IPersistableRow<row22
     /**
      * Compare keys
      */
-    public int compareTo(row22Struct other) {
+    public int compareTo(row8Struct other) {
 
 		int returnValue = -1;
 		
@@ -9974,7 +9766,7 @@ public static class row22Struct implements routines.system.IPersistableRow<row22
 
 }
 
-public static class after_tDBInput_2Struct implements routines.system.IPersistableRow<after_tDBInput_2Struct> {
+public static class after_tMongoDBInput_6Struct implements routines.system.IPersistableRow<after_tMongoDBInput_6Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 
@@ -10072,7 +9864,7 @@ public static class after_tDBInput_2Struct implements routines.system.IPersistab
     /**
      * Compare keys
      */
-    public int compareTo(after_tDBInput_2Struct other) {
+    public int compareTo(after_tMongoDBInput_6Struct other) {
 
 		int returnValue = -1;
 		
@@ -10103,8 +9895,8 @@ public static class after_tDBInput_2Struct implements routines.system.IPersistab
 
 
 }
-public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tDBInput_2_SUBPROCESS_STATE", 0);
+public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tMongoDBInput_6_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 		String currentVirtualComponent = null;
@@ -10126,19 +9918,18 @@ public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) thr
 				globalResumeTicket = true;
 
 
-		tMongoDBInput_6Process(globalMap);
+		tDBInput_2Process(globalMap);
 		tDBInput_3Process(globalMap);
 		tDBInput_1Process(globalMap);
 		tDBInput_4Process(globalMap);
 		tDBInput_5Process(globalMap);
 
-		row22Struct row22 = new row22Struct();
+		row8Struct row8 = new row8Struct();
 row24Struct row24 = new row24Struct();
 row24Struct row23 = row24;
 row1Struct row1 = new row1Struct();
-row7Struct row7 = new row7Struct();
-row9Struct row9 = new row9Struct();
-row9Struct row5 = row9;
+row1Struct row7 = row1;
+row5Struct row5 = new row5Struct();
 row19Struct row19 = new row19Struct();
 row20Struct row20 = new row20Struct();
 row10Struct row10 = new row10Struct();
@@ -10266,7 +10057,7 @@ int counter_tFlowToIterate_1 = 0;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row22" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -10288,15 +10079,15 @@ int counter_tFlowToIterate_1 = 0;
 // ###############################
 // # Lookup's keys initialization
 	
-		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row8Struct> tHash_Lookup_row8 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row8Struct>) 
-				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row8Struct>) 
-					globalMap.get( "tHash_Lookup_row8" ))
+		org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row22Struct> tHash_Lookup_row22 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row22Struct>) 
+				((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row22Struct>) 
+					globalMap.get( "tHash_Lookup_row22" ))
 					;					
 					
 	
 
-row8Struct row8HashKey = new row8Struct();
-row8Struct row8Default = new row8Struct();
+row22Struct row22HashKey = new row22Struct();
+row22Struct row22Default = new row22Struct();
 // ###############################        
 
 // ###############################
@@ -10338,63 +10129,148 @@ row24Struct row24_tmp = new row24Struct();
 
 	
 	/**
-	 * [tDBInput_2 begin ] start
+	 * [tMongoDBInput_6 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tDBInput_2", false);
-		start_Hash.put("tDBInput_2", System.currentTimeMillis());
+		ok_Hash.put("tMongoDBInput_6", false);
+		start_Hash.put("tMongoDBInput_6", System.currentTimeMillis());
 		
 	
-	currentComponent="tDBInput_2";
+	currentComponent="tMongoDBInput_6";
 
 	
-		int tos_count_tDBInput_2 = 0;
+		int tos_count_tMongoDBInput_6 = 0;
 		
-    	class BytesLimit65535_tDBInput_2{
+    	class BytesLimit65535_tMongoDBInput_6{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tDBInput_2().limitLog4jByte();
-	
-    
-	
-		    int nb_line_tDBInput_2 = 0;
-		    java.sql.Connection conn_tDBInput_2 = null;
-		        conn_tDBInput_2 = (java.sql.Connection)globalMap.get("conn_tDBConnection_1");
-				
-		    
-			java.sql.Statement stmt_tDBInput_2 = conn_tDBInput_2.createStatement();
+        new BytesLimit65535_tMongoDBInput_6().limitLog4jByte();
 
-		    String dbquery_tDBInput_2 = "SELECT DISTINCT\n	hash\nFROM\n	" + globalMap.get("HUB_TABLE2") + "\nWHERE\n	source='" + context.getSOURCE2() + "'";
+	int nb_line_tMongoDBInput_6 = 0;
+	
+		
+		
+			com.mongodb.MongoClient mongo_tMongoDBInput_6=null;
+			com.mongodb.client.MongoDatabase db_tMongoDBInput_6=null;
+		
+
 			
+			
+				
+				
+				mongo_tMongoDBInput_6=(com.mongodb.MongoClient)globalMap.get("mongo_tMongoDBConnection_1");
+				db_tMongoDBInput_6 = (com.mongodb.client.MongoDatabase) globalMap.get("db_tMongoDBConnection_1");
+				
 
-            	globalMap.put("tDBInput_2_QUERY",dbquery_tDBInput_2);
-		    java.sql.ResultSet rs_tDBInput_2 = null;
 
-		    try {
-		    	rs_tDBInput_2 = stmt_tDBInput_2.executeQuery(dbquery_tDBInput_2);
-		    	java.sql.ResultSetMetaData rsmd_tDBInput_2 = rs_tDBInput_2.getMetaData();
-		    	int colQtyInRs_tDBInput_2 = rsmd_tDBInput_2.getColumnCount();
-
-		    String tmpContent_tDBInput_2 = null;
-		    
-		    
-		    while (rs_tDBInput_2.next()) {
-		        nb_line_tDBInput_2++;
-		        
-							if(colQtyInRs_tDBInput_2 < 1) {
-								row22.hash = null;
-							} else {
-	                         		
-        	row22.hash = routines.system.JDBCUtil.getString(rs_tDBInput_2, 1, false);
-		                    }
+				
+				
+					com.mongodb.client.MongoCollection<org.bson.Document> coll_tMongoDBInput_6 = db_tMongoDBInput_6.getCollection("transactions.files");
+				
+				
+				
+				try{
+					// Add warning if an index is not in the query.
+					boolean needIndexWarning = true;
+					String indexList = "";
 					
+					for (com.mongodb.DBObject index: coll_tMongoDBInput_6.listIndexes(com.mongodb.DBObject.class)) {
+					
+	                
+	                    for (String key: ((com.mongodb.DBObject)index.get("key")).keySet()) {
+	                        // The regexp is:
+	                        // - contain the db DBcolumnName between two backslashed quotes
+	                        // - is followed at some point by a colon
+	                        // - there is no comma between the the DBcolumnName and the colon
+	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {_id: 1}").matches(".*" + key + "[^,]*:.*")) {
+	                            // We have an index, do not print error message
+	                            needIndexWarning = false;
+	                        } else {
+	                            // This index is not in the query, add it into the indexList
+	                            indexList += ", " + key;
+	                        }
+	                    }
+	                }
+	                if ((!"".equals(indexList)) && (needIndexWarning)) {
+	                    
+	                        System.err.println("tMongoDBInput_6 - The query does not contain any reference an index.  [" + indexList.substring(1) + " ]");
+	                        
+	                }
+	            }catch(com.mongodb.MongoException e){
+	            	// caught an exception after issuing the getIndexInfo()
+	            	// don't fail the whole job
+	            	// maybe due to authorization
+	            }
+
+	                
+	                
+					org.bson.Document myQuery_tMongoDBInput_6 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {_id: 1}");
+	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_6 = coll_tMongoDBInput_6.find(myQuery_tMongoDBInput_6).noCursorTimeout(false);
+					
+	                
+		  			
+		  			
+
+		  			 
+	                
+				
+				class DBObjectInputUtil_tMongoDBInput_6{
+					// Get the node value in embedded document, 
+					//If have no embedded document get root document node.
+					
+					public Object getValue(String parentNode,String currentName,org.bson.Document dbObject){
+						Object value=null;
+						if(dbObject==null){
+							return null;
+						}
+						if (parentNode == null || "".equals(parentNode)) {
+						    if ("*".equals(currentName)) {
+						        value = dbObject;
+						    } else if (dbObject.get(currentName)!=null){
+								value=dbObject.get(currentName);
+							}
+						}else{
+							String objNames[] = objNames = parentNode.split("\\.");
+							org.bson.Document currentObj=dbObject;
+							for(int i=0;i<objNames.length;i++){
+								currentObj=(org.bson.Document)currentObj.get(objNames[i]);
+								if(currentObj==null){
+									break;
+								}
+							}
+							if ("*".equals(currentName)) {
+                                value = currentObj;
+                            } else if(currentObj!=null){
+								value=currentObj.get(currentName);
+							}
+						}
+						return value;
+					}
+				}
+				DBObjectInputUtil_tMongoDBInput_6 dbObjectInputUtil_tMongoDBInput_6=new DBObjectInputUtil_tMongoDBInput_6();
+				java.util.Map<String, String> pathMap_tMongoDBInput_6=new java.util.HashMap<String, String>();
+				pathMap_tMongoDBInput_6.put("hash","");
+
+						
+					com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_6 = fi_tMongoDBInput_6.iterator();
+						
+				while (cursor_tMongoDBInput_6.hasNext()){
+				org.bson.Document o_tMongoDBInput_6 = cursor_tMongoDBInput_6.next();
+				nb_line_tMongoDBInput_6++;
+				Object valueObj_tMongoDBInput_6=null;
+                    valueObj_tMongoDBInput_6=dbObjectInputUtil_tMongoDBInput_6.getValue(pathMap_tMongoDBInput_6.get("hash"),"hash",o_tMongoDBInput_6);
+				if(valueObj_tMongoDBInput_6!=null && valueObj_tMongoDBInput_6.toString().length() > 0) {
+					row8.hash = valueObj_tMongoDBInput_6.toString();
+				}else{
+					row8.hash = null;
+				}
 
 
  
@@ -10402,39 +10278,39 @@ row24Struct row24_tmp = new row24Struct();
 
 
 /**
- * [tDBInput_2 begin ] stop
+ * [tMongoDBInput_6 begin ] stop
  */
 	
 	/**
-	 * [tDBInput_2 main ] start
+	 * [tMongoDBInput_6 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tDBInput_2";
+	currentComponent="tMongoDBInput_6";
 
 	
 
  
 
 
-	tos_count_tDBInput_2++;
+	tos_count_tMongoDBInput_6++;
 
 /**
- * [tDBInput_2 main ] stop
+ * [tMongoDBInput_6 main ] stop
  */
 	
 	/**
-	 * [tDBInput_2 process_data_begin ] start
+	 * [tMongoDBInput_6 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tDBInput_2";
+	currentComponent="tMongoDBInput_6";
 
 	
 
@@ -10443,7 +10319,7 @@ row24Struct row24_tmp = new row24Struct();
 
 
 /**
- * [tDBInput_2 process_data_begin ] stop
+ * [tMongoDBInput_6 process_data_begin ] stop
  */
 
 	
@@ -10459,13 +10335,13 @@ row24Struct row24_tmp = new row24Struct();
 
 	
 
-			//row22
-			//row22
+			//row8
+			//row8
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("row22"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row8"+iterateId,1, 1);
 				} 
 			
 
@@ -10483,35 +10359,35 @@ row24Struct row24_tmp = new row24Struct();
 		
 
 				///////////////////////////////////////////////
-				// Starting Lookup Table "row8" 
+				// Starting Lookup Table "row22" 
 				///////////////////////////////////////////////
 
 
 				
 				
                             
- 					    boolean forceLooprow8 = false;
+ 					    boolean forceLooprow22 = false;
        		  	    	
        		  	    	
- 							row8Struct row8ObjectFromLookup = null;
+ 							row22Struct row22ObjectFromLookup = null;
                           
 		           		  	if(!rejectedInnerJoin_tMap_5) { // G_TM_M_020
 
 								
 								hasCasePrimitiveKeyWithNull_tMap_5 = false;
 								
-                        		    		row8HashKey.hash = row22.hash ;
+                        		    		row22HashKey.hash = row8.hash ;
                         		    		
 
 								
-		                        	row8HashKey.hashCodeDirty = true;
+		                        	row22HashKey.hashCodeDirty = true;
                         		
 	  					
 	  							
 			  					
 			  					
 	  					
-		  							tHash_Lookup_row8.lookup( row8HashKey );
+		  							tHash_Lookup_row22.lookup( row22HashKey );
 
 	  							
 
@@ -10519,7 +10395,7 @@ row24Struct row24_tmp = new row24Struct();
 
  								
 								  
-								  if(!tHash_Lookup_row8.hasNext()) { // G_TM_M_090
+								  if(!tHash_Lookup_row22.hasNext()) { // G_TM_M_090
 
   								
 		  				
@@ -10540,30 +10416,30 @@ row24Struct row24_tmp = new row24Struct();
 							} // G_TM_M_020
 			           		  	  
 							
-				           		if(tHash_Lookup_row8 != null && tHash_Lookup_row8.getCount(row8HashKey) > 1) { // G 071
+				           		if(tHash_Lookup_row22 != null && tHash_Lookup_row22.getCount(row22HashKey) > 1) { // G 071
 			  							
 			  						
 									 		
-									//System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row8' and it contains more one result from keys :  row8.hash = '" + row8HashKey.hash + "'");
+									//System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row22' and it contains more one result from keys :  row22.hash = '" + row22HashKey.hash + "'");
 								} // G 071
 							
 
-							row8Struct row8 = null;
+							row22Struct row22 = null;
                     		  	 
 							   
                     		  	 
-	       		  	    	row8Struct fromLookup_row8 = null;
-							row8 = row8Default;
+	       		  	    	row22Struct fromLookup_row22 = null;
+							row22 = row22Default;
 										 
 							
 								 
 							
 							
-								if (tHash_Lookup_row8 !=null && tHash_Lookup_row8.hasNext()) { // G 099
+								if (tHash_Lookup_row22 !=null && tHash_Lookup_row22.hasNext()) { // G 099
 								
 							
 								
-								fromLookup_row8 = tHash_Lookup_row8.next();
+								fromLookup_row22 = tHash_Lookup_row22.next();
 
 							
 							
@@ -10571,8 +10447,8 @@ row24Struct row24_tmp = new row24Struct();
 							
 							
 
-							if(fromLookup_row8 != null) {
-								row8 = fromLookup_row8;
+							if(fromLookup_row22 != null) {
+								row22 = fromLookup_row22;
 							}
 							
 							
@@ -10602,7 +10478,7 @@ if(!rejectedInnerJoin_tMap_5 ) {
 // # Output reject table : 'row24'
 // # Filter conditions 
 if( rejectedInnerJoin_tMap_5 ) {
-row24_tmp.hash = row22.hash;
+row24_tmp.hash = row8.hash;
 row24 = row24_tmp;
 } // closing filter/reject
 // ###############################
@@ -10774,31 +10650,11 @@ if(row24 != null) {
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row21", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("If1", 3, 0);
-					}           			
-				
-					if(execStat){				
 	       				runStat.updateStatOnConnection("row19", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row12", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row1", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row5", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row20", 3, 0);
+	       				runStat.updateStatOnConnection("row7", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -10810,15 +10666,31 @@ if(row24 != null) {
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row9", 3, 0);
+	       				runStat.updateStatOnConnection("row20", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row7", 3, 0);
+	       				runStat.updateStatOnConnection("row5", 3, 0);
 					}           			
 				
 					if(execStat){				
 	       				runStat.updateStatOnConnection("row18", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row12", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row1", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row21", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("If1", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -10826,7 +10698,6 @@ if(row24 != null) {
 					//Thread.sleep(1000);
 				}				
 			
-
 
 
 
@@ -11384,52 +11255,6 @@ row19Struct row19_tmp = new row19Struct();
 
 	
 	/**
-	 * [tFlowMeter_13 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tFlowMeter_13", false);
-		start_Hash.put("tFlowMeter_13", System.currentTimeMillis());
-		
-	
-	currentComponent="tFlowMeter_13";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tFlowMeter_13 = 0;
-		
-    	class BytesLimit65535_tFlowMeter_13{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tFlowMeter_13().limitLog4jByte();
-
-    int count_tFlowMeter_13 = 0; 
- 
-
-
-
-/**
- * [tFlowMeter_13 begin ] stop
- */
-
-
-
-	
-	/**
 	 * [tExtractFields_1 begin ] start
 	 */
 
@@ -11489,18 +11314,18 @@ row19Struct row19_tmp = new row19Struct();
 
 	
 	/**
-	 * [tMap_1 begin ] start
+	 * [tFlowMeter_29 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tMap_1", false);
-		start_Hash.put("tMap_1", System.currentTimeMillis());
+		ok_Hash.put("tFlowMeter_29", false);
+		start_Hash.put("tFlowMeter_29", System.currentTimeMillis());
 		
 	
-	currentComponent="tMap_1";
+	currentComponent="tFlowMeter_29";
 
 	
 			if (execStat) {
@@ -11512,56 +11337,23 @@ row19Struct row19_tmp = new row19Struct();
 			} 
 
 		
-		int tos_count_tMap_1 = 0;
+		int tos_count_tFlowMeter_29 = 0;
 		
-    	class BytesLimit65535_tMap_1{
+    	class BytesLimit65535_tFlowMeter_29{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tMap_1().limitLog4jByte();
+        new BytesLimit65535_tFlowMeter_29().limitLog4jByte();
 
-
-
-
-// ###############################
-// # Lookup's keys initialization
-// ###############################        
-
-// ###############################
-// # Vars initialization
-class  Var__tMap_1__Struct  {
-}
-Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
-// ###############################
-
-// ###############################
-// # Outputs initialization
-row7Struct row7_tmp = new row7Struct();
-// ###############################
-
-        
-        
-
-
-
-        
-
-
-
-
-
-
-
-
-
+    int count_tFlowMeter_29 = 0; 
  
 
 
 
 /**
- * [tMap_1 begin ] stop
+ * [tFlowMeter_29 begin ] stop
  */
 
 
@@ -11714,7 +11506,6 @@ row7Struct row7_tmp = new row7Struct();
 				}
 				DBObjectInputUtil_tMongoDBInput_1 dbObjectInputUtil_tMongoDBInput_1=new DBObjectInputUtil_tMongoDBInput_1();
 				java.util.Map<String, String> pathMap_tMongoDBInput_1=new java.util.HashMap<String, String>();
-				pathMap_tMongoDBInput_1.put("hash","file");
 				pathMap_tMongoDBInput_1.put("fields","");
 
 						
@@ -11722,12 +11513,6 @@ row7Struct row7_tmp = new row7Struct();
 				org.bson.Document o_tMongoDBInput_1 = cursor_tMongoDBInput_1.next();
 				nb_line_tMongoDBInput_1++;
 				Object valueObj_tMongoDBInput_1=null;
-                    valueObj_tMongoDBInput_1=dbObjectInputUtil_tMongoDBInput_1.getValue(pathMap_tMongoDBInput_1.get("hash"),"hash",o_tMongoDBInput_1);
-				if(valueObj_tMongoDBInput_1!=null && valueObj_tMongoDBInput_1.toString().length() > 0) {
-					row1.hash = valueObj_tMongoDBInput_1.toString();
-				}else{
-					row1.hash = null;
-				}
                     valueObj_tMongoDBInput_1=dbObjectInputUtil_tMongoDBInput_1.getValue(pathMap_tMongoDBInput_1.get("fields"),"fields",o_tMongoDBInput_1);
 				row1.fields = valueObj_tMongoDBInput_1;
 
@@ -11783,14 +11568,14 @@ row7Struct row7_tmp = new row7Struct();
 
 	
 	/**
-	 * [tMap_1 main ] start
+	 * [tFlowMeter_29 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMap_1";
+	currentComponent="tFlowMeter_29";
 
 	
 
@@ -11806,64 +11591,26 @@ row7Struct row7_tmp = new row7Struct();
 
 		
 
-		
-		
-		boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
-		
-        // ###############################
-        // # Input tables (lookups)
-		  boolean rejectedInnerJoin_tMap_1 = false;
-		  boolean mainRowRejected_tMap_1 = false;
-            				    								  
-		// ###############################
-        { // start of Var scope
-        
-	        // ###############################
-        	// # Vars tables
-        
-Var__tMap_1__Struct Var = Var__tMap_1;// ###############################
-        // ###############################
-        // # Output tables
-
-row7 = null;
-
-
-// # Output table : 'row7'
-row7_tmp.fields = row1.fields ;
-row7 = row7_tmp;
-// ###############################
-
-} // end of Var scope
-
-rejectedInnerJoin_tMap_1 = false;
-
-
-
-
-
-
-
-
-
-
+    count_tFlowMeter_29++; 
  
+     row7 = row1;
 
 
-	tos_count_tMap_1++;
+	tos_count_tFlowMeter_29++;
 
 /**
- * [tMap_1 main ] stop
+ * [tFlowMeter_29 main ] stop
  */
 	
 	/**
-	 * [tMap_1 process_data_begin ] start
+	 * [tFlowMeter_29 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMap_1";
+	currentComponent="tFlowMeter_29";
 
 	
 
@@ -11872,12 +11619,8 @@ rejectedInnerJoin_tMap_1 = false;
 
 
 /**
- * [tMap_1 process_data_begin ] stop
+ * [tFlowMeter_29 process_data_begin ] stop
  */
-// Start of branch "row7"
-if(row7 != null) { 
-
-
 
 	
 	/**
@@ -11904,9 +11647,9 @@ if(row7 != null) {
 
 		
     List<org.bson.Document> doc_tExtractFields_1 = (List<org.bson.Document>) row7.fields;
-    row9.businessKey = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", context.getBUSINESS_KEY());
-    row9.customerName = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "customerName");
-    row9.locality = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "locality");
+    row5.businessKey = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", context.getBUSINESS_KEY());
+    row5.customerName = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "customerName");
+    row5.locality = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "locality");
     nb_line_tExtractFields_1++;
 
  
@@ -11937,66 +11680,10 @@ if(row7 != null) {
 /**
  * [tExtractFields_1 process_data_begin ] stop
  */
-// Start of branch "row9"
-if(row9 != null) { 
+// Start of branch "row5"
+if(row5 != null) { 
 
 
-
-	
-	/**
-	 * [tFlowMeter_13 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFlowMeter_13";
-
-	
-
-			//row9
-			//row9
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row9"+iterateId,1, 1);
-				} 
-			
-
-		
-
-    count_tFlowMeter_13++; 
- 
-     row5 = row9;
-
-
-	tos_count_tFlowMeter_13++;
-
-/**
- * [tFlowMeter_13 main ] stop
- */
-	
-	/**
-	 * [tFlowMeter_13 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFlowMeter_13";
-
-	
-
- 
-
-
-
-/**
- * [tFlowMeter_13 process_data_begin ] stop
- */
 
 	
 	/**
@@ -12996,30 +12683,7 @@ operation_finder_tAggregateRow_1.ServierCode = row21.ServierCode;
  * [tMap_4 process_data_end ] stop
  */
 
-
-
-	
-	/**
-	 * [tFlowMeter_13 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFlowMeter_13";
-
-	
-
- 
-
-
-
-/**
- * [tFlowMeter_13 process_data_end ] stop
- */
-
-} // End of branch "row9"
+} // End of branch "row5"
 
 
 
@@ -13045,21 +12709,18 @@ operation_finder_tAggregateRow_1.ServierCode = row21.ServierCode;
  * [tExtractFields_1 process_data_end ] stop
  */
 
-} // End of branch "row7"
-
-
 
 
 	
 	/**
-	 * [tMap_1 process_data_end ] start
+	 * [tFlowMeter_29 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMap_1";
+	currentComponent="tFlowMeter_29";
 
 	
 
@@ -13068,7 +12729,7 @@ operation_finder_tAggregateRow_1.ServierCode = row21.ServierCode;
 
 
 /**
- * [tMap_1 process_data_end ] stop
+ * [tFlowMeter_29 process_data_end ] stop
  */
 
 
@@ -13124,25 +12785,18 @@ end_Hash.put("tMongoDBInput_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tMap_1 end ] start
+	 * [tFlowMeter_29 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMap_1";
+	currentComponent="tFlowMeter_29";
 
 	
 
-
-// ###############################
-// # Lookup hashes releasing
-// ###############################      
-
-
-
-
+	tFlowMeterCatcher_1.addMessage("Number of records read", new Integer(count_tFlowMeter_29), "null", "", "tFlowMeter_29");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -13152,14 +12806,14 @@ end_Hash.put("tMongoDBInput_1", System.currentTimeMillis());
 		
  
 
-ok_Hash.put("tMap_1", true);
-end_Hash.put("tMap_1", System.currentTimeMillis());
+ok_Hash.put("tFlowMeter_29", true);
+end_Hash.put("tFlowMeter_29", System.currentTimeMillis());
 
 
 
 
 /**
- * [tMap_1 end ] stop
+ * [tFlowMeter_29 end ] stop
  */
 
 	
@@ -13194,39 +12848,6 @@ end_Hash.put("tExtractFields_1", System.currentTimeMillis());
 
 /**
  * [tExtractFields_1 end ] stop
- */
-
-	
-	/**
-	 * [tFlowMeter_13 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFlowMeter_13";
-
-	
-
-	tFlowMeterCatcher_1.addMessage("row9", new Integer(count_tFlowMeter_13), "null", "", "tFlowMeter_13");
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row9"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tFlowMeter_13", true);
-end_Hash.put("tFlowMeter_13", System.currentTimeMillis());
-
-
-
-
-/**
- * [tFlowMeter_13 end ] stop
  */
 
 	
@@ -14023,7 +13644,7 @@ end_Hash.put("tAggregateRow_1_AGGIN", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("row12", new Integer(count_tFlowMeter_22), "null", "", "tFlowMeter_22");
+	tFlowMeterCatcher_1.addMessage("Number of records integrated", new Integer(count_tFlowMeter_22), "null", "", "tFlowMeter_22");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -14190,9 +13811,6 @@ end_Hash.put("tFileOutputExcel_1", System.currentTimeMillis());
 
 
 
-
-
-
 						if(execStat){
 							runStat.updateStatOnConnection("iterate1", 2, "exec" + NB_ITERATE_tMongoDBInput_1);
 						}				
@@ -14275,14 +13893,14 @@ end_Hash.put("tFileOutputExcel_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tDBInput_2 process_data_end ] start
+	 * [tMongoDBInput_6 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tDBInput_2";
+	currentComponent="tMongoDBInput_6";
 
 	
 
@@ -14291,37 +13909,35 @@ end_Hash.put("tFileOutputExcel_1", System.currentTimeMillis());
 
 
 /**
- * [tDBInput_2 process_data_end ] stop
+ * [tMongoDBInput_6 process_data_end ] stop
  */
 	
 	/**
-	 * [tDBInput_2 end ] start
+	 * [tMongoDBInput_6 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tDBInput_2";
+	currentComponent="tMongoDBInput_6";
 
 	
 
-	}
-}finally{
-	stmt_tDBInput_2.close();
+		}
+		
+globalMap.put("tMongoDBInput_6_NB_LINE", nb_line_tMongoDBInput_6);
 
-}
-globalMap.put("tDBInput_2_NB_LINE",nb_line_tDBInput_2);
  
 
-ok_Hash.put("tDBInput_2", true);
-end_Hash.put("tDBInput_2", System.currentTimeMillis());
+ok_Hash.put("tMongoDBInput_6", true);
+end_Hash.put("tMongoDBInput_6", System.currentTimeMillis());
 
 
 
 
 /**
- * [tDBInput_2 end ] stop
+ * [tMongoDBInput_6 end ] stop
  */
 
 	
@@ -14340,10 +13956,10 @@ end_Hash.put("tDBInput_2", System.currentTimeMillis());
 
 // ###############################
 // # Lookup hashes releasing
-					if(tHash_Lookup_row8 != null) {
-						tHash_Lookup_row8.endGet();
+					if(tHash_Lookup_row22 != null) {
+						tHash_Lookup_row22.endGet();
 					}
-					globalMap.remove( "tHash_Lookup_row8" );
+					globalMap.remove( "tHash_Lookup_row22" );
 
 					
 					
@@ -14356,7 +13972,7 @@ end_Hash.put("tDBInput_2", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row22"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row8"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -14385,7 +14001,7 @@ end_Hash.put("tMap_5", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("row24", new Integer(count_tFlowMeter_24), "null", "", "tFlowMeter_24");
+	tFlowMeterCatcher_1.addMessage("Number of files integrated", new Integer(count_tFlowMeter_24), "null", "", "tFlowMeter_24");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -14484,20 +14100,20 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 					     			globalMap.remove("tHash_Lookup_row3"); 
 				     			
 					     			//free memory for "tMap_5"
-					     			globalMap.remove("tHash_Lookup_row8"); 
+					     			globalMap.remove("tHash_Lookup_row22"); 
 				     			
 				try{
 					
 	
 	/**
-	 * [tDBInput_2 finally ] start
+	 * [tMongoDBInput_6 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tDBInput_2";
+	currentComponent="tMongoDBInput_6";
 
 	
 
@@ -14506,7 +14122,7 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 
 /**
- * [tDBInput_2 finally ] stop
+ * [tMongoDBInput_6 finally ] stop
  */
 
 	
@@ -14595,14 +14211,14 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tMap_1 finally ] start
+	 * [tFlowMeter_29 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMap_1";
+	currentComponent="tFlowMeter_29";
 
 	
 
@@ -14611,7 +14227,7 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 
 /**
- * [tMap_1 finally ] stop
+ * [tFlowMeter_29 finally ] stop
  */
 
 	
@@ -14633,27 +14249,6 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 /**
  * [tExtractFields_1 finally ] stop
- */
-
-	
-	/**
-	 * [tFlowMeter_13 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFlowMeter_13";
-
-	
-
- 
-
-
-
-/**
- * [tFlowMeter_13 finally ] stop
  */
 
 	
@@ -14869,9 +14464,6 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 
 
-
-
-
 				}catch(java.lang.Exception e){	
 					//ignore
 				}catch(java.lang.Error error){
@@ -14881,7 +14473,7 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tDBInput_2_SUBPROCESS_STATE", 1);
+		globalMap.put("tMongoDBInput_6_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -14983,6 +14575,8 @@ java.io.InputStream retIS_tFileFetch_1 = null;
 		((org.apache.commons.httpclient.methods.PostMethod)method_tFileFetch_1).setRequestEntity(new org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity(parts_tFileFetch_1, method_tFileFetch_1.getParams()));
 	
 			method_tFileFetch_1.addRequestHeader("Authorization",context.getDEEPSEA_AUTH_TOKEN());
+		
+			method_tFileFetch_1.addRequestHeader("File-Mode","MERGE");
 		
 	boolean isContinue_tFileFetch_1 = true;
 	int status_tFileFetch_1;
@@ -15140,7 +14734,7 @@ end_Hash.put("tFileFetch_1", System.currentTimeMillis());
 	
 
 
-public static class row8Struct implements routines.system.IPersistableComparableLookupRow<row8Struct> {
+public static class row22Struct implements routines.system.IPersistableComparableLookupRow<row22Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 	protected static final int DEFAULT_HASHCODE = 1;
@@ -15180,7 +14774,7 @@ public static class row8Struct implements routines.system.IPersistableComparable
 		if (this == obj) return true;
 		if (obj == null) return false;
 		if (getClass() != obj.getClass()) return false;
-		final row8Struct other = (row8Struct) obj;
+		final row22Struct other = (row22Struct) obj;
 		
 						if (this.hash == null) {
 							if (other.hash != null)
@@ -15194,13 +14788,13 @@ public static class row8Struct implements routines.system.IPersistableComparable
 		return true;
     }
 
-	public void copyDataTo(row8Struct other) {
+	public void copyDataTo(row22Struct other) {
 
 		other.hash = this.hash;
 	            
 	}
 
-	public void copyKeysDataTo(row8Struct other) {
+	public void copyKeysDataTo(row22Struct other) {
 
 		other.hash = this.hash;
 	            	
@@ -15325,7 +14919,7 @@ public static class row8Struct implements routines.system.IPersistableComparable
     /**
      * Compare keys
      */
-    public int compareTo(row8Struct other) {
+    public int compareTo(row22Struct other) {
 
 		int returnValue = -1;
 		
@@ -15362,8 +14956,8 @@ public static class row8Struct implements routines.system.IPersistableComparable
 
 
 }
-public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tMongoDBInput_6_SUBPROCESS_STATE", 0);
+public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tDBInput_2_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -15385,58 +14979,58 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
 
 
 
-		row8Struct row8 = new row8Struct();
+		row22Struct row22 = new row22Struct();
 
 
 
 
 	
 	/**
-	 * [tAdvancedHash_row8 begin ] start
+	 * [tAdvancedHash_row22 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tAdvancedHash_row8", false);
-		start_Hash.put("tAdvancedHash_row8", System.currentTimeMillis());
+		ok_Hash.put("tAdvancedHash_row22", false);
+		start_Hash.put("tAdvancedHash_row22", System.currentTimeMillis());
 		
 	
-	currentComponent="tAdvancedHash_row8";
+	currentComponent="tAdvancedHash_row22";
 
 	
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row22" + iterateId, 0, 0);
 					
 				}
 			} 
 
 		
-		int tos_count_tAdvancedHash_row8 = 0;
+		int tos_count_tAdvancedHash_row22 = 0;
 		
-    	class BytesLimit65535_tAdvancedHash_row8{
+    	class BytesLimit65535_tAdvancedHash_row22{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tAdvancedHash_row8().limitLog4jByte();
+        new BytesLimit65535_tAdvancedHash_row22().limitLog4jByte();
 
-			   		// connection name:row8
-			   		// source node:tMongoDBInput_6 - inputs:(after_tDBInput_2) outputs:(row8,row8) | target node:tAdvancedHash_row8 - inputs:(row8) outputs:()
-			   		// linked node: tMap_5 - inputs:(row22,row8) outputs:(row24)
+			   		// connection name:row22
+			   		// source node:tDBInput_2 - inputs:(after_tMongoDBInput_6) outputs:(row22,row22) | target node:tAdvancedHash_row22 - inputs:(row22) outputs:()
+			   		// linked node: tMap_5 - inputs:(row8,row22) outputs:(row24)
 			   
-			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row8 = 
+			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row22 = 
 			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
 			   			
 			   
-	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row8Struct> tHash_Lookup_row8 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
-	   						<row8Struct>getLookup(matchingModeEnum_row8);
+	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row22Struct> tHash_Lookup_row22 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
+	   						<row22Struct>getLookup(matchingModeEnum_row22);
 	   						   
-		   	   	   globalMap.put("tHash_Lookup_row8", tHash_Lookup_row8);
+		   	   	   globalMap.put("tHash_Lookup_row22", tHash_Lookup_row22);
 		   	   	   
 				
            
@@ -15446,155 +15040,70 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
 
 
 /**
- * [tAdvancedHash_row8 begin ] stop
+ * [tAdvancedHash_row22 begin ] stop
  */
 
 
 
 	
 	/**
-	 * [tMongoDBInput_6 begin ] start
+	 * [tDBInput_2 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tMongoDBInput_6", false);
-		start_Hash.put("tMongoDBInput_6", System.currentTimeMillis());
+		ok_Hash.put("tDBInput_2", false);
+		start_Hash.put("tDBInput_2", System.currentTimeMillis());
 		
 	
-	currentComponent="tMongoDBInput_6";
+	currentComponent="tDBInput_2";
 
 	
-		int tos_count_tMongoDBInput_6 = 0;
+		int tos_count_tDBInput_2 = 0;
 		
-    	class BytesLimit65535_tMongoDBInput_6{
+    	class BytesLimit65535_tDBInput_2{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tMongoDBInput_6().limitLog4jByte();
-
-	int nb_line_tMongoDBInput_6 = 0;
+        new BytesLimit65535_tDBInput_2().limitLog4jByte();
 	
-		
-		
-			com.mongodb.MongoClient mongo_tMongoDBInput_6=null;
-			com.mongodb.client.MongoDatabase db_tMongoDBInput_6=null;
-		
+    
+	
+		    int nb_line_tDBInput_2 = 0;
+		    java.sql.Connection conn_tDBInput_2 = null;
+		        conn_tDBInput_2 = (java.sql.Connection)globalMap.get("conn_tDBConnection_1");
+				
+		    
+			java.sql.Statement stmt_tDBInput_2 = conn_tDBInput_2.createStatement();
 
+		    String dbquery_tDBInput_2 = "SELECT DISTINCT\n	hash\nFROM\n	" + globalMap.get("HUB_TABLE2") + " as a inner join " + globalMap.get("LINK_TABLES") + " as b on a.id = b.hub_id2\nWHERE\n	a.source='" + context.getSOURCE2() + "'";
 			
-			
-				
-				
-				mongo_tMongoDBInput_6=(com.mongodb.MongoClient)globalMap.get("mongo_tMongoDBConnection_1");
-				db_tMongoDBInput_6 = (com.mongodb.client.MongoDatabase) globalMap.get("db_tMongoDBConnection_1");
-				
 
+            	globalMap.put("tDBInput_2_QUERY",dbquery_tDBInput_2);
+		    java.sql.ResultSet rs_tDBInput_2 = null;
 
-				
-				
-					com.mongodb.client.MongoCollection<org.bson.Document> coll_tMongoDBInput_6 = db_tMongoDBInput_6.getCollection("transactions.files");
-				
-				
-				
-				try{
-					// Add warning if an index is not in the query.
-					boolean needIndexWarning = true;
-					String indexList = "";
+		    try {
+		    	rs_tDBInput_2 = stmt_tDBInput_2.executeQuery(dbquery_tDBInput_2);
+		    	java.sql.ResultSetMetaData rsmd_tDBInput_2 = rs_tDBInput_2.getMetaData();
+		    	int colQtyInRs_tDBInput_2 = rsmd_tDBInput_2.getColumnCount();
+
+		    String tmpContent_tDBInput_2 = null;
+		    
+		    
+		    while (rs_tDBInput_2.next()) {
+		        nb_line_tDBInput_2++;
+		        
+							if(colQtyInRs_tDBInput_2 < 1) {
+								row22.hash = null;
+							} else {
+	                         		
+        	row22.hash = routines.system.JDBCUtil.getString(rs_tDBInput_2, 1, false);
+		                    }
 					
-					for (com.mongodb.DBObject index: coll_tMongoDBInput_6.listIndexes(com.mongodb.DBObject.class)) {
-					
-	                
-	                    for (String key: ((com.mongodb.DBObject)index.get("key")).keySet()) {
-	                        // The regexp is:
-	                        // - contain the db DBcolumnName between two backslashed quotes
-	                        // - is followed at some point by a colon
-	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {_id: 1}").matches(".*" + key + "[^,]*:.*")) {
-	                            // We have an index, do not print error message
-	                            needIndexWarning = false;
-	                        } else {
-	                            // This index is not in the query, add it into the indexList
-	                            indexList += ", " + key;
-	                        }
-	                    }
-	                }
-	                if ((!"".equals(indexList)) && (needIndexWarning)) {
-	                    
-	                        System.err.println("tMongoDBInput_6 - The query does not contain any reference an index.  [" + indexList.substring(1) + " ]");
-	                        
-	                }
-	            }catch(com.mongodb.MongoException e){
-	            	// caught an exception after issuing the getIndexInfo()
-	            	// don't fail the whole job
-	            	// maybe due to authorization
-	            }
-
-	                
-	                
-					org.bson.Document myQuery_tMongoDBInput_6 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {_id: 1}");
-	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_6 = coll_tMongoDBInput_6.find(myQuery_tMongoDBInput_6).noCursorTimeout(false);
-					
-	                
-		  			
-		  			
-
-		  			 
-	                
-				
-				class DBObjectInputUtil_tMongoDBInput_6{
-					// Get the node value in embedded document, 
-					//If have no embedded document get root document node.
-					
-					public Object getValue(String parentNode,String currentName,org.bson.Document dbObject){
-						Object value=null;
-						if(dbObject==null){
-							return null;
-						}
-						if (parentNode == null || "".equals(parentNode)) {
-						    if ("*".equals(currentName)) {
-						        value = dbObject;
-						    } else if (dbObject.get(currentName)!=null){
-								value=dbObject.get(currentName);
-							}
-						}else{
-							String objNames[] = objNames = parentNode.split("\\.");
-							org.bson.Document currentObj=dbObject;
-							for(int i=0;i<objNames.length;i++){
-								currentObj=(org.bson.Document)currentObj.get(objNames[i]);
-								if(currentObj==null){
-									break;
-								}
-							}
-							if ("*".equals(currentName)) {
-                                value = currentObj;
-                            } else if(currentObj!=null){
-								value=currentObj.get(currentName);
-							}
-						}
-						return value;
-					}
-				}
-				DBObjectInputUtil_tMongoDBInput_6 dbObjectInputUtil_tMongoDBInput_6=new DBObjectInputUtil_tMongoDBInput_6();
-				java.util.Map<String, String> pathMap_tMongoDBInput_6=new java.util.HashMap<String, String>();
-				pathMap_tMongoDBInput_6.put("hash","");
-
-						
-					com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_6 = fi_tMongoDBInput_6.iterator();
-						
-				while (cursor_tMongoDBInput_6.hasNext()){
-				org.bson.Document o_tMongoDBInput_6 = cursor_tMongoDBInput_6.next();
-				nb_line_tMongoDBInput_6++;
-				Object valueObj_tMongoDBInput_6=null;
-                    valueObj_tMongoDBInput_6=dbObjectInputUtil_tMongoDBInput_6.getValue(pathMap_tMongoDBInput_6.get("hash"),"hash",o_tMongoDBInput_6);
-				if(valueObj_tMongoDBInput_6!=null && valueObj_tMongoDBInput_6.toString().length() > 0) {
-					row8.hash = valueObj_tMongoDBInput_6.toString();
-				}else{
-					row8.hash = null;
-				}
 
 
  
@@ -15602,39 +15111,39 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
 
 
 /**
- * [tMongoDBInput_6 begin ] stop
+ * [tDBInput_2 begin ] stop
  */
 	
 	/**
-	 * [tMongoDBInput_6 main ] start
+	 * [tDBInput_2 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMongoDBInput_6";
+	currentComponent="tDBInput_2";
 
 	
 
  
 
 
-	tos_count_tMongoDBInput_6++;
+	tos_count_tDBInput_2++;
 
 /**
- * [tMongoDBInput_6 main ] stop
+ * [tDBInput_2 main ] stop
  */
 	
 	/**
-	 * [tMongoDBInput_6 process_data_begin ] start
+	 * [tDBInput_2 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMongoDBInput_6";
+	currentComponent="tDBInput_2";
 
 	
 
@@ -15643,29 +15152,29 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
 
 
 /**
- * [tMongoDBInput_6 process_data_begin ] stop
+ * [tDBInput_2 process_data_begin ] stop
  */
 
 	
 	/**
-	 * [tAdvancedHash_row8 main ] start
+	 * [tAdvancedHash_row22 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tAdvancedHash_row8";
+	currentComponent="tAdvancedHash_row22";
 
 	
 
-			//row8
-			//row8
+			//row22
+			//row22
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("row8"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row22"+iterateId,1, 1);
 				} 
 			
 
@@ -15675,12 +15184,12 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
 			   
 			   
 
-					row8Struct row8_HashRow = new row8Struct();
+					row22Struct row22_HashRow = new row22Struct();
 		   	   	   
 				
-				row8_HashRow.hash = row8.hash;
+				row22_HashRow.hash = row22.hash;
 				
-			tHash_Lookup_row8.put(row8_HashRow);
+			tHash_Lookup_row22.put(row22_HashRow);
 			
             
 
@@ -15690,21 +15199,21 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
  
 
 
-	tos_count_tAdvancedHash_row8++;
+	tos_count_tAdvancedHash_row22++;
 
 /**
- * [tAdvancedHash_row8 main ] stop
+ * [tAdvancedHash_row22 main ] stop
  */
 	
 	/**
-	 * [tAdvancedHash_row8 process_data_begin ] start
+	 * [tAdvancedHash_row22 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tAdvancedHash_row8";
+	currentComponent="tAdvancedHash_row22";
 
 	
 
@@ -15713,18 +15222,18 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
 
 
 /**
- * [tAdvancedHash_row8 process_data_begin ] stop
+ * [tAdvancedHash_row22 process_data_begin ] stop
  */
 	
 	/**
-	 * [tAdvancedHash_row8 process_data_end ] start
+	 * [tAdvancedHash_row22 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tAdvancedHash_row8";
+	currentComponent="tAdvancedHash_row22";
 
 	
 
@@ -15733,21 +15242,21 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
 
 
 /**
- * [tAdvancedHash_row8 process_data_end ] stop
+ * [tAdvancedHash_row22 process_data_end ] stop
  */
 
 
 
 	
 	/**
-	 * [tMongoDBInput_6 process_data_end ] start
+	 * [tDBInput_2 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMongoDBInput_6";
+	currentComponent="tDBInput_2";
 
 	
 
@@ -15756,68 +15265,70 @@ public void tMongoDBInput_6Process(final java.util.Map<String, Object> globalMap
 
 
 /**
- * [tMongoDBInput_6 process_data_end ] stop
+ * [tDBInput_2 process_data_end ] stop
  */
 	
 	/**
-	 * [tMongoDBInput_6 end ] start
+	 * [tDBInput_2 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMongoDBInput_6";
+	currentComponent="tDBInput_2";
 
 	
 
-		}
-		
-globalMap.put("tMongoDBInput_6_NB_LINE", nb_line_tMongoDBInput_6);
+	}
+}finally{
+	stmt_tDBInput_2.close();
 
+}
+globalMap.put("tDBInput_2_NB_LINE",nb_line_tDBInput_2);
  
 
-ok_Hash.put("tMongoDBInput_6", true);
-end_Hash.put("tMongoDBInput_6", System.currentTimeMillis());
+ok_Hash.put("tDBInput_2", true);
+end_Hash.put("tDBInput_2", System.currentTimeMillis());
 
 
 
 
 /**
- * [tMongoDBInput_6 end ] stop
+ * [tDBInput_2 end ] stop
  */
 
 	
 	/**
-	 * [tAdvancedHash_row8 end ] start
+	 * [tAdvancedHash_row22 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tAdvancedHash_row8";
+	currentComponent="tAdvancedHash_row22";
 
 	
 
-tHash_Lookup_row8.endPut();
+tHash_Lookup_row22.endPut();
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row8"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row22"+iterateId,2, 0); 
 			 	}
 			}
 		
  
 
-ok_Hash.put("tAdvancedHash_row8", true);
-end_Hash.put("tAdvancedHash_row8", System.currentTimeMillis());
+ok_Hash.put("tAdvancedHash_row22", true);
+end_Hash.put("tAdvancedHash_row22", System.currentTimeMillis());
 
 
 
 
 /**
- * [tAdvancedHash_row8 end ] stop
+ * [tAdvancedHash_row22 end ] stop
  */
 
 
@@ -15845,14 +15356,14 @@ end_Hash.put("tAdvancedHash_row8", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tMongoDBInput_6 finally ] start
+	 * [tDBInput_2 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tMongoDBInput_6";
+	currentComponent="tDBInput_2";
 
 	
 
@@ -15861,19 +15372,19 @@ end_Hash.put("tAdvancedHash_row8", System.currentTimeMillis());
 
 
 /**
- * [tMongoDBInput_6 finally ] stop
+ * [tDBInput_2 finally ] stop
  */
 
 	
 	/**
-	 * [tAdvancedHash_row8 finally ] start
+	 * [tAdvancedHash_row22 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tAdvancedHash_row8";
+	currentComponent="tAdvancedHash_row22";
 
 	
 
@@ -15882,7 +15393,7 @@ end_Hash.put("tAdvancedHash_row8", System.currentTimeMillis());
 
 
 /**
- * [tAdvancedHash_row8 finally ] stop
+ * [tAdvancedHash_row22 finally ] stop
  */
 
 
@@ -15896,7 +15407,7 @@ end_Hash.put("tAdvancedHash_row8", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tMongoDBInput_6_SUBPROCESS_STATE", 1);
+		globalMap.put("tDBInput_2_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -15914,12 +15425,6 @@ public static class row3Struct implements routines.system.IPersistableComparable
 
 
 	
-			    public Integer id;
-
-				public Integer getId () {
-					return this.id;
-				}
-				
 			    public String businessKey;
 
 				public String getBusinessKey () {
@@ -15963,8 +15468,7 @@ public static class row3Struct implements routines.system.IPersistableComparable
 
 	public void copyDataTo(row3Struct other) {
 
-		other.id = this.id;
-	            other.businessKey = this.businessKey;
+		other.businessKey = this.businessKey;
 	            
 	}
 
@@ -15976,26 +15480,6 @@ public static class row3Struct implements routines.system.IPersistableComparable
 
 
 
-	private Integer readInteger(DataInputStream dis, ObjectInputStream ois) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-			intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, DataOutputStream dos, ObjectOutputStream oos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
 
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
@@ -16076,16 +15560,13 @@ public static class row3Struct implements routines.system.IPersistableComparable
 
 			int length = 0;
 		
-						this.id = readInteger(dis,ois);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
 
 		
 
         }
 
 		
+        	finally {}
 
     }
 
@@ -16096,11 +15577,8 @@ public static class row3Struct implements routines.system.IPersistableComparable
         try {
 
 		
-					writeInteger(this.id, dos, oos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
         	}
+        	finally {}
 
     }
 
@@ -16110,8 +15588,7 @@ public static class row3Struct implements routines.system.IPersistableComparable
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("id="+String.valueOf(id));
-		sb.append(",businessKey="+businessKey);
+		sb.append("businessKey="+businessKey);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -16221,7 +15698,7 @@ public void tDBInput_3Process(final java.util.Map<String, Object> globalMap) thr
         new BytesLimit65535_tAdvancedHash_row3().limitLog4jByte();
 
 			   		// connection name:row3
-			   		// source node:tDBInput_3 - inputs:(after_tDBInput_2) outputs:(row3,row3) | target node:tAdvancedHash_row3 - inputs:(row3) outputs:()
+			   		// source node:tDBInput_3 - inputs:(after_tMongoDBInput_6) outputs:(row3,row3) | target node:tAdvancedHash_row3 - inputs:(row3) outputs:()
 			   		// linked node: tMap_4 - inputs:(row5,row3) outputs:(row19)
 			   
 			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row3 = 
@@ -16281,7 +15758,7 @@ public void tDBInput_3Process(final java.util.Map<String, Object> globalMap) thr
 		    
 			java.sql.Statement stmt_tDBInput_3 = conn_tDBInput_3.createStatement();
 
-		    String dbquery_tDBInput_3 = "SELECT\n	id,\n	business_key\nFROM\n	" + globalMap.get("HUB_TABLE1") + "\nWHERE\n	source = '" + context.getSOURCE1() + "'";
+		    String dbquery_tDBInput_3 = "SELECT DISTINCT\n	business_key\nFROM\n	" + globalMap.get("HUB_TABLE1") + "\nWHERE\n	source = '" + context.getSOURCE1() + "'";
 			
 
             	globalMap.put("tDBInput_3_QUERY",dbquery_tDBInput_3);
@@ -16299,20 +15776,10 @@ public void tDBInput_3Process(final java.util.Map<String, Object> globalMap) thr
 		        nb_line_tDBInput_3++;
 		        
 							if(colQtyInRs_tDBInput_3 < 1) {
-								row3.id = null;
-							} else {
-		                          
-            if(rs_tDBInput_3.getObject(1) != null) {
-                row3.id = rs_tDBInput_3.getInt(1);
-            } else {
-                    row3.id = null;
-            }
-		                    }
-							if(colQtyInRs_tDBInput_3 < 2) {
 								row3.businessKey = null;
 							} else {
 	                         		
-        	row3.businessKey = routines.system.JDBCUtil.getString(rs_tDBInput_3, 2, false);
+        	row3.businessKey = routines.system.JDBCUtil.getString(rs_tDBInput_3, 1, false);
 		                    }
 					
 
@@ -16397,8 +15864,6 @@ public void tDBInput_3Process(final java.util.Map<String, Object> globalMap) thr
 
 					row3Struct row3_HashRow = new row3Struct();
 		   	   	   
-				
-				row3_HashRow.id = row3.id;
 				
 				row3_HashRow.businessKey = row3.businessKey;
 				
@@ -16638,12 +16103,6 @@ public static class row2Struct implements routines.system.IPersistableComparable
 
 
 	
-			    public Integer id;
-
-				public Integer getId () {
-					return this.id;
-				}
-				
 			    public String businessKey;
 
 				public String getBusinessKey () {
@@ -16693,8 +16152,7 @@ public static class row2Struct implements routines.system.IPersistableComparable
 
 	public void copyDataTo(row2Struct other) {
 
-		other.id = this.id;
-	            other.businessKey = this.businessKey;
+		other.businessKey = this.businessKey;
 	            other.geographyCode = this.geographyCode;
 	            
 	}
@@ -16707,26 +16165,6 @@ public static class row2Struct implements routines.system.IPersistableComparable
 
 
 
-	private Integer readInteger(DataInputStream dis, ObjectInputStream ois) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-			intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, DataOutputStream dos, ObjectOutputStream oos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
 
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
@@ -16831,8 +16269,6 @@ public static class row2Struct implements routines.system.IPersistableComparable
 
 			int length = 0;
 		
-						this.id = readInteger(dis,ois);
-					
 						this.geographyCode = readString(dis,ois);
 					
         	} catch (IOException e) {
@@ -16853,8 +16289,6 @@ public static class row2Struct implements routines.system.IPersistableComparable
         try {
 
 		
-					writeInteger(this.id, dos, oos);
-					
 						writeString(this.geographyCode, dos, oos);
 					
         	} catch (IOException e) {
@@ -16869,8 +16303,7 @@ public static class row2Struct implements routines.system.IPersistableComparable
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("id="+String.valueOf(id));
-		sb.append(",businessKey="+businessKey);
+		sb.append("businessKey="+businessKey);
 		sb.append(",geographyCode="+geographyCode);
 	    sb.append("]");
 
@@ -16981,7 +16414,7 @@ public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) thr
         new BytesLimit65535_tAdvancedHash_row2().limitLog4jByte();
 
 			   		// connection name:row2
-			   		// source node:tDBInput_1 - inputs:(after_tDBInput_2) outputs:(row2,row2) | target node:tAdvancedHash_row2 - inputs:(row2) outputs:()
+			   		// source node:tDBInput_1 - inputs:(after_tMongoDBInput_6) outputs:(row2,row2) | target node:tAdvancedHash_row2 - inputs:(row2) outputs:()
 			   		// linked node: tMap_2 - inputs:(row19,row2) outputs:(row20)
 			   
 			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row2 = 
@@ -17041,9 +16474,9 @@ public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) thr
 		    
 			java.sql.Statement stmt_tDBInput_1 = conn_tDBInput_1.createStatement();
 
-		    String dbquery_tDBInput_1 = "SELECT DISTINCT\n	A.id,\n	substring(A.business_key, 1, 2) AS business_key,	\n	A.business_key AS geography_code\nFROM\n	hub_g"
-+"eography A\n		INNER JOIN sat_geography B on B.hub_id = A.id\nWHERE\n	B.level=4 AND B.source = 'myanmar.master.geographyhier"
-+"archy.servier'";
+		    String dbquery_tDBInput_1 = "SELECT DISTINCT\n	substring(A.business_key, 1, 2) AS business_key,	\n	A.business_key AS geography_code\nFROM\n	hub_geograph"
++"y A\n		INNER JOIN sat_geography B on B.hub_id = A.id\nWHERE\n	B.level=4 AND B.source = 'myanmar.master.geographyhierarchy.s"
++"ervier'";
 			
 
             	globalMap.put("tDBInput_1_QUERY",dbquery_tDBInput_1);
@@ -17061,26 +16494,16 @@ public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) thr
 		        nb_line_tDBInput_1++;
 		        
 							if(colQtyInRs_tDBInput_1 < 1) {
-								row2.id = null;
-							} else {
-		                          
-            if(rs_tDBInput_1.getObject(1) != null) {
-                row2.id = rs_tDBInput_1.getInt(1);
-            } else {
-                    row2.id = null;
-            }
-		                    }
-							if(colQtyInRs_tDBInput_1 < 2) {
 								row2.businessKey = null;
 							} else {
 	                         		
-        	row2.businessKey = routines.system.JDBCUtil.getString(rs_tDBInput_1, 2, false);
+        	row2.businessKey = routines.system.JDBCUtil.getString(rs_tDBInput_1, 1, false);
 		                    }
-							if(colQtyInRs_tDBInput_1 < 3) {
+							if(colQtyInRs_tDBInput_1 < 2) {
 								row2.geographyCode = null;
 							} else {
 	                         		
-        	row2.geographyCode = routines.system.JDBCUtil.getString(rs_tDBInput_1, 3, false);
+        	row2.geographyCode = routines.system.JDBCUtil.getString(rs_tDBInput_1, 2, false);
 		                    }
 					
 
@@ -17165,8 +16588,6 @@ public void tDBInput_1Process(final java.util.Map<String, Object> globalMap) thr
 
 					row2Struct row2_HashRow = new row2Struct();
 		   	   	   
-				
-				row2_HashRow.id = row2.id;
 				
 				row2_HashRow.businessKey = row2.businessKey;
 				
@@ -17400,12 +16821,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 
 	
-			    public Integer id;
-
-				public Integer getId () {
-					return this.id;
-				}
-				
 			    public String name_en;
 
 				public String getName_en () {
@@ -17420,26 +16835,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 				
 
 
-	private Integer readInteger(ObjectInputStream dis) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-	    	intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
 
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
@@ -17479,8 +16874,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 
         		int length = 0;
 		
-						this.id = readInteger(dis);
-					
 					this.name_en = readString(dis);
 					
 					this.businessKey = readString(dis);
@@ -17503,10 +16896,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
         try {
 
 		
-					// Integer
-				
-						writeInteger(this.id,dos);
-					
 					// String
 				
 						writeString(this.name_en,dos);
@@ -17528,8 +16917,7 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("id="+String.valueOf(id));
-		sb.append(",name_en="+name_en);
+		sb.append("name_en="+name_en);
 		sb.append(",businessKey="+businessKey);
 	    sb.append("]");
 
@@ -17683,8 +17071,8 @@ public void tDBInput_4Process(final java.util.Map<String, Object> globalMap) thr
 		    
 			java.sql.Statement stmt_tDBInput_4 = conn_tDBInput_4.createStatement();
 
-		    String dbquery_tDBInput_4 = "SELECT DISTINCT\n	A.id,\n	B.name_en AS name_en,	\n	A.business_key AS business_key\nFROM\n	hub_customer A\n		INNER JOIN sat_cu"
-+"stomer B on B.hub_id = A.id\nWHERE\n	B.source = 'myanmar.master.customer.mega'";
+		    String dbquery_tDBInput_4 = "SELECT DISTINCT\n	B.name_en AS name_en,	\n	A.business_key AS business_key\nFROM\n	hub_customer A\n		INNER JOIN sat_customer "
++"B on B.hub_id = A.id\nWHERE\n	B.source = 'myanmar.master.customer.mega'";
 			
 
             	globalMap.put("tDBInput_4_QUERY",dbquery_tDBInput_4);
@@ -17702,26 +17090,16 @@ public void tDBInput_4Process(final java.util.Map<String, Object> globalMap) thr
 		        nb_line_tDBInput_4++;
 		        
 							if(colQtyInRs_tDBInput_4 < 1) {
-								row11.id = null;
-							} else {
-		                          
-            if(rs_tDBInput_4.getObject(1) != null) {
-                row11.id = rs_tDBInput_4.getInt(1);
-            } else {
-                    row11.id = null;
-            }
-		                    }
-							if(colQtyInRs_tDBInput_4 < 2) {
 								row11.name_en = null;
 							} else {
 	                         		
-        	row11.name_en = routines.system.JDBCUtil.getString(rs_tDBInput_4, 2, false);
+        	row11.name_en = routines.system.JDBCUtil.getString(rs_tDBInput_4, 1, false);
 		                    }
-							if(colQtyInRs_tDBInput_4 < 3) {
+							if(colQtyInRs_tDBInput_4 < 2) {
 								row11.businessKey = null;
 							} else {
 	                         		
-        	row11.businessKey = routines.system.JDBCUtil.getString(rs_tDBInput_4, 3, false);
+        	row11.businessKey = routines.system.JDBCUtil.getString(rs_tDBInput_4, 2, false);
 		                    }
 					
 
@@ -17802,7 +17180,6 @@ public void tDBInput_4Process(final java.util.Map<String, Object> globalMap) thr
 
 row11Struct row11_HashRow = new row11Struct();
 
-					row11_HashRow.id = row11.id;
 					row11_HashRow.name_en = row11.name_en;
 					row11_HashRow.businessKey = row11.businessKey;
 tHash_row11.put(row11_HashRow, row11_HashRow);
@@ -18035,12 +17412,6 @@ public static class row4Struct implements routines.system.IPersistableComparable
 
 
 	
-			    public Integer id;
-
-				public Integer getId () {
-					return this.id;
-				}
-				
 			    public String name_en;
 
 				public String getName_en () {
@@ -18090,8 +17461,7 @@ public static class row4Struct implements routines.system.IPersistableComparable
 
 	public void copyDataTo(row4Struct other) {
 
-		other.id = this.id;
-	            other.name_en = this.name_en;
+		other.name_en = this.name_en;
 	            other.businessKey = this.businessKey;
 	            
 	}
@@ -18104,26 +17474,6 @@ public static class row4Struct implements routines.system.IPersistableComparable
 
 
 
-	private Integer readInteger(DataInputStream dis, ObjectInputStream ois) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-			intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, DataOutputStream dos, ObjectOutputStream oos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
 
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
@@ -18228,8 +17578,6 @@ public static class row4Struct implements routines.system.IPersistableComparable
 
 			int length = 0;
 		
-						this.id = readInteger(dis,ois);
-					
 						this.businessKey = readString(dis,ois);
 					
         	} catch (IOException e) {
@@ -18250,8 +17598,6 @@ public static class row4Struct implements routines.system.IPersistableComparable
         try {
 
 		
-					writeInteger(this.id, dos, oos);
-					
 						writeString(this.businessKey, dos, oos);
 					
         	} catch (IOException e) {
@@ -18266,8 +17612,7 @@ public static class row4Struct implements routines.system.IPersistableComparable
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("id="+String.valueOf(id));
-		sb.append(",name_en="+name_en);
+		sb.append("name_en="+name_en);
 		sb.append(",businessKey="+businessKey);
 	    sb.append("]");
 
@@ -18378,7 +17723,7 @@ public void tDBInput_5Process(final java.util.Map<String, Object> globalMap) thr
         new BytesLimit65535_tAdvancedHash_row4().limitLog4jByte();
 
 			   		// connection name:row4
-			   		// source node:tDBInput_5 - inputs:(after_tDBInput_2) outputs:(row4,row4) | target node:tAdvancedHash_row4 - inputs:(row4) outputs:()
+			   		// source node:tDBInput_5 - inputs:(after_tMongoDBInput_6) outputs:(row4,row4) | target node:tAdvancedHash_row4 - inputs:(row4) outputs:()
 			   		// linked node: tMap_3 - inputs:(row10,row4) outputs:(row21)
 			   
 			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row4 = 
@@ -18438,8 +17783,8 @@ public void tDBInput_5Process(final java.util.Map<String, Object> globalMap) thr
 		    
 			java.sql.Statement stmt_tDBInput_5 = conn_tDBInput_5.createStatement();
 
-		    String dbquery_tDBInput_5 = "SELECT DISTINCT\n	A.id,\n	B.name_en AS name_en,	\n	A.business_key AS business_key\nFROM\n	hub_customer A\n		INNER JOIN sat_cu"
-+"stomer B on B.hub_id = A.id\nWHERE\n	B.source = '" + context.getSOURCE1() + "'";
+		    String dbquery_tDBInput_5 = "SELECT DISTINCT\n	B.name_en AS name_en,	\n	A.business_key AS business_key\nFROM\n	hub_customer A\n		INNER JOIN sat_customer "
++"B on B.hub_id = A.id\nWHERE\n	B.source = '" + context.getSOURCE1() + "'";
 			
 
             	globalMap.put("tDBInput_5_QUERY",dbquery_tDBInput_5);
@@ -18457,26 +17802,16 @@ public void tDBInput_5Process(final java.util.Map<String, Object> globalMap) thr
 		        nb_line_tDBInput_5++;
 		        
 							if(colQtyInRs_tDBInput_5 < 1) {
-								row4.id = null;
-							} else {
-		                          
-            if(rs_tDBInput_5.getObject(1) != null) {
-                row4.id = rs_tDBInput_5.getInt(1);
-            } else {
-                    row4.id = null;
-            }
-		                    }
-							if(colQtyInRs_tDBInput_5 < 2) {
 								row4.name_en = null;
 							} else {
 	                         		
-        	row4.name_en = routines.system.JDBCUtil.getString(rs_tDBInput_5, 2, false);
+        	row4.name_en = routines.system.JDBCUtil.getString(rs_tDBInput_5, 1, false);
 		                    }
-							if(colQtyInRs_tDBInput_5 < 3) {
+							if(colQtyInRs_tDBInput_5 < 2) {
 								row4.businessKey = null;
 							} else {
 	                         		
-        	row4.businessKey = routines.system.JDBCUtil.getString(rs_tDBInput_5, 3, false);
+        	row4.businessKey = routines.system.JDBCUtil.getString(rs_tDBInput_5, 2, false);
 		                    }
 					
 
@@ -18561,8 +17896,6 @@ public void tDBInput_5Process(final java.util.Map<String, Object> globalMap) thr
 
 					row4Struct row4_HashRow = new row4Struct();
 		   	   	   
-				
-				row4_HashRow.id = row4.id;
 				
 				row4_HashRow.name_en = row4.name_en;
 				
@@ -18801,7 +18134,7 @@ end_Hash.put("tAdvancedHash_row4", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Production";
+    public String contextStr = "Default";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -19069,18 +18402,18 @@ final Thread launchingThread = Thread.currentThread();
                 threadLocal.set(threadRunResultMap);
 
                 try {
-((java.util.Map) threadLocal.get()).put("errorCode", null);tDBInput_2Process(globalMap);
+((java.util.Map) threadLocal.get()).put("errorCode", null);tMongoDBInput_6Process(globalMap);
 if ( !"failure".equals(((java.util.Map)threadLocal.get()).get("status")) ) {
 ((java.util.Map) threadLocal.get()).put("status", "end");
 }
-}catch (TalendException e_tDBInput_2) {
-globalMap.put("tDBInput_2_SUBPROCESS_STATE", -1);
+}catch (TalendException e_tMongoDBInput_6) {
+globalMap.put("tMongoDBInput_6_SUBPROCESS_STATE", -1);
 
-e_tDBInput_2.printStackTrace();
+e_tMongoDBInput_6.printStackTrace();
 
-}catch (java.lang.Error e_tDBInput_2) {
-globalMap.put("tDBInput_2_SUBPROCESS_STATE", -1);
-((java.util.Map) threadLocal.get()).put("status", "failure");throw e_tDBInput_2;
+}catch (java.lang.Error e_tMongoDBInput_6) {
+globalMap.put("tMongoDBInput_6_SUBPROCESS_STATE", -1);
+((java.util.Map) threadLocal.get()).put("status", "failure");throw e_tMongoDBInput_6;
 
 }
                 finally {
@@ -19312,6 +18645,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     406816 characters generated by Talend Open Studio for Big Data 
- *     on the 3 December, 2018 11:37:16 PM AEDT
+ *     393247 characters generated by Talend Open Studio for Big Data 
+ *     on the 4 December, 2018 11:49:08 AM AEDT
  ************************************************************************************************/

@@ -14,7 +14,7 @@
   <name>DEEPSEA BUILD_MASTER_VAULT-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
-    <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
+    <talend.job.applyContextToChildren>true</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
@@ -27,9 +27,9 @@
     <talend.pigudf.groupid>org.example.deepsea.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.deepsea.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M </talend.job.jvmargs>
     <talend.project.branch></talend.project.branch>
-    <talend.job.context>Default</talend.job.context>
+    <talend.job.context>Production</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
