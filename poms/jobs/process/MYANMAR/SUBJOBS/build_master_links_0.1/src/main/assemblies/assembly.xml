@@ -208,6 +208,7 @@
 			<outputDirectory>${talend.job.name}</outputDirectory>
 			<includes>
 				<include>org.example.deepsea.job:dSendException</include>
+				<include>org.example.deepsea.job:CHECK_GEOGRAPHY_CUSTOMER_LINK</include>
 				<include>org.example.deepsea.job:SAL_MASTER</include>
 				<include>org.example.deepsea.job:LINK_MASTER_SALES_OBJECTIVE</include>
 				<include>org.example.deepsea.job:LINK_MASTER</include>

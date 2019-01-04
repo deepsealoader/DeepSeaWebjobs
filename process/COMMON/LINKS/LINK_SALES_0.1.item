@@ -405,7 +405,7 @@
     <elementParameter field="TEXT" name="COLLECTION" value="&quot;webjobs&quot;"/>
     <elementParameter field="CLOSED_LIST" name="QUERY_TYPE" value="FIND_QUERY"/>
     <elementParameter field="LABEL" name="NOTE_ISOLATION" value="Note : Surround String values in your query with single quotes&#xA;Note : If you are running on a Sharded Cluster, please make sure to include the shard key in the query."/>
-    <elementParameter field="MEMO" name="QUERY" value="&quot;{'name': '&quot; + context.getWEBJOB_NAME() + &quot;'}, {'_id':1}&quot;"/>
+    <elementParameter field="MEMO" name="QUERY" value="&quot;{'country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'),'name': '&quot; + context.getWEBJOB_NAME() + &quot;'}, {'_id':1}&quot;"/>
     <elementParameter field="TABLE" name="AGGREGATION_STAGES" show="false"/>
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
@@ -458,7 +458,7 @@
     <elementParameter field="TEXT" name="COLLECTION" value="&quot;collections&quot;"/>
     <elementParameter field="CLOSED_LIST" name="QUERY_TYPE" value="FIND_QUERY"/>
     <elementParameter field="LABEL" name="NOTE_ISOLATION" value="Note : Surround String values in your query with single quotes&#xA;Note : If you are running on a Sharded Cluster, please make sure to include the shard key in the query."/>
-    <elementParameter field="MEMO" name="QUERY" value="&quot;{'name': '&quot; + context.getCOLLECTION() + &quot;'}, {'_id':1}&quot;"/>
+    <elementParameter field="MEMO" name="QUERY" value="&quot;{'country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'),'name': '&quot; + context.getCOLLECTION() + &quot;'}, {'_id':1}&quot;"/>
     <elementParameter field="TABLE" name="AGGREGATION_STAGES" show="false"/>
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
@@ -514,9 +514,11 @@
     <elementParameter field="TEXT" name="COLLECTION" value="&quot;transactions.files&quot;"/>
     <elementParameter field="CLOSED_LIST" name="QUERY_TYPE" value="FIND_QUERY"/>
     <elementParameter field="LABEL" name="NOTE_ISOLATION" value="Note : Surround String values in your query with single quotes&#xA;Note : If you are running on a Sharded Cluster, please make sure to include the shard key in the query."/>
-    <elementParameter field="MEMO" name="QUERY" value="&quot;{'country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'), 'collection.$id': ObjectId('&quot; + globalMap.get(&quot;COLLECTION_ID&quot;).toString() + &quot;')}, {_id: 1}&quot;"/>
+    <elementParameter field="MEMO" name="QUERY" value="&quot;{'country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'), 'collection.$id': ObjectId('&quot; + globalMap.get(&quot;COLLECTION_ID&quot;).toString() + &quot;')}, {_id: 1}, {'_id':1, 'hash':1}&quot;"/>
     <elementParameter field="TABLE" name="AGGREGATION_STAGES" show="false"/>
     <elementParameter field="TABLE" name="MAPPING">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="PARENT_NODE_PATH" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="hash"/>
       <elementValue elementRef="PARENT_NODE_PATH" value=""/>
     </elementParameter>
@@ -527,6 +529,7 @@
     <elementParameter field="TEXT" name="LABEL" value="ReadExistingHashData"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMongoDBInput_5">
+      <column comment="" key="false" length="-1" name="id" nullable="true" originalDbColumnName="_id" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="hash" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
@@ -546,15 +549,18 @@
     <elementParameter field="TEXT" name="LABEL" value="KeepOldHash"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="row9">
+      <column comment="" key="false" length="-1" name="id" nullable="true" originalDbColumnName="_id" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="hash" nullable="true" originalDbColumnName="Hash" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row9" rejectInnerJoin="true">
+        <mapperTableEntries name="id" expression="row13.id " type="id_String" nullable="true"/>
         <mapperTableEntries name="hash" expression="row13.hash" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row13" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="id" type="id_String" nullable="true"/>
         <mapperTableEntries name="hash" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row16" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
@@ -571,7 +577,8 @@
     <elementParameter field="TABLE" name="THRESHLODS"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowMeter_18">
-      <column comment="" key="false" length="-1" name="hash" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" originalDbColumnName="_id" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hash" nullable="true" originalDbColumnName="Hash" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="480">
@@ -604,10 +611,10 @@
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
     <elementParameter field="TEXT" name="COLLECTION" value="&quot;transactions.records&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="QUERY_TYPE" value="AGGREGATION_QUERY"/>
+    <elementParameter field="CLOSED_LIST" name="QUERY_TYPE" value="FIND_QUERY"/>
     <elementParameter field="LABEL" name="NOTE_ISOLATION" value="Note : Surround String values in your query with single quotes&#xA;Note : If you are running on a Sharded Cluster, please make sure to include the shard key in the query."/>
-    <elementParameter field="MEMO" name="QUERY" value="&quot;{}, {'_id':1, 'num': 1}&quot;" show="false"/>
-    <elementParameter field="TABLE" name="AGGREGATION_STAGES">
+    <elementParameter field="MEMO" name="QUERY" value="&quot;{'file.$id': ObjectId('&quot; + globalMap.get(&quot;row8.id&quot;).toString() + &quot;')}, {'_id':1, 'num':1, 'fields':1}&quot;"/>
+    <elementParameter field="TABLE" name="AGGREGATION_STAGES" show="false">
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $addFields: {'_fileRef': {$arrayToObject: {$map: {input: { $objectToArray: '$file' }, in: {k: {$cond:[{ $eq:[{'$substrCP':['$$this.k',0,1]},{$literal:'$'}] }, { $substrCP:['$$this.k',1,{$strLenCP:'$$this.k'}] }, '$$this.k'] }, v:'$$this.v'} } } } } }&quot;"/>
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $lookup: {from: 'transactions.files', localField: '_fileRef.id', foreignField: '_id', as: 'file'} }&quot;"/>
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $addFields: {'file': {$mergeObjects: '$file'}} }&quot;"/>
@@ -616,25 +623,19 @@
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
       <elementValue elementRef="PARENT_NODE_PATH" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="hash"/>
-      <elementValue elementRef="PARENT_NODE_PATH" value="&quot;file&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="num"/>
       <elementValue elementRef="PARENT_NODE_PATH" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="fields"/>
       <elementValue elementRef="PARENT_NODE_PATH" value=""/>
     </elementParameter>
-    <elementParameter field="TABLE" name="SORT" show="false">
-      <elementValue elementRef="COLNAME" value="&quot;num&quot;"/>
-      <elementValue elementRef="ORDER" value="asc"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIMIT" value="" show="false"/>
+    <elementParameter field="TABLE" name="SORT"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
     <elementParameter field="CHECK" name="QUERYOPTION_NOTIMEOUT" value="false" show="false"/>
-    <elementParameter field="CHECK" name="EXTERNAL_SORT_AGGREGATION" value="false"/>
+    <elementParameter field="CHECK" name="EXTERNAL_SORT_AGGREGATION" value="false" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ReadLakeData"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMongoDBInput_1">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalDbColumnName="_id" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="hash" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fields" nullable="true" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -686,7 +687,6 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowMeter_22">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalDbColumnName="_id" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="hash" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fields" nullable="true" pattern="" precision="-1" sourceType="" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -700,8 +700,6 @@
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="hash"/>
-      <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="num"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="businessKey"/>
@@ -711,7 +709,6 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tExtractFields_1">
       <column comment="" key="false" length="-1" name="id" nullable="true" originalDbColumnName="_id" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="hash" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -744,7 +741,7 @@
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row10">
-        <mapperTableEntries name="hash" expression="row4.hash " type="id_String" nullable="true"/>
+        <mapperTableEntries name="hash" expression="globalMap.get(&quot;row8.hash&quot;).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="num" expression="row4.num " type="id_String" nullable="true"/>
         <mapperTableEntries name="hubId1" expression="row3.id " type="id_Integer"/>
       </outputTables>
@@ -754,7 +751,6 @@
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" type="id_String" nullable="true"/>
-        <mapperTableEntries name="hash" type="id_String" nullable="true"/>
         <mapperTableEntries name="num" type="id_String" nullable="true"/>
         <mapperTableEntries name="businessKey" type="id_String" nullable="true"/>
       </inputTables>
@@ -1040,10 +1036,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tMongoDBInput_5" offsetLabelX="0" offsetLabelY="0" source="tMongoDBInput_5" target="tMap_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="row9" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tFlowMeter_18">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
   </connection>

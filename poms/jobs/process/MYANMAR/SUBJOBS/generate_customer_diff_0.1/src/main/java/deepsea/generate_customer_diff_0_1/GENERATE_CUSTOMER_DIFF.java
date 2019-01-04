@@ -46,6 +46,9 @@ import java.util.Comparator;
 
 
 
+	//the import part of tJavaRow_1
+	//import java.util.List;
+
 
 @SuppressWarnings("unused")
 
@@ -483,15 +486,6 @@ private class TalendException extends Exception {
 					tMongoDBInput_3_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tCreateTemporaryFile_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tCreateTemporaryFile_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tRowGenerator_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -544,6 +538,15 @@ private class TalendException extends Exception {
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
 					tChronometerStop_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tFileFetch_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tFileFetch_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFlowMeterCatcher_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -681,13 +684,13 @@ private class TalendException extends Exception {
 					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tFileFetch_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJavaRow_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
-					tFileFetch_1_onSubJobError(exception, errorComponent, globalMap);
+					tMongoDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tDBInput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -830,11 +833,6 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tCreateTemporaryFile_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
 			public void tRowGenerator_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
@@ -860,17 +858,17 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
+			public void tFileFetch_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
 			public void tFlowMeterCatcher_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
 			public void tMongoDBInput_6_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tFileFetch_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2486,7 +2484,7 @@ public void tMongoDBInput_4Process(final java.util.Map<String, Object> globalMap
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{'name': '" + context.getCOLLECTION() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': '" + context.getCOLLECTION() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -2508,7 +2506,7 @@ public void tMongoDBInput_4Process(final java.util.Map<String, Object> globalMap
 
 	                
 	                
-					org.bson.Document myQuery_tMongoDBInput_4 = org.bson.Document.parse("{'name': '" + context.getCOLLECTION() + "'}, {'_id':1}");
+					org.bson.Document myQuery_tMongoDBInput_4 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': '" + context.getCOLLECTION() + "'}, {'_id':1}");
 	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_4 = coll_tMongoDBInput_4.find(myQuery_tMongoDBInput_4).noCursorTimeout(false);
 					
 	                
@@ -3141,7 +3139,7 @@ public void tMongoDBInput_5Process(final java.util.Map<String, Object> globalMap
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{'name': 'master'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': 'master'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -3163,7 +3161,7 @@ public void tMongoDBInput_5Process(final java.util.Map<String, Object> globalMap
 
 	                
 	                
-					org.bson.Document myQuery_tMongoDBInput_5 = org.bson.Document.parse("{'name': 'master'}, {'_id':1}");
+					org.bson.Document myQuery_tMongoDBInput_5 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': 'master'}, {'_id':1}");
 	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_5 = coll_tMongoDBInput_5.find(myQuery_tMongoDBInput_5).noCursorTimeout(false);
 					
 	                
@@ -3796,7 +3794,7 @@ public void tMongoDBInput_3Process(final java.util.Map<String, Object> globalMap
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -3818,7 +3816,7 @@ public void tMongoDBInput_3Process(final java.util.Map<String, Object> globalMap
 
 	                
 	                
-					org.bson.Document myQuery_tMongoDBInput_3 = org.bson.Document.parse("{'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}");
+					org.bson.Document myQuery_tMongoDBInput_3 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}");
 	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_3 = coll_tMongoDBInput_3.find(myQuery_tMongoDBInput_3).noCursorTimeout(false);
 					
 	                
@@ -4081,9 +4079,9 @@ ok_Hash.put("tSetGlobalVar_1", true);
 end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk14", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk13", 0, "ok");
 				}
-				tCreateTemporaryFile_1Process(globalMap);
+				tRowGenerator_1Process(globalMap);
 
 
 
@@ -4168,220 +4166,6 @@ end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
 		
 
 		globalMap.put("tMongoDBInput_3_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tCreateTemporaryFile_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tCreateTemporaryFile_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tCreateTemporaryFile_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tCreateTemporaryFile_1", false);
-		start_Hash.put("tCreateTemporaryFile_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tCreateTemporaryFile_1";
-
-	
-		int tos_count_tCreateTemporaryFile_1 = 0;
-		
-    	class BytesLimit65535_tCreateTemporaryFile_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tCreateTemporaryFile_1().limitLog4jByte();
-
-
-	java.io.File dir_tCreateTemporaryFile_1 = new java.io.File(java.lang.System.getProperty("java.io.tmpdir"));
-dir_tCreateTemporaryFile_1.mkdirs();
-String name_tCreateTemporaryFile_1 = "talend_XXXX".replaceAll("XXXX", routines.TalendString.getAsciiRandomString(4).toUpperCase());
-String suffix_tCreateTemporaryFile_1 = ("tmp".replaceAll("\\.", "").length() == 0) ? "tmp" : "tmp".replaceAll("\\.", "");
-java.io.File file_tCreateTemporaryFile_1 = new java.io.File(dir_tCreateTemporaryFile_1, name_tCreateTemporaryFile_1 + "." + suffix_tCreateTemporaryFile_1);
-if (file_tCreateTemporaryFile_1.createNewFile()){ 
-    file_tCreateTemporaryFile_1.deleteOnExit();
-}
-globalMap.put("tCreateTemporaryFile_1_FILEPATH", file_tCreateTemporaryFile_1.getCanonicalPath());
-
-
- 
-
-
-
-/**
- * [tCreateTemporaryFile_1 begin ] stop
- */
-	
-	/**
-	 * [tCreateTemporaryFile_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tCreateTemporaryFile_1";
-
-	
-
- 
-
-
-	tos_count_tCreateTemporaryFile_1++;
-
-/**
- * [tCreateTemporaryFile_1 main ] stop
- */
-	
-	/**
-	 * [tCreateTemporaryFile_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tCreateTemporaryFile_1";
-
-	
-
- 
-
-
-
-/**
- * [tCreateTemporaryFile_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tCreateTemporaryFile_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tCreateTemporaryFile_1";
-
-	
-
- 
-
-
-
-/**
- * [tCreateTemporaryFile_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tCreateTemporaryFile_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tCreateTemporaryFile_1";
-
-	
-
- 
-
-ok_Hash.put("tCreateTemporaryFile_1", true);
-end_Hash.put("tCreateTemporaryFile_1", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk17", 0, "ok");
-				}
-				tRowGenerator_1Process(globalMap);
-
-
-
-/**
- * [tCreateTemporaryFile_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tCreateTemporaryFile_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tCreateTemporaryFile_1";
-
-	
-
- 
-
-
-
-/**
- * [tCreateTemporaryFile_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tCreateTemporaryFile_1_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -5354,6 +5138,21 @@ end_Hash.put("tMongoDBClose_1", System.currentTimeMillis());
    	 				runStat.updateStatOnConnection("OnComponentOk8", 0, "ok");
 				}
 				tDBClose_1Process(globalMap);
+   			if ("true".equals(globalMap.get("needToSendFile"))) {
+   				
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If1", 0, "true");
+					}
+				
+    			tFileFetch_1Process(globalMap);
+   			}
+
+			   
+   				else{
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If1", 0, "false");
+					}   	 
+   				}
 
 
 
@@ -5832,6 +5631,270 @@ end_Hash.put("tChronometerStop_1", System.currentTimeMillis());
 		
 
 		globalMap.put("tChronometerStop_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tFileFetch_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tFileFetch_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFileFetch_1", false);
+		start_Hash.put("tFileFetch_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tFileFetch_1";
+
+	
+		int tos_count_tFileFetch_1 = 0;
+		
+    	class BytesLimit65535_tFileFetch_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFileFetch_1().limitLog4jByte();
+
+ 
+
+
+
+/**
+ * [tFileFetch_1 begin ] stop
+ */
+	
+	/**
+	 * [tFileFetch_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileFetch_1";
+
+	
+
+java.io.InputStream retIS_tFileFetch_1 = null;
+	
+	java.net.URI uriToFetch_tFileFetch_1 = null;
+	try {
+			uriToFetch_tFileFetch_1 = new java.net.URI("http://"+ context.getDEEPSEA_HOSTNAME() + "/api/v1/lakefs/" +globalMap.get("COLLECTION2_ID").toString()+ "/files");
+	} 
+	catch (Exception e) {
+			System.err.println("URI is not correct or not encoded, please input a valid one or use 'Encode URI' option");
+	}
+	
+	org.apache.commons.httpclient.HttpClient client_tFileFetch_1 = new org.apache.commons.httpclient.HttpClient();
+	
+	client_tFileFetch_1.getHttpConnectionManager().getParams().setConnectionTimeout(30000);
+	
+	client_tFileFetch_1.getParams().setCookiePolicy(org.apache.commons.httpclient.cookie.CookiePolicy.DEFAULT);
+	
+	
+		org.apache.commons.httpclient.HttpMethod method_tFileFetch_1 = new org.apache.commons.httpclient.methods.PostMethod(uriToFetch_tFileFetch_1.toString() );
+		
+			org.apache.commons.httpclient.methods.multipart.StringPart common_1_tFileFetch_1 = new org.apache.commons.httpclient.methods.multipart.StringPart("data", "{}");
+			
+				org.apache.commons.httpclient.methods.multipart.FilePart file_1_tFileFetch_1  = new org.apache.commons.httpclient.methods.multipart.FilePart("file", new java.io.File(globalMap.get("FILE_PATH").toString()), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "UTF-8");
+			
+		org.apache.commons.httpclient.methods.multipart.Part[] parts_tFileFetch_1 = new org.apache.commons.httpclient.methods.multipart.Part[]{common_1_tFileFetch_1,file_1_tFileFetch_1,};    
+		((org.apache.commons.httpclient.methods.PostMethod)method_tFileFetch_1).setRequestEntity(new org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity(parts_tFileFetch_1, method_tFileFetch_1.getParams()));
+	
+			method_tFileFetch_1.addRequestHeader("Authorization",context.getDEEPSEA_AUTH_TOKEN());
+		
+			method_tFileFetch_1.addRequestHeader("File-Mode","MERGE");
+		
+	boolean isContinue_tFileFetch_1 = true;
+	int status_tFileFetch_1;
+	String finalURL_tFileFetch_1 = uriToFetch_tFileFetch_1.toString() ;
+
+	try { // B_01
+		
+			status_tFileFetch_1  = client_tFileFetch_1.executeMethod(method_tFileFetch_1);
+		
+			if (!(status_tFileFetch_1 == org.apache.commons.httpclient.HttpStatus.SC_OK || status_tFileFetch_1 == org.apache.commons.httpclient.HttpStatus.SC_ACCEPTED)) {      
+				throw new java.lang.Exception("Method failed: " + method_tFileFetch_1.getStatusLine());
+			}
+		
+	} catch(java.lang.Exception e) {
+		
+			throw(e);
+		
+	}
+
+	if (isContinue_tFileFetch_1) {    
+		
+			System.out.println("Status Line: " + method_tFileFetch_1.getStatusLine());  
+			System.out.println("*** Response Header ***");  
+			org.apache.commons.httpclient.Header[] responseHeaders_tFileFetch_1 = method_tFileFetch_1.getResponseHeaders();  
+
+			for (int i = 0; i < responseHeaders_tFileFetch_1.length; i++) {
+				System.out.print(responseHeaders_tFileFetch_1[i]);
+			}
+		
+			retIS_tFileFetch_1 = method_tFileFetch_1.getResponseBodyAsStream();
+		    
+	} // B_01
+	java.io.InputStream streamtFileFetch_1 = (java.io.InputStream)globalMap.get("tFileFetch_1_INPUT_STREAM");
+	if(streamtFileFetch_1!=null){
+		streamtFileFetch_1.close();
+	}
+globalMap.put("tFileFetch_1_INPUT_STREAM", retIS_tFileFetch_1);
+
+ 
+
+
+	tos_count_tFileFetch_1++;
+
+/**
+ * [tFileFetch_1 main ] stop
+ */
+	
+	/**
+	 * [tFileFetch_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileFetch_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileFetch_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tFileFetch_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileFetch_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileFetch_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileFetch_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileFetch_1";
+
+	
+
+ 
+
+ok_Hash.put("tFileFetch_1", true);
+end_Hash.put("tFileFetch_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFileFetch_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tFileFetch_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileFetch_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileFetch_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -6881,6 +6944,318 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 	}
 	
 
+
+public static class row9Struct implements routines.system.IPersistableRow<row9Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
+
+	
+			    public String ServierCode;
+
+				public String getServierCode () {
+					return this.ServierCode;
+				}
+				
+			    public String ProviderCode;
+
+				public String getProviderCode () {
+					return this.ProviderCode;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
+			    public String SourceChannelCode;
+
+				public String getSourceChannelCode () {
+					return this.SourceChannelCode;
+				}
+				
+			    public String NameEn;
+
+				public String getNameEn () {
+					return this.NameEn;
+				}
+				
+			    public String NameLo;
+
+				public String getNameLo () {
+					return this.NameLo;
+				}
+				
+			    public String CoeffGeography;
+
+				public String getCoeffGeography () {
+					return this.CoeffGeography;
+				}
+				
+			    public String SplitNumber;
+
+				public String getSplitNumber () {
+					return this.SplitNumber;
+				}
+				
+			    public String Attribute1;
+
+				public String getAttribute1 () {
+					return this.Attribute1;
+				}
+				
+			    public String Attribute2;
+
+				public String getAttribute2 () {
+					return this.Attribute2;
+				}
+				
+			    public String Attribute3;
+
+				public String getAttribute3 () {
+					return this.Attribute3;
+				}
+				
+			    public String Attribute4;
+
+				public String getAttribute4 () {
+					return this.Attribute4;
+				}
+				
+			    public String Attribute5;
+
+				public String getAttribute5 () {
+					return this.Attribute5;
+				}
+				
+			    public String MaybeProviderCode;
+
+				public String getMaybeProviderCode () {
+					return this.MaybeProviderCode;
+				}
+				
+			    public String MaybeNameEn;
+
+				public String getMaybeNameEn () {
+					return this.MaybeNameEn;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF.length == 0) {
+   					commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.ServierCode = readString(dis);
+					
+					this.ProviderCode = readString(dis);
+					
+					this.geographyCode = readString(dis);
+					
+					this.SourceChannelCode = readString(dis);
+					
+					this.NameEn = readString(dis);
+					
+					this.NameLo = readString(dis);
+					
+					this.CoeffGeography = readString(dis);
+					
+					this.SplitNumber = readString(dis);
+					
+					this.Attribute1 = readString(dis);
+					
+					this.Attribute2 = readString(dis);
+					
+					this.Attribute3 = readString(dis);
+					
+					this.Attribute4 = readString(dis);
+					
+					this.Attribute5 = readString(dis);
+					
+					this.MaybeProviderCode = readString(dis);
+					
+					this.MaybeNameEn = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.ServierCode,dos);
+					
+					// String
+				
+						writeString(this.ProviderCode,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
+					
+					// String
+				
+						writeString(this.SourceChannelCode,dos);
+					
+					// String
+				
+						writeString(this.NameEn,dos);
+					
+					// String
+				
+						writeString(this.NameLo,dos);
+					
+					// String
+				
+						writeString(this.CoeffGeography,dos);
+					
+					// String
+				
+						writeString(this.SplitNumber,dos);
+					
+					// String
+				
+						writeString(this.Attribute1,dos);
+					
+					// String
+				
+						writeString(this.Attribute2,dos);
+					
+					// String
+				
+						writeString(this.Attribute3,dos);
+					
+					// String
+				
+						writeString(this.Attribute4,dos);
+					
+					// String
+				
+						writeString(this.Attribute5,dos);
+					
+					// String
+				
+						writeString(this.MaybeProviderCode,dos);
+					
+					// String
+				
+						writeString(this.MaybeNameEn,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("ServierCode="+ServierCode);
+		sb.append(",ProviderCode="+ProviderCode);
+		sb.append(",geographyCode="+geographyCode);
+		sb.append(",SourceChannelCode="+SourceChannelCode);
+		sb.append(",NameEn="+NameEn);
+		sb.append(",NameLo="+NameLo);
+		sb.append(",CoeffGeography="+CoeffGeography);
+		sb.append(",SplitNumber="+SplitNumber);
+		sb.append(",Attribute1="+Attribute1);
+		sb.append(",Attribute2="+Attribute2);
+		sb.append(",Attribute3="+Attribute3);
+		sb.append(",Attribute4="+Attribute4);
+		sb.append(",Attribute5="+Attribute5);
+		sb.append(",MaybeProviderCode="+MaybeProviderCode);
+		sb.append(",MaybeNameEn="+MaybeNameEn);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row9Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
 
 public static class row18Struct implements routines.system.IPersistableRow<row18Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
@@ -9381,6 +9756,12 @@ public static class row23Struct implements routines.system.IPersistableRow<row23
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -9428,6 +9809,8 @@ public static class row23Struct implements routines.system.IPersistableRow<row23
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
         	} catch (IOException e) {
@@ -9450,6 +9833,10 @@ public static class row23Struct implements routines.system.IPersistableRow<row23
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
         	} catch (IOException e) {
@@ -9465,7 +9852,8 @@ public static class row23Struct implements routines.system.IPersistableRow<row23
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -9511,6 +9899,12 @@ public static class row24Struct implements routines.system.IPersistableRow<row24
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -9558,6 +9952,8 @@ public static class row24Struct implements routines.system.IPersistableRow<row24
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
         	} catch (IOException e) {
@@ -9580,6 +9976,10 @@ public static class row24Struct implements routines.system.IPersistableRow<row24
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
         	} catch (IOException e) {
@@ -9595,7 +9995,8 @@ public static class row24Struct implements routines.system.IPersistableRow<row24
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -9641,6 +10042,12 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -9688,6 +10095,8 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
         	} catch (IOException e) {
@@ -9710,6 +10119,10 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
         	} catch (IOException e) {
@@ -9725,7 +10138,8 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -9771,6 +10185,12 @@ public static class after_tMongoDBInput_6Struct implements routines.system.IPers
     static byte[] commonByteArray_DEEPSEA_GENERATE_CUSTOMER_DIFF = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -9818,6 +10238,8 @@ public static class after_tMongoDBInput_6Struct implements routines.system.IPers
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
         	} catch (IOException e) {
@@ -9840,6 +10262,10 @@ public static class after_tMongoDBInput_6Struct implements routines.system.IPers
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
         	} catch (IOException e) {
@@ -9855,7 +10281,8 @@ public static class after_tMongoDBInput_6Struct implements routines.system.IPers
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -9936,6 +10363,7 @@ row10Struct row10 = new row10Struct();
 row21Struct row21 = new row21Struct();
 row12Struct row12 = new row12Struct();
 row12Struct row18 = row12;
+row12Struct row9 = row12;
 
 
 
@@ -10189,7 +10617,7 @@ row24Struct row24_tmp = new row24Struct();
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {_id: 1}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {'_id':1, 'hash':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -10211,7 +10639,7 @@ row24Struct row24_tmp = new row24Struct();
 
 	                
 	                
-					org.bson.Document myQuery_tMongoDBInput_6 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {_id: 1}");
+					org.bson.Document myQuery_tMongoDBInput_6 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {'_id':1, 'hash':1}");
 	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_6 = coll_tMongoDBInput_6.find(myQuery_tMongoDBInput_6).noCursorTimeout(false);
 					
 	                
@@ -10256,6 +10684,7 @@ row24Struct row24_tmp = new row24Struct();
 				}
 				DBObjectInputUtil_tMongoDBInput_6 dbObjectInputUtil_tMongoDBInput_6=new DBObjectInputUtil_tMongoDBInput_6();
 				java.util.Map<String, String> pathMap_tMongoDBInput_6=new java.util.HashMap<String, String>();
+				pathMap_tMongoDBInput_6.put("id","");
 				pathMap_tMongoDBInput_6.put("hash","");
 
 						
@@ -10265,6 +10694,12 @@ row24Struct row24_tmp = new row24Struct();
 				org.bson.Document o_tMongoDBInput_6 = cursor_tMongoDBInput_6.next();
 				nb_line_tMongoDBInput_6++;
 				Object valueObj_tMongoDBInput_6=null;
+                    valueObj_tMongoDBInput_6=dbObjectInputUtil_tMongoDBInput_6.getValue(pathMap_tMongoDBInput_6.get("id"),"_id",o_tMongoDBInput_6);
+				if(valueObj_tMongoDBInput_6!=null && valueObj_tMongoDBInput_6.toString().length() > 0) {
+					row8.id = valueObj_tMongoDBInput_6.toString();
+				}else{
+					row8.id = null;
+				}
                     valueObj_tMongoDBInput_6=dbObjectInputUtil_tMongoDBInput_6.getValue(pathMap_tMongoDBInput_6.get("hash"),"hash",o_tMongoDBInput_6);
 				if(valueObj_tMongoDBInput_6!=null && valueObj_tMongoDBInput_6.toString().length() > 0) {
 					row8.hash = valueObj_tMongoDBInput_6.toString();
@@ -10478,6 +10913,7 @@ if(!rejectedInnerJoin_tMap_5 ) {
 // # Output reject table : 'row24'
 // # Filter conditions 
 if( rejectedInnerJoin_tMap_5 ) {
+row24_tmp.id = row8.id ;
 row24_tmp.hash = row8.hash;
 row24 = row24_tmp;
 } // closing filter/reject
@@ -10612,6 +11048,8 @@ if(row24 != null) {
 
 
     	            
+            globalMap.put("row23.id", row23.id);
+    	            
             globalMap.put("row23.hash", row23.hash);
     	
  
@@ -10650,27 +11088,7 @@ if(row24 != null) {
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row12", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row20", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row10", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row5", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("OnRowsEnd", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("If1", 3, 0);
+	       				runStat.updateStatOnConnection("row21", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -10678,19 +11096,39 @@ if(row24 != null) {
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row7", 3, 0);
-					}           			
-				
-					if(execStat){				
 	       				runStat.updateStatOnConnection("row19", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row21", 3, 0);
+	       				runStat.updateStatOnConnection("OnRowsEnd", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row12", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row7", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row10", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row20", 3, 0);
 					}           			
 				
 					if(execStat){				
 	       				runStat.updateStatOnConnection("row18", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row5", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row9", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -11420,7 +11858,7 @@ row19Struct row19_tmp = new row19Struct();
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{}, {'_id':1, 'num': 1}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'file.$id': ObjectId('" + globalMap.get("row23.id").toString() + "')}, {'_id':1, 'fields':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -11440,35 +11878,16 @@ row19Struct row19_tmp = new row19Struct();
 	            	// maybe due to authorization
 	            }
 
-	                	
-							java.util.List<org.bson.Document> aggregationStages = new java.util.ArrayList<org.bson.Document>();
-						
-	                	
 	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $addFields: {'_fileRef': {$arrayToObject: {$map: {input: { $objectToArray: '$file' }, in: {k: {$cond:[{ $eq:[{'$substrCP':['$$this.k',0,1]},{$literal:'$'}] }, { $substrCP:['$$this.k',1,{$strLenCP:'$$this.k'}] }, '$$this.k'] }, v:'$$this.v'} } } } } }"));
-						
-	                	
 	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $lookup: {from: 'transactions.files', localField: '_fileRef.id', foreignField: '_id', as: 'file'} }"));
-						
-	                	
+					org.bson.Document myQuery_tMongoDBInput_1 = org.bson.Document.parse("{'file.$id': ObjectId('" + globalMap.get("row23.id").toString() + "')}, {'_id':1, 'fields':1}");
+	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_1 = coll_tMongoDBInput_1.find(myQuery_tMongoDBInput_1).noCursorTimeout(false);
+					
 	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $addFields: {'file': {$mergeObjects: '$file'}} }"));
-						
-	                	
-	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'file.collection.$id' : ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "'), 'file.hash': '" + globalMap.get("row23.hash").toString() + "'} }"));
-						
-	                	
-	                
-	                	
-							com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_1 = coll_tMongoDBInput_1.aggregate(aggregationStages).allowDiskUse(false).iterator();
-						
-	                
+		  			
+		  			
+
+		  			 
 	                
 				
 				class DBObjectInputUtil_tMongoDBInput_1{
@@ -11508,6 +11927,8 @@ row19Struct row19_tmp = new row19Struct();
 				java.util.Map<String, String> pathMap_tMongoDBInput_1=new java.util.HashMap<String, String>();
 				pathMap_tMongoDBInput_1.put("fields","");
 
+						
+					com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_1 = fi_tMongoDBInput_1.iterator();
 						
 				while (cursor_tMongoDBInput_1.hasNext()){
 				org.bson.Document o_tMongoDBInput_1 = cursor_tMongoDBInput_1.next();
@@ -13037,6 +13458,54 @@ end_Hash.put("tAggregateRow_1_AGGOUT", System.currentTimeMillis());
 
 
 
+
+	
+	/**
+	 * [tJavaRow_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tJavaRow_1", false);
+		start_Hash.put("tJavaRow_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tJavaRow_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tJavaRow_1 = 0;
+		
+    	class BytesLimit65535_tJavaRow_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tJavaRow_1().limitLog4jByte();
+
+int nb_line_tJavaRow_1 = 0;
+
+ 
+
+
+
+/**
+ * [tJavaRow_1 begin ] stop
+ */
+
+
+
 	
 	/**
 	 * [tFileOutputExcel_1 begin ] start
@@ -13507,6 +13976,7 @@ for(AggOperationStruct_tAggregateRow_1 aggregated_row_tAggregateRow_1 : values_t
     			nb_line_tFileOutputExcel_1++;
 				
  
+     row9 = row18;
 
 
 	tos_count_tFileOutputExcel_1++;
@@ -13534,6 +14004,90 @@ for(AggOperationStruct_tAggregateRow_1 aggregated_row_tAggregateRow_1 : values_t
 /**
  * [tFileOutputExcel_1 process_data_begin ] stop
  */
+
+	
+	/**
+	 * [tJavaRow_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_1";
+
+	
+
+			//row9
+			//row9
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row9"+iterateId,1, 1);
+				} 
+			
+
+		
+
+    if(nb_line_tFileOutputExcel_1 > 0) {
+	globalMap.put("needToSendFile", "true");
+}
+
+
+    nb_line_tJavaRow_1++;   
+
+ 
+
+
+	tos_count_tJavaRow_1++;
+
+/**
+ * [tJavaRow_1 main ] stop
+ */
+	
+	/**
+	 * [tJavaRow_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJavaRow_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tJavaRow_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJavaRow_1 process_data_end ] stop
+ */
+
+
+
 	
 	/**
 	 * [tFileOutputExcel_1 process_data_end ] start
@@ -13644,7 +14198,7 @@ end_Hash.put("tAggregateRow_1_AGGIN", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("Number of records integrated", new Integer(count_tFlowMeter_22), "null", "", "tFlowMeter_22");
+	tFlowMeterCatcher_1.addMessage("Number of records missing", new Integer(count_tFlowMeter_22), "null", "", "tFlowMeter_22");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -13760,27 +14314,47 @@ end_Hash.put("tFlowMeter_22", System.currentTimeMillis());
 ok_Hash.put("tFileOutputExcel_1", true);
 end_Hash.put("tFileOutputExcel_1", System.currentTimeMillis());
 
-   			if (tos_count_tFileOutputExcel_1 > 0) {
-   				
-					if(execStat){   
-   	 					runStat.updateStatOnConnection("If1", 0, "true");
-					}
-				
-    			tFileFetch_1Process(globalMap);
-   			}
-
-			   
-   				else{
-					if(execStat){   
-   	 					runStat.updateStatOnConnection("If1", 0, "false");
-					}   	 
-   				}
 
 
 
 /**
  * [tFileOutputExcel_1 end ] stop
  */
+
+	
+	/**
+	 * [tJavaRow_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_1";
+
+	
+
+globalMap.put("tJavaRow_1_NB_LINE",nb_line_tJavaRow_1);
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row9"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tJavaRow_1", true);
+end_Hash.put("tJavaRow_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tJavaRow_1 end ] stop
+ */
+
+
+
 
 
 
@@ -14423,6 +14997,30 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
  * [tFileOutputExcel_1 finally ] stop
  */
 
+	
+	/**
+	 * [tJavaRow_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJavaRow_1 finally ] stop
+ */
+
+
+
+
 
 
 
@@ -14474,262 +15072,6 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 		
 
 		globalMap.put("tMongoDBInput_6_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tFileFetch_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-
-
-	
-	/**
-	 * [tFileFetch_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tFileFetch_1", false);
-		start_Hash.put("tFileFetch_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tFileFetch_1";
-
-	
-		int tos_count_tFileFetch_1 = 0;
-		
-    	class BytesLimit65535_tFileFetch_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tFileFetch_1().limitLog4jByte();
-
- 
-
-
-
-/**
- * [tFileFetch_1 begin ] stop
- */
-	
-	/**
-	 * [tFileFetch_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileFetch_1";
-
-	
-
-java.io.InputStream retIS_tFileFetch_1 = null;
-	
-	java.net.URI uriToFetch_tFileFetch_1 = null;
-	try {
-			uriToFetch_tFileFetch_1 = new java.net.URI("http://"+ context.getDEEPSEA_HOSTNAME() + "/api/v1/lakefs/" +globalMap.get("COLLECTION2_ID").toString()+ "/files");
-	} 
-	catch (Exception e) {
-			System.err.println("URI is not correct or not encoded, please input a valid one or use 'Encode URI' option");
-	}
-	
-	org.apache.commons.httpclient.HttpClient client_tFileFetch_1 = new org.apache.commons.httpclient.HttpClient();
-	
-	client_tFileFetch_1.getHttpConnectionManager().getParams().setConnectionTimeout(30000);
-	
-	client_tFileFetch_1.getParams().setCookiePolicy(org.apache.commons.httpclient.cookie.CookiePolicy.DEFAULT);
-	
-	
-		org.apache.commons.httpclient.HttpMethod method_tFileFetch_1 = new org.apache.commons.httpclient.methods.PostMethod(uriToFetch_tFileFetch_1.toString() );
-		
-			org.apache.commons.httpclient.methods.multipart.StringPart common_1_tFileFetch_1 = new org.apache.commons.httpclient.methods.multipart.StringPart("data", "{}");
-			
-				org.apache.commons.httpclient.methods.multipart.FilePart file_1_tFileFetch_1  = new org.apache.commons.httpclient.methods.multipart.FilePart("file", new java.io.File(globalMap.get("FILE_PATH").toString()), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "UTF-8");
-			
-		org.apache.commons.httpclient.methods.multipart.Part[] parts_tFileFetch_1 = new org.apache.commons.httpclient.methods.multipart.Part[]{common_1_tFileFetch_1,file_1_tFileFetch_1,};    
-		((org.apache.commons.httpclient.methods.PostMethod)method_tFileFetch_1).setRequestEntity(new org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity(parts_tFileFetch_1, method_tFileFetch_1.getParams()));
-	
-			method_tFileFetch_1.addRequestHeader("Authorization",context.getDEEPSEA_AUTH_TOKEN());
-		
-			method_tFileFetch_1.addRequestHeader("File-Mode","MERGE");
-		
-	boolean isContinue_tFileFetch_1 = true;
-	int status_tFileFetch_1;
-	String finalURL_tFileFetch_1 = uriToFetch_tFileFetch_1.toString() ;
-
-	try { // B_01
-		
-			status_tFileFetch_1  = client_tFileFetch_1.executeMethod(method_tFileFetch_1);
-		
-			if (!(status_tFileFetch_1 == org.apache.commons.httpclient.HttpStatus.SC_OK || status_tFileFetch_1 == org.apache.commons.httpclient.HttpStatus.SC_ACCEPTED)) {      
-				throw new java.lang.Exception("Method failed: " + method_tFileFetch_1.getStatusLine());
-			}
-		
-	} catch(java.lang.Exception e) {
-		
-			throw(e);
-		
-	}
-
-	if (isContinue_tFileFetch_1) {    
-		
-			retIS_tFileFetch_1 = method_tFileFetch_1.getResponseBodyAsStream();
-		    
-	} // B_01
-	java.io.InputStream streamtFileFetch_1 = (java.io.InputStream)globalMap.get("tFileFetch_1_INPUT_STREAM");
-	if(streamtFileFetch_1!=null){
-		streamtFileFetch_1.close();
-	}
-globalMap.put("tFileFetch_1_INPUT_STREAM", retIS_tFileFetch_1);
-
- 
-
-
-	tos_count_tFileFetch_1++;
-
-/**
- * [tFileFetch_1 main ] stop
- */
-	
-	/**
-	 * [tFileFetch_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileFetch_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileFetch_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tFileFetch_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileFetch_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileFetch_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tFileFetch_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileFetch_1";
-
-	
-
- 
-
-ok_Hash.put("tFileFetch_1", true);
-end_Hash.put("tFileFetch_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tFileFetch_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tFileFetch_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileFetch_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileFetch_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -18645,6 +18987,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     393250 characters generated by Talend Open Studio for Big Data 
- *     on the 6 December, 2018 7:28:02 AM SGT
+ *     399647 characters generated by Talend Open Studio for Big Data 
+ *     on the 19 December, 2018 12:58:28 PM CET
  ************************************************************************************************/

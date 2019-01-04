@@ -2545,7 +2545,7 @@ public void tMongoDBInput_3Process(final java.util.Map<String, Object> globalMap
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{'name': '" + context.getCOLLECTION() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': '" + context.getCOLLECTION() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -2567,7 +2567,7 @@ public void tMongoDBInput_3Process(final java.util.Map<String, Object> globalMap
 
 	                
 	                
-					org.bson.Document myQuery_tMongoDBInput_3 = org.bson.Document.parse("{'name': '" + context.getCOLLECTION() + "'}, {'_id':1}");
+					org.bson.Document myQuery_tMongoDBInput_3 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': '" + context.getCOLLECTION() + "'}, {'_id':1}");
 	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_3 = coll_tMongoDBInput_3.find(myQuery_tMongoDBInput_3).noCursorTimeout(false);
 					
 	                
@@ -3200,7 +3200,7 @@ public void tMongoDBInput_4Process(final java.util.Map<String, Object> globalMap
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -3222,7 +3222,7 @@ public void tMongoDBInput_4Process(final java.util.Map<String, Object> globalMap
 
 	                
 	                
-					org.bson.Document myQuery_tMongoDBInput_4 = org.bson.Document.parse("{'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}");
+					org.bson.Document myQuery_tMongoDBInput_4 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'),'name': '" + context.getWEBJOB_NAME() + "'}, {'_id':1}");
 	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_4 = coll_tMongoDBInput_4.find(myQuery_tMongoDBInput_4).noCursorTimeout(false);
 					
 	                
@@ -7383,12 +7383,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
     static byte[] commonByteArray_DEEPSEA_SAT_SALES = new byte[0];
 
 	
-			    public String hash;
-
-				public String getHash () {
-					return this.hash;
-				}
-				
 			    public long num;
 
 				public long getNum () {
@@ -7502,8 +7496,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 
         		int length = 0;
 		
-					this.hash = readString(dis);
-					
 			        this.num = dis.readLong();
 					
 					this.geographyCode = readString(dis);
@@ -7546,10 +7538,6 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
         try {
 
 		
-					// String
-				
-						writeString(this.hash,dos);
-					
 					// long
 				
 		            	dos.writeLong(this.num);
@@ -7611,8 +7599,7 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
-		sb.append(",num="+String.valueOf(num));
+		sb.append("num="+String.valueOf(num));
 		sb.append(",geographyCode="+geographyCode);
 		sb.append(",locality="+locality);
 		sb.append(",adminArea1="+adminArea1);
@@ -7675,12 +7662,6 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 					return this.id;
 				}
 				
-			    public String hash;
-
-				public String getHash () {
-					return this.hash;
-				}
-				
 			    public Long num;
 
 				public Long getNum () {
@@ -7736,8 +7717,6 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 		
 					this.id = readString(dis);
 					
-					this.hash = readString(dis);
-					
 			            length = dis.readByte();
            				if (length == -1) {
            	    			this.num = null;
@@ -7772,10 +7751,6 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 				
 						writeString(this.id,dos);
 					
-					// String
-				
-						writeString(this.hash,dos);
-					
 					// Long
 				
 						if(this.num == null) {
@@ -7803,7 +7778,6 @@ public static class row7Struct implements routines.system.IPersistableRow<row7St
 		sb.append(super.toString());
 		sb.append("[");
 		sb.append("id="+id);
-		sb.append(",hash="+hash);
 		sb.append(",num="+String.valueOf(num));
 		sb.append(",fields="+String.valueOf(fields));
 	    sb.append("]");
@@ -7857,12 +7831,6 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 					return this.id;
 				}
 				
-			    public String hash;
-
-				public String getHash () {
-					return this.hash;
-				}
-				
 			    public Long num;
 
 				public Long getNum () {
@@ -7918,8 +7886,6 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		
 					this.id = readString(dis);
 					
-					this.hash = readString(dis);
-					
 			            length = dis.readByte();
            				if (length == -1) {
            	    			this.num = null;
@@ -7954,10 +7920,6 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 				
 						writeString(this.id,dos);
 					
-					// String
-				
-						writeString(this.hash,dos);
-					
 					// Long
 				
 						if(this.num == null) {
@@ -7985,7 +7947,6 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		sb.append(super.toString());
 		sb.append("[");
 		sb.append("id="+id);
-		sb.append(",hash="+hash);
 		sb.append(",num="+String.valueOf(num));
 		sb.append(",fields="+String.valueOf(fields));
 	    sb.append("]");
@@ -8033,6 +7994,12 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
     static byte[] commonByteArray_DEEPSEA_SAT_SALES = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -8080,6 +8047,8 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
         	} catch (IOException e) {
@@ -8102,6 +8071,10 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
         	} catch (IOException e) {
@@ -8117,7 +8090,8 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -8163,6 +8137,12 @@ public static class row17Struct implements routines.system.IPersistableRow<row17
     static byte[] commonByteArray_DEEPSEA_SAT_SALES = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -8210,6 +8190,8 @@ public static class row17Struct implements routines.system.IPersistableRow<row17
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
         	} catch (IOException e) {
@@ -8232,6 +8214,10 @@ public static class row17Struct implements routines.system.IPersistableRow<row17
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
         	} catch (IOException e) {
@@ -8247,7 +8233,8 @@ public static class row17Struct implements routines.system.IPersistableRow<row17
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -8293,6 +8280,12 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
     static byte[] commonByteArray_DEEPSEA_SAT_SALES = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -8340,6 +8333,8 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
         	} catch (IOException e) {
@@ -8362,6 +8357,10 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
         	} catch (IOException e) {
@@ -8377,7 +8376,8 @@ public static class row13Struct implements routines.system.IPersistableRow<row13
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -8423,6 +8423,12 @@ public static class after_tMongoDBInput_5Struct implements routines.system.IPers
     static byte[] commonByteArray_DEEPSEA_SAT_SALES = new byte[0];
 
 	
+			    public String id;
+
+				public String getId () {
+					return this.id;
+				}
+				
 			    public String hash;
 
 				public String getHash () {
@@ -8470,6 +8476,8 @@ public static class after_tMongoDBInput_5Struct implements routines.system.IPers
 
         		int length = 0;
 		
+					this.id = readString(dis);
+					
 					this.hash = readString(dis);
 					
         	} catch (IOException e) {
@@ -8492,6 +8500,10 @@ public static class after_tMongoDBInput_5Struct implements routines.system.IPers
 		
 					// String
 				
+						writeString(this.id,dos);
+					
+					// String
+				
 						writeString(this.hash,dos);
 					
         	} catch (IOException e) {
@@ -8507,7 +8519,8 @@ public static class after_tMongoDBInput_5Struct implements routines.system.IPers
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("hash="+hash);
+		sb.append("id="+id);
+		sb.append(",hash="+hash);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -8837,7 +8850,7 @@ row17Struct row17_tmp = new row17Struct();
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {_id: 1}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, , {'_id':1, 'hash':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -8859,7 +8872,7 @@ row17Struct row17_tmp = new row17Struct();
 
 	                
 	                
-					org.bson.Document myQuery_tMongoDBInput_5 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, {_id: 1}");
+					org.bson.Document myQuery_tMongoDBInput_5 = org.bson.Document.parse("{'country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'collection.$id': ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "')}, , {'_id':1, 'hash':1}");
 	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_5 = coll_tMongoDBInput_5.find(myQuery_tMongoDBInput_5).noCursorTimeout(false);
 					
 	                
@@ -8904,6 +8917,7 @@ row17Struct row17_tmp = new row17Struct();
 				}
 				DBObjectInputUtil_tMongoDBInput_5 dbObjectInputUtil_tMongoDBInput_5=new DBObjectInputUtil_tMongoDBInput_5();
 				java.util.Map<String, String> pathMap_tMongoDBInput_5=new java.util.HashMap<String, String>();
+				pathMap_tMongoDBInput_5.put("id","");
 				pathMap_tMongoDBInput_5.put("hash","");
 
 						
@@ -8913,6 +8927,12 @@ row17Struct row17_tmp = new row17Struct();
 				org.bson.Document o_tMongoDBInput_5 = cursor_tMongoDBInput_5.next();
 				nb_line_tMongoDBInput_5++;
 				Object valueObj_tMongoDBInput_5=null;
+                    valueObj_tMongoDBInput_5=dbObjectInputUtil_tMongoDBInput_5.getValue(pathMap_tMongoDBInput_5.get("id"),"_id",o_tMongoDBInput_5);
+				if(valueObj_tMongoDBInput_5!=null && valueObj_tMongoDBInput_5.toString().length() > 0) {
+					row13.id = valueObj_tMongoDBInput_5.toString();
+				}else{
+					row13.id = null;
+				}
                     valueObj_tMongoDBInput_5=dbObjectInputUtil_tMongoDBInput_5.getValue(pathMap_tMongoDBInput_5.get("hash"),"hash",o_tMongoDBInput_5);
 				if(valueObj_tMongoDBInput_5!=null && valueObj_tMongoDBInput_5.toString().length() > 0) {
 					row13.hash = valueObj_tMongoDBInput_5.toString();
@@ -9126,6 +9146,7 @@ if(!rejectedInnerJoin_tMap_3 ) {
 // # Output reject table : 'row17'
 // # Filter conditions 
 if( rejectedInnerJoin_tMap_3 ) {
+row17_tmp.id = row13.id ;
 row17_tmp.hash = row13.hash;
 row17 = row17_tmp;
 } // closing filter/reject
@@ -9260,6 +9281,8 @@ if(row17 != null) {
 
 
     	            
+            globalMap.put("row4.id", row4.id);
+    	            
             globalMap.put("row4.hash", row4.hash);
     	
  
@@ -9298,23 +9321,11 @@ if(row17 != null) {
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row14", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("exception1", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row7", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row3", 3, 0);
-					}           			
-				
-					if(execStat){				
 	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row14", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -9322,7 +9333,7 @@ if(row17 != null) {
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row9", 3, 0);
+	       				runStat.updateStatOnConnection("row7", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -9330,11 +9341,23 @@ if(row17 != null) {
 					}           			
 				
 					if(execStat){				
+	       				runStat.updateStatOnConnection("row3", 3, 0);
+					}           			
+				
+					if(execStat){				
 	       				runStat.updateStatOnConnection("row8", 3, 0);
 					}           			
 				
 					if(execStat){				
+	       				runStat.updateStatOnConnection("row9", 3, 0);
+					}           			
+				
+					if(execStat){				
 	       				runStat.updateStatOnConnection("row10", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("exception1", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -10183,7 +10206,7 @@ row8Struct row8_tmp = new row8Struct();
 	                        // - contain the db DBcolumnName between two backslashed quotes
 	                        // - is followed at some point by a colon
 	                        // - there is no comma between the the DBcolumnName and the colon
-	                        if  (("{{}, {_id:1, num: 1}}").matches(".*" + key + "[^,]*:.*")) {
+	                        if  (("{'file.$id': ObjectId('" + globalMap.get("row4.id").toString() + "')}, {'_id':1, 'num':1, 'fields':1}").matches(".*" + key + "[^,]*:.*")) {
 	                            // We have an index, do not print error message
 	                            needIndexWarning = false;
 	                        } else {
@@ -10203,35 +10226,16 @@ row8Struct row8_tmp = new row8Struct();
 	            	// maybe due to authorization
 	            }
 
-	                	
-							java.util.List<org.bson.Document> aggregationStages = new java.util.ArrayList<org.bson.Document>();
-						
-	                	
 	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $addFields: {'_fileRef': {$arrayToObject: {$map: {input: { $objectToArray: '$file' }, in: {k: {$cond:[{ $eq:[{'$substrCP':['$$this.k',0,1]},{$literal:'$'}] }, { $substrCP:['$$this.k',1,{$strLenCP:'$$this.k'}] }, '$$this.k'] }, v:'$$this.v'} } } } } }"));
-						
-	                	
 	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $lookup: {from: 'transactions.files', localField: '_fileRef.id', foreignField: '_id', as: 'file'} }"));
-						
-	                	
+					org.bson.Document myQuery_tMongoDBInput_1 = org.bson.Document.parse("{'file.$id': ObjectId('" + globalMap.get("row4.id").toString() + "')}, {'_id':1, 'num':1, 'fields':1}");
+	                com.mongodb.client.FindIterable<org.bson.Document> fi_tMongoDBInput_1 = coll_tMongoDBInput_1.find(myQuery_tMongoDBInput_1).noCursorTimeout(false);
+					
 	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $addFields: {'file': {$mergeObjects: '$file'}} }"));
-						
-	                	
-	                
-	                	
-							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'file.collection.$id' : ObjectId('" + globalMap.get("COLLECTION_ID").toString() + "'), 'file.hash': '" + globalMap.get("row4.hash").toString() + "'} }"));
-						
-	                	
-	                
-	                	
-							com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_1 = coll_tMongoDBInput_1.aggregate(aggregationStages).allowDiskUse(false).iterator();
-						
-	                
+		  			
+		  			
+
+		  			 
 	                
 				
 				class DBObjectInputUtil_tMongoDBInput_1{
@@ -10270,10 +10274,20 @@ row8Struct row8_tmp = new row8Struct();
 				DBObjectInputUtil_tMongoDBInput_1 dbObjectInputUtil_tMongoDBInput_1=new DBObjectInputUtil_tMongoDBInput_1();
 				java.util.Map<String, String> pathMap_tMongoDBInput_1=new java.util.HashMap<String, String>();
 				pathMap_tMongoDBInput_1.put("id","");
-				pathMap_tMongoDBInput_1.put("hash","file");
 				pathMap_tMongoDBInput_1.put("num","");
 				pathMap_tMongoDBInput_1.put("fields","");
+						
+					com.mongodb.BasicDBObject orderBy_tMongoDBInput_1 = new com.mongodb.BasicDBObject();
+						
+		  		
+		  		orderBy_tMongoDBInput_1.put("num",1);
+						
+					fi_tMongoDBInput_1.sort(orderBy_tMongoDBInput_1);
+						
+				
 
+						
+					com.mongodb.client.MongoCursor<org.bson.Document> cursor_tMongoDBInput_1 = fi_tMongoDBInput_1.iterator();
 						
 				while (cursor_tMongoDBInput_1.hasNext()){
 				org.bson.Document o_tMongoDBInput_1 = cursor_tMongoDBInput_1.next();
@@ -10284,12 +10298,6 @@ row8Struct row8_tmp = new row8Struct();
 					row1.id = valueObj_tMongoDBInput_1.toString();
 				}else{
 					row1.id = null;
-				}
-                    valueObj_tMongoDBInput_1=dbObjectInputUtil_tMongoDBInput_1.getValue(pathMap_tMongoDBInput_1.get("hash"),"hash",o_tMongoDBInput_1);
-				if(valueObj_tMongoDBInput_1!=null && valueObj_tMongoDBInput_1.toString().length() > 0) {
-					row1.hash = valueObj_tMongoDBInput_1.toString();
-				}else{
-					row1.hash = null;
 				}
                     valueObj_tMongoDBInput_1=dbObjectInputUtil_tMongoDBInput_1.getValue(pathMap_tMongoDBInput_1.get("num"),"num",o_tMongoDBInput_1);
 				if(valueObj_tMongoDBInput_1!=null && valueObj_tMongoDBInput_1.toString().length() > 0) {
@@ -10435,7 +10443,6 @@ row8Struct row8_tmp = new row8Struct();
 
 		
     List<org.bson.Document> doc_tExtractFields_1 = (List<org.bson.Document>) row7.fields;
-    row3.hash = row7.hash;
     row3.num = row7.num;
     row3.geographyCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "geographyCode");
     row3.locality = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "locality");
@@ -10511,15 +10518,6 @@ if(row3 != null) {
 
   row2 = new row2Struct();
   boolean bHasError_tConvertType_1 = false;             
-          try {
-              if ("".equals(row3.hash)){  
-                row3.hash = null;
-              }
-              row2.hash=TypeConvert.String2String(row3.hash);            
-          } catch(java.lang.Exception e){
-            bHasError_tConvertType_1 = true;            
-              System.err.println(e.getMessage());          
-          }           
           try {
               row2.num=TypeConvert.long2long(row3.num);            
           } catch(java.lang.Exception e){
@@ -10717,7 +10715,7 @@ if(row2 != null) {
 								
                         		    		row5HashKey.businessKey = String.valueOf(row2.num) ;
                         		    		
-                        		    		row5HashKey.hash = row2.hash ;
+                        		    		row5HashKey.hash = globalMap.get("row4.hash").toString();
                         		    		
 
 								
@@ -14945,6 +14943,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     323077 characters generated by Talend Open Studio for Big Data 
- *     on the 6 December, 2018 7:28:10 AM SGT
+ *     322621 characters generated by Talend Open Studio for Big Data 
+ *     on the 19 December, 2018 12:58:30 PM CET
  ************************************************************************************************/

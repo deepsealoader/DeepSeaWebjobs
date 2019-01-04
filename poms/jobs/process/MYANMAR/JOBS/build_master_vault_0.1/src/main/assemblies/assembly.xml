@@ -215,6 +215,7 @@
 				<include>org.example.deepsea.job:HUB_MASTER_SALES_OBJECTIVES</include>
 				<include>org.example.deepsea.job:SAT_CUSTOMER</include>
 				<include>org.example.deepsea.job:SAT_SALES_OBJECTIVE</include>
+				<include>org.example.deepsea.job:CHECK_GEOGRAPHY_CUSTOMER_LINK</include>
 				<include>org.example.deepsea.job:HUB_MASTER</include>
 				<include>org.example.deepsea.job:SAL_MASTER</include>
 				<include>org.example.deepsea.job:LINK_MASTER_SALES_OBJECTIVE</include>
@@ -225,6 +226,7 @@
 				<include>org.example.deepsea.job:SAT_EMPLOYEE</include>
 				<include>org.example.deepsea.job:SAT_SOURCE_CHANNEL</include>
 				<include>org.example.deepsea.job:SAT_ORGANIZATION</include>
+				<include>org.example.deepsea.job:HUB_MASTER_WITH_DUPLICATES</include>
 				<include>org.example.deepsea.job:BUILD_MASTER_VAULT</include>
 			</includes>
 			<outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>

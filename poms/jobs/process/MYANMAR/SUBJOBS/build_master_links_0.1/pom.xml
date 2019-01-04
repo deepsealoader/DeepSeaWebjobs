@@ -57,6 +57,11 @@
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
+      <artifactId>CHECK_GEOGRAPHY_CUSTOMER_LINK</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.deepsea.job</groupId>
       <artifactId>SAL_MASTER</artifactId>
       <version>0.1.0</version>
     </dependency>
