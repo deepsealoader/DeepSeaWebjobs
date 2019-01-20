@@ -50,8 +50,8 @@ import java.util.Comparator;
 @SuppressWarnings("unused")
 
 /**
- * Job: LINK_MASTER_SALES_OBJECTIVE Purpose: Link Masters<br>
- * Description: Link Masters <br>
+ * Job: LINK_MASTER_SALES_OBJECTIVE Purpose: Update Master Sales Objective LINK<br>
+ * Description: Update Master Sales Objective LINK <br>
  * @author user@talend.com
  * @version 7.0.1.20180411_1414
  * @status 
@@ -194,6 +194,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(POSTGRES_DATABASE != null){
+				
+					this.setProperty("POSTGRES_DATABASE", POSTGRES_DATABASE.toString());
+				
+			}
+			
 			if(POSTGRES_HOSTNAME != null){
 				
 					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
@@ -249,6 +255,10 @@ public String getDEEPSEA_HOSTNAME(){
 public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
 	return this.MONGODB_HOSTNAME;
+}
+public String POSTGRES_DATABASE;
+public String getPOSTGRES_DATABASE(){
+	return this.POSTGRES_DATABASE;
 }
 public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
@@ -3549,7 +3559,7 @@ row7Struct row7_tmp = new row7Struct();
 	                	
 	                
 	                	
-							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.metadata.type' : '" + context.getTYPE() + "', 'file.metadata.quotaType' : '" + context.getQUOTA_TYPE() + "' } }"));
+							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'file.metadata.type' : '" + context.getTYPE() + "', 'file.metadata.quotaType' : '" + context.getQUOTA_TYPE() + "' } }"));
 						
 	                	
 	                
@@ -4803,7 +4813,7 @@ if(exception2 != null) {
 	      			
 	        			paraList_tRunJob_2.add("--father_node=tRunJob_2");
 	      			
-	        			paraList_tRunJob_2.add("--context=Default");
+	        			paraList_tRunJob_2.add("--context=Production");
 	      			
 	//for feature:10589
 	
@@ -4861,6 +4871,9 @@ if(exception2 != null) {
 		
 			parentContextMap_tRunJob_2.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
+			paraList_tRunJob_2.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_2.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
@@ -5092,7 +5105,7 @@ if(exception1 != null) {
 	      			
 	        			paraList_tRunJob_1.add("--father_node=tRunJob_1");
 	      			
-	        			paraList_tRunJob_1.add("--context=Default");
+	        			paraList_tRunJob_1.add("--context=Production");
 	      			
 	//for feature:10589
 	
@@ -5150,6 +5163,9 @@ if(exception1 != null) {
 		
 			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
+			paraList_tRunJob_1.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
@@ -9074,7 +9090,7 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 
 
 	
-		String url_tDBConnection_1 = "jdbc:postgresql://"+context.getPOSTGRES_HOSTNAME()+":"+"5432"+"/"+"deepsea"; 
+		String url_tDBConnection_1 = "jdbc:postgresql://"+context.getPOSTGRES_HOSTNAME()+":"+"5432"+"/"+context.getPOSTGRES_DATABASE(); 
 
 	String dbUser_tDBConnection_1 = "postgres";
 	
@@ -12432,7 +12448,7 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Default";
+    public String contextStr = "Production";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -12605,6 +12621,9 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
+				    context.setContextType("POSTGRES_DATABASE", "id_String");
+				
+                context.POSTGRES_DATABASE=(String) context.getProperty("POSTGRES_DATABASE");
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
@@ -12639,6 +12658,8 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
+            }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
+                context.POSTGRES_DATABASE = (String) parentContextMap.get("POSTGRES_DATABASE");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
             }
@@ -12948,6 +12969,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     278486 characters generated by Talend Open Studio for Big Data 
- *     on the 19 December, 2018 1:00:28 PM CET
+ *     266765 characters generated by Talend Open Studio for Big Data 
+ *     on the January 13, 2019 10:27:45 AM CST
  ************************************************************************************************/

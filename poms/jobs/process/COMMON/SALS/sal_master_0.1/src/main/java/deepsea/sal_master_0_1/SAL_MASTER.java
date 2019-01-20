@@ -50,8 +50,8 @@ import java.util.Comparator;
 @SuppressWarnings("unused")
 
 /**
- * Job: SAL_MASTER Purpose: Link self Master<br>
- * Description: Link self Master <br>
+ * Job: SAL_MASTER Purpose: Update Master SAL<br>
+ * Description: Update Master SAL. A SAL is a link on the same HUB but different source. <br>
  * @author user@talend.com
  * @version 7.0.1.20180411_1414
  * @status 
@@ -164,6 +164,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(WEBJOB_NAME != null){
+				
+					this.setProperty("WEBJOB_NAME", WEBJOB_NAME.toString());
+				
+			}
+			
 			if(COUNTRY != null){
 				
 					this.setProperty("COUNTRY", COUNTRY.toString());
@@ -188,15 +194,15 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(POSTGRES_HOSTNAME != null){
+			if(POSTGRES_DATABASE != null){
 				
-					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
+					this.setProperty("POSTGRES_DATABASE", POSTGRES_DATABASE.toString());
 				
 			}
 			
-			if(WEBJOB_NAME != null){
+			if(POSTGRES_HOSTNAME != null){
 				
-					this.setProperty("WEBJOB_NAME", WEBJOB_NAME.toString());
+					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
 				
 			}
 			
@@ -230,6 +236,10 @@ public String SOURCE2;
 public String getSOURCE2(){
 	return this.SOURCE2;
 }
+public String WEBJOB_NAME;
+public String getWEBJOB_NAME(){
+	return this.WEBJOB_NAME;
+}
 public String COUNTRY;
 public String getCOUNTRY(){
 	return this.COUNTRY;
@@ -246,13 +256,13 @@ public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
 	return this.MONGODB_HOSTNAME;
 }
+public String POSTGRES_DATABASE;
+public String getPOSTGRES_DATABASE(){
+	return this.POSTGRES_DATABASE;
+}
 public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
 	return this.POSTGRES_HOSTNAME;
-}
-public String WEBJOB_NAME;
-public String getWEBJOB_NAME(){
-	return this.WEBJOB_NAME;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -481,7 +491,7 @@ private class TalendException extends Exception {
 					tDBCommit_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tFlowToIterate_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tRunJob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -490,43 +500,7 @@ private class TalendException extends Exception {
 					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tREST_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tWarn_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tFlowToIterate_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tREST_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tWarn_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tRunJob_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -810,332 +784,6 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 
 
-
-public static class row13Struct implements routines.system.IPersistableRow<row13Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_SAL_MASTER = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_SAL_MASTER = new byte[0];
-
-	
-			    public String Body;
-
-				public String getBody () {
-					return this.Body;
-				}
-				
-			    public Integer ERROR_CODE;
-
-				public Integer getERROR_CODE () {
-					return this.ERROR_CODE;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_SAL_MASTER.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_SAL_MASTER.length == 0) {
-   					commonByteArray_DEEPSEA_SAL_MASTER = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_SAL_MASTER = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_SAL_MASTER, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_SAL_MASTER, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-	private Integer readInteger(ObjectInputStream dis) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-	    	intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_SAL_MASTER) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.Body = readString(dis);
-					
-						this.ERROR_CODE = readInteger(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.Body,dos);
-					
-					// Integer
-				
-						writeInteger(this.ERROR_CODE,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("Body="+Body);
-		sb.append(",ERROR_CODE="+String.valueOf(ERROR_CODE));
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row13Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
-public static class row16Struct implements routines.system.IPersistableRow<row16Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_SAL_MASTER = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_SAL_MASTER = new byte[0];
-
-	
-			    public String Body;
-
-				public String getBody () {
-					return this.Body;
-				}
-				
-			    public Integer ERROR_CODE;
-
-				public Integer getERROR_CODE () {
-					return this.ERROR_CODE;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_SAL_MASTER.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_SAL_MASTER.length == 0) {
-   					commonByteArray_DEEPSEA_SAL_MASTER = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_SAL_MASTER = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_SAL_MASTER, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_SAL_MASTER, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-	private Integer readInteger(ObjectInputStream dis) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-	    	intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_SAL_MASTER) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.Body = readString(dis);
-					
-						this.ERROR_CODE = readInteger(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.Body,dos);
-					
-					// Integer
-				
-						writeInteger(this.ERROR_CODE,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("Body="+Body);
-		sb.append(",ERROR_CODE="+String.valueOf(ERROR_CODE));
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row16Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
 
 public static class row12Struct implements routines.system.IPersistableRow<row12Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_SAL_MASTER = new byte[0];
@@ -2762,9 +2410,7 @@ row10Struct row10 = new row10Struct();
 row11Struct row11 = new row11Struct();
 row11Struct row12 = row11;
 exception2Struct exception2 = new exception2Struct();
-row16Struct row16 = new row16Struct();
 exception1Struct exception1 = new exception1Struct();
-row13Struct row13 = new row13Struct();
 
 
 
@@ -2914,20 +2560,18 @@ int count_tDBOutput_2=0;
 
 	
 	/**
-	 * [tFlowToIterate_2 begin ] start
+	 * [tRunJob_1 begin ] start
 	 */
 
-				
-			int NB_ITERATE_tREST_2 = 0; //for statistics
-			
+	
 
 	
 		
-		ok_Hash.put("tFlowToIterate_2", false);
-		start_Hash.put("tFlowToIterate_2", System.currentTimeMillis());
+		ok_Hash.put("tRunJob_1", false);
+		start_Hash.put("tRunJob_1", System.currentTimeMillis());
 		
 	
-	currentComponent="tFlowToIterate_2";
+	currentComponent="tRunJob_1";
 
 	
 			if (execStat) {
@@ -2939,25 +2583,23 @@ int count_tDBOutput_2=0;
 			} 
 
 		
-		int tos_count_tFlowToIterate_2 = 0;
+		int tos_count_tRunJob_1 = 0;
 		
-    	class BytesLimit65535_tFlowToIterate_2{
+    	class BytesLimit65535_tRunJob_1{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tFlowToIterate_2().limitLog4jByte();
+        new BytesLimit65535_tRunJob_1().limitLog4jByte();
 
-int nb_line_tFlowToIterate_2 = 0;
-int counter_tFlowToIterate_2 = 0;
 
  
 
 
 
 /**
- * [tFlowToIterate_2 begin ] stop
+ * [tRunJob_1 begin ] stop
  */
 
 
@@ -3055,20 +2697,18 @@ exception2Struct exception2_tmp = new exception2Struct();
 
 	
 	/**
-	 * [tFlowToIterate_1 begin ] start
+	 * [tRunJob_2 begin ] start
 	 */
 
-				
-			int NB_ITERATE_tREST_1 = 0; //for statistics
-			
+	
 
 	
 		
-		ok_Hash.put("tFlowToIterate_1", false);
-		start_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
+		ok_Hash.put("tRunJob_2", false);
+		start_Hash.put("tRunJob_2", System.currentTimeMillis());
 		
 	
-	currentComponent="tFlowToIterate_1";
+	currentComponent="tRunJob_2";
 
 	
 			if (execStat) {
@@ -3080,25 +2720,23 @@ exception2Struct exception2_tmp = new exception2Struct();
 			} 
 
 		
-		int tos_count_tFlowToIterate_1 = 0;
+		int tos_count_tRunJob_2 = 0;
 		
-    	class BytesLimit65535_tFlowToIterate_1{
+    	class BytesLimit65535_tRunJob_2{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tFlowToIterate_1().limitLog4jByte();
+        new BytesLimit65535_tRunJob_2().limitLog4jByte();
 
-int nb_line_tFlowToIterate_1 = 0;
-int counter_tFlowToIterate_1 = 0;
 
  
 
 
 
 /**
- * [tFlowToIterate_1 begin ] stop
+ * [tRunJob_2 begin ] stop
  */
 
 
@@ -3490,7 +3128,7 @@ row7Struct row7_tmp = new row7Struct();
 	                	
 	                
 	                	
-							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.metadata.type' : '" + context.getTYPE() + "', 'sheetName' : '" + context.getSHEET_NAME() + "' } }"));
+							aggregationStages.add(org.bson.Document.parse("{ $match : {'file.country.$id': ObjectId('" + globalMap.get("COUNTRY_ID").toString() + "'), 'file.metadata.type' : '" + context.getTYPE() + "', 'sheetName' : '" + context.getSHEET_NAME() + "' } }"));
 						
 	                	
 	                
@@ -4590,14 +4228,14 @@ if(exception2 != null) {
 
 	
 	/**
-	 * [tFlowToIterate_2 main ] start
+	 * [tRunJob_1 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tFlowToIterate_2";
+	currentComponent="tRunJob_1";
 
 	
 
@@ -4612,276 +4250,227 @@ if(exception2 != null) {
 			
 
 		
-
-
-    	            
-            globalMap.put("exception2.id", exception2.id);
-    	            
-            globalMap.put("exception2.oldValue", exception2.oldValue);
-    	
- 
-	   nb_line_tFlowToIterate_2++;  
-       counter_tFlowToIterate_2++;
-       globalMap.put("tFlowToIterate_2_CURRENT_ITERATION", counter_tFlowToIterate_2);
- 
-
-
-	tos_count_tFlowToIterate_2++;
-
-/**
- * [tFlowToIterate_2 main ] stop
- */
+	java.util.List<String> paraList_tRunJob_1 = new java.util.ArrayList<String>();
 	
-	/**
-	 * [tFlowToIterate_2 process_data_begin ] start
-	 */
-
+	        			paraList_tRunJob_1.add("--father_pid="+pid);
+	      			
+	        			paraList_tRunJob_1.add("--root_pid="+rootPid);
+	      			
+	        			paraList_tRunJob_1.add("--father_node=tRunJob_1");
+	      			
+	        			paraList_tRunJob_1.add("--context=Production");
+	      			
+	//for feature:10589
+	
+		paraList_tRunJob_1.add("--stat_port=" + portStats);
 	
 
-	
-	
-	currentComponent="tFlowToIterate_2";
-
-	
-
- 
-
-
-
-/**
- * [tFlowToIterate_2 process_data_begin ] stop
- */
-	NB_ITERATE_tREST_2++;
-	
-	
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row16", 3, 0);
-					}           			
-				
-				if(execStat){
-					runStat.updateStatOnConnection("iterate2", 1, "exec" + NB_ITERATE_tREST_2);
-					//Thread.sleep(1000);
-				}				
-			
-
-
-	
-	/**
-	 * [tWarn_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tWarn_1", false);
-		start_Hash.put("tWarn_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tWarn_1";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row16" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tWarn_1 = 0;
-		
-    	class BytesLimit65535_tWarn_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tWarn_1().limitLog4jByte();
-
- 
-
-
-
-/**
- * [tWarn_1 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tREST_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tREST_2", false);
-		start_Hash.put("tREST_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tREST_2";
-
-	
-		int tos_count_tREST_2 = 0;
-		
-    	class BytesLimit65535_tREST_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tREST_2().limitLog4jByte();
-	
-
-	
-	String endpoint_tREST_2 = "http://"+ context.getDEEPSEA_HOSTNAME() + "/api/v1/exceptions";
-	
-	String trustStoreFile_tREST_2 = System.getProperty("javax.net.ssl.trustStore");
-	String trustStoreType_tREST_2 = System.getProperty("javax.net.ssl.trustStoreType");
-	String trustStorePWD_tREST_2 = System.getProperty("javax.net.ssl.trustStorePassword");
-	
-	String keyStoreFile_tREST_2 = System.getProperty("javax.net.ssl.keyStore");
-	String keyStoreType_tREST_2 = System.getProperty("javax.net.ssl.keyStoreType");
-	String keyStorePWD_tREST_2 = System.getProperty("javax.net.ssl.keyStorePassword");
-	
-	com.sun.jersey.api.client.config.ClientConfig config_tREST_2 = new com.sun.jersey.api.client.config.DefaultClientConfig();
-	javax.net.ssl.SSLContext ctx_tREST_2 = javax.net.ssl.SSLContext.getInstance("SSL");
-	
-	javax.net.ssl.TrustManager[] tms_tREST_2 = null;
-	if(trustStoreFile_tREST_2!=null && trustStoreType_tREST_2!=null){
-		char[] password_tREST_2 = null;
-		if(trustStorePWD_tREST_2!=null)
-			password_tREST_2 = trustStorePWD_tREST_2.toCharArray();
-		java.security.KeyStore trustStore_tREST_2 = java.security.KeyStore.getInstance(trustStoreType_tREST_2);
-		trustStore_tREST_2.load(new java.io.FileInputStream(trustStoreFile_tREST_2), password_tREST_2);
-		
-		javax.net.ssl.TrustManagerFactory tmf_tREST_2 = javax.net.ssl.TrustManagerFactory.getInstance(javax.net.ssl.KeyManagerFactory.getDefaultAlgorithm());
-        tmf_tREST_2.init(trustStore_tREST_2);
-        tms_tREST_2 = tmf_tREST_2.getTrustManagers();
+	if(resuming_logs_dir_path != null){
+		paraList_tRunJob_1.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
 	}
-	
-	javax.net.ssl.KeyManager[] kms_tREST_2 = null;
-	if(keyStoreFile_tREST_2!=null && keyStoreType_tREST_2!=null){
-		char[] password_tREST_2 = null;
-		if(keyStorePWD_tREST_2!=null)
-			password_tREST_2 = keyStorePWD_tREST_2.toCharArray();
-		java.security.KeyStore keyStore_tREST_2 = java.security.KeyStore.getInstance(keyStoreType_tREST_2);
-		keyStore_tREST_2.load(new java.io.FileInputStream(keyStoreFile_tREST_2), password_tREST_2);
-		
-		javax.net.ssl.KeyManagerFactory kmf_tREST_2 = javax.net.ssl.KeyManagerFactory.getInstance(javax.net.ssl.KeyManagerFactory.getDefaultAlgorithm());
-        kmf_tREST_2.init(keyStore_tREST_2,password_tREST_2);
-        kms_tREST_2 = kmf_tREST_2.getKeyManagers();
+	String childResumePath_tRunJob_1 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
+	String tRunJobName_tRunJob_1 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
+	if("tRunJob_1".equals(tRunJobName_tRunJob_1) && childResumePath_tRunJob_1 != null){
+		paraList_tRunJob_1.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
 	}
+	paraList_tRunJob_1.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_1");
 	
-    ctx_tREST_2.init(kms_tREST_2, tms_tREST_2 , null);
-    config_tREST_2.getProperties().put(com.sun.jersey.client.urlconnection.HTTPSProperties.PROPERTY_HTTPS_PROPERTIES,
-                new com.sun.jersey.client.urlconnection.HTTPSProperties(new javax.net.ssl.HostnameVerifier() {
+	java.util.Map<String, Object> parentContextMap_tRunJob_1 = new java.util.HashMap<String, Object>();
 
-                    public boolean verify(String hostName, javax.net.ssl.SSLSession session) {
-                        return true;
-                    }
-                }, ctx_tREST_2));
-
-	com.sun.jersey.api.client.Client restClient_tREST_2 = com.sun.jersey.api.client.Client.create(config_tREST_2);
 	
-	java.util.Map<String, Object> headers_tREST_2 = new java.util.HashMap<String, Object>();
-	
-    	headers_tREST_2.put("Authorization",context.getDEEPSEA_AUTH_TOKEN());
-	
-    	headers_tREST_2.put("Content-Type","application/json");
-	
-	
-	Object transfer_encoding_tREST_2 = headers_tREST_2.get("Transfer-Encoding");
-	if(transfer_encoding_tREST_2!=null && "chunked".equals(transfer_encoding_tREST_2)) {
-		restClient_tREST_2.setChunkedEncodingSize(4096);
-	}
-	
-	com.sun.jersey.api.client.WebResource restResource_tREST_2;
-	if(endpoint_tREST_2!=null && !("").equals(endpoint_tREST_2)){
-		restResource_tREST_2 = restClient_tREST_2.resource(endpoint_tREST_2);
-	}else{
-		throw new IllegalArgumentException("url can't be empty!");
-	}
-	
-	com.sun.jersey.api.client.ClientResponse errorResponse_tREST_2 = null;
-	String restResponse_tREST_2 = "";
-	try{
 		
-		com.sun.jersey.api.client.WebResource.Builder builder_tREST_2 = null;
-		for(java.util.Map.Entry<String, Object> header_tREST_2 : headers_tREST_2.entrySet()) {
-			if(builder_tREST_2 == null) {
-				builder_tREST_2 = restResource_tREST_2.header(header_tREST_2.getKey(), header_tREST_2.getValue());
+		context.synchronizeContext();
+		
+			parentContextMap_tRunJob_1.put("TYPE", context.TYPE);
+			paraList_tRunJob_1.add("--context_type " + "TYPE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("SHEET_NAME", context.SHEET_NAME);
+			paraList_tRunJob_1.add("--context_type " + "SHEET_NAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("BUSINESS_KEY1", context.BUSINESS_KEY1);
+			paraList_tRunJob_1.add("--context_type " + "BUSINESS_KEY1" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("BUSINESS_KEY2", context.BUSINESS_KEY2);
+			paraList_tRunJob_1.add("--context_type " + "BUSINESS_KEY2" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("TABLE", context.TABLE);
+			paraList_tRunJob_1.add("--context_type " + "TABLE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("SOURCE1", context.SOURCE1);
+			paraList_tRunJob_1.add("--context_type " + "SOURCE1" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("SOURCE2", context.SOURCE2);
+			paraList_tRunJob_1.add("--context_type " + "SOURCE2" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_1.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
+			paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
+			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
+			paraList_tRunJob_1.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		 
+		java.util.Enumeration<?> propertyNames_tRunJob_1 = context.propertyNames();
+		while (propertyNames_tRunJob_1.hasMoreElements()) {
+			String key_tRunJob_1 = (String) propertyNames_tRunJob_1.nextElement();
+			Object value_tRunJob_1 = (Object) context.get(key_tRunJob_1);
+			if(value_tRunJob_1!=null) {  
+				paraList_tRunJob_1.add("--context_param " + key_tRunJob_1 + "=" + value_tRunJob_1);
 			} else {
-				builder_tREST_2.header(header_tREST_2.getKey(), header_tREST_2.getValue());
+				paraList_tRunJob_1.add("--context_param " + key_tRunJob_1 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
 			}
+			
 		}
 		
-		
-			if(builder_tREST_2!=null) {
-				restResponse_tREST_2 = builder_tREST_2.post(String.class,"{ \"country\":{\"id\":\"" + globalMap.get("COUNTRY_ID") +"\"}, \"webjob\":{\"id\":\"" + globalMap.get("WEBJOB_ID") +"\"}, \"record\":{\"id\":\"" + globalMap.get("exception2.id") + "\"},		 \"field\":{ 	\"name\":\"" + context.getBUSINESS_KEY2() + "\", 	\"value\":\"" + globalMap.get("exception2.oldValue") + "\", 	\"tag\":\"" + context.getBUSINESS_KEY2() + "\" }, \"newValue\":null, \"reason\":\"business key not found in source " + context.getSOURCE2() + "\", \"doneFlag\":false }");
-			} else {
-				restResponse_tREST_2 = restResource_tREST_2.post(String.class,"{ \"country\":{\"id\":\"" + globalMap.get("COUNTRY_ID") +"\"}, \"webjob\":{\"id\":\"" + globalMap.get("WEBJOB_ID") +"\"}, \"record\":{\"id\":\"" + globalMap.get("exception2.id") + "\"},		 \"field\":{ 	\"name\":\"" + context.getBUSINESS_KEY2() + "\", 	\"value\":\"" + globalMap.get("exception2.oldValue") + "\", 	\"tag\":\"" + context.getBUSINESS_KEY2() + "\" }, \"newValue\":null, \"reason\":\"business key not found in source " + context.getSOURCE2() + "\", \"doneFlag\":false }");
-			}
-		
-	}catch (com.sun.jersey.api.client.UniformInterfaceException ue) {
-        errorResponse_tREST_2 = ue.getResponse();
-    }
+
+	Object obj_tRunJob_1 = null;
+
 	
-	// for output
+		obj_tRunJob_1 = globalMap.get("COUNTRY_ID");
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param COUNTRY_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param COUNTRY_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("COUNTRY_ID", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = globalMap.get("WEBJOB_ID");
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param WEBJOB_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param WEBJOB_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("WEBJOB_ID", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = exception2.id;
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param RECORD_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param RECORD_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("RECORD_ID", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = context.getBUSINESS_KEY2();
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param FIELD_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param FIELD_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("FIELD_NAME", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = exception2.oldValue;
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param FIELD_VALUE=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param FIELD_VALUE=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("FIELD_VALUE", obj_tRunJob_1);
+	
+		obj_tRunJob_1 = "business key not found in source " + context.getSOURCE2();
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param REASON=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param REASON=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("REASON", obj_tRunJob_1);
+	
+	
+		deepsea.dsendexception_0_1.dSendException childJob_tRunJob_1 = new deepsea.dsendexception_0_1.dSendException();
+	    // pass DataSources
+	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_1 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
+	            .get(KEY_DB_DATASOURCES);
+	    if (null != talendDataSources_tRunJob_1) {
+	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_1 = new java.util.HashMap<String, javax.sql.DataSource>();
+	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_1 : talendDataSources_tRunJob_1
+			        .entrySet()) {
+	            dataSources_tRunJob_1.put(talendDataSourceEntry_tRunJob_1.getKey(),
+	                    talendDataSourceEntry_tRunJob_1.getValue().getRawDataSource());
+	        }
+	        childJob_tRunJob_1.setDataSources(dataSources_tRunJob_1);
+	    }
+		  
+			childJob_tRunJob_1.parentContextMap = parentContextMap_tRunJob_1;
+		  
+		
+		String[][] childReturn_tRunJob_1 = childJob_tRunJob_1.runJob((String[]) paraList_tRunJob_1.toArray(new String[paraList_tRunJob_1.size()]));
+		
+	  	
+				((java.util.Map)threadLocal.get()).put("errorCode", childJob_tRunJob_1.getErrorCode());
 			
-				row16 = new row16Struct();
-				if(errorResponse_tREST_2!=null){
-					row16.ERROR_CODE = errorResponse_tREST_2.getStatus();
-					if(row16.ERROR_CODE!=204){
-					    row16.Body = errorResponse_tREST_2.getEntity(String.class);
-					}
-				}else{
-					row16.Body = restResponse_tREST_2;
+	            
+	    	if(childJob_tRunJob_1.getErrorCode() == null){
+				globalMap.put("tRunJob_1_CHILD_RETURN_CODE", childJob_tRunJob_1.getStatus() != null && ("failure").equals(childJob_tRunJob_1.getStatus()) ? 1 : 0);
+	    	}else{
+				globalMap.put("tRunJob_1_CHILD_RETURN_CODE", childJob_tRunJob_1.getErrorCode());
+		    }
+		    if (childJob_tRunJob_1.getExceptionStackTrace() != null) { 
+		    	globalMap.put("tRunJob_1_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_1.getExceptionStackTrace());
+		    }
+	  
+			 
+				if (childJob_tRunJob_1.getErrorCode() != null || ("failure").equals(childJob_tRunJob_1.getStatus())) {
+	        		throw new RuntimeException("Child job running failed.\n"+childJob_tRunJob_1.getException().getClass().getName() + ": " + childJob_tRunJob_1.getException().getMessage());
 				}
 			
+	  	
 
  
 
 
+	tos_count_tRunJob_1++;
 
 /**
- * [tREST_2 begin ] stop
+ * [tRunJob_1 main ] stop
  */
 	
 	/**
-	 * [tREST_2 main ] start
+	 * [tRunJob_1 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tREST_2";
+	currentComponent="tRunJob_1";
 
 	
 
  
 
 
-	tos_count_tREST_2++;
 
 /**
- * [tREST_2 main ] stop
+ * [tRunJob_1 process_data_begin ] stop
  */
 	
 	/**
-	 * [tREST_2 process_data_begin ] start
+	 * [tRunJob_1 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tREST_2";
+	currentComponent="tRunJob_1";
 
 	
 
@@ -4890,205 +4479,7 @@ if(exception2 != null) {
 
 
 /**
- * [tREST_2 process_data_begin ] stop
- */
-
-	
-	/**
-	 * [tWarn_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_1";
-
-	
-
-			//row16
-			//row16
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row16"+iterateId,1, 1);
-				} 
-			
-
-		
-
-		
-try {
-	
-	resumeUtil.addLog("USER_DEF_LOG", "NODE:tWarn_1", "", Thread.currentThread().getId() + "", "WARN","",row16.Body,"", "");
-	tLogCatcher_1.addMessage("tWarn", "tWarn_1", 4, row16.Body, 42);
-	tLogCatcher_1Process(globalMap);
-	globalMap.put("tWarn_1_WARN_MESSAGES", row16.Body); 
-	globalMap.put("tWarn_1_WARN_PRIORITY", 4);
-	globalMap.put("tWarn_1_WARN_CODE", 42);
-	
-} catch (Exception e_tWarn_1) {
-	logIgnoredError(String.format("tWarn_1 - tWarn failed to log message due to internal error: %s", e_tWarn_1), e_tWarn_1);
-}
-
-
- 
-
-
-	tos_count_tWarn_1++;
-
-/**
- * [tWarn_1 main ] stop
- */
-	
-	/**
-	 * [tWarn_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_1";
-
-	
-
- 
-
-
-
-/**
- * [tWarn_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tWarn_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_1";
-
-	
-
- 
-
-
-
-/**
- * [tWarn_1 process_data_end ] stop
- */
-
-
-
-	
-	/**
-	 * [tREST_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tREST_2";
-
-	
-
- 
-
-
-
-/**
- * [tREST_2 process_data_end ] stop
- */
-	
-	/**
-	 * [tREST_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tREST_2";
-
-	
-
- 
-
-ok_Hash.put("tREST_2", true);
-end_Hash.put("tREST_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tREST_2 end ] stop
- */
-
-	
-	/**
-	 * [tWarn_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_1";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row16"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tWarn_1", true);
-end_Hash.put("tWarn_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tWarn_1 end ] stop
- */
-
-
-
-						if(execStat){
-							runStat.updateStatOnConnection("iterate2", 2, "exec" + NB_ITERATE_tREST_2);
-						}				
-					
-
-
-
-
-	
-	/**
-	 * [tFlowToIterate_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFlowToIterate_2";
-
-	
-
- 
-
-
-
-/**
- * [tFlowToIterate_2 process_data_end ] stop
+ * [tRunJob_1 process_data_end ] stop
  */
 
 } // End of branch "exception2"
@@ -5129,14 +4520,14 @@ if(exception1 != null) {
 
 	
 	/**
-	 * [tFlowToIterate_1 main ] start
+	 * [tRunJob_2 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tFlowToIterate_1";
+	currentComponent="tRunJob_2";
 
 	
 
@@ -5151,276 +4542,227 @@ if(exception1 != null) {
 			
 
 		
-
-
-    	            
-            globalMap.put("exception1.id", exception1.id);
-    	            
-            globalMap.put("exception1.oldValue", exception1.oldValue);
-    	
- 
-	   nb_line_tFlowToIterate_1++;  
-       counter_tFlowToIterate_1++;
-       globalMap.put("tFlowToIterate_1_CURRENT_ITERATION", counter_tFlowToIterate_1);
- 
-
-
-	tos_count_tFlowToIterate_1++;
-
-/**
- * [tFlowToIterate_1 main ] stop
- */
+	java.util.List<String> paraList_tRunJob_2 = new java.util.ArrayList<String>();
 	
-	/**
-	 * [tFlowToIterate_1 process_data_begin ] start
-	 */
-
+	        			paraList_tRunJob_2.add("--father_pid="+pid);
+	      			
+	        			paraList_tRunJob_2.add("--root_pid="+rootPid);
+	      			
+	        			paraList_tRunJob_2.add("--father_node=tRunJob_2");
+	      			
+	        			paraList_tRunJob_2.add("--context=Production");
+	      			
+	//for feature:10589
+	
+		paraList_tRunJob_2.add("--stat_port=" + portStats);
 	
 
-	
-	
-	currentComponent="tFlowToIterate_1";
-
-	
-
- 
-
-
-
-/**
- * [tFlowToIterate_1 process_data_begin ] stop
- */
-	NB_ITERATE_tREST_1++;
-	
-	
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row13", 3, 0);
-					}           			
-				
-				if(execStat){
-					runStat.updateStatOnConnection("iterate1", 1, "exec" + NB_ITERATE_tREST_1);
-					//Thread.sleep(1000);
-				}				
-			
-
-
-	
-	/**
-	 * [tWarn_3 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tWarn_3", false);
-		start_Hash.put("tWarn_3", System.currentTimeMillis());
-		
-	
-	currentComponent="tWarn_3";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row13" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tWarn_3 = 0;
-		
-    	class BytesLimit65535_tWarn_3{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tWarn_3().limitLog4jByte();
-
- 
-
-
-
-/**
- * [tWarn_3 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tREST_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tREST_1", false);
-		start_Hash.put("tREST_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tREST_1";
-
-	
-		int tos_count_tREST_1 = 0;
-		
-    	class BytesLimit65535_tREST_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tREST_1().limitLog4jByte();
-	
-
-	
-	String endpoint_tREST_1 = "http://"+ context.getDEEPSEA_HOSTNAME() + "/api/v1/exceptions";
-	
-	String trustStoreFile_tREST_1 = System.getProperty("javax.net.ssl.trustStore");
-	String trustStoreType_tREST_1 = System.getProperty("javax.net.ssl.trustStoreType");
-	String trustStorePWD_tREST_1 = System.getProperty("javax.net.ssl.trustStorePassword");
-	
-	String keyStoreFile_tREST_1 = System.getProperty("javax.net.ssl.keyStore");
-	String keyStoreType_tREST_1 = System.getProperty("javax.net.ssl.keyStoreType");
-	String keyStorePWD_tREST_1 = System.getProperty("javax.net.ssl.keyStorePassword");
-	
-	com.sun.jersey.api.client.config.ClientConfig config_tREST_1 = new com.sun.jersey.api.client.config.DefaultClientConfig();
-	javax.net.ssl.SSLContext ctx_tREST_1 = javax.net.ssl.SSLContext.getInstance("SSL");
-	
-	javax.net.ssl.TrustManager[] tms_tREST_1 = null;
-	if(trustStoreFile_tREST_1!=null && trustStoreType_tREST_1!=null){
-		char[] password_tREST_1 = null;
-		if(trustStorePWD_tREST_1!=null)
-			password_tREST_1 = trustStorePWD_tREST_1.toCharArray();
-		java.security.KeyStore trustStore_tREST_1 = java.security.KeyStore.getInstance(trustStoreType_tREST_1);
-		trustStore_tREST_1.load(new java.io.FileInputStream(trustStoreFile_tREST_1), password_tREST_1);
-		
-		javax.net.ssl.TrustManagerFactory tmf_tREST_1 = javax.net.ssl.TrustManagerFactory.getInstance(javax.net.ssl.KeyManagerFactory.getDefaultAlgorithm());
-        tmf_tREST_1.init(trustStore_tREST_1);
-        tms_tREST_1 = tmf_tREST_1.getTrustManagers();
+	if(resuming_logs_dir_path != null){
+		paraList_tRunJob_2.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
 	}
-	
-	javax.net.ssl.KeyManager[] kms_tREST_1 = null;
-	if(keyStoreFile_tREST_1!=null && keyStoreType_tREST_1!=null){
-		char[] password_tREST_1 = null;
-		if(keyStorePWD_tREST_1!=null)
-			password_tREST_1 = keyStorePWD_tREST_1.toCharArray();
-		java.security.KeyStore keyStore_tREST_1 = java.security.KeyStore.getInstance(keyStoreType_tREST_1);
-		keyStore_tREST_1.load(new java.io.FileInputStream(keyStoreFile_tREST_1), password_tREST_1);
-		
-		javax.net.ssl.KeyManagerFactory kmf_tREST_1 = javax.net.ssl.KeyManagerFactory.getInstance(javax.net.ssl.KeyManagerFactory.getDefaultAlgorithm());
-        kmf_tREST_1.init(keyStore_tREST_1,password_tREST_1);
-        kms_tREST_1 = kmf_tREST_1.getKeyManagers();
+	String childResumePath_tRunJob_2 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
+	String tRunJobName_tRunJob_2 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
+	if("tRunJob_2".equals(tRunJobName_tRunJob_2) && childResumePath_tRunJob_2 != null){
+		paraList_tRunJob_2.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
 	}
+	paraList_tRunJob_2.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_2");
 	
-    ctx_tREST_1.init(kms_tREST_1, tms_tREST_1 , null);
-    config_tREST_1.getProperties().put(com.sun.jersey.client.urlconnection.HTTPSProperties.PROPERTY_HTTPS_PROPERTIES,
-                new com.sun.jersey.client.urlconnection.HTTPSProperties(new javax.net.ssl.HostnameVerifier() {
+	java.util.Map<String, Object> parentContextMap_tRunJob_2 = new java.util.HashMap<String, Object>();
 
-                    public boolean verify(String hostName, javax.net.ssl.SSLSession session) {
-                        return true;
-                    }
-                }, ctx_tREST_1));
-
-	com.sun.jersey.api.client.Client restClient_tREST_1 = com.sun.jersey.api.client.Client.create(config_tREST_1);
 	
-	java.util.Map<String, Object> headers_tREST_1 = new java.util.HashMap<String, Object>();
-	
-    	headers_tREST_1.put("Authorization",context.getDEEPSEA_AUTH_TOKEN());
-	
-    	headers_tREST_1.put("Content-Type","application/json");
-	
-	
-	Object transfer_encoding_tREST_1 = headers_tREST_1.get("Transfer-Encoding");
-	if(transfer_encoding_tREST_1!=null && "chunked".equals(transfer_encoding_tREST_1)) {
-		restClient_tREST_1.setChunkedEncodingSize(4096);
-	}
-	
-	com.sun.jersey.api.client.WebResource restResource_tREST_1;
-	if(endpoint_tREST_1!=null && !("").equals(endpoint_tREST_1)){
-		restResource_tREST_1 = restClient_tREST_1.resource(endpoint_tREST_1);
-	}else{
-		throw new IllegalArgumentException("url can't be empty!");
-	}
-	
-	com.sun.jersey.api.client.ClientResponse errorResponse_tREST_1 = null;
-	String restResponse_tREST_1 = "";
-	try{
 		
-		com.sun.jersey.api.client.WebResource.Builder builder_tREST_1 = null;
-		for(java.util.Map.Entry<String, Object> header_tREST_1 : headers_tREST_1.entrySet()) {
-			if(builder_tREST_1 == null) {
-				builder_tREST_1 = restResource_tREST_1.header(header_tREST_1.getKey(), header_tREST_1.getValue());
+		context.synchronizeContext();
+		
+			parentContextMap_tRunJob_2.put("TYPE", context.TYPE);
+			paraList_tRunJob_2.add("--context_type " + "TYPE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("SHEET_NAME", context.SHEET_NAME);
+			paraList_tRunJob_2.add("--context_type " + "SHEET_NAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("BUSINESS_KEY1", context.BUSINESS_KEY1);
+			paraList_tRunJob_2.add("--context_type " + "BUSINESS_KEY1" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("BUSINESS_KEY2", context.BUSINESS_KEY2);
+			paraList_tRunJob_2.add("--context_type " + "BUSINESS_KEY2" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("TABLE", context.TABLE);
+			paraList_tRunJob_2.add("--context_type " + "TABLE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("SOURCE1", context.SOURCE1);
+			paraList_tRunJob_2.add("--context_type " + "SOURCE1" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("SOURCE2", context.SOURCE2);
+			paraList_tRunJob_2.add("--context_type " + "SOURCE2" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_2.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("COUNTRY", context.COUNTRY);
+			paraList_tRunJob_2.add("--context_type " + "COUNTRY" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
+			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
+			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
+			paraList_tRunJob_2.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
+			paraList_tRunJob_2.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
+			paraList_tRunJob_2.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		 
+		java.util.Enumeration<?> propertyNames_tRunJob_2 = context.propertyNames();
+		while (propertyNames_tRunJob_2.hasMoreElements()) {
+			String key_tRunJob_2 = (String) propertyNames_tRunJob_2.nextElement();
+			Object value_tRunJob_2 = (Object) context.get(key_tRunJob_2);
+			if(value_tRunJob_2!=null) {  
+				paraList_tRunJob_2.add("--context_param " + key_tRunJob_2 + "=" + value_tRunJob_2);
 			} else {
-				builder_tREST_1.header(header_tREST_1.getKey(), header_tREST_1.getValue());
+				paraList_tRunJob_2.add("--context_param " + key_tRunJob_2 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
 			}
+			
 		}
 		
-		
-			if(builder_tREST_1!=null) {
-				restResponse_tREST_1 = builder_tREST_1.post(String.class,"{ \"country\":{\"id\":\"" + globalMap.get("COUNTRY_ID") +"\"}, \"webjob\":{\"id\":\"" + globalMap.get("WEBJOB_ID") +"\"}, \"record\":{\"id\":\"" + globalMap.get("exception1.id") + "\"},		 \"field\":{ 	\"name\":\"" + context.getBUSINESS_KEY1() + "\", 	\"value\":\"" + globalMap.get("exception1.oldValue") + "\", 	\"tag\":\"" + context.getBUSINESS_KEY1() + "\" }, \"newValue\":null, \"reason\":\"business key not found in source " + context.getSOURCE1() + "\", \"doneFlag\":false }");
-			} else {
-				restResponse_tREST_1 = restResource_tREST_1.post(String.class,"{ \"country\":{\"id\":\"" + globalMap.get("COUNTRY_ID") +"\"}, \"webjob\":{\"id\":\"" + globalMap.get("WEBJOB_ID") +"\"}, \"record\":{\"id\":\"" + globalMap.get("exception1.id") + "\"},		 \"field\":{ 	\"name\":\"" + context.getBUSINESS_KEY1() + "\", 	\"value\":\"" + globalMap.get("exception1.oldValue") + "\", 	\"tag\":\"" + context.getBUSINESS_KEY1() + "\" }, \"newValue\":null, \"reason\":\"business key not found in source " + context.getSOURCE1() + "\", \"doneFlag\":false }");
-			}
-		
-	}catch (com.sun.jersey.api.client.UniformInterfaceException ue) {
-        errorResponse_tREST_1 = ue.getResponse();
-    }
+
+	Object obj_tRunJob_2 = null;
+
 	
-	// for output
+		obj_tRunJob_2 = globalMap.get("COUNTRY_ID");
+		if(obj_tRunJob_2!=null) {
+			paraList_tRunJob_2.add("--context_param COUNTRY_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
+		} else {
+			paraList_tRunJob_2.add("--context_param COUNTRY_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_2.put("COUNTRY_ID", obj_tRunJob_2);
+	
+		obj_tRunJob_2 = globalMap.get("WEBJOB_ID");
+		if(obj_tRunJob_2!=null) {
+			paraList_tRunJob_2.add("--context_param WEBJOB_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
+		} else {
+			paraList_tRunJob_2.add("--context_param WEBJOB_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_2.put("WEBJOB_ID", obj_tRunJob_2);
+	
+		obj_tRunJob_2 = exception1.id;
+		if(obj_tRunJob_2!=null) {
+			paraList_tRunJob_2.add("--context_param RECORD_ID=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
+		} else {
+			paraList_tRunJob_2.add("--context_param RECORD_ID=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_2.put("RECORD_ID", obj_tRunJob_2);
+	
+		obj_tRunJob_2 = context.getBUSINESS_KEY1();
+		if(obj_tRunJob_2!=null) {
+			paraList_tRunJob_2.add("--context_param FIELD_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
+		} else {
+			paraList_tRunJob_2.add("--context_param FIELD_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_2.put("FIELD_NAME", obj_tRunJob_2);
+	
+		obj_tRunJob_2 = exception1.oldValue;
+		if(obj_tRunJob_2!=null) {
+			paraList_tRunJob_2.add("--context_param FIELD_VALUE=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
+		} else {
+			paraList_tRunJob_2.add("--context_param FIELD_VALUE=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_2.put("FIELD_VALUE", obj_tRunJob_2);
+	
+		obj_tRunJob_2 = "business key not found in source " + context.getSOURCE1();
+		if(obj_tRunJob_2!=null) {
+			paraList_tRunJob_2.add("--context_param REASON=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
+		} else {
+			paraList_tRunJob_2.add("--context_param REASON=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_2.put("REASON", obj_tRunJob_2);
+	
+	
+		deepsea.dsendexception_0_1.dSendException childJob_tRunJob_2 = new deepsea.dsendexception_0_1.dSendException();
+	    // pass DataSources
+	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_2 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
+	            .get(KEY_DB_DATASOURCES);
+	    if (null != talendDataSources_tRunJob_2) {
+	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_2 = new java.util.HashMap<String, javax.sql.DataSource>();
+	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_2 : talendDataSources_tRunJob_2
+			        .entrySet()) {
+	            dataSources_tRunJob_2.put(talendDataSourceEntry_tRunJob_2.getKey(),
+	                    talendDataSourceEntry_tRunJob_2.getValue().getRawDataSource());
+	        }
+	        childJob_tRunJob_2.setDataSources(dataSources_tRunJob_2);
+	    }
+		  
+			childJob_tRunJob_2.parentContextMap = parentContextMap_tRunJob_2;
+		  
+		
+		String[][] childReturn_tRunJob_2 = childJob_tRunJob_2.runJob((String[]) paraList_tRunJob_2.toArray(new String[paraList_tRunJob_2.size()]));
+		
+	  	
+				((java.util.Map)threadLocal.get()).put("errorCode", childJob_tRunJob_2.getErrorCode());
 			
-				row13 = new row13Struct();
-				if(errorResponse_tREST_1!=null){
-					row13.ERROR_CODE = errorResponse_tREST_1.getStatus();
-					if(row13.ERROR_CODE!=204){
-					    row13.Body = errorResponse_tREST_1.getEntity(String.class);
-					}
-				}else{
-					row13.Body = restResponse_tREST_1;
+	            
+	    	if(childJob_tRunJob_2.getErrorCode() == null){
+				globalMap.put("tRunJob_2_CHILD_RETURN_CODE", childJob_tRunJob_2.getStatus() != null && ("failure").equals(childJob_tRunJob_2.getStatus()) ? 1 : 0);
+	    	}else{
+				globalMap.put("tRunJob_2_CHILD_RETURN_CODE", childJob_tRunJob_2.getErrorCode());
+		    }
+		    if (childJob_tRunJob_2.getExceptionStackTrace() != null) { 
+		    	globalMap.put("tRunJob_2_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_2.getExceptionStackTrace());
+		    }
+	  
+			 
+				if (childJob_tRunJob_2.getErrorCode() != null || ("failure").equals(childJob_tRunJob_2.getStatus())) {
+	        		throw new RuntimeException("Child job running failed.\n"+childJob_tRunJob_2.getException().getClass().getName() + ": " + childJob_tRunJob_2.getException().getMessage());
 				}
 			
+	  	
 
  
 
 
+	tos_count_tRunJob_2++;
 
 /**
- * [tREST_1 begin ] stop
+ * [tRunJob_2 main ] stop
  */
 	
 	/**
-	 * [tREST_1 main ] start
+	 * [tRunJob_2 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tREST_1";
+	currentComponent="tRunJob_2";
 
 	
 
  
 
 
-	tos_count_tREST_1++;
 
 /**
- * [tREST_1 main ] stop
+ * [tRunJob_2 process_data_begin ] stop
  */
 	
 	/**
-	 * [tREST_1 process_data_begin ] start
+	 * [tRunJob_2 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tREST_1";
+	currentComponent="tRunJob_2";
 
 	
 
@@ -5429,205 +4771,7 @@ if(exception1 != null) {
 
 
 /**
- * [tREST_1 process_data_begin ] stop
- */
-
-	
-	/**
-	 * [tWarn_3 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_3";
-
-	
-
-			//row13
-			//row13
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row13"+iterateId,1, 1);
-				} 
-			
-
-		
-
-		
-try {
-	
-	resumeUtil.addLog("USER_DEF_LOG", "NODE:tWarn_3", "", Thread.currentThread().getId() + "", "WARN","",row13.Body,"", "");
-	tLogCatcher_1.addMessage("tWarn", "tWarn_3", 4, row13.Body, 42);
-	tLogCatcher_1Process(globalMap);
-	globalMap.put("tWarn_3_WARN_MESSAGES", row13.Body); 
-	globalMap.put("tWarn_3_WARN_PRIORITY", 4);
-	globalMap.put("tWarn_3_WARN_CODE", 42);
-	
-} catch (Exception e_tWarn_3) {
-	logIgnoredError(String.format("tWarn_3 - tWarn failed to log message due to internal error: %s", e_tWarn_3), e_tWarn_3);
-}
-
-
- 
-
-
-	tos_count_tWarn_3++;
-
-/**
- * [tWarn_3 main ] stop
- */
-	
-	/**
-	 * [tWarn_3 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_3";
-
-	
-
- 
-
-
-
-/**
- * [tWarn_3 process_data_begin ] stop
- */
-	
-	/**
-	 * [tWarn_3 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_3";
-
-	
-
- 
-
-
-
-/**
- * [tWarn_3 process_data_end ] stop
- */
-
-
-
-	
-	/**
-	 * [tREST_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tREST_1";
-
-	
-
- 
-
-
-
-/**
- * [tREST_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tREST_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tREST_1";
-
-	
-
- 
-
-ok_Hash.put("tREST_1", true);
-end_Hash.put("tREST_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tREST_1 end ] stop
- */
-
-	
-	/**
-	 * [tWarn_3 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_3";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row13"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tWarn_3", true);
-end_Hash.put("tWarn_3", System.currentTimeMillis());
-
-
-
-
-/**
- * [tWarn_3 end ] stop
- */
-
-
-
-						if(execStat){
-							runStat.updateStatOnConnection("iterate1", 2, "exec" + NB_ITERATE_tREST_1);
-						}				
-					
-
-
-
-
-	
-	/**
-	 * [tFlowToIterate_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFlowToIterate_1";
-
-	
-
- 
-
-
-
-/**
- * [tFlowToIterate_1 process_data_end ] stop
+ * [tRunJob_2 process_data_end ] stop
  */
 
 } // End of branch "exception1"
@@ -6125,18 +5269,17 @@ end_Hash.put("tDBOutput_2", System.currentTimeMillis());
 
 	
 	/**
-	 * [tFlowToIterate_2 end ] start
+	 * [tRunJob_1 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tFlowToIterate_2";
+	currentComponent="tRunJob_1";
 
 	
 
-globalMap.put("tFlowToIterate_2_NB_LINE",nb_line_tFlowToIterate_2);
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
 			 		runStat.updateStatOnConnection("exception2"+iterateId,2, 0); 
@@ -6145,14 +5288,14 @@ globalMap.put("tFlowToIterate_2_NB_LINE",nb_line_tFlowToIterate_2);
 		
  
 
-ok_Hash.put("tFlowToIterate_2", true);
-end_Hash.put("tFlowToIterate_2", System.currentTimeMillis());
+ok_Hash.put("tRunJob_1", true);
+end_Hash.put("tRunJob_1", System.currentTimeMillis());
 
 
 
 
 /**
- * [tFlowToIterate_2 end ] stop
+ * [tRunJob_1 end ] stop
  */
 
 
@@ -6163,18 +5306,17 @@ end_Hash.put("tFlowToIterate_2", System.currentTimeMillis());
 
 	
 	/**
-	 * [tFlowToIterate_1 end ] start
+	 * [tRunJob_2 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tFlowToIterate_1";
+	currentComponent="tRunJob_2";
 
 	
 
-globalMap.put("tFlowToIterate_1_NB_LINE",nb_line_tFlowToIterate_1);
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
 			 		runStat.updateStatOnConnection("exception1"+iterateId,2, 0); 
@@ -6183,14 +5325,14 @@ globalMap.put("tFlowToIterate_1_NB_LINE",nb_line_tFlowToIterate_1);
 		
  
 
-ok_Hash.put("tFlowToIterate_1", true);
-end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
+ok_Hash.put("tRunJob_2", true);
+end_Hash.put("tRunJob_2", System.currentTimeMillis());
 
 
 
 
 /**
- * [tFlowToIterate_1 end ] stop
+ * [tRunJob_2 end ] stop
  */
 
 
@@ -6419,14 +5561,14 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tFlowToIterate_2 finally ] start
+	 * [tRunJob_1 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tFlowToIterate_2";
+	currentComponent="tRunJob_1";
 
 	
 
@@ -6435,56 +5577,8 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 
 /**
- * [tFlowToIterate_2 finally ] stop
+ * [tRunJob_1 finally ] stop
  */
-
-	
-	/**
-	 * [tREST_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tREST_2";
-
-	
-
- 
-
-
-
-/**
- * [tREST_2 finally ] stop
- */
-
-	
-	/**
-	 * [tWarn_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_1";
-
-	
-
- 
-
-
-
-/**
- * [tWarn_1 finally ] stop
- */
-
-
-
-
-
-
 
 
 
@@ -6494,14 +5588,14 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tFlowToIterate_1 finally ] start
+	 * [tRunJob_2 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tFlowToIterate_1";
+	currentComponent="tRunJob_2";
 
 	
 
@@ -6510,56 +5604,8 @@ end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 
 /**
- * [tFlowToIterate_1 finally ] stop
+ * [tRunJob_2 finally ] stop
  */
-
-	
-	/**
-	 * [tREST_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tREST_1";
-
-	
-
- 
-
-
-
-/**
- * [tREST_1 finally ] stop
- */
-
-	
-	/**
-	 * [tWarn_3 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tWarn_3";
-
-	
-
- 
-
-
-
-/**
- * [tWarn_3 finally ] stop
- */
-
-
-
-
-
-
 
 
 
@@ -9396,7 +8442,7 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 
 
 	
-		String url_tDBConnection_1 = "jdbc:postgresql://"+context.getPOSTGRES_HOSTNAME()+":"+"5432"+"/"+"deepsea"; 
+		String url_tDBConnection_1 = "jdbc:postgresql://"+context.getPOSTGRES_HOSTNAME()+":"+"5432"+"/"+context.getPOSTGRES_DATABASE(); 
 
 	String dbUser_tDBConnection_1 = "postgres";
 	
@@ -13703,7 +12749,7 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Default";
+    public String contextStr = "Production";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -13861,6 +12907,9 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 				    context.setContextType("SOURCE2", "id_String");
 				
                 context.SOURCE2=(String) context.getProperty("SOURCE2");
+				    context.setContextType("WEBJOB_NAME", "id_String");
+				
+                context.WEBJOB_NAME=(String) context.getProperty("WEBJOB_NAME");
 				    context.setContextType("COUNTRY", "id_String");
 				
                 context.COUNTRY=(String) context.getProperty("COUNTRY");
@@ -13873,12 +12922,12 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
+				    context.setContextType("POSTGRES_DATABASE", "id_String");
+				
+                context.POSTGRES_DATABASE=(String) context.getProperty("POSTGRES_DATABASE");
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
-				    context.setContextType("WEBJOB_NAME", "id_String");
-				
-                context.WEBJOB_NAME=(String) context.getProperty("WEBJOB_NAME");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -13900,6 +12949,8 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
                 context.SOURCE1 = (String) parentContextMap.get("SOURCE1");
             }if (parentContextMap.containsKey("SOURCE2")) {
                 context.SOURCE2 = (String) parentContextMap.get("SOURCE2");
+            }if (parentContextMap.containsKey("WEBJOB_NAME")) {
+                context.WEBJOB_NAME = (String) parentContextMap.get("WEBJOB_NAME");
             }if (parentContextMap.containsKey("COUNTRY")) {
                 context.COUNTRY = (String) parentContextMap.get("COUNTRY");
             }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
@@ -13908,10 +12959,10 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
+            }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
+                context.POSTGRES_DATABASE = (String) parentContextMap.get("POSTGRES_DATABASE");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
-            }if (parentContextMap.containsKey("WEBJOB_NAME")) {
-                context.WEBJOB_NAME = (String) parentContextMap.get("WEBJOB_NAME");
             }
         }
 
@@ -14219,6 +13270,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     294047 characters generated by Talend Open Studio for Big Data 
- *     on the 19 December, 2018 1:00:27 PM CET
+ *     268283 characters generated by Talend Open Studio for Big Data 
+ *     on the January 13, 2019 10:28:54 AM CST
  ************************************************************************************************/

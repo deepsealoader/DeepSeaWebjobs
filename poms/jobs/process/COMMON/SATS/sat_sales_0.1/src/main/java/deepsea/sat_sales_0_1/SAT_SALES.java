@@ -140,6 +140,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(WEBJOB_NAME != null){
+				
+					this.setProperty("WEBJOB_NAME", WEBJOB_NAME.toString());
+				
+			}
+			
 			if(COUNTRY != null){
 				
 					this.setProperty("COUNTRY", COUNTRY.toString());
@@ -164,15 +170,15 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(POSTGRES_HOSTNAME != null){
+			if(POSTGRES_DATABASE != null){
 				
-					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
+					this.setProperty("POSTGRES_DATABASE", POSTGRES_DATABASE.toString());
 				
 			}
 			
-			if(WEBJOB_NAME != null){
+			if(POSTGRES_HOSTNAME != null){
 				
-					this.setProperty("WEBJOB_NAME", WEBJOB_NAME.toString());
+					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
 				
 			}
 			
@@ -190,6 +196,10 @@ public String TABLE;
 public String getTABLE(){
 	return this.TABLE;
 }
+public String WEBJOB_NAME;
+public String getWEBJOB_NAME(){
+	return this.WEBJOB_NAME;
+}
 public String COUNTRY;
 public String getCOUNTRY(){
 	return this.COUNTRY;
@@ -206,13 +216,13 @@ public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
 	return this.MONGODB_HOSTNAME;
 }
+public String POSTGRES_DATABASE;
+public String getPOSTGRES_DATABASE(){
+	return this.POSTGRES_DATABASE;
+}
 public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
 	return this.POSTGRES_HOSTNAME;
-}
-public String WEBJOB_NAME;
-public String getWEBJOB_NAME(){
-	return this.WEBJOB_NAME;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -1230,7 +1240,7 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 
 
 	
-		String url_tDBConnection_1 = "jdbc:postgresql://"+context.getPOSTGRES_HOSTNAME()+":"+"5432"+"/"+"deepsea"; 
+		String url_tDBConnection_1 = "jdbc:postgresql://"+context.getPOSTGRES_HOSTNAME()+":"+"5432"+"/"+context.getPOSTGRES_DATABASE(); 
 
 	String dbUser_tDBConnection_1 = "postgres";
 	
@@ -9321,27 +9331,7 @@ if(row17 != null) {
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row14", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row1", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row7", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row2", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row3", 3, 0);
+	       				runStat.updateStatOnConnection("row9", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -9349,15 +9339,35 @@ if(row17 != null) {
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row9", 3, 0);
-					}           			
-				
-					if(execStat){				
 	       				runStat.updateStatOnConnection("row10", 3, 0);
 					}           			
 				
 					if(execStat){				
+	       				runStat.updateStatOnConnection("row2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row7", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row14", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row3", 3, 0);
+					}           			
+				
+					if(execStat){				
 	       				runStat.updateStatOnConnection("exception1", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row1", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -11377,6 +11387,9 @@ if(exception1 != null) {
 			parentContextMap_tRunJob_1.put("TABLE", context.TABLE);
 			paraList_tRunJob_1.add("--context_type " + "TABLE" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_1.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_1.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
 			paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "=" + "id_String");
 		
@@ -11389,11 +11402,11 @@ if(exception1 != null) {
 			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_1.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
+			paraList_tRunJob_1.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("WEBJOB_NAME", context.WEBJOB_NAME);
-			paraList_tRunJob_1.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_1 = context.propertyNames();
 		while (propertyNames_tRunJob_1.hasMoreElements()) {
@@ -14593,6 +14606,9 @@ end_Hash.put("tAdvancedHash_row5", System.currentTimeMillis());
 				    context.setContextType("TABLE", "id_String");
 				
                 context.TABLE=(String) context.getProperty("TABLE");
+				    context.setContextType("WEBJOB_NAME", "id_String");
+				
+                context.WEBJOB_NAME=(String) context.getProperty("WEBJOB_NAME");
 				    context.setContextType("COUNTRY", "id_String");
 				
                 context.COUNTRY=(String) context.getProperty("COUNTRY");
@@ -14605,12 +14621,12 @@ end_Hash.put("tAdvancedHash_row5", System.currentTimeMillis());
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
+				    context.setContextType("POSTGRES_DATABASE", "id_String");
+				
+                context.POSTGRES_DATABASE=(String) context.getProperty("POSTGRES_DATABASE");
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
-				    context.setContextType("WEBJOB_NAME", "id_String");
-				
-                context.WEBJOB_NAME=(String) context.getProperty("WEBJOB_NAME");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -14624,6 +14640,8 @@ end_Hash.put("tAdvancedHash_row5", System.currentTimeMillis());
                 context.SOURCE = (String) parentContextMap.get("SOURCE");
             }if (parentContextMap.containsKey("TABLE")) {
                 context.TABLE = (String) parentContextMap.get("TABLE");
+            }if (parentContextMap.containsKey("WEBJOB_NAME")) {
+                context.WEBJOB_NAME = (String) parentContextMap.get("WEBJOB_NAME");
             }if (parentContextMap.containsKey("COUNTRY")) {
                 context.COUNTRY = (String) parentContextMap.get("COUNTRY");
             }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
@@ -14632,10 +14650,10 @@ end_Hash.put("tAdvancedHash_row5", System.currentTimeMillis());
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
+            }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
+                context.POSTGRES_DATABASE = (String) parentContextMap.get("POSTGRES_DATABASE");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
-            }if (parentContextMap.containsKey("WEBJOB_NAME")) {
-                context.WEBJOB_NAME = (String) parentContextMap.get("WEBJOB_NAME");
             }
         }
 
@@ -14943,6 +14961,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     322621 characters generated by Talend Open Studio for Big Data 
- *     on the 19 December, 2018 12:58:30 PM CET
+ *     308594 characters generated by Talend Open Studio for Big Data 
+ *     on the January 20, 2019 10:50:03 AM CST
  ************************************************************************************************/

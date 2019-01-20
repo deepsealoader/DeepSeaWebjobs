@@ -50,8 +50,8 @@ import java.util.Comparator;
 @SuppressWarnings("unused")
 
 /**
- * Job: LINK_SALES Purpose: Link Masters<br>
- * Description: Link Masters <br>
+ * Job: LINK_SALES Purpose: Update Sales LINK<br>
+ * Description: Update Sales LINK <br>
  * @author romualdrousseau@gmail.com
  * @version 7.0.1.20180411_1414
  * @status 
@@ -164,36 +164,6 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(MONGODB_HOSTNAME != null){
-				
-					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
-				
-			}
-			
-			if(POSTGRES_HOSTNAME != null){
-				
-					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
-				
-			}
-			
-			if(DEEPSEA_HOSTNAME != null){
-				
-					this.setProperty("DEEPSEA_HOSTNAME", DEEPSEA_HOSTNAME.toString());
-				
-			}
-			
-			if(DEEPSEA_AUTH_TOKEN != null){
-				
-					this.setProperty("DEEPSEA_AUTH_TOKEN", DEEPSEA_AUTH_TOKEN.toString());
-				
-			}
-			
-			if(COUNTRY != null){
-				
-					this.setProperty("COUNTRY", COUNTRY.toString());
-				
-			}
-			
 			if(EXCEPTION_IF_NO_LINK != null){
 				
 					this.setProperty("EXCEPTION_IF_NO_LINK", EXCEPTION_IF_NO_LINK.toString());
@@ -203,6 +173,42 @@ protected static void logIgnoredError(String message, Throwable cause) {
 			if(FORCE_UPDATE != null){
 				
 					this.setProperty("FORCE_UPDATE", FORCE_UPDATE.toString());
+				
+			}
+			
+			if(COUNTRY != null){
+				
+					this.setProperty("COUNTRY", COUNTRY.toString());
+				
+			}
+			
+			if(DEEPSEA_AUTH_TOKEN != null){
+				
+					this.setProperty("DEEPSEA_AUTH_TOKEN", DEEPSEA_AUTH_TOKEN.toString());
+				
+			}
+			
+			if(DEEPSEA_HOSTNAME != null){
+				
+					this.setProperty("DEEPSEA_HOSTNAME", DEEPSEA_HOSTNAME.toString());
+				
+			}
+			
+			if(MONGODB_HOSTNAME != null){
+				
+					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
+				
+			}
+			
+			if(POSTGRES_DATABASE != null){
+				
+					this.setProperty("POSTGRES_DATABASE", POSTGRES_DATABASE.toString());
+				
+			}
+			
+			if(POSTGRES_HOSTNAME != null){
+				
+					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
 				
 			}
 			
@@ -236,26 +242,6 @@ public String SOURCE2;
 public String getSOURCE2(){
 	return this.SOURCE2;
 }
-public String MONGODB_HOSTNAME;
-public String getMONGODB_HOSTNAME(){
-	return this.MONGODB_HOSTNAME;
-}
-public String POSTGRES_HOSTNAME;
-public String getPOSTGRES_HOSTNAME(){
-	return this.POSTGRES_HOSTNAME;
-}
-public String DEEPSEA_HOSTNAME;
-public String getDEEPSEA_HOSTNAME(){
-	return this.DEEPSEA_HOSTNAME;
-}
-public String DEEPSEA_AUTH_TOKEN;
-public String getDEEPSEA_AUTH_TOKEN(){
-	return this.DEEPSEA_AUTH_TOKEN;
-}
-public String COUNTRY;
-public String getCOUNTRY(){
-	return this.COUNTRY;
-}
 public Boolean EXCEPTION_IF_NO_LINK;
 public Boolean getEXCEPTION_IF_NO_LINK(){
 	return this.EXCEPTION_IF_NO_LINK;
@@ -263,6 +249,30 @@ public Boolean getEXCEPTION_IF_NO_LINK(){
 public Boolean FORCE_UPDATE;
 public Boolean getFORCE_UPDATE(){
 	return this.FORCE_UPDATE;
+}
+public String COUNTRY;
+public String getCOUNTRY(){
+	return this.COUNTRY;
+}
+public String DEEPSEA_AUTH_TOKEN;
+public String getDEEPSEA_AUTH_TOKEN(){
+	return this.DEEPSEA_AUTH_TOKEN;
+}
+public String DEEPSEA_HOSTNAME;
+public String getDEEPSEA_HOSTNAME(){
+	return this.DEEPSEA_HOSTNAME;
+}
+public String MONGODB_HOSTNAME;
+public String getMONGODB_HOSTNAME(){
+	return this.MONGODB_HOSTNAME;
+}
+public String POSTGRES_DATABASE;
+public String getPOSTGRES_DATABASE(){
+	return this.POSTGRES_DATABASE;
+}
+public String POSTGRES_HOSTNAME;
+public String getPOSTGRES_HOSTNAME(){
+	return this.POSTGRES_HOSTNAME;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -1271,7 +1281,7 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 
 
 	
-		String url_tDBConnection_1 = "jdbc:postgresql://"+context.getPOSTGRES_HOSTNAME()+":"+"5432"+"/"+"deepsea"; 
+		String url_tDBConnection_1 = "jdbc:postgresql://"+context.getPOSTGRES_HOSTNAME()+":"+"5432"+"/"+context.getPOSTGRES_DATABASE(); 
 
 	String dbUser_tDBConnection_1 = "postgres";
 	
@@ -7696,15 +7706,15 @@ if(row9 != null) {
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row5", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row1", 3, 0);
-					}           			
-				
-					if(execStat){				
 	       				runStat.updateStatOnConnection("row11", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row4", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row5", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -7720,7 +7730,7 @@ if(row9 != null) {
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row4", 3, 0);
+	       				runStat.updateStatOnConnection("row1", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -9276,26 +9286,29 @@ if(exception1 != null) {
 			parentContextMap_tRunJob_1.put("SOURCE2", context.SOURCE2);
 			paraList_tRunJob_1.add("--context_type " + "SOURCE2" + "=" + "id_String");
 		
-			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
-			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
-			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
-			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
-			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
-			paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "=" + "id_String");
-		
 			parentContextMap_tRunJob_1.put("EXCEPTION_IF_NO_LINK", context.EXCEPTION_IF_NO_LINK);
 			paraList_tRunJob_1.add("--context_type " + "EXCEPTION_IF_NO_LINK" + "=" + "id_Boolean");
 		
 			parentContextMap_tRunJob_1.put("FORCE_UPDATE", context.FORCE_UPDATE);
 			paraList_tRunJob_1.add("--context_type " + "FORCE_UPDATE" + "=" + "id_Boolean");
+		
+			parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
+			paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
+			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
+			paraList_tRunJob_1.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
+			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_1 = context.propertyNames();
 		while (propertyNames_tRunJob_1.hasMoreElements()) {
@@ -13028,21 +13041,6 @@ end_Hash.put("tAdvancedHash_row3", System.currentTimeMillis());
 				    context.setContextType("SOURCE2", "id_String");
 				
                 context.SOURCE2=(String) context.getProperty("SOURCE2");
-				    context.setContextType("MONGODB_HOSTNAME", "id_String");
-				
-                context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
-				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
-				
-                context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
-				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
-				
-                context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
-				    context.setContextType("DEEPSEA_AUTH_TOKEN", "id_String");
-				
-                context.DEEPSEA_AUTH_TOKEN=(String) context.getProperty("DEEPSEA_AUTH_TOKEN");
-				    context.setContextType("COUNTRY", "id_String");
-				
-                context.COUNTRY=(String) context.getProperty("COUNTRY");
 				    context.setContextType("EXCEPTION_IF_NO_LINK", "id_Boolean");
 				
              try{
@@ -13057,6 +13055,24 @@ end_Hash.put("tAdvancedHash_row3", System.currentTimeMillis());
              }catch(NumberFormatException e){
                  context.FORCE_UPDATE=null;
               }
+				    context.setContextType("COUNTRY", "id_String");
+				
+                context.COUNTRY=(String) context.getProperty("COUNTRY");
+				    context.setContextType("DEEPSEA_AUTH_TOKEN", "id_String");
+				
+                context.DEEPSEA_AUTH_TOKEN=(String) context.getProperty("DEEPSEA_AUTH_TOKEN");
+				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
+				
+                context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
+				    context.setContextType("MONGODB_HOSTNAME", "id_String");
+				
+                context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
+				    context.setContextType("POSTGRES_DATABASE", "id_String");
+				
+                context.POSTGRES_DATABASE=(String) context.getProperty("POSTGRES_DATABASE");
+				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
+				
+                context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -13078,20 +13094,22 @@ end_Hash.put("tAdvancedHash_row3", System.currentTimeMillis());
                 context.TABLE2 = (String) parentContextMap.get("TABLE2");
             }if (parentContextMap.containsKey("SOURCE2")) {
                 context.SOURCE2 = (String) parentContextMap.get("SOURCE2");
-            }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
-                context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
-            }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
-                context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
-            }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
-                context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
-            }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
-                context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
-            }if (parentContextMap.containsKey("COUNTRY")) {
-                context.COUNTRY = (String) parentContextMap.get("COUNTRY");
             }if (parentContextMap.containsKey("EXCEPTION_IF_NO_LINK")) {
                 context.EXCEPTION_IF_NO_LINK = (Boolean) parentContextMap.get("EXCEPTION_IF_NO_LINK");
             }if (parentContextMap.containsKey("FORCE_UPDATE")) {
                 context.FORCE_UPDATE = (Boolean) parentContextMap.get("FORCE_UPDATE");
+            }if (parentContextMap.containsKey("COUNTRY")) {
+                context.COUNTRY = (String) parentContextMap.get("COUNTRY");
+            }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
+                context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
+            }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
+                context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
+            }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
+                context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
+            }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
+                context.POSTGRES_DATABASE = (String) parentContextMap.get("POSTGRES_DATABASE");
+            }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
+                context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
             }
         }
 
@@ -13399,6 +13417,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     282791 characters generated by Talend Open Studio for Big Data 
- *     on the 19 December, 2018 12:58:26 PM CET
+ *     270295 characters generated by Talend Open Studio for Big Data 
+ *     on the January 20, 2019 10:50:03 AM CST
  ************************************************************************************************/

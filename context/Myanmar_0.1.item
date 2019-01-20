@@ -6,6 +6,7 @@
     <contextParameter xmi:id="_xsk2kMZXEeiQEKsqaXt86w" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter xmi:id="_duSgkMbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter xmi:id="_adoGcMbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Myanmar"/>
+    <contextParameter xmi:id="_1mlEsBY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_myanmar"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_1Qv74MoQEeiFhKycUBX9rg" confirmationNeeded="false" name="Development">
     <contextParameter xmi:id="_1Qv74coQEeiFhKycUBX9rg" comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
@@ -13,6 +14,7 @@
     <contextParameter xmi:id="_1Qv748oQEeiFhKycUBX9rg" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost:4040"/>
     <contextParameter xmi:id="_1Qv75MoQEeiFhKycUBX9rg" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter xmi:id="_1Qv75coQEeiFhKycUBX9rg" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Myanmar"/>
+    <contextParameter xmi:id="_1mlEsRY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_myanmar"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_VmfBgL73EeiwTrrgdMnqWg" confirmationNeeded="false" name="Production">
     <contextParameter xmi:id="_VmfBgb73EeiwTrrgdMnqWg" comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="MONGODB"/>
@@ -20,5 +22,6 @@
     <contextParameter xmi:id="_xsk2kcZXEeiQEKsqaXt86w" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost:8080"/>
     <contextParameter xmi:id="_duSgkcbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter xmi:id="_adoGccbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Myanmar"/>
+    <contextParameter xmi:id="_1mlEshY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_myanmar"/>
   </talendfile:ContextType>
 </xmi:XMI>

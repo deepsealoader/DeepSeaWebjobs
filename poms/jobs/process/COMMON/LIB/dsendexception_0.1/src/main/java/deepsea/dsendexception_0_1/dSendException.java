@@ -53,8 +53,8 @@ import java.util.Comparator;
 @SuppressWarnings("unused")
 
 /**
- * Job: dSendException Purpose: <br>
- * Description:  <br>
+ * Job: dSendException Purpose: Send an Exception object to DeepSea back-end<br>
+ * Description: Send an Exception object to DeepSea back-end. If the total exception exceed some threshold, a "too much" exception is thrown, stopping the caller. <br>
  * @author romualdrousseau@gmail.com
  * @version 7.0.1.20180411_1414
  * @status 
@@ -125,36 +125,6 @@ protected static void logIgnoredError(String message, Throwable cause) {
 
 		public void synchronizeContext(){
 			
-			if(COUNTRY != null){
-				
-					this.setProperty("COUNTRY", COUNTRY.toString());
-				
-			}
-			
-			if(DEEPSEA_AUTH_TOKEN != null){
-				
-					this.setProperty("DEEPSEA_AUTH_TOKEN", DEEPSEA_AUTH_TOKEN.toString());
-				
-			}
-			
-			if(DEEPSEA_HOSTNAME != null){
-				
-					this.setProperty("DEEPSEA_HOSTNAME", DEEPSEA_HOSTNAME.toString());
-				
-			}
-			
-			if(MONGODB_HOSTNAME != null){
-				
-					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
-				
-			}
-			
-			if(POSTGRES_HOSTNAME != null){
-				
-					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
-				
-			}
-			
 			if(COUNTRY_ID != null){
 				
 					this.setProperty("COUNTRY_ID", COUNTRY_ID.toString());
@@ -191,28 +161,44 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(COUNTRY != null){
+				
+					this.setProperty("COUNTRY", COUNTRY.toString());
+				
+			}
+			
+			if(DEEPSEA_AUTH_TOKEN != null){
+				
+					this.setProperty("DEEPSEA_AUTH_TOKEN", DEEPSEA_AUTH_TOKEN.toString());
+				
+			}
+			
+			if(DEEPSEA_HOSTNAME != null){
+				
+					this.setProperty("DEEPSEA_HOSTNAME", DEEPSEA_HOSTNAME.toString());
+				
+			}
+			
+			if(MONGODB_HOSTNAME != null){
+				
+					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
+				
+			}
+			
+			if(POSTGRES_DATABASE != null){
+				
+					this.setProperty("POSTGRES_DATABASE", POSTGRES_DATABASE.toString());
+				
+			}
+			
+			if(POSTGRES_HOSTNAME != null){
+				
+					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
+				
+			}
+			
 		}
 
-public String COUNTRY;
-public String getCOUNTRY(){
-	return this.COUNTRY;
-}
-public String DEEPSEA_AUTH_TOKEN;
-public String getDEEPSEA_AUTH_TOKEN(){
-	return this.DEEPSEA_AUTH_TOKEN;
-}
-public String DEEPSEA_HOSTNAME;
-public String getDEEPSEA_HOSTNAME(){
-	return this.DEEPSEA_HOSTNAME;
-}
-public String MONGODB_HOSTNAME;
-public String getMONGODB_HOSTNAME(){
-	return this.MONGODB_HOSTNAME;
-}
-public String POSTGRES_HOSTNAME;
-public String getPOSTGRES_HOSTNAME(){
-	return this.POSTGRES_HOSTNAME;
-}
 public String COUNTRY_ID;
 public String getCOUNTRY_ID(){
 	return this.COUNTRY_ID;
@@ -236,6 +222,30 @@ public String getFIELD_VALUE(){
 public String REASON;
 public String getREASON(){
 	return this.REASON;
+}
+public String COUNTRY;
+public String getCOUNTRY(){
+	return this.COUNTRY;
+}
+public String DEEPSEA_AUTH_TOKEN;
+public String getDEEPSEA_AUTH_TOKEN(){
+	return this.DEEPSEA_AUTH_TOKEN;
+}
+public String DEEPSEA_HOSTNAME;
+public String getDEEPSEA_HOSTNAME(){
+	return this.DEEPSEA_HOSTNAME;
+}
+public String MONGODB_HOSTNAME;
+public String getMONGODB_HOSTNAME(){
+	return this.MONGODB_HOSTNAME;
+}
+public String POSTGRES_DATABASE;
+public String getPOSTGRES_DATABASE(){
+	return this.POSTGRES_DATABASE;
+}
+public String POSTGRES_HOSTNAME;
+public String getPOSTGRES_HOSTNAME(){
+	return this.POSTGRES_HOSTNAME;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -396,6 +406,15 @@ private class TalendException extends Exception {
 			}
 			
 			public void tREST_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tREST_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tLogRow_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -1552,6 +1571,169 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 
 }
 
+public static class row3Struct implements routines.system.IPersistableRow<row3Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_dSendException = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_dSendException = new byte[0];
+
+	
+			    public String Body;
+
+				public String getBody () {
+					return this.Body;
+				}
+				
+			    public Integer ERROR_CODE;
+
+				public Integer getERROR_CODE () {
+					return this.ERROR_CODE;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_dSendException.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_dSendException.length == 0) {
+   					commonByteArray_DEEPSEA_dSendException = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_dSendException = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_dSendException, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_dSendException, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_dSendException) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.Body = readString(dis);
+					
+						this.ERROR_CODE = readInteger(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.Body,dos);
+					
+					// Integer
+				
+						writeInteger(this.ERROR_CODE,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("Body="+Body);
+		sb.append(",ERROR_CODE="+String.valueOf(ERROR_CODE));
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row3Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
 public static class row2Struct implements routines.system.IPersistableRow<row2Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_dSendException = new byte[0];
     static byte[] commonByteArray_DEEPSEA_dSendException = new byte[0];
@@ -1738,7 +1920,9 @@ public void tREST_1Process(final java.util.Map<String, Object> globalMap) throws
 
 
 		row2Struct row2 = new row2Struct();
+row2Struct row3 = row2;
 row1Struct row1 = new row1Struct();
+
 
 
 
@@ -1808,7 +1992,7 @@ row1Struct row1 = new row1Struct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row2" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row3" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -1832,6 +2016,62 @@ int nb_line_tJavaRow_1 = 0;
 
 /**
  * [tJavaRow_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tLogRow_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tLogRow_2", false);
+		start_Hash.put("tLogRow_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tLogRow_2";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row2" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tLogRow_2 = 0;
+		
+    	class BytesLimit65535_tLogRow_2{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tLogRow_2().limitLog4jByte();
+
+	///////////////////////
+	
+		final String OUTPUT_FIELD_SEPARATOR_tLogRow_2 = "|";
+		java.io.PrintStream consoleOut_tLogRow_2 = null;	
+
+ 		StringBuilder strBuffer_tLogRow_2 = null;
+		int nb_line_tLogRow_2 = 0;
+///////////////////////    			
+
+
+
+ 
+
+
+
+/**
+ * [tLogRow_2 begin ] stop
  */
 
 
@@ -2021,14 +2261,14 @@ int nb_line_tJavaRow_1 = 0;
 
 	
 	/**
-	 * [tJavaRow_1 main ] start
+	 * [tLogRow_2 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJavaRow_1";
+	currentComponent="tLogRow_2";
 
 	
 
@@ -2043,14 +2283,125 @@ int nb_line_tJavaRow_1 = 0;
 			
 
 		
+///////////////////////		
+						
 
-    if(row2.ERROR_CODE != null) {
+
+
+				strBuffer_tLogRow_2 = new StringBuilder();
+
+
+
+
+   				
+	    		if(row2.Body != null) { //              
+                    							
+       
+				strBuffer_tLogRow_2.append(
+				                String.valueOf(row2.Body)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_2.append("|");
+    			
+
+
+   				
+	    		if(row2.ERROR_CODE != null) { //              
+                    							
+       
+				strBuffer_tLogRow_2.append(
+				                String.valueOf(row2.ERROR_CODE)							
+				);
+
+
+							
+	    		} //  			
+ 
+
+                    if (globalMap.get("tLogRow_CONSOLE")!=null)
+                    {
+                    	consoleOut_tLogRow_2 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
+                    }
+                    else
+                    {
+                    	consoleOut_tLogRow_2 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
+                    	globalMap.put("tLogRow_CONSOLE",consoleOut_tLogRow_2);
+                    }
+                    consoleOut_tLogRow_2.println(strBuffer_tLogRow_2.toString());
+                    consoleOut_tLogRow_2.flush();
+                    nb_line_tLogRow_2++;
+//////
+
+//////                    
+                    
+///////////////////////    			
+
+ 
+     row3 = row2;
+
+
+	tos_count_tLogRow_2++;
+
+/**
+ * [tLogRow_2 main ] stop
+ */
+	
+	/**
+	 * [tLogRow_2 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogRow_2 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tJavaRow_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_1";
+
+	
+
+			//row3
+			//row3
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row3"+iterateId,1, 1);
+				} 
+			
+
+		
+
+    if(row3.ERROR_CODE != null && (row3.ERROR_CODE == 500)) {
 	throw new RuntimeException("Too much exceptions, abort ...");
 }
 
 //Code generated according to input schema and output schema
-row1.Body = row2.Body;
-row1.ERROR_CODE = row2.ERROR_CODE;
+row1.Body = row3.Body;
+row1.ERROR_CODE = row3.ERROR_CODE;
 
     nb_line_tJavaRow_1++;   
 
@@ -2199,6 +2550,29 @@ try {
 
 	
 	/**
+	 * [tLogRow_2 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogRow_2 process_data_end ] stop
+ */
+
+
+
+	
+	/**
 	 * [tREST_1 process_data_end ] start
 	 */
 
@@ -2244,6 +2618,44 @@ end_Hash.put("tREST_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tLogRow_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_2";
+
+	
+
+
+//////
+//////
+globalMap.put("tLogRow_2_NB_LINE",nb_line_tLogRow_2);
+
+///////////////////////    			
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row2"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tLogRow_2", true);
+end_Hash.put("tLogRow_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tLogRow_2 end ] stop
+ */
+
+	
+	/**
 	 * [tJavaRow_1 end ] start
 	 */
 
@@ -2258,7 +2670,7 @@ end_Hash.put("tREST_1", System.currentTimeMillis());
 globalMap.put("tJavaRow_1_NB_LINE",nb_line_tJavaRow_1);
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row2"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row3"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -2310,6 +2722,9 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
 
 
 
+
+
+
 				}//end the resume
 
 				
@@ -2350,6 +2765,27 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
 
 /**
  * [tREST_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tLogRow_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogRow_2 finally ] stop
  */
 
 	
@@ -2399,6 +2835,9 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
 
 
 
+
+
+
 				}catch(java.lang.Exception e){	
 					//ignore
 				}catch(java.lang.Error error){
@@ -2423,7 +2862,7 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Default";
+    public String contextStr = "Production";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -2560,21 +2999,6 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
 
 				}
             }
-				    context.setContextType("COUNTRY", "id_String");
-				
-                context.COUNTRY=(String) context.getProperty("COUNTRY");
-				    context.setContextType("DEEPSEA_AUTH_TOKEN", "id_String");
-				
-                context.DEEPSEA_AUTH_TOKEN=(String) context.getProperty("DEEPSEA_AUTH_TOKEN");
-				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
-				
-                context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
-				    context.setContextType("MONGODB_HOSTNAME", "id_String");
-				
-                context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
-				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
-				
-                context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
 				    context.setContextType("COUNTRY_ID", "id_String");
 				
                 context.COUNTRY_ID=(String) context.getProperty("COUNTRY_ID");
@@ -2593,6 +3017,24 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
 				    context.setContextType("REASON", "id_String");
 				
                 context.REASON=(String) context.getProperty("REASON");
+				    context.setContextType("COUNTRY", "id_String");
+				
+                context.COUNTRY=(String) context.getProperty("COUNTRY");
+				    context.setContextType("DEEPSEA_AUTH_TOKEN", "id_String");
+				
+                context.DEEPSEA_AUTH_TOKEN=(String) context.getProperty("DEEPSEA_AUTH_TOKEN");
+				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
+				
+                context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
+				    context.setContextType("MONGODB_HOSTNAME", "id_String");
+				
+                context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
+				    context.setContextType("POSTGRES_DATABASE", "id_String");
+				
+                context.POSTGRES_DATABASE=(String) context.getProperty("POSTGRES_DATABASE");
+				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
+				
+                context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -2600,17 +3042,7 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
 
 
         // get context value from parent directly
-        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("COUNTRY")) {
-                context.COUNTRY = (String) parentContextMap.get("COUNTRY");
-            }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
-                context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
-            }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
-                context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
-            }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
-                context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
-            }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
-                context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
-            }if (parentContextMap.containsKey("COUNTRY_ID")) {
+        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("COUNTRY_ID")) {
                 context.COUNTRY_ID = (String) parentContextMap.get("COUNTRY_ID");
             }if (parentContextMap.containsKey("WEBJOB_ID")) {
                 context.WEBJOB_ID = (String) parentContextMap.get("WEBJOB_ID");
@@ -2622,6 +3054,18 @@ end_Hash.put("tWarn_1", System.currentTimeMillis());
                 context.FIELD_VALUE = (String) parentContextMap.get("FIELD_VALUE");
             }if (parentContextMap.containsKey("REASON")) {
                 context.REASON = (String) parentContextMap.get("REASON");
+            }if (parentContextMap.containsKey("COUNTRY")) {
+                context.COUNTRY = (String) parentContextMap.get("COUNTRY");
+            }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
+                context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
+            }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
+                context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
+            }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
+                context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
+            }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
+                context.POSTGRES_DATABASE = (String) parentContextMap.get("POSTGRES_DATABASE");
+            }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
+                context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
             }
         }
 
@@ -2899,6 +3343,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     69162 characters generated by Talend Open Studio for Big Data 
- *     on the 19 December, 2018 1:00:25 PM CET
+ *     74578 characters generated by Talend Open Studio for Big Data 
+ *     on the January 20, 2019 10:50:03 AM CST
  ************************************************************************************************/
