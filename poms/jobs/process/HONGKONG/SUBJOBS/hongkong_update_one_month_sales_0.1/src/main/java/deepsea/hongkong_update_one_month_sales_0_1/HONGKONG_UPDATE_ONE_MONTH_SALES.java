@@ -145,6 +145,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(DATE_FORMAT != null){
+				
+					this.setProperty("DATE_FORMAT", DATE_FORMAT.toString());
+				
+			}
+			
 			if(COUNTRY != null){
 				
 					this.setProperty("COUNTRY", COUNTRY.toString());
@@ -166,6 +172,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 			if(MONGODB_HOSTNAME != null){
 				
 					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
+				
+			}
+			
+			if(POSTGRES_DATABASE != null){
+				
+					this.setProperty("POSTGRES_DATABASE", POSTGRES_DATABASE.toString());
 				
 			}
 			
@@ -193,6 +205,10 @@ public String FILE_PREFIX;
 public String getFILE_PREFIX(){
 	return this.FILE_PREFIX;
 }
+public String DATE_FORMAT;
+public String getDATE_FORMAT(){
+	return this.DATE_FORMAT;
+}
 public String COUNTRY;
 public String getCOUNTRY(){
 	return this.COUNTRY;
@@ -208,6 +224,10 @@ public String getDEEPSEA_HOSTNAME(){
 public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
 	return this.MONGODB_HOSTNAME;
+}
+public String POSTGRES_DATABASE;
+public String getPOSTGRES_DATABASE(){
+	return this.POSTGRES_DATABASE;
 }
 public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
@@ -7302,7 +7322,7 @@ newRow_tmp.productCode = row15.productCode;
 newRow_tmp.productName = row15.productName;
 newRow_tmp.amount = row15.amount.replace(",", "").replace("(", "-").replace(")", "") ;
 newRow_tmp.quantity = row15.quantity;
-newRow_tmp.date = TalendDate.formatDate("dd/MM/yy",TalendDate.parseDate("yyyyMMdd",row15.date)) ;
+newRow_tmp.date = TalendDate.formatDate("dd/MM/yy",TalendDate.parseDate(context.getDATE_FORMAT(),row15.date)) ;
 newRow = newRow_tmp;
 } // closing filter/reject
 // ###############################
@@ -9658,7 +9678,7 @@ totalRowStruct row13 = totalRow;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -9667,7 +9687,7 @@ totalRowStruct row13 = totalRow;
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row8" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -10292,14 +10312,6 @@ if(row7 != null) {
 
 	
 
-			//row8
-			//row7
-
-
-			
-
-		
-
 			//row7
 			//row7
 
@@ -10308,6 +10320,14 @@ if(row7 != null) {
 				if(execStat){
 					runStat.updateStatOnConnection("row7"+iterateId,1, 1);
 				} 
+			
+
+		
+
+			//row8
+			//row7
+
+
 			
 
 		
@@ -11306,6 +11326,14 @@ if(row8 != null) {
 
 	
 
+			//row7
+			//row8
+
+
+			
+
+		
+
 			//row8
 			//row8
 
@@ -11314,14 +11342,6 @@ if(row8 != null) {
 				if(execStat){
 					runStat.updateStatOnConnection("row8"+iterateId,1, 1);
 				} 
-			
-
-		
-
-			//row7
-			//row8
-
-
 			
 
 		
@@ -11736,13 +11756,13 @@ end_Hash.put("tFileInputDelimited_2", System.currentTimeMillis());
 globalMap.put("tUnite_1_NB_LINE", nb_line_tUnite_1);
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row8"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row7"+iterateId,2, 0); 
 			 	}
 			}
 		
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row7"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row8"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -14941,7 +14961,7 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Production";
+    public String contextStr = "Default";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -15075,6 +15095,9 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("FILE_PREFIX", "id_String");
 				
                 context.FILE_PREFIX=(String) context.getProperty("FILE_PREFIX");
+				    context.setContextType("DATE_FORMAT", "id_String");
+				
+                context.DATE_FORMAT=(String) context.getProperty("DATE_FORMAT");
 				    context.setContextType("COUNTRY", "id_String");
 				
                 context.COUNTRY=(String) context.getProperty("COUNTRY");
@@ -15087,6 +15110,9 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
+				    context.setContextType("POSTGRES_DATABASE", "id_String");
+				
+                context.POSTGRES_DATABASE=(String) context.getProperty("POSTGRES_DATABASE");
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
@@ -15105,6 +15131,8 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.COLLECTION2 = (String) parentContextMap.get("COLLECTION2");
             }if (parentContextMap.containsKey("FILE_PREFIX")) {
                 context.FILE_PREFIX = (String) parentContextMap.get("FILE_PREFIX");
+            }if (parentContextMap.containsKey("DATE_FORMAT")) {
+                context.DATE_FORMAT = (String) parentContextMap.get("DATE_FORMAT");
             }if (parentContextMap.containsKey("COUNTRY")) {
                 context.COUNTRY = (String) parentContextMap.get("COUNTRY");
             }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
@@ -15113,6 +15141,8 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
+            }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
+                context.POSTGRES_DATABASE = (String) parentContextMap.get("POSTGRES_DATABASE");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
             }
@@ -15359,6 +15389,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     334758 characters generated by Talend Open Studio for Big Data 
- *     on the January 20, 2019 11:06:53 AM CST
+ *     335821 characters generated by Talend Open Studio for Big Data 
+ *     on the January 20, 2019 2:33:18 PM CST
  ************************************************************************************************/

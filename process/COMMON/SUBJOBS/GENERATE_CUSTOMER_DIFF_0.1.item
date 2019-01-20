@@ -906,6 +906,8 @@
       <elementValue elementRef="KEY_VALUE" value="&quot;customerName&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="locality"/>
       <elementValue elementRef="KEY_VALUE" value="&quot;locality&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerType"/>
+      <elementValue elementRef="KEY_VALUE" value="&quot;customerType&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="ChangeToFile"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
@@ -914,6 +916,7 @@
       <column comment="" key="false" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="832" posY="480">
@@ -948,13 +951,13 @@
       <column comment="" key="false" length="-1" name="Attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row19" rejectInnerJoin="true">
         <mapperTableEntries name="ServierCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="ProviderCode" expression="row5.businessKey " type="id_String"/>
         <mapperTableEntries name="GeographyCode" expression="row5.locality " type="id_String" nullable="true"/>
-        <mapperTableEntries name="SourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SourceChannelCode" expression="row5.customerType " type="id_String" nullable="true"/>
         <mapperTableEntries name="NameEn" expression="row5.customerName " type="id_String" nullable="true"/>
         <mapperTableEntries name="NameLo" type="id_String" nullable="true"/>
         <mapperTableEntries name="CoeffGeography" expression="&quot;1&quot;" type="id_String" nullable="true"/>
@@ -969,6 +972,7 @@
         <mapperTableEntries name="businessKey" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerName" type="id_String" nullable="true"/>
         <mapperTableEntries name="locality" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerType" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="businessKey" expression="row5.businessKey " type="id_String" nullable="true" operator="="/>
@@ -1185,7 +1189,7 @@
       <column key="false" length="255" name="MaybeNameEn" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row21">
         <mapperTableEntries name="ServierCode" expression="row10.ServierCode" type="id_String" nullable="true"/>
@@ -1548,6 +1552,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tExtractFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractFields_1" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="customerType"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
   </connection>

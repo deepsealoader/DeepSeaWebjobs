@@ -422,6 +422,54 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
     	}
     	
         new BytesLimit65535_tRunJob_1().limitLog4jByte();
+class DealChildJobLibrary_tRunJob_1 {
+
+	public String replaceJarPathsFromCrcMap(String originalClassPathLine) throws java.lang.Exception {
+		String classPathLine = "";
+		String crcMapPath = new java.io.File("../crcMap").getCanonicalPath();
+		if (isNeedAddLibsPath( crcMapPath)) {
+			java.util.Map<String, String> crcMap = null;
+			java.io.ObjectInputStream ois = new ObjectInputStream(new java.io.FileInputStream(crcMapPath));
+			crcMap = (java.util.Map<String, String>) ois.readObject();
+			ois.close();
+			classPathLine = addLibsPath(originalClassPathLine, crcMap);
+		} else {
+			classPathLine = originalClassPathLine;
+		}
+		return classPathLine;
+	}
+	
+	private boolean isNeedAddLibsPath(String crcMapPath) {
+		if (!(new java.io.File(crcMapPath).exists())) {// when not use cache
+			return false;
+		}
+		return true;
+	}
+	
+	
+	private String addLibsPath(String line, java.util.Map<String, String> crcMap) {
+		for (java.util.Map.Entry<String, String> entry : crcMap.entrySet()) {
+			line = adaptLibPaths(line, entry);
+		}
+		return line;
+	}
+	
+	private String adaptLibPaths(String line, java.util.Map.Entry<String, String> entry) {
+		String jarName = entry.getValue();
+		String crc = entry.getKey();
+		String libStringFinder = "../lib/" + jarName;
+		if (line.contains(libStringFinder)) {
+			line = line.replace(libStringFinder, "../../../cache/lib/" + crc + "/" + jarName);
+		} else if (line.contains(":$ROOT_PATH/" + jarName + ":")) {
+			line = line.replace(":$ROOT_PATH/" + jarName + ":", ":$ROOT_PATH/../../../cache/lib/" + crc + "/" + jarName + ":");
+		} else if (line.contains(";" + jarName + ";")) {
+			line = line.replace(";" + jarName + ";", ";../../../cache/lib/" + crc + "/" + jarName + ";");
+		}
+		return line;
+	}
+	
+}
+	DealChildJobLibrary_tRunJob_1 dealChildJobLibrary_tRunJob_1 = new DealChildJobLibrary_tRunJob_1();
 
 
  
@@ -445,17 +493,60 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
 	
 	java.util.List<String> paraList_tRunJob_1 = new java.util.ArrayList<String>();
 	
-	        			paraList_tRunJob_1.add("--father_pid="+pid);
-	      			
-	        			paraList_tRunJob_1.add("--root_pid="+rootPid);
-	      			
-	        			paraList_tRunJob_1.add("--father_node=tRunJob_1");
-	      			
-	        			paraList_tRunJob_1.add("--context=Production");
-	      			
+			String osName_tRunJob_1 = System.getProperty("os.name");
+			if (osName_tRunJob_1 != null && osName_tRunJob_1.toLowerCase().startsWith("win")){
+	      		
+		      			paraList_tRunJob_1.add("java");
+		      		
+		      					paraList_tRunJob_1.add("-Xms256M");
+		      				
+		      					paraList_tRunJob_1.add("-Xmx1024M");
+		      				
+		      					paraList_tRunJob_1.add("-cp");
+		      				
+		        				paraList_tRunJob_1.add(dealChildJobLibrary_tRunJob_1.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/trove.jar;hongkong_build_master_hubs_0_1.jar;dsendexception_0_1.jar;hub_master_0_1.jar;hub_master_with_duplicates_0_1.jar;"));
+		      				
+		      					paraList_tRunJob_1.add("deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS");
+		      				
+		      					paraList_tRunJob_1.add("--father_pid="+pid);
+		      				
+		      					paraList_tRunJob_1.add("--root_pid="+rootPid);
+		      				
+		      					paraList_tRunJob_1.add("--father_node=tRunJob_1");
+		      				
+		      					paraList_tRunJob_1.add("--context=Production");
+		      				
+		      					paraList_tRunJob_1.add("%*");
+		      				
+			} else {
+	      		
+						paraList_tRunJob_1.add("java");
+		      		
+								paraList_tRunJob_1.add("-Xms256M");
+		      				
+								paraList_tRunJob_1.add("-Xmx1024M");
+		      				
+								paraList_tRunJob_1.add("-cp");
+		      				
+								paraList_tRunJob_1.add(dealChildJobLibrary_tRunJob_1.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/commons-lang-2.6.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_hubs_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/hub_master_0_1.jar:$ROOT_PATH/hub_master_with_duplicates_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
+		      				
+								paraList_tRunJob_1.add("deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS");
+		      				
+								paraList_tRunJob_1.add("--father_pid="+pid);
+		      				
+								paraList_tRunJob_1.add("--root_pid="+rootPid);
+		      				
+								paraList_tRunJob_1.add("--father_node=tRunJob_1");
+		      				
+								paraList_tRunJob_1.add("--context=Production");
+		      				
+								paraList_tRunJob_1.add("$@");
+		      				
+			}    
+	  	
 	//for feature:10589
 	
-		paraList_tRunJob_1.add("--stat_port=" + portStats);
+		paraList_tRunJob_1.add("--stat_port=" + null);
 	
 
 	if(resuming_logs_dir_path != null){
@@ -508,45 +599,77 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
 	Object obj_tRunJob_1 = null;
 
 	
+		obj_tRunJob_1 = jobName;
+		if(obj_tRunJob_1!=null) {
+			paraList_tRunJob_1.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
+		} else {
+			paraList_tRunJob_1.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_1.put("WEBJOB_NAME", obj_tRunJob_1);
 	
-		deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS childJob_tRunJob_1 = new deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS();
-	    // pass DataSources
-	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_1 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
-	            .get(KEY_DB_DATASOURCES);
-	    if (null != talendDataSources_tRunJob_1) {
-	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_1 = new java.util.HashMap<String, javax.sql.DataSource>();
-	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_1 : talendDataSources_tRunJob_1
-			        .entrySet()) {
-	            dataSources_tRunJob_1.put(talendDataSourceEntry_tRunJob_1.getKey(),
-	                    talendDataSourceEntry_tRunJob_1.getValue().getRawDataSource());
-	        }
-	        childJob_tRunJob_1.setDataSources(dataSources_tRunJob_1);
-	    }
-		  
-			childJob_tRunJob_1.parentContextMap = parentContextMap_tRunJob_1;
-		  
-		
-		String[][] childReturn_tRunJob_1 = childJob_tRunJob_1.runJob((String[]) paraList_tRunJob_1.toArray(new String[paraList_tRunJob_1.size()]));
-		
-	  	
-				((java.util.Map)threadLocal.get()).put("errorCode", childJob_tRunJob_1.getErrorCode());
-			
-	            
-	    	if(childJob_tRunJob_1.getErrorCode() == null){
-				globalMap.put("tRunJob_1_CHILD_RETURN_CODE", childJob_tRunJob_1.getStatus() != null && ("failure").equals(childJob_tRunJob_1.getStatus()) ? 1 : 0);
-	    	}else{
-				globalMap.put("tRunJob_1_CHILD_RETURN_CODE", childJob_tRunJob_1.getErrorCode());
-		    }
-		    if (childJob_tRunJob_1.getExceptionStackTrace() != null) { 
-		    	globalMap.put("tRunJob_1_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_1.getExceptionStackTrace());
-		    }
-	  
-			 
-				if (childJob_tRunJob_1.getErrorCode() != null || ("failure").equals(childJob_tRunJob_1.getStatus())) {
-	        		throw new RuntimeException("Child job running failed.\n"+childJob_tRunJob_1.getException().getClass().getName() + ": " + childJob_tRunJob_1.getException().getMessage());
+	
+		Runtime runtime_tRunJob_1 = Runtime.getRuntime();
+		final Process ps_tRunJob_1;
+		ps_tRunJob_1 = runtime_tRunJob_1.exec((String[])paraList_tRunJob_1.toArray(new String[paraList_tRunJob_1.size()]));
+
+		Thread normal_tRunJob_1 = new Thread() {
+			public void run() {
+				try {
+					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_1.getInputStream()));
+					String line = "";
+					try {
+						while((line = reader.readLine()) != null) {
+						System.out.println(line);
+						}
+					} finally {
+					reader.close();
+					}
+				} catch(java.io.IOException ioe) {
+					
+					ioe.printStackTrace();
 				}
+	    	}
+  		};
+		
+		normal_tRunJob_1.start();
+		
+
+		final StringBuffer errorMsg_tRunJob_1 = new StringBuffer();
+		Thread error_tRunJob_1 = new Thread() {
+			public void run() {
+				try {
+					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_1.getErrorStream()));
+					String line = "";
+        			try {
+          				while((line = reader.readLine()) != null) {
+            				errorMsg_tRunJob_1.append(line).append("\n");
+          				}
+        			} finally {
+          				reader.close();
+        			}
+      			} catch(java.io.IOException ioe) {
+					
+			        ioe.printStackTrace();
+      			}
+    		}
+		};
+		error_tRunJob_1.start();
+
+		//0 indicates normal termination	
+		int result_tRunJob_1 = ps_tRunJob_1.waitFor();
+		normal_tRunJob_1.join(10000);
+		error_tRunJob_1.join(10000);
+  
+		globalMap.put("tRunJob_1_CHILD_RETURN_CODE",result_tRunJob_1);
+		if(result_tRunJob_1 != 0){
+   			globalMap.put("tRunJob_1_CHILD_EXCEPTION_STACKTRACE",errorMsg_tRunJob_1.toString());
+			  
+	    		throw new RuntimeException("Child job returns " + result_tRunJob_1 + ". It doesn't terminate normally.\n" + errorMsg_tRunJob_1.toString());
 			
-	  	
+  		}
+
+		
 
  
 
@@ -732,6 +855,54 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
     	}
     	
         new BytesLimit65535_tRunJob_3().limitLog4jByte();
+class DealChildJobLibrary_tRunJob_3 {
+
+	public String replaceJarPathsFromCrcMap(String originalClassPathLine) throws java.lang.Exception {
+		String classPathLine = "";
+		String crcMapPath = new java.io.File("../crcMap").getCanonicalPath();
+		if (isNeedAddLibsPath( crcMapPath)) {
+			java.util.Map<String, String> crcMap = null;
+			java.io.ObjectInputStream ois = new ObjectInputStream(new java.io.FileInputStream(crcMapPath));
+			crcMap = (java.util.Map<String, String>) ois.readObject();
+			ois.close();
+			classPathLine = addLibsPath(originalClassPathLine, crcMap);
+		} else {
+			classPathLine = originalClassPathLine;
+		}
+		return classPathLine;
+	}
+	
+	private boolean isNeedAddLibsPath(String crcMapPath) {
+		if (!(new java.io.File(crcMapPath).exists())) {// when not use cache
+			return false;
+		}
+		return true;
+	}
+	
+	
+	private String addLibsPath(String line, java.util.Map<String, String> crcMap) {
+		for (java.util.Map.Entry<String, String> entry : crcMap.entrySet()) {
+			line = adaptLibPaths(line, entry);
+		}
+		return line;
+	}
+	
+	private String adaptLibPaths(String line, java.util.Map.Entry<String, String> entry) {
+		String jarName = entry.getValue();
+		String crc = entry.getKey();
+		String libStringFinder = "../lib/" + jarName;
+		if (line.contains(libStringFinder)) {
+			line = line.replace(libStringFinder, "../../../cache/lib/" + crc + "/" + jarName);
+		} else if (line.contains(":$ROOT_PATH/" + jarName + ":")) {
+			line = line.replace(":$ROOT_PATH/" + jarName + ":", ":$ROOT_PATH/../../../cache/lib/" + crc + "/" + jarName + ":");
+		} else if (line.contains(";" + jarName + ";")) {
+			line = line.replace(";" + jarName + ";", ";../../../cache/lib/" + crc + "/" + jarName + ";");
+		}
+		return line;
+	}
+	
+}
+	DealChildJobLibrary_tRunJob_3 dealChildJobLibrary_tRunJob_3 = new DealChildJobLibrary_tRunJob_3();
 
 
  
@@ -755,17 +926,60 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
 	
 	java.util.List<String> paraList_tRunJob_3 = new java.util.ArrayList<String>();
 	
-	        			paraList_tRunJob_3.add("--father_pid="+pid);
-	      			
-	        			paraList_tRunJob_3.add("--root_pid="+rootPid);
-	      			
-	        			paraList_tRunJob_3.add("--father_node=tRunJob_3");
-	      			
-	        			paraList_tRunJob_3.add("--context=Production");
-	      			
+			String osName_tRunJob_3 = System.getProperty("os.name");
+			if (osName_tRunJob_3 != null && osName_tRunJob_3.toLowerCase().startsWith("win")){
+	      		
+		      			paraList_tRunJob_3.add("java");
+		      		
+		      					paraList_tRunJob_3.add("-Xms256M");
+		      				
+		      					paraList_tRunJob_3.add("-Xmx1024M");
+		      				
+		      					paraList_tRunJob_3.add("-cp");
+		      				
+		        				paraList_tRunJob_3.add(dealChildJobLibrary_tRunJob_3.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/talendcsv.jar;../lib/trove.jar;hongkong_build_master_sats_0_1.jar;sat_product_0_1.jar;sat_market_0_1.jar;dsendexception_0_1.jar;sat_employee_0_1.jar;sat_source_channel_0_1.jar;sat_customer_0_1.jar;sat_organization_0_1.jar;sat_geography_0_1.jar;"));
+		      				
+		      					paraList_tRunJob_3.add("deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS");
+		      				
+		      					paraList_tRunJob_3.add("--father_pid="+pid);
+		      				
+		      					paraList_tRunJob_3.add("--root_pid="+rootPid);
+		      				
+		      					paraList_tRunJob_3.add("--father_node=tRunJob_3");
+		      				
+		      					paraList_tRunJob_3.add("--context=Production");
+		      				
+		      					paraList_tRunJob_3.add("%*");
+		      				
+			} else {
+	      		
+						paraList_tRunJob_3.add("java");
+		      		
+								paraList_tRunJob_3.add("-Xms256M");
+		      				
+								paraList_tRunJob_3.add("-Xmx1024M");
+		      				
+								paraList_tRunJob_3.add("-cp");
+		      				
+								paraList_tRunJob_3.add(dealChildJobLibrary_tRunJob_3.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/commons-lang-2.6.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_sats_0_1.jar:$ROOT_PATH/sat_product_0_1.jar:$ROOT_PATH/sat_market_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/sat_employee_0_1.jar:$ROOT_PATH/sat_source_channel_0_1.jar:$ROOT_PATH/sat_customer_0_1.jar:$ROOT_PATH/sat_organization_0_1.jar:$ROOT_PATH/sat_geography_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
+		      				
+								paraList_tRunJob_3.add("deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS");
+		      				
+								paraList_tRunJob_3.add("--father_pid="+pid);
+		      				
+								paraList_tRunJob_3.add("--root_pid="+rootPid);
+		      				
+								paraList_tRunJob_3.add("--father_node=tRunJob_3");
+		      				
+								paraList_tRunJob_3.add("--context=Production");
+		      				
+								paraList_tRunJob_3.add("$@");
+		      				
+			}    
+	  	
 	//for feature:10589
 	
-		paraList_tRunJob_3.add("--stat_port=" + portStats);
+		paraList_tRunJob_3.add("--stat_port=" + null);
 	
 
 	if(resuming_logs_dir_path != null){
@@ -828,40 +1042,68 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
 		parentContextMap_tRunJob_3.put("WEBJOB_NAME", obj_tRunJob_3);
 	
 	
-		deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS childJob_tRunJob_3 = new deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS();
-	    // pass DataSources
-	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_3 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
-	            .get(KEY_DB_DATASOURCES);
-	    if (null != talendDataSources_tRunJob_3) {
-	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_3 = new java.util.HashMap<String, javax.sql.DataSource>();
-	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_3 : talendDataSources_tRunJob_3
-			        .entrySet()) {
-	            dataSources_tRunJob_3.put(talendDataSourceEntry_tRunJob_3.getKey(),
-	                    talendDataSourceEntry_tRunJob_3.getValue().getRawDataSource());
-	        }
-	        childJob_tRunJob_3.setDataSources(dataSources_tRunJob_3);
-	    }
-		  
-			childJob_tRunJob_3.parentContextMap = parentContextMap_tRunJob_3;
-		  
+		Runtime runtime_tRunJob_3 = Runtime.getRuntime();
+		final Process ps_tRunJob_3;
+		ps_tRunJob_3 = runtime_tRunJob_3.exec((String[])paraList_tRunJob_3.toArray(new String[paraList_tRunJob_3.size()]));
+
+		Thread normal_tRunJob_3 = new Thread() {
+			public void run() {
+				try {
+					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_3.getInputStream()));
+					String line = "";
+					try {
+						while((line = reader.readLine()) != null) {
+						System.out.println(line);
+						}
+					} finally {
+					reader.close();
+					}
+				} catch(java.io.IOException ioe) {
+					
+					ioe.printStackTrace();
+				}
+	    	}
+  		};
 		
-		String[][] childReturn_tRunJob_3 = childJob_tRunJob_3.runJob((String[]) paraList_tRunJob_3.toArray(new String[paraList_tRunJob_3.size()]));
+		normal_tRunJob_3.start();
 		
-	  	
-				((java.util.Map)threadLocal.get()).put("errorCode", childJob_tRunJob_3.getErrorCode());
+
+		final StringBuffer errorMsg_tRunJob_3 = new StringBuffer();
+		Thread error_tRunJob_3 = new Thread() {
+			public void run() {
+				try {
+					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_3.getErrorStream()));
+					String line = "";
+        			try {
+          				while((line = reader.readLine()) != null) {
+            				errorMsg_tRunJob_3.append(line).append("\n");
+          				}
+        			} finally {
+          				reader.close();
+        			}
+      			} catch(java.io.IOException ioe) {
+					
+			        ioe.printStackTrace();
+      			}
+    		}
+		};
+		error_tRunJob_3.start();
+
+		//0 indicates normal termination	
+		int result_tRunJob_3 = ps_tRunJob_3.waitFor();
+		normal_tRunJob_3.join(10000);
+		error_tRunJob_3.join(10000);
+  
+		globalMap.put("tRunJob_3_CHILD_RETURN_CODE",result_tRunJob_3);
+		if(result_tRunJob_3 != 0){
+   			globalMap.put("tRunJob_3_CHILD_EXCEPTION_STACKTRACE",errorMsg_tRunJob_3.toString());
 			
-	            
-	    	if(childJob_tRunJob_3.getErrorCode() == null){
-				globalMap.put("tRunJob_3_CHILD_RETURN_CODE", childJob_tRunJob_3.getStatus() != null && ("failure").equals(childJob_tRunJob_3.getStatus()) ? 1 : 0);
-	    	}else{
-				globalMap.put("tRunJob_3_CHILD_RETURN_CODE", childJob_tRunJob_3.getErrorCode());
-		    }
-		    if (childJob_tRunJob_3.getExceptionStackTrace() != null) { 
-		    	globalMap.put("tRunJob_3_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_3.getExceptionStackTrace());
-		    }
-	  
+				
+				System.err.println("Child job returns " + result_tRunJob_3 + ". It doesn't terminate normally.\n" + errorMsg_tRunJob_3.toString());
 			
-	  	
+  		}
+
+		
 
  
 
@@ -1039,6 +1281,54 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
     	}
     	
         new BytesLimit65535_tRunJob_2().limitLog4jByte();
+class DealChildJobLibrary_tRunJob_2 {
+
+	public String replaceJarPathsFromCrcMap(String originalClassPathLine) throws java.lang.Exception {
+		String classPathLine = "";
+		String crcMapPath = new java.io.File("../crcMap").getCanonicalPath();
+		if (isNeedAddLibsPath( crcMapPath)) {
+			java.util.Map<String, String> crcMap = null;
+			java.io.ObjectInputStream ois = new ObjectInputStream(new java.io.FileInputStream(crcMapPath));
+			crcMap = (java.util.Map<String, String>) ois.readObject();
+			ois.close();
+			classPathLine = addLibsPath(originalClassPathLine, crcMap);
+		} else {
+			classPathLine = originalClassPathLine;
+		}
+		return classPathLine;
+	}
+	
+	private boolean isNeedAddLibsPath(String crcMapPath) {
+		if (!(new java.io.File(crcMapPath).exists())) {// when not use cache
+			return false;
+		}
+		return true;
+	}
+	
+	
+	private String addLibsPath(String line, java.util.Map<String, String> crcMap) {
+		for (java.util.Map.Entry<String, String> entry : crcMap.entrySet()) {
+			line = adaptLibPaths(line, entry);
+		}
+		return line;
+	}
+	
+	private String adaptLibPaths(String line, java.util.Map.Entry<String, String> entry) {
+		String jarName = entry.getValue();
+		String crc = entry.getKey();
+		String libStringFinder = "../lib/" + jarName;
+		if (line.contains(libStringFinder)) {
+			line = line.replace(libStringFinder, "../../../cache/lib/" + crc + "/" + jarName);
+		} else if (line.contains(":$ROOT_PATH/" + jarName + ":")) {
+			line = line.replace(":$ROOT_PATH/" + jarName + ":", ":$ROOT_PATH/../../../cache/lib/" + crc + "/" + jarName + ":");
+		} else if (line.contains(";" + jarName + ";")) {
+			line = line.replace(";" + jarName + ";", ";../../../cache/lib/" + crc + "/" + jarName + ";");
+		}
+		return line;
+	}
+	
+}
+	DealChildJobLibrary_tRunJob_2 dealChildJobLibrary_tRunJob_2 = new DealChildJobLibrary_tRunJob_2();
 
 
  
@@ -1062,17 +1352,60 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 	
 	java.util.List<String> paraList_tRunJob_2 = new java.util.ArrayList<String>();
 	
-	        			paraList_tRunJob_2.add("--father_pid="+pid);
-	      			
-	        			paraList_tRunJob_2.add("--root_pid="+rootPid);
-	      			
-	        			paraList_tRunJob_2.add("--father_node=tRunJob_2");
-	      			
-	        			paraList_tRunJob_2.add("--context=Production");
-	      			
+			String osName_tRunJob_2 = System.getProperty("os.name");
+			if (osName_tRunJob_2 != null && osName_tRunJob_2.toLowerCase().startsWith("win")){
+	      		
+		      			paraList_tRunJob_2.add("java");
+		      		
+		      					paraList_tRunJob_2.add("-Xms256M");
+		      				
+		      					paraList_tRunJob_2.add("-Xmx1024M");
+		      				
+		      					paraList_tRunJob_2.add("-cp");
+		      				
+		        				paraList_tRunJob_2.add(dealChildJobLibrary_tRunJob_2.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/talendcsv.jar;../lib/trove.jar;hongkong_build_master_links_0_1.jar;dsendexception_0_1.jar;link_master_with_multiple_0_1.jar;link_master_with_empty_0_1.jar;check_geography_customer_link_0_1.jar;sal_master_0_1.jar;link_master_0_1.jar;"));
+		      				
+		      					paraList_tRunJob_2.add("deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS");
+		      				
+		      					paraList_tRunJob_2.add("--father_pid="+pid);
+		      				
+		      					paraList_tRunJob_2.add("--root_pid="+rootPid);
+		      				
+		      					paraList_tRunJob_2.add("--father_node=tRunJob_2");
+		      				
+		      					paraList_tRunJob_2.add("--context=Production");
+		      				
+		      					paraList_tRunJob_2.add("%*");
+		      				
+			} else {
+	      		
+						paraList_tRunJob_2.add("java");
+		      		
+								paraList_tRunJob_2.add("-Xms256M");
+		      				
+								paraList_tRunJob_2.add("-Xmx1024M");
+		      				
+								paraList_tRunJob_2.add("-cp");
+		      				
+								paraList_tRunJob_2.add(dealChildJobLibrary_tRunJob_2.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_links_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/link_master_with_multiple_0_1.jar:$ROOT_PATH/link_master_with_empty_0_1.jar:$ROOT_PATH/check_geography_customer_link_0_1.jar:$ROOT_PATH/sal_master_0_1.jar:$ROOT_PATH/link_master_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
+		      				
+								paraList_tRunJob_2.add("deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS");
+		      				
+								paraList_tRunJob_2.add("--father_pid="+pid);
+		      				
+								paraList_tRunJob_2.add("--root_pid="+rootPid);
+		      				
+								paraList_tRunJob_2.add("--father_node=tRunJob_2");
+		      				
+								paraList_tRunJob_2.add("--context=Production");
+		      				
+								paraList_tRunJob_2.add("$@");
+		      				
+			}    
+	  	
 	//for feature:10589
 	
-		paraList_tRunJob_2.add("--stat_port=" + portStats);
+		paraList_tRunJob_2.add("--stat_port=" + null);
 	
 
 	if(resuming_logs_dir_path != null){
@@ -1135,40 +1468,68 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 		parentContextMap_tRunJob_2.put("WEBJOB_NAME", obj_tRunJob_2);
 	
 	
-		deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS childJob_tRunJob_2 = new deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS();
-	    // pass DataSources
-	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_2 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
-	            .get(KEY_DB_DATASOURCES);
-	    if (null != talendDataSources_tRunJob_2) {
-	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_2 = new java.util.HashMap<String, javax.sql.DataSource>();
-	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_2 : talendDataSources_tRunJob_2
-			        .entrySet()) {
-	            dataSources_tRunJob_2.put(talendDataSourceEntry_tRunJob_2.getKey(),
-	                    talendDataSourceEntry_tRunJob_2.getValue().getRawDataSource());
-	        }
-	        childJob_tRunJob_2.setDataSources(dataSources_tRunJob_2);
-	    }
-		  
-			childJob_tRunJob_2.parentContextMap = parentContextMap_tRunJob_2;
-		  
+		Runtime runtime_tRunJob_2 = Runtime.getRuntime();
+		final Process ps_tRunJob_2;
+		ps_tRunJob_2 = runtime_tRunJob_2.exec((String[])paraList_tRunJob_2.toArray(new String[paraList_tRunJob_2.size()]));
+
+		Thread normal_tRunJob_2 = new Thread() {
+			public void run() {
+				try {
+					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_2.getInputStream()));
+					String line = "";
+					try {
+						while((line = reader.readLine()) != null) {
+						System.out.println(line);
+						}
+					} finally {
+					reader.close();
+					}
+				} catch(java.io.IOException ioe) {
+					
+					ioe.printStackTrace();
+				}
+	    	}
+  		};
 		
-		String[][] childReturn_tRunJob_2 = childJob_tRunJob_2.runJob((String[]) paraList_tRunJob_2.toArray(new String[paraList_tRunJob_2.size()]));
+		normal_tRunJob_2.start();
 		
-	  	
-				((java.util.Map)threadLocal.get()).put("errorCode", childJob_tRunJob_2.getErrorCode());
+
+		final StringBuffer errorMsg_tRunJob_2 = new StringBuffer();
+		Thread error_tRunJob_2 = new Thread() {
+			public void run() {
+				try {
+					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_2.getErrorStream()));
+					String line = "";
+        			try {
+          				while((line = reader.readLine()) != null) {
+            				errorMsg_tRunJob_2.append(line).append("\n");
+          				}
+        			} finally {
+          				reader.close();
+        			}
+      			} catch(java.io.IOException ioe) {
+					
+			        ioe.printStackTrace();
+      			}
+    		}
+		};
+		error_tRunJob_2.start();
+
+		//0 indicates normal termination	
+		int result_tRunJob_2 = ps_tRunJob_2.waitFor();
+		normal_tRunJob_2.join(10000);
+		error_tRunJob_2.join(10000);
+  
+		globalMap.put("tRunJob_2_CHILD_RETURN_CODE",result_tRunJob_2);
+		if(result_tRunJob_2 != 0){
+   			globalMap.put("tRunJob_2_CHILD_EXCEPTION_STACKTRACE",errorMsg_tRunJob_2.toString());
 			
-	            
-	    	if(childJob_tRunJob_2.getErrorCode() == null){
-				globalMap.put("tRunJob_2_CHILD_RETURN_CODE", childJob_tRunJob_2.getStatus() != null && ("failure").equals(childJob_tRunJob_2.getStatus()) ? 1 : 0);
-	    	}else{
-				globalMap.put("tRunJob_2_CHILD_RETURN_CODE", childJob_tRunJob_2.getErrorCode());
-		    }
-		    if (childJob_tRunJob_2.getExceptionStackTrace() != null) { 
-		    	globalMap.put("tRunJob_2_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_2.getExceptionStackTrace());
-		    }
-	  
+				
+				System.err.println("Child job returns " + result_tRunJob_2 + ". It doesn't terminate normally.\n" + errorMsg_tRunJob_2.toString());
 			
-	  	
+  		}
+
+		
 
  
 
@@ -1758,6 +2119,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     50482 characters generated by Talend Open Studio for Big Data 
- *     on the January 13, 2019 10:28:55 AM CST
+ *     64709 characters generated by Talend Open Studio for Big Data 
+ *     on the January 20, 2019 2:18:37 PM CST
  ************************************************************************************************/

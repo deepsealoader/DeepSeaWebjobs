@@ -57,17 +57,17 @@
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
-      <artifactId>SAT_SALES</artifactId>
+      <artifactId>HONGKONG_BUILD_SALES_HUBS</artifactId>
       <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
-      <artifactId>HUB_SALES</artifactId>
+      <artifactId>HONGKONG_BUILD_SALES_LINKS</artifactId>
       <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
-      <artifactId>BUILD_SALES_LINKS_HK</artifactId>
+      <artifactId>HONGKONG_BUILD_SALES_SATS</artifactId>
       <version>0.1.0</version>
     </dependency>
   </dependencies>

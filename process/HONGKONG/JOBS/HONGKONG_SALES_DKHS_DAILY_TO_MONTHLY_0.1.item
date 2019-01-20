@@ -1006,6 +1006,8 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getCOLLECTION2()"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="FILE_PREFIX"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getCOLLECTION2() + &quot;-&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="DATE_FORMAT"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;M/d/yy&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
