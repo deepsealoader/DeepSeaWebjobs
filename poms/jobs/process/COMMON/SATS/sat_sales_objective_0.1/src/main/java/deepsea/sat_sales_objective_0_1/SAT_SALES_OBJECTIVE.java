@@ -26,6 +26,7 @@ import routines.StringHandling;
 import routines.Relational;
 import routines.TalendDate;
 import routines.Mathematical;
+import routines.Clean;
 import routines.system.*;
 import routines.system.api.*;
 import java.text.ParseException;
@@ -503,15 +504,6 @@ private class TalendException extends Exception {
 					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tDBInput_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tDBInput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -519,6 +511,15 @@ private class TalendException extends Exception {
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
 					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tDBInput_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tPrejob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -647,15 +648,6 @@ private class TalendException extends Exception {
 					tFlowMeterCatcher_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tAdvancedHash_row13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tAdvancedHash_row14_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -663,6 +655,15 @@ private class TalendException extends Exception {
 				((java.util.Map)threadLocal.get()).put("status", "failure");
 				
 					tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tAdvancedHash_row13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tMongoDBInput_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -675,12 +676,12 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tDBInput_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tDBInput_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tDBInput_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tDBInput_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2713,7 +2714,7 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 
 }
 
-public static class row5Struct implements routines.system.IPersistableRow<row5Struct> {
+public static class row15Struct implements routines.system.IPersistableRow<row15Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
     static byte[] commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
 
@@ -3001,7 +3002,7 @@ public static class row5Struct implements routines.system.IPersistableRow<row5St
     /**
      * Compare keys
      */
-    public int compareTo(row5Struct other) {
+    public int compareTo(row15Struct other) {
 
 		int returnValue = -1;
 		
@@ -4491,15 +4492,15 @@ public void tMongoDBInput_1Process(final java.util.Map<String, Object> globalMap
 				globalResumeTicket = true;
 
 
-		tDBInput_1Process(globalMap);
 		tDBInput_2Process(globalMap);
+		tDBInput_1Process(globalMap);
 
 		row1Struct row1 = new row1Struct();
 row10Struct row10 = new row10Struct();
 row10Struct row7 = row10;
 row3Struct row3 = new row3Struct();
 row4Struct row4 = new row4Struct();
-row5Struct row5 = new row5Struct();
+row15Struct row15 = new row15Struct();
 row8Struct row8 = new row8Struct();
 copyOfrow8Struct copyOfrow8 = new copyOfrow8Struct();
 row2Struct row2 = new row2Struct();
@@ -5190,7 +5191,7 @@ copyOfrow8Struct copyOfrow8_tmp = new copyOfrow8Struct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row5" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row15" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -6167,7 +6168,7 @@ row4.attribute3 = row3.attribute3;
 row4.attribute4 = row3.attribute4;
 row4.attribute5 = row3.attribute5;
 row4.date = TalendDate.parseDate("M/d/y", row3.fiscalStartDate);
-row4.fields = TalendString.unionString(",", "0:" + row3.m1, "1:" + row3.m2, "2:" + row3.m3, "3:" + row3.m4, "4:" + row3.m5, "5:" + row3.m6, "6:" + row3.m7, "7:" + row3.m8, "8:" + row3.m9, "9:" + row3.m10, "10:" + row3.m11, "11:" + row3.m12);
+row4.fields = TalendString.unionString("|", "0:" + Clean.cleanNumber(Clean.cleanString(row3.m1, "0")), "1:" + Clean.cleanNumber(Clean.cleanString(row3.m2, "0")), "2:" + Clean.cleanNumber(Clean.cleanString(row3.m3, "0")), "3:" + Clean.cleanNumber(Clean.cleanString(row3.m4, "0")), "4:" + Clean.cleanNumber(Clean.cleanString(row3.m5, "0")), "5:" + Clean.cleanNumber(Clean.cleanString(row3.m6, "0")), "6:" + Clean.cleanNumber(Clean.cleanString(row3.m7, "0")), "7:" + Clean.cleanNumber(Clean.cleanString(row3.m8, "0")), "8:" + Clean.cleanNumber(Clean.cleanString(row3.m9, "0")), "9:" + Clean.cleanNumber(Clean.cleanString(row3.m10, "0")), "10:" + Clean.cleanNumber(Clean.cleanString(row3.m11, "0")), "11:" + Clean.cleanNumber(Clean.cleanString(row3.m12, "0")));
     nb_line_tJavaRow_1++;   
 
  
@@ -6230,7 +6231,7 @@ row4.fields = TalendString.unionString(",", "0:" + row3.m1, "1:" + row3.m2, "2:"
 		        	normalizeRecord_tNormalize_1[0] = "";
 		        }else{
 	                
-	                		normalizeRecord_tNormalize_1 = row4.fields.split(",",-1);
+	                		normalizeRecord_tNormalize_1 = row4.fields.split("\\|",-1);
 	                        
                 }           
             }
@@ -6242,33 +6243,33 @@ row4.fields = TalendString.unionString(",", "0:" + row3.m1, "1:" + row3.m2, "2:"
 	                currentRecord_tNormalize_1 = new StringBuilder();
 	                nb_line_tNormalize_1++;               
 	                
-	                        	row5.fiscalStartDate = row4.fiscalStartDate;
+	                        	row15.fiscalStartDate = row4.fiscalStartDate;
 	                        
-	                        	row5.market = row4.market;
+	                        	row15.market = row4.market;
 	                        
-	                        	row5.sourceCode = row4.sourceCode;
+	                        	row15.sourceCode = row4.sourceCode;
 	                        
-	                        	row5.geographyCode = row4.geographyCode;
+	                        	row15.geographyCode = row4.geographyCode;
 	                        
-	                        	row5.productCode = row4.productCode;
+	                        	row15.productCode = row4.productCode;
 	                        
-	                        	row5.customerCode = row4.customerCode;
+	                        	row15.customerCode = row4.customerCode;
 	                        
-	                        	row5.customerName = row4.customerName;
+	                        	row15.customerName = row4.customerName;
 	                        
-	                        	row5.attribute1 = row4.attribute1;
+	                        	row15.attribute1 = row4.attribute1;
 	                        
-	                        	row5.attribute2 = row4.attribute2;
+	                        	row15.attribute2 = row4.attribute2;
 	                        
-	                        	row5.attribute3 = row4.attribute3;
+	                        	row15.attribute3 = row4.attribute3;
 	                        
-	                        	row5.attribute4 = row4.attribute4;
+	                        	row15.attribute4 = row4.attribute4;
 	                        
-	                        	row5.attribute5 = row4.attribute5;
+	                        	row15.attribute5 = row4.attribute5;
 	                        
-	                        	row5.date = row4.date;
+	                        	row15.date = row4.date;
 	                        
-	                        	row5.fields = normalizeRecord_tNormalize_1[i_tNormalize_1];
+	                        	row15.fields = normalizeRecord_tNormalize_1[i_tNormalize_1];
 		                    
 
  
@@ -6313,13 +6314,13 @@ row4.fields = TalendString.unionString(",", "0:" + row3.m1, "1:" + row3.m2, "2:"
 
 	
 
-			//row5
-			//row5
+			//row15
+			//row15
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("row5"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row15"+iterateId,1, 1);
 				} 
 			
 
@@ -6341,8 +6342,8 @@ row4.fields = TalendString.unionString(",", "0:" + row3.m1, "1:" + row3.m2, "2:"
         	// # Vars tables
         
 Var__tMap_2__Struct Var = Var__tMap_2;
-Var.month = Integer.valueOf(row5.fields .split(":")[0]);
-Var.value = Float.valueOf(row5.fields .split(":")[1]);// ###############################
+Var.month = Integer.valueOf(row15.fields .split(":")[0]);
+Var.value = Float.valueOf(row15.fields.split(":")[1]);// ###############################
         // ###############################
         // # Output tables
 
@@ -6350,19 +6351,19 @@ row8 = null;
 
 
 // # Output table : 'row8'
-row8_tmp.fiscalStartDate = row5.fiscalStartDate ;
-row8_tmp.market = row5.market;
-row8_tmp.sourceChannelCode = row5.sourceCode;
-row8_tmp.geographyCode = row5.geographyCode;
-row8_tmp.customerCode = row5.customerCode;
-row8_tmp.customerName = row5.customerName;
-row8_tmp.productCode = row5.productCode;
-row8_tmp.attribute1 = row5.attribute1;
-row8_tmp.attribute2 = row5.attribute2;
-row8_tmp.attribute3 = row5.attribute3;
-row8_tmp.attribute4 = row5.attribute4;
-row8_tmp.attribute5 = row5.attribute5;
-row8_tmp.date = TalendDate.addDate(row5.date, Var.month, "MM");
+row8_tmp.fiscalStartDate = row15.fiscalStartDate ;
+row8_tmp.market = row15.market;
+row8_tmp.sourceChannelCode = row15.sourceCode;
+row8_tmp.geographyCode = row15.geographyCode;
+row8_tmp.customerCode = row15.customerCode;
+row8_tmp.customerName = row15.customerName;
+row8_tmp.productCode = row15.productCode;
+row8_tmp.attribute1 = row15.attribute1;
+row8_tmp.attribute2 = row15.attribute2;
+row8_tmp.attribute3 = row15.attribute3;
+row8_tmp.attribute4 = row15.attribute4;
+row8_tmp.attribute5 = row15.attribute5;
+row8_tmp.date = TalendDate.addDate(row15.date, Var.month, "MM");
 row8_tmp.value = Var.value;
 row8 = row8_tmp;
 // ###############################
@@ -7812,7 +7813,7 @@ end_Hash.put("tNormalize_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row5"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row15"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -8699,6 +8700,684 @@ end_Hash.put("tDBCommit_1", System.currentTimeMillis());
 	
 
 
+public static class row14Struct implements routines.system.IPersistableComparableLookupRow<row14Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
+	protected static final int DEFAULT_HASHCODE = 1;
+    protected static final int PRIME = 31;
+    protected int hashCode = DEFAULT_HASHCODE;
+    public boolean hashCodeDirty = true;
+
+    public String loopKey;
+
+
+
+	
+			    public String hash;
+
+				public String getHash () {
+					return this.hash;
+				}
+				
+
+
+	@Override
+	public int hashCode() {
+		if (this.hashCodeDirty) {
+			final int prime = PRIME;
+			int result = DEFAULT_HASHCODE;
+	
+						result = prime * result + ((this.hash == null) ? 0 : this.hash.hashCode());
+					
+    		this.hashCode = result;
+    		this.hashCodeDirty = false;
+		}
+		return this.hashCode;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (getClass() != obj.getClass()) return false;
+		final row14Struct other = (row14Struct) obj;
+		
+						if (this.hash == null) {
+							if (other.hash != null)
+								return false;
+						
+						} else if (!this.hash.equals(other.hash))
+						
+							return false;
+					
+
+		return true;
+    }
+
+	public void copyDataTo(row14Struct other) {
+
+		other.hash = this.hash;
+	            
+	}
+
+	public void copyKeysDataTo(row14Struct other) {
+
+		other.hash = this.hash;
+	            	
+	}
+
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE.length == 0) {
+   					commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readKeysData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.hash = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeKeysData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.hash,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+
+    /**
+     * Fill Values data by reading ObjectInputStream.
+     */
+    public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+        try {
+
+			int length = 0;
+		
+
+		
+
+        }
+
+		
+        	finally {}
+
+    }
+
+    /**
+     * Return a byte array which represents Values data.
+     */
+    public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+        try {
+
+		
+        	}
+        	finally {}
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("hash="+hash);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row14Struct other) {
+
+		int returnValue = -1;
+		
+						returnValue = checkNullsAndCompare(this.hash, other.hash);
+						if(returnValue != 0) {
+							return returnValue;
+						}
+
+					
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tDBInput_2_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		row14Struct row14 = new row14Struct();
+
+
+
+
+	
+	/**
+	 * [tAdvancedHash_row14 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tAdvancedHash_row14", false);
+		start_Hash.put("tAdvancedHash_row14", System.currentTimeMillis());
+		
+	
+	currentComponent="tAdvancedHash_row14";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row14" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tAdvancedHash_row14 = 0;
+		
+    	class BytesLimit65535_tAdvancedHash_row14{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tAdvancedHash_row14().limitLog4jByte();
+
+			   		// connection name:row14
+			   		// source node:tDBInput_2 - inputs:(after_tMongoDBInput_1) outputs:(row14,row14) | target node:tAdvancedHash_row14 - inputs:(row14) outputs:()
+			   		// linked node: tMap_1 - inputs:(row1,row14) outputs:(row10)
+			   
+			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row14 = 
+			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+			   			
+			   
+	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row14Struct> tHash_Lookup_row14 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
+	   						<row14Struct>getLookup(matchingModeEnum_row14);
+	   						   
+		   	   	   globalMap.put("tHash_Lookup_row14", tHash_Lookup_row14);
+		   	   	   
+				
+           
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row14 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tDBInput_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tDBInput_2", false);
+		start_Hash.put("tDBInput_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tDBInput_2";
+
+	
+		int tos_count_tDBInput_2 = 0;
+		
+    	class BytesLimit65535_tDBInput_2{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tDBInput_2().limitLog4jByte();
+	
+    
+	
+		    int nb_line_tDBInput_2 = 0;
+		    java.sql.Connection conn_tDBInput_2 = null;
+		        conn_tDBInput_2 = (java.sql.Connection)globalMap.get("conn_tDBConnection_1");
+				
+		    
+			java.sql.Statement stmt_tDBInput_2 = conn_tDBInput_2.createStatement();
+
+		    String dbquery_tDBInput_2 = "select distinct\n	hash\nfrom\n	" + globalMap.get("HUB_TABLE") + " as a inner join " + globalMap.get("SAT_TABLE") + " as b on a.id=b.hub_id\nwhere\n	a.source='" + context.getSOURCE() + "'";
+			
+
+            	globalMap.put("tDBInput_2_QUERY",dbquery_tDBInput_2);
+		    java.sql.ResultSet rs_tDBInput_2 = null;
+
+		    try {
+		    	rs_tDBInput_2 = stmt_tDBInput_2.executeQuery(dbquery_tDBInput_2);
+		    	java.sql.ResultSetMetaData rsmd_tDBInput_2 = rs_tDBInput_2.getMetaData();
+		    	int colQtyInRs_tDBInput_2 = rsmd_tDBInput_2.getColumnCount();
+
+		    String tmpContent_tDBInput_2 = null;
+		    
+		    
+		    while (rs_tDBInput_2.next()) {
+		        nb_line_tDBInput_2++;
+		        
+							if(colQtyInRs_tDBInput_2 < 1) {
+								row14.hash = null;
+							} else {
+	                         		
+        	row14.hash = routines.system.JDBCUtil.getString(rs_tDBInput_2, 1, false);
+		                    }
+					
+
+
+ 
+
+
+
+/**
+ * [tDBInput_2 begin ] stop
+ */
+	
+	/**
+	 * [tDBInput_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_2";
+
+	
+
+ 
+
+
+	tos_count_tDBInput_2++;
+
+/**
+ * [tDBInput_2 main ] stop
+ */
+	
+	/**
+	 * [tDBInput_2 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tDBInput_2 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row14 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row14";
+
+	
+
+			//row14
+			//row14
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row14"+iterateId,1, 1);
+				} 
+			
+
+		
+
+
+			   
+			   
+
+					row14Struct row14_HashRow = new row14Struct();
+		   	   	   
+				
+				row14_HashRow.hash = row14.hash;
+				
+			tHash_Lookup_row14.put(row14_HashRow);
+			
+            
+
+
+
+
+ 
+
+
+	tos_count_tAdvancedHash_row14++;
+
+/**
+ * [tAdvancedHash_row14 main ] stop
+ */
+	
+	/**
+	 * [tAdvancedHash_row14 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row14";
+
+	
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row14 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tAdvancedHash_row14 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row14";
+
+	
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row14 process_data_end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tDBInput_2 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tDBInput_2 process_data_end ] stop
+ */
+	
+	/**
+	 * [tDBInput_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_2";
+
+	
+
+	}
+}finally{
+	stmt_tDBInput_2.close();
+
+}
+globalMap.put("tDBInput_2_NB_LINE",nb_line_tDBInput_2);
+ 
+
+ok_Hash.put("tDBInput_2", true);
+end_Hash.put("tDBInput_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tDBInput_2 end ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row14 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row14";
+
+	
+
+tHash_Lookup_row14.endPut();
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row14"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tAdvancedHash_row14", true);
+end_Hash.put("tAdvancedHash_row14", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tAdvancedHash_row14 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tDBInput_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tDBInput_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tDBInput_2 finally ] stop
+ */
+
+	
+	/**
+	 * [tAdvancedHash_row14 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tAdvancedHash_row14";
+
+	
+
+ 
+
+
+
+/**
+ * [tAdvancedHash_row14 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tDBInput_2_SUBPROCESS_STATE", 1);
+	}
+	
+
+
 public static class row13Struct implements routines.system.IPersistableComparableLookupRow<row13Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
     static byte[] commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
@@ -9419,684 +10098,6 @@ end_Hash.put("tAdvancedHash_row13", System.currentTimeMillis());
 		
 
 		globalMap.put("tDBInput_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-
-public static class row14Struct implements routines.system.IPersistableComparableLookupRow<row14Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
-	protected static final int DEFAULT_HASHCODE = 1;
-    protected static final int PRIME = 31;
-    protected int hashCode = DEFAULT_HASHCODE;
-    public boolean hashCodeDirty = true;
-
-    public String loopKey;
-
-
-
-	
-			    public String hash;
-
-				public String getHash () {
-					return this.hash;
-				}
-				
-
-
-	@Override
-	public int hashCode() {
-		if (this.hashCodeDirty) {
-			final int prime = PRIME;
-			int result = DEFAULT_HASHCODE;
-	
-						result = prime * result + ((this.hash == null) ? 0 : this.hash.hashCode());
-					
-    		this.hashCode = result;
-    		this.hashCodeDirty = false;
-		}
-		return this.hashCode;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) return true;
-		if (obj == null) return false;
-		if (getClass() != obj.getClass()) return false;
-		final row14Struct other = (row14Struct) obj;
-		
-						if (this.hash == null) {
-							if (other.hash != null)
-								return false;
-						
-						} else if (!this.hash.equals(other.hash))
-						
-							return false;
-					
-
-		return true;
-    }
-
-	public void copyDataTo(row14Struct other) {
-
-		other.hash = this.hash;
-	            
-	}
-
-	public void copyKeysDataTo(row14Struct other) {
-
-		other.hash = this.hash;
-	            	
-	}
-
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE.length == 0) {
-   					commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readKeysData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.hash = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeKeysData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.hash,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-
-    /**
-     * Fill Values data by reading ObjectInputStream.
-     */
-    public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
-        try {
-
-			int length = 0;
-		
-
-		
-
-        }
-
-		
-        	finally {}
-
-    }
-
-    /**
-     * Return a byte array which represents Values data.
-     */
-    public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
-        try {
-
-		
-        	}
-        	finally {}
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("hash="+hash);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row14Struct other) {
-
-		int returnValue = -1;
-		
-						returnValue = checkNullsAndCompare(this.hash, other.hash);
-						if(returnValue != 0) {
-							return returnValue;
-						}
-
-					
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-public void tDBInput_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tDBInput_2_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		row14Struct row14 = new row14Struct();
-
-
-
-
-	
-	/**
-	 * [tAdvancedHash_row14 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tAdvancedHash_row14", false);
-		start_Hash.put("tAdvancedHash_row14", System.currentTimeMillis());
-		
-	
-	currentComponent="tAdvancedHash_row14";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row14" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tAdvancedHash_row14 = 0;
-		
-    	class BytesLimit65535_tAdvancedHash_row14{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tAdvancedHash_row14().limitLog4jByte();
-
-			   		// connection name:row14
-			   		// source node:tDBInput_2 - inputs:(after_tMongoDBInput_1) outputs:(row14,row14) | target node:tAdvancedHash_row14 - inputs:(row14) outputs:()
-			   		// linked node: tMap_1 - inputs:(row1,row14) outputs:(row10)
-			   
-			   		org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row14 = 
-			   			org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
-			   			
-			   
-	   			org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row14Struct> tHash_Lookup_row14 =org.talend.designer.components.lookup.memory.AdvancedMemoryLookup.
-	   						<row14Struct>getLookup(matchingModeEnum_row14);
-	   						   
-		   	   	   globalMap.put("tHash_Lookup_row14", tHash_Lookup_row14);
-		   	   	   
-				
-           
-
- 
-
-
-
-/**
- * [tAdvancedHash_row14 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tDBInput_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tDBInput_2", false);
-		start_Hash.put("tDBInput_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tDBInput_2";
-
-	
-		int tos_count_tDBInput_2 = 0;
-		
-    	class BytesLimit65535_tDBInput_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tDBInput_2().limitLog4jByte();
-	
-    
-	
-		    int nb_line_tDBInput_2 = 0;
-		    java.sql.Connection conn_tDBInput_2 = null;
-		        conn_tDBInput_2 = (java.sql.Connection)globalMap.get("conn_tDBConnection_1");
-				
-		    
-			java.sql.Statement stmt_tDBInput_2 = conn_tDBInput_2.createStatement();
-
-		    String dbquery_tDBInput_2 = "select distinct\n	hash\nfrom\n	" + globalMap.get("HUB_TABLE") + " as a inner join " + globalMap.get("SAT_TABLE") + " as b on a.id=b.hub_id\nwhere\n	a.source='" + context.getSOURCE() + "'";
-			
-
-            	globalMap.put("tDBInput_2_QUERY",dbquery_tDBInput_2);
-		    java.sql.ResultSet rs_tDBInput_2 = null;
-
-		    try {
-		    	rs_tDBInput_2 = stmt_tDBInput_2.executeQuery(dbquery_tDBInput_2);
-		    	java.sql.ResultSetMetaData rsmd_tDBInput_2 = rs_tDBInput_2.getMetaData();
-		    	int colQtyInRs_tDBInput_2 = rsmd_tDBInput_2.getColumnCount();
-
-		    String tmpContent_tDBInput_2 = null;
-		    
-		    
-		    while (rs_tDBInput_2.next()) {
-		        nb_line_tDBInput_2++;
-		        
-							if(colQtyInRs_tDBInput_2 < 1) {
-								row14.hash = null;
-							} else {
-	                         		
-        	row14.hash = routines.system.JDBCUtil.getString(rs_tDBInput_2, 1, false);
-		                    }
-					
-
-
- 
-
-
-
-/**
- * [tDBInput_2 begin ] stop
- */
-	
-	/**
-	 * [tDBInput_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tDBInput_2";
-
-	
-
- 
-
-
-	tos_count_tDBInput_2++;
-
-/**
- * [tDBInput_2 main ] stop
- */
-	
-	/**
-	 * [tDBInput_2 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tDBInput_2";
-
-	
-
- 
-
-
-
-/**
- * [tDBInput_2 process_data_begin ] stop
- */
-
-	
-	/**
-	 * [tAdvancedHash_row14 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tAdvancedHash_row14";
-
-	
-
-			//row14
-			//row14
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row14"+iterateId,1, 1);
-				} 
-			
-
-		
-
-
-			   
-			   
-
-					row14Struct row14_HashRow = new row14Struct();
-		   	   	   
-				
-				row14_HashRow.hash = row14.hash;
-				
-			tHash_Lookup_row14.put(row14_HashRow);
-			
-            
-
-
-
-
- 
-
-
-	tos_count_tAdvancedHash_row14++;
-
-/**
- * [tAdvancedHash_row14 main ] stop
- */
-	
-	/**
-	 * [tAdvancedHash_row14 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tAdvancedHash_row14";
-
-	
-
- 
-
-
-
-/**
- * [tAdvancedHash_row14 process_data_begin ] stop
- */
-	
-	/**
-	 * [tAdvancedHash_row14 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tAdvancedHash_row14";
-
-	
-
- 
-
-
-
-/**
- * [tAdvancedHash_row14 process_data_end ] stop
- */
-
-
-
-	
-	/**
-	 * [tDBInput_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tDBInput_2";
-
-	
-
- 
-
-
-
-/**
- * [tDBInput_2 process_data_end ] stop
- */
-	
-	/**
-	 * [tDBInput_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tDBInput_2";
-
-	
-
-	}
-}finally{
-	stmt_tDBInput_2.close();
-
-}
-globalMap.put("tDBInput_2_NB_LINE",nb_line_tDBInput_2);
- 
-
-ok_Hash.put("tDBInput_2", true);
-end_Hash.put("tDBInput_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tDBInput_2 end ] stop
- */
-
-	
-	/**
-	 * [tAdvancedHash_row14 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tAdvancedHash_row14";
-
-	
-
-tHash_Lookup_row14.endPut();
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row14"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tAdvancedHash_row14", true);
-end_Hash.put("tAdvancedHash_row14", System.currentTimeMillis());
-
-
-
-
-/**
- * [tAdvancedHash_row14 end ] stop
- */
-
-
-
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tDBInput_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tDBInput_2";
-
-	
-
- 
-
-
-
-/**
- * [tDBInput_2 finally ] stop
- */
-
-	
-	/**
-	 * [tAdvancedHash_row14 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tAdvancedHash_row14";
-
-	
-
- 
-
-
-
-/**
- * [tAdvancedHash_row14 finally ] stop
- */
-
-
-
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tDBInput_2_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -14656,6 +14657,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     317153 characters generated by Talend Open Studio for Big Data 
- *     on the 4 February, 2019 11:00:07 AM SGT
+ *     303278 characters generated by Talend Open Studio for Big Data 
+ *     on the February 6, 2019 10:13:24 AM CST
  ************************************************************************************************/

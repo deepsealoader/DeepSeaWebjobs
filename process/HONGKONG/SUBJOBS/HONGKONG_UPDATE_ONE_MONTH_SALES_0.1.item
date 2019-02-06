@@ -5,7 +5,6 @@
     <contextParameter comment="" name="COLLECTION1" prompt="COLLECTION1?" promptNeeded="false" type="id_String" value="sales.zuellig.daily"/>
     <contextParameter comment="" name="COLLECTION2" prompt="COLLECTION2?" promptNeeded="false" type="id_String" value="sales.zuellig.monthly"/>
     <contextParameter comment="" name="FILE_PREFIX" prompt="FILE_PREFIX?" promptNeeded="false" type="id_String" value="sales.zuellig.monthly-"/>
-    <contextParameter comment="" name="DATE_FORMAT" prompt="DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="Basic YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost"/>
@@ -18,7 +17,6 @@
     <contextParameter comment="" name="COLLECTION1" prompt="COLLECTION1?" promptNeeded="false" type="id_String" value="sales.zuellig.daily"/>
     <contextParameter comment="" name="COLLECTION2" prompt="COLLECTION2?" promptNeeded="false" type="id_String" value="sales.zuellig.monthly"/>
     <contextParameter comment="" name="FILE_PREFIX" prompt="FILE_PREFIX?" promptNeeded="false" type="id_String" value="sales.zuellig.monthly-"/>
-    <contextParameter comment="" name="DATE_FORMAT" prompt="DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="Basic YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost:8080"/>
@@ -31,7 +29,6 @@
     <contextParameter comment="" name="COLLECTION1" prompt="COLLECTION1?" promptNeeded="false" type="id_String" value="sales.zuellig.daily"/>
     <contextParameter comment="" name="COLLECTION2" prompt="COLLECTION2?" promptNeeded="false" type="id_String" value="sales.zuellig.monthly"/>
     <contextParameter comment="" name="FILE_PREFIX" prompt="FILE_PREFIX?" promptNeeded="false" type="id_String" value="sales.zuellig.monthly-"/>
-    <contextParameter comment="" name="DATE_FORMAT" prompt="DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="Basic YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost:4040"/>
@@ -142,6 +139,7 @@
     <routinesParameter id="_HdEsMK6jEeiC2aJINdmZJQ" name="TalendDate"/>
     <routinesParameter id="_HcwjIK6jEeiC2aJINdmZJQ" name="TalendStringUtil"/>
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
+    <routinesParameter id="_48LqMCmnEemf_-JpfaxcDQ" name="Clean"/>
   </parameters>
   <node componentName="tMongoDBConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMongoDBConnection_1" show="false"/>
@@ -423,7 +421,7 @@
         <mapperTableEntries name="productName" expression="row15.productName" type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" expression="row15.amount.replace(&quot;,&quot;, &quot;&quot;).replace(&quot;(&quot;, &quot;-&quot;).replace(&quot;)&quot;, &quot;&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" expression="row15.quantity" type="id_String"/>
-        <mapperTableEntries name="date" expression="TalendDate.formatDate(&quot;dd/MM/yy&quot;,TalendDate.parseDate(context.getDATE_FORMAT(),row15.date)) " type="id_String"/>
+        <mapperTableEntries name="date" expression="TalendDate.formatDate(&quot;dd/MM/yy&quot;, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.date, &quot;&quot;))) " type="id_String"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row15" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="hash" type="id_String"/>

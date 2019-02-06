@@ -1,3 +1,0 @@
-%~d0
-cd %~dp0
-java -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -cp .;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-beanutils-1.8.3.jar;../lib/commons-collections-3.2.1.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/commons-logging-1.1.1.jar;../lib/dom4j-1.6.1.jar;../lib/ezmorph-1.0.6.jar;../lib/jaxen-1.1.1.jar;../lib/jboss-serialization.jar;../lib/json-lib-2.4-jdk15.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/trove.jar;../lib/xom-1.2.7.jar;generate_geography_code_0_1.jar; deepsea.generate_geography_code_0_1.GENERATE_GEOGRAPHY_CODE  %* 
