@@ -182,6 +182,7 @@
 				<include>org.example.deepsea.code:routines</include>
 				<include>org.talend.libraries:commons-collections-3.2.2</include>
 				<include>org.talend.libraries:log4j-1.2.15</include>
+				<include>org.talend.libraries:commons-lang-2.6</include>
 				<include>org.talend.libraries:jboss-serialization</include>
 				<include>org.talend.libraries:postgresql-8.3-603.jdbc3</include>
 				<include>org.talend.libraries:jersey-core-1.4</include>
@@ -189,7 +190,6 @@
 				<include>org.talend.libraries:jersey-client-1.4</include>
 				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
 				<include>org.talend.libraries:trove</include>
-				<include>org.talend.libraries:commons-lang-2.6</include>
 				<include>org.talend.libraries:talendcsv</include>
 			</includes>
 			<!-- without version for talend libraries -->
@@ -210,12 +210,15 @@
 			<includes>
 				<include>org.example.deepsea.job:SAT_MARKET</include>
 				<include>org.example.deepsea.job:dSendException</include>
+				<include>org.example.deepsea.job:HUB_MASTER_SALES_OBJECTIVES</include>
 				<include>org.example.deepsea.job:HONGKONG_BUILD_MASTER_LINKS</include>
 				<include>org.example.deepsea.job:SAT_CUSTOMER</include>
+				<include>org.example.deepsea.job:SAT_SALES_OBJECTIVE</include>
 				<include>org.example.deepsea.job:LINK_MASTER_WITH_MULTIPLE</include>
 				<include>org.example.deepsea.job:CHECK_GEOGRAPHY_CUSTOMER_LINK</include>
 				<include>org.example.deepsea.job:HUB_MASTER</include>
 				<include>org.example.deepsea.job:SAL_MASTER</include>
+				<include>org.example.deepsea.job:LINK_MASTER_SALES_OBJECTIVE</include>
 				<include>org.example.deepsea.job:SAT_GEOGRAPHY</include>
 				<include>org.example.deepsea.job:LINK_MASTER</include>
 				<include>org.example.deepsea.job:SAT_PRODUCT</include>

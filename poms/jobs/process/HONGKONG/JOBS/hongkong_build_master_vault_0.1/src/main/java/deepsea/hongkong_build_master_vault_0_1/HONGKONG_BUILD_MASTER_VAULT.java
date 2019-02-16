@@ -504,7 +504,7 @@ class DealChildJobLibrary_tRunJob_1 {
 		      				
 		      					paraList_tRunJob_1.add("-cp");
 		      				
-		        				paraList_tRunJob_1.add(dealChildJobLibrary_tRunJob_1.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/trove.jar;hongkong_build_master_hubs_0_1.jar;dsendexception_0_1.jar;hub_master_0_1.jar;hub_master_with_duplicates_0_1.jar;"));
+		        				paraList_tRunJob_1.add(dealChildJobLibrary_tRunJob_1.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/trove.jar;hongkong_build_master_hubs_0_1.jar;dsendexception_0_1.jar;hub_master_sales_objectives_0_1.jar;hub_master_0_1.jar;hub_master_with_duplicates_0_1.jar;"));
 		      				
 		      					paraList_tRunJob_1.add("deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS");
 		      				
@@ -528,7 +528,7 @@ class DealChildJobLibrary_tRunJob_1 {
 		      				
 								paraList_tRunJob_1.add("-cp");
 		      				
-								paraList_tRunJob_1.add(dealChildJobLibrary_tRunJob_1.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/commons-lang-2.6.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_hubs_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/hub_master_0_1.jar:$ROOT_PATH/hub_master_with_duplicates_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
+								paraList_tRunJob_1.add(dealChildJobLibrary_tRunJob_1.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/commons-lang-2.6.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_hubs_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/hub_master_sales_objectives_0_1.jar:$ROOT_PATH/hub_master_0_1.jar:$ROOT_PATH/hub_master_with_duplicates_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
 		      				
 								paraList_tRunJob_1.add("deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS");
 		      				
@@ -937,7 +937,7 @@ class DealChildJobLibrary_tRunJob_3 {
 		      				
 		      					paraList_tRunJob_3.add("-cp");
 		      				
-		        				paraList_tRunJob_3.add(dealChildJobLibrary_tRunJob_3.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/talendcsv.jar;../lib/trove.jar;hongkong_build_master_sats_0_1.jar;sat_product_0_1.jar;sat_market_0_1.jar;dsendexception_0_1.jar;sat_employee_0_1.jar;sat_source_channel_0_1.jar;sat_customer_0_1.jar;sat_organization_0_1.jar;sat_geography_0_1.jar;"));
+		        				paraList_tRunJob_3.add(dealChildJobLibrary_tRunJob_3.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/talendcsv.jar;../lib/trove.jar;hongkong_build_master_sats_0_1.jar;sat_product_0_1.jar;sat_market_0_1.jar;dsendexception_0_1.jar;sat_employee_0_1.jar;sat_source_channel_0_1.jar;sat_customer_0_1.jar;sat_sales_objective_0_1.jar;sat_organization_0_1.jar;sat_geography_0_1.jar;"));
 		      				
 		      					paraList_tRunJob_3.add("deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS");
 		      				
@@ -961,7 +961,7 @@ class DealChildJobLibrary_tRunJob_3 {
 		      				
 								paraList_tRunJob_3.add("-cp");
 		      				
-								paraList_tRunJob_3.add(dealChildJobLibrary_tRunJob_3.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/commons-lang-2.6.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_sats_0_1.jar:$ROOT_PATH/sat_product_0_1.jar:$ROOT_PATH/sat_market_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/sat_employee_0_1.jar:$ROOT_PATH/sat_source_channel_0_1.jar:$ROOT_PATH/sat_customer_0_1.jar:$ROOT_PATH/sat_organization_0_1.jar:$ROOT_PATH/sat_geography_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
+								paraList_tRunJob_3.add(dealChildJobLibrary_tRunJob_3.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/commons-lang-2.6.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_sats_0_1.jar:$ROOT_PATH/sat_product_0_1.jar:$ROOT_PATH/sat_market_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/sat_employee_0_1.jar:$ROOT_PATH/sat_source_channel_0_1.jar:$ROOT_PATH/sat_customer_0_1.jar:$ROOT_PATH/sat_sales_objective_0_1.jar:$ROOT_PATH/sat_organization_0_1.jar:$ROOT_PATH/sat_geography_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
 		      				
 								paraList_tRunJob_3.add("deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS");
 		      				
@@ -1363,7 +1363,7 @@ class DealChildJobLibrary_tRunJob_2 {
 		      				
 		      					paraList_tRunJob_2.add("-cp");
 		      				
-		        				paraList_tRunJob_2.add(dealChildJobLibrary_tRunJob_2.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/talendcsv.jar;../lib/trove.jar;hongkong_build_master_links_0_1.jar;dsendexception_0_1.jar;link_master_with_multiple_0_1.jar;link_master_with_empty_0_1.jar;check_geography_customer_link_0_1.jar;sal_master_0_1.jar;link_master_0_1.jar;"));
+		        				paraList_tRunJob_2.add(dealChildJobLibrary_tRunJob_2.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/talendcsv.jar;../lib/trove.jar;hongkong_build_master_links_0_1.jar;dsendexception_0_1.jar;link_master_with_multiple_0_1.jar;link_master_with_empty_0_1.jar;check_geography_customer_link_0_1.jar;sal_master_0_1.jar;link_master_sales_objective_0_1.jar;link_master_0_1.jar;"));
 		      				
 		      					paraList_tRunJob_2.add("deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS");
 		      				
@@ -1387,7 +1387,7 @@ class DealChildJobLibrary_tRunJob_2 {
 		      				
 								paraList_tRunJob_2.add("-cp");
 		      				
-								paraList_tRunJob_2.add(dealChildJobLibrary_tRunJob_2.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_links_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/link_master_with_multiple_0_1.jar:$ROOT_PATH/link_master_with_empty_0_1.jar:$ROOT_PATH/check_geography_customer_link_0_1.jar:$ROOT_PATH/sal_master_0_1.jar:$ROOT_PATH/link_master_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
+								paraList_tRunJob_2.add(dealChildJobLibrary_tRunJob_2.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_links_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/link_master_with_multiple_0_1.jar:$ROOT_PATH/link_master_with_empty_0_1.jar:$ROOT_PATH/check_geography_customer_link_0_1.jar:$ROOT_PATH/sal_master_0_1.jar:$ROOT_PATH/link_master_sales_objective_0_1.jar:$ROOT_PATH/link_master_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
 		      				
 								paraList_tRunJob_2.add("deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS");
 		      				
@@ -2119,6 +2119,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     64709 characters generated by Talend Open Studio for Big Data 
- *     on the January 20, 2019 2:18:37 PM CST
+ *     67032 characters generated by Talend Open Studio for Big Data 
+ *     on the 13 February, 2019 9:47:09 AM JST
  ************************************************************************************************/

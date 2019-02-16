@@ -421,7 +421,7 @@
         <mapperTableEntries name="productName" expression="row2.productName" type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" expression="row2.amount" type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" expression="row2.quantity" type="id_String"/>
-        <mapperTableEntries name="date" expression="TalendDate.formatDate(&quot;dd/MM/yy&quot;, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row2.date, &quot;&quot;))) " type="id_String"/>
+        <mapperTableEntries name="date" expression="TalendDate.formatDate(&quot;dd/MM/yy&quot;, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row2.date, context.getBATCH_DATE()))) " type="id_String"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="hash" type="id_String"/>

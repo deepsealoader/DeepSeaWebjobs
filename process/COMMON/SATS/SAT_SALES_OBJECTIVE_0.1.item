@@ -299,7 +299,7 @@
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sourceCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sourceChannelCode"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="geographyCode"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
@@ -350,7 +350,7 @@
     <metadata connector="FLOW" label="metadata" name="tExtractFields_1">
       <column comment="" key="false" length="0" name="fiscalStartDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="market" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="sourceCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -414,7 +414,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="output_row.fiscalStartDate = input_row.fiscalStartDate;&#xA;output_row.market = input_row.market;&#xA;output_row.sourceCode = input_row.sourceCode;&#xA;output_row.geographyCode = input_row.geographyCode;&#xA;output_row.productCode = input_row.productCode;&#xA;output_row.customerCode = input_row.customerCode;&#xA;output_row.customerName = input_row.customerName;&#xA;output_row.attribute1 = input_row.attribute1;&#xA;output_row.attribute2 = input_row.attribute2;&#xA;output_row.attribute3 = input_row.attribute3;&#xA;output_row.attribute4 = input_row.attribute4;&#xA;output_row.attribute5 = input_row.attribute5;&#xA;output_row.date = TalendDate.parseDate(&quot;M/d/y&quot;, input_row.fiscalStartDate);&#xA;output_row.fields = TalendString.unionString(&quot;|&quot;, &quot;0:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m1, &quot;0&quot;)), &quot;1:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m2, &quot;0&quot;)), &quot;2:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m3, &quot;0&quot;)), &quot;3:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m4, &quot;0&quot;)), &quot;4:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m5, &quot;0&quot;)), &quot;5:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m6, &quot;0&quot;)), &quot;6:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m7, &quot;0&quot;)), &quot;7:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m8, &quot;0&quot;)), &quot;8:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m9, &quot;0&quot;)), &quot;9:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m10, &quot;0&quot;)), &quot;10:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m11, &quot;0&quot;)), &quot;11:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m12, &quot;0&quot;)));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="output_row.fiscalStartDate = input_row.fiscalStartDate;&#xA;output_row.market = input_row.market;&#xA;output_row.sourceChannelCode = input_row.sourceChannelCode;&#xA;output_row.geographyCode = input_row.geographyCode;&#xA;output_row.productCode = input_row.productCode;&#xA;output_row.customerCode = input_row.customerCode;&#xA;output_row.customerName = input_row.customerName;&#xA;output_row.attribute1 = input_row.attribute1;&#xA;output_row.attribute2 = input_row.attribute2;&#xA;output_row.attribute3 = input_row.attribute3;&#xA;output_row.attribute4 = input_row.attribute4;&#xA;output_row.attribute5 = input_row.attribute5;&#xA;output_row.date = TalendDate.parseDate(&quot;M/d/y&quot;, input_row.fiscalStartDate);&#xA;output_row.fields = TalendString.unionString(&quot;|&quot;, &quot;0:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m1, &quot;0&quot;)), &quot;1:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m2, &quot;0&quot;)), &quot;2:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m3, &quot;0&quot;)), &quot;3:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m4, &quot;0&quot;)), &quot;4:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m5, &quot;0&quot;)), &quot;5:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m6, &quot;0&quot;)), &quot;6:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m7, &quot;0&quot;)), &quot;7:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m8, &quot;0&quot;)), &quot;8:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m9, &quot;0&quot;)), &quot;9:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m10, &quot;0&quot;)), &quot;10:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m11, &quot;0&quot;)), &quot;11:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m12, &quot;0&quot;)));"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="PrepareNormalize"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
@@ -422,7 +422,7 @@
     <metadata connector="FLOW" label="metadata" name="tJavaRow_1">
       <column comment="" key="false" length="0" name="fiscalStartDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="market" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="sourceCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -452,7 +452,7 @@
     <metadata connector="FLOW" label="metadata" name="tNormalize_1">
       <column comment="" key="false" length="0" name="fiscalStartDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="market" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="sourceCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -507,7 +507,7 @@
       <outputTables sizeState="INTERMEDIATE" name="row8">
         <mapperTableEntries name="fiscalStartDate" expression="row15.fiscalStartDate " type="id_String" nullable="true"/>
         <mapperTableEntries name="market" expression="row15.market" type="id_String" nullable="true"/>
-        <mapperTableEntries name="sourceChannelCode" expression="row15.sourceCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannelCode" expression="row15.sourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="geographyCode" expression="row15.geographyCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" expression="row15.customerCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerName" expression="row15.customerName" type="id_String"/>
@@ -523,7 +523,7 @@
       <inputTables sizeState="INTERMEDIATE" name="row15" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="fiscalStartDate" type="id_String" nullable="true"/>
         <mapperTableEntries name="market" type="id_String" nullable="true"/>
-        <mapperTableEntries name="sourceCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
@@ -571,7 +571,7 @@
       <column comment="" key="false" length="0" name="attribute5" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfrow8">
         <mapperTableEntries name="hubId" expression="row13.id " type="id_Integer"/>

@@ -360,7 +360,7 @@
     <elementParameter field="TEXT" name="LABEL" value="DifferentiateRows"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata comment="" connector="FLOW" label="metadata" name="orgRow">
+    <metadata comment="" label="metadata" name="orgRow">
       <column comment="" key="false" length="-1" name="hash" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -375,7 +375,7 @@
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata comment="" connector="FLOW" label="metadata" name="newRow">
+    <metadata comment="" label="metadata" name="newRow">
       <column comment="" key="false" length="-1" name="hash" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -391,7 +391,7 @@
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="orgRow" id="_lh22gM-1Eeib9oVpaXTd6w - metadata">
         <mapperTableEntries name="hash" expression="row9.hash " type="id_String"/>
@@ -421,7 +421,7 @@
         <mapperTableEntries name="productName" expression="row15.productName" type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" expression="row15.amount.replace(&quot;,&quot;, &quot;&quot;).replace(&quot;(&quot;, &quot;-&quot;).replace(&quot;)&quot;, &quot;&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" expression="row15.quantity" type="id_String"/>
-        <mapperTableEntries name="date" expression="TalendDate.formatDate(&quot;dd/MM/yy&quot;, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.date, &quot;&quot;))) " type="id_String"/>
+        <mapperTableEntries name="date" expression="TalendDate.formatDate(&quot;dd/MM/yy&quot;, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.date, context.getBATCH_DATE()))) " type="id_String"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row15" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="hash" type="id_String"/>
