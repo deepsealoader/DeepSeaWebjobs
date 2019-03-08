@@ -1,5 +1,6 @@
 package routines;
 
+import java.util.Date;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
@@ -111,10 +112,30 @@ public class Clean
 			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyyMMdd", date));
 		}
 		else if(checkDateFormat(date, DatePattern4)) {
-			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yyyy", date));
+			if(defaultDate == null) {
+				return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yyyy", date));
+			} else {
+				Date date1 = TalendDate.parseDate("yyyy-MM-dd", defaultDate);
+				Date date2 = TalendDate.parseDate("MM/dd/yyyy", date);
+				if(TalendDate.getPartOfDate("MONTH", date1) == TalendDate.getPartOfDate("MONTH", date2) && TalendDate.getPartOfDate("YEAR", date1) == TalendDate.getPartOfDate("YEAR", date2)) {
+					return TalendDate.formatDate("yyyy-MM-dd", date2);
+				} else {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("dd/MM/yyyy", date));
+				}
+			}
 		}
 		else if(checkDateFormat(date, DatePattern5)) {
-			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yy", date));
+			if(defaultDate == null) {
+				return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yy", date));
+			} else {
+				Date date1 = TalendDate.parseDate("yyyy-MM-dd", defaultDate);
+				Date date2 = TalendDate.parseDate("MM/dd/yy", date);
+				if(TalendDate.getPartOfDate("MONTH", date1) == TalendDate.getPartOfDate("MONTH", date2) && TalendDate.getPartOfDate("YEAR", date1) == TalendDate.getPartOfDate("YEAR", date2)) {
+					return TalendDate.formatDate("yyyy-MM-dd", date2);
+				} else {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("dd/MM/yy", date));
+				}
+			}
 		}
 		else if(checkDateFormat(date, DatePattern6)) {
 			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyMM", date));
