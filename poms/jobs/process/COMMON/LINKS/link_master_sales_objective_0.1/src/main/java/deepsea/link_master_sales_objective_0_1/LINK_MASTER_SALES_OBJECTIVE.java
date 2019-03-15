@@ -188,6 +188,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(DEFAULT_DATE_FORMAT != null){
+				
+					this.setProperty("DEFAULT_DATE_FORMAT", DEFAULT_DATE_FORMAT.toString());
+				
+			}
+			
 			if(MONGODB_HOSTNAME != null){
 				
 					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
@@ -251,6 +257,10 @@ public String getDEEPSEA_AUTH_TOKEN(){
 public String DEEPSEA_HOSTNAME;
 public String getDEEPSEA_HOSTNAME(){
 	return this.DEEPSEA_HOSTNAME;
+}
+public String DEFAULT_DATE_FORMAT;
+public String getDEFAULT_DATE_FORMAT(){
+	return this.DEFAULT_DATE_FORMAT;
 }
 public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
@@ -1761,10 +1771,10 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 					return this.market;
 				}
 				
-			    public String sourceCode;
+			    public String sourceChannelCode;
 
-				public String getSourceCode () {
-					return this.sourceCode;
+				public String getSourceChannelCode () {
+					return this.sourceChannelCode;
 				}
 				
 			    public String geographyCode;
@@ -1834,7 +1844,7 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 					
 					this.market = readString(dis);
 					
-					this.sourceCode = readString(dis);
+					this.sourceChannelCode = readString(dis);
 					
 					this.geographyCode = readString(dis);
 					
@@ -1888,7 +1898,7 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 					
 					// String
 				
-						writeString(this.sourceCode,dos);
+						writeString(this.sourceChannelCode,dos);
 					
 					// String
 				
@@ -1918,7 +1928,7 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		sb.append(",productCode="+productCode);
 		sb.append(",businessKey1="+businessKey1);
 		sb.append(",market="+market);
-		sb.append(",sourceCode="+sourceCode);
+		sb.append(",sourceChannelCode="+sourceChannelCode);
 		sb.append(",geographyCode="+geographyCode);
 		sb.append(",customerCode="+customerCode);
 	    sb.append("]");
@@ -3992,7 +4002,7 @@ if(row7 != null) {
     row4.productCode = row5.productCode;  
     row4.businessKey1 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", context.getBUSINESS_KEY1());
     row4.market = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "market");
-    row4.sourceCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "sourceCode");
+    row4.sourceChannelCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "sourceChannelCode");
     row4.geographyCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "geographyCode");
     row4.customerCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "customerCode");
     nb_line_tExtractFields_1++;
@@ -4081,7 +4091,7 @@ row13 = null;
 row13_tmp.id = row4.id ;
 row13_tmp.source = context.getSOURCE2();
 row13_tmp.businessKey1 = context.getBUSINESS_KEY1().equals("productCode") ? row4.productCode : row4.businessKey1 ;
-row13_tmp.businessKey2 = TalendString.unionString("*", TalendDate.formatDate("yyyyMMdd", TalendDate.parseDate("M/d/y", row4.fiscalStartDate)), row4.productCode, row4.market, row4.sourceCode, row4.geographyCode, row4.customerCode) ;
+row13_tmp.businessKey2 = TalendString.unionString("*", TalendDate.formatDate("yyyyMMdd", TalendDate.parseDate(context.DEFAULT_DATE_FORMAT, row4.fiscalStartDate)), row4.productCode, row4.market, row4.sourceChannelCode, row4.geographyCode, row4.customerCode) ;
 row13_tmp.hash = row4.hash;
 row13 = row13_tmp;
 // ###############################
@@ -4869,6 +4879,9 @@ if(exception2 != null) {
 			parentContextMap_tRunJob_2.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_2.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_2.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_2.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -5160,6 +5173,9 @@ if(exception1 != null) {
 		
 			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_1.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -12618,6 +12634,9 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
 				
                 context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
+				    context.setContextType("DEFAULT_DATE_FORMAT", "id_String");
+				
+                context.DEFAULT_DATE_FORMAT=(String) context.getProperty("DEFAULT_DATE_FORMAT");
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
@@ -12656,6 +12675,8 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
             }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
+            }if (parentContextMap.containsKey("DEFAULT_DATE_FORMAT")) {
+                context.DEFAULT_DATE_FORMAT = (String) parentContextMap.get("DEFAULT_DATE_FORMAT");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
@@ -12969,6 +12990,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     279571 characters generated by Talend Open Studio for Big Data 
- *     on the March 5, 2019 3:16:46 PM ICT
+ *     280628 characters generated by Talend Open Studio for Big Data 
+ *     on the March 15, 2019 11:20:26 AM SGT
  ************************************************************************************************/

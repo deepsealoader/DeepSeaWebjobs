@@ -170,6 +170,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(DEFAULT_DATE_FORMAT != null){
+				
+					this.setProperty("DEFAULT_DATE_FORMAT", DEFAULT_DATE_FORMAT.toString());
+				
+			}
+			
 			if(MONGODB_HOSTNAME != null){
 				
 					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
@@ -221,6 +227,10 @@ public String getDEEPSEA_AUTH_TOKEN(){
 public String DEEPSEA_HOSTNAME;
 public String getDEEPSEA_HOSTNAME(){
 	return this.DEEPSEA_HOSTNAME;
+}
+public String DEFAULT_DATE_FORMAT;
+public String getDEFAULT_DATE_FORMAT(){
+	return this.DEFAULT_DATE_FORMAT;
 }
 public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
@@ -563,6 +573,15 @@ private class TalendException extends Exception {
 					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tSchemaComplianceCheck_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tMap_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -573,15 +592,6 @@ private class TalendException extends Exception {
 			}
 			
 			public void tFlowMeter_13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tMongoDBInput_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tSchemaComplianceCheck_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -5683,526 +5693,6 @@ end_Hash.put("tDBCommit_2", System.currentTimeMillis());
 	
 
 
-public static class row15Struct implements routines.system.IPersistableRow<row15Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
-
-	
-			    public String source;
-
-				public String getSource () {
-					return this.source;
-				}
-				
-			    public String businessKey;
-
-				public String getBusinessKey () {
-					return this.businessKey;
-				}
-				
-			    public String hash;
-
-				public String getHash () {
-					return this.hash;
-				}
-				
-			    public String errorCode;
-
-				public String getErrorCode () {
-					return this.errorCode;
-				}
-				
-			    public String errorMessage;
-
-				public String getErrorMessage () {
-					return this.errorMessage;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length == 0) {
-   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.source = readString(dis);
-					
-					this.businessKey = readString(dis);
-					
-					this.hash = readString(dis);
-					
-					this.errorCode = readString(dis);
-					
-					this.errorMessage = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.source,dos);
-					
-					// String
-				
-						writeString(this.businessKey,dos);
-					
-					// String
-				
-						writeString(this.hash,dos);
-					
-					// String
-				
-						writeString(this.errorCode,dos);
-					
-					// String
-				
-						writeString(this.errorMessage,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("source="+source);
-		sb.append(",businessKey="+businessKey);
-		sb.append(",hash="+hash);
-		sb.append(",errorCode="+errorCode);
-		sb.append(",errorMessage="+errorMessage);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row15Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
-public static class row10Struct implements routines.system.IPersistableRow<row10Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
-
-	
-			    public String source;
-
-				public String getSource () {
-					return this.source;
-				}
-				
-			    public String businessKey;
-
-				public String getBusinessKey () {
-					return this.businessKey;
-				}
-				
-			    public String hash;
-
-				public String getHash () {
-					return this.hash;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length == 0) {
-   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.source = readString(dis);
-					
-					this.businessKey = readString(dis);
-					
-					this.hash = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.source,dos);
-					
-					// String
-				
-						writeString(this.businessKey,dos);
-					
-					// String
-				
-						writeString(this.hash,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("source="+source);
-		sb.append(",businessKey="+businessKey);
-		sb.append(",hash="+hash);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row10Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
-public static class exception1Struct implements routines.system.IPersistableRow<exception1Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
-
-	
-			    public String source;
-
-				public String getSource () {
-					return this.source;
-				}
-				
-			    public String businessKey;
-
-				public String getBusinessKey () {
-					return this.businessKey;
-				}
-				
-			    public String hash;
-
-				public String getHash () {
-					return this.hash;
-				}
-				
-			    public String errorCode;
-
-				public String getErrorCode () {
-					return this.errorCode;
-				}
-				
-			    public String errorMessage;
-
-				public String getErrorMessage () {
-					return this.errorMessage;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length == 0) {
-   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.source = readString(dis);
-					
-					this.businessKey = readString(dis);
-					
-					this.hash = readString(dis);
-					
-					this.errorCode = readString(dis);
-					
-					this.errorMessage = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.source,dos);
-					
-					// String
-				
-						writeString(this.businessKey,dos);
-					
-					// String
-				
-						writeString(this.hash,dos);
-					
-					// String
-				
-						writeString(this.errorCode,dos);
-					
-					// String
-				
-						writeString(this.errorMessage,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("source="+source);
-		sb.append(",businessKey="+businessKey);
-		sb.append(",hash="+hash);
-		sb.append(",errorCode="+errorCode);
-		sb.append(",errorMessage="+errorMessage);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(exception1Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-
 public static class row5Struct implements routines.system.IPersistableRow<row5Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
     static byte[] commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
@@ -6515,7 +6005,189 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 
 }
 
-public static class row9Struct implements routines.system.IPersistableRow<row9Struct> {
+public static class row15Struct implements routines.system.IPersistableRow<row15Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
+
+	
+			    public String source;
+
+				public String getSource () {
+					return this.source;
+				}
+				
+			    public String businessKey;
+
+				public String getBusinessKey () {
+					return this.businessKey;
+				}
+				
+			    public String hash;
+
+				public String getHash () {
+					return this.hash;
+				}
+				
+			    public String errorCode;
+
+				public String getErrorCode () {
+					return this.errorCode;
+				}
+				
+			    public String errorMessage;
+
+				public String getErrorMessage () {
+					return this.errorMessage;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length == 0) {
+   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.source = readString(dis);
+					
+					this.businessKey = readString(dis);
+					
+					this.hash = readString(dis);
+					
+					this.errorCode = readString(dis);
+					
+					this.errorMessage = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.source,dos);
+					
+					// String
+				
+						writeString(this.businessKey,dos);
+					
+					// String
+				
+						writeString(this.hash,dos);
+					
+					// String
+				
+						writeString(this.errorCode,dos);
+					
+					// String
+				
+						writeString(this.errorMessage,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("source="+source);
+		sb.append(",businessKey="+businessKey);
+		sb.append(",hash="+hash);
+		sb.append(",errorCode="+errorCode);
+		sb.append(",errorMessage="+errorMessage);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row15Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class row14Struct implements routines.system.IPersistableRow<row14Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
     static byte[] commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
 
@@ -6544,10 +6216,10 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					return this.market;
 				}
 				
-			    public String sourceCode;
+			    public String sourceChannelCode;
 
-				public String getSourceCode () {
-					return this.sourceCode;
+				public String getSourceChannelCode () {
+					return this.sourceChannelCode;
 				}
 				
 			    public String geographyCode;
@@ -6611,7 +6283,7 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					this.market = readString(dis);
 					
-					this.sourceCode = readString(dis);
+					this.sourceChannelCode = readString(dis);
 					
 					this.geographyCode = readString(dis);
 					
@@ -6653,7 +6325,7 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					// String
 				
-						writeString(this.sourceCode,dos);
+						writeString(this.sourceChannelCode,dos);
 					
 					// String
 				
@@ -6680,7 +6352,449 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 		sb.append(",fiscalStartDate="+fiscalStartDate);
 		sb.append(",productCode="+productCode);
 		sb.append(",market="+market);
-		sb.append(",sourceCode="+sourceCode);
+		sb.append(",sourceChannelCode="+sourceChannelCode);
+		sb.append(",geographyCode="+geographyCode);
+		sb.append(",customerCode="+customerCode);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row14Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class exception1Struct implements routines.system.IPersistableRow<exception1Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
+
+	
+			    public String hash;
+
+				public String getHash () {
+					return this.hash;
+				}
+				
+			    public String fiscalStartDate;
+
+				public String getFiscalStartDate () {
+					return this.fiscalStartDate;
+				}
+				
+			    public String productCode;
+
+				public String getProductCode () {
+					return this.productCode;
+				}
+				
+			    public String market;
+
+				public String getMarket () {
+					return this.market;
+				}
+				
+			    public String sourceChannelCode;
+
+				public String getSourceChannelCode () {
+					return this.sourceChannelCode;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
+			    public String customerCode;
+
+				public String getCustomerCode () {
+					return this.customerCode;
+				}
+				
+			    public String errorCode;
+
+				public String getErrorCode () {
+					return this.errorCode;
+				}
+				
+			    public String errorMessage;
+
+				public String getErrorMessage () {
+					return this.errorMessage;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length == 0) {
+   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.hash = readString(dis);
+					
+					this.fiscalStartDate = readString(dis);
+					
+					this.productCode = readString(dis);
+					
+					this.market = readString(dis);
+					
+					this.sourceChannelCode = readString(dis);
+					
+					this.geographyCode = readString(dis);
+					
+					this.customerCode = readString(dis);
+					
+					this.errorCode = readString(dis);
+					
+					this.errorMessage = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.hash,dos);
+					
+					// String
+				
+						writeString(this.fiscalStartDate,dos);
+					
+					// String
+				
+						writeString(this.productCode,dos);
+					
+					// String
+				
+						writeString(this.market,dos);
+					
+					// String
+				
+						writeString(this.sourceChannelCode,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
+					
+					// String
+				
+						writeString(this.customerCode,dos);
+					
+					// String
+				
+						writeString(this.errorCode,dos);
+					
+					// String
+				
+						writeString(this.errorMessage,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("hash="+hash);
+		sb.append(",fiscalStartDate="+fiscalStartDate);
+		sb.append(",productCode="+productCode);
+		sb.append(",market="+market);
+		sb.append(",sourceChannelCode="+sourceChannelCode);
+		sb.append(",geographyCode="+geographyCode);
+		sb.append(",customerCode="+customerCode);
+		sb.append(",errorCode="+errorCode);
+		sb.append(",errorMessage="+errorMessage);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(exception1Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class row9Struct implements routines.system.IPersistableRow<row9Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[0];
+
+	
+			    public String hash;
+
+				public String getHash () {
+					return this.hash;
+				}
+				
+			    public String fiscalStartDate;
+
+				public String getFiscalStartDate () {
+					return this.fiscalStartDate;
+				}
+				
+			    public String productCode;
+
+				public String getProductCode () {
+					return this.productCode;
+				}
+				
+			    public String market;
+
+				public String getMarket () {
+					return this.market;
+				}
+				
+			    public String sourceChannelCode;
+
+				public String getSourceChannelCode () {
+					return this.sourceChannelCode;
+				}
+				
+			    public String geographyCode;
+
+				public String getGeographyCode () {
+					return this.geographyCode;
+				}
+				
+			    public String customerCode;
+
+				public String getCustomerCode () {
+					return this.customerCode;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES.length == 0) {
+   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_HUB_MASTER_SALES_OBJECTIVES) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.hash = readString(dis);
+					
+					this.fiscalStartDate = readString(dis);
+					
+					this.productCode = readString(dis);
+					
+					this.market = readString(dis);
+					
+					this.sourceChannelCode = readString(dis);
+					
+					this.geographyCode = readString(dis);
+					
+					this.customerCode = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.hash,dos);
+					
+					// String
+				
+						writeString(this.fiscalStartDate,dos);
+					
+					// String
+				
+						writeString(this.productCode,dos);
+					
+					// String
+				
+						writeString(this.market,dos);
+					
+					// String
+				
+						writeString(this.sourceChannelCode,dos);
+					
+					// String
+				
+						writeString(this.geographyCode,dos);
+					
+					// String
+				
+						writeString(this.customerCode,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("hash="+hash);
+		sb.append(",fiscalStartDate="+fiscalStartDate);
+		sb.append(",productCode="+productCode);
+		sb.append(",market="+market);
+		sb.append(",sourceChannelCode="+sourceChannelCode);
 		sb.append(",geographyCode="+geographyCode);
 		sb.append(",customerCode="+customerCode);
 	    sb.append("]");
@@ -7490,9 +7604,9 @@ public void tMongoDBInput_1Process(final java.util.Map<String, Object> globalMap
 row7Struct row7 = new row7Struct();
 row7Struct row13 = row7;
 row9Struct row9 = new row9Struct();
+row14Struct row14 = new row14Struct();
 row11Struct row11 = new row11Struct();
 row11Struct row5 = row11;
-row10Struct row10 = new row10Struct();
 exception1Struct exception1 = new exception1Struct();
 row15Struct row15 = new row15Struct();
 
@@ -7524,7 +7638,7 @@ row15Struct row15 = new row15Struct();
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row10" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row5" + iterateId, 0, 0);
 					
 				}
 			} 
@@ -7591,6 +7705,131 @@ int count_tDBOutput_2=0;
 
 /**
  * [tDBOutput_2 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFlowMeter_13 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFlowMeter_13", false);
+		start_Hash.put("tFlowMeter_13", System.currentTimeMillis());
+		
+	
+	currentComponent="tFlowMeter_13";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row11" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tFlowMeter_13 = 0;
+		
+    	class BytesLimit65535_tFlowMeter_13{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFlowMeter_13().limitLog4jByte();
+
+    int count_tFlowMeter_13 = 0; 
+ 
+
+
+
+/**
+ * [tFlowMeter_13 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tMap_3 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tMap_3", false);
+		start_Hash.put("tMap_3", System.currentTimeMillis());
+		
+	
+	currentComponent="tMap_3";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row14" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tMap_3 = 0;
+		
+    	class BytesLimit65535_tMap_3{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tMap_3().limitLog4jByte();
+
+
+
+
+// ###############################
+// # Lookup's keys initialization
+// ###############################        
+
+// ###############################
+// # Vars initialization
+class  Var__tMap_3__Struct  {
+}
+Var__tMap_3__Struct Var__tMap_3 = new Var__tMap_3__Struct();
+// ###############################
+
+// ###############################
+// # Outputs initialization
+row11Struct row11_tmp = new row11Struct();
+// ###############################
+
+        
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+/**
+ * [tMap_3 begin ] stop
  */
 
 
@@ -7690,40 +7929,40 @@ int count_tDBOutput_2=0;
 
 	
 	/**
-	 * [tSchemaComplianceCheck_1 begin ] start
+	 * [tSchemaComplianceCheck_2 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tSchemaComplianceCheck_1", false);
-		start_Hash.put("tSchemaComplianceCheck_1", System.currentTimeMillis());
+		ok_Hash.put("tSchemaComplianceCheck_2", false);
+		start_Hash.put("tSchemaComplianceCheck_2", System.currentTimeMillis());
 		
 	
-	currentComponent="tSchemaComplianceCheck_1";
+	currentComponent="tSchemaComplianceCheck_2";
 
 	
 			if (execStat) {
 				if(resourceMap.get("inIterateVComp") == null){
 					
-						runStat.updateStatOnConnection("row5" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
 					
 				}
 			} 
 
 		
-		int tos_count_tSchemaComplianceCheck_1 = 0;
+		int tos_count_tSchemaComplianceCheck_2 = 0;
 		
-    	class BytesLimit65535_tSchemaComplianceCheck_1{
+    	class BytesLimit65535_tSchemaComplianceCheck_2{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tSchemaComplianceCheck_1().limitLog4jByte();
+        new BytesLimit65535_tSchemaComplianceCheck_2().limitLog4jByte();
 
-	class RowSetValueUtil_tSchemaComplianceCheck_1 {
+	class RowSetValueUtil_tSchemaComplianceCheck_2 {
 
 		boolean ifPassedThrough = true;
 		int errorCodeThrough = 0;
@@ -7802,57 +8041,17 @@ int count_tDBOutput_2=0;
 			errorMessage = "";
 		}
 
-		void setRowValue_0(row11Struct row5) {
+		void setRowValue_0(row9Struct row9) {
 	// validate nullable (empty as null)
-	if ((row5.source == null) || ("".equals(row5.source))) {
+	if ((row9.hash == null) || ("".equals(row9.hash))) {
 		ifPassedThrough = false;
 		errorCodeThrough += 4;
 		errorMessageThrough += "|empty or null";
 	}	try {
 		if(
-		row5.source != null
+		row9.hash != null
 		) {
-			String tester_tSchemaComplianceCheck_1 = String.valueOf(row5.source);
-		}
-	} catch(java.lang.Exception e) {
-		ifPassedThrough = false;
-		errorCodeThrough += 2;
-		errorMessageThrough += "|wrong type";
-	}
-			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
-			errorCodeThrough = 0;
-			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"source:");
-			errorMessageThrough = "";
-	// validate nullable (empty as null)
-	if ((row5.businessKey == null) || ("".equals(row5.businessKey))) {
-		ifPassedThrough = false;
-		errorCodeThrough += 4;
-		errorMessageThrough += "|empty or null";
-	}	try {
-		if(
-		row5.businessKey != null
-		) {
-			String tester_tSchemaComplianceCheck_1 = String.valueOf(row5.businessKey);
-		}
-	} catch(java.lang.Exception e) {
-		ifPassedThrough = false;
-		errorCodeThrough += 2;
-		errorMessageThrough += "|wrong type";
-	}
-			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
-			errorCodeThrough = 0;
-			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"businessKey:");
-			errorMessageThrough = "";
-	// validate nullable (empty as null)
-	if ((row5.hash == null) || ("".equals(row5.hash))) {
-		ifPassedThrough = false;
-		errorCodeThrough += 4;
-		errorMessageThrough += "|empty or null";
-	}	try {
-		if(
-		row5.hash != null
-		) {
-			String tester_tSchemaComplianceCheck_1 = String.valueOf(row5.hash);
+			String tester_tSchemaComplianceCheck_2 = String.valueOf(row9.hash);
 		}
 	} catch(java.lang.Exception e) {
 		ifPassedThrough = false;
@@ -7863,141 +8062,126 @@ int count_tDBOutput_2=0;
 			errorCodeThrough = 0;
 			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"hash:");
 			errorMessageThrough = "";
+	// validate nullable (empty as null)
+	if ((row9.fiscalStartDate == null) || ("".equals(row9.fiscalStartDate))) {
+		ifPassedThrough = false;
+		errorCodeThrough += 4;
+		errorMessageThrough += "|empty or null";
+	}	try {
+		if(
+		row9.fiscalStartDate != null
+		) {
+			String tester_tSchemaComplianceCheck_2 = String.valueOf(row9.fiscalStartDate);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"fiscalStartDate:");
+			errorMessageThrough = "";
+	// validate nullable (empty as null)
+	if ((row9.productCode == null) || ("".equals(row9.productCode))) {
+		ifPassedThrough = false;
+		errorCodeThrough += 4;
+		errorMessageThrough += "|empty or null";
+	}	try {
+		if(
+		row9.productCode != null
+		) {
+			String tester_tSchemaComplianceCheck_2 = String.valueOf(row9.productCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"productCode:");
+			errorMessageThrough = "";
+	// validate nullable (empty as null)
+	if ((row9.market == null) || ("".equals(row9.market))) {
+		ifPassedThrough = false;
+		errorCodeThrough += 4;
+		errorMessageThrough += "|empty or null";
+	}	try {
+		if(
+		row9.market != null
+		) {
+			String tester_tSchemaComplianceCheck_2 = String.valueOf(row9.market);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"market:");
+			errorMessageThrough = "";
+	// validate nullable (empty as null)
+	if ((row9.sourceChannelCode == null) || ("".equals(row9.sourceChannelCode))) {
+		ifPassedThrough = false;
+		errorCodeThrough += 4;
+		errorMessageThrough += "|empty or null";
+	}	try {
+		if(
+		row9.sourceChannelCode != null
+		) {
+			String tester_tSchemaComplianceCheck_2 = String.valueOf(row9.sourceChannelCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"sourceChannelCode:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.geographyCode != null
+		&& (!"".equals(row9.geographyCode))
+		) {
+			String tester_tSchemaComplianceCheck_2 = String.valueOf(row9.geographyCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"geographyCode:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.customerCode != null
+		&& (!"".equals(row9.customerCode))
+		) {
+			String tester_tSchemaComplianceCheck_2 = String.valueOf(row9.customerCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"customerCode:");
+			errorMessageThrough = "";
 		}
 	}
-	RowSetValueUtil_tSchemaComplianceCheck_1 rsvUtil_tSchemaComplianceCheck_1 = new RowSetValueUtil_tSchemaComplianceCheck_1();
+	RowSetValueUtil_tSchemaComplianceCheck_2 rsvUtil_tSchemaComplianceCheck_2 = new RowSetValueUtil_tSchemaComplianceCheck_2();
 
  
 
 
 
 /**
- * [tSchemaComplianceCheck_1 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tFlowMeter_13 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tFlowMeter_13", false);
-		start_Hash.put("tFlowMeter_13", System.currentTimeMillis());
-		
-	
-	currentComponent="tFlowMeter_13";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row11" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tFlowMeter_13 = 0;
-		
-    	class BytesLimit65535_tFlowMeter_13{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tFlowMeter_13().limitLog4jByte();
-
-    int count_tFlowMeter_13 = 0; 
- 
-
-
-
-/**
- * [tFlowMeter_13 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tMap_3 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tMap_3", false);
-		start_Hash.put("tMap_3", System.currentTimeMillis());
-		
-	
-	currentComponent="tMap_3";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row9" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tMap_3 = 0;
-		
-    	class BytesLimit65535_tMap_3{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tMap_3().limitLog4jByte();
-
-
-
-
-// ###############################
-// # Lookup's keys initialization
-// ###############################        
-
-// ###############################
-// # Vars initialization
-class  Var__tMap_3__Struct  {
-}
-Var__tMap_3__Struct Var__tMap_3 = new Var__tMap_3__Struct();
-// ###############################
-
-// ###############################
-// # Outputs initialization
-row11Struct row11_tmp = new row11Struct();
-// ###############################
-
-        
-        
-
-
-
-        
-
-
-
-
-
-
-
-
-
- 
-
-
-
-/**
- * [tMap_3 begin ] stop
+ * [tSchemaComplianceCheck_2 begin ] stop
  */
 
 
@@ -8733,7 +8917,7 @@ if(row7 != null) {
     row9.fiscalStartDate = row13.fiscalStartDate;
     row9.productCode = row13.productCode;
     row9.market = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "market");
-    row9.sourceCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "sourceCode");
+    row9.sourceChannelCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "sourceChannelCode");
     row9.geographyCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "geographyCode");
     row9.customerCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "customerCode");
     nb_line_tExtractFields_1++;
@@ -8773,6 +8957,89 @@ if(row9 != null) {
 
 	
 	/**
+	 * [tSchemaComplianceCheck_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSchemaComplianceCheck_2";
+
+	
+
+			//row9
+			//row9
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row9"+iterateId,1, 1);
+				} 
+			
+
+		
+	row14 = null;	exception1 = null;
+	rsvUtil_tSchemaComplianceCheck_2.setRowValue_0(row9);
+	if (rsvUtil_tSchemaComplianceCheck_2.ifPassedThrough) {
+		row14 = new row14Struct();
+		row14.hash = row9.hash;
+		row14.fiscalStartDate = row9.fiscalStartDate;
+		row14.productCode = row9.productCode;
+		row14.market = row9.market;
+		row14.sourceChannelCode = row9.sourceChannelCode;
+		row14.geographyCode = row9.geographyCode;
+		row14.customerCode = row9.customerCode;
+	}
+	if (!rsvUtil_tSchemaComplianceCheck_2.ifPassedThrough) {
+		exception1 = new exception1Struct();
+		exception1.hash = row9.hash;
+		exception1.fiscalStartDate = row9.fiscalStartDate;
+		exception1.productCode = row9.productCode;
+		exception1.market = row9.market;
+		exception1.sourceChannelCode = row9.sourceChannelCode;
+		exception1.geographyCode = row9.geographyCode;
+		exception1.customerCode = row9.customerCode;
+		exception1.errorCode = String.valueOf(rsvUtil_tSchemaComplianceCheck_2.resultErrorCodeThrough);
+		exception1.errorMessage = rsvUtil_tSchemaComplianceCheck_2.resultErrorMessageThrough;
+	}
+	rsvUtil_tSchemaComplianceCheck_2.reset();
+
+ 
+
+
+	tos_count_tSchemaComplianceCheck_2++;
+
+/**
+ * [tSchemaComplianceCheck_2 main ] stop
+ */
+	
+	/**
+	 * [tSchemaComplianceCheck_2 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSchemaComplianceCheck_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tSchemaComplianceCheck_2 process_data_begin ] stop
+ */
+// Start of branch "row14"
+if(row14 != null) { 
+
+
+
+	
+	/**
 	 * [tMap_3 main ] start
 	 */
 
@@ -8784,13 +9051,13 @@ if(row9 != null) {
 
 	
 
-			//row9
-			//row9
+			//row14
+			//row14
 
 
 			
 				if(execStat){
-					runStat.updateStatOnConnection("row9"+iterateId,1, 1);
+					runStat.updateStatOnConnection("row14"+iterateId,1, 1);
 				} 
 			
 
@@ -8819,9 +9086,9 @@ row11 = null;
 
 
 // # Output table : 'row11'
-row11_tmp.source = context.getSOURCE();
-row11_tmp.businessKey = TalendString.unionString("*", TalendDate.formatDate("yyyyMMdd", TalendDate.parseDate("M/d/y", row9.fiscalStartDate)), row9.productCode, row9.market, row9.sourceCode, row9.geographyCode, row9.customerCode) ;
-row11_tmp.hash = row9.hash;
+row11_tmp.source = context.SOURCE ;
+row11_tmp.businessKey = TalendString.unionString("*", TalendDate.formatDate("yyyyMMdd", TalendDate.parseDate(context.DEFAULT_DATE_FORMAT, row14.fiscalStartDate)), row14.productCode, row14.market, row14.sourceChannelCode, row14.geographyCode, row14.customerCode) ;
+row11_tmp.hash = row14.hash;
 row11 = row11_tmp;
 // ###############################
 
@@ -8929,14 +9196,14 @@ if(row11 != null) {
 
 	
 	/**
-	 * [tSchemaComplianceCheck_1 main ] start
+	 * [tDBOutput_2 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tSchemaComplianceCheck_1";
+	currentComponent="tDBOutput_2";
 
 	
 
@@ -8951,98 +9218,23 @@ if(row11 != null) {
 			
 
 		
-	row10 = null;	exception1 = null;
-	rsvUtil_tSchemaComplianceCheck_1.setRowValue_0(row5);
-	if (rsvUtil_tSchemaComplianceCheck_1.ifPassedThrough) {
-		row10 = new row10Struct();
-		row10.source = row5.source;
-		row10.businessKey = row5.businessKey;
-		row10.hash = row5.hash;
-	}
-	if (!rsvUtil_tSchemaComplianceCheck_1.ifPassedThrough) {
-		exception1 = new exception1Struct();
-		exception1.source = row5.source;
-		exception1.businessKey = row5.businessKey;
-		exception1.hash = row5.hash;
-		exception1.errorCode = String.valueOf(rsvUtil_tSchemaComplianceCheck_1.resultErrorCodeThrough);
-		exception1.errorMessage = rsvUtil_tSchemaComplianceCheck_1.resultErrorMessageThrough;
-	}
-	rsvUtil_tSchemaComplianceCheck_1.reset();
-
- 
-
-
-	tos_count_tSchemaComplianceCheck_1++;
-
-/**
- * [tSchemaComplianceCheck_1 main ] stop
- */
-	
-	/**
-	 * [tSchemaComplianceCheck_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSchemaComplianceCheck_1";
-
-	
-
- 
-
-
-
-/**
- * [tSchemaComplianceCheck_1 process_data_begin ] stop
- */
-// Start of branch "row10"
-if(row10 != null) { 
-
-
-
-	
-	/**
-	 * [tDBOutput_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tDBOutput_2";
-
-	
-
-			//row10
-			//row10
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row10"+iterateId,1, 1);
-				} 
-			
-
-		
 
 
 
         whetherReject_tDBOutput_2 = false;
-                    if(row10.source == null) {
+                    if(row5.source == null) {
 pstmt_tDBOutput_2.setNull(1, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_2.setString(1, row10.source);
+} else {pstmt_tDBOutput_2.setString(1, row5.source);
 }
 
-                    if(row10.businessKey == null) {
+                    if(row5.businessKey == null) {
 pstmt_tDBOutput_2.setNull(2, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_2.setString(2, row10.businessKey);
+} else {pstmt_tDBOutput_2.setString(2, row5.businessKey);
 }
 
-                    if(row10.hash == null) {
+                    if(row5.hash == null) {
 pstmt_tDBOutput_2.setNull(3, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_2.setString(3, row10.hash);
+} else {pstmt_tDBOutput_2.setString(3, row5.hash);
 }
 
 			
@@ -9137,7 +9329,56 @@ pstmt_tDBOutput_2.setNull(3, java.sql.Types.VARCHAR);
  * [tDBOutput_2 process_data_end ] stop
  */
 
-} // End of branch "row10"
+
+
+	
+	/**
+	 * [tFlowMeter_13 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_13";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_13 process_data_end ] stop
+ */
+
+} // End of branch "row11"
+
+
+
+
+	
+	/**
+	 * [tMap_3 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tMap_3 process_data_end ] stop
+ */
+
+} // End of branch "row14"
 
 
 
@@ -9173,16 +9414,6 @@ if(exception1 != null) {
 		
 	java.util.List<String> paraList_tRunJob_1 = new java.util.ArrayList<String>();
 	
-								row15.source = exception1.source;
-							
-								row15.businessKey = exception1.businessKey;
-							
-								row15.hash = exception1.hash;
-							
-								row15.errorCode = exception1.errorCode;
-							
-								row15.errorMessage = exception1.errorMessage;
-							
 	        			paraList_tRunJob_1.add("--father_pid="+pid);
 	      			
 	        			paraList_tRunJob_1.add("--root_pid="+rootPid);
@@ -9235,6 +9466,9 @@ if(exception1 != null) {
 		
 			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_1.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -9510,14 +9744,14 @@ if(exception1 != null) {
 
 	
 	/**
-	 * [tSchemaComplianceCheck_1 process_data_end ] start
+	 * [tSchemaComplianceCheck_2 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tSchemaComplianceCheck_1";
+	currentComponent="tSchemaComplianceCheck_2";
 
 	
 
@@ -9526,56 +9760,7 @@ if(exception1 != null) {
 
 
 /**
- * [tSchemaComplianceCheck_1 process_data_end ] stop
- */
-
-
-
-	
-	/**
-	 * [tFlowMeter_13 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFlowMeter_13";
-
-	
-
- 
-
-
-
-/**
- * [tFlowMeter_13 process_data_end ] stop
- */
-
-} // End of branch "row11"
-
-
-
-
-	
-	/**
-	 * [tMap_3 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tMap_3";
-
-	
-
- 
-
-
-
-/**
- * [tMap_3 process_data_end ] stop
+ * [tSchemaComplianceCheck_2 process_data_end ] stop
  */
 
 } // End of branch "row9"
@@ -9821,6 +10006,37 @@ end_Hash.put("tExtractFields_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tSchemaComplianceCheck_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSchemaComplianceCheck_2";
+
+	
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row9"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tSchemaComplianceCheck_2", true);
+end_Hash.put("tSchemaComplianceCheck_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tSchemaComplianceCheck_2 end ] stop
+ */
+
+	
+	/**
 	 * [tMap_3 end ] start
 	 */
 
@@ -9843,7 +10059,7 @@ end_Hash.put("tExtractFields_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row9"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row14"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -9890,37 +10106,6 @@ end_Hash.put("tFlowMeter_13", System.currentTimeMillis());
 
 /**
  * [tFlowMeter_13 end ] stop
- */
-
-	
-	/**
-	 * [tSchemaComplianceCheck_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSchemaComplianceCheck_1";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row5"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tSchemaComplianceCheck_1", true);
-end_Hash.put("tSchemaComplianceCheck_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tSchemaComplianceCheck_1 end ] stop
  */
 
 	
@@ -9994,7 +10179,7 @@ end_Hash.put("tSchemaComplianceCheck_1", System.currentTimeMillis());
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row10"+iterateId,2, 0); 
+			 		runStat.updateStatOnConnection("row5"+iterateId,2, 0); 
 			 	}
 			}
 		
@@ -10013,6 +10198,12 @@ end_Hash.put("tDBOutput_2", System.currentTimeMillis());
 /**
  * [tDBOutput_2 end ] stop
  */
+
+
+
+
+
+
 
 
 
@@ -10078,12 +10269,6 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 /**
  * [tDie_1 end ] stop
  */
-
-
-
-
-
-
 
 
 
@@ -10214,6 +10399,27 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 
 	
 	/**
+	 * [tSchemaComplianceCheck_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSchemaComplianceCheck_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tSchemaComplianceCheck_2 finally ] stop
+ */
+
+	
+	/**
 	 * [tMap_3 finally ] start
 	 */
 
@@ -10256,27 +10462,6 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tSchemaComplianceCheck_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSchemaComplianceCheck_1";
-
-	
-
- 
-
-
-
-/**
- * [tSchemaComplianceCheck_1 finally ] stop
- */
-
-	
-	/**
 	 * [tDBOutput_2 finally ] start
 	 */
 
@@ -10299,6 +10484,12 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 /**
  * [tDBOutput_2 finally ] stop
  */
+
+
+
+
+
+
 
 
 
@@ -10344,12 +10535,6 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 /**
  * [tDie_1 finally ] stop
  */
-
-
-
-
-
-
 
 
 
@@ -13245,6 +13430,9 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
 				
                 context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
+				    context.setContextType("DEFAULT_DATE_FORMAT", "id_String");
+				
+                context.DEFAULT_DATE_FORMAT=(String) context.getProperty("DEFAULT_DATE_FORMAT");
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
@@ -13277,6 +13465,8 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
             }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
+            }if (parentContextMap.containsKey("DEFAULT_DATE_FORMAT")) {
+                context.DEFAULT_DATE_FORMAT = (String) parentContextMap.get("DEFAULT_DATE_FORMAT");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
@@ -13590,6 +13780,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     290823 characters generated by Talend Open Studio for Big Data 
- *     on the March 5, 2019 3:15:44 PM ICT
+ *     296903 characters generated by Talend Open Studio for Big Data 
+ *     on the March 15, 2019 11:20:12 AM SGT
  ************************************************************************************************/

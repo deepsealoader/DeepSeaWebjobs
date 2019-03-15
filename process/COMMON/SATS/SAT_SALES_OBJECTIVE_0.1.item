@@ -9,6 +9,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="&quot;dd/MM/yy&quot;"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
@@ -22,6 +23,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:8080"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value=""/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="MONGODB"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="POSTGRES"/>
@@ -35,6 +37,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:4040"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value=""/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
@@ -414,13 +417,13 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="output_row.fiscalStartDate = input_row.fiscalStartDate;&#xA;output_row.market = input_row.market;&#xA;output_row.sourceChannelCode = input_row.sourceChannelCode;&#xA;output_row.geographyCode = input_row.geographyCode;&#xA;output_row.productCode = input_row.productCode;&#xA;output_row.customerCode = input_row.customerCode;&#xA;output_row.customerName = input_row.customerName;&#xA;output_row.attribute1 = input_row.attribute1;&#xA;output_row.attribute2 = input_row.attribute2;&#xA;output_row.attribute3 = input_row.attribute3;&#xA;output_row.attribute4 = input_row.attribute4;&#xA;output_row.attribute5 = input_row.attribute5;&#xA;output_row.date = TalendDate.parseDate(&quot;M/d/y&quot;, input_row.fiscalStartDate);&#xA;output_row.fields = TalendString.unionString(&quot;|&quot;, &quot;0:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m1, &quot;0&quot;)), &quot;1:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m2, &quot;0&quot;)), &quot;2:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m3, &quot;0&quot;)), &quot;3:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m4, &quot;0&quot;)), &quot;4:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m5, &quot;0&quot;)), &quot;5:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m6, &quot;0&quot;)), &quot;6:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m7, &quot;0&quot;)), &quot;7:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m8, &quot;0&quot;)), &quot;8:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m9, &quot;0&quot;)), &quot;9:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m10, &quot;0&quot;)), &quot;10:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m11, &quot;0&quot;)), &quot;11:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m12, &quot;0&quot;)));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="output_row.fiscalStartDate = TalendDate.parseDate(context.DEFAULT_DATE_FORMAT, input_row.fiscalStartDate);&#xA;output_row.market = input_row.market;&#xA;output_row.sourceChannelCode = input_row.sourceChannelCode;&#xA;output_row.geographyCode = input_row.geographyCode;&#xA;output_row.productCode = input_row.productCode;&#xA;output_row.customerCode = input_row.customerCode;&#xA;output_row.customerName = input_row.customerName;&#xA;output_row.attribute1 = input_row.attribute1;&#xA;output_row.attribute2 = input_row.attribute2;&#xA;output_row.attribute3 = input_row.attribute3;&#xA;output_row.attribute4 = input_row.attribute4;&#xA;output_row.attribute5 = input_row.attribute5;&#xA;output_row.fields = TalendString.unionString(&quot;|&quot;, &quot;0:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m1, &quot;0&quot;)), &quot;1:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m2, &quot;0&quot;)), &quot;2:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m3, &quot;0&quot;)), &quot;3:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m4, &quot;0&quot;)), &quot;4:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m5, &quot;0&quot;)), &quot;5:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m6, &quot;0&quot;)), &quot;6:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m7, &quot;0&quot;)), &quot;7:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m8, &quot;0&quot;)), &quot;8:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m9, &quot;0&quot;)), &quot;9:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m10, &quot;0&quot;)), &quot;10:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m11, &quot;0&quot;)), &quot;11:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m12, &quot;0&quot;)));"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="PrepareNormalize"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tJavaRow_1">
-      <column comment="" key="false" length="0" name="fiscalStartDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="fiscalStartDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="market" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -432,7 +435,6 @@
       <column comment="" key="false" length="0" name="attribute3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute4" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute5" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fields" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
@@ -450,7 +452,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tNormalize_1">
-      <column comment="" key="false" length="0" name="fiscalStartDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="fiscalStartDate" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="market" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -462,7 +464,6 @@
       <column comment="" key="false" length="0" name="attribute3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute4" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute5" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fields" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
@@ -483,12 +484,12 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="row8">
-      <column comment="" key="false" length="0" name="fiscalStartDate" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="market" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="fiscalStartDate" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="market" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="customerName" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="customerName" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute1" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -499,29 +500,29 @@
       <column comment="" key="false" length="-1" name="value" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="month" expression="Integer.valueOf(row15.fields .split(&quot;:&quot;)[0])" type="id_Integer"/>
         <mapperTableEntries name="value" expression="Float.valueOf(row15.fields.split(&quot;:&quot;)[1])" type="id_Float"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="row8">
-        <mapperTableEntries name="fiscalStartDate" expression="row15.fiscalStartDate " type="id_String" nullable="true"/>
-        <mapperTableEntries name="market" expression="row15.market" type="id_String" nullable="true"/>
-        <mapperTableEntries name="sourceChannelCode" expression="row15.sourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fiscalStartDate" expression="row15.fiscalStartDate " type="id_Date"/>
+        <mapperTableEntries name="market" expression="row15.market" type="id_String"/>
+        <mapperTableEntries name="sourceChannelCode" expression="row15.sourceChannelCode" type="id_String"/>
         <mapperTableEntries name="geographyCode" expression="row15.geographyCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" expression="row15.customerCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="customerName" expression="row15.customerName" type="id_String"/>
+        <mapperTableEntries name="customerName" expression="row15.customerName" type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" expression="row15.productCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute1" expression="row15.attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute2" expression="row15.attribute2" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute3" expression="row15.attribute3" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute4" expression="row15.attribute4" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute5" expression="row15.attribute5" type="id_String" nullable="true"/>
-        <mapperTableEntries name="date" expression="TalendDate.addDate(row15.date, Var.month, &quot;MM&quot;)" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="date" expression="TalendDate.addDate(row15.fiscalStartDate , Var.month, &quot;MM&quot;)" type="id_Date" nullable="true"/>
         <mapperTableEntries name="value" expression="Var.value" type="id_Float" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row15" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="fiscalStartDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fiscalStartDate" type="id_Date" nullable="true"/>
         <mapperTableEntries name="market" type="id_String" nullable="true"/>
         <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
@@ -533,7 +534,6 @@
         <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute4" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute5" type="id_String" nullable="true"/>
-        <mapperTableEntries name="date" type="id_Date" nullable="true"/>
         <mapperTableEntries name="fields" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
@@ -557,8 +557,8 @@
     <metadata connector="FLOW" name="copyOfrow8">
       <column comment="" key="false" length="-1" name="hubId" nullable="false" originalDbColumnName="hub_id" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="source" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="market" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="market" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -576,8 +576,8 @@
       <outputTables sizeState="INTERMEDIATE" name="copyOfrow8">
         <mapperTableEntries name="hubId" expression="row13.id " type="id_Integer"/>
         <mapperTableEntries name="source" expression="context.getSOURCE()" type="id_String"/>
-        <mapperTableEntries name="market" expression="row8.market " type="id_String" nullable="true"/>
-        <mapperTableEntries name="sourceChannelCode" expression="row8.sourceChannelCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="market" expression="row8.market " type="id_String"/>
+        <mapperTableEntries name="sourceChannelCode" expression="row8.sourceChannelCode " type="id_String"/>
         <mapperTableEntries name="geographyCode" expression="row8.geographyCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" expression="row8.customerCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" expression="row8.productCode " type="id_String" nullable="true"/>
@@ -590,12 +590,12 @@
         <mapperTableEntries name="attribute5" expression="row8.attribute5 " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row8" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="fiscalStartDate" type="id_String" nullable="true"/>
-        <mapperTableEntries name="market" type="id_String" nullable="true"/>
-        <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fiscalStartDate" type="id_Date"/>
+        <mapperTableEntries name="market" type="id_String"/>
+        <mapperTableEntries name="sourceChannelCode" type="id_String"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="customerName" type="id_String"/>
+        <mapperTableEntries name="customerName" type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
@@ -607,7 +607,7 @@
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row13" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="businessKey" expression="TalendString.unionString(&quot;*&quot;, TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.parseDate(&quot;M/d/y&quot;, row8.fiscalStartDate)), row8.productCode, row8.market, row8.sourceChannelCode, row8.geographyCode, row8.customerCode) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="businessKey" expression="TalendString.unionString(&quot;*&quot;, TalendDate.formatDate(&quot;yyyyMMdd&quot;, row8.fiscalStartDate), row8.productCode, row8.market, row8.sourceChannelCode, row8.geographyCode, row8.customerCode) " type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>

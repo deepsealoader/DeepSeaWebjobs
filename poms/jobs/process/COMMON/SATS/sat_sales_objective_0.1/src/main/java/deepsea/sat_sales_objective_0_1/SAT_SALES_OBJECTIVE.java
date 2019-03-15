@@ -174,6 +174,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(DEFAULT_DATE_FORMAT != null){
+				
+					this.setProperty("DEFAULT_DATE_FORMAT", DEFAULT_DATE_FORMAT.toString());
+				
+			}
+			
 			if(MONGODB_HOSTNAME != null){
 				
 					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
@@ -225,6 +231,10 @@ public String getDEEPSEA_AUTH_TOKEN(){
 public String DEEPSEA_HOSTNAME;
 public String getDEEPSEA_HOSTNAME(){
 	return this.DEEPSEA_HOSTNAME;
+}
+public String DEFAULT_DATE_FORMAT;
+public String getDEFAULT_DATE_FORMAT(){
+	return this.DEFAULT_DATE_FORMAT;
 }
 public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
@@ -2389,9 +2399,9 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
     static byte[] commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
 
 	
-			    public String fiscalStartDate;
+			    public java.util.Date fiscalStartDate;
 
-				public String getFiscalStartDate () {
+				public java.util.Date getFiscalStartDate () {
 					return this.fiscalStartDate;
 				}
 				
@@ -2476,6 +2486,27 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 
 
 
+	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
+		java.util.Date dateReturn = null;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			dateReturn = null;
+		} else {
+	    	dateReturn = new Date(dis.readLong());
+		}
+		return dateReturn;
+	}
+
+    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
+		if(date1 == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeLong(date1.getTime());
+    	}
+    }
+
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
 		int length = 0;
@@ -2506,27 +2537,6 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
     	}
     }
 
-	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
-		java.util.Date dateReturn = null;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			dateReturn = null;
-		} else {
-	    	dateReturn = new Date(dis.readLong());
-		}
-		return dateReturn;
-	}
-
-    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
-		if(date1 == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeLong(date1.getTime());
-    	}
-    }
-
     public void readData(ObjectInputStream dis) {
 
 		synchronized(commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE) {
@@ -2535,7 +2545,7 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 
         		int length = 0;
 		
-					this.fiscalStartDate = readString(dis);
+					this.fiscalStartDate = readDate(dis);
 					
 					this.market = readString(dis);
 					
@@ -2586,9 +2596,9 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
         try {
 
 		
-					// String
+					// java.util.Date
 				
-						writeString(this.fiscalStartDate,dos);
+						writeDate(this.fiscalStartDate,dos);
 					
 					// String
 				
@@ -2660,7 +2670,7 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("fiscalStartDate="+fiscalStartDate);
+		sb.append("fiscalStartDate="+String.valueOf(fiscalStartDate));
 		sb.append(",market="+market);
 		sb.append(",sourceChannelCode="+sourceChannelCode);
 		sb.append(",geographyCode="+geographyCode);
@@ -2719,9 +2729,9 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
     static byte[] commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
 
 	
-			    public String fiscalStartDate;
+			    public java.util.Date fiscalStartDate;
 
-				public String getFiscalStartDate () {
+				public java.util.Date getFiscalStartDate () {
 					return this.fiscalStartDate;
 				}
 				
@@ -2791,12 +2801,6 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
 					return this.attribute5;
 				}
 				
-			    public java.util.Date date;
-
-				public java.util.Date getDate () {
-					return this.date;
-				}
-				
 			    public String fields;
 
 				public String getFields () {
@@ -2805,6 +2809,27 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
 				
 
 
+
+	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
+		java.util.Date dateReturn = null;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			dateReturn = null;
+		} else {
+	    	dateReturn = new Date(dis.readLong());
+		}
+		return dateReturn;
+	}
+
+    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
+		if(date1 == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeLong(date1.getTime());
+    	}
+    }
 
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
@@ -2836,27 +2861,6 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
     	}
     }
 
-	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
-		java.util.Date dateReturn = null;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			dateReturn = null;
-		} else {
-	    	dateReturn = new Date(dis.readLong());
-		}
-		return dateReturn;
-	}
-
-    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
-		if(date1 == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeLong(date1.getTime());
-    	}
-    }
-
     public void readData(ObjectInputStream dis) {
 
 		synchronized(commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE) {
@@ -2865,7 +2869,7 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
 
         		int length = 0;
 		
-					this.fiscalStartDate = readString(dis);
+					this.fiscalStartDate = readDate(dis);
 					
 					this.market = readString(dis);
 					
@@ -2889,8 +2893,6 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
 					
 					this.attribute5 = readString(dis);
 					
-					this.date = readDate(dis);
-					
 					this.fields = readString(dis);
 					
         	} catch (IOException e) {
@@ -2911,9 +2913,9 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
         try {
 
 		
-					// String
+					// java.util.Date
 				
-						writeString(this.fiscalStartDate,dos);
+						writeDate(this.fiscalStartDate,dos);
 					
 					// String
 				
@@ -2959,10 +2961,6 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
 				
 						writeString(this.attribute5,dos);
 					
-					// java.util.Date
-				
-						writeDate(this.date,dos);
-					
 					// String
 				
 						writeString(this.fields,dos);
@@ -2980,7 +2978,7 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("fiscalStartDate="+fiscalStartDate);
+		sb.append("fiscalStartDate="+String.valueOf(fiscalStartDate));
 		sb.append(",market="+market);
 		sb.append(",sourceChannelCode="+sourceChannelCode);
 		sb.append(",geographyCode="+geographyCode);
@@ -2992,7 +2990,6 @@ public static class row15Struct implements routines.system.IPersistableRow<row15
 		sb.append(",attribute3="+attribute3);
 		sb.append(",attribute4="+attribute4);
 		sb.append(",attribute5="+attribute5);
-		sb.append(",date="+String.valueOf(date));
 		sb.append(",fields="+fields);
 	    sb.append("]");
 
@@ -3039,9 +3036,9 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
     static byte[] commonByteArray_DEEPSEA_SAT_SALES_OBJECTIVE = new byte[0];
 
 	
-			    public String fiscalStartDate;
+			    public java.util.Date fiscalStartDate;
 
-				public String getFiscalStartDate () {
+				public java.util.Date getFiscalStartDate () {
 					return this.fiscalStartDate;
 				}
 				
@@ -3111,12 +3108,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 					return this.attribute5;
 				}
 				
-			    public java.util.Date date;
-
-				public java.util.Date getDate () {
-					return this.date;
-				}
-				
 			    public String fields;
 
 				public String getFields () {
@@ -3125,6 +3116,27 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 				
 
 
+
+	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
+		java.util.Date dateReturn = null;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			dateReturn = null;
+		} else {
+	    	dateReturn = new Date(dis.readLong());
+		}
+		return dateReturn;
+	}
+
+    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
+		if(date1 == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeLong(date1.getTime());
+    	}
+    }
 
 	private String readString(ObjectInputStream dis) throws IOException{
 		String strReturn = null;
@@ -3156,27 +3168,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
     	}
     }
 
-	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
-		java.util.Date dateReturn = null;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			dateReturn = null;
-		} else {
-	    	dateReturn = new Date(dis.readLong());
-		}
-		return dateReturn;
-	}
-
-    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
-		if(date1 == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeLong(date1.getTime());
-    	}
-    }
-
     public void readData(ObjectInputStream dis) {
 
 		synchronized(commonByteArrayLock_DEEPSEA_SAT_SALES_OBJECTIVE) {
@@ -3185,7 +3176,7 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 
         		int length = 0;
 		
-					this.fiscalStartDate = readString(dis);
+					this.fiscalStartDate = readDate(dis);
 					
 					this.market = readString(dis);
 					
@@ -3209,8 +3200,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 					
 					this.attribute5 = readString(dis);
 					
-					this.date = readDate(dis);
-					
 					this.fields = readString(dis);
 					
         	} catch (IOException e) {
@@ -3231,9 +3220,9 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
         try {
 
 		
-					// String
+					// java.util.Date
 				
-						writeString(this.fiscalStartDate,dos);
+						writeDate(this.fiscalStartDate,dos);
 					
 					// String
 				
@@ -3279,10 +3268,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 				
 						writeString(this.attribute5,dos);
 					
-					// java.util.Date
-				
-						writeDate(this.date,dos);
-					
 					// String
 				
 						writeString(this.fields,dos);
@@ -3300,7 +3285,7 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("fiscalStartDate="+fiscalStartDate);
+		sb.append("fiscalStartDate="+String.valueOf(fiscalStartDate));
 		sb.append(",market="+market);
 		sb.append(",sourceChannelCode="+sourceChannelCode);
 		sb.append(",geographyCode="+geographyCode);
@@ -3312,7 +3297,6 @@ public static class row4Struct implements routines.system.IPersistableRow<row4St
 		sb.append(",attribute3="+attribute3);
 		sb.append(",attribute4="+attribute4);
 		sb.append(",attribute5="+attribute5);
-		sb.append(",date="+String.valueOf(date));
 		sb.append(",fields="+fields);
 	    sb.append("]");
 
@@ -6155,7 +6139,7 @@ if(row3 != null) {
 
 		
 
-    row4.fiscalStartDate = row3.fiscalStartDate;
+    row4.fiscalStartDate = TalendDate.parseDate(context.DEFAULT_DATE_FORMAT, row3.fiscalStartDate);
 row4.market = row3.market;
 row4.sourceChannelCode = row3.sourceChannelCode;
 row4.geographyCode = row3.geographyCode;
@@ -6167,7 +6151,6 @@ row4.attribute2 = row3.attribute2;
 row4.attribute3 = row3.attribute3;
 row4.attribute4 = row3.attribute4;
 row4.attribute5 = row3.attribute5;
-row4.date = TalendDate.parseDate("M/d/y", row3.fiscalStartDate);
 row4.fields = TalendString.unionString("|", "0:" + Clean.cleanNumber(Clean.cleanString(row3.m1, "0")), "1:" + Clean.cleanNumber(Clean.cleanString(row3.m2, "0")), "2:" + Clean.cleanNumber(Clean.cleanString(row3.m3, "0")), "3:" + Clean.cleanNumber(Clean.cleanString(row3.m4, "0")), "4:" + Clean.cleanNumber(Clean.cleanString(row3.m5, "0")), "5:" + Clean.cleanNumber(Clean.cleanString(row3.m6, "0")), "6:" + Clean.cleanNumber(Clean.cleanString(row3.m7, "0")), "7:" + Clean.cleanNumber(Clean.cleanString(row3.m8, "0")), "8:" + Clean.cleanNumber(Clean.cleanString(row3.m9, "0")), "9:" + Clean.cleanNumber(Clean.cleanString(row3.m10, "0")), "10:" + Clean.cleanNumber(Clean.cleanString(row3.m11, "0")), "11:" + Clean.cleanNumber(Clean.cleanString(row3.m12, "0")));
     nb_line_tJavaRow_1++;   
 
@@ -6267,8 +6250,6 @@ row4.fields = TalendString.unionString("|", "0:" + Clean.cleanNumber(Clean.clean
 	                        
 	                        	row15.attribute5 = row4.attribute5;
 	                        
-	                        	row15.date = row4.date;
-	                        
 	                        	row15.fields = normalizeRecord_tNormalize_1[i_tNormalize_1];
 		                    
 
@@ -6363,7 +6344,7 @@ row8_tmp.attribute2 = row15.attribute2;
 row8_tmp.attribute3 = row15.attribute3;
 row8_tmp.attribute4 = row15.attribute4;
 row8_tmp.attribute5 = row15.attribute5;
-row8_tmp.date = TalendDate.addDate(row15.date, Var.month, "MM");
+row8_tmp.date = TalendDate.addDate(row15.fiscalStartDate , Var.month, "MM");
 row8_tmp.value = Var.value;
 row8 = row8_tmp;
 // ###############################
@@ -6468,7 +6449,7 @@ if(row8 != null) {
 								
 								hasCasePrimitiveKeyWithNull_tMap_3 = false;
 								
-                        		    		row13HashKey.businessKey = TalendString.unionString("*", TalendDate.formatDate("yyyyMMdd", TalendDate.parseDate("M/d/y", row8.fiscalStartDate)), row8.productCode, row8.market, row8.sourceChannelCode, row8.geographyCode, row8.customerCode) ;
+                        		    		row13HashKey.businessKey = TalendString.unionString("*", TalendDate.formatDate("yyyyMMdd", row8.fiscalStartDate), row8.productCode, row8.market, row8.sourceChannelCode, row8.geographyCode, row8.customerCode) ;
                         		    		
 
 								
@@ -7143,6 +7124,9 @@ if(exception1 != null) {
 		
 			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_1.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -14312,6 +14296,9 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
 				
                 context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
+				    context.setContextType("DEFAULT_DATE_FORMAT", "id_String");
+				
+                context.DEFAULT_DATE_FORMAT=(String) context.getProperty("DEFAULT_DATE_FORMAT");
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
@@ -14344,6 +14331,8 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
                 context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
             }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
+            }if (parentContextMap.containsKey("DEFAULT_DATE_FORMAT")) {
+                context.DEFAULT_DATE_FORMAT = (String) parentContextMap.get("DEFAULT_DATE_FORMAT");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
@@ -14657,6 +14646,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     317930 characters generated by Talend Open Studio for Big Data 
- *     on the March 5, 2019 3:16:17 PM ICT
+ *     318171 characters generated by Talend Open Studio for Big Data 
+ *     on the March 15, 2019 11:20:19 AM SGT
  ************************************************************************************************/

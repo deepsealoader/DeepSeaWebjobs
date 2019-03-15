@@ -12,6 +12,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="&quot;dd/MM/yy&quot;"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
@@ -28,6 +29,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:8080"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value=""/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="MONGODB"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="POSTGRES"/>
@@ -44,6 +46,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:4040"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value=""/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
@@ -362,8 +365,8 @@
       <elementValue elementRef="KEY_VALUE" value="context.getBUSINESS_KEY1()"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
       <elementValue elementRef="KEY_VALUE" value="&quot;market&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="sourceCode"/>
-      <elementValue elementRef="KEY_VALUE" value="&quot;sourceCode&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sourceChannelCode"/>
+      <elementValue elementRef="KEY_VALUE" value="&quot;sourceChannelCode&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="geographyCode"/>
       <elementValue elementRef="KEY_VALUE" value="&quot;geographyCode&quot;"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="customerCode"/>
@@ -380,7 +383,7 @@
       <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="businessKey1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="market" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="sourceCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -409,13 +412,13 @@
       <column comment="" key="false" length="-1" name="hash" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row13">
         <mapperTableEntries name="id" expression="row4.id " type="id_String" nullable="true"/>
         <mapperTableEntries name="source" expression="context.getSOURCE2()" type="id_String" nullable="true"/>
         <mapperTableEntries name="businessKey1" expression="context.getBUSINESS_KEY1().equals(&quot;productCode&quot;) ? row4.productCode : row4.businessKey1 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="businessKey2" expression="TalendString.unionString(&quot;*&quot;, TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.parseDate(&quot;M/d/y&quot;, row4.fiscalStartDate)), row4.productCode, row4.market, row4.sourceCode, row4.geographyCode, row4.customerCode) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="businessKey2" expression="TalendString.unionString(&quot;*&quot;, TalendDate.formatDate(&quot;yyyyMMdd&quot;, TalendDate.parseDate(context.DEFAULT_DATE_FORMAT, row4.fiscalStartDate)), row4.productCode, row4.market, row4.sourceChannelCode, row4.geographyCode, row4.customerCode) " type="id_String" nullable="true"/>
         <mapperTableEntries name="hash" expression="row4.hash" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -426,7 +429,7 @@
         <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="businessKey1" type="id_String" nullable="true"/>
         <mapperTableEntries name="market" type="id_String" nullable="true"/>
-        <mapperTableEntries name="sourceCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
       </inputTables>
