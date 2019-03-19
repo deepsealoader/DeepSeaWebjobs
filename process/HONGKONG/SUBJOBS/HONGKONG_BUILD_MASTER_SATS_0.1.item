@@ -318,6 +318,10 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;hongkong.master.salesobjectiveqty.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales_objective_qty&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="QUOTA_TYPE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Quantity&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -342,6 +346,10 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;hongkong.master.salesobjectiveval.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales_objective_val&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="QUOTA_TYPE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Value&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>

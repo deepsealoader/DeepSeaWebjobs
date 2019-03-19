@@ -146,6 +146,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(DEFAULT_DATE_FORMAT != null){
+				
+					this.setProperty("DEFAULT_DATE_FORMAT", DEFAULT_DATE_FORMAT.toString());
+				
+			}
+			
 			if(MONGODB_HOSTNAME != null){
 				
 					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
@@ -181,6 +187,10 @@ public String getDEEPSEA_AUTH_TOKEN(){
 public String DEEPSEA_HOSTNAME;
 public String getDEEPSEA_HOSTNAME(){
 	return this.DEEPSEA_HOSTNAME;
+}
+public String DEFAULT_DATE_FORMAT;
+public String getDEFAULT_DATE_FORMAT(){
+	return this.DEFAULT_DATE_FORMAT;
 }
 public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
@@ -664,6 +674,9 @@ public void tRunJob_19Process(final java.util.Map<String, Object> globalMap) thr
 			parentContextMap_tRunJob_19.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_19.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_19.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_19.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_19.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_19.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -689,7 +702,7 @@ public void tRunJob_19Process(final java.util.Map<String, Object> globalMap) thr
 	Object obj_tRunJob_19 = null;
 
 	
-		obj_tRunJob_19 = "DKHS";
+		obj_tRunJob_19 = "DKSH";
 		if(obj_tRunJob_19!=null) {
 			paraList_tRunJob_19.add("--context_param SHEET_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_19));
 		} else {
@@ -707,7 +720,7 @@ public void tRunJob_19Process(final java.util.Map<String, Object> globalMap) thr
 		
 		parentContextMap_tRunJob_19.put("SOURCE1", obj_tRunJob_19);
 	
-		obj_tRunJob_19 = "thailand.master.producthierarchy.dkhs";
+		obj_tRunJob_19 = "thailand.master.producthierarchy.dksh";
 		if(obj_tRunJob_19!=null) {
 			paraList_tRunJob_19.add("--context_param SOURCE2=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_19));
 		} else {
@@ -1036,6 +1049,9 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_1.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_1.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -1419,6 +1435,9 @@ public void tRunJob_15Process(final java.util.Map<String, Object> globalMap) thr
 			parentContextMap_tRunJob_15.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_15.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_15.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_15.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_15.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_15.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -1800,6 +1819,9 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_2.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_2.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_2.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_2.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -2183,6 +2205,9 @@ public void tRunJob_5Process(final java.util.Map<String, Object> globalMap) thro
 			parentContextMap_tRunJob_5.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_5.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_5.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_5.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_5.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_5.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -2564,6 +2589,9 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_3.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_3.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_3.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_3.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_3.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_3.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -2947,6 +2975,9 @@ public void tRunJob_16Process(final java.util.Map<String, Object> globalMap) thr
 			parentContextMap_tRunJob_16.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_16.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_16.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_16.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_16.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_16.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -2972,7 +3003,7 @@ public void tRunJob_16Process(final java.util.Map<String, Object> globalMap) thr
 	Object obj_tRunJob_16 = null;
 
 	
-		obj_tRunJob_16 = "DKHS";
+		obj_tRunJob_16 = "DKSH";
 		if(obj_tRunJob_16!=null) {
 			paraList_tRunJob_16.add("--context_param SHEET_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_16));
 		} else {
@@ -2990,7 +3021,7 @@ public void tRunJob_16Process(final java.util.Map<String, Object> globalMap) thr
 		
 		parentContextMap_tRunJob_16.put("SOURCE1", obj_tRunJob_16);
 	
-		obj_tRunJob_16 = "thailand.master.customer.dkhs";
+		obj_tRunJob_16 = "thailand.master.customer.dksh";
 		if(obj_tRunJob_16!=null) {
 			paraList_tRunJob_16.add("--context_param SOURCE2=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_16));
 		} else {
@@ -3329,6 +3360,9 @@ public void tRunJob_17Process(final java.util.Map<String, Object> globalMap) thr
 			parentContextMap_tRunJob_17.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_17.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_17.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_17.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_17.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_17.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -3354,7 +3388,7 @@ public void tRunJob_17Process(final java.util.Map<String, Object> globalMap) thr
 	Object obj_tRunJob_17 = null;
 
 	
-		obj_tRunJob_17 = "DKHS";
+		obj_tRunJob_17 = "DKSH";
 		if(obj_tRunJob_17!=null) {
 			paraList_tRunJob_17.add("--context_param SHEET_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_17));
 		} else {
@@ -3363,7 +3397,7 @@ public void tRunJob_17Process(final java.util.Map<String, Object> globalMap) thr
 		
 		parentContextMap_tRunJob_17.put("SHEET_NAME", obj_tRunJob_17);
 	
-		obj_tRunJob_17 = "thailand.master.customer.dkhs";
+		obj_tRunJob_17 = "thailand.master.customer.dksh";
 		if(obj_tRunJob_17!=null) {
 			paraList_tRunJob_17.add("--context_param SOURCE=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_17));
 		} else {
@@ -3657,6 +3691,9 @@ public void tRunJob_18Process(final java.util.Map<String, Object> globalMap) thr
 			parentContextMap_tRunJob_18.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_18.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_18.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_18.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_18.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_18.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -3682,7 +3719,7 @@ public void tRunJob_18Process(final java.util.Map<String, Object> globalMap) thr
 	Object obj_tRunJob_18 = null;
 
 	
-		obj_tRunJob_18 = "DKHS";
+		obj_tRunJob_18 = "DKSH";
 		if(obj_tRunJob_18!=null) {
 			paraList_tRunJob_18.add("--context_param SHEET_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_18));
 		} else {
@@ -3700,7 +3737,7 @@ public void tRunJob_18Process(final java.util.Map<String, Object> globalMap) thr
 		
 		parentContextMap_tRunJob_18.put("SOURCE1", obj_tRunJob_18);
 	
-		obj_tRunJob_18 = "thailand.master.customer.dkhs";
+		obj_tRunJob_18 = "thailand.master.customer.dksh";
 		if(obj_tRunJob_18!=null) {
 			paraList_tRunJob_18.add("--context_param SOURCE2=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_18));
 		} else {
@@ -4038,6 +4075,9 @@ public void tRunJob_7Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_7.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_7.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_7.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_7.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_7.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_7.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -4412,6 +4452,9 @@ public void tRunJob_8Process(final java.util.Map<String, Object> globalMap) thro
 			parentContextMap_tRunJob_8.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_8.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_8.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_8.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_8.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_8.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -4784,6 +4827,9 @@ public void tRunJob_9Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_9.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_9.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_9.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_9.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_9.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_9.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -5158,6 +5204,9 @@ public void tRunJob_10Process(final java.util.Map<String, Object> globalMap) thr
 			parentContextMap_tRunJob_10.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_10.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_10.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_10.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_10.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_10.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -5531,6 +5580,9 @@ public void tRunJob_11Process(final java.util.Map<String, Object> globalMap) thr
 			parentContextMap_tRunJob_11.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_11.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_11.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_11.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_11.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_11.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -5902,6 +5954,9 @@ public void tRunJob_12Process(final java.util.Map<String, Object> globalMap) thr
 		
 			parentContextMap_tRunJob_12.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_12.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_12.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_12.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
 		
 			parentContextMap_tRunJob_12.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_12.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
@@ -6317,6 +6372,9 @@ end_Hash.put("tRunJob_12", System.currentTimeMillis());
 				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
 				
                 context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
+				    context.setContextType("DEFAULT_DATE_FORMAT", "id_String");
+				
+                context.DEFAULT_DATE_FORMAT=(String) context.getProperty("DEFAULT_DATE_FORMAT");
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
@@ -6341,6 +6399,8 @@ end_Hash.put("tRunJob_12", System.currentTimeMillis());
                 context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
             }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
+            }if (parentContextMap.containsKey("DEFAULT_DATE_FORMAT")) {
+                context.DEFAULT_DATE_FORMAT = (String) parentContextMap.get("DEFAULT_DATE_FORMAT");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
@@ -6624,6 +6684,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     199503 characters generated by Talend Open Studio for Big Data 
- *     on the March 15, 2019 11:20:30 AM SGT
+ *     202865 characters generated by Talend Open Studio for Big Data 
+ *     on the March 19, 2019 1:07:55 PM SGT
  ************************************************************************************************/

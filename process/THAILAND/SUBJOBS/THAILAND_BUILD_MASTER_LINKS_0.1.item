@@ -5,6 +5,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="&quot;dd/MM/yy&quot;"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="deepsea_thailand"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
@@ -14,6 +15,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost:8080"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="&quot;dd/MM/yy&quot;"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MONGODB"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="deepsea_thailand"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="POSTGRES"/>
@@ -23,6 +25,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost:4040"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="&quot;dd/MM/yy&quot;"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="deepsea_thailand"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
@@ -551,11 +554,11 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;DKHS&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;DKSH&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.geographyhierarchy.servier&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.dkhs&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.dksh&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TYPE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Customer&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
@@ -570,7 +573,7 @@
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="LINK_GEOGRAPHY_CUSTOMER_DKHS"/>
+    <elementParameter field="TEXT" name="LABEL" value="LINK_GEOGRAPHY_CUSTOMER_DKSH"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_16"/>
@@ -589,14 +592,14 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;DKHS&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;DKSH&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.dkhs&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.dksh&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="CHECK_GEOGRAPHY_CUSTOMER_LINK_DKHS"/>
+    <elementParameter field="TEXT" name="LABEL" value="CHECK_GEOGRAPHY_CUSTOMER_LINK_DKSH"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_17"/>
@@ -615,11 +618,11 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;DKHS&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;DKSH&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.sourcechannel.servier&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.dkhs&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.dksh&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TYPE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Customer&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
@@ -634,7 +637,7 @@
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="LINK_SOURCE_CHANNEL_CUSTOMER_DKHS"/>
+    <elementParameter field="TEXT" name="LABEL" value="LINK_SOURCE_CHANNEL_CUSTOMER_DKSH"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_18"/>
@@ -653,11 +656,11 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;DKHS&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;DKSH&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.producthierarchy.servier&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.producthierarchy.dkhs&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.producthierarchy.dksh&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TYPE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ProductHierarchy&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
@@ -670,7 +673,7 @@
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="SAL_PRODUCT_DKHS"/>
+    <elementParameter field="TEXT" name="LABEL" value="SAL_PRODUCT_DKSH"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_19"/>

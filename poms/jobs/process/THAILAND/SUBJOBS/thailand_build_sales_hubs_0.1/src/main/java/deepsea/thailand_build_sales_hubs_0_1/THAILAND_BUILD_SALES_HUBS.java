@@ -122,6 +122,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 
 		public void synchronizeContext(){
 			
+			if(WEBJOB_NAME != null){
+				
+					this.setProperty("WEBJOB_NAME", WEBJOB_NAME.toString());
+				
+			}
+			
 			if(COUNTRY != null){
 				
 					this.setProperty("COUNTRY", COUNTRY.toString());
@@ -137,6 +143,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 			if(DEEPSEA_HOSTNAME != null){
 				
 					this.setProperty("DEEPSEA_HOSTNAME", DEEPSEA_HOSTNAME.toString());
+				
+			}
+			
+			if(DEFAULT_DATE_FORMAT != null){
+				
+					this.setProperty("DEFAULT_DATE_FORMAT", DEFAULT_DATE_FORMAT.toString());
 				
 			}
 			
@@ -158,14 +170,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(WEBJOB_NAME != null){
-				
-					this.setProperty("WEBJOB_NAME", WEBJOB_NAME.toString());
-				
-			}
-			
 		}
 
+public String WEBJOB_NAME;
+public String getWEBJOB_NAME(){
+	return this.WEBJOB_NAME;
+}
 public String COUNTRY;
 public String getCOUNTRY(){
 	return this.COUNTRY;
@@ -178,6 +188,10 @@ public String DEEPSEA_HOSTNAME;
 public String getDEEPSEA_HOSTNAME(){
 	return this.DEEPSEA_HOSTNAME;
 }
+public String DEFAULT_DATE_FORMAT;
+public String getDEFAULT_DATE_FORMAT(){
+	return this.DEFAULT_DATE_FORMAT;
+}
 public String MONGODB_HOSTNAME;
 public String getMONGODB_HOSTNAME(){
 	return this.MONGODB_HOSTNAME;
@@ -189,10 +203,6 @@ public String getPOSTGRES_DATABASE(){
 public String POSTGRES_HOSTNAME;
 public String getPOSTGRES_HOSTNAME(){
 	return this.POSTGRES_HOSTNAME;
-}
-public String WEBJOB_NAME;
-public String getWEBJOB_NAME(){
-	return this.WEBJOB_NAME;
 }
 	}
 	private ContextProperties context = new ContextProperties();
@@ -455,6 +465,9 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 		
 		context.synchronizeContext();
 		
+			parentContextMap_tRunJob_2.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_2.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_2.put("COUNTRY", context.COUNTRY);
 			paraList_tRunJob_2.add("--context_type " + "COUNTRY" + "=" + "id_String");
 		
@@ -464,6 +477,9 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 			parentContextMap_tRunJob_2.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
 		
+			parentContextMap_tRunJob_2.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_2.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
 			parentContextMap_tRunJob_2.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
 		
@@ -472,9 +488,6 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 		
 			parentContextMap_tRunJob_2.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
 			paraList_tRunJob_2.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("WEBJOB_NAME", context.WEBJOB_NAME);
-			paraList_tRunJob_2.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
 		 
 		java.util.Enumeration<?> propertyNames_tRunJob_2 = context.propertyNames();
 		while (propertyNames_tRunJob_2.hasMoreElements()) {
@@ -492,7 +505,7 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 	Object obj_tRunJob_2 = null;
 
 	
-		obj_tRunJob_2 = "sales.dkhs.monthly";
+		obj_tRunJob_2 = "sales.dksh.monthly";
 		if(obj_tRunJob_2!=null) {
 			paraList_tRunJob_2.add("--context_param COLLECTION=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
 		} else {
@@ -501,7 +514,7 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 		
 		parentContextMap_tRunJob_2.put("COLLECTION", obj_tRunJob_2);
 	
-		obj_tRunJob_2 = "thailand.sales.dkhs.monthly";
+		obj_tRunJob_2 = "thailand.sales.dksh.monthly";
 		if(obj_tRunJob_2!=null) {
 			paraList_tRunJob_2.add("--context_param SOURCE=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
 		} else {
@@ -824,6 +837,9 @@ end_Hash.put("tRunJob_2", System.currentTimeMillis());
 
 				}
             }
+				    context.setContextType("WEBJOB_NAME", "id_String");
+				
+                context.WEBJOB_NAME=(String) context.getProperty("WEBJOB_NAME");
 				    context.setContextType("COUNTRY", "id_String");
 				
                 context.COUNTRY=(String) context.getProperty("COUNTRY");
@@ -833,6 +849,9 @@ end_Hash.put("tRunJob_2", System.currentTimeMillis());
 				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
 				
                 context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
+				    context.setContextType("DEFAULT_DATE_FORMAT", "id_String");
+				
+                context.DEFAULT_DATE_FORMAT=(String) context.getProperty("DEFAULT_DATE_FORMAT");
 				    context.setContextType("MONGODB_HOSTNAME", "id_String");
 				
                 context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
@@ -842,9 +861,6 @@ end_Hash.put("tRunJob_2", System.currentTimeMillis());
 				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
 				
                 context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
-				    context.setContextType("WEBJOB_NAME", "id_String");
-				
-                context.WEBJOB_NAME=(String) context.getProperty("WEBJOB_NAME");
         } catch (java.io.IOException ie) {
             System.err.println("Could not load context "+contextStr);
             ie.printStackTrace();
@@ -852,20 +868,22 @@ end_Hash.put("tRunJob_2", System.currentTimeMillis());
 
 
         // get context value from parent directly
-        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("COUNTRY")) {
+        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("WEBJOB_NAME")) {
+                context.WEBJOB_NAME = (String) parentContextMap.get("WEBJOB_NAME");
+            }if (parentContextMap.containsKey("COUNTRY")) {
                 context.COUNTRY = (String) parentContextMap.get("COUNTRY");
             }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
                 context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
             }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
                 context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
+            }if (parentContextMap.containsKey("DEFAULT_DATE_FORMAT")) {
+                context.DEFAULT_DATE_FORMAT = (String) parentContextMap.get("DEFAULT_DATE_FORMAT");
             }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
                 context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
             }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
                 context.POSTGRES_DATABASE = (String) parentContextMap.get("POSTGRES_DATABASE");
             }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
                 context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
-            }if (parentContextMap.containsKey("WEBJOB_NAME")) {
-                context.WEBJOB_NAME = (String) parentContextMap.get("WEBJOB_NAME");
             }
         }
 
@@ -1143,6 +1161,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     36316 characters generated by Talend Open Studio for Big Data 
- *     on the March 15, 2019 11:04:42 AM SGT
+ *     37100 characters generated by Talend Open Studio for Big Data 
+ *     on the March 19, 2019 12:19:25 PM SGT
  ************************************************************************************************/

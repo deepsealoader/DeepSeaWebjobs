@@ -16,7 +16,7 @@
     <contextParameter xmi:id="_1Qv75MoQEeiFhKycUBX9rg" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic b21icmUuamF1bmVAc2Vydmllci5jb206b21icmUuamF1bmU="/>
     <contextParameter xmi:id="_1Qv75coQEeiFhKycUBX9rg" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Taiwan"/>
     <contextParameter xmi:id="_oc1AMRY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_taiwan"/>
-    <contextParameter xmi:id="_nUXXYUbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_nUXXYUbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="&quot;dd/MM/yy&quot;"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_VmfBgL73EeiwTrrgdMnqWg" confirmationNeeded="false" name="Production">
     <contextParameter xmi:id="_VmfBgb73EeiwTrrgdMnqWg" comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="MONGODB"/>
@@ -25,6 +25,6 @@
     <contextParameter xmi:id="_duSgkcbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic b21icmUuamF1bmVAc2Vydmllci5jb206b21icmUuamF1bmU="/>
     <contextParameter xmi:id="_adoGccbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Taiwan"/>
     <contextParameter xmi:id="_oc1AMhY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_taiwan"/>
-    <contextParameter xmi:id="_nUXXYkbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_nUXXYkbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="&quot;dd/MM/yy&quot;"/>
   </talendfile:ContextType>
 </xmi:XMI>

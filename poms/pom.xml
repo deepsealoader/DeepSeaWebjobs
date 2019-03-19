@@ -72,7 +72,6 @@
     <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_sales_hubs_0.1</module>
     <module>jobs/process/THAILAND/JOBS/thailand_build_master_vault_0.1</module>
     <module>jobs/process/THAILAND/JOBS/thailand_build_sales_vault_0.1</module>
-    <module>jobs/process/THAILAND/JOBS/thailand_sales_dkhs_daily_to_monthly_0.1</module>
     <module>jobs/process/THAILAND/SUBJOBS/thailand_build_master_hubs_0.1</module>
     <module>jobs/process/THAILAND/SUBJOBS/thailand_build_master_links_0.1</module>
     <module>jobs/process/THAILAND/SUBJOBS/thailand_build_master_sats_0.1</module>
@@ -90,6 +89,7 @@
     <module>jobs/process/TAIWAN/JOBS/taiwan_build_master_vault_0.1</module>
     <module>jobs/process/TAIWAN/JOBS/taiwan_build_sales_vault_0.1</module>
     <module>jobs/process/TAIWAN/JOBS/taiwan_sales_zuellig_daily_to_monthly_0.1</module>
+    <module>jobs/process/THAILAND/JOBS/thailand_sales_dksh_daily_to_monthly_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>
