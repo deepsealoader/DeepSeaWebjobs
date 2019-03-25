@@ -209,6 +209,7 @@
 			<outputDirectory>${talend.job.name}</outputDirectory>
 			<includes>
 				<include>org.example.deepsea.job:dSendException</include>
+				<include>org.example.deepsea.job:LINK_MASTER_WITH_MULTIPLE_WITHOUT_HUB</include>
 				<include>org.example.deepsea.job:LINK_MASTER_WITH_MULTIPLE</include>
 				<include>org.example.deepsea.job:LINK_MASTER_WITH_EMPTY</include>
 				<include>org.example.deepsea.job:CHECK_GEOGRAPHY_CUSTOMER_LINK</include>
