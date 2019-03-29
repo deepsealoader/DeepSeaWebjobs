@@ -363,7 +363,7 @@
     <elementParameter field="TEXT" name="LABEL" value="DifferentiateRows"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata comment="" connector="FLOW" label="metadata" name="orgRow">
+    <metadata comment="" label="metadata" name="orgRow">
       <column comment="" key="false" length="-1" name="hash" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -378,7 +378,7 @@
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata comment="" connector="FLOW" label="metadata" name="newRow">
+    <metadata comment="" label="metadata" name="newRow">
       <column comment="" key="false" length="-1" name="hash" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -394,9 +394,9 @@
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="orgRow" id="_lh22gM-1Eeib9oVpaXTd6w - metadata">
+      <outputTables sizeState="INTERMEDIATE" name="orgRow" expressionFilter="!row9.productCode.startsWith(&quot;5&quot;)" activateExpressionFilter="true" id="_lh22gM-1Eeib9oVpaXTd6w - metadata">
         <mapperTableEntries name="hash" expression="row9.hash " type="id_String"/>
         <mapperTableEntries name="num" expression="row9.num " type="id_Long"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
@@ -411,7 +411,7 @@
         <mapperTableEntries name="quantity" expression="row9.quantity " type="id_String"/>
         <mapperTableEntries name="date" expression="row9.date " type="id_String"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="newRow" id="_lh22gM-1Eeib9oVpaXTd6w - metadata" rejectInnerJoin="true">
+      <outputTables sizeState="INTERMEDIATE" name="newRow" expressionFilter="!row15.productCode.startsWith(&quot;5&quot;)" activateExpressionFilter="true" id="_lh22gM-1Eeib9oVpaXTd6w - metadata" rejectInnerJoin="true">
         <mapperTableEntries name="hash" expression="row15.hash" type="id_String"/>
         <mapperTableEntries name="num" expression="row15.num " type="id_Long"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>

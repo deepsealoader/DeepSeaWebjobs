@@ -221,8 +221,6 @@
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="WEBJOB_NAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.getWEBJOB_NAME()"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="COLLECTION"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales.dksh.monthly&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
@@ -248,11 +246,54 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_6"/>
   </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="LINK_SALES"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_KfrPUM_FEeib9oVpaXTd6w"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="COLLECTION"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales.dksh.monthly&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.sourcechannel.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.sales.dksh.monthly&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="EXCEPTION_IF_NO_LINK"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="true"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="FORCE_UPDATE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="false"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;customerType&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;source_channel&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="LINK_SOURCE_CHANNEL_SALES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_1"/>
+  </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_4" offsetLabelX="0" offsetLabelY="0" source="tRunJob_4" target="tRunJob_5">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_5" offsetLabelX="0" offsetLabelY="0" source="tRunJob_5" target="tRunJob_6">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_6" offsetLabelX="0" offsetLabelY="0" source="tRunJob_6" target="tRunJob_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
@@ -266,6 +307,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
