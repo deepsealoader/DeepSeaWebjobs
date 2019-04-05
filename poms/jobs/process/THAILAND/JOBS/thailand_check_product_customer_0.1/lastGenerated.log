@@ -1,0 +1,41 @@
+[WARNING] Disabling enhanced local repository: using legacy is strongly discouraged to ensure build reproducibility.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building DEEPSEA THAILAND_CHECK_PRODUCT_CUSTOMER-0.1.0 (0.1,Job Designs) 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ THAILAND_CHECK_PRODUCT_CUSTOMER ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ THAILAND_CHECK_PRODUCT_CUSTOMER ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ THAILAND_CHECK_PRODUCT_CUSTOMER ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ THAILAND_CHECK_PRODUCT_CUSTOMER ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.20:test (default-test) @ THAILAND_CHECK_PRODUCT_CUSTOMER ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ THAILAND_CHECK_PRODUCT_CUSTOMER ---
+[INFO] Building jar: C:\Users\RRU_SG1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\THAILAND\JOBS\thailand_check_product_customer_0.1\target\thailand_check_product_customer_0_1.jar
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.0.0:single (default) @ THAILAND_CHECK_PRODUCT_CUSTOMER ---
+[INFO] Reading assembly descriptor: C:\Users\RRU_SG1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\THAILAND\JOBS\thailand_check_product_customer_0.1/src/main/assemblies/assembly.xml
+[WARNING] The following patterns were never triggered in this artifact inclusion filter:
+o  'null:null'
+
+[INFO] Building zip: C:\Users\RRU_SG1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\THAILAND\JOBS\thailand_check_product_customer_0.1\target\thailand_check_product_customer_0_1.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.444 s
+[INFO] Finished at: 2019-04-03T16:53:53+08:00
+[INFO] Final Memory: 13M/160M
+[INFO] ------------------------------------------------------------------------

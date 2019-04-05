@@ -643,10 +643,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="fields"/>
       <elementValue elementRef="PARENT_NODE_PATH" value=""/>
     </elementParameter>
-    <elementParameter field="TABLE" name="SORT">
-      <elementValue elementRef="COLNAME" value="&quot;num&quot;"/>
-      <elementValue elementRef="ORDER" value="asc"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="SORT"/>
     <elementParameter field="TEXT" name="LIMIT" value=""/>
     <elementParameter field="CHECK" name="QUERYOPTION_NOTIMEOUT" value="false" show="false"/>
     <elementParameter field="CHECK" name="EXTERNAL_SORT_AGGREGATION" value="false" show="false"/>
@@ -773,7 +770,6 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tConvertType_1">
-      <column comment="" key="false" length="-1" name="hash" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -788,7 +784,6 @@
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
-      <column comment="" key="false" length="-1" name="hash" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -837,7 +832,7 @@
       <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row8">
         <mapperTableEntries name="hubId" expression="row5.id " type="id_Integer"/>
@@ -855,7 +850,6 @@
         <mapperTableEntries name="date" expression="row2.date " type="id_Date"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="hash" type="id_String"/>
         <mapperTableEntries name="num" type="id_Long"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="locality" type="id_String" nullable="true"/>

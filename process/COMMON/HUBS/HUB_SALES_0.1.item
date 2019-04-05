@@ -818,10 +818,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="num"/>
       <elementValue elementRef="PARENT_NODE_PATH" value=""/>
     </elementParameter>
-    <elementParameter field="TABLE" name="SORT">
-      <elementValue elementRef="COLNAME" value="&quot;num&quot;"/>
-      <elementValue elementRef="ORDER" value="asc"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="SORT"/>
     <elementParameter field="TEXT" name="LIMIT" value=""/>
     <elementParameter field="CHECK" name="QUERYOPTION_NOTIMEOUT" value="false" show="false"/>
     <elementParameter field="CHECK" name="EXTERNAL_SORT_AGGREGATION" value="false" show="false"/>
