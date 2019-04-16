@@ -142,6 +142,7 @@
     <routinesParameter id="_HdEsMK6jEeiC2aJINdmZJQ" name="TalendDate"/>
     <routinesParameter id="_HcwjIK6jEeiC2aJINdmZJQ" name="TalendStringUtil"/>
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
+    <routinesParameter id="_48LqMCmnEemf_-JpfaxcDQ" name="Clean"/>
   </parameters>
   <node componentName="tMongoDBConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="-64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMongoDBConnection_1" show="false"/>
@@ -781,7 +782,7 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="metadata" name="REJECT">
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
@@ -795,7 +796,7 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -847,7 +848,7 @@
         <mapperTableEntries name="productName" expression="row2.productName " type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" expression="row2.amount " type="id_Float" nullable="true"/>
         <mapperTableEntries name="quantity" expression="row2.quantity " type="id_Float"/>
-        <mapperTableEntries name="date" expression="row2.date " type="id_Date"/>
+        <mapperTableEntries name="date" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row2.date, null)) " type="id_Date"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="num" type="id_Long"/>
@@ -861,7 +862,7 @@
         <mapperTableEntries name="productName" type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" type="id_Float" nullable="true"/>
         <mapperTableEntries name="quantity" type="id_Float"/>
-        <mapperTableEntries name="date" type="id_Date"/>
+        <mapperTableEntries name="date" type="id_String"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="id" type="id_Integer" nullable="true"/>
