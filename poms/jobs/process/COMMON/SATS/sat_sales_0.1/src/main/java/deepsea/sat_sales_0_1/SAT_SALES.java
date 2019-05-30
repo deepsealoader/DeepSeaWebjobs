@@ -5554,6 +5554,60 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 					return this.date;
 				}
 				
+			    public Float unitPrice;
+
+				public Float getUnitPrice () {
+					return this.unitPrice;
+				}
+				
+			    public String marketCode;
+
+				public String getMarketCode () {
+					return this.marketCode;
+				}
+				
+			    public String marketName;
+
+				public String getMarketName () {
+					return this.marketName;
+				}
+				
+			    public String transactionType;
+
+				public String getTransactionType () {
+					return this.transactionType;
+				}
+				
+			    public String invoiceNumber;
+
+				public String getInvoiceNumber () {
+					return this.invoiceNumber;
+				}
+				
+			    public Integer invoiceLineNumber;
+
+				public Integer getInvoiceLineNumber () {
+					return this.invoiceLineNumber;
+				}
+				
+			    public String vendorBatchNumber;
+
+				public String getVendorBatchNumber () {
+					return this.vendorBatchNumber;
+				}
+				
+			    public java.util.Date expiryDate;
+
+				public java.util.Date getExpiryDate () {
+					return this.expiryDate;
+				}
+				
+			    public String creditReasonCode;
+
+				public String getCreditReasonCode () {
+					return this.creditReasonCode;
+				}
+				
 
 
 
@@ -5607,6 +5661,26 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 	    	dos.writeLong(date1.getTime());
     	}
     }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
 
     public void readData(ObjectInputStream dis) {
 
@@ -5646,6 +5720,29 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 			        this.quantity = dis.readFloat();
 					
 					this.date = readDate(dis);
+					
+			            length = dis.readByte();
+           				if (length == -1) {
+           	    			this.unitPrice = null;
+           				} else {
+           			    	this.unitPrice = dis.readFloat();
+           				}
+					
+					this.marketCode = readString(dis);
+					
+					this.marketName = readString(dis);
+					
+					this.transactionType = readString(dis);
+					
+					this.invoiceNumber = readString(dis);
+					
+						this.invoiceLineNumber = readInteger(dis);
+					
+					this.vendorBatchNumber = readString(dis);
+					
+					this.expiryDate = readDate(dis);
+					
+					this.creditReasonCode = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -5722,6 +5819,47 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 				
 						writeDate(this.date,dos);
 					
+					// Float
+				
+						if(this.unitPrice == null) {
+			                dos.writeByte(-1);
+						} else {
+               				dos.writeByte(0);
+           			    	dos.writeFloat(this.unitPrice);
+		            	}
+					
+					// String
+				
+						writeString(this.marketCode,dos);
+					
+					// String
+				
+						writeString(this.marketName,dos);
+					
+					// String
+				
+						writeString(this.transactionType,dos);
+					
+					// String
+				
+						writeString(this.invoiceNumber,dos);
+					
+					// Integer
+				
+						writeInteger(this.invoiceLineNumber,dos);
+					
+					// String
+				
+						writeString(this.vendorBatchNumber,dos);
+					
+					// java.util.Date
+				
+						writeDate(this.expiryDate,dos);
+					
+					// String
+				
+						writeString(this.creditReasonCode,dos);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -5748,6 +5886,15 @@ public static class row14Struct implements routines.system.IPersistableRow<row14
 		sb.append(",amount="+String.valueOf(amount));
 		sb.append(",quantity="+String.valueOf(quantity));
 		sb.append(",date="+String.valueOf(date));
+		sb.append(",unitPrice="+String.valueOf(unitPrice));
+		sb.append(",marketCode="+marketCode);
+		sb.append(",marketName="+marketName);
+		sb.append(",transactionType="+transactionType);
+		sb.append(",invoiceNumber="+invoiceNumber);
+		sb.append(",invoiceLineNumber="+String.valueOf(invoiceLineNumber));
+		sb.append(",vendorBatchNumber="+vendorBatchNumber);
+		sb.append(",expiryDate="+String.valueOf(expiryDate));
+		sb.append(",creditReasonCode="+creditReasonCode);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -5871,6 +6018,60 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 					return this.date;
 				}
 				
+			    public Float unitPrice;
+
+				public Float getUnitPrice () {
+					return this.unitPrice;
+				}
+				
+			    public String marketCode;
+
+				public String getMarketCode () {
+					return this.marketCode;
+				}
+				
+			    public String marketName;
+
+				public String getMarketName () {
+					return this.marketName;
+				}
+				
+			    public String transactionType;
+
+				public String getTransactionType () {
+					return this.transactionType;
+				}
+				
+			    public String invoiceNumber;
+
+				public String getInvoiceNumber () {
+					return this.invoiceNumber;
+				}
+				
+			    public Integer invoiceLineNumber;
+
+				public Integer getInvoiceLineNumber () {
+					return this.invoiceLineNumber;
+				}
+				
+			    public String vendorBatchNumber;
+
+				public String getVendorBatchNumber () {
+					return this.vendorBatchNumber;
+				}
+				
+			    public java.util.Date expiryDate;
+
+				public java.util.Date getExpiryDate () {
+					return this.expiryDate;
+				}
+				
+			    public String creditReasonCode;
+
+				public String getCreditReasonCode () {
+					return this.creditReasonCode;
+				}
+				
 			    public String errorCode;
 
 				public String getErrorCode () {
@@ -5936,6 +6137,26 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 	    	dos.writeLong(date1.getTime());
     	}
     }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
 
     public void readData(ObjectInputStream dis) {
 
@@ -5975,6 +6196,29 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 			        this.quantity = dis.readFloat();
 					
 					this.date = readDate(dis);
+					
+			            length = dis.readByte();
+           				if (length == -1) {
+           	    			this.unitPrice = null;
+           				} else {
+           			    	this.unitPrice = dis.readFloat();
+           				}
+					
+					this.marketCode = readString(dis);
+					
+					this.marketName = readString(dis);
+					
+					this.transactionType = readString(dis);
+					
+					this.invoiceNumber = readString(dis);
+					
+						this.invoiceLineNumber = readInteger(dis);
+					
+					this.vendorBatchNumber = readString(dis);
+					
+					this.expiryDate = readDate(dis);
+					
+					this.creditReasonCode = readString(dis);
 					
 					this.errorCode = readString(dis);
 					
@@ -6055,6 +6299,47 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 				
 						writeDate(this.date,dos);
 					
+					// Float
+				
+						if(this.unitPrice == null) {
+			                dos.writeByte(-1);
+						} else {
+               				dos.writeByte(0);
+           			    	dos.writeFloat(this.unitPrice);
+		            	}
+					
+					// String
+				
+						writeString(this.marketCode,dos);
+					
+					// String
+				
+						writeString(this.marketName,dos);
+					
+					// String
+				
+						writeString(this.transactionType,dos);
+					
+					// String
+				
+						writeString(this.invoiceNumber,dos);
+					
+					// Integer
+				
+						writeInteger(this.invoiceLineNumber,dos);
+					
+					// String
+				
+						writeString(this.vendorBatchNumber,dos);
+					
+					// java.util.Date
+				
+						writeDate(this.expiryDate,dos);
+					
+					// String
+				
+						writeString(this.creditReasonCode,dos);
+					
 					// String
 				
 						writeString(this.errorCode,dos);
@@ -6089,6 +6374,15 @@ public static class exception1Struct implements routines.system.IPersistableRow<
 		sb.append(",amount="+String.valueOf(amount));
 		sb.append(",quantity="+String.valueOf(quantity));
 		sb.append(",date="+String.valueOf(date));
+		sb.append(",unitPrice="+String.valueOf(unitPrice));
+		sb.append(",marketCode="+marketCode);
+		sb.append(",marketName="+marketName);
+		sb.append(",transactionType="+transactionType);
+		sb.append(",invoiceNumber="+invoiceNumber);
+		sb.append(",invoiceLineNumber="+String.valueOf(invoiceLineNumber));
+		sb.append(",vendorBatchNumber="+vendorBatchNumber);
+		sb.append(",expiryDate="+String.valueOf(expiryDate));
+		sb.append(",creditReasonCode="+creditReasonCode);
 		sb.append(",errorCode="+errorCode);
 		sb.append(",errorMessage="+errorMessage);
 	    sb.append("]");
@@ -6214,6 +6508,60 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					return this.date;
 				}
 				
+			    public Float unitPrice;
+
+				public Float getUnitPrice () {
+					return this.unitPrice;
+				}
+				
+			    public String marketCode;
+
+				public String getMarketCode () {
+					return this.marketCode;
+				}
+				
+			    public String marketName;
+
+				public String getMarketName () {
+					return this.marketName;
+				}
+				
+			    public String transactionType;
+
+				public String getTransactionType () {
+					return this.transactionType;
+				}
+				
+			    public String invoiceNumber;
+
+				public String getInvoiceNumber () {
+					return this.invoiceNumber;
+				}
+				
+			    public Integer invoiceLineNumber;
+
+				public Integer getInvoiceLineNumber () {
+					return this.invoiceLineNumber;
+				}
+				
+			    public String vendorBatchNumber;
+
+				public String getVendorBatchNumber () {
+					return this.vendorBatchNumber;
+				}
+				
+			    public java.util.Date expiryDate;
+
+				public java.util.Date getExpiryDate () {
+					return this.expiryDate;
+				}
+				
+			    public String creditReasonCode;
+
+				public String getCreditReasonCode () {
+					return this.creditReasonCode;
+				}
+				
 
 
 
@@ -6267,6 +6615,26 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 	    	dos.writeLong(date1.getTime());
     	}
     }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
 
     public void readData(ObjectInputStream dis) {
 
@@ -6306,6 +6674,29 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 			        this.quantity = dis.readFloat();
 					
 					this.date = readDate(dis);
+					
+			            length = dis.readByte();
+           				if (length == -1) {
+           	    			this.unitPrice = null;
+           				} else {
+           			    	this.unitPrice = dis.readFloat();
+           				}
+					
+					this.marketCode = readString(dis);
+					
+					this.marketName = readString(dis);
+					
+					this.transactionType = readString(dis);
+					
+					this.invoiceNumber = readString(dis);
+					
+						this.invoiceLineNumber = readInteger(dis);
+					
+					this.vendorBatchNumber = readString(dis);
+					
+					this.expiryDate = readDate(dis);
+					
+					this.creditReasonCode = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -6382,6 +6773,47 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 				
 						writeDate(this.date,dos);
 					
+					// Float
+				
+						if(this.unitPrice == null) {
+			                dos.writeByte(-1);
+						} else {
+               				dos.writeByte(0);
+           			    	dos.writeFloat(this.unitPrice);
+		            	}
+					
+					// String
+				
+						writeString(this.marketCode,dos);
+					
+					// String
+				
+						writeString(this.marketName,dos);
+					
+					// String
+				
+						writeString(this.transactionType,dos);
+					
+					// String
+				
+						writeString(this.invoiceNumber,dos);
+					
+					// Integer
+				
+						writeInteger(this.invoiceLineNumber,dos);
+					
+					// String
+				
+						writeString(this.vendorBatchNumber,dos);
+					
+					// java.util.Date
+				
+						writeDate(this.expiryDate,dos);
+					
+					// String
+				
+						writeString(this.creditReasonCode,dos);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -6408,6 +6840,15 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 		sb.append(",amount="+String.valueOf(amount));
 		sb.append(",quantity="+String.valueOf(quantity));
 		sb.append(",date="+String.valueOf(date));
+		sb.append(",unitPrice="+String.valueOf(unitPrice));
+		sb.append(",marketCode="+marketCode);
+		sb.append(",marketName="+marketName);
+		sb.append(",transactionType="+transactionType);
+		sb.append(",invoiceNumber="+invoiceNumber);
+		sb.append(",invoiceLineNumber="+String.valueOf(invoiceLineNumber));
+		sb.append(",vendorBatchNumber="+vendorBatchNumber);
+		sb.append(",expiryDate="+String.valueOf(expiryDate));
+		sb.append(",creditReasonCode="+creditReasonCode);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -6531,6 +6972,60 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					return this.date;
 				}
 				
+			    public Float unitPrice;
+
+				public Float getUnitPrice () {
+					return this.unitPrice;
+				}
+				
+			    public String marketCode;
+
+				public String getMarketCode () {
+					return this.marketCode;
+				}
+				
+			    public String marketName;
+
+				public String getMarketName () {
+					return this.marketName;
+				}
+				
+			    public String transactionType;
+
+				public String getTransactionType () {
+					return this.transactionType;
+				}
+				
+			    public String invoiceNumber;
+
+				public String getInvoiceNumber () {
+					return this.invoiceNumber;
+				}
+				
+			    public Integer invoiceLineNumber;
+
+				public Integer getInvoiceLineNumber () {
+					return this.invoiceLineNumber;
+				}
+				
+			    public String vendorBatchNumber;
+
+				public String getVendorBatchNumber () {
+					return this.vendorBatchNumber;
+				}
+				
+			    public java.util.Date expiryDate;
+
+				public java.util.Date getExpiryDate () {
+					return this.expiryDate;
+				}
+				
+			    public String creditReasonCode;
+
+				public String getCreditReasonCode () {
+					return this.creditReasonCode;
+				}
+				
 
 
 
@@ -6584,6 +7079,26 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 	    	dos.writeLong(date1.getTime());
     	}
     }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
 
     public void readData(ObjectInputStream dis) {
 
@@ -6623,6 +7138,29 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 			        this.quantity = dis.readFloat();
 					
 					this.date = readDate(dis);
+					
+			            length = dis.readByte();
+           				if (length == -1) {
+           	    			this.unitPrice = null;
+           				} else {
+           			    	this.unitPrice = dis.readFloat();
+           				}
+					
+					this.marketCode = readString(dis);
+					
+					this.marketName = readString(dis);
+					
+					this.transactionType = readString(dis);
+					
+					this.invoiceNumber = readString(dis);
+					
+						this.invoiceLineNumber = readInteger(dis);
+					
+					this.vendorBatchNumber = readString(dis);
+					
+					this.expiryDate = readDate(dis);
+					
+					this.creditReasonCode = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -6699,6 +7237,47 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 				
 						writeDate(this.date,dos);
 					
+					// Float
+				
+						if(this.unitPrice == null) {
+			                dos.writeByte(-1);
+						} else {
+               				dos.writeByte(0);
+           			    	dos.writeFloat(this.unitPrice);
+		            	}
+					
+					// String
+				
+						writeString(this.marketCode,dos);
+					
+					// String
+				
+						writeString(this.marketName,dos);
+					
+					// String
+				
+						writeString(this.transactionType,dos);
+					
+					// String
+				
+						writeString(this.invoiceNumber,dos);
+					
+					// Integer
+				
+						writeInteger(this.invoiceLineNumber,dos);
+					
+					// String
+				
+						writeString(this.vendorBatchNumber,dos);
+					
+					// java.util.Date
+				
+						writeDate(this.expiryDate,dos);
+					
+					// String
+				
+						writeString(this.creditReasonCode,dos);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -6725,6 +7304,15 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 		sb.append(",amount="+String.valueOf(amount));
 		sb.append(",quantity="+String.valueOf(quantity));
 		sb.append(",date="+String.valueOf(date));
+		sb.append(",unitPrice="+String.valueOf(unitPrice));
+		sb.append(",marketCode="+marketCode);
+		sb.append(",marketName="+marketName);
+		sb.append(",transactionType="+transactionType);
+		sb.append(",invoiceNumber="+invoiceNumber);
+		sb.append(",invoiceLineNumber="+String.valueOf(invoiceLineNumber));
+		sb.append(",vendorBatchNumber="+vendorBatchNumber);
+		sb.append(",expiryDate="+String.valueOf(expiryDate));
+		sb.append(",creditReasonCode="+creditReasonCode);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -6848,6 +7436,60 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.date;
 				}
 				
+			    public Float unitPrice;
+
+				public Float getUnitPrice () {
+					return this.unitPrice;
+				}
+				
+			    public String marketCode;
+
+				public String getMarketCode () {
+					return this.marketCode;
+				}
+				
+			    public String marketName;
+
+				public String getMarketName () {
+					return this.marketName;
+				}
+				
+			    public String transactionType;
+
+				public String getTransactionType () {
+					return this.transactionType;
+				}
+				
+			    public String invoiceNumber;
+
+				public String getInvoiceNumber () {
+					return this.invoiceNumber;
+				}
+				
+			    public Integer invoiceLineNumber;
+
+				public Integer getInvoiceLineNumber () {
+					return this.invoiceLineNumber;
+				}
+				
+			    public String vendorBatchNumber;
+
+				public String getVendorBatchNumber () {
+					return this.vendorBatchNumber;
+				}
+				
+			    public java.util.Date expiryDate;
+
+				public java.util.Date getExpiryDate () {
+					return this.expiryDate;
+				}
+				
+			    public String creditReasonCode;
+
+				public String getCreditReasonCode () {
+					return this.creditReasonCode;
+				}
+				
 
 
 
@@ -6901,6 +7543,26 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 	    	dos.writeLong(date1.getTime());
     	}
     }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
 
     public void readData(ObjectInputStream dis) {
 
@@ -6940,6 +7602,29 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 			        this.quantity = dis.readFloat();
 					
 					this.date = readDate(dis);
+					
+			            length = dis.readByte();
+           				if (length == -1) {
+           	    			this.unitPrice = null;
+           				} else {
+           			    	this.unitPrice = dis.readFloat();
+           				}
+					
+					this.marketCode = readString(dis);
+					
+					this.marketName = readString(dis);
+					
+					this.transactionType = readString(dis);
+					
+					this.invoiceNumber = readString(dis);
+					
+						this.invoiceLineNumber = readInteger(dis);
+					
+					this.vendorBatchNumber = readString(dis);
+					
+					this.expiryDate = readDate(dis);
+					
+					this.creditReasonCode = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -7016,6 +7701,47 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 				
 						writeDate(this.date,dos);
 					
+					// Float
+				
+						if(this.unitPrice == null) {
+			                dos.writeByte(-1);
+						} else {
+               				dos.writeByte(0);
+           			    	dos.writeFloat(this.unitPrice);
+		            	}
+					
+					// String
+				
+						writeString(this.marketCode,dos);
+					
+					// String
+				
+						writeString(this.marketName,dos);
+					
+					// String
+				
+						writeString(this.transactionType,dos);
+					
+					// String
+				
+						writeString(this.invoiceNumber,dos);
+					
+					// Integer
+				
+						writeInteger(this.invoiceLineNumber,dos);
+					
+					// String
+				
+						writeString(this.vendorBatchNumber,dos);
+					
+					// java.util.Date
+				
+						writeDate(this.expiryDate,dos);
+					
+					// String
+				
+						writeString(this.creditReasonCode,dos);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -7042,6 +7768,15 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		sb.append(",amount="+String.valueOf(amount));
 		sb.append(",quantity="+String.valueOf(quantity));
 		sb.append(",date="+String.valueOf(date));
+		sb.append(",unitPrice="+String.valueOf(unitPrice));
+		sb.append(",marketCode="+marketCode);
+		sb.append(",marketName="+marketName);
+		sb.append(",transactionType="+transactionType);
+		sb.append(",invoiceNumber="+invoiceNumber);
+		sb.append(",invoiceLineNumber="+String.valueOf(invoiceLineNumber));
+		sb.append(",vendorBatchNumber="+vendorBatchNumber);
+		sb.append(",expiryDate="+String.valueOf(expiryDate));
+		sb.append(",creditReasonCode="+creditReasonCode);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -7153,10 +7888,76 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					return this.quantity;
 				}
 				
+			    public Float unitPrice;
+
+				public Float getUnitPrice () {
+					return this.unitPrice;
+				}
+				
 			    public String date;
 
 				public String getDate () {
 					return this.date;
+				}
+				
+			    public String dateYear;
+
+				public String getDateYear () {
+					return this.dateYear;
+				}
+				
+			    public String dateMonth;
+
+				public String getDateMonth () {
+					return this.dateMonth;
+				}
+				
+			    public String marketCode;
+
+				public String getMarketCode () {
+					return this.marketCode;
+				}
+				
+			    public String marketName;
+
+				public String getMarketName () {
+					return this.marketName;
+				}
+				
+			    public String transactionType;
+
+				public String getTransactionType () {
+					return this.transactionType;
+				}
+				
+			    public String invoiceNumber;
+
+				public String getInvoiceNumber () {
+					return this.invoiceNumber;
+				}
+				
+			    public Integer invoiceLineNumber;
+
+				public Integer getInvoiceLineNumber () {
+					return this.invoiceLineNumber;
+				}
+				
+			    public String vendorBatchNumber;
+
+				public String getVendorBatchNumber () {
+					return this.vendorBatchNumber;
+				}
+				
+			    public String expiryDate;
+
+				public String getExpiryDate () {
+					return this.expiryDate;
+				}
+				
+			    public String creditReasonCode;
+
+				public String getCreditReasonCode () {
+					return this.creditReasonCode;
 				}
 				
 
@@ -7191,6 +7992,26 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 			dos.write(byteArray);
     	}
     }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
 
     public void readData(ObjectInputStream dis) {
 
@@ -7227,7 +8048,34 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 			        this.quantity = dis.readFloat();
 					
+			            length = dis.readByte();
+           				if (length == -1) {
+           	    			this.unitPrice = null;
+           				} else {
+           			    	this.unitPrice = dis.readFloat();
+           				}
+					
 					this.date = readString(dis);
+					
+					this.dateYear = readString(dis);
+					
+					this.dateMonth = readString(dis);
+					
+					this.marketCode = readString(dis);
+					
+					this.marketName = readString(dis);
+					
+					this.transactionType = readString(dis);
+					
+					this.invoiceNumber = readString(dis);
+					
+						this.invoiceLineNumber = readInteger(dis);
+					
+					this.vendorBatchNumber = readString(dis);
+					
+					this.expiryDate = readString(dis);
+					
+					this.creditReasonCode = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -7296,9 +8144,58 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 				
 		            	dos.writeFloat(this.quantity);
 					
+					// Float
+				
+						if(this.unitPrice == null) {
+			                dos.writeByte(-1);
+						} else {
+               				dos.writeByte(0);
+           			    	dos.writeFloat(this.unitPrice);
+		            	}
+					
 					// String
 				
 						writeString(this.date,dos);
+					
+					// String
+				
+						writeString(this.dateYear,dos);
+					
+					// String
+				
+						writeString(this.dateMonth,dos);
+					
+					// String
+				
+						writeString(this.marketCode,dos);
+					
+					// String
+				
+						writeString(this.marketName,dos);
+					
+					// String
+				
+						writeString(this.transactionType,dos);
+					
+					// String
+				
+						writeString(this.invoiceNumber,dos);
+					
+					// Integer
+				
+						writeInteger(this.invoiceLineNumber,dos);
+					
+					// String
+				
+						writeString(this.vendorBatchNumber,dos);
+					
+					// String
+				
+						writeString(this.expiryDate,dos);
+					
+					// String
+				
+						writeString(this.creditReasonCode,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -7324,7 +8221,18 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append(",productName="+productName);
 		sb.append(",amount="+String.valueOf(amount));
 		sb.append(",quantity="+String.valueOf(quantity));
+		sb.append(",unitPrice="+String.valueOf(unitPrice));
 		sb.append(",date="+date);
+		sb.append(",dateYear="+dateYear);
+		sb.append(",dateMonth="+dateMonth);
+		sb.append(",marketCode="+marketCode);
+		sb.append(",marketName="+marketName);
+		sb.append(",transactionType="+transactionType);
+		sb.append(",invoiceNumber="+invoiceNumber);
+		sb.append(",invoiceLineNumber="+String.valueOf(invoiceLineNumber));
+		sb.append(",vendorBatchNumber="+vendorBatchNumber);
+		sb.append(",expiryDate="+expiryDate);
+		sb.append(",creditReasonCode="+creditReasonCode);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -7436,10 +8344,76 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					return this.quantity;
 				}
 				
+			    public String unitPrice;
+
+				public String getUnitPrice () {
+					return this.unitPrice;
+				}
+				
 			    public String date;
 
 				public String getDate () {
 					return this.date;
+				}
+				
+			    public String dateYear;
+
+				public String getDateYear () {
+					return this.dateYear;
+				}
+				
+			    public String dateMonth;
+
+				public String getDateMonth () {
+					return this.dateMonth;
+				}
+				
+			    public String marketCode;
+
+				public String getMarketCode () {
+					return this.marketCode;
+				}
+				
+			    public String marketName;
+
+				public String getMarketName () {
+					return this.marketName;
+				}
+				
+			    public String transactionType;
+
+				public String getTransactionType () {
+					return this.transactionType;
+				}
+				
+			    public String invoiceNumber;
+
+				public String getInvoiceNumber () {
+					return this.invoiceNumber;
+				}
+				
+			    public String invoiceLineNumber;
+
+				public String getInvoiceLineNumber () {
+					return this.invoiceLineNumber;
+				}
+				
+			    public String vendorBatchNumber;
+
+				public String getVendorBatchNumber () {
+					return this.vendorBatchNumber;
+				}
+				
+			    public String expiryDate;
+
+				public String getExpiryDate () {
+					return this.expiryDate;
+				}
+				
+			    public String creditReasonCode;
+
+				public String getCreditReasonCode () {
+					return this.creditReasonCode;
 				}
 				
 
@@ -7505,7 +8479,29 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					this.quantity = readString(dis);
 					
+					this.unitPrice = readString(dis);
+					
 					this.date = readString(dis);
+					
+					this.dateYear = readString(dis);
+					
+					this.dateMonth = readString(dis);
+					
+					this.marketCode = readString(dis);
+					
+					this.marketName = readString(dis);
+					
+					this.transactionType = readString(dis);
+					
+					this.invoiceNumber = readString(dis);
+					
+					this.invoiceLineNumber = readString(dis);
+					
+					this.vendorBatchNumber = readString(dis);
+					
+					this.expiryDate = readString(dis);
+					
+					this.creditReasonCode = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -7571,7 +8567,51 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					// String
 				
+						writeString(this.unitPrice,dos);
+					
+					// String
+				
 						writeString(this.date,dos);
+					
+					// String
+				
+						writeString(this.dateYear,dos);
+					
+					// String
+				
+						writeString(this.dateMonth,dos);
+					
+					// String
+				
+						writeString(this.marketCode,dos);
+					
+					// String
+				
+						writeString(this.marketName,dos);
+					
+					// String
+				
+						writeString(this.transactionType,dos);
+					
+					// String
+				
+						writeString(this.invoiceNumber,dos);
+					
+					// String
+				
+						writeString(this.invoiceLineNumber,dos);
+					
+					// String
+				
+						writeString(this.vendorBatchNumber,dos);
+					
+					// String
+				
+						writeString(this.expiryDate,dos);
+					
+					// String
+				
+						writeString(this.creditReasonCode,dos);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -7597,7 +8637,18 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		sb.append(",productName="+productName);
 		sb.append(",amount="+amount);
 		sb.append(",quantity="+quantity);
+		sb.append(",unitPrice="+unitPrice);
 		sb.append(",date="+date);
+		sb.append(",dateYear="+dateYear);
+		sb.append(",dateMonth="+dateMonth);
+		sb.append(",marketCode="+marketCode);
+		sb.append(",marketName="+marketName);
+		sb.append(",transactionType="+transactionType);
+		sb.append(",invoiceNumber="+invoiceNumber);
+		sb.append(",invoiceLineNumber="+invoiceLineNumber);
+		sb.append(",vendorBatchNumber="+vendorBatchNumber);
+		sb.append(",expiryDate="+expiryDate);
+		sb.append(",creditReasonCode="+creditReasonCode);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -9308,7 +10359,7 @@ if(row17 != null) {
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row14", 3, 0);
+	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -9316,19 +10367,11 @@ if(row17 != null) {
 					}           			
 				
 					if(execStat){				
+	       				runStat.updateStatOnConnection("row14", 3, 0);
+					}           			
+				
+					if(execStat){				
 	       				runStat.updateStatOnConnection("row10", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row7", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row2", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -9336,15 +10379,23 @@ if(row17 != null) {
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row8", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row9", 3, 0);
+	       				runStat.updateStatOnConnection("row7", 3, 0);
 					}           			
 				
 					if(execStat){				
 	       				runStat.updateStatOnConnection("exception1", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row8", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row9", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -9436,10 +10487,13 @@ String dbUser_tDBOutput_1 = null;
    int batchSizeCounter_tDBOutput_1=0;
 
 int count_tDBOutput_1=0;
-	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"geography_code\",\"locality\",\"admin_area1\",\"customer_code\",\"customer_name\",\"customer_type\",\"product_code\",\"product_name\",\"amount\",\"quantity\",\"sales_date\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"geography_code\",\"locality\",\"admin_area1\",\"customer_code\",\"customer_name\",\"customer_type\",\"product_code\",\"product_name\",\"amount\",\"quantity\",\"sales_date\",\"unit_price\",\"market_code\",\"market_name\",\"transaction_type\",\"invoice_number\",\"invoice_line_number\",\"vendor_batch_number\",\"expiry_date\",\"credit_reason_code\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	    
 	    java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
 	    
+        StringBuffer query_tDBOutput_1 = null;
+       	
+		 	String[] insertSQLSplits_tDBOutput_1 = insert_tDBOutput_1.split("\\?");
 
  
 
@@ -9785,6 +10839,108 @@ int count_tDBOutput_1=0;
 			errorCodeThrough = 0;
 			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"date:");
 			errorMessageThrough = "";
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"unitPrice:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.marketCode != null
+		&& (!"".equals(row9.marketCode))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.marketCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"marketCode:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.marketName != null
+		&& (!"".equals(row9.marketName))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.marketName);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"marketName:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.transactionType != null
+		&& (!"".equals(row9.transactionType))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.transactionType);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"transactionType:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.invoiceNumber != null
+		&& (!"".equals(row9.invoiceNumber))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.invoiceNumber);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"invoiceNumber:");
+			errorMessageThrough = "";
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"invoiceLineNumber:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.vendorBatchNumber != null
+		&& (!"".equals(row9.vendorBatchNumber))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.vendorBatchNumber);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"vendorBatchNumber:");
+			errorMessageThrough = "";
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"expiryDate:");
+			errorMessageThrough = "";	try {
+		if(
+		row9.creditReasonCode != null
+		&& (!"".equals(row9.creditReasonCode))
+		) {
+			String tester_tSchemaComplianceCheck_1 = String.valueOf(row9.creditReasonCode);
+		}
+	} catch(java.lang.Exception e) {
+		ifPassedThrough = false;
+		errorCodeThrough += 2;
+		errorMessageThrough += "|wrong type";
+	}
+			resultErrorCodeThrough = handleErrorCode(errorCodeThrough,resultErrorCodeThrough);
+			errorCodeThrough = 0;
+			resultErrorMessageThrough = handleErrorMessage(errorMessageThrough,resultErrorMessageThrough,"creditReasonCode:");
+			errorMessageThrough = "";
 		}
 	}
 	RowSetValueUtil_tSchemaComplianceCheck_1 rsvUtil_tSchemaComplianceCheck_1 = new RowSetValueUtil_tSchemaComplianceCheck_1();
@@ -9947,6 +11103,7 @@ row5Struct row5Default = new row5Struct();
 // ###############################
 // # Vars initialization
 class  Var__tMap_2__Struct  {
+	String date;
 }
 Var__tMap_2__Struct Var__tMap_2 = new Var__tMap_2__Struct();
 // ###############################
@@ -10432,7 +11589,18 @@ row8Struct row8_tmp = new row8Struct();
     row3.productName = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "productName");
     row3.amount = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "amount");
     row3.quantity = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "quantity");
+    row3.unitPrice = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "unitPrice");
     row3.date = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "date");
+    row3.dateYear = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "dateYear");
+    row3.dateMonth = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "dateMonth");
+    row3.marketCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "marketCode");
+    row3.marketName = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "marketName");
+    row3.transactionType = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "transactionType");
+    row3.invoiceNumber = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "invoiceNumber");
+    row3.invoiceLineNumber = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "invoiceLineNumber");
+    row3.vendorBatchNumber = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "vendorBatchNumber");
+    row3.expiryDate = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "expiryDate");
+    row3.creditReasonCode = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "creditReasonCode");
     nb_line_tExtractFields_1++;
 
  
@@ -10593,10 +11761,109 @@ if(row3 != null) {
               System.err.println(e.getMessage());          
           }           
           try {
+              if ("".equals(row3.unitPrice)){  
+                row3.unitPrice = null;
+              }
+              row2.unitPrice=TypeConvert.String2Float(row3.unitPrice);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
               if ("".equals(row3.date)){  
                 row3.date = null;
               }
               row2.date=TypeConvert.String2String(row3.date);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.dateYear)){  
+                row3.dateYear = null;
+              }
+              row2.dateYear=TypeConvert.String2String(row3.dateYear);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.dateMonth)){  
+                row3.dateMonth = null;
+              }
+              row2.dateMonth=TypeConvert.String2String(row3.dateMonth);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.marketCode)){  
+                row3.marketCode = null;
+              }
+              row2.marketCode=TypeConvert.String2String(row3.marketCode);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.marketName)){  
+                row3.marketName = null;
+              }
+              row2.marketName=TypeConvert.String2String(row3.marketName);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.transactionType)){  
+                row3.transactionType = null;
+              }
+              row2.transactionType=TypeConvert.String2String(row3.transactionType);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.invoiceNumber)){  
+                row3.invoiceNumber = null;
+              }
+              row2.invoiceNumber=TypeConvert.String2String(row3.invoiceNumber);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.invoiceLineNumber)){  
+                row3.invoiceLineNumber = null;
+              }
+              row2.invoiceLineNumber=TypeConvert.String2Integer(row3.invoiceLineNumber);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.vendorBatchNumber)){  
+                row3.vendorBatchNumber = null;
+              }
+              row2.vendorBatchNumber=TypeConvert.String2String(row3.vendorBatchNumber);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.expiryDate)){  
+                row3.expiryDate = null;
+              }
+              row2.expiryDate=TypeConvert.String2String(row3.expiryDate);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.creditReasonCode)){  
+                row3.creditReasonCode = null;
+              }
+              row2.creditReasonCode=TypeConvert.String2String(row3.creditReasonCode);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -10782,7 +12049,8 @@ if(row2 != null) {
 	        // ###############################
         	// # Vars tables
         
-Var__tMap_2__Struct Var = Var__tMap_2;// ###############################
+Var__tMap_2__Struct Var = Var__tMap_2;
+Var.date = (row2.date != null) ? row2.date : (row2.dateMonth + "/1/" + row2.dateYear) ;// ###############################
         // ###############################
         // # Output tables
 
@@ -10803,7 +12071,16 @@ row8_tmp.productCode = row2.productCode ;
 row8_tmp.productName = row2.productName ;
 row8_tmp.amount = row2.amount ;
 row8_tmp.quantity = row2.quantity ;
-row8_tmp.date = TalendDate.parseDate("yyyy-MM-dd", Clean.cleanDate(row2.date, null)) ;
+row8_tmp.date = TalendDate.parseDate("yyyy-MM-dd", Clean.cleanDate(Var.date, null)) ;
+row8_tmp.unitPrice = row2.unitPrice ;
+row8_tmp.marketCode = row2.marketCode ;
+row8_tmp.marketName = row2.marketName ;
+row8_tmp.transactionType = row2.transactionType ;
+row8_tmp.invoiceNumber = row2.invoiceNumber ;
+row8_tmp.invoiceLineNumber = row2.invoiceLineNumber ;
+row8_tmp.vendorBatchNumber = row2.vendorBatchNumber ;
+row8_tmp.expiryDate = row2.expiryDate != null ? TalendDate.parseDate("yyyy-MM-dd", Clean.cleanDate(row2.expiryDate, null)) : null ;
+row8_tmp.creditReasonCode = row2.creditReasonCode ;
 row8 = row8_tmp;
 }  // closing inner join bracket (2)
 // ###############################
@@ -10917,6 +12194,33 @@ if(row8 != null) {
 
 	
 	row10.date = row8.date;
+
+	
+	row10.unitPrice = row8.unitPrice;
+
+	
+	row10.marketCode = row8.marketCode;
+
+	
+	row10.marketName = row8.marketName;
+
+	
+	row10.transactionType = row8.transactionType;
+
+	
+	row10.invoiceNumber = row8.invoiceNumber;
+
+	
+	row10.invoiceLineNumber = row8.invoiceLineNumber;
+
+	
+	row10.vendorBatchNumber = row8.vendorBatchNumber;
+
+	
+	row10.expiryDate = row8.expiryDate;
+
+	
+	row10.creditReasonCode = row8.creditReasonCode;
 
 	
     nb_line_tFilterColumns_1++;
@@ -11047,6 +12351,15 @@ if(row8 != null) {
 		row14.amount = row9.amount;
 		row14.quantity = row9.quantity;
 		row14.date = row9.date;
+		row14.unitPrice = row9.unitPrice;
+		row14.marketCode = row9.marketCode;
+		row14.marketName = row9.marketName;
+		row14.transactionType = row9.transactionType;
+		row14.invoiceNumber = row9.invoiceNumber;
+		row14.invoiceLineNumber = row9.invoiceLineNumber;
+		row14.vendorBatchNumber = row9.vendorBatchNumber;
+		row14.expiryDate = row9.expiryDate;
+		row14.creditReasonCode = row9.creditReasonCode;
 	}
 	if (!rsvUtil_tSchemaComplianceCheck_1.ifPassedThrough) {
 		exception1 = new exception1Struct();
@@ -11063,6 +12376,15 @@ if(row8 != null) {
 		exception1.amount = row9.amount;
 		exception1.quantity = row9.quantity;
 		exception1.date = row9.date;
+		exception1.unitPrice = row9.unitPrice;
+		exception1.marketCode = row9.marketCode;
+		exception1.marketName = row9.marketName;
+		exception1.transactionType = row9.transactionType;
+		exception1.invoiceNumber = row9.invoiceNumber;
+		exception1.invoiceLineNumber = row9.invoiceLineNumber;
+		exception1.vendorBatchNumber = row9.vendorBatchNumber;
+		exception1.expiryDate = row9.expiryDate;
+		exception1.creditReasonCode = row9.creditReasonCode;
 		exception1.errorCode = String.valueOf(rsvUtil_tSchemaComplianceCheck_1.resultErrorCodeThrough);
 		exception1.errorMessage = rsvUtil_tSchemaComplianceCheck_1.resultErrorMessageThrough;
 	}
@@ -11128,67 +12450,137 @@ if(row14 != null) {
 
 
 
+		query_tDBOutput_1 = new StringBuffer("");
         whetherReject_tDBOutput_1 = false;
                     pstmt_tDBOutput_1.setInt(1, row14.hubId);
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(insertSQLSplits_tDBOutput_1[0]).append(String.valueOf(row14.hubId)).append(insertSQLSplits_tDBOutput_1[1]);
                     if(row14.source == null) {
 pstmt_tDBOutput_1.setNull(2, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(2, row14.source);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.source== null ?  "null" :"'" + row14.source + "'").append(insertSQLSplits_tDBOutput_1[2]);
                     if(row14.geographyCode == null) {
 pstmt_tDBOutput_1.setNull(3, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(3, row14.geographyCode);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.geographyCode== null ?  "null" :"'" + row14.geographyCode + "'").append(insertSQLSplits_tDBOutput_1[3]);
                     if(row14.locality == null) {
 pstmt_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(4, row14.locality);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.locality== null ?  "null" :"'" + row14.locality + "'").append(insertSQLSplits_tDBOutput_1[4]);
                     if(row14.adminArea1 == null) {
 pstmt_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(5, row14.adminArea1);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.adminArea1== null ?  "null" :"'" + row14.adminArea1 + "'").append(insertSQLSplits_tDBOutput_1[5]);
                     if(row14.customerCode == null) {
 pstmt_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(6, row14.customerCode);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.customerCode== null ?  "null" :"'" + row14.customerCode + "'").append(insertSQLSplits_tDBOutput_1[6]);
                     if(row14.customerName == null) {
 pstmt_tDBOutput_1.setNull(7, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(7, row14.customerName);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.customerName== null ?  "null" :"'" + row14.customerName + "'").append(insertSQLSplits_tDBOutput_1[7]);
                     if(row14.customerType == null) {
 pstmt_tDBOutput_1.setNull(8, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(8, row14.customerType);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.customerType== null ?  "null" :"'" + row14.customerType + "'").append(insertSQLSplits_tDBOutput_1[8]);
                     if(row14.productCode == null) {
 pstmt_tDBOutput_1.setNull(9, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(9, row14.productCode);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.productCode== null ?  "null" :"'" + row14.productCode + "'").append(insertSQLSplits_tDBOutput_1[9]);
                     if(row14.productName == null) {
 pstmt_tDBOutput_1.setNull(10, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(10, row14.productName);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.productName== null ?  "null" :"'" + row14.productName + "'").append(insertSQLSplits_tDBOutput_1[10]);
                     if(row14.amount == null) {
 pstmt_tDBOutput_1.setNull(11, java.sql.Types.FLOAT);
 } else {pstmt_tDBOutput_1.setFloat(11, row14.amount);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.amount== null ?  "null" :String.valueOf(row14.amount)).append(insertSQLSplits_tDBOutput_1[11]);
                     pstmt_tDBOutput_1.setFloat(12, row14.quantity);
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(String.valueOf(row14.quantity)).append(insertSQLSplits_tDBOutput_1[12]);
                     if(row14.date != null) {
 pstmt_tDBOutput_1.setTimestamp(13, new java.sql.Timestamp(row14.date.getTime()));
 } else {
 pstmt_tDBOutput_1.setNull(13, java.sql.Types.TIMESTAMP);
 }
 
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.date== null ?  "null" :"'" + new java.text.SimpleDateFormat("dd-MM-yyyy").format(row14.date) + "'").append(insertSQLSplits_tDBOutput_1[13]);
+                    if(row14.unitPrice == null) {
+pstmt_tDBOutput_1.setNull(14, java.sql.Types.FLOAT);
+} else {pstmt_tDBOutput_1.setFloat(14, row14.unitPrice);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.unitPrice== null ?  "null" :String.valueOf(row14.unitPrice)).append(insertSQLSplits_tDBOutput_1[14]);
+                    if(row14.marketCode == null) {
+pstmt_tDBOutput_1.setNull(15, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(15, row14.marketCode);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.marketCode== null ?  "null" :"'" + row14.marketCode + "'").append(insertSQLSplits_tDBOutput_1[15]);
+                    if(row14.marketName == null) {
+pstmt_tDBOutput_1.setNull(16, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(16, row14.marketName);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.marketName== null ?  "null" :"'" + row14.marketName + "'").append(insertSQLSplits_tDBOutput_1[16]);
+                    if(row14.transactionType == null) {
+pstmt_tDBOutput_1.setNull(17, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(17, row14.transactionType);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.transactionType== null ?  "null" :"'" + row14.transactionType + "'").append(insertSQLSplits_tDBOutput_1[17]);
+                    if(row14.invoiceNumber == null) {
+pstmt_tDBOutput_1.setNull(18, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(18, row14.invoiceNumber);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.invoiceNumber== null ?  "null" :"'" + row14.invoiceNumber + "'").append(insertSQLSplits_tDBOutput_1[18]);
+                    if(row14.invoiceLineNumber == null) {
+pstmt_tDBOutput_1.setNull(19, java.sql.Types.INTEGER);
+} else {pstmt_tDBOutput_1.setInt(19, row14.invoiceLineNumber);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.invoiceLineNumber== null ?  "null" :String.valueOf(row14.invoiceLineNumber)).append(insertSQLSplits_tDBOutput_1[19]);
+                    if(row14.vendorBatchNumber == null) {
+pstmt_tDBOutput_1.setNull(20, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(20, row14.vendorBatchNumber);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.vendorBatchNumber== null ?  "null" :"'" + row14.vendorBatchNumber + "'").append(insertSQLSplits_tDBOutput_1[20]);
+                    if(row14.expiryDate != null) {
+pstmt_tDBOutput_1.setTimestamp(21, new java.sql.Timestamp(row14.expiryDate.getTime()));
+} else {
+pstmt_tDBOutput_1.setNull(21, java.sql.Types.TIMESTAMP);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.expiryDate== null ?  "null" :"'" + new java.text.SimpleDateFormat("dd-MM-yyyy").format(row14.expiryDate) + "'").append(insertSQLSplits_tDBOutput_1[21]);
+                    if(row14.creditReasonCode == null) {
+pstmt_tDBOutput_1.setNull(22, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(22, row14.creditReasonCode);
+}
+
+                        query_tDBOutput_1 = query_tDBOutput_1.append(row14.creditReasonCode== null ?  "null" :"'" + row14.creditReasonCode + "'").append(insertSQLSplits_tDBOutput_1[22]);
+                globalMap.put("tDBOutput_1_QUERY", query_tDBOutput_1.toString().trim());
 			
     		pstmt_tDBOutput_1.addBatch();
     		nb_line_tDBOutput_1++;
@@ -11323,7 +12715,7 @@ if(exception1 != null) {
 	      			
 	        			paraList_tRunJob_1.add("--father_node=tRunJob_1");
 	      			
-	        			paraList_tRunJob_1.add("--context=Development");
+	        			paraList_tRunJob_1.add("--context=Default");
 	      			
 	//for feature:10589
 	
@@ -14431,7 +15823,7 @@ end_Hash.put("tAdvancedHash_row5", System.currentTimeMillis());
     public int portTraces = 4334;
     public String clientHost;
     public String defaultClientHost = "localhost";
-    public String contextStr = "Development";
+    public String contextStr = "Default";
     public boolean isDefaultContext = true;
     public String pid = "0";
     public String rootPid = null;
@@ -14937,6 +16329,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     323198 characters generated by Talend Open Studio for Big Data 
- *     on the May 23, 2019 7:38:30 PM SGT
+ *     366267 characters generated by Talend Open Studio for Big Data 
+ *     on the May 30, 2019 12:08:12 AM SGT
  ************************************************************************************************/

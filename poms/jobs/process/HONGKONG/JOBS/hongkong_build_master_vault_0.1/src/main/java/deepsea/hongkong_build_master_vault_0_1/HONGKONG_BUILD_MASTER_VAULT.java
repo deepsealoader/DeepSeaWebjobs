@@ -14,7 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 package deepsea.hongkong_build_master_vault_0_1;
 
 import routines.Numeric;
@@ -41,14 +40,8 @@ import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
 import java.io.IOException;
 import java.util.Comparator;
- 
-
-
-
-
 
 @SuppressWarnings("unused")
-
 /**
  * Job: HONGKONG_BUILD_MASTER_VAULT Purpose: <br>
  * Description:  <br>
@@ -58,14 +51,13 @@ import java.util.Comparator;
  */
 public class HONGKONG_BUILD_MASTER_VAULT implements TalendJob {
 
-protected static void logIgnoredError(String message, Throwable cause) {
-       System.err.println(message);
-       if (cause != null) {
-               cause.printStackTrace();
-       }
+	protected static void logIgnoredError(String message, Throwable cause) {
+		System.err.println(message);
+		if (cause != null) {
+			cause.printStackTrace();
+		}
 
-}
-
+	}
 
 	public final Object obj = new Object();
 
@@ -79,2029 +71,2100 @@ protected static void logIgnoredError(String message, Throwable cause) {
 	public void setValueObject(Object valueObject) {
 		this.valueObject = valueObject;
 	}
-	private Object[] multiThreadLockWrite = new Object[0];
-	
-	private final static String defaultCharset = java.nio.charset.Charset.defaultCharset().name();
 
-	
+	private Object[] multiThreadLockWrite = new Object[0];
+
+	private final static String defaultCharset = java.nio.charset.Charset
+			.defaultCharset().name();
+
 	private final static String utf8Charset = "UTF-8";
-	//contains type for every context property
+
+	// contains type for every context property
 	public class PropertiesWithType extends java.util.Properties {
 		private static final long serialVersionUID = 1L;
-		private java.util.Map<String,String> propertyTypes = new java.util.HashMap<>();
-		
-		public PropertiesWithType(java.util.Properties properties){
+		private java.util.Map<String, String> propertyTypes = new java.util.HashMap<>();
+
+		public PropertiesWithType(java.util.Properties properties) {
 			super(properties);
 		}
-		public PropertiesWithType(){
+
+		public PropertiesWithType() {
 			super();
 		}
-		
+
 		public void setContextType(String key, String type) {
-			propertyTypes.put(key,type);
+			propertyTypes.put(key, type);
 		}
-	
+
 		public String getContextType(String key) {
 			return propertyTypes.get(key);
 		}
 	}
-	
+
 	// create and load default properties
 	private java.util.Properties defaultProps = new java.util.Properties();
+
 	// create application properties with default
 	public class ContextProperties extends PropertiesWithType {
 
 		private static final long serialVersionUID = 1L;
 
-		public ContextProperties(java.util.Properties properties){
+		public ContextProperties(java.util.Properties properties) {
 			super(properties);
 		}
-		public ContextProperties(){
+
+		public ContextProperties() {
 			super();
 		}
 
-		public void synchronizeContext(){
-			
-			if(COUNTRY != null){
-				
-					this.setProperty("COUNTRY", COUNTRY.toString());
-				
+		public void synchronizeContext() {
+
+			if (COUNTRY != null) {
+
+				this.setProperty("COUNTRY", COUNTRY.toString());
+
 			}
-			
-			if(DEEPSEA_AUTH_TOKEN != null){
-				
-					this.setProperty("DEEPSEA_AUTH_TOKEN", DEEPSEA_AUTH_TOKEN.toString());
-				
+
+			if (DEEPSEA_AUTH_TOKEN != null) {
+
+				this.setProperty("DEEPSEA_AUTH_TOKEN",
+						DEEPSEA_AUTH_TOKEN.toString());
+
 			}
-			
-			if(DEEPSEA_HOSTNAME != null){
-				
-					this.setProperty("DEEPSEA_HOSTNAME", DEEPSEA_HOSTNAME.toString());
-				
+
+			if (DEEPSEA_HOSTNAME != null) {
+
+				this.setProperty("DEEPSEA_HOSTNAME",
+						DEEPSEA_HOSTNAME.toString());
+
 			}
-			
-			if(DEFAULT_DATE_FORMAT != null){
-				
-					this.setProperty("DEFAULT_DATE_FORMAT", DEFAULT_DATE_FORMAT.toString());
-				
+
+			if (DEFAULT_DATE_FORMAT != null) {
+
+				this.setProperty("DEFAULT_DATE_FORMAT",
+						DEFAULT_DATE_FORMAT.toString());
+
 			}
-			
-			if(MONGODB_HOSTNAME != null){
-				
-					this.setProperty("MONGODB_HOSTNAME", MONGODB_HOSTNAME.toString());
-				
+
+			if (MONGODB_HOSTNAME != null) {
+
+				this.setProperty("MONGODB_HOSTNAME",
+						MONGODB_HOSTNAME.toString());
+
 			}
-			
-			if(POSTGRES_DATABASE != null){
-				
-					this.setProperty("POSTGRES_DATABASE", POSTGRES_DATABASE.toString());
-				
+
+			if (POSTGRES_DATABASE != null) {
+
+				this.setProperty("POSTGRES_DATABASE",
+						POSTGRES_DATABASE.toString());
+
 			}
-			
-			if(POSTGRES_HOSTNAME != null){
-				
-					this.setProperty("POSTGRES_HOSTNAME", POSTGRES_HOSTNAME.toString());
-				
+
+			if (POSTGRES_HOSTNAME != null) {
+
+				this.setProperty("POSTGRES_HOSTNAME",
+						POSTGRES_HOSTNAME.toString());
+
 			}
-			
+
 		}
 
-public String COUNTRY;
-public String getCOUNTRY(){
-	return this.COUNTRY;
-}
-public String DEEPSEA_AUTH_TOKEN;
-public String getDEEPSEA_AUTH_TOKEN(){
-	return this.DEEPSEA_AUTH_TOKEN;
-}
-public String DEEPSEA_HOSTNAME;
-public String getDEEPSEA_HOSTNAME(){
-	return this.DEEPSEA_HOSTNAME;
-}
-public String DEFAULT_DATE_FORMAT;
-public String getDEFAULT_DATE_FORMAT(){
-	return this.DEFAULT_DATE_FORMAT;
-}
-public String MONGODB_HOSTNAME;
-public String getMONGODB_HOSTNAME(){
-	return this.MONGODB_HOSTNAME;
-}
-public String POSTGRES_DATABASE;
-public String getPOSTGRES_DATABASE(){
-	return this.POSTGRES_DATABASE;
-}
-public String POSTGRES_HOSTNAME;
-public String getPOSTGRES_HOSTNAME(){
-	return this.POSTGRES_HOSTNAME;
-}
+		public String COUNTRY;
+
+		public String getCOUNTRY() {
+			return this.COUNTRY;
+		}
+
+		public String DEEPSEA_AUTH_TOKEN;
+
+		public String getDEEPSEA_AUTH_TOKEN() {
+			return this.DEEPSEA_AUTH_TOKEN;
+		}
+
+		public String DEEPSEA_HOSTNAME;
+
+		public String getDEEPSEA_HOSTNAME() {
+			return this.DEEPSEA_HOSTNAME;
+		}
+
+		public String DEFAULT_DATE_FORMAT;
+
+		public String getDEFAULT_DATE_FORMAT() {
+			return this.DEFAULT_DATE_FORMAT;
+		}
+
+		public String MONGODB_HOSTNAME;
+
+		public String getMONGODB_HOSTNAME() {
+			return this.MONGODB_HOSTNAME;
+		}
+
+		public String POSTGRES_DATABASE;
+
+		public String getPOSTGRES_DATABASE() {
+			return this.POSTGRES_DATABASE;
+		}
+
+		public String POSTGRES_HOSTNAME;
+
+		public String getPOSTGRES_HOSTNAME() {
+			return this.POSTGRES_HOSTNAME;
+		}
 	}
+
 	private ContextProperties context = new ContextProperties();
+
 	public ContextProperties getContext() {
 		return this.context;
 	}
+
 	private final String jobVersion = "0.1";
 	private final String jobName = "HONGKONG_BUILD_MASTER_VAULT";
 	private final String projectName = "DEEPSEA";
 	public Integer errorCode = null;
 	private String currentComponent = "";
-	
-		private final java.util.Map<String, Object> globalMap = java.util.Collections.synchronizedMap(new java.util.HashMap<String, Object>());
-		
-	
-		private final java.util.Map<String, Long> start_Hash = java.util.Collections.synchronizedMap(new java.util.HashMap<String, Long>());
-		private final java.util.Map<String, Long> end_Hash = java.util.Collections.synchronizedMap(new java.util.HashMap<String, Long>());
-		private final java.util.Map<String, Boolean> ok_Hash = java.util.Collections.synchronizedMap(new java.util.HashMap<String, Boolean>());
-		public  final java.util.List<String[]> globalBuffer = java.util.Collections.synchronizedList(new java.util.ArrayList<String[]>());
-	
 
-private RunStat runStat = new RunStat();
+	private final java.util.Map<String, Object> globalMap = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Object>());
+
+	private final java.util.Map<String, Long> start_Hash = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Long>());
+	private final java.util.Map<String, Long> end_Hash = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Long>());
+	private final java.util.Map<String, Boolean> ok_Hash = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Boolean>());
+	public final java.util.List<String[]> globalBuffer = java.util.Collections
+			.synchronizedList(new java.util.ArrayList<String[]>());
+
+	private RunStat runStat = new RunStat();
 
 	// OSGi DataSource
 	private final static String KEY_DB_DATASOURCES = "KEY_DB_DATASOURCES";
-	
+
 	private final static String KEY_DB_DATASOURCES_RAW = "KEY_DB_DATASOURCES_RAW";
 
-	public void setDataSources(java.util.Map<String, javax.sql.DataSource> dataSources) {
+	public void setDataSources(
+			java.util.Map<String, javax.sql.DataSource> dataSources) {
 		java.util.Map<String, routines.system.TalendDataSource> talendDataSources = new java.util.HashMap<String, routines.system.TalendDataSource>();
-		for (java.util.Map.Entry<String, javax.sql.DataSource> dataSourceEntry : dataSources.entrySet()) {
-			talendDataSources.put(dataSourceEntry.getKey(), new routines.system.TalendDataSource(dataSourceEntry.getValue()));
+		for (java.util.Map.Entry<String, javax.sql.DataSource> dataSourceEntry : dataSources
+				.entrySet()) {
+			talendDataSources.put(
+					dataSourceEntry.getKey(),
+					new routines.system.TalendDataSource(dataSourceEntry
+							.getValue()));
 		}
 		globalMap.put(KEY_DB_DATASOURCES, talendDataSources);
-		globalMap.put(KEY_DB_DATASOURCES_RAW, new java.util.HashMap<String, javax.sql.DataSource>(dataSources));
+		globalMap
+				.put(KEY_DB_DATASOURCES_RAW,
+						new java.util.HashMap<String, javax.sql.DataSource>(
+								dataSources));
 	}
 
+	private final java.io.ByteArrayOutputStream baos = new java.io.ByteArrayOutputStream();
+	private final java.io.PrintStream errorMessagePS = new java.io.PrintStream(
+			new java.io.BufferedOutputStream(baos));
 
-private final java.io.ByteArrayOutputStream baos = new java.io.ByteArrayOutputStream();
-private final java.io.PrintStream errorMessagePS = new java.io.PrintStream(new java.io.BufferedOutputStream(baos));
-
-public String getExceptionStackTrace() {
-	if ("failure".equals(this.getStatus())) {
-		errorMessagePS.flush();
-		return baos.toString();
-	}
-	return null;
-}
-
-private Exception exception;
-
-public Exception getException() {
-	if ("failure".equals(this.getStatus())) {
-		return this.exception;
-	}
-	return null;
-}
-
-private class TalendException extends Exception {
-
-	private static final long serialVersionUID = 1L;
-
-	private java.util.Map<String, Object> globalMap = null;
-	private Exception e = null;
-	private String currentComponent = null;
-	private String virtualComponentName = null;
-	
-	public void setVirtualComponentName (String virtualComponentName){
-		this.virtualComponentName = virtualComponentName;
+	public String getExceptionStackTrace() {
+		if ("failure".equals(this.getStatus())) {
+			errorMessagePS.flush();
+			return baos.toString();
+		}
+		return null;
 	}
 
-	private TalendException(Exception e, String errorComponent, final java.util.Map<String, Object> globalMap) {
-		this.currentComponent= errorComponent;
-		this.globalMap = globalMap;
-		this.e = e;
-	}
+	private Exception exception;
 
 	public Exception getException() {
-		return this.e;
+		if ("failure".equals(this.getStatus())) {
+			return this.exception;
+		}
+		return null;
 	}
 
-	public String getCurrentComponent() {
-		return this.currentComponent;
-	}
+	private class TalendException extends Exception {
 
-	
-    public String getExceptionCauseMessage(Exception e){
-        Throwable cause = e;
-        String message = null;
-        int i = 10;
-        while (null != cause && 0 < i--) {
-            message = cause.getMessage();
-            if (null == message) {
-                cause = cause.getCause();
-            } else {
-                break;          
-            }
-        }
-        if (null == message) {
-            message = e.getClass().getName();
-        }   
-        return message;
-    }
+		private static final long serialVersionUID = 1L;
 
-	@Override
-	public void printStackTrace() {
-		if (!(e instanceof TalendException || e instanceof TDieException)) {
-			if(virtualComponentName!=null && currentComponent.indexOf(virtualComponentName+"_")==0){
-				globalMap.put(virtualComponentName+"_ERROR_MESSAGE",getExceptionCauseMessage(e));
-			}
-			globalMap.put(currentComponent+"_ERROR_MESSAGE",getExceptionCauseMessage(e));
-			System.err.println("Exception in component " + currentComponent + " (" + jobName + ")");
+		private java.util.Map<String, Object> globalMap = null;
+		private Exception e = null;
+		private String currentComponent = null;
+		private String virtualComponentName = null;
+
+		public void setVirtualComponentName(String virtualComponentName) {
+			this.virtualComponentName = virtualComponentName;
 		}
-		if (!(e instanceof TDieException)) {
-			if(e instanceof TalendException){
-				e.printStackTrace();
-			} else {
-				e.printStackTrace();
-				e.printStackTrace(errorMessagePS);
-				HONGKONG_BUILD_MASTER_VAULT.this.exception = e;
-			}
+
+		private TalendException(Exception e, String errorComponent,
+				final java.util.Map<String, Object> globalMap) {
+			this.currentComponent = errorComponent;
+			this.globalMap = globalMap;
+			this.e = e;
 		}
-		if (!(e instanceof TalendException)) {
-		try {
-			for (java.lang.reflect.Method m : this.getClass().getEnclosingClass().getMethods()) {
-				if (m.getName().compareTo(currentComponent + "_error") == 0) {
-					m.invoke(HONGKONG_BUILD_MASTER_VAULT.this, new Object[] { e , currentComponent, globalMap});
+
+		public Exception getException() {
+			return this.e;
+		}
+
+		public String getCurrentComponent() {
+			return this.currentComponent;
+		}
+
+		public String getExceptionCauseMessage(Exception e) {
+			Throwable cause = e;
+			String message = null;
+			int i = 10;
+			while (null != cause && 0 < i--) {
+				message = cause.getMessage();
+				if (null == message) {
+					cause = cause.getCause();
+				} else {
 					break;
 				}
 			}
-
-			if(!(e instanceof TDieException)){
+			if (null == message) {
+				message = e.getClass().getName();
 			}
-		} catch (Exception e) {
-			this.e.printStackTrace();
+			return message;
 		}
+
+		@Override
+		public void printStackTrace() {
+			if (!(e instanceof TalendException || e instanceof TDieException)) {
+				if (virtualComponentName != null
+						&& currentComponent.indexOf(virtualComponentName + "_") == 0) {
+					globalMap.put(virtualComponentName + "_ERROR_MESSAGE",
+							getExceptionCauseMessage(e));
+				}
+				globalMap.put(currentComponent + "_ERROR_MESSAGE",
+						getExceptionCauseMessage(e));
+				System.err.println("Exception in component " + currentComponent
+						+ " (" + jobName + ")");
+			}
+			if (!(e instanceof TDieException)) {
+				if (e instanceof TalendException) {
+					e.printStackTrace();
+				} else {
+					e.printStackTrace();
+					e.printStackTrace(errorMessagePS);
+					HONGKONG_BUILD_MASTER_VAULT.this.exception = e;
+				}
+			}
+			if (!(e instanceof TalendException)) {
+				try {
+					for (java.lang.reflect.Method m : this.getClass()
+							.getEnclosingClass().getMethods()) {
+						if (m.getName().compareTo(currentComponent + "_error") == 0) {
+							m.invoke(HONGKONG_BUILD_MASTER_VAULT.this,
+									new Object[] { e, currentComponent,
+											globalMap });
+							break;
+						}
+					}
+
+					if (!(e instanceof TDieException)) {
+					}
+				} catch (Exception e) {
+					this.e.printStackTrace();
+				}
+			}
 		}
 	}
-}
 
-			public void tRunJob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tRunJob_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tRunJob_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tRunJob_3_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tRunJob_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				((java.util.Map)threadLocal.get()).put("status", "failure");
-				
-					tRunJob_2_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tRunJob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+	public void tRunJob_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
 
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+		end_Hash.put(errorComponent, System.currentTimeMillis());
 
-			}
-			public void tRunJob_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+		((java.util.Map) threadLocal.get()).put("status", "failure");
 
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+		tRunJob_1_onSubJobError(exception, errorComponent, globalMap);
+	}
 
-			}
-			public void tRunJob_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+	public void tRunJob_3_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
 
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+		end_Hash.put(errorComponent, System.currentTimeMillis());
 
-			}
-		
+		((java.util.Map) threadLocal.get()).put("status", "failure");
 
+		tRunJob_3_onSubJobError(exception, errorComponent, globalMap);
+	}
 
+	public void tRunJob_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
 
+		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+		((java.util.Map) threadLocal.get()).put("status", "failure");
 
-public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tRunJob_1_SUBPROCESS_STATE", 0);
+		tRunJob_2_onSubJobError(exception, errorComponent, globalMap);
+	}
 
- final boolean execStat = this.execStat;
-	
+	public void tRunJob_1_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tRunJob_3_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tRunJob_2_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tRunJob_1Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tRunJob_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
 		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
 
-	try {
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
 			// TDI-39566 avoid throwing an useless Exception
 			boolean resumeIt = true;
 			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
 				resumeIt = resumeEntryMethodName.equals(currentMethodName);
 			}
-			if (resumeIt || globalResumeTicket) { //start the resume
+			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
+				/**
+				 * [tRunJob_1 begin ] start
+				 */
 
+				ok_Hash.put("tRunJob_1", false);
+				start_Hash.put("tRunJob_1", System.currentTimeMillis());
 
-		
+				currentComponent = "tRunJob_1";
 
+				int tos_count_tRunJob_1 = 0;
 
-	
-	/**
-	 * [tRunJob_1 begin ] start
-	 */
+				class BytesLimit65535_tRunJob_1 {
+					public void limitLog4jByte() throws Exception {
 
-	
-
-	
-		
-		ok_Hash.put("tRunJob_1", false);
-		start_Hash.put("tRunJob_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tRunJob_1";
-
-	
-		int tos_count_tRunJob_1 = 0;
-		
-    	class BytesLimit65535_tRunJob_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tRunJob_1().limitLog4jByte();
-class DealChildJobLibrary_tRunJob_1 {
-
-	public String replaceJarPathsFromCrcMap(String originalClassPathLine) throws java.lang.Exception {
-		String classPathLine = "";
-		String crcMapPath = new java.io.File("../crcMap").getCanonicalPath();
-		if (isNeedAddLibsPath( crcMapPath)) {
-			java.util.Map<String, String> crcMap = null;
-			java.io.ObjectInputStream ois = new ObjectInputStream(new java.io.FileInputStream(crcMapPath));
-			crcMap = (java.util.Map<String, String>) ois.readObject();
-			ois.close();
-			classPathLine = addLibsPath(originalClassPathLine, crcMap);
-		} else {
-			classPathLine = originalClassPathLine;
-		}
-		return classPathLine;
-	}
-	
-	private boolean isNeedAddLibsPath(String crcMapPath) {
-		if (!(new java.io.File(crcMapPath).exists())) {// when not use cache
-			return false;
-		}
-		return true;
-	}
-	
-	
-	private String addLibsPath(String line, java.util.Map<String, String> crcMap) {
-		for (java.util.Map.Entry<String, String> entry : crcMap.entrySet()) {
-			line = adaptLibPaths(line, entry);
-		}
-		return line;
-	}
-	
-	private String adaptLibPaths(String line, java.util.Map.Entry<String, String> entry) {
-		String jarName = entry.getValue();
-		String crc = entry.getKey();
-		String libStringFinder = "../lib/" + jarName;
-		if (line.contains(libStringFinder)) {
-			line = line.replace(libStringFinder, "../../../cache/lib/" + crc + "/" + jarName);
-		} else if (line.contains(":$ROOT_PATH/" + jarName + ":")) {
-			line = line.replace(":$ROOT_PATH/" + jarName + ":", ":$ROOT_PATH/../../../cache/lib/" + crc + "/" + jarName + ":");
-		} else if (line.contains(";" + jarName + ";")) {
-			line = line.replace(";" + jarName + ";", ";../../../cache/lib/" + crc + "/" + jarName + ";");
-		}
-		return line;
-	}
-	
-}
-	DealChildJobLibrary_tRunJob_1 dealChildJobLibrary_tRunJob_1 = new DealChildJobLibrary_tRunJob_1();
-
-
- 
-
-
-
-/**
- * [tRunJob_1 begin ] stop
- */
-	
-	/**
-	 * [tRunJob_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_1";
-
-	
-	java.util.List<String> paraList_tRunJob_1 = new java.util.ArrayList<String>();
-	
-			String osName_tRunJob_1 = System.getProperty("os.name");
-			if (osName_tRunJob_1 != null && osName_tRunJob_1.toLowerCase().startsWith("win")){
-	      		
-		      			paraList_tRunJob_1.add("java");
-		      		
-		      					paraList_tRunJob_1.add("-Xms256M");
-		      				
-		      					paraList_tRunJob_1.add("-Xmx1024M");
-		      				
-		      					paraList_tRunJob_1.add("-cp");
-		      				
-		        				paraList_tRunJob_1.add(dealChildJobLibrary_tRunJob_1.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/trove.jar;hongkong_build_master_hubs_0_1.jar;dsendexception_0_1.jar;hub_master_sales_objectives_0_1.jar;hub_master_0_1.jar;hub_master_with_duplicates_0_1.jar;"));
-		      				
-		      					paraList_tRunJob_1.add("deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS");
-		      				
-		      					paraList_tRunJob_1.add("--father_pid="+pid);
-		      				
-		      					paraList_tRunJob_1.add("--root_pid="+rootPid);
-		      				
-		      					paraList_tRunJob_1.add("--father_node=tRunJob_1");
-		      				
-		      					paraList_tRunJob_1.add("--context=Production");
-		      				
-		      					paraList_tRunJob_1.add("%*");
-		      				
-			} else {
-	      		
-						paraList_tRunJob_1.add("java");
-		      		
-								paraList_tRunJob_1.add("-Xms256M");
-		      				
-								paraList_tRunJob_1.add("-Xmx1024M");
-		      				
-								paraList_tRunJob_1.add("-cp");
-		      				
-								paraList_tRunJob_1.add(dealChildJobLibrary_tRunJob_1.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/commons-lang-2.6.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_hubs_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/hub_master_sales_objectives_0_1.jar:$ROOT_PATH/hub_master_0_1.jar:$ROOT_PATH/hub_master_with_duplicates_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
-		      				
-								paraList_tRunJob_1.add("deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS");
-		      				
-								paraList_tRunJob_1.add("--father_pid="+pid);
-		      				
-								paraList_tRunJob_1.add("--root_pid="+rootPid);
-		      				
-								paraList_tRunJob_1.add("--father_node=tRunJob_1");
-		      				
-								paraList_tRunJob_1.add("--context=Production");
-		      				
-								paraList_tRunJob_1.add("$@");
-		      				
-			}    
-	  	
-	//for feature:10589
-	
-		paraList_tRunJob_1.add("--stat_port=" + null);
-	
-
-	if(resuming_logs_dir_path != null){
-		paraList_tRunJob_1.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
-	}
-	String childResumePath_tRunJob_1 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
-	String tRunJobName_tRunJob_1 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
-	if("tRunJob_1".equals(tRunJobName_tRunJob_1) && childResumePath_tRunJob_1 != null){
-		paraList_tRunJob_1.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
-	}
-	paraList_tRunJob_1.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_1");
-	
-	java.util.Map<String, Object> parentContextMap_tRunJob_1 = new java.util.HashMap<String, Object>();
-
-	
-		
-		context.synchronizeContext();
-		
-			parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
-			paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
-			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
-			paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
-			paraList_tRunJob_1.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
-			paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
-			paraList_tRunJob_1.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
-			paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
-		 
-		java.util.Enumeration<?> propertyNames_tRunJob_1 = context.propertyNames();
-		while (propertyNames_tRunJob_1.hasMoreElements()) {
-			String key_tRunJob_1 = (String) propertyNames_tRunJob_1.nextElement();
-			Object value_tRunJob_1 = (Object) context.get(key_tRunJob_1);
-			if(value_tRunJob_1!=null) {  
-				paraList_tRunJob_1.add("--context_param " + key_tRunJob_1 + "=" + value_tRunJob_1);
-			} else {
-				paraList_tRunJob_1.add("--context_param " + key_tRunJob_1 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-			}
-			
-		}
-		
-
-	Object obj_tRunJob_1 = null;
-
-	
-		obj_tRunJob_1 = jobName;
-		if(obj_tRunJob_1!=null) {
-			paraList_tRunJob_1.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_1));
-		} else {
-			paraList_tRunJob_1.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_1.put("WEBJOB_NAME", obj_tRunJob_1);
-	
-	
-		Runtime runtime_tRunJob_1 = Runtime.getRuntime();
-		final Process ps_tRunJob_1;
-		ps_tRunJob_1 = runtime_tRunJob_1.exec((String[])paraList_tRunJob_1.toArray(new String[paraList_tRunJob_1.size()]));
-
-		Thread normal_tRunJob_1 = new Thread() {
-			public void run() {
-				try {
-					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_1.getInputStream()));
-					String line = "";
-					try {
-						while((line = reader.readLine()) != null) {
-						System.out.println(line);
-						}
-					} finally {
-					reader.close();
 					}
-				} catch(java.io.IOException ioe) {
-					
-					ioe.printStackTrace();
 				}
-	    	}
-  		};
-		
-		normal_tRunJob_1.start();
-		
 
-		final StringBuffer errorMsg_tRunJob_1 = new StringBuffer();
-		Thread error_tRunJob_1 = new Thread() {
-			public void run() {
-				try {
-					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_1.getErrorStream()));
-					String line = "";
-        			try {
-          				while((line = reader.readLine()) != null) {
-            				errorMsg_tRunJob_1.append(line).append("\n");
-          				}
-        			} finally {
-          				reader.close();
-        			}
-      			} catch(java.io.IOException ioe) {
-					
-			        ioe.printStackTrace();
-      			}
-    		}
-		};
-		error_tRunJob_1.start();
+				new BytesLimit65535_tRunJob_1().limitLog4jByte();
+				class DealChildJobLibrary_tRunJob_1 {
 
-		//0 indicates normal termination	
-		int result_tRunJob_1 = ps_tRunJob_1.waitFor();
-		normal_tRunJob_1.join(10000);
-		error_tRunJob_1.join(10000);
-  
-		globalMap.put("tRunJob_1_CHILD_RETURN_CODE",result_tRunJob_1);
-		if(result_tRunJob_1 != 0){
-   			globalMap.put("tRunJob_1_CHILD_EXCEPTION_STACKTRACE",errorMsg_tRunJob_1.toString());
-			  
-	    		throw new RuntimeException("Child job returns " + result_tRunJob_1 + ". It doesn't terminate normally.\n" + errorMsg_tRunJob_1.toString());
-			
-  		}
+					public String replaceJarPathsFromCrcMap(
+							String originalClassPathLine)
+							throws java.lang.Exception {
+						String classPathLine = "";
+						String crcMapPath = new java.io.File("../crcMap")
+								.getCanonicalPath();
+						if (isNeedAddLibsPath(crcMapPath)) {
+							java.util.Map<String, String> crcMap = null;
+							java.io.ObjectInputStream ois = new ObjectInputStream(
+									new java.io.FileInputStream(crcMapPath));
+							crcMap = (java.util.Map<String, String>) ois
+									.readObject();
+							ois.close();
+							classPathLine = addLibsPath(originalClassPathLine,
+									crcMap);
+						} else {
+							classPathLine = originalClassPathLine;
+						}
+						return classPathLine;
+					}
 
-		
+					private boolean isNeedAddLibsPath(String crcMapPath) {
+						if (!(new java.io.File(crcMapPath).exists())) {// when
+																		// not
+																		// use
+																		// cache
+							return false;
+						}
+						return true;
+					}
 
- 
+					private String addLibsPath(String line,
+							java.util.Map<String, String> crcMap) {
+						for (java.util.Map.Entry<String, String> entry : crcMap
+								.entrySet()) {
+							line = adaptLibPaths(line, entry);
+						}
+						return line;
+					}
 
+					private String adaptLibPaths(String line,
+							java.util.Map.Entry<String, String> entry) {
+						String jarName = entry.getValue();
+						String crc = entry.getKey();
+						String libStringFinder = "../lib/" + jarName;
+						if (line.contains(libStringFinder)) {
+							line = line
+									.replace(libStringFinder,
+											"../../../cache/lib/" + crc + "/"
+													+ jarName);
+						} else if (line
+								.contains(":$ROOT_PATH/" + jarName + ":")) {
+							line = line.replace(":$ROOT_PATH/" + jarName + ":",
+									":$ROOT_PATH/../../../cache/lib/" + crc
+											+ "/" + jarName + ":");
+						} else if (line.contains(";" + jarName + ";")) {
+							line = line.replace(";" + jarName + ";",
+									";../../../cache/lib/" + crc + "/"
+											+ jarName + ";");
+						}
+						return line;
+					}
 
-	tos_count_tRunJob_1++;
+				}
+				DealChildJobLibrary_tRunJob_1 dealChildJobLibrary_tRunJob_1 = new DealChildJobLibrary_tRunJob_1();
 
-/**
- * [tRunJob_1 main ] stop
- */
-	
-	/**
-	 * [tRunJob_1 process_data_begin ] start
-	 */
+				/**
+				 * [tRunJob_1 begin ] stop
+				 */
 
-	
+				/**
+				 * [tRunJob_1 main ] start
+				 */
 
-	
-	
-	currentComponent="tRunJob_1";
+				currentComponent = "tRunJob_1";
 
-	
+				java.util.List<String> paraList_tRunJob_1 = new java.util.ArrayList<String>();
 
- 
+				String osName_tRunJob_1 = System.getProperty("os.name");
+				if (osName_tRunJob_1 != null
+						&& osName_tRunJob_1.toLowerCase().startsWith("win")) {
 
+					paraList_tRunJob_1
+							.add("C:/Program Files/Java/jre1.8.0_211/bin/java.exe");
 
+					paraList_tRunJob_1.add("-Xms256M");
 
-/**
- * [tRunJob_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tRunJob_1 process_data_end ] start
-	 */
+					paraList_tRunJob_1.add("-Xmx1024M");
 
-	
+					paraList_tRunJob_1.add("-Dfile.encoding=UTF-8");
 
-	
-	
-	currentComponent="tRunJob_1";
+					paraList_tRunJob_1.add("-cp");
 
-	
+					paraList_tRunJob_1
+							.add(dealChildJobLibrary_tRunJob_1
+									.replaceJarPathsFromCrcMap("C:/Users/RRU_SG1/Projects/Talend/workspace/DEEPSEA/poms/jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_hubs_0.1/target/classpath.jar;"));
 
- 
+					paraList_tRunJob_1
+							.add("deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS");
 
+					paraList_tRunJob_1.add("--father_pid=" + pid);
 
+					paraList_tRunJob_1.add("--root_pid=" + rootPid);
 
-/**
- * [tRunJob_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tRunJob_1 end ] start
-	 */
+					paraList_tRunJob_1.add("--father_node=tRunJob_1");
 
-	
+					paraList_tRunJob_1.add("--context=Default");
 
-	
-	
-	currentComponent="tRunJob_1";
+					paraList_tRunJob_1.add("%*");
 
-	
+				} else {
 
- 
+					paraList_tRunJob_1
+							.add("C:/Program Files/Java/jre1.8.0_211/bin/java.exe");
 
-ok_Hash.put("tRunJob_1", true);
-end_Hash.put("tRunJob_1", System.currentTimeMillis());
+					paraList_tRunJob_1.add("-Xms256M");
 
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk1", 0, "ok");
+					paraList_tRunJob_1.add("-Xmx1024M");
+
+					paraList_tRunJob_1.add("-Dfile.encoding=UTF-8");
+
+					paraList_tRunJob_1.add("-cp");
+
+					paraList_tRunJob_1
+							.add(dealChildJobLibrary_tRunJob_1
+									.replaceJarPathsFromCrcMap(
+											"C:/Users/RRU_SG1/Projects/Talend/workspace/DEEPSEA/poms/jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_hubs_0.1/target/classpath.jar:")
+									.replace("$ROOT_PATH",
+											System.getProperty("user.dir")));
+
+					paraList_tRunJob_1
+							.add("deepsea.hongkong_build_master_hubs_0_1.HONGKONG_BUILD_MASTER_HUBS");
+
+					paraList_tRunJob_1.add("--father_pid=" + pid);
+
+					paraList_tRunJob_1.add("--root_pid=" + rootPid);
+
+					paraList_tRunJob_1.add("--father_node=tRunJob_1");
+
+					paraList_tRunJob_1.add("--context=Default");
+
+					paraList_tRunJob_1.add("$@");
+
+				}
+
+				// for feature:10589
+
+				paraList_tRunJob_1.add("--stat_port=" + null);
+
+				if (resuming_logs_dir_path != null) {
+					paraList_tRunJob_1.add("--resuming_logs_dir_path="
+							+ resuming_logs_dir_path);
+				}
+				String childResumePath_tRunJob_1 = ResumeUtil
+						.getChildJobCheckPointPath(resuming_checkpoint_path);
+				String tRunJobName_tRunJob_1 = ResumeUtil
+						.getRighttRunJob(resuming_checkpoint_path);
+				if ("tRunJob_1".equals(tRunJobName_tRunJob_1)
+						&& childResumePath_tRunJob_1 != null) {
+					paraList_tRunJob_1
+							.add("--resuming_checkpoint_path="
+									+ ResumeUtil
+											.getChildJobCheckPointPath(resuming_checkpoint_path));
+				}
+				paraList_tRunJob_1.add("--parent_part_launcher=JOB:" + jobName
+						+ "/NODE:tRunJob_1");
+
+				java.util.Map<String, Object> parentContextMap_tRunJob_1 = new java.util.HashMap<String, Object>();
+
+				context.synchronizeContext();
+
+				parentContextMap_tRunJob_1.put("COUNTRY", context.COUNTRY);
+				paraList_tRunJob_1.add("--context_type " + "COUNTRY" + "="
+						+ "id_String");
+
+				parentContextMap_tRunJob_1.put("DEEPSEA_AUTH_TOKEN",
+						context.DEEPSEA_AUTH_TOKEN);
+				paraList_tRunJob_1.add("--context_type " + "DEEPSEA_AUTH_TOKEN"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_1.put("DEEPSEA_HOSTNAME",
+						context.DEEPSEA_HOSTNAME);
+				paraList_tRunJob_1.add("--context_type " + "DEEPSEA_HOSTNAME"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_1.put("DEFAULT_DATE_FORMAT",
+						context.DEFAULT_DATE_FORMAT);
+				paraList_tRunJob_1.add("--context_type "
+						+ "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+
+				parentContextMap_tRunJob_1.put("MONGODB_HOSTNAME",
+						context.MONGODB_HOSTNAME);
+				paraList_tRunJob_1.add("--context_type " + "MONGODB_HOSTNAME"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_1.put("POSTGRES_DATABASE",
+						context.POSTGRES_DATABASE);
+				paraList_tRunJob_1.add("--context_type " + "POSTGRES_DATABASE"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_1.put("POSTGRES_HOSTNAME",
+						context.POSTGRES_HOSTNAME);
+				paraList_tRunJob_1.add("--context_type " + "POSTGRES_HOSTNAME"
+						+ "=" + "id_String");
+
+				java.util.Enumeration<?> propertyNames_tRunJob_1 = context
+						.propertyNames();
+				while (propertyNames_tRunJob_1.hasMoreElements()) {
+					String key_tRunJob_1 = (String) propertyNames_tRunJob_1
+							.nextElement();
+					Object value_tRunJob_1 = (Object) context
+							.get(key_tRunJob_1);
+					if (value_tRunJob_1 != null) {
+						paraList_tRunJob_1.add("--context_param "
+								+ key_tRunJob_1 + "=" + value_tRunJob_1);
+					} else {
+						paraList_tRunJob_1
+								.add("--context_param "
+										+ key_tRunJob_1
+										+ "="
+										+ NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+					}
+
+				}
+
+				Object obj_tRunJob_1 = null;
+
+				obj_tRunJob_1 = jobName;
+				if (obj_tRunJob_1 != null) {
+					paraList_tRunJob_1
+							.add("--context_param WEBJOB_NAME="
+									+ RuntimeUtils
+											.tRunJobConvertContext(obj_tRunJob_1));
+				} else {
+					paraList_tRunJob_1
+							.add("--context_param WEBJOB_NAME="
+									+ NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+				}
+
+				parentContextMap_tRunJob_1.put("WEBJOB_NAME", obj_tRunJob_1);
+
+				Runtime runtime_tRunJob_1 = Runtime.getRuntime();
+				final Process ps_tRunJob_1;
+				ps_tRunJob_1 = runtime_tRunJob_1
+						.exec((String[]) paraList_tRunJob_1
+								.toArray(new String[paraList_tRunJob_1.size()]));
+
+				Thread normal_tRunJob_1 = new Thread() {
+					public void run() {
+						try {
+							java.io.BufferedReader reader = new java.io.BufferedReader(
+									new java.io.InputStreamReader(
+											ps_tRunJob_1.getInputStream()));
+							String line = "";
+							try {
+								while ((line = reader.readLine()) != null) {
+									System.out.println(line);
+								}
+							} finally {
+								reader.close();
+							}
+						} catch (java.io.IOException ioe) {
+
+							ioe.printStackTrace();
+						}
+					}
+				};
+
+				normal_tRunJob_1.start();
+
+				final StringBuffer errorMsg_tRunJob_1 = new StringBuffer();
+				Thread error_tRunJob_1 = new Thread() {
+					public void run() {
+						try {
+							java.io.BufferedReader reader = new java.io.BufferedReader(
+									new java.io.InputStreamReader(
+											ps_tRunJob_1.getErrorStream()));
+							String line = "";
+							try {
+								while ((line = reader.readLine()) != null) {
+									errorMsg_tRunJob_1.append(line)
+											.append("\n");
+								}
+							} finally {
+								reader.close();
+							}
+						} catch (java.io.IOException ioe) {
+
+							ioe.printStackTrace();
+						}
+					}
+				};
+				error_tRunJob_1.start();
+
+				// 0 indicates normal termination
+				int result_tRunJob_1 = ps_tRunJob_1.waitFor();
+				normal_tRunJob_1.join(10000);
+				error_tRunJob_1.join(10000);
+
+				globalMap.put("tRunJob_1_CHILD_RETURN_CODE", result_tRunJob_1);
+				if (result_tRunJob_1 != 0) {
+					globalMap.put("tRunJob_1_CHILD_EXCEPTION_STACKTRACE",
+							errorMsg_tRunJob_1.toString());
+
+					throw new RuntimeException("Child job returns "
+							+ result_tRunJob_1
+							+ ". It doesn't terminate normally.\n"
+							+ errorMsg_tRunJob_1.toString());
+
+				}
+
+				tos_count_tRunJob_1++;
+
+				/**
+				 * [tRunJob_1 main ] stop
+				 */
+
+				/**
+				 * [tRunJob_1 process_data_begin ] start
+				 */
+
+				currentComponent = "tRunJob_1";
+
+				/**
+				 * [tRunJob_1 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tRunJob_1 process_data_end ] start
+				 */
+
+				currentComponent = "tRunJob_1";
+
+				/**
+				 * [tRunJob_1 process_data_end ] stop
+				 */
+
+				/**
+				 * [tRunJob_1 end ] start
+				 */
+
+				currentComponent = "tRunJob_1";
+
+				ok_Hash.put("tRunJob_1", true);
+				end_Hash.put("tRunJob_1", System.currentTimeMillis());
+
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk1", 0, "ok");
 				}
 				tRunJob_3Process(globalMap);
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
 				}
 				tRunJob_2Process(globalMap);
 
+				/**
+				 * [tRunJob_1 end ] stop
+				 */
+			}// end the resume
 
+		} catch (java.lang.Exception e) {
 
-/**
- * [tRunJob_1 end ] stop
- */
-				}//end the resume
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
 
-				
+			throw te;
+		} catch (java.lang.Error error) {
 
+			runStat.stopThreadStat();
 
+			throw error;
+		} finally {
 
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tRunJob_1 finally ] start
-	 */
+			try {
 
-	
+				/**
+				 * [tRunJob_1 finally ] start
+				 */
 
-	
-	
-	currentComponent="tRunJob_1";
+				currentComponent = "tRunJob_1";
 
-	
-
- 
-
-
-
-/**
- * [tRunJob_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
+				/**
+				 * [tRunJob_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
 			}
-		
+			resourceMap = null;
+		}
 
 		globalMap.put("tRunJob_1_SUBPROCESS_STATE", 1);
 	}
-	
 
-public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tRunJob_3_SUBPROCESS_STATE", 0);
+	public void tRunJob_3Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tRunJob_3_SUBPROCESS_STATE", 0);
 
- final boolean execStat = this.execStat;
-	
+		final boolean execStat = this.execStat;
+
 		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
 
-	try {
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
 			// TDI-39566 avoid throwing an useless Exception
 			boolean resumeIt = true;
 			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
 				resumeIt = resumeEntryMethodName.equals(currentMethodName);
 			}
-			if (resumeIt || globalResumeTicket) { //start the resume
+			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
+				/**
+				 * [tRunJob_3 begin ] start
+				 */
 
+				ok_Hash.put("tRunJob_3", false);
+				start_Hash.put("tRunJob_3", System.currentTimeMillis());
 
+				currentComponent = "tRunJob_3";
 
+				int tos_count_tRunJob_3 = 0;
 
-	
-	/**
-	 * [tRunJob_3 begin ] start
-	 */
+				class BytesLimit65535_tRunJob_3 {
+					public void limitLog4jByte() throws Exception {
 
-	
-
-	
-		
-		ok_Hash.put("tRunJob_3", false);
-		start_Hash.put("tRunJob_3", System.currentTimeMillis());
-		
-	
-	currentComponent="tRunJob_3";
-
-	
-		int tos_count_tRunJob_3 = 0;
-		
-    	class BytesLimit65535_tRunJob_3{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tRunJob_3().limitLog4jByte();
-class DealChildJobLibrary_tRunJob_3 {
-
-	public String replaceJarPathsFromCrcMap(String originalClassPathLine) throws java.lang.Exception {
-		String classPathLine = "";
-		String crcMapPath = new java.io.File("../crcMap").getCanonicalPath();
-		if (isNeedAddLibsPath( crcMapPath)) {
-			java.util.Map<String, String> crcMap = null;
-			java.io.ObjectInputStream ois = new ObjectInputStream(new java.io.FileInputStream(crcMapPath));
-			crcMap = (java.util.Map<String, String>) ois.readObject();
-			ois.close();
-			classPathLine = addLibsPath(originalClassPathLine, crcMap);
-		} else {
-			classPathLine = originalClassPathLine;
-		}
-		return classPathLine;
-	}
-	
-	private boolean isNeedAddLibsPath(String crcMapPath) {
-		if (!(new java.io.File(crcMapPath).exists())) {// when not use cache
-			return false;
-		}
-		return true;
-	}
-	
-	
-	private String addLibsPath(String line, java.util.Map<String, String> crcMap) {
-		for (java.util.Map.Entry<String, String> entry : crcMap.entrySet()) {
-			line = adaptLibPaths(line, entry);
-		}
-		return line;
-	}
-	
-	private String adaptLibPaths(String line, java.util.Map.Entry<String, String> entry) {
-		String jarName = entry.getValue();
-		String crc = entry.getKey();
-		String libStringFinder = "../lib/" + jarName;
-		if (line.contains(libStringFinder)) {
-			line = line.replace(libStringFinder, "../../../cache/lib/" + crc + "/" + jarName);
-		} else if (line.contains(":$ROOT_PATH/" + jarName + ":")) {
-			line = line.replace(":$ROOT_PATH/" + jarName + ":", ":$ROOT_PATH/../../../cache/lib/" + crc + "/" + jarName + ":");
-		} else if (line.contains(";" + jarName + ";")) {
-			line = line.replace(";" + jarName + ";", ";../../../cache/lib/" + crc + "/" + jarName + ";");
-		}
-		return line;
-	}
-	
-}
-	DealChildJobLibrary_tRunJob_3 dealChildJobLibrary_tRunJob_3 = new DealChildJobLibrary_tRunJob_3();
-
-
- 
-
-
-
-/**
- * [tRunJob_3 begin ] stop
- */
-	
-	/**
-	 * [tRunJob_3 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_3";
-
-	
-	java.util.List<String> paraList_tRunJob_3 = new java.util.ArrayList<String>();
-	
-			String osName_tRunJob_3 = System.getProperty("os.name");
-			if (osName_tRunJob_3 != null && osName_tRunJob_3.toLowerCase().startsWith("win")){
-	      		
-		      			paraList_tRunJob_3.add("java");
-		      		
-		      					paraList_tRunJob_3.add("-Xms256M");
-		      				
-		      					paraList_tRunJob_3.add("-Xmx1024M");
-		      				
-		      					paraList_tRunJob_3.add("-cp");
-		      				
-		        				paraList_tRunJob_3.add(dealChildJobLibrary_tRunJob_3.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/commons-lang-2.6.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/talendcsv.jar;../lib/trove.jar;hongkong_build_master_sats_0_1.jar;sat_product_0_1.jar;sat_market_0_1.jar;dsendexception_0_1.jar;sat_employee_0_1.jar;sat_source_channel_0_1.jar;sat_customer_0_1.jar;sat_sales_objective_0_1.jar;sat_organization_0_1.jar;sat_geography_0_1.jar;"));
-		      				
-		      					paraList_tRunJob_3.add("deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS");
-		      				
-		      					paraList_tRunJob_3.add("--father_pid="+pid);
-		      				
-		      					paraList_tRunJob_3.add("--root_pid="+rootPid);
-		      				
-		      					paraList_tRunJob_3.add("--father_node=tRunJob_3");
-		      				
-		      					paraList_tRunJob_3.add("--context=Production");
-		      				
-		      					paraList_tRunJob_3.add("%*");
-		      				
-			} else {
-	      		
-						paraList_tRunJob_3.add("java");
-		      		
-								paraList_tRunJob_3.add("-Xms256M");
-		      				
-								paraList_tRunJob_3.add("-Xmx1024M");
-		      				
-								paraList_tRunJob_3.add("-cp");
-		      				
-								paraList_tRunJob_3.add(dealChildJobLibrary_tRunJob_3.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/commons-lang-2.6.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_sats_0_1.jar:$ROOT_PATH/sat_product_0_1.jar:$ROOT_PATH/sat_market_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/sat_employee_0_1.jar:$ROOT_PATH/sat_source_channel_0_1.jar:$ROOT_PATH/sat_customer_0_1.jar:$ROOT_PATH/sat_sales_objective_0_1.jar:$ROOT_PATH/sat_organization_0_1.jar:$ROOT_PATH/sat_geography_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
-		      				
-								paraList_tRunJob_3.add("deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS");
-		      				
-								paraList_tRunJob_3.add("--father_pid="+pid);
-		      				
-								paraList_tRunJob_3.add("--root_pid="+rootPid);
-		      				
-								paraList_tRunJob_3.add("--father_node=tRunJob_3");
-		      				
-								paraList_tRunJob_3.add("--context=Production");
-		      				
-								paraList_tRunJob_3.add("$@");
-		      				
-			}    
-	  	
-	//for feature:10589
-	
-		paraList_tRunJob_3.add("--stat_port=" + null);
-	
-
-	if(resuming_logs_dir_path != null){
-		paraList_tRunJob_3.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
-	}
-	String childResumePath_tRunJob_3 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
-	String tRunJobName_tRunJob_3 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
-	if("tRunJob_3".equals(tRunJobName_tRunJob_3) && childResumePath_tRunJob_3 != null){
-		paraList_tRunJob_3.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
-	}
-	paraList_tRunJob_3.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_3");
-	
-	java.util.Map<String, Object> parentContextMap_tRunJob_3 = new java.util.HashMap<String, Object>();
-
-	
-		
-		context.synchronizeContext();
-		
-			parentContextMap_tRunJob_3.put("COUNTRY", context.COUNTRY);
-			paraList_tRunJob_3.add("--context_type " + "COUNTRY" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_3.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
-			paraList_tRunJob_3.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_3.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
-			paraList_tRunJob_3.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_3.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
-			paraList_tRunJob_3.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_3.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
-			paraList_tRunJob_3.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_3.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
-			paraList_tRunJob_3.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_3.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
-			paraList_tRunJob_3.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
-		 
-		java.util.Enumeration<?> propertyNames_tRunJob_3 = context.propertyNames();
-		while (propertyNames_tRunJob_3.hasMoreElements()) {
-			String key_tRunJob_3 = (String) propertyNames_tRunJob_3.nextElement();
-			Object value_tRunJob_3 = (Object) context.get(key_tRunJob_3);
-			if(value_tRunJob_3!=null) {  
-				paraList_tRunJob_3.add("--context_param " + key_tRunJob_3 + "=" + value_tRunJob_3);
-			} else {
-				paraList_tRunJob_3.add("--context_param " + key_tRunJob_3 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-			}
-			
-		}
-		
-
-	Object obj_tRunJob_3 = null;
-
-	
-		obj_tRunJob_3 = jobName;
-		if(obj_tRunJob_3!=null) {
-			paraList_tRunJob_3.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_3));
-		} else {
-			paraList_tRunJob_3.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_3.put("WEBJOB_NAME", obj_tRunJob_3);
-	
-	
-		Runtime runtime_tRunJob_3 = Runtime.getRuntime();
-		final Process ps_tRunJob_3;
-		ps_tRunJob_3 = runtime_tRunJob_3.exec((String[])paraList_tRunJob_3.toArray(new String[paraList_tRunJob_3.size()]));
-
-		Thread normal_tRunJob_3 = new Thread() {
-			public void run() {
-				try {
-					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_3.getInputStream()));
-					String line = "";
-					try {
-						while((line = reader.readLine()) != null) {
-						System.out.println(line);
-						}
-					} finally {
-					reader.close();
 					}
-				} catch(java.io.IOException ioe) {
-					
-					ioe.printStackTrace();
 				}
-	    	}
-  		};
-		
-		normal_tRunJob_3.start();
-		
 
-		final StringBuffer errorMsg_tRunJob_3 = new StringBuffer();
-		Thread error_tRunJob_3 = new Thread() {
-			public void run() {
-				try {
-					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_3.getErrorStream()));
-					String line = "";
-        			try {
-          				while((line = reader.readLine()) != null) {
-            				errorMsg_tRunJob_3.append(line).append("\n");
-          				}
-        			} finally {
-          				reader.close();
-        			}
-      			} catch(java.io.IOException ioe) {
-					
-			        ioe.printStackTrace();
-      			}
-    		}
-		};
-		error_tRunJob_3.start();
+				new BytesLimit65535_tRunJob_3().limitLog4jByte();
+				class DealChildJobLibrary_tRunJob_3 {
 
-		//0 indicates normal termination	
-		int result_tRunJob_3 = ps_tRunJob_3.waitFor();
-		normal_tRunJob_3.join(10000);
-		error_tRunJob_3.join(10000);
-  
-		globalMap.put("tRunJob_3_CHILD_RETURN_CODE",result_tRunJob_3);
-		if(result_tRunJob_3 != 0){
-   			globalMap.put("tRunJob_3_CHILD_EXCEPTION_STACKTRACE",errorMsg_tRunJob_3.toString());
-			
-				
-				System.err.println("Child job returns " + result_tRunJob_3 + ". It doesn't terminate normally.\n" + errorMsg_tRunJob_3.toString());
-			
-  		}
+					public String replaceJarPathsFromCrcMap(
+							String originalClassPathLine)
+							throws java.lang.Exception {
+						String classPathLine = "";
+						String crcMapPath = new java.io.File("../crcMap")
+								.getCanonicalPath();
+						if (isNeedAddLibsPath(crcMapPath)) {
+							java.util.Map<String, String> crcMap = null;
+							java.io.ObjectInputStream ois = new ObjectInputStream(
+									new java.io.FileInputStream(crcMapPath));
+							crcMap = (java.util.Map<String, String>) ois
+									.readObject();
+							ois.close();
+							classPathLine = addLibsPath(originalClassPathLine,
+									crcMap);
+						} else {
+							classPathLine = originalClassPathLine;
+						}
+						return classPathLine;
+					}
 
-		
+					private boolean isNeedAddLibsPath(String crcMapPath) {
+						if (!(new java.io.File(crcMapPath).exists())) {// when
+																		// not
+																		// use
+																		// cache
+							return false;
+						}
+						return true;
+					}
 
- 
+					private String addLibsPath(String line,
+							java.util.Map<String, String> crcMap) {
+						for (java.util.Map.Entry<String, String> entry : crcMap
+								.entrySet()) {
+							line = adaptLibPaths(line, entry);
+						}
+						return line;
+					}
 
+					private String adaptLibPaths(String line,
+							java.util.Map.Entry<String, String> entry) {
+						String jarName = entry.getValue();
+						String crc = entry.getKey();
+						String libStringFinder = "../lib/" + jarName;
+						if (line.contains(libStringFinder)) {
+							line = line
+									.replace(libStringFinder,
+											"../../../cache/lib/" + crc + "/"
+													+ jarName);
+						} else if (line
+								.contains(":$ROOT_PATH/" + jarName + ":")) {
+							line = line.replace(":$ROOT_PATH/" + jarName + ":",
+									":$ROOT_PATH/../../../cache/lib/" + crc
+											+ "/" + jarName + ":");
+						} else if (line.contains(";" + jarName + ";")) {
+							line = line.replace(";" + jarName + ";",
+									";../../../cache/lib/" + crc + "/"
+											+ jarName + ";");
+						}
+						return line;
+					}
 
-	tos_count_tRunJob_3++;
-
-/**
- * [tRunJob_3 main ] stop
- */
-	
-	/**
-	 * [tRunJob_3 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_3";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_3 process_data_begin ] stop
- */
-	
-	/**
-	 * [tRunJob_3 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_3";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_3 process_data_end ] stop
- */
-	
-	/**
-	 * [tRunJob_3 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_3";
-
-	
-
- 
-
-ok_Hash.put("tRunJob_3", true);
-end_Hash.put("tRunJob_3", System.currentTimeMillis());
-
-
-
-
-/**
- * [tRunJob_3 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tRunJob_3 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_3";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_3 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
 				}
-				resourceMap = null;
+				DealChildJobLibrary_tRunJob_3 dealChildJobLibrary_tRunJob_3 = new DealChildJobLibrary_tRunJob_3();
+
+				/**
+				 * [tRunJob_3 begin ] stop
+				 */
+
+				/**
+				 * [tRunJob_3 main ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				java.util.List<String> paraList_tRunJob_3 = new java.util.ArrayList<String>();
+
+				String osName_tRunJob_3 = System.getProperty("os.name");
+				if (osName_tRunJob_3 != null
+						&& osName_tRunJob_3.toLowerCase().startsWith("win")) {
+
+					paraList_tRunJob_3
+							.add("C:/Program Files/Java/jre1.8.0_211/bin/java.exe");
+
+					paraList_tRunJob_3.add("-Xms256M");
+
+					paraList_tRunJob_3.add("-Xmx1024M");
+
+					paraList_tRunJob_3.add("-Dfile.encoding=UTF-8");
+
+					paraList_tRunJob_3.add("-cp");
+
+					paraList_tRunJob_3
+							.add(dealChildJobLibrary_tRunJob_3
+									.replaceJarPathsFromCrcMap("C:/Users/RRU_SG1/Projects/Talend/workspace/DEEPSEA/poms/jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_sats_0.1/target/classpath.jar;"));
+
+					paraList_tRunJob_3
+							.add("deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS");
+
+					paraList_tRunJob_3.add("--father_pid=" + pid);
+
+					paraList_tRunJob_3.add("--root_pid=" + rootPid);
+
+					paraList_tRunJob_3.add("--father_node=tRunJob_3");
+
+					paraList_tRunJob_3.add("--context=Default");
+
+					paraList_tRunJob_3.add("%*");
+
+				} else {
+
+					paraList_tRunJob_3
+							.add("C:/Program Files/Java/jre1.8.0_211/bin/java.exe");
+
+					paraList_tRunJob_3.add("-Xms256M");
+
+					paraList_tRunJob_3.add("-Xmx1024M");
+
+					paraList_tRunJob_3.add("-Dfile.encoding=UTF-8");
+
+					paraList_tRunJob_3.add("-cp");
+
+					paraList_tRunJob_3
+							.add(dealChildJobLibrary_tRunJob_3
+									.replaceJarPathsFromCrcMap(
+											"C:/Users/RRU_SG1/Projects/Talend/workspace/DEEPSEA/poms/jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_sats_0.1/target/classpath.jar:")
+									.replace("$ROOT_PATH",
+											System.getProperty("user.dir")));
+
+					paraList_tRunJob_3
+							.add("deepsea.hongkong_build_master_sats_0_1.HONGKONG_BUILD_MASTER_SATS");
+
+					paraList_tRunJob_3.add("--father_pid=" + pid);
+
+					paraList_tRunJob_3.add("--root_pid=" + rootPid);
+
+					paraList_tRunJob_3.add("--father_node=tRunJob_3");
+
+					paraList_tRunJob_3.add("--context=Default");
+
+					paraList_tRunJob_3.add("$@");
+
+				}
+
+				// for feature:10589
+
+				paraList_tRunJob_3.add("--stat_port=" + null);
+
+				if (resuming_logs_dir_path != null) {
+					paraList_tRunJob_3.add("--resuming_logs_dir_path="
+							+ resuming_logs_dir_path);
+				}
+				String childResumePath_tRunJob_3 = ResumeUtil
+						.getChildJobCheckPointPath(resuming_checkpoint_path);
+				String tRunJobName_tRunJob_3 = ResumeUtil
+						.getRighttRunJob(resuming_checkpoint_path);
+				if ("tRunJob_3".equals(tRunJobName_tRunJob_3)
+						&& childResumePath_tRunJob_3 != null) {
+					paraList_tRunJob_3
+							.add("--resuming_checkpoint_path="
+									+ ResumeUtil
+											.getChildJobCheckPointPath(resuming_checkpoint_path));
+				}
+				paraList_tRunJob_3.add("--parent_part_launcher=JOB:" + jobName
+						+ "/NODE:tRunJob_3");
+
+				java.util.Map<String, Object> parentContextMap_tRunJob_3 = new java.util.HashMap<String, Object>();
+
+				context.synchronizeContext();
+
+				parentContextMap_tRunJob_3.put("COUNTRY", context.COUNTRY);
+				paraList_tRunJob_3.add("--context_type " + "COUNTRY" + "="
+						+ "id_String");
+
+				parentContextMap_tRunJob_3.put("DEEPSEA_AUTH_TOKEN",
+						context.DEEPSEA_AUTH_TOKEN);
+				paraList_tRunJob_3.add("--context_type " + "DEEPSEA_AUTH_TOKEN"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_3.put("DEEPSEA_HOSTNAME",
+						context.DEEPSEA_HOSTNAME);
+				paraList_tRunJob_3.add("--context_type " + "DEEPSEA_HOSTNAME"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_3.put("DEFAULT_DATE_FORMAT",
+						context.DEFAULT_DATE_FORMAT);
+				paraList_tRunJob_3.add("--context_type "
+						+ "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+
+				parentContextMap_tRunJob_3.put("MONGODB_HOSTNAME",
+						context.MONGODB_HOSTNAME);
+				paraList_tRunJob_3.add("--context_type " + "MONGODB_HOSTNAME"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_3.put("POSTGRES_DATABASE",
+						context.POSTGRES_DATABASE);
+				paraList_tRunJob_3.add("--context_type " + "POSTGRES_DATABASE"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_3.put("POSTGRES_HOSTNAME",
+						context.POSTGRES_HOSTNAME);
+				paraList_tRunJob_3.add("--context_type " + "POSTGRES_HOSTNAME"
+						+ "=" + "id_String");
+
+				java.util.Enumeration<?> propertyNames_tRunJob_3 = context
+						.propertyNames();
+				while (propertyNames_tRunJob_3.hasMoreElements()) {
+					String key_tRunJob_3 = (String) propertyNames_tRunJob_3
+							.nextElement();
+					Object value_tRunJob_3 = (Object) context
+							.get(key_tRunJob_3);
+					if (value_tRunJob_3 != null) {
+						paraList_tRunJob_3.add("--context_param "
+								+ key_tRunJob_3 + "=" + value_tRunJob_3);
+					} else {
+						paraList_tRunJob_3
+								.add("--context_param "
+										+ key_tRunJob_3
+										+ "="
+										+ NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+					}
+
+				}
+
+				Object obj_tRunJob_3 = null;
+
+				obj_tRunJob_3 = jobName;
+				if (obj_tRunJob_3 != null) {
+					paraList_tRunJob_3
+							.add("--context_param WEBJOB_NAME="
+									+ RuntimeUtils
+											.tRunJobConvertContext(obj_tRunJob_3));
+				} else {
+					paraList_tRunJob_3
+							.add("--context_param WEBJOB_NAME="
+									+ NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+				}
+
+				parentContextMap_tRunJob_3.put("WEBJOB_NAME", obj_tRunJob_3);
+
+				Runtime runtime_tRunJob_3 = Runtime.getRuntime();
+				final Process ps_tRunJob_3;
+				ps_tRunJob_3 = runtime_tRunJob_3
+						.exec((String[]) paraList_tRunJob_3
+								.toArray(new String[paraList_tRunJob_3.size()]));
+
+				Thread normal_tRunJob_3 = new Thread() {
+					public void run() {
+						try {
+							java.io.BufferedReader reader = new java.io.BufferedReader(
+									new java.io.InputStreamReader(
+											ps_tRunJob_3.getInputStream()));
+							String line = "";
+							try {
+								while ((line = reader.readLine()) != null) {
+									System.out.println(line);
+								}
+							} finally {
+								reader.close();
+							}
+						} catch (java.io.IOException ioe) {
+
+							ioe.printStackTrace();
+						}
+					}
+				};
+
+				normal_tRunJob_3.start();
+
+				final StringBuffer errorMsg_tRunJob_3 = new StringBuffer();
+				Thread error_tRunJob_3 = new Thread() {
+					public void run() {
+						try {
+							java.io.BufferedReader reader = new java.io.BufferedReader(
+									new java.io.InputStreamReader(
+											ps_tRunJob_3.getErrorStream()));
+							String line = "";
+							try {
+								while ((line = reader.readLine()) != null) {
+									errorMsg_tRunJob_3.append(line)
+											.append("\n");
+								}
+							} finally {
+								reader.close();
+							}
+						} catch (java.io.IOException ioe) {
+
+							ioe.printStackTrace();
+						}
+					}
+				};
+				error_tRunJob_3.start();
+
+				// 0 indicates normal termination
+				int result_tRunJob_3 = ps_tRunJob_3.waitFor();
+				normal_tRunJob_3.join(10000);
+				error_tRunJob_3.join(10000);
+
+				globalMap.put("tRunJob_3_CHILD_RETURN_CODE", result_tRunJob_3);
+				if (result_tRunJob_3 != 0) {
+					globalMap.put("tRunJob_3_CHILD_EXCEPTION_STACKTRACE",
+							errorMsg_tRunJob_3.toString());
+
+					System.err.println("Child job returns " + result_tRunJob_3
+							+ ". It doesn't terminate normally.\n"
+							+ errorMsg_tRunJob_3.toString());
+
+				}
+
+				tos_count_tRunJob_3++;
+
+				/**
+				 * [tRunJob_3 main ] stop
+				 */
+
+				/**
+				 * [tRunJob_3 process_data_begin ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				/**
+				 * [tRunJob_3 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tRunJob_3 process_data_end ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				/**
+				 * [tRunJob_3 process_data_end ] stop
+				 */
+
+				/**
+				 * [tRunJob_3 end ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				ok_Hash.put("tRunJob_3", true);
+				end_Hash.put("tRunJob_3", System.currentTimeMillis());
+
+				/**
+				 * [tRunJob_3 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tRunJob_3 finally ] start
+				 */
+
+				currentComponent = "tRunJob_3";
+
+				/**
+				 * [tRunJob_3 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
 			}
-		
+			resourceMap = null;
+		}
 
 		globalMap.put("tRunJob_3_SUBPROCESS_STATE", 1);
 	}
-	
 
-public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tRunJob_2_SUBPROCESS_STATE", 0);
+	public void tRunJob_2Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tRunJob_2_SUBPROCESS_STATE", 0);
 
- final boolean execStat = this.execStat;
-	
+		final boolean execStat = this.execStat;
+
 		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
 
-	try {
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
 			// TDI-39566 avoid throwing an useless Exception
 			boolean resumeIt = true;
 			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
 				resumeIt = resumeEntryMethodName.equals(currentMethodName);
 			}
-			if (resumeIt || globalResumeTicket) { //start the resume
+			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
+				/**
+				 * [tRunJob_2 begin ] start
+				 */
 
+				ok_Hash.put("tRunJob_2", false);
+				start_Hash.put("tRunJob_2", System.currentTimeMillis());
 
+				currentComponent = "tRunJob_2";
 
+				int tos_count_tRunJob_2 = 0;
 
-	
-	/**
-	 * [tRunJob_2 begin ] start
-	 */
+				class BytesLimit65535_tRunJob_2 {
+					public void limitLog4jByte() throws Exception {
 
-	
-
-	
-		
-		ok_Hash.put("tRunJob_2", false);
-		start_Hash.put("tRunJob_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tRunJob_2";
-
-	
-		int tos_count_tRunJob_2 = 0;
-		
-    	class BytesLimit65535_tRunJob_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tRunJob_2().limitLog4jByte();
-class DealChildJobLibrary_tRunJob_2 {
-
-	public String replaceJarPathsFromCrcMap(String originalClassPathLine) throws java.lang.Exception {
-		String classPathLine = "";
-		String crcMapPath = new java.io.File("../crcMap").getCanonicalPath();
-		if (isNeedAddLibsPath( crcMapPath)) {
-			java.util.Map<String, String> crcMap = null;
-			java.io.ObjectInputStream ois = new ObjectInputStream(new java.io.FileInputStream(crcMapPath));
-			crcMap = (java.util.Map<String, String>) ois.readObject();
-			ois.close();
-			classPathLine = addLibsPath(originalClassPathLine, crcMap);
-		} else {
-			classPathLine = originalClassPathLine;
-		}
-		return classPathLine;
-	}
-	
-	private boolean isNeedAddLibsPath(String crcMapPath) {
-		if (!(new java.io.File(crcMapPath).exists())) {// when not use cache
-			return false;
-		}
-		return true;
-	}
-	
-	
-	private String addLibsPath(String line, java.util.Map<String, String> crcMap) {
-		for (java.util.Map.Entry<String, String> entry : crcMap.entrySet()) {
-			line = adaptLibPaths(line, entry);
-		}
-		return line;
-	}
-	
-	private String adaptLibPaths(String line, java.util.Map.Entry<String, String> entry) {
-		String jarName = entry.getValue();
-		String crc = entry.getKey();
-		String libStringFinder = "../lib/" + jarName;
-		if (line.contains(libStringFinder)) {
-			line = line.replace(libStringFinder, "../../../cache/lib/" + crc + "/" + jarName);
-		} else if (line.contains(":$ROOT_PATH/" + jarName + ":")) {
-			line = line.replace(":$ROOT_PATH/" + jarName + ":", ":$ROOT_PATH/../../../cache/lib/" + crc + "/" + jarName + ":");
-		} else if (line.contains(";" + jarName + ";")) {
-			line = line.replace(";" + jarName + ";", ";../../../cache/lib/" + crc + "/" + jarName + ";");
-		}
-		return line;
-	}
-	
-}
-	DealChildJobLibrary_tRunJob_2 dealChildJobLibrary_tRunJob_2 = new DealChildJobLibrary_tRunJob_2();
-
-
- 
-
-
-
-/**
- * [tRunJob_2 begin ] stop
- */
-	
-	/**
-	 * [tRunJob_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-	java.util.List<String> paraList_tRunJob_2 = new java.util.ArrayList<String>();
-	
-			String osName_tRunJob_2 = System.getProperty("os.name");
-			if (osName_tRunJob_2 != null && osName_tRunJob_2.toLowerCase().startsWith("win")){
-	      		
-		      			paraList_tRunJob_2.add("java");
-		      		
-		      					paraList_tRunJob_2.add("-Xms256M");
-		      				
-		      					paraList_tRunJob_2.add("-Xmx1024M");
-		      				
-		      					paraList_tRunJob_2.add("-cp");
-		      				
-		        				paraList_tRunJob_2.add(dealChildJobLibrary_tRunJob_2.replaceJarPathsFromCrcMap(".;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/jersey-client-1.4.jar;../lib/jersey-core-1.4.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mongo-java-driver-3.5.0.jar;../lib/postgresql-8.3-603.jdbc3.jar;../lib/talendcsv.jar;../lib/trove.jar;hongkong_build_master_links_0_1.jar;dsendexception_0_1.jar;link_master_with_multiple_without_hub_0_1.jar;link_master_with_multiple_0_1.jar;link_master_with_empty_0_1.jar;check_geography_customer_link_0_1.jar;sal_master_0_1.jar;link_master_sales_objective_0_1.jar;link_master_0_1.jar;"));
-		      				
-		      					paraList_tRunJob_2.add("deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS");
-		      				
-		      					paraList_tRunJob_2.add("--father_pid="+pid);
-		      				
-		      					paraList_tRunJob_2.add("--root_pid="+rootPid);
-		      				
-		      					paraList_tRunJob_2.add("--father_node=tRunJob_2");
-		      				
-		      					paraList_tRunJob_2.add("--context=Production");
-		      				
-		      					paraList_tRunJob_2.add("%*");
-		      				
-			} else {
-	      		
-						paraList_tRunJob_2.add("java");
-		      		
-								paraList_tRunJob_2.add("-Xms256M");
-		      				
-								paraList_tRunJob_2.add("-Xmx1024M");
-		      				
-								paraList_tRunJob_2.add("-cp");
-		      				
-								paraList_tRunJob_2.add(dealChildJobLibrary_tRunJob_2.replaceJarPathsFromCrcMap(".:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/jersey-client-1.4.jar:$ROOT_PATH/../lib/jersey-core-1.4.jar:$ROOT_PATH/../lib/log4j-1.2.15.jar:$ROOT_PATH/../lib/log4j-1.2.16.jar:$ROOT_PATH/../lib/mongo-java-driver-3.5.0.jar:$ROOT_PATH/../lib/postgresql-8.3-603.jdbc3.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/hongkong_build_master_links_0_1.jar:$ROOT_PATH/dsendexception_0_1.jar:$ROOT_PATH/link_master_with_multiple_without_hub_0_1.jar:$ROOT_PATH/link_master_with_multiple_0_1.jar:$ROOT_PATH/link_master_with_empty_0_1.jar:$ROOT_PATH/check_geography_customer_link_0_1.jar:$ROOT_PATH/sal_master_0_1.jar:$ROOT_PATH/link_master_sales_objective_0_1.jar:$ROOT_PATH/link_master_0_1.jar:").replace("$ROOT_PATH",System.getProperty("user.dir")));
-		      				
-								paraList_tRunJob_2.add("deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS");
-		      				
-								paraList_tRunJob_2.add("--father_pid="+pid);
-		      				
-								paraList_tRunJob_2.add("--root_pid="+rootPid);
-		      				
-								paraList_tRunJob_2.add("--father_node=tRunJob_2");
-		      				
-								paraList_tRunJob_2.add("--context=Production");
-		      				
-								paraList_tRunJob_2.add("$@");
-		      				
-			}    
-	  	
-	//for feature:10589
-	
-		paraList_tRunJob_2.add("--stat_port=" + null);
-	
-
-	if(resuming_logs_dir_path != null){
-		paraList_tRunJob_2.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
-	}
-	String childResumePath_tRunJob_2 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
-	String tRunJobName_tRunJob_2 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
-	if("tRunJob_2".equals(tRunJobName_tRunJob_2) && childResumePath_tRunJob_2 != null){
-		paraList_tRunJob_2.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
-	}
-	paraList_tRunJob_2.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_2");
-	
-	java.util.Map<String, Object> parentContextMap_tRunJob_2 = new java.util.HashMap<String, Object>();
-
-	
-		
-		context.synchronizeContext();
-		
-			parentContextMap_tRunJob_2.put("COUNTRY", context.COUNTRY);
-			paraList_tRunJob_2.add("--context_type " + "COUNTRY" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
-			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
-			paraList_tRunJob_2.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
-			paraList_tRunJob_2.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
-			paraList_tRunJob_2.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
-			paraList_tRunJob_2.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
-		
-			parentContextMap_tRunJob_2.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
-			paraList_tRunJob_2.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
-		 
-		java.util.Enumeration<?> propertyNames_tRunJob_2 = context.propertyNames();
-		while (propertyNames_tRunJob_2.hasMoreElements()) {
-			String key_tRunJob_2 = (String) propertyNames_tRunJob_2.nextElement();
-			Object value_tRunJob_2 = (Object) context.get(key_tRunJob_2);
-			if(value_tRunJob_2!=null) {  
-				paraList_tRunJob_2.add("--context_param " + key_tRunJob_2 + "=" + value_tRunJob_2);
-			} else {
-				paraList_tRunJob_2.add("--context_param " + key_tRunJob_2 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-			}
-			
-		}
-		
-
-	Object obj_tRunJob_2 = null;
-
-	
-		obj_tRunJob_2 = jobName;
-		if(obj_tRunJob_2!=null) {
-			paraList_tRunJob_2.add("--context_param WEBJOB_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_2));
-		} else {
-			paraList_tRunJob_2.add("--context_param WEBJOB_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
-		}
-		
-		parentContextMap_tRunJob_2.put("WEBJOB_NAME", obj_tRunJob_2);
-	
-	
-		Runtime runtime_tRunJob_2 = Runtime.getRuntime();
-		final Process ps_tRunJob_2;
-		ps_tRunJob_2 = runtime_tRunJob_2.exec((String[])paraList_tRunJob_2.toArray(new String[paraList_tRunJob_2.size()]));
-
-		Thread normal_tRunJob_2 = new Thread() {
-			public void run() {
-				try {
-					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_2.getInputStream()));
-					String line = "";
-					try {
-						while((line = reader.readLine()) != null) {
-						System.out.println(line);
-						}
-					} finally {
-					reader.close();
 					}
-				} catch(java.io.IOException ioe) {
-					
-					ioe.printStackTrace();
 				}
-	    	}
-  		};
-		
-		normal_tRunJob_2.start();
-		
 
-		final StringBuffer errorMsg_tRunJob_2 = new StringBuffer();
-		Thread error_tRunJob_2 = new Thread() {
-			public void run() {
-				try {
-					java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(ps_tRunJob_2.getErrorStream()));
-					String line = "";
-        			try {
-          				while((line = reader.readLine()) != null) {
-            				errorMsg_tRunJob_2.append(line).append("\n");
-          				}
-        			} finally {
-          				reader.close();
-        			}
-      			} catch(java.io.IOException ioe) {
-					
-			        ioe.printStackTrace();
-      			}
-    		}
-		};
-		error_tRunJob_2.start();
+				new BytesLimit65535_tRunJob_2().limitLog4jByte();
+				class DealChildJobLibrary_tRunJob_2 {
 
-		//0 indicates normal termination	
-		int result_tRunJob_2 = ps_tRunJob_2.waitFor();
-		normal_tRunJob_2.join(10000);
-		error_tRunJob_2.join(10000);
-  
-		globalMap.put("tRunJob_2_CHILD_RETURN_CODE",result_tRunJob_2);
-		if(result_tRunJob_2 != 0){
-   			globalMap.put("tRunJob_2_CHILD_EXCEPTION_STACKTRACE",errorMsg_tRunJob_2.toString());
-			
-				
-				System.err.println("Child job returns " + result_tRunJob_2 + ". It doesn't terminate normally.\n" + errorMsg_tRunJob_2.toString());
-			
-  		}
+					public String replaceJarPathsFromCrcMap(
+							String originalClassPathLine)
+							throws java.lang.Exception {
+						String classPathLine = "";
+						String crcMapPath = new java.io.File("../crcMap")
+								.getCanonicalPath();
+						if (isNeedAddLibsPath(crcMapPath)) {
+							java.util.Map<String, String> crcMap = null;
+							java.io.ObjectInputStream ois = new ObjectInputStream(
+									new java.io.FileInputStream(crcMapPath));
+							crcMap = (java.util.Map<String, String>) ois
+									.readObject();
+							ois.close();
+							classPathLine = addLibsPath(originalClassPathLine,
+									crcMap);
+						} else {
+							classPathLine = originalClassPathLine;
+						}
+						return classPathLine;
+					}
 
-		
+					private boolean isNeedAddLibsPath(String crcMapPath) {
+						if (!(new java.io.File(crcMapPath).exists())) {// when
+																		// not
+																		// use
+																		// cache
+							return false;
+						}
+						return true;
+					}
 
- 
+					private String addLibsPath(String line,
+							java.util.Map<String, String> crcMap) {
+						for (java.util.Map.Entry<String, String> entry : crcMap
+								.entrySet()) {
+							line = adaptLibPaths(line, entry);
+						}
+						return line;
+					}
 
+					private String adaptLibPaths(String line,
+							java.util.Map.Entry<String, String> entry) {
+						String jarName = entry.getValue();
+						String crc = entry.getKey();
+						String libStringFinder = "../lib/" + jarName;
+						if (line.contains(libStringFinder)) {
+							line = line
+									.replace(libStringFinder,
+											"../../../cache/lib/" + crc + "/"
+													+ jarName);
+						} else if (line
+								.contains(":$ROOT_PATH/" + jarName + ":")) {
+							line = line.replace(":$ROOT_PATH/" + jarName + ":",
+									":$ROOT_PATH/../../../cache/lib/" + crc
+											+ "/" + jarName + ":");
+						} else if (line.contains(";" + jarName + ";")) {
+							line = line.replace(";" + jarName + ";",
+									";../../../cache/lib/" + crc + "/"
+											+ jarName + ";");
+						}
+						return line;
+					}
 
-	tos_count_tRunJob_2++;
-
-/**
- * [tRunJob_2 main ] stop
- */
-	
-	/**
-	 * [tRunJob_2 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_2 process_data_begin ] stop
- */
-	
-	/**
-	 * [tRunJob_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_2 process_data_end ] stop
- */
-	
-	/**
-	 * [tRunJob_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
- 
-
-ok_Hash.put("tRunJob_2", true);
-end_Hash.put("tRunJob_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tRunJob_2 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tRunJob_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tRunJob_2";
-
-	
-
- 
-
-
-
-/**
- * [tRunJob_2 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
 				}
-				resourceMap = null;
+				DealChildJobLibrary_tRunJob_2 dealChildJobLibrary_tRunJob_2 = new DealChildJobLibrary_tRunJob_2();
+
+				/**
+				 * [tRunJob_2 begin ] stop
+				 */
+
+				/**
+				 * [tRunJob_2 main ] start
+				 */
+
+				currentComponent = "tRunJob_2";
+
+				java.util.List<String> paraList_tRunJob_2 = new java.util.ArrayList<String>();
+
+				String osName_tRunJob_2 = System.getProperty("os.name");
+				if (osName_tRunJob_2 != null
+						&& osName_tRunJob_2.toLowerCase().startsWith("win")) {
+
+					paraList_tRunJob_2
+							.add("C:/Program Files/Java/jre1.8.0_211/bin/java.exe");
+
+					paraList_tRunJob_2.add("-Xms256M");
+
+					paraList_tRunJob_2.add("-Xmx1024M");
+
+					paraList_tRunJob_2.add("-Dfile.encoding=UTF-8");
+
+					paraList_tRunJob_2.add("-cp");
+
+					paraList_tRunJob_2
+							.add(dealChildJobLibrary_tRunJob_2
+									.replaceJarPathsFromCrcMap("C:/Users/RRU_SG1/Projects/Talend/workspace/DEEPSEA/poms/jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_links_0.1/target/classpath.jar;"));
+
+					paraList_tRunJob_2
+							.add("deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS");
+
+					paraList_tRunJob_2.add("--father_pid=" + pid);
+
+					paraList_tRunJob_2.add("--root_pid=" + rootPid);
+
+					paraList_tRunJob_2.add("--father_node=tRunJob_2");
+
+					paraList_tRunJob_2.add("--context=Default");
+
+					paraList_tRunJob_2.add("%*");
+
+				} else {
+
+					paraList_tRunJob_2
+							.add("C:/Program Files/Java/jre1.8.0_211/bin/java.exe");
+
+					paraList_tRunJob_2.add("-Xms256M");
+
+					paraList_tRunJob_2.add("-Xmx1024M");
+
+					paraList_tRunJob_2.add("-Dfile.encoding=UTF-8");
+
+					paraList_tRunJob_2.add("-cp");
+
+					paraList_tRunJob_2
+							.add(dealChildJobLibrary_tRunJob_2
+									.replaceJarPathsFromCrcMap(
+											"C:/Users/RRU_SG1/Projects/Talend/workspace/DEEPSEA/poms/jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_links_0.1/target/classpath.jar:")
+									.replace("$ROOT_PATH",
+											System.getProperty("user.dir")));
+
+					paraList_tRunJob_2
+							.add("deepsea.hongkong_build_master_links_0_1.HONGKONG_BUILD_MASTER_LINKS");
+
+					paraList_tRunJob_2.add("--father_pid=" + pid);
+
+					paraList_tRunJob_2.add("--root_pid=" + rootPid);
+
+					paraList_tRunJob_2.add("--father_node=tRunJob_2");
+
+					paraList_tRunJob_2.add("--context=Default");
+
+					paraList_tRunJob_2.add("$@");
+
+				}
+
+				// for feature:10589
+
+				paraList_tRunJob_2.add("--stat_port=" + null);
+
+				if (resuming_logs_dir_path != null) {
+					paraList_tRunJob_2.add("--resuming_logs_dir_path="
+							+ resuming_logs_dir_path);
+				}
+				String childResumePath_tRunJob_2 = ResumeUtil
+						.getChildJobCheckPointPath(resuming_checkpoint_path);
+				String tRunJobName_tRunJob_2 = ResumeUtil
+						.getRighttRunJob(resuming_checkpoint_path);
+				if ("tRunJob_2".equals(tRunJobName_tRunJob_2)
+						&& childResumePath_tRunJob_2 != null) {
+					paraList_tRunJob_2
+							.add("--resuming_checkpoint_path="
+									+ ResumeUtil
+											.getChildJobCheckPointPath(resuming_checkpoint_path));
+				}
+				paraList_tRunJob_2.add("--parent_part_launcher=JOB:" + jobName
+						+ "/NODE:tRunJob_2");
+
+				java.util.Map<String, Object> parentContextMap_tRunJob_2 = new java.util.HashMap<String, Object>();
+
+				context.synchronizeContext();
+
+				parentContextMap_tRunJob_2.put("COUNTRY", context.COUNTRY);
+				paraList_tRunJob_2.add("--context_type " + "COUNTRY" + "="
+						+ "id_String");
+
+				parentContextMap_tRunJob_2.put("DEEPSEA_AUTH_TOKEN",
+						context.DEEPSEA_AUTH_TOKEN);
+				paraList_tRunJob_2.add("--context_type " + "DEEPSEA_AUTH_TOKEN"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_2.put("DEEPSEA_HOSTNAME",
+						context.DEEPSEA_HOSTNAME);
+				paraList_tRunJob_2.add("--context_type " + "DEEPSEA_HOSTNAME"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_2.put("DEFAULT_DATE_FORMAT",
+						context.DEFAULT_DATE_FORMAT);
+				paraList_tRunJob_2.add("--context_type "
+						+ "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+
+				parentContextMap_tRunJob_2.put("MONGODB_HOSTNAME",
+						context.MONGODB_HOSTNAME);
+				paraList_tRunJob_2.add("--context_type " + "MONGODB_HOSTNAME"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_2.put("POSTGRES_DATABASE",
+						context.POSTGRES_DATABASE);
+				paraList_tRunJob_2.add("--context_type " + "POSTGRES_DATABASE"
+						+ "=" + "id_String");
+
+				parentContextMap_tRunJob_2.put("POSTGRES_HOSTNAME",
+						context.POSTGRES_HOSTNAME);
+				paraList_tRunJob_2.add("--context_type " + "POSTGRES_HOSTNAME"
+						+ "=" + "id_String");
+
+				java.util.Enumeration<?> propertyNames_tRunJob_2 = context
+						.propertyNames();
+				while (propertyNames_tRunJob_2.hasMoreElements()) {
+					String key_tRunJob_2 = (String) propertyNames_tRunJob_2
+							.nextElement();
+					Object value_tRunJob_2 = (Object) context
+							.get(key_tRunJob_2);
+					if (value_tRunJob_2 != null) {
+						paraList_tRunJob_2.add("--context_param "
+								+ key_tRunJob_2 + "=" + value_tRunJob_2);
+					} else {
+						paraList_tRunJob_2
+								.add("--context_param "
+										+ key_tRunJob_2
+										+ "="
+										+ NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+					}
+
+				}
+
+				Object obj_tRunJob_2 = null;
+
+				obj_tRunJob_2 = jobName;
+				if (obj_tRunJob_2 != null) {
+					paraList_tRunJob_2
+							.add("--context_param WEBJOB_NAME="
+									+ RuntimeUtils
+											.tRunJobConvertContext(obj_tRunJob_2));
+				} else {
+					paraList_tRunJob_2
+							.add("--context_param WEBJOB_NAME="
+									+ NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+				}
+
+				parentContextMap_tRunJob_2.put("WEBJOB_NAME", obj_tRunJob_2);
+
+				Runtime runtime_tRunJob_2 = Runtime.getRuntime();
+				final Process ps_tRunJob_2;
+				ps_tRunJob_2 = runtime_tRunJob_2
+						.exec((String[]) paraList_tRunJob_2
+								.toArray(new String[paraList_tRunJob_2.size()]));
+
+				Thread normal_tRunJob_2 = new Thread() {
+					public void run() {
+						try {
+							java.io.BufferedReader reader = new java.io.BufferedReader(
+									new java.io.InputStreamReader(
+											ps_tRunJob_2.getInputStream()));
+							String line = "";
+							try {
+								while ((line = reader.readLine()) != null) {
+									System.out.println(line);
+								}
+							} finally {
+								reader.close();
+							}
+						} catch (java.io.IOException ioe) {
+
+							ioe.printStackTrace();
+						}
+					}
+				};
+
+				normal_tRunJob_2.start();
+
+				final StringBuffer errorMsg_tRunJob_2 = new StringBuffer();
+				Thread error_tRunJob_2 = new Thread() {
+					public void run() {
+						try {
+							java.io.BufferedReader reader = new java.io.BufferedReader(
+									new java.io.InputStreamReader(
+											ps_tRunJob_2.getErrorStream()));
+							String line = "";
+							try {
+								while ((line = reader.readLine()) != null) {
+									errorMsg_tRunJob_2.append(line)
+											.append("\n");
+								}
+							} finally {
+								reader.close();
+							}
+						} catch (java.io.IOException ioe) {
+
+							ioe.printStackTrace();
+						}
+					}
+				};
+				error_tRunJob_2.start();
+
+				// 0 indicates normal termination
+				int result_tRunJob_2 = ps_tRunJob_2.waitFor();
+				normal_tRunJob_2.join(10000);
+				error_tRunJob_2.join(10000);
+
+				globalMap.put("tRunJob_2_CHILD_RETURN_CODE", result_tRunJob_2);
+				if (result_tRunJob_2 != 0) {
+					globalMap.put("tRunJob_2_CHILD_EXCEPTION_STACKTRACE",
+							errorMsg_tRunJob_2.toString());
+
+					System.err.println("Child job returns " + result_tRunJob_2
+							+ ". It doesn't terminate normally.\n"
+							+ errorMsg_tRunJob_2.toString());
+
+				}
+
+				tos_count_tRunJob_2++;
+
+				/**
+				 * [tRunJob_2 main ] stop
+				 */
+
+				/**
+				 * [tRunJob_2 process_data_begin ] start
+				 */
+
+				currentComponent = "tRunJob_2";
+
+				/**
+				 * [tRunJob_2 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tRunJob_2 process_data_end ] start
+				 */
+
+				currentComponent = "tRunJob_2";
+
+				/**
+				 * [tRunJob_2 process_data_end ] stop
+				 */
+
+				/**
+				 * [tRunJob_2 end ] start
+				 */
+
+				currentComponent = "tRunJob_2";
+
+				ok_Hash.put("tRunJob_2", true);
+				end_Hash.put("tRunJob_2", System.currentTimeMillis());
+
+				/**
+				 * [tRunJob_2 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tRunJob_2 finally ] start
+				 */
+
+				currentComponent = "tRunJob_2";
+
+				/**
+				 * [tRunJob_2 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
 			}
-		
+			resourceMap = null;
+		}
 
 		globalMap.put("tRunJob_2_SUBPROCESS_STATE", 1);
 	}
-	
-    public String resuming_logs_dir_path = null;
-    public String resuming_checkpoint_path = null;
-    public String parent_part_launcher = null;
-    private String resumeEntryMethodName = null;
-    private boolean globalResumeTicket = false;
 
-    public boolean watch = false;
-    // portStats is null, it means don't execute the statistics
-    public Integer portStats = null;
-    public int portTraces = 4334;
-    public String clientHost;
-    public String defaultClientHost = "localhost";
-    public String contextStr = "Production";
-    public boolean isDefaultContext = true;
-    public String pid = "0";
-    public String rootPid = null;
-    public String fatherPid = null;
-    public String fatherNode = null;
-    public long startTime = 0;
-    public boolean isChildJob = false;
-    public String log4jLevel = "";
+	public String resuming_logs_dir_path = null;
+	public String resuming_checkpoint_path = null;
+	public String parent_part_launcher = null;
+	private String resumeEntryMethodName = null;
+	private boolean globalResumeTicket = false;
 
-    private boolean execStat = true;
+	public boolean watch = false;
+	// portStats is null, it means don't execute the statistics
+	public Integer portStats = null;
+	public int portTraces = 4334;
+	public String clientHost;
+	public String defaultClientHost = "localhost";
+	public String contextStr = "Development";
+	public boolean isDefaultContext = true;
+	public String pid = "0";
+	public String rootPid = null;
+	public String fatherPid = null;
+	public String fatherNode = null;
+	public long startTime = 0;
+	public boolean isChildJob = false;
+	public String log4jLevel = "";
 
-    private ThreadLocal<java.util.Map<String, String>> threadLocal = new ThreadLocal<java.util.Map<String, String>>() {
-        protected java.util.Map<String, String> initialValue() {
-            java.util.Map<String,String> threadRunResultMap = new java.util.HashMap<String, String>();
-            threadRunResultMap.put("errorCode", null);
-            threadRunResultMap.put("status", "");
-            return threadRunResultMap;
-        };
-    };
+	private boolean execStat = true;
 
-    private SyncInt runningThreadCount =new SyncInt();
+	private ThreadLocal<java.util.Map<String, String>> threadLocal = new ThreadLocal<java.util.Map<String, String>>() {
+		protected java.util.Map<String, String> initialValue() {
+			java.util.Map<String, String> threadRunResultMap = new java.util.HashMap<String, String>();
+			threadRunResultMap.put("errorCode", null);
+			threadRunResultMap.put("status", "");
+			return threadRunResultMap;
+		};
+	};
 
-    private class SyncInt
-    {
-        private int count = 0;
-        public synchronized void add(int i)
-        {
-            count +=i;
-        }
+	private SyncInt runningThreadCount = new SyncInt();
 
-        public synchronized int getCount()
-        {
-            return count;
-        }
-    }
+	private class SyncInt {
+		private int count = 0;
 
-    private PropertiesWithType context_param = new PropertiesWithType();
-    public java.util.Map<String, Object> parentContextMap = new java.util.HashMap<String, Object>();
+		public synchronized void add(int i) {
+			count += i;
+		}
 
-    public String status= "";
-    
+		public synchronized int getCount() {
+			return count;
+		}
+	}
 
-    public static void main(String[] args){
-        final HONGKONG_BUILD_MASTER_VAULT HONGKONG_BUILD_MASTER_VAULTClass = new HONGKONG_BUILD_MASTER_VAULT();
+	private PropertiesWithType context_param = new PropertiesWithType();
+	public java.util.Map<String, Object> parentContextMap = new java.util.HashMap<String, Object>();
 
-        int exitCode = HONGKONG_BUILD_MASTER_VAULTClass.runJobInTOS(args);
+	public String status = "";
 
-        System.exit(exitCode);
-    }
+	public static void main(String[] args) {
+		final HONGKONG_BUILD_MASTER_VAULT HONGKONG_BUILD_MASTER_VAULTClass = new HONGKONG_BUILD_MASTER_VAULT();
 
+		int exitCode = HONGKONG_BUILD_MASTER_VAULTClass.runJobInTOS(args);
 
-    public String[][] runJob(String[] args) {
+		System.exit(exitCode);
+	}
 
-        int exitCode = runJobInTOS(args);
-        String[][] bufferValue = new String[][] { { Integer.toString(exitCode) } };
+	public String[][] runJob(String[] args) {
 
-        return bufferValue;
-    }
+		int exitCode = runJobInTOS(args);
+		String[][] bufferValue = new String[][] { { Integer.toString(exitCode) } };
 
-    public boolean hastBufferOutputComponent() {
+		return bufferValue;
+	}
+
+	public boolean hastBufferOutputComponent() {
 		boolean hastBufferOutput = false;
-    	
-        return hastBufferOutput;
-    }
 
-    public int runJobInTOS(String[] args) {
-	   	// reset status
-	   	status = "";
+		return hastBufferOutput;
+	}
 
-        String lastStr = "";
-        for (String arg : args) {
-            if (arg.equalsIgnoreCase("--context_param")) {
-                lastStr = arg;
-            } else if (lastStr.equals("")) {
-                evalParam(arg);
-            } else {
-                evalParam(lastStr + " " + arg);
-                lastStr = "";
-            }
-        }
+	public int runJobInTOS(String[] args) {
+		// reset status
+		status = "";
 
+		String lastStr = "";
+		for (String arg : args) {
+			if (arg.equalsIgnoreCase("--context_param")) {
+				lastStr = arg;
+			} else if (lastStr.equals("")) {
+				evalParam(arg);
+			} else {
+				evalParam(lastStr + " " + arg);
+				lastStr = "";
+			}
+		}
 
-        if(clientHost == null) {
-            clientHost = defaultClientHost;
-        }
+		if (clientHost == null) {
+			clientHost = defaultClientHost;
+		}
 
-        if(pid == null || "0".equals(pid)) {
-            pid = TalendString.getAsciiRandomString(6);
-        }
+		if (pid == null || "0".equals(pid)) {
+			pid = TalendString.getAsciiRandomString(6);
+		}
 
-        if (rootPid==null) {
-            rootPid = pid;
-        }
-        if (fatherPid==null) {
-            fatherPid = pid;
-        }else{
-            isChildJob = true;
-        }
+		if (rootPid == null) {
+			rootPid = pid;
+		}
+		if (fatherPid == null) {
+			fatherPid = pid;
+		} else {
+			isChildJob = true;
+		}
 
-        if (portStats != null) {
-            // portStats = -1; //for testing
-            if (portStats < 0 || portStats > 65535) {
-                // issue:10869, the portStats is invalid, so this client socket can't open
-                System.err.println("The statistics socket port " + portStats + " is invalid.");
-                execStat = false;
-            }
-        } else {
-            execStat = false;
-        }
+		if (portStats != null) {
+			// portStats = -1; //for testing
+			if (portStats < 0 || portStats > 65535) {
+				// issue:10869, the portStats is invalid, so this client socket
+				// can't open
+				System.err.println("The statistics socket port " + portStats
+						+ " is invalid.");
+				execStat = false;
+			}
+		} else {
+			execStat = false;
+		}
 
-        try {
-            //call job/subjob with an existing context, like: --context=production. if without this parameter, there will use the default context instead.
-            java.io.InputStream inContext = HONGKONG_BUILD_MASTER_VAULT.class.getClassLoader().getResourceAsStream("deepsea/hongkong_build_master_vault_0_1/contexts/" + contextStr + ".properties");
-            if (inContext == null) {
-                inContext = HONGKONG_BUILD_MASTER_VAULT.class.getClassLoader().getResourceAsStream("config/contexts/" + contextStr + ".properties");
-            }
-            if (inContext != null) {
-                //defaultProps is in order to keep the original context value
-                defaultProps.load(inContext);
-                inContext.close();
-                context = new ContextProperties(defaultProps);
-            } else if (!isDefaultContext) {
-                //print info and job continue to run, for case: context_param is not empty.
-                System.err.println("Could not find the context " + contextStr);
-            }
+		try {
+			// call job/subjob with an existing context, like:
+			// --context=production. if without this parameter, there will use
+			// the default context instead.
+			java.io.InputStream inContext = HONGKONG_BUILD_MASTER_VAULT.class
+					.getClassLoader().getResourceAsStream(
+							"deepsea/hongkong_build_master_vault_0_1/contexts/"
+									+ contextStr + ".properties");
+			if (inContext == null) {
+				inContext = HONGKONG_BUILD_MASTER_VAULT.class
+						.getClassLoader()
+						.getResourceAsStream(
+								"config/contexts/" + contextStr + ".properties");
+			}
+			if (inContext != null) {
+				// defaultProps is in order to keep the original context value
+				defaultProps.load(inContext);
+				inContext.close();
+				context = new ContextProperties(defaultProps);
+			} else if (!isDefaultContext) {
+				// print info and job continue to run, for case: context_param
+				// is not empty.
+				System.err.println("Could not find the context " + contextStr);
+			}
 
-            if(!context_param.isEmpty()) {
-                context.putAll(context_param);
-				//set types for params from parentJobs
-				for (Object key: context_param.keySet()){
+			if (!context_param.isEmpty()) {
+				context.putAll(context_param);
+				// set types for params from parentJobs
+				for (Object key : context_param.keySet()) {
 					String context_key = key.toString();
-					String context_type = context_param.getContextType(context_key);
+					String context_type = context_param
+							.getContextType(context_key);
 					context.setContextType(context_key, context_type);
 
 				}
-            }
-				    context.setContextType("COUNTRY", "id_String");
-				
-                context.COUNTRY=(String) context.getProperty("COUNTRY");
-				    context.setContextType("DEEPSEA_AUTH_TOKEN", "id_String");
-				
-                context.DEEPSEA_AUTH_TOKEN=(String) context.getProperty("DEEPSEA_AUTH_TOKEN");
-				    context.setContextType("DEEPSEA_HOSTNAME", "id_String");
-				
-                context.DEEPSEA_HOSTNAME=(String) context.getProperty("DEEPSEA_HOSTNAME");
-				    context.setContextType("DEFAULT_DATE_FORMAT", "id_String");
-				
-                context.DEFAULT_DATE_FORMAT=(String) context.getProperty("DEFAULT_DATE_FORMAT");
-				    context.setContextType("MONGODB_HOSTNAME", "id_String");
-				
-                context.MONGODB_HOSTNAME=(String) context.getProperty("MONGODB_HOSTNAME");
-				    context.setContextType("POSTGRES_DATABASE", "id_String");
-				
-                context.POSTGRES_DATABASE=(String) context.getProperty("POSTGRES_DATABASE");
-				    context.setContextType("POSTGRES_HOSTNAME", "id_String");
-				
-                context.POSTGRES_HOSTNAME=(String) context.getProperty("POSTGRES_HOSTNAME");
-        } catch (java.io.IOException ie) {
-            System.err.println("Could not load context "+contextStr);
-            ie.printStackTrace();
-        }
-
-
-        // get context value from parent directly
-        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("COUNTRY")) {
-                context.COUNTRY = (String) parentContextMap.get("COUNTRY");
-            }if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
-                context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap.get("DEEPSEA_AUTH_TOKEN");
-            }if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
-                context.DEEPSEA_HOSTNAME = (String) parentContextMap.get("DEEPSEA_HOSTNAME");
-            }if (parentContextMap.containsKey("DEFAULT_DATE_FORMAT")) {
-                context.DEFAULT_DATE_FORMAT = (String) parentContextMap.get("DEFAULT_DATE_FORMAT");
-            }if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
-                context.MONGODB_HOSTNAME = (String) parentContextMap.get("MONGODB_HOSTNAME");
-            }if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
-                context.POSTGRES_DATABASE = (String) parentContextMap.get("POSTGRES_DATABASE");
-            }if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
-                context.POSTGRES_HOSTNAME = (String) parentContextMap.get("POSTGRES_HOSTNAME");
-            }
-        }
-
-        //Resume: init the resumeUtil
-        resumeEntryMethodName = ResumeUtil.getResumeEntryMethodName(resuming_checkpoint_path);
-        resumeUtil = new ResumeUtil(resuming_logs_dir_path, isChildJob, rootPid);
-        resumeUtil.initCommonInfo(pid, rootPid, fatherPid, projectName, jobName, contextStr, jobVersion);
-
-		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
-        //Resume: jobStart
-        resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "", "","","","",resumeUtil.convertToJsonText(context,parametersToEncrypt));
-
-if(execStat) {
-    try {
-        runStat.openSocket(!isChildJob);
-        runStat.setAllPID(rootPid, fatherPid, pid, jobName);
-        runStat.startThreadStat(clientHost, portStats);
-        runStat.updateStatOnJob(RunStat.JOBSTART, fatherNode);
-    } catch (java.io.IOException ioException) {
-        ioException.printStackTrace();
-    }
-}
-
-
-
-	
-	    java.util.concurrent.ConcurrentHashMap<Object, Object> concurrentHashMap = new java.util.concurrent.ConcurrentHashMap<Object, Object>();
-	    globalMap.put("concurrentHashMap", concurrentHashMap);
-	
-
-    long startUsedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-    long endUsedMemory = 0;
-    long end = 0;
-
-    startTime = System.currentTimeMillis();
-
-
-
-
-this.globalResumeTicket = true;//to run tPreJob
-
-
-
-
-this.globalResumeTicket = false;//to run others jobs
-final Thread launchingThread = Thread.currentThread();
-        runningThreadCount.add(1);
-        new Thread(){
-            public void run() {
-                java.util.Map threadRunResultMap = new java.util.HashMap();
-                threadRunResultMap.put("errorCode", null);
-                threadRunResultMap.put("status", "");
-                threadLocal.set(threadRunResultMap);
-
-                try {
-((java.util.Map) threadLocal.get()).put("errorCode", null);tRunJob_1Process(globalMap);
-if ( !"failure".equals(((java.util.Map)threadLocal.get()).get("status")) ) {
-((java.util.Map) threadLocal.get()).put("status", "end");
-}
-}catch (TalendException e_tRunJob_1) {
-globalMap.put("tRunJob_1_SUBPROCESS_STATE", -1);
-
-e_tRunJob_1.printStackTrace();
-
-}catch (java.lang.Error e_tRunJob_1) {
-globalMap.put("tRunJob_1_SUBPROCESS_STATE", -1);
-((java.util.Map) threadLocal.get()).put("status", "failure");throw e_tRunJob_1;
-
-}
-                finally {
-                    Integer localErrorCode = (Integer)(((java.util.Map)threadLocal.get()).get("errorCode"));
-                    String localStatus = (String)(((java.util.Map)threadLocal.get()).get("status"));
-                    if (localErrorCode != null) {
-                        if (errorCode == null || localErrorCode.compareTo(errorCode) > 0) {
-                           errorCode = localErrorCode;
-                        }
-                    }
-                    if (!status.equals("failure")){
-                        status = localStatus;
-                    }
-
-                    if ("true".equals(((java.util.Map) threadLocal.get()).get("JobInterrupted"))) {
-                        launchingThread.interrupt();
-                    }
-
-                    runningThreadCount.add(-1);
-                }
-            }
-        }.start();
-
-    boolean interrupted = false;
-    while (runningThreadCount.getCount() > 0) {
-        try {
-            Thread.sleep(10);
-        } catch (java.lang.InterruptedException e) {
-            interrupted = true;
-        } catch (java.lang.Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    if (interrupted) {
-        Thread.currentThread().interrupt();
-    }
-
-
-
-this.globalResumeTicket = true;//to run tPostJob
-
-
-
-
-        end = System.currentTimeMillis();
-
-        if (watch) {
-            System.out.println((end-startTime)+" milliseconds");
-        }
-
-        endUsedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
-        if (false) {
-            System.out.println((endUsedMemory - startUsedMemory) + " bytes memory increase when running : HONGKONG_BUILD_MASTER_VAULT");
-        }
-
-
-
-if (execStat) {
-    runStat.updateStatOnJob(RunStat.JOBEND, fatherNode);
-    runStat.stopThreadStat();
-}
-    int returnCode = 0;
-    if(errorCode == null) {
-         returnCode = status != null && status.equals("failure") ? 1 : 0;
-    } else {
-         returnCode = errorCode.intValue();
-    }
-    resumeUtil.addLog("JOB_ENDED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "", "","" + returnCode,"","","");
-
-    return returnCode;
-
-  }
-
-    // only for OSGi env
-    public void destroy() {
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    private java.util.Map<String, Object> getSharedConnections4REST() {
-        java.util.Map<String, Object> connections = new java.util.HashMap<String, Object>();
-
-
-
-
-
-
-
-        return connections;
-    }
-
-    private void evalParam(String arg) {
-        if (arg.startsWith("--resuming_logs_dir_path")) {
-            resuming_logs_dir_path = arg.substring(25);
-        } else if (arg.startsWith("--resuming_checkpoint_path")) {
-            resuming_checkpoint_path = arg.substring(27);
-        } else if (arg.startsWith("--parent_part_launcher")) {
-            parent_part_launcher = arg.substring(23);
-        } else if (arg.startsWith("--watch")) {
-            watch = true;
-        } else if (arg.startsWith("--stat_port=")) {
-            String portStatsStr = arg.substring(12);
-            if (portStatsStr != null && !portStatsStr.equals("null")) {
-                portStats = Integer.parseInt(portStatsStr);
-            }
-        } else if (arg.startsWith("--trace_port=")) {
-            portTraces = Integer.parseInt(arg.substring(13));
-        } else if (arg.startsWith("--client_host=")) {
-            clientHost = arg.substring(14);
-        } else if (arg.startsWith("--context=")) {
-            contextStr = arg.substring(10);
-            isDefaultContext = false;
-        } else if (arg.startsWith("--father_pid=")) {
-            fatherPid = arg.substring(13);
-        } else if (arg.startsWith("--root_pid=")) {
-            rootPid = arg.substring(11);
-        } else if (arg.startsWith("--father_node=")) {
-            fatherNode = arg.substring(14);
-        } else if (arg.startsWith("--pid=")) {
-            pid = arg.substring(6);
-        } else if (arg.startsWith("--context_type")) {
-            String keyValue = arg.substring(15);
-			int index = -1;
-            if (keyValue != null && (index = keyValue.indexOf('=')) > -1) {
-                if (fatherPid==null) {
-                    context_param.setContextType(keyValue.substring(0, index), replaceEscapeChars(keyValue.substring(index + 1)));
-                } else { // the subjob won't escape the especial chars
-                    context_param.setContextType(keyValue.substring(0, index), keyValue.substring(index + 1) );
-                }
-
-            }
-
-		} else if (arg.startsWith("--context_param")) {
-            String keyValue = arg.substring(16);
-            int index = -1;
-            if (keyValue != null && (index = keyValue.indexOf('=')) > -1) {
-                if (fatherPid==null) {
-                    context_param.put(keyValue.substring(0, index), replaceEscapeChars(keyValue.substring(index + 1)));
-                } else { // the subjob won't escape the especial chars
-                    context_param.put(keyValue.substring(0, index), keyValue.substring(index + 1) );
-                }
-            }
-        }else if (arg.startsWith("--log4jLevel=")) {
-            log4jLevel = arg.substring(13);
+			}
+			context.setContextType("COUNTRY", "id_String");
+
+			context.COUNTRY = (String) context.getProperty("COUNTRY");
+			context.setContextType("DEEPSEA_AUTH_TOKEN", "id_String");
+
+			context.DEEPSEA_AUTH_TOKEN = (String) context
+					.getProperty("DEEPSEA_AUTH_TOKEN");
+			context.setContextType("DEEPSEA_HOSTNAME", "id_String");
+
+			context.DEEPSEA_HOSTNAME = (String) context
+					.getProperty("DEEPSEA_HOSTNAME");
+			context.setContextType("DEFAULT_DATE_FORMAT", "id_String");
+
+			context.DEFAULT_DATE_FORMAT = (String) context
+					.getProperty("DEFAULT_DATE_FORMAT");
+			context.setContextType("MONGODB_HOSTNAME", "id_String");
+
+			context.MONGODB_HOSTNAME = (String) context
+					.getProperty("MONGODB_HOSTNAME");
+			context.setContextType("POSTGRES_DATABASE", "id_String");
+
+			context.POSTGRES_DATABASE = (String) context
+					.getProperty("POSTGRES_DATABASE");
+			context.setContextType("POSTGRES_HOSTNAME", "id_String");
+
+			context.POSTGRES_HOSTNAME = (String) context
+					.getProperty("POSTGRES_HOSTNAME");
+		} catch (java.io.IOException ie) {
+			System.err.println("Could not load context " + contextStr);
+			ie.printStackTrace();
 		}
 
-    }
-    
-    private static final String NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY = "<TALEND_NULL>";
+		// get context value from parent directly
+		if (parentContextMap != null && !parentContextMap.isEmpty()) {
+			if (parentContextMap.containsKey("COUNTRY")) {
+				context.COUNTRY = (String) parentContextMap.get("COUNTRY");
+			}
+			if (parentContextMap.containsKey("DEEPSEA_AUTH_TOKEN")) {
+				context.DEEPSEA_AUTH_TOKEN = (String) parentContextMap
+						.get("DEEPSEA_AUTH_TOKEN");
+			}
+			if (parentContextMap.containsKey("DEEPSEA_HOSTNAME")) {
+				context.DEEPSEA_HOSTNAME = (String) parentContextMap
+						.get("DEEPSEA_HOSTNAME");
+			}
+			if (parentContextMap.containsKey("DEFAULT_DATE_FORMAT")) {
+				context.DEFAULT_DATE_FORMAT = (String) parentContextMap
+						.get("DEFAULT_DATE_FORMAT");
+			}
+			if (parentContextMap.containsKey("MONGODB_HOSTNAME")) {
+				context.MONGODB_HOSTNAME = (String) parentContextMap
+						.get("MONGODB_HOSTNAME");
+			}
+			if (parentContextMap.containsKey("POSTGRES_DATABASE")) {
+				context.POSTGRES_DATABASE = (String) parentContextMap
+						.get("POSTGRES_DATABASE");
+			}
+			if (parentContextMap.containsKey("POSTGRES_HOSTNAME")) {
+				context.POSTGRES_HOSTNAME = (String) parentContextMap
+						.get("POSTGRES_HOSTNAME");
+			}
+		}
 
-    private final String[][] escapeChars = {
-        {"\\\\","\\"},{"\\n","\n"},{"\\'","\'"},{"\\r","\r"},
-        {"\\f","\f"},{"\\b","\b"},{"\\t","\t"}
-        };
-    private String replaceEscapeChars (String keyValue) {
+		// Resume: init the resumeUtil
+		resumeEntryMethodName = ResumeUtil
+				.getResumeEntryMethodName(resuming_checkpoint_path);
+		resumeUtil = new ResumeUtil(resuming_logs_dir_path, isChildJob, rootPid);
+		resumeUtil.initCommonInfo(pid, rootPid, fatherPid, projectName,
+				jobName, contextStr, jobVersion);
+
+		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
+		// Resume: jobStart
+		resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName,
+				parent_part_launcher, Thread.currentThread().getId() + "", "",
+				"", "", "",
+				resumeUtil.convertToJsonText(context, parametersToEncrypt));
+
+		if (execStat) {
+			try {
+				runStat.openSocket(!isChildJob);
+				runStat.setAllPID(rootPid, fatherPid, pid, jobName);
+				runStat.startThreadStat(clientHost, portStats);
+				runStat.updateStatOnJob(RunStat.JOBSTART, fatherNode);
+			} catch (java.io.IOException ioException) {
+				ioException.printStackTrace();
+			}
+		}
+
+		java.util.concurrent.ConcurrentHashMap<Object, Object> concurrentHashMap = new java.util.concurrent.ConcurrentHashMap<Object, Object>();
+		globalMap.put("concurrentHashMap", concurrentHashMap);
+
+		long startUsedMemory = Runtime.getRuntime().totalMemory()
+				- Runtime.getRuntime().freeMemory();
+		long endUsedMemory = 0;
+		long end = 0;
+
+		startTime = System.currentTimeMillis();
+
+		this.globalResumeTicket = true;// to run tPreJob
+
+		this.globalResumeTicket = false;// to run others jobs
+		final Thread launchingThread = Thread.currentThread();
+		runningThreadCount.add(1);
+		new Thread() {
+			public void run() {
+				java.util.Map threadRunResultMap = new java.util.HashMap();
+				threadRunResultMap.put("errorCode", null);
+				threadRunResultMap.put("status", "");
+				threadLocal.set(threadRunResultMap);
+
+				try {
+					((java.util.Map) threadLocal.get()).put("errorCode", null);
+					tRunJob_1Process(globalMap);
+					if (!"failure".equals(((java.util.Map) threadLocal.get())
+							.get("status"))) {
+						((java.util.Map) threadLocal.get())
+								.put("status", "end");
+					}
+				} catch (TalendException e_tRunJob_1) {
+					globalMap.put("tRunJob_1_SUBPROCESS_STATE", -1);
+
+					e_tRunJob_1.printStackTrace();
+
+				} catch (java.lang.Error e_tRunJob_1) {
+					globalMap.put("tRunJob_1_SUBPROCESS_STATE", -1);
+					((java.util.Map) threadLocal.get())
+							.put("status", "failure");
+					throw e_tRunJob_1;
+
+				} finally {
+					Integer localErrorCode = (Integer) (((java.util.Map) threadLocal
+							.get()).get("errorCode"));
+					String localStatus = (String) (((java.util.Map) threadLocal
+							.get()).get("status"));
+					if (localErrorCode != null) {
+						if (errorCode == null
+								|| localErrorCode.compareTo(errorCode) > 0) {
+							errorCode = localErrorCode;
+						}
+					}
+					if (!status.equals("failure")) {
+						status = localStatus;
+					}
+
+					if ("true".equals(((java.util.Map) threadLocal.get())
+							.get("JobInterrupted"))) {
+						launchingThread.interrupt();
+					}
+
+					runningThreadCount.add(-1);
+				}
+			}
+		}.start();
+
+		boolean interrupted = false;
+		while (runningThreadCount.getCount() > 0) {
+			try {
+				Thread.sleep(10);
+			} catch (java.lang.InterruptedException e) {
+				interrupted = true;
+			} catch (java.lang.Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		if (interrupted) {
+			Thread.currentThread().interrupt();
+		}
+
+		this.globalResumeTicket = true;// to run tPostJob
+
+		end = System.currentTimeMillis();
+
+		if (watch) {
+			System.out.println((end - startTime) + " milliseconds");
+		}
+
+		endUsedMemory = Runtime.getRuntime().totalMemory()
+				- Runtime.getRuntime().freeMemory();
+		if (false) {
+			System.out
+					.println((endUsedMemory - startUsedMemory)
+							+ " bytes memory increase when running : HONGKONG_BUILD_MASTER_VAULT");
+		}
+
+		if (execStat) {
+			runStat.updateStatOnJob(RunStat.JOBEND, fatherNode);
+			runStat.stopThreadStat();
+		}
+		int returnCode = 0;
+		if (errorCode == null) {
+			returnCode = status != null && status.equals("failure") ? 1 : 0;
+		} else {
+			returnCode = errorCode.intValue();
+		}
+		resumeUtil.addLog("JOB_ENDED", "JOB:" + jobName, parent_part_launcher,
+				Thread.currentThread().getId() + "", "", "" + returnCode, "",
+				"", "");
+
+		return returnCode;
+
+	}
+
+	// only for OSGi env
+	public void destroy() {
+
+	}
+
+	private java.util.Map<String, Object> getSharedConnections4REST() {
+		java.util.Map<String, Object> connections = new java.util.HashMap<String, Object>();
+
+		return connections;
+	}
+
+	private void evalParam(String arg) {
+		if (arg.startsWith("--resuming_logs_dir_path")) {
+			resuming_logs_dir_path = arg.substring(25);
+		} else if (arg.startsWith("--resuming_checkpoint_path")) {
+			resuming_checkpoint_path = arg.substring(27);
+		} else if (arg.startsWith("--parent_part_launcher")) {
+			parent_part_launcher = arg.substring(23);
+		} else if (arg.startsWith("--watch")) {
+			watch = true;
+		} else if (arg.startsWith("--stat_port=")) {
+			String portStatsStr = arg.substring(12);
+			if (portStatsStr != null && !portStatsStr.equals("null")) {
+				portStats = Integer.parseInt(portStatsStr);
+			}
+		} else if (arg.startsWith("--trace_port=")) {
+			portTraces = Integer.parseInt(arg.substring(13));
+		} else if (arg.startsWith("--client_host=")) {
+			clientHost = arg.substring(14);
+		} else if (arg.startsWith("--context=")) {
+			contextStr = arg.substring(10);
+			isDefaultContext = false;
+		} else if (arg.startsWith("--father_pid=")) {
+			fatherPid = arg.substring(13);
+		} else if (arg.startsWith("--root_pid=")) {
+			rootPid = arg.substring(11);
+		} else if (arg.startsWith("--father_node=")) {
+			fatherNode = arg.substring(14);
+		} else if (arg.startsWith("--pid=")) {
+			pid = arg.substring(6);
+		} else if (arg.startsWith("--context_type")) {
+			String keyValue = arg.substring(15);
+			int index = -1;
+			if (keyValue != null && (index = keyValue.indexOf('=')) > -1) {
+				if (fatherPid == null) {
+					context_param.setContextType(keyValue.substring(0, index),
+							replaceEscapeChars(keyValue.substring(index + 1)));
+				} else { // the subjob won't escape the especial chars
+					context_param.setContextType(keyValue.substring(0, index),
+							keyValue.substring(index + 1));
+				}
+
+			}
+
+		} else if (arg.startsWith("--context_param")) {
+			String keyValue = arg.substring(16);
+			int index = -1;
+			if (keyValue != null && (index = keyValue.indexOf('=')) > -1) {
+				if (fatherPid == null) {
+					context_param.put(keyValue.substring(0, index),
+							replaceEscapeChars(keyValue.substring(index + 1)));
+				} else { // the subjob won't escape the especial chars
+					context_param.put(keyValue.substring(0, index),
+							keyValue.substring(index + 1));
+				}
+			}
+		} else if (arg.startsWith("--log4jLevel=")) {
+			log4jLevel = arg.substring(13);
+		}
+
+	}
+
+	private static final String NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY = "<TALEND_NULL>";
+
+	private final String[][] escapeChars = { { "\\\\", "\\" }, { "\\n", "\n" },
+			{ "\\'", "\'" }, { "\\r", "\r" }, { "\\f", "\f" }, { "\\b", "\b" },
+			{ "\\t", "\t" } };
+
+	private String replaceEscapeChars(String keyValue) {
 
 		if (keyValue == null || ("").equals(keyValue.trim())) {
 			return keyValue;
@@ -2113,15 +2176,18 @@ if (execStat) {
 			int index = -1;
 			// judege if the left string includes escape chars
 			for (String[] strArray : escapeChars) {
-				index = keyValue.indexOf(strArray[0],currIndex);
-				if (index>=0) {
+				index = keyValue.indexOf(strArray[0], currIndex);
+				if (index >= 0) {
 
-					result.append(keyValue.substring(currIndex, index + strArray[0].length()).replace(strArray[0], strArray[1]));
+					result.append(keyValue.substring(currIndex,
+							index + strArray[0].length()).replace(strArray[0],
+							strArray[1]));
 					currIndex = index + strArray[0].length();
 					break;
 				}
 			}
-			// if the left string doesn't include escape chars, append the left into the result
+			// if the left string doesn't include escape chars, append the left
+			// into the result
 			if (index < 0) {
 				result.append(keyValue.substring(currIndex));
 				currIndex = currIndex + keyValue.length();
@@ -2129,20 +2195,19 @@ if (execStat) {
 		}
 
 		return result.toString();
-    }
+	}
 
-    public Integer getErrorCode() {
-        return errorCode;
-    }
+	public Integer getErrorCode() {
+		return errorCode;
+	}
 
+	public String getStatus() {
+		return status;
+	}
 
-    public String getStatus() {
-        return status;
-    }
-
-    ResumeUtil resumeUtil = null;
+	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     68285 characters generated by Talend Open Studio for Big Data 
- *     on the May 23, 2019 5:35:12 PM SGT
+ * 65453 characters generated by Talend Open Studio for Big Data on the May 30,
+ * 2019 4:02:40 AM SGT
  ************************************************************************************************/

@@ -40,6 +40,33 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0ec_DEeib9oVpaXTd6w" name="sales_date" id="29588" label="date" length="-1" precision="-1" sourceType="" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
         <initialValue xmi:id="_mAt0es_DEeib9oVpaXTd6w"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vQIIlEem3WtnqVTFReg" name="unit_price" label="unitPrice" length="-1" precision="-1" sourceType="" talendType="id_Float">
+        <initialValue xmi:id="_0d7vQYIlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vQoIlEem3WtnqVTFReg" name="market_code" label="marketCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_0d7vQ4IlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vRIIlEem3WtnqVTFReg" name="market_name" label="marketName" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_0d7vRYIlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vRoIlEem3WtnqVTFReg" name="transaction_type" label="transactionType" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_0d7vR4IlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vSIIlEem3WtnqVTFReg" name="invoice_number" label="invoiceNumber" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_0d7vSYIlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vSoIlEem3WtnqVTFReg" name="invoice_line_number" label="invoiceLineNumber" length="-1" precision="-1" sourceType="" talendType="id_Integer">
+        <initialValue xmi:id="_0d7vS4IlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vTIIlEem3WtnqVTFReg" name="vendor_batch_number" label="vendorBatchNumber" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_0d7vTYIlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vToIlEem3WtnqVTFReg" name="expiry_date" label="expiryDate" length="-1" precision="-1" sourceType="" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_0d7vT4IlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vUIIlEem3WtnqVTFReg" name="credit_reason_code" label="creditReasonCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_0d7vUYIlEem3WtnqVTFReg"/>
+      </feature>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>
