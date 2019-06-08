@@ -843,6 +843,7 @@
       <relatedItems xmi:id="_MzC9wBZeEemh-7SwNZgZnQ" id="__nEhIBZcEemh-7SwNZgZnQ" version="Latest" type="job"/>
       <relatedItems xmi:id="_UrSlABZhEemh-7SwNZgZnQ" id="_RrhBMBZhEemh-7SwNZgZnQ" version="Latest" type="job"/>
       <relatedItems xmi:id="_Dst4gH1CEem-g8G3gKFmpg" id="_lQYGUE7oEemDV8k2NEwUcw" version="Latest" type="job"/>
+      <relatedItems xmi:id="_G7dUsIKNEemoypS3_9b89w" id="_-WiGQIKMEemoypS3_9b89w" version="0.1" type="job"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_oM06sBPfEemc7a44kBSjTQ">
       <baseItem xmi:id="_oM06sRPfEemc7a44kBSjTQ" id="_oMu0EBPfEemc7a44kBSjTQ" version="0.1" type="job"/>
@@ -1389,6 +1390,20 @@
       <relatedItems xmi:id="_4Q8zTII4Eem3WtnqVTFReg" id="Clean" version="Latest" type="routine"/>
       <relatedItems xmi:id="_4Q8zTYI4Eem3WtnqVTFReg" id="_jyPjYMCpEeipbvJffRKaTQ - metadata" version="Latest" type="schema"/>
       <relatedItems xmi:id="_4Q8zToI4Eem3WtnqVTFReg" id="_Qcl9UMCpEeipbvJffRKaTQ - metadata" version="Latest" type="schema"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_-XkBAIKMEemoypS3_9b89w">
+      <baseItem xmi:id="_-XkBAYKMEemoypS3_9b89w" id="_-WiGQIKMEemoypS3_9b89w" version="0.1" type="job"/>
+      <relatedItems xmi:id="_-XkBAoKMEemoypS3_9b89w" id="_EqQw8L73EeiwTrrgdMnqWg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_-XkBA4KMEemoypS3_9b89w" id="_5-bpkM_PEeib9oVpaXTd6w" version="Latest" type="job"/>
+      <relatedItems xmi:id="_-XkBBIKMEemoypS3_9b89w" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_-XkBBYKMEemoypS3_9b89w" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_-XkBBoKMEemoypS3_9b89w" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_-XkBB4KMEemoypS3_9b89w" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_-XkBCIKMEemoypS3_9b89w" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_-XkBCYKMEemoypS3_9b89w" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_-XkBCoKMEemoypS3_9b89w" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_-XkBC4KMEemoypS3_9b89w" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_-XkBDIKMEemoypS3_9b89w" id="Mathematical" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_HJ0ZAK6jEeiC2aJINdmZJQ" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
     <migrationTask xmi:id="_HJ0ZAa6jEeiC2aJINdmZJQ" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>

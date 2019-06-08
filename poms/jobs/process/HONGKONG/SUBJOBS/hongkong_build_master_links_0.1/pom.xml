@@ -87,6 +87,11 @@
     </dependency>
     <dependency>
       <groupId>org.example.deepsea.job</groupId>
+      <artifactId>SAL_MASTER_WITH_EMPTY</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.deepsea.job</groupId>
       <artifactId>LINK_MASTER</artifactId>
       <version>0.1.0</version>
     </dependency>

@@ -350,28 +350,6 @@ public class TalendJobToWebjob implements TalendJob {
 		tFileCopy_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tPostjob_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tPostjob_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFileDelete_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFileDelete_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
 	public void tPrejob_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -392,6 +370,28 @@ public class TalendJobToWebjob implements TalendJob {
 		status = "failure";
 
 		tJava_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tPostjob_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tPostjob_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFileDelete_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileDelete_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tFileUnarchive_2_onSubJobError(Exception exception,
@@ -449,28 +449,6 @@ public class TalendJobToWebjob implements TalendJob {
 
 	}
 
-	public void tPostjob_1_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tFileDelete_1_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
 	public void tPrejob_1_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -483,6 +461,28 @@ public class TalendJobToWebjob implements TalendJob {
 	}
 
 	public void tJava_1_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tPostjob_1_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tFileDelete_1_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1449,6 +1449,276 @@ public class TalendJobToWebjob implements TalendJob {
 		globalMap.put("tFileCopy_1_SUBPROCESS_STATE", 1);
 	}
 
+	public void tPrejob_1Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tPrejob_1 begin ] start
+				 */
+
+				ok_Hash.put("tPrejob_1", false);
+				start_Hash.put("tPrejob_1", System.currentTimeMillis());
+
+				currentComponent = "tPrejob_1";
+
+				int tos_count_tPrejob_1 = 0;
+
+				class BytesLimit65535_tPrejob_1 {
+					public void limitLog4jByte() throws Exception {
+
+					}
+				}
+
+				new BytesLimit65535_tPrejob_1().limitLog4jByte();
+
+				/**
+				 * [tPrejob_1 begin ] stop
+				 */
+
+				/**
+				 * [tPrejob_1 main ] start
+				 */
+
+				currentComponent = "tPrejob_1";
+
+				tos_count_tPrejob_1++;
+
+				/**
+				 * [tPrejob_1 main ] stop
+				 */
+
+				/**
+				 * [tPrejob_1 process_data_begin ] start
+				 */
+
+				currentComponent = "tPrejob_1";
+
+				/**
+				 * [tPrejob_1 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tPrejob_1 process_data_end ] start
+				 */
+
+				currentComponent = "tPrejob_1";
+
+				/**
+				 * [tPrejob_1 process_data_end ] stop
+				 */
+
+				/**
+				 * [tPrejob_1 end ] start
+				 */
+
+				currentComponent = "tPrejob_1";
+
+				ok_Hash.put("tPrejob_1", true);
+				end_Hash.put("tPrejob_1", System.currentTimeMillis());
+
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk4", 0, "ok");
+				}
+				tJava_1Process(globalMap);
+
+				/**
+				 * [tPrejob_1 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tPrejob_1 finally ] start
+				 */
+
+				currentComponent = "tPrejob_1";
+
+				/**
+				 * [tPrejob_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 1);
+	}
+
+	public void tJava_1Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tJava_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tJava_1 begin ] start
+				 */
+
+				ok_Hash.put("tJava_1", false);
+				start_Hash.put("tJava_1", System.currentTimeMillis());
+
+				currentComponent = "tJava_1";
+
+				int tos_count_tJava_1 = 0;
+
+				class BytesLimit65535_tJava_1 {
+					public void limitLog4jByte() throws Exception {
+
+					}
+				}
+
+				new BytesLimit65535_tJava_1().limitLog4jByte();
+
+				String parentPath = java.nio.file.Paths
+						.get(context.getZIP_FILEPATH()).getParent().toString();
+				globalMap.putIfAbsent("ZIP_PARENTPATH", parentPath);
+
+				String tmp = java.nio.file.Paths.get(context.getZIP_FILEPATH())
+						.getFileName().toString();
+				String filename = tmp.substring(0, tmp.length() - 4);
+				globalMap.putIfAbsent("ZIP_FILENAME", filename);
+
+				String basePath = java.nio.file.Paths.get(parentPath, filename)
+						.toString();
+				globalMap.putIfAbsent("ZIP_BASEPATH", basePath);
+
+				/**
+				 * [tJava_1 begin ] stop
+				 */
+
+				/**
+				 * [tJava_1 main ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				tos_count_tJava_1++;
+
+				/**
+				 * [tJava_1 main ] stop
+				 */
+
+				/**
+				 * [tJava_1 process_data_begin ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				/**
+				 * [tJava_1 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tJava_1 process_data_end ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				/**
+				 * [tJava_1 process_data_end ] stop
+				 */
+
+				/**
+				 * [tJava_1 end ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				ok_Hash.put("tJava_1", true);
+				end_Hash.put("tJava_1", System.currentTimeMillis());
+
+				/**
+				 * [tJava_1 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tJava_1 finally ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				/**
+				 * [tJava_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
+	}
+
 	public void tPostjob_1Process(final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 		globalMap.put("tPostjob_1_SUBPROCESS_STATE", 0);
@@ -1770,276 +2040,6 @@ public class TalendJobToWebjob implements TalendJob {
 		}
 
 		globalMap.put("tFileDelete_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tPrejob_1Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tPrejob_1 begin ] start
-				 */
-
-				ok_Hash.put("tPrejob_1", false);
-				start_Hash.put("tPrejob_1", System.currentTimeMillis());
-
-				currentComponent = "tPrejob_1";
-
-				int tos_count_tPrejob_1 = 0;
-
-				class BytesLimit65535_tPrejob_1 {
-					public void limitLog4jByte() throws Exception {
-
-					}
-				}
-
-				new BytesLimit65535_tPrejob_1().limitLog4jByte();
-
-				/**
-				 * [tPrejob_1 begin ] stop
-				 */
-
-				/**
-				 * [tPrejob_1 main ] start
-				 */
-
-				currentComponent = "tPrejob_1";
-
-				tos_count_tPrejob_1++;
-
-				/**
-				 * [tPrejob_1 main ] stop
-				 */
-
-				/**
-				 * [tPrejob_1 process_data_begin ] start
-				 */
-
-				currentComponent = "tPrejob_1";
-
-				/**
-				 * [tPrejob_1 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tPrejob_1 process_data_end ] start
-				 */
-
-				currentComponent = "tPrejob_1";
-
-				/**
-				 * [tPrejob_1 process_data_end ] stop
-				 */
-
-				/**
-				 * [tPrejob_1 end ] start
-				 */
-
-				currentComponent = "tPrejob_1";
-
-				ok_Hash.put("tPrejob_1", true);
-				end_Hash.put("tPrejob_1", System.currentTimeMillis());
-
-				if (execStat) {
-					runStat.updateStatOnConnection("OnComponentOk4", 0, "ok");
-				}
-				tJava_1Process(globalMap);
-
-				/**
-				 * [tPrejob_1 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tPrejob_1 finally ] start
-				 */
-
-				currentComponent = "tPrejob_1";
-
-				/**
-				 * [tPrejob_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tJava_1Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tJava_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tJava_1 begin ] start
-				 */
-
-				ok_Hash.put("tJava_1", false);
-				start_Hash.put("tJava_1", System.currentTimeMillis());
-
-				currentComponent = "tJava_1";
-
-				int tos_count_tJava_1 = 0;
-
-				class BytesLimit65535_tJava_1 {
-					public void limitLog4jByte() throws Exception {
-
-					}
-				}
-
-				new BytesLimit65535_tJava_1().limitLog4jByte();
-
-				String parentPath = java.nio.file.Paths
-						.get(context.getZIP_FILEPATH()).getParent().toString();
-				globalMap.putIfAbsent("ZIP_PARENTPATH", parentPath);
-
-				String tmp = java.nio.file.Paths.get(context.getZIP_FILEPATH())
-						.getFileName().toString();
-				String filename = tmp.substring(0, tmp.length() - 4);
-				globalMap.putIfAbsent("ZIP_FILENAME", filename);
-
-				String basePath = java.nio.file.Paths.get(parentPath, filename)
-						.toString();
-				globalMap.putIfAbsent("ZIP_BASEPATH", basePath);
-
-				/**
-				 * [tJava_1 begin ] stop
-				 */
-
-				/**
-				 * [tJava_1 main ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				tos_count_tJava_1++;
-
-				/**
-				 * [tJava_1 main ] stop
-				 */
-
-				/**
-				 * [tJava_1 process_data_begin ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				/**
-				 * [tJava_1 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tJava_1 process_data_end ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				/**
-				 * [tJava_1 process_data_end ] stop
-				 */
-
-				/**
-				 * [tJava_1 end ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				ok_Hash.put("tJava_1", true);
-				end_Hash.put("tJava_1", System.currentTimeMillis());
-
-				/**
-				 * [tJava_1 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tJava_1 finally ] start
-				 */
-
-				currentComponent = "tJava_1";
-
-				/**
-				 * [tJava_1 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
 	}
 
 	public String resuming_logs_dir_path = null;
@@ -2434,6 +2434,6 @@ public class TalendJobToWebjob implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 67408 characters generated by Talend Open Studio for Big Data on the May 29,
- * 2019 11:50:05 PM SGT
+ * 64559 characters generated by Talend Open Studio for Big Data on the May 30,
+ * 2019 10:27:33 PM CST
  ************************************************************************************************/

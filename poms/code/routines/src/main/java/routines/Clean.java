@@ -97,7 +97,7 @@ public class Clean
      * 
      * {example} cleanDate("1975/06/12") # "1975-06-12"
      */
-	public static String cleanDate(String date, String defaultDate) {
+	public static String cleanDate(String date, String defaultDate, String defaultFormat) {
 		if(Clean.isNullOrEmpty(date)) {
 			return defaultDate;
 		}
@@ -113,7 +113,11 @@ public class Clean
 		}
 		else if(checkDateFormat(date, DatePattern4)) {
 			if(defaultDate == null) {
-				return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yyyy", date));
+				if(defaultFormat == null) {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yyyy", date));
+				} else {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate(defaultFormat + "yy", date));
+				}
 			} else {
 				Date date1 = TalendDate.parseDate("yyyy-MM-dd", defaultDate);
 				Date date2 = TalendDate.parseDate("MM/dd/yyyy", date);
@@ -126,7 +130,11 @@ public class Clean
 		}
 		else if(checkDateFormat(date, DatePattern5)) {
 			if(defaultDate == null) {
-				return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yy", date));
+				if(defaultFormat == null) {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yyyy", date));
+				} else {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate(defaultFormat, date));
+				}
 			} else {
 				Date date1 = TalendDate.parseDate("yyyy-MM-dd", defaultDate);
 				Date date2 = TalendDate.parseDate("MM/dd/yy", date);

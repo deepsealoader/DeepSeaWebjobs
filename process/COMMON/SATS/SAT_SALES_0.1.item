@@ -40,7 +40,7 @@
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="10" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="13" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="64" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
@@ -899,7 +899,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="date" expression="(row2.date != null) ? row2.date : (row2.dateMonth + &quot;/1/&quot; + row2.dateYear) " type="id_String"/>
+        <mapperTableEntries name="date" expression="(row2.date != null) ? row2.date : (&quot;1/&quot; + row2.dateMonth + &quot;/&quot; + row2.dateYear) " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="row8">
         <mapperTableEntries name="hubId" expression="row5.id " type="id_Integer"/>
@@ -914,7 +914,7 @@
         <mapperTableEntries name="productName" expression="row2.productName " type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" expression="row2.amount " type="id_Float" nullable="true"/>
         <mapperTableEntries name="quantity" expression="row2.quantity " type="id_Float"/>
-        <mapperTableEntries name="date" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(Var.date, null)) " type="id_Date"/>
+        <mapperTableEntries name="date" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(Var.date, null, context.DEFAULT_DATE_FORMAT)) " type="id_Date"/>
         <mapperTableEntries name="unitPrice" expression="row2.unitPrice " type="id_Float" nullable="true"/>
         <mapperTableEntries name="marketCode" expression="row2.marketCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="marketName" expression="row2.marketName " type="id_String" nullable="true"/>
@@ -922,7 +922,7 @@
         <mapperTableEntries name="invoiceNumber" expression="row2.invoiceNumber " type="id_String" nullable="true"/>
         <mapperTableEntries name="invoiceLineNumber" expression="row2.invoiceLineNumber " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="vendorBatchNumber" expression="row2.vendorBatchNumber " type="id_String" nullable="true"/>
-        <mapperTableEntries name="expiryDate" expression="row2.expiryDate != null ? TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row2.expiryDate, null)) : null " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="expiryDate" expression="row2.expiryDate != null ? TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row2.expiryDate, null, context.DEFAULT_DATE_FORMAT)) : null " type="id_Date" nullable="true"/>
         <mapperTableEntries name="creditReasonCode" expression="row2.creditReasonCode " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">

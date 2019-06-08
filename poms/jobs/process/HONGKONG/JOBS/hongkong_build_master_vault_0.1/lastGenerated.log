@@ -24,18 +24,18 @@
 [INFO] Tests are skipped.
 [INFO] 
 [INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ HONGKONG_BUILD_MASTER_VAULT ---
-[INFO] Building jar: C:\Users\RRU_SG1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\HONGKONG\JOBS\hongkong_build_master_vault_0.1\target\hongkong_build_master_vault_0_1.jar
+[INFO] Building jar: /home/romuald/Projects/Talend/TOS_BD/workspace/DEEPSEA/poms/jobs/process/HONGKONG/JOBS/hongkong_build_master_vault_0.1/target/hongkong_build_master_vault_0_1.jar
 [INFO] 
 [INFO] --- maven-assembly-plugin:3.0.0:single (default) @ HONGKONG_BUILD_MASTER_VAULT ---
-[INFO] Reading assembly descriptor: C:\Users\RRU_SG1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\HONGKONG\JOBS\hongkong_build_master_vault_0.1/src/main/assemblies/assembly.xml
+[INFO] Reading assembly descriptor: /home/romuald/Projects/Talend/TOS_BD/workspace/DEEPSEA/poms/jobs/process/HONGKONG/JOBS/hongkong_build_master_vault_0.1/src/main/assemblies/assembly.xml
 [WARNING] The following patterns were never triggered in this artifact inclusion filter:
 o  'null:null'
 
-[INFO] Building zip: C:\Users\RRU_SG1\Projects\Talend\workspace\DEEPSEA\poms\jobs\process\HONGKONG\JOBS\hongkong_build_master_vault_0.1\target\hongkong_build_master_vault_0_1.zip
+[INFO] Building zip: /home/romuald/Projects/Talend/TOS_BD/workspace/DEEPSEA/poms/jobs/process/HONGKONG/JOBS/hongkong_build_master_vault_0.1/target/hongkong_build_master_vault_0_1.zip
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 7.813 s
-[INFO] Finished at: 2019-05-29T15:06:30+09:00
-[INFO] Final Memory: 13M/179M
+[INFO] Total time: 4.148 s
+[INFO] Finished at: 2019-05-30T22:24:53+08:00
+[INFO] Final Memory: 17M/349M
 [INFO] ------------------------------------------------------------------------

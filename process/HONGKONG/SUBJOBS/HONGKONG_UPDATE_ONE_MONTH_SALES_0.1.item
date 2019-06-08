@@ -8,7 +8,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="Basic YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="&quot;dd/MM/yy&quot;"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="deepsea_hongkong"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost"/>
@@ -21,7 +21,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="Basic YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost:8080"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="&quot;dd/MM/yy&quot;"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="MONGODB"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="deepsea_hongkong"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="POSTGRES"/>
@@ -34,7 +34,7 @@
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="Basic YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost:4040"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="&quot;dd/MM/yy&quot;"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="deepsea_hongkong"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_YGzSUBPfEemc7a44kBSjTQ" type="id_String" value="localhost"/>
@@ -478,7 +478,7 @@
         <mapperTableEntries name="productName" expression="row15.productName" type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" expression="Clean.cleanNumber(row15.amount) " type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" expression="row15.quantity" type="id_String"/>
-        <mapperTableEntries name="date" expression="TalendDate.formatDate(context.DEFAULT_DATE_FORMAT, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.date, context.BATCH_DATE))) " type="id_String"/>
+        <mapperTableEntries name="date" expression="TalendDate.formatDate(context.DEFAULT_DATE_FORMAT, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.date, context.BATCH_DATE, context.DEFAULT_DATE_FORMAT))) " type="id_String"/>
         <mapperTableEntries name="unitPrice" expression="Clean.cleanNumber(row15.unitPrice) " type="id_String" nullable="true"/>
         <mapperTableEntries name="marketCode" expression="row15.marketCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="marketName" expression="row15.marketName " type="id_String" nullable="true"/>
@@ -486,7 +486,7 @@
         <mapperTableEntries name="invoiceNumber" expression="row15.invoiceNumber " type="id_String" nullable="true"/>
         <mapperTableEntries name="invoiceLineNumber" expression="row15.invoiceLineNumber " type="id_String" nullable="true"/>
         <mapperTableEntries name="vendorBatchNumber" expression="row15.vendorBatchNumber " type="id_String" nullable="true"/>
-        <mapperTableEntries name="expiryDate" expression="(row15.expiryDate != null) ? TalendDate.formatDate(context.DEFAULT_DATE_FORMAT, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.expiryDate, null))) : null " type="id_String" nullable="true"/>
+        <mapperTableEntries name="expiryDate" expression="(row15.expiryDate != null) ? TalendDate.formatDate(context.DEFAULT_DATE_FORMAT, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.expiryDate, null, context.DEFAULT_DATE_FORMAT))) : null " type="id_String" nullable="true"/>
         <mapperTableEntries name="creditReasonCode" expression="row15.creditReasonCode " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row15" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
