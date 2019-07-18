@@ -787,6 +787,18 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					return this.therapeuticClass;
 				}
 				
+			    public String disease;
+
+				public String getDisease () {
+					return this.disease;
+				}
+				
+			    public String molecule;
+
+				public String getMolecule () {
+					return this.molecule;
+				}
+				
 			    public String attribute1;
 
 				public String getAttribute1 () {
@@ -890,6 +902,10 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					this.therapeuticClass = readString(dis);
 					
+					this.disease = readString(dis);
+					
+					this.molecule = readString(dis);
+					
 					this.attribute1 = readString(dis);
 					
 					this.attribute2 = readString(dis);
@@ -984,6 +1000,14 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 					// String
 				
+						writeString(this.disease,dos);
+					
+					// String
+				
+						writeString(this.molecule,dos);
+					
+					// String
+				
 						writeString(this.attribute1,dos);
 					
 					// String
@@ -1031,6 +1055,8 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
+		sb.append(",disease="+disease);
+		sb.append(",molecule="+molecule);
 		sb.append(",attribute1="+attribute1);
 		sb.append(",attribute2="+attribute2);
 		sb.append(",attribute3="+attribute3);
@@ -1177,6 +1203,18 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					return this.therapeuticClass;
 				}
 				
+			    public String disease;
+
+				public String getDisease () {
+					return this.disease;
+				}
+				
+			    public String molecule;
+
+				public String getMolecule () {
+					return this.molecule;
+				}
+				
 			    public String attribute1;
 
 				public String getAttribute1 () {
@@ -1280,6 +1318,10 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					
 					this.therapeuticClass = readString(dis);
 					
+					this.disease = readString(dis);
+					
+					this.molecule = readString(dis);
+					
 					this.attribute1 = readString(dis);
 					
 					this.attribute2 = readString(dis);
@@ -1374,6 +1416,14 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					
 					// String
 				
+						writeString(this.disease,dos);
+					
+					// String
+				
+						writeString(this.molecule,dos);
+					
+					// String
+				
 						writeString(this.attribute1,dos);
 					
 					// String
@@ -1421,6 +1471,8 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
+		sb.append(",disease="+disease);
+		sb.append(",molecule="+molecule);
 		sb.append(",attribute1="+attribute1);
 		sb.append(",attribute2="+attribute2);
 		sb.append(",attribute3="+attribute3);
@@ -1567,6 +1619,18 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.therapeuticClass;
 				}
 				
+			    public String disease;
+
+				public String getDisease () {
+					return this.disease;
+				}
+				
+			    public String molecule;
+
+				public String getMolecule () {
+					return this.molecule;
+				}
+				
 			    public String attribute1;
 
 				public String getAttribute1 () {
@@ -1670,6 +1734,10 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 					this.therapeuticClass = readString(dis);
 					
+					this.disease = readString(dis);
+					
+					this.molecule = readString(dis);
+					
 					this.attribute1 = readString(dis);
 					
 					this.attribute2 = readString(dis);
@@ -1764,6 +1832,14 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 					// String
 				
+						writeString(this.disease,dos);
+					
+					// String
+				
+						writeString(this.molecule,dos);
+					
+					// String
+				
 						writeString(this.attribute1,dos);
 					
 					// String
@@ -1811,6 +1887,8 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
+		sb.append(",disease="+disease);
+		sb.append(",molecule="+molecule);
 		sb.append(",attribute1="+attribute1);
 		sb.append(",attribute2="+attribute2);
 		sb.append(",attribute3="+attribute3);
@@ -1945,6 +2023,18 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					return this.therapeuticClass;
 				}
 				
+			    public String disease;
+
+				public String getDisease () {
+					return this.disease;
+				}
+				
+			    public String molecule;
+
+				public String getMolecule () {
+					return this.molecule;
+				}
+				
 			    public String attribute1;
 
 				public String getAttribute1 () {
@@ -2044,6 +2134,10 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 					this.therapeuticClass = readString(dis);
 					
+					this.disease = readString(dis);
+					
+					this.molecule = readString(dis);
+					
 					this.attribute1 = readString(dis);
 					
 					this.attribute2 = readString(dis);
@@ -2130,6 +2224,14 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 					// String
 				
+						writeString(this.disease,dos);
+					
+					// String
+				
+						writeString(this.molecule,dos);
+					
+					// String
+				
 						writeString(this.attribute1,dos);
 					
 					// String
@@ -2175,6 +2277,8 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
+		sb.append(",disease="+disease);
+		sb.append(",molecule="+molecule);
 		sb.append(",attribute1="+attribute1);
 		sb.append(",attribute2="+attribute2);
 		sb.append(",attribute3="+attribute3);
@@ -2309,6 +2413,18 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					return this.therapeuticClass;
 				}
 				
+			    public String disease;
+
+				public String getDisease () {
+					return this.disease;
+				}
+				
+			    public String molecule;
+
+				public String getMolecule () {
+					return this.molecule;
+				}
+				
 			    public String attribute1;
 
 				public String getAttribute1 () {
@@ -2408,6 +2524,10 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					this.therapeuticClass = readString(dis);
 					
+					this.disease = readString(dis);
+					
+					this.molecule = readString(dis);
+					
 					this.attribute1 = readString(dis);
 					
 					this.attribute2 = readString(dis);
@@ -2494,6 +2614,14 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					// String
 				
+						writeString(this.disease,dos);
+					
+					// String
+				
+						writeString(this.molecule,dos);
+					
+					// String
+				
 						writeString(this.attribute1,dos);
 					
 					// String
@@ -2539,6 +2667,8 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		sb.append(",stdBoxCoef="+stdBoxCoef);
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
+		sb.append(",disease="+disease);
+		sb.append(",molecule="+molecule);
 		sb.append(",attribute1="+attribute1);
 		sb.append(",attribute2="+attribute2);
 		sb.append(",attribute3="+attribute3);
@@ -3200,7 +3330,7 @@ String dbUser_tDBOutput_1 = null;
    int batchSizeCounter_tDBOutput_1=0;
 
 int count_tDBOutput_1=0;
-	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"codelevel1\",\"codelevel2\",\"codelevel3\",\"codelevel4\",\"codelevel5\",\"namelevel1\",\"namelevel2\",\"namelevel3\",\"namelevel4\",\"namelevel5\",\"package_unit\",\"std_box_coef\",\"manufacturer_name\",\"therapeutic_class\",\"attribute1\",\"attribute2\",\"attribute3\",\"attribute4\",\"attribute5\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"codelevel1\",\"codelevel2\",\"codelevel3\",\"codelevel4\",\"codelevel5\",\"namelevel1\",\"namelevel2\",\"namelevel3\",\"namelevel4\",\"namelevel5\",\"package_unit\",\"std_box_coef\",\"manufacturer_name\",\"therapeutic_class\",\"disease\",\"molecule\",\"attribute1\",\"attribute2\",\"attribute3\",\"attribute4\",\"attribute5\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	    
 	    java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
 	    
@@ -4158,6 +4288,8 @@ if(out1 != null) {
     row3.stdBoxCoef = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "stdBoxCoef");
     row3.manufacturerName = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "manufacturerName");
     row3.therapeuticClass = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "therapeuticClass");
+    row3.disease = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "disease");
+    row3.molecule = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "molecule");
     row3.attribute1 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "attribute1");
     row3.attribute2 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "attribute2");
     row3.attribute3 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "attribute3");
@@ -4348,6 +4480,24 @@ if(row3 != null) {
                 row3.therapeuticClass = null;
               }
               row2.therapeuticClass=TypeConvert.String2String(row3.therapeuticClass);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.disease)){  
+                row3.disease = null;
+              }
+              row2.disease=TypeConvert.String2String(row3.disease);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.molecule)){  
+                row3.molecule = null;
+              }
+              row2.molecule=TypeConvert.String2String(row3.molecule);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -4601,6 +4751,8 @@ row8_tmp.packageUnit = row2.packageUnit ;
 row8_tmp.stdBoxCoef = row2.stdBoxCoef ;
 row8_tmp.manufacturerName = row2.manufacturerName ;
 row8_tmp.therapeuticClass = row2.therapeuticClass ;
+row8_tmp.disease = row2.disease ;
+row8_tmp.molecule = row2.molecule ;
 row8_tmp.attribute1 = row2.attribute1 ;
 row8_tmp.attribute2 = row2.attribute2 ;
 row8_tmp.attribute3 = row2.attribute3 ;
@@ -4728,6 +4880,12 @@ if(row8 != null) {
 
 	
 	row10.therapeuticClass = row8.therapeuticClass;
+
+	
+	row10.disease = row8.disease;
+
+	
+	row10.molecule = row8.molecule;
 
 	
 	row10.attribute1 = row8.attribute1;
@@ -4931,29 +5089,39 @@ pstmt_tDBOutput_1.setNull(16, java.sql.Types.VARCHAR);
 } else {pstmt_tDBOutput_1.setString(16, row9.therapeuticClass);
 }
 
-                    if(row9.attribute1 == null) {
+                    if(row9.disease == null) {
 pstmt_tDBOutput_1.setNull(17, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(17, row9.attribute1);
+} else {pstmt_tDBOutput_1.setString(17, row9.disease);
+}
+
+                    if(row9.molecule == null) {
+pstmt_tDBOutput_1.setNull(18, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(18, row9.molecule);
+}
+
+                    if(row9.attribute1 == null) {
+pstmt_tDBOutput_1.setNull(19, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(19, row9.attribute1);
 }
 
                     if(row9.attribute2 == null) {
-pstmt_tDBOutput_1.setNull(18, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(18, row9.attribute2);
+pstmt_tDBOutput_1.setNull(20, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(20, row9.attribute2);
 }
 
                     if(row9.attribute3 == null) {
-pstmt_tDBOutput_1.setNull(19, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(19, row9.attribute3);
+pstmt_tDBOutput_1.setNull(21, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(21, row9.attribute3);
 }
 
                     if(row9.attribute4 == null) {
-pstmt_tDBOutput_1.setNull(20, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(20, row9.attribute4);
+pstmt_tDBOutput_1.setNull(22, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(22, row9.attribute4);
 }
 
                     if(row9.attribute5 == null) {
-pstmt_tDBOutput_1.setNull(21, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(21, row9.attribute5);
+pstmt_tDBOutput_1.setNull(23, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(23, row9.attribute5);
 }
 
 			
@@ -11430,6 +11598,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     232754 characters generated by Talend Open Studio for Big Data 
- *     on the May 30, 2019 10:24:24 PM CST
+ *     248072 characters generated by Talend Open Studio for Big Data 
+ *     on the July 18, 2019 2:20:15 PM SGT
  ************************************************************************************************/

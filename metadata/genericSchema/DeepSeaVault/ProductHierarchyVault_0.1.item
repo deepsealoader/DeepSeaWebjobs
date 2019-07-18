@@ -51,6 +51,8 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKkcCpEeipbvJffRKaTQ" name="therapeutic_class" id="10708" label="therapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_jyQKksCpEeipbvJffRKaTQ"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_nRsAIKkkEemYLOBYZkLOYA" name="disease" label="disease" sourceType="" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_nWXEwKkkEemYLOBYZkLOYA" name="molecule" label="molecule" sourceType="" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKk8CpEeipbvJffRKaTQ" name="attribute1" id="10709" label="attribute1" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_jyQKlMCpEeipbvJffRKaTQ"/>
       </feature>

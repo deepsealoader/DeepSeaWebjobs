@@ -496,6 +496,15 @@ private class TalendException extends Exception {
 					tRunJob_23_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tRunJob_24_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				((java.util.Map)threadLocal.get()).put("status", "failure");
+				
+					tRunJob_24_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tRunJob_7_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -631,6 +640,11 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tRunJob_23_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tRunJob_24_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -6964,9 +6978,9 @@ ok_Hash.put("tRunJob_23", true);
 end_Hash.put("tRunJob_23", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk28", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk29", 0, "ok");
 				}
-				tRunJob_7Process(globalMap);
+				tRunJob_24Process(globalMap);
 
 
 
@@ -7024,6 +7038,391 @@ end_Hash.put("tRunJob_23", System.currentTimeMillis());
 		
 
 		globalMap.put("tRunJob_23_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tRunJob_24Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tRunJob_24_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tRunJob_24 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tRunJob_24", false);
+		start_Hash.put("tRunJob_24", System.currentTimeMillis());
+		
+	
+	currentComponent="tRunJob_24";
+
+	
+		int tos_count_tRunJob_24 = 0;
+		
+    	class BytesLimit65535_tRunJob_24{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tRunJob_24().limitLog4jByte();
+
+
+ 
+
+
+
+/**
+ * [tRunJob_24 begin ] stop
+ */
+	
+	/**
+	 * [tRunJob_24 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_24";
+
+	
+	java.util.List<String> paraList_tRunJob_24 = new java.util.ArrayList<String>();
+	
+	        			paraList_tRunJob_24.add("--father_pid="+pid);
+	      			
+	        			paraList_tRunJob_24.add("--root_pid="+rootPid);
+	      			
+	        			paraList_tRunJob_24.add("--father_node=tRunJob_24");
+	      			
+	        			paraList_tRunJob_24.add("--context=Production");
+	      			
+	//for feature:10589
+	
+		paraList_tRunJob_24.add("--stat_port=" + portStats);
+	
+
+	if(resuming_logs_dir_path != null){
+		paraList_tRunJob_24.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
+	}
+	String childResumePath_tRunJob_24 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
+	String tRunJobName_tRunJob_24 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
+	if("tRunJob_24".equals(tRunJobName_tRunJob_24) && childResumePath_tRunJob_24 != null){
+		paraList_tRunJob_24.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
+	}
+	paraList_tRunJob_24.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_24");
+	
+	java.util.Map<String, Object> parentContextMap_tRunJob_24 = new java.util.HashMap<String, Object>();
+
+	
+		
+		context.synchronizeContext();
+		
+			parentContextMap_tRunJob_24.put("WEBJOB_NAME", context.WEBJOB_NAME);
+			paraList_tRunJob_24.add("--context_type " + "WEBJOB_NAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_24.put("COUNTRY", context.COUNTRY);
+			paraList_tRunJob_24.add("--context_type " + "COUNTRY" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_24.put("DEEPSEA_AUTH_TOKEN", context.DEEPSEA_AUTH_TOKEN);
+			paraList_tRunJob_24.add("--context_type " + "DEEPSEA_AUTH_TOKEN" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_24.put("DEEPSEA_HOSTNAME", context.DEEPSEA_HOSTNAME);
+			paraList_tRunJob_24.add("--context_type " + "DEEPSEA_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_24.put("DEFAULT_DATE_FORMAT", context.DEFAULT_DATE_FORMAT);
+			paraList_tRunJob_24.add("--context_type " + "DEFAULT_DATE_FORMAT" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_24.put("MONGODB_HOSTNAME", context.MONGODB_HOSTNAME);
+			paraList_tRunJob_24.add("--context_type " + "MONGODB_HOSTNAME" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_24.put("POSTGRES_DATABASE", context.POSTGRES_DATABASE);
+			paraList_tRunJob_24.add("--context_type " + "POSTGRES_DATABASE" + "=" + "id_String");
+		
+			parentContextMap_tRunJob_24.put("POSTGRES_HOSTNAME", context.POSTGRES_HOSTNAME);
+			paraList_tRunJob_24.add("--context_type " + "POSTGRES_HOSTNAME" + "=" + "id_String");
+		 
+		java.util.Enumeration<?> propertyNames_tRunJob_24 = context.propertyNames();
+		while (propertyNames_tRunJob_24.hasMoreElements()) {
+			String key_tRunJob_24 = (String) propertyNames_tRunJob_24.nextElement();
+			Object value_tRunJob_24 = (Object) context.get(key_tRunJob_24);
+			if(value_tRunJob_24!=null) {  
+				paraList_tRunJob_24.add("--context_param " + key_tRunJob_24 + "=" + value_tRunJob_24);
+			} else {
+				paraList_tRunJob_24.add("--context_param " + key_tRunJob_24 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+			}
+			
+		}
+		
+
+	Object obj_tRunJob_24 = null;
+
+	
+		obj_tRunJob_24 = "hongkong.master.markethierarchy.servier";
+		if(obj_tRunJob_24!=null) {
+			paraList_tRunJob_24.add("--context_param SOURCE1=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_24));
+		} else {
+			paraList_tRunJob_24.add("--context_param SOURCE1=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_24.put("SOURCE1", obj_tRunJob_24);
+	
+		obj_tRunJob_24 = "hongkong.master.producthierarchy.iqvia";
+		if(obj_tRunJob_24!=null) {
+			paraList_tRunJob_24.add("--context_param SOURCE2=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_24));
+		} else {
+			paraList_tRunJob_24.add("--context_param SOURCE2=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_24.put("SOURCE2", obj_tRunJob_24);
+	
+		obj_tRunJob_24 = "ProductHierarchy";
+		if(obj_tRunJob_24!=null) {
+			paraList_tRunJob_24.add("--context_param TYPE=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_24));
+		} else {
+			paraList_tRunJob_24.add("--context_param TYPE=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_24.put("TYPE", obj_tRunJob_24);
+	
+		obj_tRunJob_24 = "IQVIA";
+		if(obj_tRunJob_24!=null) {
+			paraList_tRunJob_24.add("--context_param SHEET_NAME=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_24));
+		} else {
+			paraList_tRunJob_24.add("--context_param SHEET_NAME=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_24.put("SHEET_NAME", obj_tRunJob_24);
+	
+		obj_tRunJob_24 = "therapeuticClass";
+		if(obj_tRunJob_24!=null) {
+			paraList_tRunJob_24.add("--context_param BUSINESS_KEY1=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_24));
+		} else {
+			paraList_tRunJob_24.add("--context_param BUSINESS_KEY1=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_24.put("BUSINESS_KEY1", obj_tRunJob_24);
+	
+		obj_tRunJob_24 = "providerCode";
+		if(obj_tRunJob_24!=null) {
+			paraList_tRunJob_24.add("--context_param BUSINESS_KEY2=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_24));
+		} else {
+			paraList_tRunJob_24.add("--context_param BUSINESS_KEY2=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_24.put("BUSINESS_KEY2", obj_tRunJob_24);
+	
+		obj_tRunJob_24 = "market";
+		if(obj_tRunJob_24!=null) {
+			paraList_tRunJob_24.add("--context_param TABLE1=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_24));
+		} else {
+			paraList_tRunJob_24.add("--context_param TABLE1=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_24.put("TABLE1", obj_tRunJob_24);
+	
+		obj_tRunJob_24 = "product";
+		if(obj_tRunJob_24!=null) {
+			paraList_tRunJob_24.add("--context_param TABLE2=" + RuntimeUtils.tRunJobConvertContext(obj_tRunJob_24));
+		} else {
+			paraList_tRunJob_24.add("--context_param TABLE2=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+		}
+		
+		parentContextMap_tRunJob_24.put("TABLE2", obj_tRunJob_24);
+	
+	
+		deepsea.link_master_0_1.LINK_MASTER childJob_tRunJob_24 = new deepsea.link_master_0_1.LINK_MASTER();
+	    // pass DataSources
+	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_24 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
+	            .get(KEY_DB_DATASOURCES);
+	    if (null != talendDataSources_tRunJob_24) {
+	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_24 = new java.util.HashMap<String, javax.sql.DataSource>();
+	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_24 : talendDataSources_tRunJob_24
+			        .entrySet()) {
+	            dataSources_tRunJob_24.put(talendDataSourceEntry_tRunJob_24.getKey(),
+	                    talendDataSourceEntry_tRunJob_24.getValue().getRawDataSource());
+	        }
+	        childJob_tRunJob_24.setDataSources(dataSources_tRunJob_24);
+	    }
+		  
+			childJob_tRunJob_24.parentContextMap = parentContextMap_tRunJob_24;
+		  
+		
+		String[][] childReturn_tRunJob_24 = childJob_tRunJob_24.runJob((String[]) paraList_tRunJob_24.toArray(new String[paraList_tRunJob_24.size()]));
+		
+	  	
+				((java.util.Map)threadLocal.get()).put("errorCode", childJob_tRunJob_24.getErrorCode());
+			
+	            
+	    	if(childJob_tRunJob_24.getErrorCode() == null){
+				globalMap.put("tRunJob_24_CHILD_RETURN_CODE", childJob_tRunJob_24.getStatus() != null && ("failure").equals(childJob_tRunJob_24.getStatus()) ? 1 : 0);
+	    	}else{
+				globalMap.put("tRunJob_24_CHILD_RETURN_CODE", childJob_tRunJob_24.getErrorCode());
+		    }
+		    if (childJob_tRunJob_24.getExceptionStackTrace() != null) { 
+		    	globalMap.put("tRunJob_24_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_24.getExceptionStackTrace());
+		    }
+	  
+			 
+				if (childJob_tRunJob_24.getErrorCode() != null || ("failure").equals(childJob_tRunJob_24.getStatus())) {
+	        		throw new RuntimeException("Child job running failed.\n"+childJob_tRunJob_24.getException().getClass().getName() + ": " + childJob_tRunJob_24.getException().getMessage());
+				}
+			
+	  	
+
+ 
+
+
+	tos_count_tRunJob_24++;
+
+/**
+ * [tRunJob_24 main ] stop
+ */
+	
+	/**
+	 * [tRunJob_24 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_24";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_24 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tRunJob_24 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_24";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_24 process_data_end ] stop
+ */
+	
+	/**
+	 * [tRunJob_24 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_24";
+
+	
+
+ 
+
+ok_Hash.put("tRunJob_24", true);
+end_Hash.put("tRunJob_24", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk28", 0, "ok");
+				}
+				tRunJob_7Process(globalMap);
+
+
+
+/**
+ * [tRunJob_24 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tRunJob_24 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_24";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_24 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tRunJob_24_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -9750,6 +10149,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     284142 characters generated by Talend Open Studio for Big Data 
- *     on the May 30, 2019 10:24:32 PM CST
+ *     305920 characters generated by Talend Open Studio for Big Data 
+ *     on the July 18, 2019 2:20:20 PM SGT
  ************************************************************************************************/

@@ -188,9 +188,9 @@
 				<include>org.talend.libraries:talendcsv</include>
 				<include>org.talend.libraries:trove</include>
 				<include>org.example.deepsea.code:routines</include>
+				<include>org.talend.libraries:commons-lang-2.6</include>
 				<include>org.talend.libraries:jersey-core-1.4</include>
 				<include>org.talend.libraries:jersey-client-1.4</include>
-				<include>org.talend.libraries:commons-lang-2.6</include>
 			</includes>
 			<!-- without version for talend libraries -->
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_qoC38KkkEemYLOBYZkLOYA" comment="connectionComment" label="connectionLabel" dataPackage="_jyQKccCpEeipbvJffRKaTQ" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_jyQKccCpEeipbvJffRKaTQ" dataManager="_qoC38KkkEemYLOBYZkLOYA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_jyQKcsCpEeipbvJffRKaTQ" id="_F-LoQMCqEeipbvJffRKaTQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKc8CpEeipbvJffRKaTQ" name="hub_id" id="10693" label="hubId" length="-1" precision="-1" sourceType="" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_jyQKdMCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKdcCpEeipbvJffRKaTQ" name="source" id="10694" label="source" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_jyQKdsCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKd8CpEeipbvJffRKaTQ" name="servier_code" id="10695" label="servierCode" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKeMCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKecCpEeipbvJffRKaTQ" name="provider_code" id="10696" label="providerCode" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_jyQKesCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKe8CpEeipbvJffRKaTQ" name="group" id="10697" label="group" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKfMCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKicCpEeipbvJffRKaTQ" name="name" id="10704" label="name" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_jyQKisCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKj8CpEeipbvJffRKaTQ" name="manufacturer_name" id="10707" label="manufacturerName" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKkMCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKkcCpEeipbvJffRKaTQ" name="therapeutic_class" id="10708" label="therapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKksCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_nRsAIKkkEemYLOBYZkLOYA" name="disease" label="disease" sourceType="" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_nWXEwKkkEemYLOBYZkLOYA" name="molecule" label="molecule" sourceType="" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKk8CpEeipbvJffRKaTQ" name="attribute1" id="10709" label="attribute1" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKlMCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKlcCpEeipbvJffRKaTQ" name="attribute2" id="10710" label="attribute2" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKlsCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKl8CpEeipbvJffRKaTQ" name="attribute3" id="10711" label="attribute3" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKmMCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKmcCpEeipbvJffRKaTQ" name="attribute4" id="10712" label="attribute4" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKmsCpEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKm8CpEeipbvJffRKaTQ" name="attribute5" id="10713" label="attribute5" length="-1" precision="-1" sourceType="" talendType="id_String">
+        <initialValue xmi:id="_jyQKnMCpEeipbvJffRKaTQ"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

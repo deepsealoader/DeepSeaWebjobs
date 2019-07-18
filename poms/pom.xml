@@ -61,7 +61,6 @@
     <module>jobs/process/COMMON/SUBJOBS/generate_customer_diff_0.1</module>
     <module>jobs/process/HONGKONG/JOBS/hongkong_build_master_vault_0.1</module>
     <module>jobs/process/HONGKONG/JOBS/hongkong_build_sales_vault_0.1</module>
-    <module>jobs/process/HONGKONG/JOBS/hongkong_sales_zuellig_daily_to_monthly_0.1</module>
     <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_hubs_0.1</module>
     <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_links_0.1</module>
     <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_sats_0.1</module>
@@ -94,11 +93,11 @@
     <module>jobs/process/HONGKONG/TOOLS/extract_customer_sector_0.1</module>
     <module>jobs/process/COMMON/LINKS/link_master_with_multiple_without_hub_0.1</module>
     <module>jobs/process/THAILAND/JOBS/thailand_check_product_customer_0.1</module>
-    <module>jobs/process/HONGKONG/JOBS/test_0.1</module>
-    <module>jobs/process/COMMON/HUBS/hub_master_copy_0.1</module>
-    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_iqva_hubs_0.1</module>
-    <module>jobs/process/COMMON/SATS/sat_product_iqva_0.1</module>
     <module>jobs/process/COMMON/SALS/sal_master_with_empty_0.1</module>
+    <module>jobs/process/test2_0.1</module>
+    <module>jobs/process/test1_0.1</module>
+    <module>jobs/process/COMMON/SATS/sat_product_provider_0.1</module>
+    <module>jobs/process/HONGKONG/JOBS/hongkong_sales_zuellig_daily_to_monthly_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>
