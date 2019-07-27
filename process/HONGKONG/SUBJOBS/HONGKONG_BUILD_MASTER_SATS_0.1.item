@@ -435,11 +435,13 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;hongkong.master.producthierarchy.iqvia&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;IQVIA&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;product_iqvia&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
+    <elementParameter field="TEXT" name="LABEL" value="SAT_PRODUCT_IQVIA"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_12"/>
