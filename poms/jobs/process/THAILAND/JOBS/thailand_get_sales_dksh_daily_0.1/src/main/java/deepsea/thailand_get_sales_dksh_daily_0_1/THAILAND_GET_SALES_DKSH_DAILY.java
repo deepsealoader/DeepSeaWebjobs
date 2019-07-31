@@ -357,6 +357,15 @@ private class TalendException extends Exception {
 					tFileList_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tFileCopy_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileList_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tFileFetch_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -379,7 +388,7 @@ private class TalendException extends Exception {
 							e.printStackTrace();
 						}
 						
-					tFileList_1_onSubJobError(exception, errorComponent, globalMap);
+					tFileFetch_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFileDelete_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -465,6 +474,11 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tFileList_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tFileFetch_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -1017,7 +1031,7 @@ row3Struct row3 = new row3Struct();
 			boolean isMatch_tPOP_1 = true;
   
 			    String filename_tPOP_1 = TalendDate.getDate("yyyyMMdd-hhmmss") + "_" + (counter_tPOP_1 + 1) + ".mail";
-			    java.io.File file_tPOP_1 = new java.io.File("C:/Users/RRU_SG1/Projects/Talend/workspace", filename_tPOP_1);
+			    java.io.File file_tPOP_1 = new java.io.File(globalMap.get("MAILS_FOLDER_PATH").toString(), filename_tPOP_1);
 			    java.io.OutputStream os_tPOP_1 = new java.io.FileOutputStream(file_tPOP_1);
 	     
 			    message_tPOP_1.writeTo(os_tPOP_1);
@@ -1083,11 +1097,19 @@ row3Struct row3 = new row3Struct();
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row2", 3, 0);
+	       				runStat.updateStatOnConnection("row3", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("iterate2", 3, 0);
+	       				runStat.updateStatOnConnection("IfBatchDateExists", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -1095,11 +1117,7 @@ row3Struct row3 = new row3Struct();
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("iterate3", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("IfBatchDateExists", 3, 0);
+	       				runStat.updateStatOnConnection("row2", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -1111,11 +1129,11 @@ row3Struct row3 = new row3Struct();
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row3", 3, 0);
+	       				runStat.updateStatOnConnection("iterate2", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk2", 3, 0);
+	       				runStat.updateStatOnConnection("iterate3", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -1207,7 +1225,7 @@ row3Struct row3 = new row3Struct();
     	
         new BytesLimit65535_tExtractRegexFields_1().limitLog4jByte();
 
-java.util.regex.Pattern pattern_tExtractRegexFields_1 = java.util.regex.Pattern.compile("(\\d{4}-\\d{2})");
+java.util.regex.Pattern pattern_tExtractRegexFields_1 = java.util.regex.Pattern.compile("(\\d{4}-\\d{2}-\\d{2})");
  
 
 
@@ -1772,7 +1790,9 @@ if(row3 != null) {
 
 		
 
-globalMap.put("BATCH_DATE", row3.batchDate + "-01");
+globalMap.put("BATCH_DATE", row3.batchDate.substring(0, row3.batchDate.length() - 2) + "01");
+globalMap.put("FILE_NAME", "sales.dksh.daily-" + row3.batchDate +  ".xls");
+globalMap.put("FILE_PATH", globalMap.get("MAILS_FOLDER_PATH").toString() + java.io.File.separator + "sales.dksh.daily-" + row3.batchDate +  ".xls");
 
  
 
@@ -2807,7 +2827,7 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
 	 */
 
 				
-			int NB_ITERATE_tFileFetch_1 = 0; //for statistics
+			int NB_ITERATE_tFileCopy_1 = 0; //for statistics
 			
 
 	
@@ -2835,8 +2855,7 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
   String directory_tFileList_1 = globalMap.get("MAILS_FOLDER_PATH").toString();
   final java.util.List<String> maskList_tFileList_1 = new java.util.ArrayList<String>();
   final java.util.List<java.util.regex.Pattern> patternList_tFileList_1 = new java.util.ArrayList<java.util.regex.Pattern>(); 
-    maskList_tFileList_1.add("*.xls"); 
-    maskList_tFileList_1.add("*.xlsx");  
+    maskList_tFileList_1.add("*.xls");  
   for (final String filemask_tFileList_1 : maskList_tFileList_1) {
 	String filemask_compile_tFileList_1 = filemask_tFileList_1;
 	
@@ -2943,22 +2962,350 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
 /**
  * [tFileList_1 process_data_begin ] stop
  */
-	NB_ITERATE_tFileFetch_1++;
+	NB_ITERATE_tFileCopy_1++;
 	
 	
-					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentError1", 3, 0);
-					}           			
-				
 					if(execStat){				
 	       				runStat.updateStatOnConnection("OnComponentOk2", 3, 0);
 					}           			
 				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentError1", 3, 0);
+					}           			
+				
 				if(execStat){
-					runStat.updateStatOnConnection("iterate2", 1, "exec" + NB_ITERATE_tFileFetch_1);
+					runStat.updateStatOnConnection("iterate2", 1, "exec" + NB_ITERATE_tFileCopy_1);
 					//Thread.sleep(1000);
 				}				
 			
+
+	
+	/**
+	 * [tFileCopy_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFileCopy_1", false);
+		start_Hash.put("tFileCopy_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tFileCopy_1";
+
+	
+		int tos_count_tFileCopy_1 = 0;
+		
+    	class BytesLimit65535_tFileCopy_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFileCopy_1().limitLog4jByte();
+
+ 
+
+
+
+/**
+ * [tFileCopy_1 begin ] stop
+ */
+	
+	/**
+	 * [tFileCopy_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileCopy_1";
+
+	
+
+ 
+
+
+        String srcFileName_tFileCopy_1 = globalMap.get("tFileList_1_CURRENT_FILEPATH").toString();
+
+		java.io.File srcFile_tFileCopy_1 = new java.io.File(srcFileName_tFileCopy_1);
+
+		// here need check first, before mkdirs().
+		if (!srcFile_tFileCopy_1.exists() || !srcFile_tFileCopy_1.isFile()) {
+			String errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1 = String.format("The source File \"%s\" does not exist or is not a file.", srcFileName_tFileCopy_1);
+				throw new RuntimeException(errorMessageFileDoesnotExistsOrIsNotAFile_tFileCopy_1);
+		}
+        String desDirName_tFileCopy_1 = globalMap.get("MAILS_FOLDER_PATH").toString();
+
+		String desFileName_tFileCopy_1 =  globalMap.get("FILE_NAME").toString() ;
+
+		if (desFileName_tFileCopy_1 != null && ("").equals(desFileName_tFileCopy_1.trim())){
+			desFileName_tFileCopy_1 = "NewName.temp";
+		}
+
+		java.io.File desFile_tFileCopy_1 = new java.io.File(desDirName_tFileCopy_1, desFileName_tFileCopy_1);
+
+		if (!srcFile_tFileCopy_1.getPath().equals(desFile_tFileCopy_1.getPath())  ) {
+				java.io.File parentFile_tFileCopy_1 = desFile_tFileCopy_1.getParentFile();
+
+				if (parentFile_tFileCopy_1 != null && !parentFile_tFileCopy_1.exists()) {
+					parentFile_tFileCopy_1.mkdirs();
+				}
+					org.talend.FileCopy.copyFile(srcFile_tFileCopy_1.getPath(), desFile_tFileCopy_1.getPath(), false);
+
+		}
+		globalMap.put("tFileCopy_1_DESTINATION_FILEPATH",desFile_tFileCopy_1.getPath()); 
+		globalMap.put("tFileCopy_1_DESTINATION_FILENAME",desFile_tFileCopy_1.getName()); 
+
+		globalMap.put("tFileCopy_1_SOURCE_DIRECTORY", srcFile_tFileCopy_1.getParent());
+		globalMap.put("tFileCopy_1_DESTINATION_DIRECTORY", desFile_tFileCopy_1.getParent());        
+        
+
+ 
+
+
+	tos_count_tFileCopy_1++;
+
+/**
+ * [tFileCopy_1 main ] stop
+ */
+	
+	/**
+	 * [tFileCopy_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileCopy_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileCopy_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tFileCopy_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileCopy_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileCopy_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileCopy_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileCopy_1";
+
+	
+
+ 
+
+ok_Hash.put("tFileCopy_1", true);
+end_Hash.put("tFileCopy_1", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk5", 0, "ok");
+				}
+				tFileFetch_1Process(globalMap);
+
+
+
+/**
+ * [tFileCopy_1 end ] stop
+ */
+						if(execStat){
+							runStat.updateStatOnConnection("iterate2", 2, "exec" + NB_ITERATE_tFileCopy_1);
+						}				
+					
+
+
+
+
+	
+	/**
+	 * [tFileList_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileList_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileList_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileList_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileList_1";
+
+	
+
+  
+    }
+  globalMap.put("tFileList_1_NB_FILE", NB_FILEtFileList_1);
+  
+
+  
+ 
+
+ 
+
+ok_Hash.put("tFileList_1", true);
+end_Hash.put("tFileList_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFileList_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tFileList_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileList_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileList_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tFileCopy_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileCopy_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileCopy_1 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tFileList_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tFileFetch_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
 
 	
 	/**
@@ -3027,7 +3374,7 @@ java.io.InputStream retIS_tFileFetch_1 = null;
 		
 			org.apache.commons.httpclient.methods.multipart.StringPart common_1_tFileFetch_1 = new org.apache.commons.httpclient.methods.multipart.StringPart("data", "{\"batchDate\": \"" + globalMap.get("BATCH_DATE").toString() + "\"}");
 			
-				org.apache.commons.httpclient.methods.multipart.FilePart file_1_tFileFetch_1  = new org.apache.commons.httpclient.methods.multipart.FilePart("file", new java.io.File(globalMap.get("tFileList_1_CURRENT_FILEPATH").toString()), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "UTF-8");
+				org.apache.commons.httpclient.methods.multipart.FilePart file_1_tFileFetch_1  = new org.apache.commons.httpclient.methods.multipart.FilePart("file", new java.io.File(globalMap.get("FILE_PATH").toString()), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "UTF-8");
 			
 		org.apache.commons.httpclient.methods.multipart.Part[] parts_tFileFetch_1 = new org.apache.commons.httpclient.methods.multipart.Part[]{common_1_tFileFetch_1,file_1_tFileFetch_1,};    
 		((org.apache.commons.httpclient.methods.PostMethod)method_tFileFetch_1).setRequestEntity(new org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity(parts_tFileFetch_1, method_tFileFetch_1.getParams()));
@@ -3149,66 +3496,6 @@ end_Hash.put("tFileFetch_1", System.currentTimeMillis());
 /**
  * [tFileFetch_1 end ] stop
  */
-						if(execStat){
-							runStat.updateStatOnConnection("iterate2", 2, "exec" + NB_ITERATE_tFileFetch_1);
-						}				
-					
-
-
-
-
-	
-	/**
-	 * [tFileList_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileList_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tFileList_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_1";
-
-	
-
-  
-    }
-  globalMap.put("tFileList_1_NB_FILE", NB_FILEtFileList_1);
-  
-
-  
- 
-
- 
-
-ok_Hash.put("tFileList_1", true);
-end_Hash.put("tFileList_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tFileList_1 end ] stop
- */
 				}//end the resume
 
 				
@@ -3232,27 +3519,6 @@ end_Hash.put("tFileList_1", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tFileList_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileList_1 finally ] stop
- */
-
-	
-	/**
 	 * [tFileFetch_1 finally ] start
 	 */
 
@@ -3271,9 +3537,6 @@ end_Hash.put("tFileList_1", System.currentTimeMillis());
 /**
  * [tFileFetch_1 finally ] stop
  */
-
-
-
 				}catch(java.lang.Exception e){	
 					//ignore
 				}catch(java.lang.Error error){
@@ -3283,7 +3546,7 @@ end_Hash.put("tFileList_1", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tFileList_1_SUBPROCESS_STATE", 1);
+		globalMap.put("tFileFetch_1_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -3397,7 +3660,7 @@ class DeleteFoldertFileDelete_1{
     }
 
 }
-    java.io.File file_tFileDelete_1=new java.io.File(globalMap.get("tFileList_1_CURRENT_FILEPATH").toString());
+    java.io.File file_tFileDelete_1=new java.io.File(globalMap.get("FILE_PATH").toString());
     if(file_tFileDelete_1.exists()&& file_tFileDelete_1.isFile()){
     	if(file_tFileDelete_1.delete()){
     		globalMap.put("tFileDelete_1_CURRENT_STATUS", "File deleted.");
@@ -3409,7 +3672,7 @@ class DeleteFoldertFileDelete_1{
 		globalMap.put("tFileDelete_1_CURRENT_STATUS", "File does not exist or is invalid.");
 			throw new RuntimeException("File " + file_tFileDelete_1.getAbsolutePath() + " does not exist or is invalid or is not a file.");
 	}
-	globalMap.put("tFileDelete_1_DELETE_PATH",globalMap.get("tFileList_1_CURRENT_FILEPATH").toString());
+	globalMap.put("tFileDelete_1_DELETE_PATH",globalMap.get("FILE_PATH").toString());
     
      
  
@@ -3650,7 +3913,7 @@ class DeleteFoldertFileDelete_2{
     }
 
 }
-    java.io.File file_tFileDelete_2=new java.io.File(globalMap.get("tFileList_1_CURRENT_FILEPATH").toString());
+    java.io.File file_tFileDelete_2=new java.io.File(globalMap.get("FILE_PATH").toString());
     if(file_tFileDelete_2.exists()&& file_tFileDelete_2.isFile()){
     	if(file_tFileDelete_2.delete()){
     		globalMap.put("tFileDelete_2_CURRENT_STATUS", "File deleted.");
@@ -3662,7 +3925,7 @@ class DeleteFoldertFileDelete_2{
 		globalMap.put("tFileDelete_2_CURRENT_STATUS", "File does not exist or is invalid.");
 			throw new RuntimeException("File " + file_tFileDelete_2.getAbsolutePath() + " does not exist or is invalid or is not a file.");
 	}
-	globalMap.put("tFileDelete_2_DELETE_PATH",globalMap.get("tFileList_1_CURRENT_FILEPATH").toString());
+	globalMap.put("tFileDelete_2_DELETE_PATH",globalMap.get("FILE_PATH").toString());
     
      
  
@@ -5475,6 +5738,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     123927 characters generated by Talend Open Studio for Big Data 
- *     on the 30 July, 2019 3:13:40 PM SGT
+ *     123912 characters generated by Talend Open Studio for Big Data 
+ *     on the July 31, 2019 10:02:03 AM CST
  ************************************************************************************************/

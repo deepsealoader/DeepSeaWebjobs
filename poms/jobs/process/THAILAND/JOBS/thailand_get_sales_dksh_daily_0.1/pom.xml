@@ -72,6 +72,11 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
+      <artifactId>filecopy</artifactId>
+      <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.libraries</groupId>
       <artifactId>httpasyncclient-4.1.1</artifactId>
       <version>6.0.0</version>
     </dependency>

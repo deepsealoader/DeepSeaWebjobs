@@ -122,7 +122,7 @@
     <elementParameter field="TEXT" name="PORT" value="995"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;deepseath@servier.com&quot;"/>
     <elementParameter field="PASSWORD" name="PASSWORD" value="T0P5O3R+Y9VlMfXgxPDuEQ=="/>
-    <elementParameter field="DIRECTORY" name="OUTPUT_DIRECTORY" value="&quot;C:/Users/RRU_SG1/Projects/Talend/workspace&quot;"/>
+    <elementParameter field="DIRECTORY" name="OUTPUT_DIRECTORY" value="globalMap.get(&quot;MAILS_FOLDER_PATH&quot;).toString()"/>
     <elementParameter field="TEXT" name="FILENAME_PATTERN" value="TalendDate.getDate(&quot;yyyyMMdd-hhmmss&quot;) + &quot;_&quot; + (counter_tPOP_1 + 1) + &quot;.mail&quot;"/>
     <elementParameter field="CHECK" name="ALL_EMAILS" value="true"/>
     <elementParameter field="CHECK" name="NEWER_EMAILS" value="true" show="false"/>
@@ -191,7 +191,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractRegexFields_1" show="false"/>
     <elementParameter field="PREV_COLUMN_LIST" name="FIELD" value="subject"/>
     <elementParameter field="LABEL" name="REGEX_HELP" value="The default regex will match &quot;[Monday] meeting with John [priority: high] [place: office]&quot;&#xA;      and &quot;[Friday] diner with kids [priority: highest] [place: home]&quot;&#xA;&#x9;  "/>
-    <elementParameter field="MEMO" name="REGEX" value="&quot;(\\d{4}-\\d{2})&quot;"/>
+    <elementParameter field="MEMO" name="REGEX" value="&quot;(\\d{4}-\\d{2}-\\d{2})&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ExtractBatchDate"/>
@@ -210,7 +210,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;BATCH_DATE&quot;"/>
-      <elementValue elementRef="VALUE" value="row3.batchDate + &quot;-01&quot;"/>
+      <elementValue elementRef="VALUE" value="row3.batchDate.substring(0, row3.batchDate.length() - 2) + &quot;01&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;FILE_NAME&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;sales.dksh.daily-&quot; + row3.batchDate +  &quot;.xls&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;FILE_PATH&quot;"/>
+      <elementValue elementRef="VALUE" value="globalMap.get(&quot;MAILS_FOLDER_PATH&quot;).toString() + java.io.File.separator + &quot;sales.dksh.daily-&quot; + row3.batchDate +  &quot;.xls&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="MemorizeBatchDate"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
@@ -229,7 +233,6 @@
     <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
     <elementParameter field="TABLE" name="FILES">
       <elementValue elementRef="FILEMASK" value="&quot;*.xls&quot;"/>
-      <elementValue elementRef="FILEMASK" value="&quot;*.xlsx&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
@@ -244,62 +247,22 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileFetch" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="384">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileFetch_1" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="PROTO" value="http"/>
-    <elementParameter field="CHECK" name="POST" value="true"/>
-    <elementParameter field="TEXT" name="URI" value="globalMap.get(&quot;tDeepSeaConnect_1_URL&quot;).toString() + &quot;/api/v1/lakefs/&quot; +globalMap.get(&quot;tDeepSeaConnect_1_COLLECTION_ID&quot;).toString()+ &quot;/files&quot;"/>
-    <elementParameter field="CHECK" name="USE_CACHE" value="true"/>
-    <elementParameter field="TEXT" name="SMB_URI" value="&quot;smb://host/dir/remoteFileName.txt&quot;" show="false"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:&quot;" show="false"/>
-    <elementParameter field="CHECK" name="MAKEDIRS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FILENAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="ADD_HEADER" value="true"/>
-    <elementParameter field="TABLE" name="HEADERS">
-      <elementValue elementRef="HEADER_NAME" value="&quot;Authorization&quot;"/>
-      <elementValue elementRef="HEADER_VALUE" value="&quot;Basic &quot; + globalMap.get(&quot;tDeepSeaConnect_1_TOKEN&quot;).toString()"/>
-      <elementValue elementRef="HEADER_NAME" value="&quot;File-Mode&quot;"/>
-      <elementValue elementRef="HEADER_VALUE" value="&quot;CREATE&quot;"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="SMB_DOMAIN" value="&quot;domain&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SMB_USERNAME" value="&quot;username&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="SMB_PASSWORD" value="PoLvNyVG2XWndNDdLn696A==" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="TABLE" name="COMMON_PARAMS">
-      <elementValue elementRef="COMMON_PARAMS_NAME" value="&quot;data&quot;"/>
-      <elementValue elementRef="COMMON_PARAMS_VALUE" value="&quot;{\&quot;batchDate\&quot;: \&quot;&quot; + globalMap.get(&quot;BATCH_DATE&quot;).toString() + &quot;\&quot;}&quot;"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="READ_COOKIE" value="false"/>
-    <elementParameter field="CHECK" name="SAVE_COOKIE" value="false"/>
-    <elementParameter field="FILE" name="COOKIE_DIR" value="&quot;C:/cookie&quot;" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="COOKIE_POLICY" value="DEFAULT" show="false"/>
-    <elementParameter field="CHECK" name="SINGLE_COOKIE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="ENCODE_URI" value="false"/>
-    <elementParameter field="CHECK" name="PRINT" value="true"/>
-    <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
-    <elementParameter field="CHECK" name="UPLOAD" value="true"/>
-    <elementParameter field="TABLE" name="FILE_PARAMS">
-      <elementValue elementRef="FILE_PARAMS_NAME" value="&quot;file&quot;"/>
-      <elementValue elementRef="FILE_PARAMS_VALUE" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
-      <elementValue elementRef="FILE_PARAMS_CONTENT_TYPE" value="&quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;"/>
-      <elementValue elementRef="FILE_PARAMS_CHARSET" value="&quot;UTF-8&quot;"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;8080&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="CHECK" name="PROXY_NTLM" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_DOMAIN" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;username&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="PoLvNyVG2XWndNDdLn696A==" show="false"/>
-    <elementParameter field="CHECK" name="REDIRECT" value="false"/>
-    <elementParameter field="CHECK" name="REDIRECT_302_AS_303" value="false" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDeepSeaPostFile_1"/>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;/home/romuald/Projects/Talend/TOS_BD/workspace&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="globalMap.get(&quot;MAILS_FOLDER_PATH&quot;).toString()"/>
+    <elementParameter field="CHECK" name="RENAME" value="true"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="globalMap.get(&quot;FILE_NAME&quot;).toString()"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="RenameFile"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileFetch_1"/>
+    <metadata connector="FLOW" name="tFileCopy_1"/>
   </node>
   <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
@@ -329,9 +292,9 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="384">
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1696" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_1" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
+    <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;FILE_PATH&quot;).toString()"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Users/RRU_SG1/Projects/Talend/workspace/delete_folder&quot;" show="false"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;C:/Users/RRU_SG1/Projects/Talend/workspace/delete_folder or delete_file&quot;" show="false"/>
     <elementParameter field="CHECK" name="FAILON" value="true"/>
@@ -343,9 +306,9 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileDelete_1"/>
   </node>
-  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="576">
+  <node componentName="tFileDelete" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_2" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
+    <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;FILE_PATH&quot;).toString()"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Users/RRU_SG1/Projects/Talend/workspace/delete_folder&quot;" show="false"/>
     <elementParameter field="TEXT" name="PATH" value="&quot;C:/Users/RRU_SG1/Projects/Talend/workspace/delete_folder or delete_file&quot;" show="false"/>
     <elementParameter field="CHECK" name="FAILON" value="true"/>
@@ -438,6 +401,63 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileDelete_4"/>
   </node>
+  <node componentName="tFileFetch" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileFetch_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="PROTO" value="http"/>
+    <elementParameter field="CHECK" name="POST" value="true"/>
+    <elementParameter field="TEXT" name="URI" value="globalMap.get(&quot;tDeepSeaConnect_1_URL&quot;).toString() + &quot;/api/v1/lakefs/&quot; +globalMap.get(&quot;tDeepSeaConnect_1_COLLECTION_ID&quot;).toString()+ &quot;/files&quot;"/>
+    <elementParameter field="CHECK" name="USE_CACHE" value="true"/>
+    <elementParameter field="TEXT" name="SMB_URI" value="&quot;smb://host/dir/remoteFileName.txt&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:&quot;" show="false"/>
+    <elementParameter field="CHECK" name="MAKEDIRS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="ADD_HEADER" value="true"/>
+    <elementParameter field="TABLE" name="HEADERS">
+      <elementValue elementRef="HEADER_NAME" value="&quot;Authorization&quot;"/>
+      <elementValue elementRef="HEADER_VALUE" value="&quot;Basic &quot; + globalMap.get(&quot;tDeepSeaConnect_1_TOKEN&quot;).toString()"/>
+      <elementValue elementRef="HEADER_NAME" value="&quot;File-Mode&quot;"/>
+      <elementValue elementRef="HEADER_VALUE" value="&quot;CREATE&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="SMB_DOMAIN" value="&quot;domain&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SMB_USERNAME" value="&quot;username&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="SMB_PASSWORD" value="PoLvNyVG2XWndNDdLn696A==" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TABLE" name="COMMON_PARAMS">
+      <elementValue elementRef="COMMON_PARAMS_NAME" value="&quot;data&quot;"/>
+      <elementValue elementRef="COMMON_PARAMS_VALUE" value="&quot;{\&quot;batchDate\&quot;: \&quot;&quot; + globalMap.get(&quot;BATCH_DATE&quot;).toString() + &quot;\&quot;}&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="READ_COOKIE" value="false"/>
+    <elementParameter field="CHECK" name="SAVE_COOKIE" value="false"/>
+    <elementParameter field="FILE" name="COOKIE_DIR" value="&quot;C:/cookie&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="COOKIE_POLICY" value="DEFAULT" show="false"/>
+    <elementParameter field="CHECK" name="SINGLE_COOKIE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ENCODE_URI" value="false"/>
+    <elementParameter field="CHECK" name="PRINT" value="true"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
+    <elementParameter field="CHECK" name="UPLOAD" value="true"/>
+    <elementParameter field="TABLE" name="FILE_PARAMS">
+      <elementValue elementRef="FILE_PARAMS_NAME" value="&quot;file&quot;"/>
+      <elementValue elementRef="FILE_PARAMS_VALUE" value="globalMap.get(&quot;FILE_PATH&quot;).toString()"/>
+      <elementValue elementRef="FILE_PARAMS_CONTENT_TYPE" value="&quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;"/>
+      <elementValue elementRef="FILE_PARAMS_CHARSET" value="&quot;UTF-8&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="&quot;8080&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="CHECK" name="PROXY_NTLM" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_DOMAIN" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="&quot;username&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="PoLvNyVG2XWndNDdLn696A==" show="false"/>
+    <elementParameter field="CHECK" name="REDIRECT" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_302_AS_303" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDeepSeaPostFile_1"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileFetch_1"/>
+  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tPOP_1" offsetLabelX="0" offsetLabelY="0" source="tPOP_1" target="tFileInputMail_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
@@ -463,16 +483,13 @@
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="globalMap.get(&quot;BATCH_DATE&quot;) != null"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="IfBatchDateExists" show="false"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileFetch_1">
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileCopy_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileFetch_1" offsetLabelX="0" offsetLabelY="0" source="tFileFetch_1" target="tFileDelete_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tFileFetch_1" offsetLabelX="0" offsetLabelY="0" source="tFileFetch_1" target="tFileDelete_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1" show="false"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileCopy_1" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_1" target="tFileFetch_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tDeepSeaConnect_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaConnect_1" target="tJava_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
@@ -494,6 +511,12 @@
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate4" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileFetch_1" offsetLabelX="0" offsetLabelY="0" source="tFileFetch_1" target="tFileDelete_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tFileFetch_1" offsetLabelX="0" offsetLabelY="0" source="tFileFetch_1" target="tFileDelete_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPOP_1" show="false"/>
@@ -539,6 +562,11 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileFetch_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
