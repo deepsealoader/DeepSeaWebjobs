@@ -182,6 +182,7 @@ private RunStat runStat = new RunStat();
 		globalMap.put(KEY_DB_DATASOURCES_RAW, new java.util.HashMap<String, javax.sql.DataSource>(dataSources));
 	}
 
+	MetterCatcherUtils tFlowMeterCatcher_1 = new MetterCatcherUtils("_PZFYAKbOEemh3syzYpObXQ", "0.1");
 
 private final java.io.ByteArrayOutputStream baos = new java.io.ByteArrayOutputStream();
 private final java.io.PrintStream errorMessagePS = new java.io.PrintStream(new java.io.BufferedOutputStream(baos));
@@ -303,52 +304,52 @@ private class TalendException extends Exception {
 					tPOP_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tLogRow_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tFlowMeter_4_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
 					tPOP_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tExtractRegexFields_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tPOP_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tSetGlobalVar_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tPOP_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tFileList_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileList_2_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tFileDelete_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileList_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFileList_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileList_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tFileInputExcel_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileList_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tMap_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileList_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tFlowMeter_7_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileList_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tSetGlobalVar_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
@@ -363,7 +364,7 @@ private class TalendException extends Exception {
 				
 				status = "failure";
 				
-					tFileList_1_onSubJobError(exception, errorComponent, globalMap);
+					tFileCopy_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tFileFetch_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -463,17 +464,35 @@ private class TalendException extends Exception {
 					tFileList_3_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tFlowMeterCatcher_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFlowMeterCatcher_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tLogRow_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFlowMeterCatcher_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tPOP_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tFileList_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tFileList_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tFileList_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tFileCopy_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -513,142 +532,17 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-		
+			public void tFlowMeterCatcher_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
-
-
-
-
-public static class row3Struct implements routines.system.IPersistableRow<row3Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
-
-	
-			    public String batchDate;
-
-				public String getBatchDate () {
-					return this.batchDate;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length == 0) {
-   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[2 * length];
-   				}
 			}
-			dis.readFully(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.batchDate = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
 		
 
-        }
-
-		
-
-      }
 
 
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.batchDate,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
 
 
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("batchDate="+batchDate);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row3Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
 
 public static class row2Struct implements routines.system.IPersistableRow<row2Struct> {
     final static byte[] commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
@@ -779,136 +673,6 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 
 
 }
-
-public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
-    final static byte[] commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
-    static byte[] commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
-
-	
-			    public String subject;
-
-				public String getSubject () {
-					return this.subject;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length) {
-				if(length < 1024 && commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length == 0) {
-   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[1024];
-				} else {
-   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length);
-			strReturn = new String(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.subject = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.subject,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("subject="+subject);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row1Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
 public void tPOP_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
 	globalMap.put("tPOP_1_SUBPROCESS_STATE", 0);
 
@@ -932,9 +696,7 @@ public void tPOP_1Process(final java.util.Map<String, Object> globalMap) throws 
 
 
 
-		row1Struct row1 = new row1Struct();
-row1Struct row2 = row1;
-row3Struct row3 = new row3Struct();
+		row2Struct row2 = new row2Struct();
 
 
 
@@ -1097,11 +859,7 @@ row3Struct row3 = new row3Struct();
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row3", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("IfBatchDateExists", 3, 0);
+	       				runStat.updateStatOnConnection("OnComponentOk7", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -1109,19 +867,11 @@ row3Struct row3 = new row3Struct();
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
+	       				runStat.updateStatOnConnection("iterate2", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("IfNoBatchDate", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row2", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentError1", 3, 0);
+	       				runStat.updateStatOnConnection("OnComponentOk6", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -1129,11 +879,23 @@ row3Struct row3 = new row3Struct();
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("iterate2", 3, 0);
+	       				runStat.updateStatOnConnection("row2", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("iterate3", 3, 0);
+	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row4", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentError1", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row5", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -1143,67 +905,20 @@ row3Struct row3 = new row3Struct();
 			
 
 
-
-
 	
 	/**
-	 * [tSetGlobalVar_1 begin ] start
+	 * [tFlowMeter_4 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tSetGlobalVar_1", false);
-		start_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
+		ok_Hash.put("tFlowMeter_4", false);
+		start_Hash.put("tFlowMeter_4", System.currentTimeMillis());
 		
 	
-	currentComponent="tSetGlobalVar_1";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row3" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tSetGlobalVar_1 = 0;
-		
-    	class BytesLimit65535_tSetGlobalVar_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tSetGlobalVar_1().limitLog4jByte();
-
- 
-
-
-
-/**
- * [tSetGlobalVar_1 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tExtractRegexFields_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tExtractRegexFields_1", false);
-		start_Hash.put("tExtractRegexFields_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tExtractRegexFields_1";
+	currentComponent="tFlowMeter_4";
 
 	
 			if (execStat) {
@@ -1215,79 +930,23 @@ row3Struct row3 = new row3Struct();
 			} 
 
 		
-		int tos_count_tExtractRegexFields_1 = 0;
+		int tos_count_tFlowMeter_4 = 0;
 		
-    	class BytesLimit65535_tExtractRegexFields_1{
+    	class BytesLimit65535_tFlowMeter_4{
     		public void limitLog4jByte() throws Exception{
     			
     		}
     	}
     	
-        new BytesLimit65535_tExtractRegexFields_1().limitLog4jByte();
+        new BytesLimit65535_tFlowMeter_4().limitLog4jByte();
 
-java.util.regex.Pattern pattern_tExtractRegexFields_1 = java.util.regex.Pattern.compile("(\\d{4}-\\d{2}-\\d{2})");
+    int count_tFlowMeter_4 = 0; 
  
 
 
 
 /**
- * [tExtractRegexFields_1 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tLogRow_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tLogRow_1", false);
-		start_Hash.put("tLogRow_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tLogRow_1";
-
-	
-			if (execStat) {
-				if(resourceMap.get("inIterateVComp") == null){
-					
-						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
-					
-				}
-			} 
-
-		
-		int tos_count_tLogRow_1 = 0;
-		
-    	class BytesLimit65535_tLogRow_1{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tLogRow_1().limitLog4jByte();
-
-	///////////////////////
-	
-		final String OUTPUT_FIELD_SEPARATOR_tLogRow_1 = "|";
-		java.io.PrintStream consoleOut_tLogRow_1 = null;	
-
- 		StringBuilder strBuffer_tLogRow_1 = null;
-		int nb_line_tLogRow_1 = 0;
-///////////////////////    			
-
-
-
- 
-
-
-
-/**
- * [tLogRow_1 begin ] stop
+ * [tFlowMeter_4 begin ] stop
  */
 
 
@@ -1524,11 +1183,11 @@ java.util.regex.Pattern pattern_tExtractRegexFields_1 = java.util.regex.Pattern.
 			
 							if(0 < list_tFileInputMail_1.size() && list_tFileInputMail_1.get(0)!=null){				
 								
-									row1.subject = (String)list_tFileInputMail_1.get(0);
+									row2.subject = (String)list_tFileInputMail_1.get(0);
 								
 							} else { 
 			
-								row1.subject = null;
+								row2.subject = null;
 							}
 							
 								hasData_tFileInputMail_1 = true;
@@ -1596,109 +1255,14 @@ java.util.regex.Pattern pattern_tExtractRegexFields_1 = java.util.regex.Pattern.
 
 	
 	/**
-	 * [tLogRow_1 main ] start
+	 * [tFlowMeter_4 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tLogRow_1";
-
-	
-
-			//row1
-			//row1
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row1"+iterateId,1, 1);
-				} 
-			
-
-		
-///////////////////////		
-						
-
-
-
-				strBuffer_tLogRow_1 = new StringBuilder();
-
-
-
-
-   				
-	    		if(row1.subject != null) { //              
-                    							
-       
-				strBuffer_tLogRow_1.append(
-				                String.valueOf(row1.subject)							
-				);
-
-
-							
-	    		} //  			
- 
-
-                    if (globalMap.get("tLogRow_CONSOLE")!=null)
-                    {
-                    	consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-                    }
-                    else
-                    {
-                    	consoleOut_tLogRow_1 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
-                    	globalMap.put("tLogRow_CONSOLE",consoleOut_tLogRow_1);
-                    }
-                    consoleOut_tLogRow_1.println(strBuffer_tLogRow_1.toString());
-                    consoleOut_tLogRow_1.flush();
-                    nb_line_tLogRow_1++;
-//////
-
-//////                    
-                    
-///////////////////////    			
-
- 
-     row2 = row1;
-
-
-	tos_count_tLogRow_1++;
-
-/**
- * [tLogRow_1 main ] stop
- */
-	
-	/**
-	 * [tLogRow_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_1";
-
-	
-
- 
-
-
-
-/**
- * [tLogRow_1 process_data_begin ] stop
- */
-
-	
-	/**
-	 * [tExtractRegexFields_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tExtractRegexFields_1";
+	currentComponent="tFlowMeter_4";
 
 	
 
@@ -1714,42 +1278,25 @@ java.util.regex.Pattern pattern_tExtractRegexFields_1 = java.util.regex.Pattern.
 
 		
 
-			row3 = null;
-			if(row2.subject!=null){// C_01
-    		java.util.regex.Matcher matcher_tExtractRegexFields_1 = pattern_tExtractRegexFields_1.matcher(row2.subject);
-    
-		    int groupCount_tExtractRegexFields_1 = matcher_tExtractRegexFields_1.groupCount();
-		    while( matcher_tExtractRegexFields_1.find()){
-		    currentComponent = "tExtractRegexFields_1";
-		
-
-try{
-    row3 = new row3Struct();
-
-String temp_tExtractRegexFields_1 = null;
-			row3.batchDate = groupCount_tExtractRegexFields_1 <= 0? "" : matcher_tExtractRegexFields_1.group(1);
-	}catch(java.lang.Exception ex_tExtractRegexFields_1){
-    	throw(ex_tExtractRegexFields_1);
-}
-
+    count_tFlowMeter_4++; 
  
 
 
-	tos_count_tExtractRegexFields_1++;
+	tos_count_tFlowMeter_4++;
 
 /**
- * [tExtractRegexFields_1 main ] stop
+ * [tFlowMeter_4 main ] stop
  */
 	
 	/**
-	 * [tExtractRegexFields_1 process_data_begin ] start
+	 * [tFlowMeter_4 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tExtractRegexFields_1";
+	currentComponent="tFlowMeter_4";
 
 	
 
@@ -1758,60 +1305,18 @@ String temp_tExtractRegexFields_1 = null;
 
 
 /**
- * [tExtractRegexFields_1 process_data_begin ] stop
+ * [tFlowMeter_4 process_data_begin ] stop
  */
-// Start of branch "row3"
-if(row3 != null) { 
-
-
-
 	
 	/**
-	 * [tSetGlobalVar_1 main ] start
+	 * [tFlowMeter_4 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tSetGlobalVar_1";
-
-	
-
-			//row3
-			//row3
-
-
-			
-				if(execStat){
-					runStat.updateStatOnConnection("row3"+iterateId,1, 1);
-				} 
-			
-
-		
-
-globalMap.put("BATCH_DATE", row3.batchDate.substring(0, row3.batchDate.length() - 2) + "01");
-globalMap.put("FILE_NAME", "sales.dksh.daily-" + row3.batchDate +  ".xls");
-globalMap.put("FILE_PATH", globalMap.get("MAILS_FOLDER_PATH").toString() + java.io.File.separator + "sales.dksh.daily-" + row3.batchDate +  ".xls");
-
- 
-
-
-	tos_count_tSetGlobalVar_1++;
-
-/**
- * [tSetGlobalVar_1 main ] stop
- */
-	
-	/**
-	 * [tSetGlobalVar_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSetGlobalVar_1";
+	currentComponent="tFlowMeter_4";
 
 	
 
@@ -1820,80 +1325,7 @@ globalMap.put("FILE_PATH", globalMap.get("MAILS_FOLDER_PATH").toString() + java.
 
 
 /**
- * [tSetGlobalVar_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tSetGlobalVar_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSetGlobalVar_1";
-
-	
-
- 
-
-
-
-/**
- * [tSetGlobalVar_1 process_data_end ] stop
- */
-
-} // End of branch "row3"
-
-		// end for
-	}
-
-
-	
-		} // C_01
-	
-	
-	/**
-	 * [tExtractRegexFields_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tExtractRegexFields_1";
-
-	
-
- 
-
-
-
-/**
- * [tExtractRegexFields_1 process_data_end ] stop
- */
-
-
-
-	
-	/**
-	 * [tLogRow_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogRow_1";
-
-	
-
- 
-
-
-
-/**
- * [tLogRow_1 process_data_end ] stop
+ * [tFlowMeter_4 process_data_end ] stop
  */
 
 
@@ -1947,54 +1379,18 @@ end_Hash.put("tFileInputMail_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tLogRow_1 end ] start
+	 * [tFlowMeter_4 end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tLogRow_1";
+	currentComponent="tFlowMeter_4";
 
 	
 
-
-//////
-//////
-globalMap.put("tLogRow_1_NB_LINE",nb_line_tLogRow_1);
-
-///////////////////////    			
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row1"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tLogRow_1", true);
-end_Hash.put("tLogRow_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tLogRow_1 end ] stop
- */
-
-	
-	/**
-	 * [tExtractRegexFields_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tExtractRegexFields_1";
-
-	
+	tFlowMeterCatcher_1.addMessage("Processing one message: " + row2.subject, new Integer(count_tFlowMeter_4), "null", "", "tFlowMeter_4");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -2004,82 +1400,19 @@ end_Hash.put("tLogRow_1", System.currentTimeMillis());
 		
  
 
-ok_Hash.put("tExtractRegexFields_1", true);
-end_Hash.put("tExtractRegexFields_1", System.currentTimeMillis());
+ok_Hash.put("tFlowMeter_4", true);
+end_Hash.put("tFlowMeter_4", System.currentTimeMillis());
 
-
-
-
-/**
- * [tExtractRegexFields_1 end ] stop
- */
-
-	
-	/**
-	 * [tSetGlobalVar_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSetGlobalVar_1";
-
-	
-
-			if(execStat){
-				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
-			 		runStat.updateStatOnConnection("row3"+iterateId,2, 0); 
-			 	}
-			}
-		
- 
-
-ok_Hash.put("tSetGlobalVar_1", true);
-end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
-
-   			if (globalMap.get("BATCH_DATE") == null) {
-   				
-					if(execStat){   
-   	 					runStat.updateStatOnConnection("IfNoBatchDate", 0, "true");
-					}
-				
-    			tFileList_2Process(globalMap);
-   			}
-
-			   
-   				else{
-					if(execStat){   
-   	 					runStat.updateStatOnConnection("IfNoBatchDate", 0, "false");
-					}   	 
-   				}
-   			if (globalMap.get("BATCH_DATE") != null) {
-   				
-					if(execStat){   
-   	 					runStat.updateStatOnConnection("IfBatchDateExists", 0, "true");
-					}
-				
-    			tFileList_1Process(globalMap);
-   			}
-
-			   
-   				else{
-					if(execStat){   
-   	 					runStat.updateStatOnConnection("IfBatchDateExists", 0, "false");
-					}   	 
-   				}
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk7", 0, "ok");
+				}
+				tFileList_1Process(globalMap);
 
 
 
 /**
- * [tSetGlobalVar_1 end ] stop
+ * [tFlowMeter_4 end ] stop
  */
-
-
-
-
-
-
 
 
 
@@ -2159,6 +1492,8 @@ end_Hash.put("tPOP_1", System.currentTimeMillis());
 				}//end the resume
 
 				
+							tFlowMeterCatcher_1Process(globalMap);
+						
 
 
 
@@ -2221,14 +1556,14 @@ end_Hash.put("tPOP_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tLogRow_1 finally ] start
+	 * [tFlowMeter_4 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tLogRow_1";
+	currentComponent="tFlowMeter_4";
 
 	
 
@@ -2237,56 +1572,8 @@ end_Hash.put("tPOP_1", System.currentTimeMillis());
 
 
 /**
- * [tLogRow_1 finally ] stop
+ * [tFlowMeter_4 finally ] stop
  */
-
-	
-	/**
-	 * [tExtractRegexFields_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tExtractRegexFields_1";
-
-	
-
- 
-
-
-
-/**
- * [tExtractRegexFields_1 finally ] stop
- */
-
-	
-	/**
-	 * [tSetGlobalVar_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSetGlobalVar_1";
-
-	
-
- 
-
-
-
-/**
- * [tSetGlobalVar_1 finally ] stop
- */
-
-
-
-
-
-
 
 
 
@@ -2306,495 +1593,413 @@ end_Hash.put("tPOP_1", System.currentTimeMillis());
 	}
 	
 
-public void tFileList_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tFileList_2_SUBPROCESS_STATE", 0);
 
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
+public static class row5Struct implements routines.system.IPersistableRow<row5Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
 
 	
-	/**
-	 * [tFileList_2 begin ] start
-	 */
+			    public String billingDate;
 
+				public String getBillingDate () {
+					return this.billingDate;
+				}
 				
-			int NB_ITERATE_tFileDelete_3 = 0; //for statistics
-			
+			    public String batchDate;
 
-	
-		
-		ok_Hash.put("tFileList_2", false);
-		start_Hash.put("tFileList_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tFileList_2";
+				public String getBatchDate () {
+					return this.batchDate;
+				}
+				
 
-	
-		int tos_count_tFileList_2 = 0;
-		
-    	class BytesLimit65535_tFileList_2{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
-    	}
-    	
-        new BytesLimit65535_tFileList_2().limitLog4jByte();
-	
- 
-     
-    
-  String directory_tFileList_2 = globalMap.get("MAILS_FOLDER_PATH").toString();
-  final java.util.List<String> maskList_tFileList_2 = new java.util.ArrayList<String>();
-  final java.util.List<java.util.regex.Pattern> patternList_tFileList_2 = new java.util.ArrayList<java.util.regex.Pattern>(); 
-    maskList_tFileList_2.add("*.xls"); 
-    maskList_tFileList_2.add("*.xlsx");  
-  for (final String filemask_tFileList_2 : maskList_tFileList_2) {
-	String filemask_compile_tFileList_2 = filemask_tFileList_2;
-	
-		filemask_compile_tFileList_2 = org.apache.oro.text.GlobCompiler.globToPerl5(filemask_tFileList_2.toCharArray(), org.apache.oro.text.GlobCompiler.DEFAULT_MASK);
-	
-		java.util.regex.Pattern fileNamePattern_tFileList_2 = java.util.regex.Pattern.compile(filemask_compile_tFileList_2);
-	patternList_tFileList_2.add(fileNamePattern_tFileList_2);
-  }
-  int NB_FILEtFileList_2 = 0;
 
-  final boolean case_sensitive_tFileList_2 = true;
-    final java.util.List<java.io.File> list_tFileList_2 = new java.util.ArrayList<java.io.File>();
-    final java.util.Set<String> filePath_tFileList_2 = new java.util.HashSet<String>();
-	java.io.File file_tFileList_2 = new java.io.File(directory_tFileList_2);
-     
-		file_tFileList_2.listFiles(new java.io.FilenameFilter() {
-			public boolean accept(java.io.File dir, String name) {
-				java.io.File file = new java.io.File(dir, name);
-                if (!file.isDirectory()) {
-                	
-    	String fileName_tFileList_2 = file.getName();
-		for (final java.util.regex.Pattern fileNamePattern_tFileList_2 : patternList_tFileList_2) {
-          	if (fileNamePattern_tFileList_2.matcher(fileName_tFileList_2).matches()){
-					if(!filePath_tFileList_2.contains(file.getAbsolutePath())) {
-			          list_tFileList_2.add(file);
-			          filePath_tFileList_2.add(file.getAbsolutePath());
-			        }
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length == 0) {
+   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[2 * length];
+   				}
 			}
+			dis.readFully(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length, utf8Charset);
 		}
-                }
-              return true;
-            }
-          }
-      ); 
-      java.util.Collections.sort(list_tFileList_2);
-    
-    for (int i_tFileList_2 = 0; i_tFileList_2 < list_tFileList_2.size(); i_tFileList_2++){
-      java.io.File files_tFileList_2 = list_tFileList_2.get(i_tFileList_2);
-      String fileName_tFileList_2 = files_tFileList_2.getName();
-      
-      String currentFileName_tFileList_2 = files_tFileList_2.getName(); 
-      String currentFilePath_tFileList_2 = files_tFileList_2.getAbsolutePath();
-      String currentFileDirectory_tFileList_2 = files_tFileList_2.getParent();
-      String currentFileExtension_tFileList_2 = null;
-      
-      if (files_tFileList_2.getName().contains(".") && files_tFileList_2.isFile()){
-        currentFileExtension_tFileList_2 = files_tFileList_2.getName().substring(files_tFileList_2.getName().lastIndexOf(".") + 1);
-      } else{
-        currentFileExtension_tFileList_2 = "";
-      }
-      
-      NB_FILEtFileList_2 ++;
-      globalMap.put("tFileList_2_CURRENT_FILE", currentFileName_tFileList_2);
-      globalMap.put("tFileList_2_CURRENT_FILEPATH", currentFilePath_tFileList_2);
-      globalMap.put("tFileList_2_CURRENT_FILEDIRECTORY", currentFileDirectory_tFileList_2);
-      globalMap.put("tFileList_2_CURRENT_FILEEXTENSION", currentFileExtension_tFileList_2);
-      globalMap.put("tFileList_2_NB_FILE", NB_FILEtFileList_2);
-      
- 
+		return strReturn;
+	}
 
-
-
-/**
- * [tFileList_2 begin ] stop
- */
-	
-	/**
-	 * [tFileList_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_2";
-
-	
-
- 
-
-
-	tos_count_tFileList_2++;
-
-/**
- * [tFileList_2 main ] stop
- */
-	
-	/**
-	 * [tFileList_2 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_2";
-
-	
-
- 
-
-
-
-/**
- * [tFileList_2 process_data_begin ] stop
- */
-	NB_ITERATE_tFileDelete_3++;
-	
-	
-				if(execStat){
-					runStat.updateStatOnConnection("iterate3", 1, "exec" + NB_ITERATE_tFileDelete_3);
-					//Thread.sleep(1000);
-				}				
-			
-
-	
-	/**
-	 * [tFileDelete_3 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tFileDelete_3", false);
-		start_Hash.put("tFileDelete_3", System.currentTimeMillis());
-		
-	
-	currentComponent="tFileDelete_3";
-
-	
-		int tos_count_tFileDelete_3 = 0;
-		
-    	class BytesLimit65535_tFileDelete_3{
-    		public void limitLog4jByte() throws Exception{
-    			
-    		}
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
     	}
-    	
-        new BytesLimit65535_tFileDelete_3().limitLog4jByte();
+    }
 
- 
+    public void readData(ObjectInputStream dis) {
 
+		synchronized(commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY) {
 
+        	try {
 
-/**
- * [tFileDelete_3 begin ] stop
- */
-	
-	/**
-	 * [tFileDelete_3 main ] start
-	 */
+        		int length = 0;
+		
+					this.billingDate = readString(dis);
+					
+					this.batchDate = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
 
-	
+		
 
-	
-	
-	currentComponent="tFileDelete_3";
-
-	
-
- 
-
-class DeleteFoldertFileDelete_3{
-	 /**
-     * delete all the sub-files in 'file'
-     * 
-     * @param file
-     */
-	public boolean delete(java.io.File file) {
-        java.io.File[] files = file.listFiles();
-        for (int i = 0; i < files.length; i++) {
-            if (files[i].isFile()) {
-                files[i].delete();
-            } else if (files[i].isDirectory()) {
-                if (!files[i].delete()) {
-                    delete(files[i]);
-                }
-            }
         }
-        deleteDirectory(file);
-        return file.delete();
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.billingDate,dos);
+					
+					// String
+				
+						writeString(this.batchDate,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("billingDate="+billingDate);
+		sb.append(",batchDate="+batchDate);
+	    sb.append("]");
+
+	    return sb.toString();
     }
 
     /**
-     * delete all the sub-folders in 'file'
-     * 
-     * @param file
+     * Compare keys
      */
-    private void deleteDirectory(java.io.File file) {
-        java.io.File[] filed = file.listFiles();
-        for (int i = 0; i < filed.length; i++) {
-        	if(filed[i].isDirectory()) {
-            	deleteDirectory(filed[i]);
-            }
-            filed[i].delete();
-        }
+    public int compareTo(row5Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
     }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
 
 }
-    java.io.File file_tFileDelete_3=new java.io.File(globalMap.get("tFileList_2_CURRENT_FILEPATH").toString());
-    if(file_tFileDelete_3.exists()&& file_tFileDelete_3.isFile()){
-    	if(file_tFileDelete_3.delete()){
-    		globalMap.put("tFileDelete_3_CURRENT_STATUS", "File deleted.");
-		}else{
-			globalMap.put("tFileDelete_3_CURRENT_STATUS", "No file deleted.");
-				throw new RuntimeException("File " + file_tFileDelete_3.getAbsolutePath() + " can not be deleted.");
-		}
-	}else{
-		globalMap.put("tFileDelete_3_CURRENT_STATUS", "File does not exist or is invalid.");
-			throw new RuntimeException("File " + file_tFileDelete_3.getAbsolutePath() + " does not exist or is invalid or is not a file.");
-	}
-	globalMap.put("tFileDelete_3_DELETE_PATH",globalMap.get("tFileList_2_CURRENT_FILEPATH").toString());
-    
-     
- 
 
- 
-
-
-	tos_count_tFileDelete_3++;
-
-/**
- * [tFileDelete_3 main ] stop
- */
-	
-	/**
-	 * [tFileDelete_3 process_data_begin ] start
-	 */
+public static class row4Struct implements routines.system.IPersistableRow<row4Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
 
 	
+			    public String billingDate;
 
-	
-	
-	currentComponent="tFileDelete_3";
-
-	
-
- 
-
-
-
-/**
- * [tFileDelete_3 process_data_begin ] stop
- */
-	
-	/**
-	 * [tFileDelete_3 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileDelete_3";
-
-	
-
- 
-
-
-
-/**
- * [tFileDelete_3 process_data_end ] stop
- */
-	
-	/**
-	 * [tFileDelete_3 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileDelete_3";
-
-	
-
- 
-
-ok_Hash.put("tFileDelete_3", true);
-end_Hash.put("tFileDelete_3", System.currentTimeMillis());
-
-
-
-
-/**
- * [tFileDelete_3 end ] stop
- */
-						if(execStat){
-							runStat.updateStatOnConnection("iterate3", 2, "exec" + NB_ITERATE_tFileDelete_3);
-						}				
-					
-
-
-
-
-	
-	/**
-	 * [tFileList_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_2";
-
-	
-
- 
-
-
-
-/**
- * [tFileList_2 process_data_end ] stop
- */
-	
-	/**
-	 * [tFileList_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_2";
-
-	
-
-  
-    }
-  globalMap.put("tFileList_2_NB_FILE", NB_FILEtFileList_2);
-  
-
-  
- 
-
- 
-
-ok_Hash.put("tFileList_2", true);
-end_Hash.put("tFileList_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tFileList_2 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tFileList_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_2";
-
-	
-
- 
-
-
-
-/**
- * [tFileList_2 finally ] stop
- */
-
-	
-	/**
-	 * [tFileDelete_3 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileDelete_3";
-
-	
-
- 
-
-
-
-/**
- * [tFileDelete_3 finally ] stop
- */
-
-
-
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
+				public String getBillingDate () {
+					return this.billingDate;
 				}
-				resourceMap = null;
+				
+			    public String batchDate;
+
+				public String getBatchDate () {
+					return this.batchDate;
+				}
+				
+
+
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length == 0) {
+   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[2 * length];
+   				}
 			}
+			dis.readFully(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.billingDate = readString(dis);
+					
+					this.batchDate = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
 		
 
-		globalMap.put("tFileList_2_SUBPROCESS_STATE", 1);
-	}
-	
+        }
 
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// String
+				
+						writeString(this.billingDate,dos);
+					
+					// String
+				
+						writeString(this.batchDate,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("billingDate="+billingDate);
+		sb.append(",batchDate="+batchDate);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row4Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+
+public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
+
+	
+			    public java.util.Date billingDate;
+
+				public java.util.Date getBillingDate () {
+					return this.billingDate;
+				}
+				
+
+
+
+	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
+		java.util.Date dateReturn = null;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			dateReturn = null;
+		} else {
+	    	dateReturn = new Date(dis.readLong());
+		}
+		return dateReturn;
+	}
+
+    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
+		if(date1 == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeLong(date1.getTime());
+    	}
+    }
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.billingDate = readDate(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// java.util.Date
+				
+						writeDate(this.billingDate,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("billingDate="+String.valueOf(billingDate));
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row1Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
 public void tFileList_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
 	globalMap.put("tFileList_1_SUBPROCESS_STATE", 0);
 
@@ -2818,7 +2023,10 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
 
 
 
-		
+		row1Struct row1 = new row1Struct();
+row4Struct row4 = new row4Struct();
+row4Struct row5 = row4;
+
 
 
 	
@@ -2827,7 +2035,7 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
 	 */
 
 				
-			int NB_ITERATE_tFileCopy_1 = 0; //for statistics
+			int NB_ITERATE_tFileInputExcel_1 = 0; //for statistics
 			
 
 	
@@ -2962,7 +2170,7 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
 /**
  * [tFileList_1 process_data_begin ] stop
  */
-	NB_ITERATE_tFileCopy_1++;
+	NB_ITERATE_tFileInputExcel_1++;
 	
 	
 					if(execStat){				
@@ -2970,18 +2178,1187 @@ public void tFileList_1Process(final java.util.Map<String, Object> globalMap) th
 					}           			
 				
 					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk6", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row1", 3, 0);
+					}           			
+				
+					if(execStat){				
 	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row4", 3, 0);
 					}           			
 				
 					if(execStat){				
 	       				runStat.updateStatOnConnection("OnComponentError1", 3, 0);
 					}           			
 				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row5", 3, 0);
+					}           			
+				
 				if(execStat){
-					runStat.updateStatOnConnection("iterate2", 1, "exec" + NB_ITERATE_tFileCopy_1);
+					runStat.updateStatOnConnection("iterate2", 1, "exec" + NB_ITERATE_tFileInputExcel_1);
 					//Thread.sleep(1000);
 				}				
 			
+
+
+
+
+	
+	/**
+	 * [tSetGlobalVar_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tSetGlobalVar_1", false);
+		start_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row5" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tSetGlobalVar_1 = 0;
+		
+    	class BytesLimit65535_tSetGlobalVar_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tSetGlobalVar_1().limitLog4jByte();
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFlowMeter_7 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFlowMeter_7", false);
+		start_Hash.put("tFlowMeter_7", System.currentTimeMillis());
+		
+	
+	currentComponent="tFlowMeter_7";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row4" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tFlowMeter_7 = 0;
+		
+    	class BytesLimit65535_tFlowMeter_7{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFlowMeter_7().limitLog4jByte();
+
+    int count_tFlowMeter_7 = 0; 
+ 
+
+
+
+/**
+ * [tFlowMeter_7 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tMap_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tMap_1", false);
+		start_Hash.put("tMap_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tMap_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tMap_1 = 0;
+		
+    	class BytesLimit65535_tMap_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tMap_1().limitLog4jByte();
+
+
+
+
+// ###############################
+// # Lookup's keys initialization
+// ###############################        
+
+// ###############################
+// # Vars initialization
+class  Var__tMap_1__Struct  {
+}
+Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
+// ###############################
+
+// ###############################
+// # Outputs initialization
+row4Struct row4_tmp = new row4Struct();
+// ###############################
+
+        
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+/**
+ * [tMap_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFileInputExcel_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFileInputExcel_1", false);
+		start_Hash.put("tFileInputExcel_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tFileInputExcel_1";
+
+	
+		int tos_count_tFileInputExcel_1 = 0;
+		
+    	class BytesLimit65535_tFileInputExcel_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFileInputExcel_1().limitLog4jByte();
+
+
+
+			class RegexUtil_tFileInputExcel_1 {
+
+		    	public java.util.List<jxl.Sheet> getSheets(jxl.Workbook workbook, String oneSheetName, boolean useRegex) {
+
+			        java.util.List<jxl.Sheet> list = new java.util.ArrayList<jxl.Sheet>();
+
+			        if(useRegex){//this part process the regex issue
+
+				        jxl.Sheet[] sheets = workbook.getSheets();
+				        java.util.regex.Pattern pattern = java.util.regex.Pattern.compile(oneSheetName);
+				        for (int i = 0; i < sheets.length; i++) {
+				            String sheetName = sheets[i].getName();
+				            java.util.regex.Matcher matcher = pattern.matcher(sheetName);
+				            if (matcher.matches()) {
+				            	jxl.Sheet sheet = workbook.getSheet(sheetName);
+				            	if(sheet != null){
+				                	list.add(sheet);
+				                }
+				            }
+				        }
+
+			        }else{
+			        	jxl.Sheet sheet = workbook.getSheet(oneSheetName);
+		            	if(sheet != null){
+		                	list.add(sheet);
+		                }
+
+			        }
+
+			        return list;
+			    }
+
+			    public java.util.List<jxl.Sheet> getSheets(jxl.Workbook workbook, int index, boolean useRegex) {
+			    	java.util.List<jxl.Sheet> list =  new java.util.ArrayList<jxl.Sheet>();
+			    	jxl.Sheet sheet = workbook.getSheet(index);
+	            	if(sheet != null){
+	                	list.add(sheet);
+	                }
+			    	return list;
+			    }
+
+			}
+
+
+		RegexUtil_tFileInputExcel_1 regexUtil_tFileInputExcel_1 = new RegexUtil_tFileInputExcel_1();
+		final jxl.WorkbookSettings workbookSettings_tFileInputExcel_1 = new jxl.WorkbookSettings();
+		workbookSettings_tFileInputExcel_1.setDrawingsDisabled(true);
+        workbookSettings_tFileInputExcel_1.setEncoding("ISO-8859-15");
+
+        Object source_tFileInputExcel_1 =globalMap.get("tFileList_1_CURRENT_FILEPATH").toString();
+        final jxl.Workbook workbook_tFileInputExcel_1;
+
+        java.io.InputStream toClose_tFileInputExcel_1 = null;
+        java.io.BufferedInputStream buffIStreamtFileInputExcel_1 = null;
+        try {
+            if(source_tFileInputExcel_1 instanceof java.io.InputStream){
+        		toClose_tFileInputExcel_1 = (java.io.InputStream)source_tFileInputExcel_1;
+        		buffIStreamtFileInputExcel_1 = new java.io.BufferedInputStream(toClose_tFileInputExcel_1);
+        		workbook_tFileInputExcel_1 = jxl.Workbook.getWorkbook(buffIStreamtFileInputExcel_1, workbookSettings_tFileInputExcel_1);
+            }else if(source_tFileInputExcel_1 instanceof String){
+        		toClose_tFileInputExcel_1 = new java.io.FileInputStream(source_tFileInputExcel_1.toString());
+        		buffIStreamtFileInputExcel_1 = new java.io.BufferedInputStream(toClose_tFileInputExcel_1);
+        		workbook_tFileInputExcel_1 = jxl.Workbook.getWorkbook(buffIStreamtFileInputExcel_1, workbookSettings_tFileInputExcel_1);
+            }else{
+            	workbook_tFileInputExcel_1 = null;
+            	throw new java.lang.Exception("The data source should be specified as Inputstream or File Path!");
+            }
+        } finally {
+			try{
+			   if(buffIStreamtFileInputExcel_1 != null){
+			   	  buffIStreamtFileInputExcel_1.close();
+			   }
+			}catch(Exception e){
+			}
+        }
+        try {
+		java.util.List<jxl.Sheet> sheetList_tFileInputExcel_1 = new java.util.ArrayList<jxl.Sheet>();
+        sheetList_tFileInputExcel_1.addAll(regexUtil_tFileInputExcel_1.getSheets(workbook_tFileInputExcel_1, 0, false));
+        if(sheetList_tFileInputExcel_1.size() <= 0){
+        	throw new RuntimeException("Special sheets not exist!");
+        }
+
+        java.util.List<jxl.Sheet> sheet_FilterNullList_tFileInputExcel_1 = new java.util.ArrayList<jxl.Sheet>();
+        for(jxl.Sheet sheet_FilterNull_tFileInputExcel_1 : sheetList_tFileInputExcel_1){
+        	if(sheet_FilterNull_tFileInputExcel_1.getRows()>0){
+        		sheet_FilterNullList_tFileInputExcel_1.add(sheet_FilterNull_tFileInputExcel_1);
+        	}
+        }
+		sheetList_tFileInputExcel_1 = sheet_FilterNullList_tFileInputExcel_1;
+	if(sheetList_tFileInputExcel_1.size()>0){
+        int nb_line_tFileInputExcel_1 = 0;
+
+        int begin_line_tFileInputExcel_1 = 1;
+
+        int footer_input_tFileInputExcel_1 = 0;
+
+        int end_line_tFileInputExcel_1=0;
+        for(jxl.Sheet sheet_tFileInputExcel_1:sheetList_tFileInputExcel_1){
+        	end_line_tFileInputExcel_1+=sheet_tFileInputExcel_1.getRows();
+        }
+        end_line_tFileInputExcel_1 -= footer_input_tFileInputExcel_1;
+        int limit_tFileInputExcel_1 = 1;
+        int start_column_tFileInputExcel_1 = 1-1;
+        int end_column_tFileInputExcel_1 = sheetList_tFileInputExcel_1.get(0).getColumns();
+        jxl.Cell[] row_tFileInputExcel_1 = null;
+        jxl.Sheet sheet_tFileInputExcel_1 = sheetList_tFileInputExcel_1.get(0);
+        int rowCount_tFileInputExcel_1 = 0;
+        int sheetIndex_tFileInputExcel_1 = 0;
+        int currentRows_tFileInputExcel_1 = sheetList_tFileInputExcel_1.get(0).getRows();
+
+        //for the number format
+        java.text.DecimalFormat df_tFileInputExcel_1 = new java.text.DecimalFormat("#.####################################");
+		char separatorChar_tFileInputExcel_1 = df_tFileInputExcel_1.getDecimalFormatSymbols().getDecimalSeparator();
+		
+		
+		
+        for(int i_tFileInputExcel_1 = begin_line_tFileInputExcel_1; i_tFileInputExcel_1 < end_line_tFileInputExcel_1; i_tFileInputExcel_1++){
+
+        	int emptyColumnCount_tFileInputExcel_1 = 0;
+
+        	if (limit_tFileInputExcel_1 != -1 && nb_line_tFileInputExcel_1 >= limit_tFileInputExcel_1) {
+        		break;
+        	}
+
+            while (i_tFileInputExcel_1 >= rowCount_tFileInputExcel_1 + currentRows_tFileInputExcel_1) {
+                rowCount_tFileInputExcel_1 += currentRows_tFileInputExcel_1;
+                sheet_tFileInputExcel_1 = sheetList_tFileInputExcel_1.get(++sheetIndex_tFileInputExcel_1);
+                currentRows_tFileInputExcel_1 = sheet_tFileInputExcel_1.getRows();
+            }
+            if (rowCount_tFileInputExcel_1 <= i_tFileInputExcel_1) {
+                row_tFileInputExcel_1 = sheet_tFileInputExcel_1.getRow(i_tFileInputExcel_1 - rowCount_tFileInputExcel_1);
+            }
+        	globalMap.put("tFileInputExcel_1_CURRENT_SHEET",sheet_tFileInputExcel_1.getName());
+    		row1 = null;
+					int tempRowLength_tFileInputExcel_1 = 1;
+				
+				int columnIndex_tFileInputExcel_1 = 0;
+			
+//
+//end%>
+			
+			String[] temp_row_tFileInputExcel_1 = new String[tempRowLength_tFileInputExcel_1];
+			int actual_end_column_tFileInputExcel_1 = end_column_tFileInputExcel_1 >	row_tFileInputExcel_1.length ? row_tFileInputExcel_1.length : end_column_tFileInputExcel_1;
+
+				java.util.TimeZone zone_tFileInputExcel_1 = java.util.TimeZone.getTimeZone("GMT");
+                java.text.SimpleDateFormat sdf_tFileInputExcel_1 = new java.text.SimpleDateFormat("dd-MM-yyyy");
+                sdf_tFileInputExcel_1.setTimeZone(zone_tFileInputExcel_1);
+                
+
+			for(int i=0;i<tempRowLength_tFileInputExcel_1;i++){
+
+				if(i + start_column_tFileInputExcel_1 < actual_end_column_tFileInputExcel_1){
+
+				  jxl.Cell cell_tFileInputExcel_1 = row_tFileInputExcel_1[i + start_column_tFileInputExcel_1];
+                        temp_row_tFileInputExcel_1[i] = cell_tFileInputExcel_1.getContents();
+
+				}else{
+					temp_row_tFileInputExcel_1[i]="";
+				}
+			}
+
+			boolean whetherReject_tFileInputExcel_1 = false;
+			row1 = new row1Struct();
+			int curColNum_tFileInputExcel_1 = -1;
+			String curColName_tFileInputExcel_1 = "";
+			try {
+							columnIndex_tFileInputExcel_1 = 0;
+						
+			if( temp_row_tFileInputExcel_1[columnIndex_tFileInputExcel_1].length() > 0) {
+				curColNum_tFileInputExcel_1=columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1 + 1;
+				curColName_tFileInputExcel_1 = "billingDate";
+			if(0<actual_end_column_tFileInputExcel_1){
+				try{
+					java.util.Date dateGMT_tFileInputExcel_1 = ((jxl.DateCell)row_tFileInputExcel_1[columnIndex_tFileInputExcel_1 + start_column_tFileInputExcel_1]).getDate();
+					row1.billingDate = new java.util.Date(dateGMT_tFileInputExcel_1.getTime() - java.util.TimeZone.getDefault().getOffset(dateGMT_tFileInputExcel_1.getTime()));
+				}catch(java.lang.Exception e){
+					
+					throw new RuntimeException("The cell format is not Date in ( Row. "+(nb_line_tFileInputExcel_1+1)+ " and ColumnNum. " + curColNum_tFileInputExcel_1 + " )");
+				}
+			}
+			}else {
+				row1.billingDate = null;
+				emptyColumnCount_tFileInputExcel_1++;
+		}
+
+			nb_line_tFileInputExcel_1++;
+			
+    } catch (java.lang.Exception e) {
+        whetherReject_tFileInputExcel_1 = true;
+            throw(e);
+    }
+
+					
+		
+
+
+
+ 
+
+
+
+/**
+ * [tFileInputExcel_1 begin ] stop
+ */
+	
+	/**
+	 * [tFileInputExcel_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputExcel_1";
+
+	
+
+ 
+
+
+	tos_count_tFileInputExcel_1++;
+
+/**
+ * [tFileInputExcel_1 main ] stop
+ */
+	
+	/**
+	 * [tFileInputExcel_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputExcel_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileInputExcel_1 process_data_begin ] stop
+ */
+// Start of branch "row1"
+if(row1 != null) { 
+
+
+
+	
+	/**
+	 * [tMap_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+			//row1
+			//row1
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row1"+iterateId,1, 1);
+				} 
+			
+
+		
+
+		
+		
+		boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
+		
+        // ###############################
+        // # Input tables (lookups)
+		  boolean rejectedInnerJoin_tMap_1 = false;
+		  boolean mainRowRejected_tMap_1 = false;
+            				    								  
+		// ###############################
+        { // start of Var scope
+        
+	        // ###############################
+        	// # Vars tables
+        
+Var__tMap_1__Struct Var = Var__tMap_1;// ###############################
+        // ###############################
+        // # Output tables
+
+row4 = null;
+
+
+// # Output table : 'row4'
+row4_tmp.billingDate = TalendDate.formatDate("yyyy-MM-dd", row1.billingDate) ;
+row4_tmp.batchDate = TalendDate.formatDate("yyyy-MM-dd", TalendDate.getFirstDayOfMonth(row1.billingDate)) ;
+row4 = row4_tmp;
+// ###############################
+
+} // end of Var scope
+
+rejectedInnerJoin_tMap_1 = false;
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+	tos_count_tMap_1++;
+
+/**
+ * [tMap_1 main ] stop
+ */
+	
+	/**
+	 * [tMap_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tMap_1 process_data_begin ] stop
+ */
+// Start of branch "row4"
+if(row4 != null) { 
+
+
+
+	
+	/**
+	 * [tFlowMeter_7 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_7";
+
+	
+
+			//row4
+			//row4
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row4"+iterateId,1, 1);
+				} 
+			
+
+		
+
+    count_tFlowMeter_7++; 
+ 
+     row5 = row4;
+
+
+	tos_count_tFlowMeter_7++;
+
+/**
+ * [tFlowMeter_7 main ] stop
+ */
+	
+	/**
+	 * [tFlowMeter_7 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_7";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_7 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+			//row5
+			//row5
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row5"+iterateId,1, 1);
+				} 
+			
+
+		
+
+globalMap.put("BATCH_DATE", row5.batchDate);
+globalMap.put("FILE_NAME", "sales.dksh.daily-" + row5.billingDate +  ".xls");
+globalMap.put("FILE_PATH", globalMap.get("MAILS_FOLDER_PATH").toString() + java.io.File.separator + "sales.dksh.daily-" + row5.billingDate +  ".xls");
+
+ 
+
+
+	tos_count_tSetGlobalVar_1++;
+
+/**
+ * [tSetGlobalVar_1 main ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tSetGlobalVar_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_1 process_data_end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFlowMeter_7 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_7";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_7 process_data_end ] stop
+ */
+
+} // End of branch "row4"
+
+
+
+
+	
+	/**
+	 * [tMap_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tMap_1 process_data_end ] stop
+ */
+
+} // End of branch "row1"
+
+
+
+
+	
+	/**
+	 * [tFileInputExcel_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputExcel_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileInputExcel_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileInputExcel_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputExcel_1";
+
+	
+
+			}
+			
+			
+			
+			globalMap.put("tFileInputExcel_1_NB_LINE",nb_line_tFileInputExcel_1);
+			
+				}
+			
+		} finally { 
+				
+					if(!(source_tFileInputExcel_1 instanceof java.io.InputStream)){
+						workbook_tFileInputExcel_1.close();
+					}
+				
+		}	
+		
+ 
+
+ok_Hash.put("tFileInputExcel_1", true);
+end_Hash.put("tFileInputExcel_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFileInputExcel_1 end ] stop
+ */
+
+	
+	/**
+	 * [tMap_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+
+// ###############################
+// # Lookup hashes releasing
+// ###############################      
+
+
+
+
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row1"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tMap_1", true);
+end_Hash.put("tMap_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tMap_1 end ] stop
+ */
+
+	
+	/**
+	 * [tFlowMeter_7 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_7";
+
+	
+
+	tFlowMeterCatcher_1.addMessage("Processing sales with billing date: " + row4.billingDate, new Integer(count_tFlowMeter_7), "null", "", "tFlowMeter_7");
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row4"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tFlowMeter_7", true);
+end_Hash.put("tFlowMeter_7", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFlowMeter_7 end ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row5"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tSetGlobalVar_1", true);
+end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk6", 0, "ok");
+				}
+				tFileCopy_1Process(globalMap);
+
+
+
+/**
+ * [tSetGlobalVar_1 end ] stop
+ */
+
+
+
+
+
+
+
+
+
+						if(execStat){
+							runStat.updateStatOnConnection("iterate2", 2, "exec" + NB_ITERATE_tFileInputExcel_1);
+						}				
+					
+
+
+
+
+	
+	/**
+	 * [tFileList_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileList_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileList_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileList_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileList_1";
+
+	
+
+  
+    }
+  globalMap.put("tFileList_1_NB_FILE", NB_FILEtFileList_1);
+  
+
+  
+ 
+
+ 
+
+ok_Hash.put("tFileList_1", true);
+end_Hash.put("tFileList_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFileList_1 end ] stop
+ */
+				}//end the resume
+
+				
+							tFlowMeterCatcher_1Process(globalMap);
+						
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tFileList_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileList_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileList_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tFileInputExcel_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileInputExcel_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileInputExcel_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tMap_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tMap_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tMap_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tFlowMeter_7 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeter_7";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeter_7 finally ] stop
+ */
+
+	
+	/**
+	 * [tSetGlobalVar_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSetGlobalVar_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tSetGlobalVar_1 finally ] stop
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tFileList_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tFileCopy_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tFileCopy_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
 
 	
 	/**
@@ -3143,66 +3520,6 @@ end_Hash.put("tFileCopy_1", System.currentTimeMillis());
 /**
  * [tFileCopy_1 end ] stop
  */
-						if(execStat){
-							runStat.updateStatOnConnection("iterate2", 2, "exec" + NB_ITERATE_tFileCopy_1);
-						}				
-					
-
-
-
-
-	
-	/**
-	 * [tFileList_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileList_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tFileList_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_1";
-
-	
-
-  
-    }
-  globalMap.put("tFileList_1_NB_FILE", NB_FILEtFileList_1);
-  
-
-  
- 
-
- 
-
-ok_Hash.put("tFileList_1", true);
-end_Hash.put("tFileList_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tFileList_1 end ] stop
- */
 				}//end the resume
 
 				
@@ -3226,27 +3543,6 @@ end_Hash.put("tFileList_1", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tFileList_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileList_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileList_1 finally ] stop
- */
-
-	
-	/**
 	 * [tFileCopy_1 finally ] start
 	 */
 
@@ -3265,9 +3561,6 @@ end_Hash.put("tFileList_1", System.currentTimeMillis());
 /**
  * [tFileCopy_1 finally ] stop
  */
-
-
-
 				}catch(java.lang.Exception e){	
 					//ignore
 				}catch(java.lang.Error error){
@@ -3277,7 +3570,7 @@ end_Hash.put("tFileList_1", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tFileList_1_SUBPROCESS_STATE", 1);
+		globalMap.put("tFileCopy_1_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -3402,14 +3695,6 @@ java.io.InputStream retIS_tFileFetch_1 = null;
 	}
 
 	if (isContinue_tFileFetch_1) {    
-		
-			System.out.println("Status Line: " + method_tFileFetch_1.getStatusLine());  
-			System.out.println("*** Response Header ***");  
-			org.apache.commons.httpclient.Header[] responseHeaders_tFileFetch_1 = method_tFileFetch_1.getResponseHeaders();  
-
-			for (int i = 0; i < responseHeaders_tFileFetch_1.length; i++) {
-				System.out.print(responseHeaders_tFileFetch_1[i]);
-			}
 		
 			retIS_tFileFetch_1 = method_tFileFetch_1.getResponseBodyAsStream();
 		    
@@ -4431,7 +4716,6 @@ public void tDeepSeaConnect_1Process(final java.util.Map<String, Object> globalM
 
 globalMap.put("MAILS_FOLDER_PATH", java.nio.file.Files.createTempDirectory("mails_").toString());
 
-
  
 
 
@@ -5343,6 +5627,1052 @@ end_Hash.put("tFileList_3", System.currentTimeMillis());
 		globalMap.put("tFileList_3_SUBPROCESS_STATE", 1);
 	}
 	
+
+
+public static class row3Struct implements routines.system.IPersistableRow<row3Struct> {
+    final static byte[] commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
+    static byte[] commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[0];
+
+	
+			    public java.util.Date moment;
+
+				public java.util.Date getMoment () {
+					return this.moment;
+				}
+				
+			    public String pid;
+
+				public String getPid () {
+					return this.pid;
+				}
+				
+			    public String father_pid;
+
+				public String getFather_pid () {
+					return this.father_pid;
+				}
+				
+			    public String root_pid;
+
+				public String getRoot_pid () {
+					return this.root_pid;
+				}
+				
+			    public Long system_pid;
+
+				public Long getSystem_pid () {
+					return this.system_pid;
+				}
+				
+			    public String project;
+
+				public String getProject () {
+					return this.project;
+				}
+				
+			    public String job;
+
+				public String getJob () {
+					return this.job;
+				}
+				
+			    public String job_repository_id;
+
+				public String getJob_repository_id () {
+					return this.job_repository_id;
+				}
+				
+			    public String job_version;
+
+				public String getJob_version () {
+					return this.job_version;
+				}
+				
+			    public String context;
+
+				public String getContext () {
+					return this.context;
+				}
+				
+			    public String origin;
+
+				public String getOrigin () {
+					return this.origin;
+				}
+				
+			    public String label;
+
+				public String getLabel () {
+					return this.label;
+				}
+				
+			    public Integer count;
+
+				public Integer getCount () {
+					return this.count;
+				}
+				
+			    public Integer reference;
+
+				public Integer getReference () {
+					return this.reference;
+				}
+				
+			    public String thresholds;
+
+				public String getThresholds () {
+					return this.thresholds;
+				}
+				
+
+
+
+	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
+		java.util.Date dateReturn = null;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			dateReturn = null;
+		} else {
+	    	dateReturn = new Date(dis.readLong());
+		}
+		return dateReturn;
+	}
+
+    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
+		if(date1 == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeLong(date1.getTime());
+    	}
+    }
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length) {
+				if(length < 1024 && commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY.length == 0) {
+   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[1024];
+				} else {
+   					commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length);
+			strReturn = new String(commonByteArray_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_DEEPSEA_THAILAND_GET_SALES_DKSH_DAILY) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.moment = readDate(dis);
+					
+					this.pid = readString(dis);
+					
+					this.father_pid = readString(dis);
+					
+					this.root_pid = readString(dis);
+					
+			            length = dis.readByte();
+           				if (length == -1) {
+           	    			this.system_pid = null;
+           				} else {
+           			    	this.system_pid = dis.readLong();
+           				}
+					
+					this.project = readString(dis);
+					
+					this.job = readString(dis);
+					
+					this.job_repository_id = readString(dis);
+					
+					this.job_version = readString(dis);
+					
+					this.context = readString(dis);
+					
+					this.origin = readString(dis);
+					
+					this.label = readString(dis);
+					
+						this.count = readInteger(dis);
+					
+						this.reference = readInteger(dis);
+					
+					this.thresholds = readString(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// java.util.Date
+				
+						writeDate(this.moment,dos);
+					
+					// String
+				
+						writeString(this.pid,dos);
+					
+					// String
+				
+						writeString(this.father_pid,dos);
+					
+					// String
+				
+						writeString(this.root_pid,dos);
+					
+					// Long
+				
+						if(this.system_pid == null) {
+			                dos.writeByte(-1);
+						} else {
+               				dos.writeByte(0);
+           			    	dos.writeLong(this.system_pid);
+		            	}
+					
+					// String
+				
+						writeString(this.project,dos);
+					
+					// String
+				
+						writeString(this.job,dos);
+					
+					// String
+				
+						writeString(this.job_repository_id,dos);
+					
+					// String
+				
+						writeString(this.job_version,dos);
+					
+					// String
+				
+						writeString(this.context,dos);
+					
+					// String
+				
+						writeString(this.origin,dos);
+					
+					// String
+				
+						writeString(this.label,dos);
+					
+					// Integer
+				
+						writeInteger(this.count,dos);
+					
+					// Integer
+				
+						writeInteger(this.reference,dos);
+					
+					// String
+				
+						writeString(this.thresholds,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("moment="+String.valueOf(moment));
+		sb.append(",pid="+pid);
+		sb.append(",father_pid="+father_pid);
+		sb.append(",root_pid="+root_pid);
+		sb.append(",system_pid="+String.valueOf(system_pid));
+		sb.append(",project="+project);
+		sb.append(",job="+job);
+		sb.append(",job_repository_id="+job_repository_id);
+		sb.append(",job_version="+job_version);
+		sb.append(",context="+context);
+		sb.append(",origin="+origin);
+		sb.append(",label="+label);
+		sb.append(",count="+String.valueOf(count));
+		sb.append(",reference="+String.valueOf(reference));
+		sb.append(",thresholds="+thresholds);
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row3Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+public void tFlowMeterCatcher_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tFlowMeterCatcher_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		row3Struct row3 = new row3Struct();
+
+
+
+
+	
+	/**
+	 * [tLogRow_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tLogRow_1", false);
+		start_Hash.put("tLogRow_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tLogRow_1";
+
+	
+			if (execStat) {
+				if(resourceMap.get("inIterateVComp") == null){
+					
+						runStat.updateStatOnConnection("row3" + iterateId, 0, 0);
+					
+				}
+			} 
+
+		
+		int tos_count_tLogRow_1 = 0;
+		
+    	class BytesLimit65535_tLogRow_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tLogRow_1().limitLog4jByte();
+
+	///////////////////////
+	
+		final String OUTPUT_FIELD_SEPARATOR_tLogRow_1 = "|";
+		java.io.PrintStream consoleOut_tLogRow_1 = null;	
+
+ 		StringBuilder strBuffer_tLogRow_1 = null;
+		int nb_line_tLogRow_1 = 0;
+///////////////////////    			
+
+
+
+ 
+
+
+
+/**
+ * [tLogRow_1 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFlowMeterCatcher_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFlowMeterCatcher_1", false);
+		start_Hash.put("tFlowMeterCatcher_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tFlowMeterCatcher_1";
+
+	
+		int tos_count_tFlowMeterCatcher_1 = 0;
+		
+    	class BytesLimit65535_tFlowMeterCatcher_1{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFlowMeterCatcher_1().limitLog4jByte();
+
+	for (MetterCatcherUtils.MetterCatcherMessage mcm : tFlowMeterCatcher_1.getMessages()) {
+		row3.pid = pid;
+		row3.root_pid = rootPid;
+		row3.father_pid = fatherPid;	
+        row3.project = projectName;
+        row3.job = jobName;
+        row3.context = contextStr;
+		row3.origin = (mcm.getOrigin()==null || mcm.getOrigin().length()<1 ? null : mcm.getOrigin());
+		row3.moment = mcm.getMoment();
+		row3.job_version = mcm.getJobVersion();
+		row3.job_repository_id = mcm.getJobId();
+		row3.system_pid = mcm.getSystemPid();
+		row3.label = mcm.getLabel();
+		row3.count = mcm.getCount();
+		row3.reference = tFlowMeterCatcher_1.getConnLinesCount(mcm.getReferense()+"_count");
+		row3.thresholds = mcm.getThresholds();
+		
+
+ 
+
+
+
+/**
+ * [tFlowMeterCatcher_1 begin ] stop
+ */
+	
+	/**
+	 * [tFlowMeterCatcher_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeterCatcher_1";
+
+	
+
+ 
+
+
+	tos_count_tFlowMeterCatcher_1++;
+
+/**
+ * [tFlowMeterCatcher_1 main ] stop
+ */
+	
+	/**
+	 * [tFlowMeterCatcher_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeterCatcher_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeterCatcher_1 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tLogRow_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_1";
+
+	
+
+			//row3
+			//row3
+
+
+			
+				if(execStat){
+					runStat.updateStatOnConnection("row3"+iterateId,1, 1);
+				} 
+			
+
+		
+///////////////////////		
+						
+
+
+
+				strBuffer_tLogRow_1 = new StringBuilder();
+
+
+
+
+   				
+	    		if(row3.moment != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+								FormatterUtils.format_Date(row3.moment, "yyyy-MM-dd HH:mm:ss")				
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.pid != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.pid)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.father_pid != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.father_pid)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.root_pid != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.root_pid)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.system_pid != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.system_pid)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.project != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.project)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.job != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.job)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.job_repository_id != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.job_repository_id)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.job_version != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.job_version)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.context != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.context)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.origin != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.origin)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.label != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.label)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.count != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.count)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.reference != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.reference)							
+				);
+
+
+							
+	    		} //  			
+
+    			strBuffer_tLogRow_1.append("|");
+    			
+
+
+   				
+	    		if(row3.thresholds != null) { //              
+                    							
+       
+				strBuffer_tLogRow_1.append(
+				                String.valueOf(row3.thresholds)							
+				);
+
+
+							
+	    		} //  			
+ 
+
+                    if (globalMap.get("tLogRow_CONSOLE")!=null)
+                    {
+                    	consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
+                    }
+                    else
+                    {
+                    	consoleOut_tLogRow_1 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
+                    	globalMap.put("tLogRow_CONSOLE",consoleOut_tLogRow_1);
+                    }
+                    consoleOut_tLogRow_1.println(strBuffer_tLogRow_1.toString());
+                    consoleOut_tLogRow_1.flush();
+                    nb_line_tLogRow_1++;
+//////
+
+//////                    
+                    
+///////////////////////    			
+
+ 
+
+
+	tos_count_tLogRow_1++;
+
+/**
+ * [tLogRow_1 main ] stop
+ */
+	
+	/**
+	 * [tLogRow_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogRow_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tLogRow_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogRow_1 process_data_end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tFlowMeterCatcher_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeterCatcher_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeterCatcher_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFlowMeterCatcher_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeterCatcher_1";
+
+	
+
+	}
+
+
+ 
+
+ok_Hash.put("tFlowMeterCatcher_1", true);
+end_Hash.put("tFlowMeterCatcher_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFlowMeterCatcher_1 end ] stop
+ */
+
+	
+	/**
+	 * [tLogRow_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_1";
+
+	
+
+
+//////
+//////
+globalMap.put("tLogRow_1_NB_LINE",nb_line_tLogRow_1);
+
+///////////////////////    			
+
+			if(execStat){
+				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
+			 		runStat.updateStatOnConnection("row3"+iterateId,2, 0); 
+			 	}
+			}
+		
+ 
+
+ok_Hash.put("tLogRow_1", true);
+end_Hash.put("tLogRow_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tLogRow_1 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tFlowMeterCatcher_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFlowMeterCatcher_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFlowMeterCatcher_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tLogRow_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogRow_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogRow_1 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tFlowMeterCatcher_1_SUBPROCESS_STATE", 1);
+	}
+	
     public String resuming_logs_dir_path = null;
     public String resuming_checkpoint_path = null;
     public String parent_part_launcher = null;
@@ -5738,6 +7068,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     123912 characters generated by Talend Open Studio for Big Data 
- *     on the July 31, 2019 10:02:03 AM CST
+ *     149948 characters generated by Talend Open Studio for Big Data 
+ *     on the August 7, 2019 9:24:21 AM CST
  ************************************************************************************************/

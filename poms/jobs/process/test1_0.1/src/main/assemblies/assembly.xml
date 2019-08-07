@@ -177,25 +177,9 @@
 		<dependencySet>
 			<outputDirectory>lib</outputDirectory>
 			<includes>
-				<include>org.talend.libraries:activation</include>
-				<include>org.talend.libraries:commons-codec-1.6</include>
-				<include>org.talend.libraries:commons-httpclient-3.0.1</include>
-				<include>org.talend.libraries:commons-logging-1.1</include>
-				<include>org.talend.libraries:commons-logging-1.2</include>
 				<include>org.talend.libraries:dom4j-1.6.1</include>
-				<include>org.talend.libraries:filecopy</include>
-				<include>org.talend.libraries:httpasyncclient-4.1.1</include>
-				<include>org.talend.libraries:httpclient-4.5.2</include>
-				<include>org.talend.libraries:httpcore-4.4.4</include>
-				<include>org.talend.libraries:httpcore-nio-4.4.4</include>
-				<include>org.talend.libraries:httpmime-4.5.2</include>
-				<include>org.talend.libraries:jakarta-oro-2.0.8</include>
-				<include>org.talend.libraries:jcifs-1.3.0</include>
-				<include>org.talend.libraries:json-20160212</include>
 				<include>org.talend.libraries:jxl</include>
 				<include>org.talend.libraries:log4j-1.2.16</include>
-				<include>org.talend.libraries:mail</include>
-				<include>org.talend.libraries:unirest-java-1.4.9</include>
 				<include>org.example.deepsea.code:routines</include>
 			</includes>
 			<!-- without version for talend libraries -->
@@ -214,7 +198,7 @@
 		<dependencySet>
 			<outputDirectory>${talend.job.name}</outputDirectory>
 			<includes>
-				<include>org.example.deepsea.job:THAILAND_GET_SALES_DKSH_DAILY</include>
+				<include>org.example.deepsea.job:test1</include>
 			</includes>
 			<outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>
 			<useProjectArtifact>true</useProjectArtifact>
