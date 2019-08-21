@@ -15,10 +15,11 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cG6ecs6qEeiznP0ccyyRWw" name="name" label="name" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_cG6ec86qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cG6eeM6qEeiznP0ccyyRWw" name="manufacturerName" label="manufacturerName" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_eexX0MPlEemngMUNnW6hiA" name="coeffMarket" label="coeffMarket" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cG6eeM6qEeiznP0ccyyRWw" name="manufacturerName" label="manufacturerName" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_cG6eec6qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cG6ees6qEeiznP0ccyyRWw" name="therapeuticClass" label="therapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cG6ees6qEeiznP0ccyyRWw" name="therapeuticClass" label="therapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_cG6ee86qEeiznP0ccyyRWw"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mIH0MKkdEemYLOBYZkLOYA" name="disease" label="disease" talendType="id_String"/>
