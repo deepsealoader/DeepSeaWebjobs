@@ -15,6 +15,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oGcCnEeipbvJffRKaTQ" name="therapeutic_class" id="4601" label="therapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_QZ0oGsCnEeipbvJffRKaTQ"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QkAEoMlMEemaA9LAjs_eFw" name="disease" label="disease" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oG8CnEeipbvJffRKaTQ" name="market_coef" id="4602" label="marketCoef" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
         <initialValue xmi:id="_QZ0oHMCnEeipbvJffRKaTQ"/>
       </feature>

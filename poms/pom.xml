@@ -10,12 +10,12 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
-    <module>jobs/process/COMMON/HUBS/hub_master_sales_objectives_0.1</module>
-    <module>jobs/process/COMMON/LIB/dsendexception_0.1</module>
     <module>jobs/process/HONGKONG/JOBS/hongkong_build_master_vault_0.1</module>
     <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_hubs_0.1</module>
     <module>jobs/process/COMMON/HUBS/hub_master_0.1</module>
+    <module>jobs/process/COMMON/LIB/dsendexception_0.1</module>
     <module>jobs/process/COMMON/HUBS/hub_master_with_duplicates_0.1</module>
+    <module>jobs/process/COMMON/HUBS/hub_master_sales_objectives_0.1</module>
     <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_sats_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_employee_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_market_0.1</module>
