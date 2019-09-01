@@ -26,6 +26,7 @@ import routines.StringHandling;
 import routines.Relational;
 import routines.TalendDate;
 import routines.Mathematical;
+import routines.Clean;
 import routines.system.*;
 import routines.system.api.*;
 import java.text.ParseException;
@@ -410,6 +411,15 @@ private class TalendException extends Exception {
 					tFileDelete_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tFileDelete_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileDelete_3_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tPrejob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -508,6 +518,11 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tFileDelete_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tFileDelete_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -863,27 +878,7 @@ public void tPOP_1Process(final java.util.Map<String, Object> globalMap) throws 
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk2", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("iterate2", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk6", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row1", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row2", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
+	       				runStat.updateStatOnConnection("If1", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -891,11 +886,35 @@ public void tPOP_1Process(final java.util.Map<String, Object> globalMap) throws 
 					}           			
 				
 					if(execStat){				
+	       				runStat.updateStatOnConnection("row5", 3, 0);
+					}           			
+				
+					if(execStat){				
 	       				runStat.updateStatOnConnection("OnComponentError1", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row5", 3, 0);
+	       				runStat.updateStatOnConnection("row2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("iterate2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row1", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("If2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -2174,19 +2193,7 @@ row4Struct row5 = row4;
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk2", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk6", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row1", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
+	       				runStat.updateStatOnConnection("If1", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -2194,11 +2201,27 @@ row4Struct row5 = row4;
 					}           			
 				
 					if(execStat){				
+	       				runStat.updateStatOnConnection("row5", 3, 0);
+					}           			
+				
+					if(execStat){				
 	       				runStat.updateStatOnConnection("OnComponentError1", 3, 0);
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row5", 3, 0);
+	       				runStat.updateStatOnConnection("row1", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("If2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk2", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("OnComponentOk5", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -2706,9 +2729,16 @@ row4 = null;
 
 
 // # Output table : 'row4'
+// # Filter conditions 
+if( 
+
+row1.billingDate != null
+
+ ) {
 row4_tmp.billingDate = TalendDate.formatDate("yyyy-MM-dd", row1.billingDate) ;
 row4_tmp.batchDate = TalendDate.formatDate("yyyy-MM-dd", TalendDate.getFirstDayOfMonth(row1.billingDate)) ;
 row4 = row4_tmp;
+} // closing filter/reject
 // ###############################
 
 } // end of Var scope
@@ -2840,7 +2870,7 @@ if(row4 != null) {
 
 globalMap.put("BATCH_DATE", row5.batchDate);
 globalMap.put("FILE_NAME", "sales.dksh.daily-" + row5.billingDate +  ".xls");
-globalMap.put("FILE_PATH", globalMap.get("MAILS_FOLDER_PATH").toString() + java.io.File.separator + "sales.dksh.daily-" + row5.billingDate +  ".xls");
+globalMap.put("FILE_PATH", globalMap.get("MAILS_FOLDER_PATH").toString() + java.io.File.separator + globalMap.get("FILE_NAME").toString());
 
  
 
@@ -3059,7 +3089,7 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 	
 
-	tFlowMeterCatcher_1.addMessage("Processing sales with billing date: " + row4.billingDate, new Integer(count_tFlowMeter_7), "null", "", "tFlowMeter_7");
+	tFlowMeterCatcher_1.addMessage("Processing sales with billing date: " + ((row4 != null) ? row4.billingDate : "none"), new Integer(count_tFlowMeter_7), "null", "", "tFlowMeter_7");
 
 			if(execStat){
 				if(resourceMap.get("inIterateVComp") == null || !((Boolean)resourceMap.get("inIterateVComp"))){
@@ -3103,10 +3133,36 @@ end_Hash.put("tFlowMeter_7", System.currentTimeMillis());
 ok_Hash.put("tSetGlobalVar_1", true);
 end_Hash.put("tSetGlobalVar_1", System.currentTimeMillis());
 
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk6", 0, "ok");
-				}
-				tFileCopy_1Process(globalMap);
+   			if (globalMap.get("FILE_NAME") != null) {
+   				
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If1", 0, "true");
+					}
+				
+    			tFileCopy_1Process(globalMap);
+   			}
+
+			   
+   				else{
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If1", 0, "false");
+					}   	 
+   				}
+   			if (globalMap.get("FILE_NAME") == null) {
+   				
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If2", 0, "true");
+					}
+				
+    			tFileDelete_3Process(globalMap);
+   			}
+
+			   
+   				else{
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If2", 0, "false");
+					}   	 
+   				}
 
 
 
@@ -4338,6 +4394,259 @@ end_Hash.put("tFileDelete_2", System.currentTimeMillis());
 		
 
 		globalMap.put("tFileDelete_2_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tFileDelete_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tFileDelete_3_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tFileDelete_3 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFileDelete_3", false);
+		start_Hash.put("tFileDelete_3", System.currentTimeMillis());
+		
+	
+	currentComponent="tFileDelete_3";
+
+	
+		int tos_count_tFileDelete_3 = 0;
+		
+    	class BytesLimit65535_tFileDelete_3{
+    		public void limitLog4jByte() throws Exception{
+    			
+    		}
+    	}
+    	
+        new BytesLimit65535_tFileDelete_3().limitLog4jByte();
+
+ 
+
+
+
+/**
+ * [tFileDelete_3 begin ] stop
+ */
+	
+	/**
+	 * [tFileDelete_3 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_3";
+
+	
+
+ 
+
+class DeleteFoldertFileDelete_3{
+	 /**
+     * delete all the sub-files in 'file'
+     * 
+     * @param file
+     */
+	public boolean delete(java.io.File file) {
+        java.io.File[] files = file.listFiles();
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].isFile()) {
+                files[i].delete();
+            } else if (files[i].isDirectory()) {
+                if (!files[i].delete()) {
+                    delete(files[i]);
+                }
+            }
+        }
+        deleteDirectory(file);
+        return file.delete();
+    }
+
+    /**
+     * delete all the sub-folders in 'file'
+     * 
+     * @param file
+     */
+    private void deleteDirectory(java.io.File file) {
+        java.io.File[] filed = file.listFiles();
+        for (int i = 0; i < filed.length; i++) {
+        	if(filed[i].isDirectory()) {
+            	deleteDirectory(filed[i]);
+            }
+            filed[i].delete();
+        }
+    }
+
+}
+    java.io.File file_tFileDelete_3=new java.io.File(globalMap.get("tFileList_1_CURRENT_FILEPATH").toString());
+    if(file_tFileDelete_3.exists()&& file_tFileDelete_3.isFile()){
+    	if(file_tFileDelete_3.delete()){
+    		globalMap.put("tFileDelete_3_CURRENT_STATUS", "File deleted.");
+		}else{
+			globalMap.put("tFileDelete_3_CURRENT_STATUS", "No file deleted.");
+				throw new RuntimeException("File " + file_tFileDelete_3.getAbsolutePath() + " can not be deleted.");
+		}
+	}else{
+		globalMap.put("tFileDelete_3_CURRENT_STATUS", "File does not exist or is invalid.");
+			throw new RuntimeException("File " + file_tFileDelete_3.getAbsolutePath() + " does not exist or is invalid or is not a file.");
+	}
+	globalMap.put("tFileDelete_3_DELETE_PATH",globalMap.get("tFileList_1_CURRENT_FILEPATH").toString());
+    
+     
+ 
+
+ 
+
+
+	tos_count_tFileDelete_3++;
+
+/**
+ * [tFileDelete_3 main ] stop
+ */
+	
+	/**
+	 * [tFileDelete_3 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileDelete_3 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tFileDelete_3 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileDelete_3 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileDelete_3 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_3";
+
+	
+
+ 
+
+ok_Hash.put("tFileDelete_3", true);
+end_Hash.put("tFileDelete_3", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tFileDelete_3 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tFileDelete_3 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileDelete_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileDelete_3 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tFileDelete_3_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -7068,6 +7377,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     149948 characters generated by Talend Open Studio for Big Data 
- *     on the August 7, 2019 9:24:21 AM CST
+ *     155814 characters generated by Talend Open Studio for Big Data 
+ *     on the August 16, 2019 9:08:19 AM CST
  ************************************************************************************************/

@@ -41,7 +41,7 @@
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="13" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="64" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="78" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -813,9 +813,9 @@
       <column comment="" key="false" length="-1" name="customerType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateYear" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateMonth" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -838,9 +838,9 @@
       <column comment="" key="false" length="-1" name="customerType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateYear" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateMonth" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -912,10 +912,10 @@
         <mapperTableEntries name="customerType" expression="row2.customerType " type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" expression="row2.productCode " type="id_String"/>
         <mapperTableEntries name="productName" expression="row2.productName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="amount" expression="row2.amount " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="quantity" expression="row2.quantity " type="id_Float"/>
+        <mapperTableEntries name="amount" expression="row2.amount != null ? Float.valueOf(Clean.cleanNumber(row2.amount)) : null " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="quantity" expression="Float.valueOf(Clean.cleanNumber(row2.quantity)) " type="id_Float"/>
         <mapperTableEntries name="date" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(Var.date, null, context.DEFAULT_DATE_FORMAT)) " type="id_Date"/>
-        <mapperTableEntries name="unitPrice" expression="row2.unitPrice " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="unitPrice" expression="row2.unitPrice != null ? Float.valueOf(Clean.cleanNumber(row2.unitPrice)) : null " type="id_Float" nullable="true"/>
         <mapperTableEntries name="marketCode" expression="row2.marketCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="marketName" expression="row2.marketName " type="id_String" nullable="true"/>
         <mapperTableEntries name="transactionType" expression="row2.transactionType " type="id_String" nullable="true"/>
@@ -935,9 +935,9 @@
         <mapperTableEntries name="customerType" type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" type="id_String"/>
         <mapperTableEntries name="productName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="amount" type="id_Float" nullable="true"/>
-        <mapperTableEntries name="quantity" type="id_Float"/>
-        <mapperTableEntries name="unitPrice" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="amount" type="id_String" nullable="true"/>
+        <mapperTableEntries name="quantity" type="id_String"/>
+        <mapperTableEntries name="unitPrice" type="id_String" nullable="true"/>
         <mapperTableEntries name="date" type="id_String"/>
         <mapperTableEntries name="dateYear" type="id_String" nullable="true"/>
         <mapperTableEntries name="dateMonth" type="id_String" nullable="true"/>

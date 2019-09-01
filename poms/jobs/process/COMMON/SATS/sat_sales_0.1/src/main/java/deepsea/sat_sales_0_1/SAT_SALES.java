@@ -7876,21 +7876,21 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					return this.productName;
 				}
 				
-			    public Float amount;
+			    public String amount;
 
-				public Float getAmount () {
+				public String getAmount () {
 					return this.amount;
 				}
 				
-			    public float quantity;
+			    public String quantity;
 
-				public float getQuantity () {
+				public String getQuantity () {
 					return this.quantity;
 				}
 				
-			    public Float unitPrice;
+			    public String unitPrice;
 
-				public Float getUnitPrice () {
+				public String getUnitPrice () {
 					return this.unitPrice;
 				}
 				
@@ -8039,21 +8039,11 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 					this.productName = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.amount = null;
-           				} else {
-           			    	this.amount = dis.readFloat();
-           				}
+					this.amount = readString(dis);
 					
-			        this.quantity = dis.readFloat();
+					this.quantity = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.unitPrice = null;
-           				} else {
-           			    	this.unitPrice = dis.readFloat();
-           				}
+					this.unitPrice = readString(dis);
 					
 					this.date = readString(dis);
 					
@@ -8131,27 +8121,17 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 				
 						writeString(this.productName,dos);
 					
-					// Float
+					// String
 				
-						if(this.amount == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeFloat(this.amount);
-		            	}
+						writeString(this.amount,dos);
 					
-					// float
+					// String
 				
-		            	dos.writeFloat(this.quantity);
+						writeString(this.quantity,dos);
 					
-					// Float
+					// String
 				
-						if(this.unitPrice == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeFloat(this.unitPrice);
-		            	}
+						writeString(this.unitPrice,dos);
 					
 					// String
 				
@@ -8219,9 +8199,9 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append(",customerType="+customerType);
 		sb.append(",productCode="+productCode);
 		sb.append(",productName="+productName);
-		sb.append(",amount="+String.valueOf(amount));
-		sb.append(",quantity="+String.valueOf(quantity));
-		sb.append(",unitPrice="+String.valueOf(unitPrice));
+		sb.append(",amount="+amount);
+		sb.append(",quantity="+quantity);
+		sb.append(",unitPrice="+unitPrice);
 		sb.append(",date="+date);
 		sb.append(",dateYear="+dateYear);
 		sb.append(",dateMonth="+dateMonth);
@@ -10359,27 +10339,11 @@ if(row17 != null) {
 	
 	
 					if(execStat){				
-	       				runStat.updateStatOnConnection("row8", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row2", 3, 0);
+	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
 					}           			
 				
 					if(execStat){				
 	       				runStat.updateStatOnConnection("row1", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row10", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("row14", 3, 0);
-					}           			
-				
-					if(execStat){				
-	       				runStat.updateStatOnConnection("exception1", 3, 0);
 					}           			
 				
 					if(execStat){				
@@ -10391,11 +10355,27 @@ if(row17 != null) {
 					}           			
 				
 					if(execStat){				
-	       				runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
+	       				runStat.updateStatOnConnection("row10", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row8", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row14", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("row2", 3, 0);
 					}           			
 				
 					if(execStat){				
 	       				runStat.updateStatOnConnection("row9", 3, 0);
+					}           			
+				
+					if(execStat){				
+	       				runStat.updateStatOnConnection("exception1", 3, 0);
 					}           			
 				
 				if(execStat){
@@ -11746,7 +11726,7 @@ if(row3 != null) {
               if ("".equals(row3.amount)){  
                 row3.amount = null;
               }
-              row2.amount=TypeConvert.String2Float(row3.amount);            
+              row2.amount=TypeConvert.String2String(row3.amount);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -11755,7 +11735,7 @@ if(row3 != null) {
               if ("".equals(row3.quantity)){  
                 row3.quantity = null;
               }
-              row2.quantity=TypeConvert.String2float(row3.quantity);            
+              row2.quantity=TypeConvert.String2String(row3.quantity);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -11764,7 +11744,7 @@ if(row3 != null) {
               if ("".equals(row3.unitPrice)){  
                 row3.unitPrice = null;
               }
-              row2.unitPrice=TypeConvert.String2Float(row3.unitPrice);            
+              row2.unitPrice=TypeConvert.String2String(row3.unitPrice);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -12069,10 +12049,10 @@ row8_tmp.customerName = row2.customerName ;
 row8_tmp.customerType = row2.customerType ;
 row8_tmp.productCode = row2.productCode ;
 row8_tmp.productName = row2.productName ;
-row8_tmp.amount = row2.amount ;
-row8_tmp.quantity = row2.quantity ;
+row8_tmp.amount = row2.amount != null ? Float.valueOf(Clean.cleanNumber(row2.amount)) : null ;
+row8_tmp.quantity = Float.valueOf(Clean.cleanNumber(row2.quantity)) ;
 row8_tmp.date = TalendDate.parseDate("yyyy-MM-dd", Clean.cleanDate(Var.date, null, context.DEFAULT_DATE_FORMAT)) ;
-row8_tmp.unitPrice = row2.unitPrice ;
+row8_tmp.unitPrice = row2.unitPrice != null ? Float.valueOf(Clean.cleanNumber(row2.unitPrice)) : null ;
 row8_tmp.marketCode = row2.marketCode ;
 row8_tmp.marketName = row2.marketName ;
 row8_tmp.transactionType = row2.transactionType ;
@@ -16329,6 +16309,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     350213 characters generated by Talend Open Studio for Big Data 
- *     on the May 30, 2019 10:25:42 PM CST
+ *     349680 characters generated by Talend Open Studio for Big Data 
+ *     on the August 15, 2019 8:38:44 PM CST
  ************************************************************************************************/
