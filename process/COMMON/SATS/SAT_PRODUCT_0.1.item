@@ -338,13 +338,9 @@
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="stdBoxCoef"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="coeffMarket"/>
-      <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="manufacturerName"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="therapeuticClass"/>
-      <elementValue elementRef="KEY_VALUE" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="disease"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="molecule"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
@@ -375,10 +371,8 @@
       <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="packageUnit" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="coeffMarket" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="disease" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -409,10 +403,8 @@
       <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="packageUnit" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="coeffMarket" nullable="false" pattern="" precision="0" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="disease" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -433,10 +425,8 @@
       <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="packageUnit" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="coeffMarket" nullable="false" pattern="" precision="0" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="disease" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -478,10 +468,8 @@
       <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" originalDbColumnName="namelevel5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="packageUnit" nullable="false" originalDbColumnName="package_unit" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" originalDbColumnName="std_box_coef" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="marketCoef" nullable="false" pattern="" precision="0" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" originalDbColumnName="manufacturer_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" originalDbColumnName="therapeutic_class" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="disease" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -507,10 +495,8 @@
         <mapperTableEntries name="nameLevel5" expression="row2.nameLevel5 " type="id_String" nullable="true"/>
         <mapperTableEntries name="packageUnit" expression="row2.packageUnit " type="id_Float"/>
         <mapperTableEntries name="stdBoxCoef" expression="row2.stdBoxCoef " type="id_Float"/>
-        <mapperTableEntries name="marketCoef" expression="row2.coeffMarket " type="id_Float"/>
         <mapperTableEntries name="manufacturerName" expression="row2.manufacturerName " type="id_String"/>
         <mapperTableEntries name="therapeuticClass" expression="row2.therapeuticClass " type="id_String"/>
-        <mapperTableEntries name="disease" expression="row2.disease " type="id_String" nullable="true"/>
         <mapperTableEntries name="molecule" expression="row2.molecule " type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute1" expression="row2.attribute1 " type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute2" expression="row2.attribute2 " type="id_String" nullable="true"/>
@@ -531,10 +517,8 @@
         <mapperTableEntries name="nameLevel5" type="id_String" nullable="true"/>
         <mapperTableEntries name="packageUnit" type="id_Float"/>
         <mapperTableEntries name="stdBoxCoef" type="id_Float"/>
-        <mapperTableEntries name="coeffMarket" type="id_Float"/>
         <mapperTableEntries name="manufacturerName" type="id_String"/>
         <mapperTableEntries name="therapeuticClass" type="id_String"/>
-        <mapperTableEntries name="disease" type="id_String" nullable="true"/>
         <mapperTableEntries name="molecule" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
@@ -611,10 +595,8 @@
       <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" originalDbColumnName="namelevel5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="packageUnit" nullable="false" originalDbColumnName="package_unit" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" originalDbColumnName="std_box_coef" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="marketCoef" nullable="false" originalDbColumnName="market_coef" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" originalDbColumnName="manufacturer_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" originalDbColumnName="therapeutic_class" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="disease" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -648,10 +630,8 @@
       <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" originalDbColumnName="namelevel5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="packageUnit" nullable="false" originalDbColumnName="package_unit" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" originalDbColumnName="std_box_coef" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="marketCoef" nullable="false" originalDbColumnName="market_coef" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" originalDbColumnName="manufacturer_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" originalDbColumnName="therapeutic_class" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="disease" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -760,22 +740,12 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="marketCoef"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="manufacturerName"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="therapeuticClass"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="disease"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -833,10 +803,8 @@
       <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" originalDbColumnName="namelevel5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="packageUnit" nullable="false" originalDbColumnName="package_unit" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" originalDbColumnName="std_box_coef" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="marketCoef" nullable="false" originalDbColumnName="market_coef" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" originalDbColumnName="manufacturer_name" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" originalDbColumnName="therapeutic_class" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="disease" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -859,10 +827,8 @@
       <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" originalDbColumnName="namelevel5" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="packageUnit" nullable="false" originalDbColumnName="package_unit" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" originalDbColumnName="std_box_coef" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="marketCoef" nullable="false" originalDbColumnName="market_coef" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" originalDbColumnName="manufacturer_name" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" originalDbColumnName="therapeutic_class" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="disease" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>

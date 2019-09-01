@@ -323,7 +323,7 @@
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="nameLo"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="vISA"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="visa"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="email"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
@@ -345,7 +345,7 @@
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nameEn" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="vISA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="visa" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="email" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="arrivalDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="departureDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -368,7 +368,7 @@
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nameEn" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="vISA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="visa" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="email" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="arrivalDate" nullable="true" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="departureDate" nullable="true" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
@@ -381,7 +381,7 @@
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nameEn" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="nameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="vISA" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="visa" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="email" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="arrivalDate" nullable="true" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="departureDate" nullable="true" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_Date" originalLength="-1" usefulColumn="true"/>
@@ -423,7 +423,7 @@
       <column comment="" key="false" length="-1" name="jobTitleLo" nullable="true" originalDbColumnName="job_title_lo" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row8">
         <mapperTableEntries name="hubId" expression="row5.id " type="id_Integer"/>
@@ -433,7 +433,7 @@
         <mapperTableEntries name="geographyCode" expression="row2.geographyCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="nameEn" expression="row2.nameEn " type="id_String"/>
         <mapperTableEntries name="nameLo" expression="row2.nameLo " type="id_String" nullable="true"/>
-        <mapperTableEntries name="visa" expression="row2.vISA " type="id_String" nullable="true"/>
+        <mapperTableEntries name="visa" expression="row2.visa " type="id_String" nullable="true"/>
         <mapperTableEntries name="email" expression="row2.email " type="id_String"/>
         <mapperTableEntries name="arrivalDate" expression="row2.arrivalDate " type="id_Date" nullable="true"/>
         <mapperTableEntries name="departureDate" expression="row2.departureDate " type="id_Date" nullable="true"/>
@@ -446,7 +446,7 @@
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="nameEn" type="id_String"/>
         <mapperTableEntries name="nameLo" type="id_String" nullable="true"/>
-        <mapperTableEntries name="vISA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="visa" type="id_String" nullable="true"/>
         <mapperTableEntries name="email" type="id_String"/>
         <mapperTableEntries name="arrivalDate" type="id_Date" nullable="true"/>
         <mapperTableEntries name="departureDate" type="id_Date" nullable="true"/>
@@ -1129,7 +1129,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="organizationCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="vISA"/>
+      <elementValue elementRef="TRACE_COLUMN" value="visa"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="nameEn"/>

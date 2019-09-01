@@ -9,7 +9,8 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Jagpos6qEeiznP0ccyyRWw" name="therapeuticClass" label="therapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_Jagpo86qEeiznP0ccyyRWw"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_L9a7EMlMEemaA9LAjs_eFw" name="disease" label="disease" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_L9a7EMlMEemaA9LAjs_eFw" name="therapeuticClassName" label="therapeuticClassName" talendType="id_String" nullable="false"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1_3lIMytEemwqswTltxp1A" name="sourceChannelCode" label="sourceChannelCode" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_JagppM6qEeiznP0ccyyRWw" name="coeffMarket" label="coeffMarket" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_Jagppc6qEeiznP0ccyyRWw"/>
       </feature>

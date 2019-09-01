@@ -35,6 +35,25 @@
     <module>jobs/process/COMMON/LINKS/link_master_with_multiple_0.1</module>
     <module>jobs/process/COMMON/SUBJOBS/check_geography_customer_link_0.1</module>
     <module>jobs/process/COMMON/LINKS/link_master_sales_objective_0.1</module>
+    <module>jobs/process/HONGKONG/JOBS/hongkong_build_sales_vault_0.1</module>
+    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_sales_hubs_0.1</module>
+    <module>jobs/process/COMMON/HUBS/hub_sales_0.1</module>
+    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_sales_sats_0.1</module>
+    <module>jobs/process/COMMON/SATS/sat_sales_0.1</module>
+    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_sales_links_0.1</module>
+    <module>jobs/process/COMMON/LINKS/link_sales_0.1</module>
+    <module>jobs/process/COMMON/SUBJOBS/generate_customer_diff_0.1</module>
+    <module>jobs/process/HONGKONG/JOBS/hongkong_sales_dkhs_daily_to_monthly_0.1</module>
+    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_update_one_month_sales_0.1</module>
+    <module>jobs/process/HONGKONG/JOBS/hongkong_sales_zuellig_daily_to_monthly_0.1</module>
+    <module>jobs/process/THAILAND/JOBS/thailand_check_product_customer_0.1</module>
+    <module>jobs/process/THAILAND/JOBS/thailand_build_sales_vault_0.1</module>
+    <module>jobs/process/THAILAND/SUBJOBS/thailand_build_sales_links_0.1</module>
+    <module>jobs/process/TAIWAN/SUBJOBS/taiwan_update_one_month_sales_0.1</module>
+    <module>jobs/process/THAILAND/SUBJOBS/thailand_update_one_month_sales_0.1</module>
+    <module>jobs/process/MYANMAR/SUBJOBS/myanmar_update_one_month_sales_0.1</module>
+    <module>jobs/process/TOOLS/talendjobtowebjob_0.1</module>
+    <module>jobs/process/HONGKONG/JOBS/honkong_check_product_customer_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>

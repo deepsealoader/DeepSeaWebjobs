@@ -3,20 +3,21 @@
   <TalendMetadata:GenericSchemaConnection xmi:id="_QZ0oEMCnEeipbvJffRKaTQ" comment="connectionComment" label="connectionLabel" dataPackage="_QZ0oEcCnEeipbvJffRKaTQ" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
   <TalendMetadata:GenericPackage xmi:id="_QZ0oEcCnEeipbvJffRKaTQ" dataManager="_QZ0oEMCnEeipbvJffRKaTQ">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_QZ0oEsCnEeipbvJffRKaTQ" id="_ZtYeIMCnEeipbvJffRKaTQ" label="metadata">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oE8CnEeipbvJffRKaTQ" name="hub_id" id="4598" label="hubId" length="-1" precision="-1" sourceType="" talendType="id_Integer" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oE8CnEeipbvJffRKaTQ" name="hub_id" id="4598" label="hubId" length="-1" precision="-1" sourceType="INT4" talendType="id_Integer" nullable="false">
         <initialValue xmi:id="_QZ0oFMCnEeipbvJffRKaTQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oFcCnEeipbvJffRKaTQ" name="source" id="4599" label="source" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oFcCnEeipbvJffRKaTQ" name="source" id="4599" label="source" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
         <initialValue xmi:id="_QZ0oFsCnEeipbvJffRKaTQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oF8CnEeipbvJffRKaTQ" name="market" id="4600" label="market" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oF8CnEeipbvJffRKaTQ" name="market" id="4600" label="market" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
         <initialValue xmi:id="_QZ0oGMCnEeipbvJffRKaTQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oGcCnEeipbvJffRKaTQ" name="therapeutic_class" id="4601" label="therapeuticClass" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oGcCnEeipbvJffRKaTQ" name="therapeutic_class" id="4601" label="therapeuticClass" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
         <initialValue xmi:id="_QZ0oGsCnEeipbvJffRKaTQ"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QkAEoMlMEemaA9LAjs_eFw" name="disease" label="disease" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oG8CnEeipbvJffRKaTQ" name="market_coef" id="4602" label="marketCoef" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QkAEoMlMEemaA9LAjs_eFw" name="therapeutic_class_name" label="therapeuticClassName" sourceType="VARCHAR" talendType="id_String" nullable="false"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_E-A_cMyuEemwqswTltxp1A" name="source_channel_code" label="sourceChannelCode" sourceType="VARCHAR" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oG8CnEeipbvJffRKaTQ" name="market_coef" id="4602" label="marketCoef" length="-1" precision="-1" sourceType="FLOAT4" talendType="id_Float" nullable="false">
         <initialValue xmi:id="_QZ0oHMCnEeipbvJffRKaTQ"/>
       </feature>
     </ownedElement>
