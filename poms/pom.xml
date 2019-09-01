@@ -10,95 +10,31 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
-    <module>jobs/process/MYANMAR/JOBS/update_one_month_sales_0.1</module>
-    <module>jobs/process/TOOLS/talendjobtowebjob_0.1</module>
-    <module>jobs/process/COMMON/HUBS/hub_master_0.1</module>
-    <module>jobs/process/COMMON/HUBS/hub_sales_0.1</module>
-    <module>jobs/process/COMMON/SALS/sal_master_0.1</module>
-    <module>jobs/process/COMMON/SATS/sat_sales_0.1</module>
-    <module>jobs/process/COMMON/LINKS/link_sales_0.1</module>
-    <module>jobs/process/COMMON/LIB/dsendexception_0.1</module>
-    <module>jobs/process/VIETNAM/EXERCICES/build_raw_data_from_file_0.1</module>
-    <module>jobs/process/VIETNAM/EXERCICES/diff_raw_local_data_0.1</module>
-    <module>jobs/process/VIETNAM/EXERCICES/missing_invoice_days_0.1</module>
-    <module>jobs/process/VIETNAM/EXERCICES/stms_qc_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_stms_customer_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_stms_customer_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_stms_product_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_stms_product_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/build_all_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_stms_sales_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_stms_sales_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/LINKS/link_stms_product_sales_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/LINKS/link_stms_customer_sales_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/HUBS/hub_zuellig_sales_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/LINKS/link_zuellig_product_sales_0.1</module>
-    <module>jobs/process/VIETNAM/DATAVAULT/SATS/sat_zuellig_sales_0.1</module>
     <module>jobs/process/COMMON/HUBS/hub_master_sales_objectives_0.1</module>
-    <module>jobs/process/COMMON/LINKS/link_master_0.1</module>
-    <module>jobs/process/COMMON/LINKS/link_master_sales_objective_0.1</module>
+    <module>jobs/process/COMMON/LIB/dsendexception_0.1</module>
+    <module>jobs/process/HONGKONG/JOBS/hongkong_build_master_vault_0.1</module>
+    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_hubs_0.1</module>
+    <module>jobs/process/COMMON/HUBS/hub_master_0.1</module>
     <module>jobs/process/COMMON/HUBS/hub_master_with_duplicates_0.1</module>
-    <module>jobs/process/COMMON/SATS/sat_customer_0.1</module>
+    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_sats_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_employee_0.1</module>
-    <module>jobs/process/COMMON/SATS/sat_geography_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_market_0.1</module>
+    <module>jobs/process/COMMON/SATS/sat_geography_0.1</module>
+    <module>jobs/process/COMMON/SATS/sat_customer_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_organization_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_product_0.1</module>
-    <module>jobs/process/COMMON/SATS/sat_sales_objective_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_source_channel_0.1</module>
-    <module>jobs/process/COMMON/LINKS/link_master_with_multiple_0.1</module>
-    <module>jobs/process/COMMON/LINKS/link_master_with_empty_0.1</module>
-    <module>jobs/process/MYANMAR/JOBS/myanmar_build_master_vault_0.1</module>
-    <module>jobs/process/MYANMAR/JOBS/myanmar_build_sales_vault_0.1</module>
-    <module>jobs/process/MYANMAR/JOBS/myanmar_sales_mega_daily_to_monthly_0.1</module>
-    <module>jobs/process/MYANMAR/SUBJOBS/myanmar_build_master_hubs_0.1</module>
-    <module>jobs/process/MYANMAR/SUBJOBS/myanmar_build_master_links_0.1</module>
-    <module>jobs/process/MYANMAR/SUBJOBS/myanmar_build_master_sats_0.1</module>
-    <module>jobs/process/MYANMAR/SUBJOBS/myanmar_build_sales_links_0.1</module>
-    <module>jobs/process/MYANMAR/SUBJOBS/myanmar_generate_customer_diff_0.1</module>
-    <module>jobs/process/MYANMAR/SUBJOBS/myanmar_update_one_month_sales_0.1</module>
-    <module>jobs/process/COMMON/SUBJOBS/check_geography_customer_link_0.1</module>
-    <module>jobs/process/COMMON/SUBJOBS/generate_customer_diff_0.1</module>
-    <module>jobs/process/HONGKONG/JOBS/hongkong_build_master_vault_0.1</module>
-    <module>jobs/process/HONGKONG/JOBS/hongkong_build_sales_vault_0.1</module>
-    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_hubs_0.1</module>
-    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_links_0.1</module>
-    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_sats_0.1</module>
-    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_sales_links_0.1</module>
-    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_update_one_month_sales_0.1</module>
-    <module>jobs/process/HONGKONG/JOBS/hongkong_sales_dkhs_daily_to_monthly_0.1</module>
-    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_sales_sats_0.1</module>
-    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_sales_hubs_0.1</module>
-    <module>jobs/process/THAILAND/JOBS/thailand_build_master_vault_0.1</module>
-    <module>jobs/process/THAILAND/JOBS/thailand_build_sales_vault_0.1</module>
-    <module>jobs/process/THAILAND/SUBJOBS/thailand_build_master_hubs_0.1</module>
-    <module>jobs/process/THAILAND/SUBJOBS/thailand_build_master_links_0.1</module>
-    <module>jobs/process/THAILAND/SUBJOBS/thailand_build_master_sats_0.1</module>
-    <module>jobs/process/THAILAND/SUBJOBS/thailand_build_sales_hubs_0.1</module>
-    <module>jobs/process/THAILAND/SUBJOBS/thailand_build_sales_links_0.1</module>
-    <module>jobs/process/THAILAND/SUBJOBS/thailand_build_sales_sats_0.1</module>
-    <module>jobs/process/THAILAND/SUBJOBS/thailand_update_one_month_sales_0.1</module>
-    <module>jobs/process/TAIWAN/SUBJOBS/taiwan_build_master_hubs_0.1</module>
-    <module>jobs/process/TAIWAN/SUBJOBS/taiwan_build_master_links_0.1</module>
-    <module>jobs/process/TAIWAN/SUBJOBS/taiwan_build_master_sats_0.1</module>
-    <module>jobs/process/TAIWAN/SUBJOBS/taiwan_build_sales_hubs_0.1</module>
-    <module>jobs/process/TAIWAN/SUBJOBS/taiwan_build_sales_links_0.1</module>
-    <module>jobs/process/TAIWAN/SUBJOBS/taiwan_build_sales_sats_0.1</module>
-    <module>jobs/process/TAIWAN/SUBJOBS/taiwan_update_one_month_sales_0.1</module>
-    <module>jobs/process/TAIWAN/JOBS/taiwan_build_master_vault_0.1</module>
-    <module>jobs/process/TAIWAN/JOBS/taiwan_build_sales_vault_0.1</module>
-    <module>jobs/process/TAIWAN/JOBS/taiwan_sales_zuellig_daily_to_monthly_0.1</module>
-    <module>jobs/process/THAILAND/JOBS/thailand_sales_dksh_daily_to_monthly_0.1</module>
-    <module>jobs/process/HONGKONG/TOOLS/build_customer_list_0.1</module>
-    <module>jobs/process/HONGKONG/TOOLS/extract_customer_sector_0.1</module>
-    <module>jobs/process/COMMON/LINKS/link_master_with_multiple_without_hub_0.1</module>
-    <module>jobs/process/THAILAND/JOBS/thailand_check_product_customer_0.1</module>
-    <module>jobs/process/COMMON/SALS/sal_master_with_empty_0.1</module>
-    <module>jobs/process/test2_0.1</module>
+    <module>jobs/process/COMMON/SATS/sat_sales_objective_0.1</module>
     <module>jobs/process/COMMON/SATS/sat_product_provider_0.1</module>
-    <module>jobs/process/HONGKONG/JOBS/hongkong_sales_zuellig_daily_to_monthly_0.1</module>
-    <module>jobs/process/THAILAND/JOBS/thailand_get_sales_dksh_daily_0.1</module>
-    <module>jobs/process/test1_0.1</module>
+    <module>jobs/process/HONGKONG/SUBJOBS/hongkong_build_master_links_0.1</module>
+    <module>jobs/process/COMMON/SALS/sal_master_0.1</module>
+    <module>jobs/process/COMMON/SALS/sal_master_with_empty_0.1</module>
+    <module>jobs/process/COMMON/LINKS/link_master_0.1</module>
+    <module>jobs/process/COMMON/LINKS/link_master_with_multiple_without_hub_0.1</module>
+    <module>jobs/process/COMMON/LINKS/link_master_with_empty_0.1</module>
+    <module>jobs/process/COMMON/LINKS/link_master_with_multiple_0.1</module>
+    <module>jobs/process/COMMON/SUBJOBS/check_geography_customer_link_0.1</module>
+    <module>jobs/process/COMMON/LINKS/link_master_sales_objective_0.1</module>
   </modules>
   <properties>
     <talend.project.name>DEEPSEA</talend.project.name>

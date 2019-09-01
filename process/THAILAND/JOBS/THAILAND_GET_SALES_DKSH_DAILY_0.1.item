@@ -722,9 +722,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
+<<<<<<< HEAD
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileDelete_3" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
 </talendfile:ProcessType>
+=======
+</talendfile:ProcessType>
+>>>>>>> cf8f4caaf3a027d3a63e617abdd5dbe61365340d

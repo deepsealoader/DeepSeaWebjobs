@@ -45,6 +45,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKjcCpEeipbvJffRKaTQ" name="std_box_coef" id="10706" label="stdBoxCoef" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
         <initialValue xmi:id="_jyQKjsCpEeipbvJffRKaTQ"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_rK3P8MPlEemngMUNnW6hiA" name="market_coef" label="marketCoef" length="-1" sourceType="FLOAT4" talendType="id_Float" nullable="false"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKj8CpEeipbvJffRKaTQ" name="manufacturer_name" id="10707" label="manufacturerName" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_jyQKkMCpEeipbvJffRKaTQ"/>
       </feature>

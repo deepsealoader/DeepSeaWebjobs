@@ -775,6 +775,12 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					return this.stdBoxCoef;
 				}
 				
+			    public float marketCoef;
+
+				public float getMarketCoef () {
+					return this.marketCoef;
+				}
+				
 			    public String manufacturerName;
 
 				public String getManufacturerName () {
@@ -898,6 +904,8 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 					
 			        this.stdBoxCoef = dis.readFloat();
 					
+			        this.marketCoef = dis.readFloat();
+					
 					this.manufacturerName = readString(dis);
 					
 					this.therapeuticClass = readString(dis);
@@ -990,6 +998,10 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 				
 		            	dos.writeFloat(this.stdBoxCoef);
 					
+					// float
+				
+		            	dos.writeFloat(this.marketCoef);
+					
 					// String
 				
 						writeString(this.manufacturerName,dos);
@@ -1053,6 +1065,7 @@ public static class row9Struct implements routines.system.IPersistableRow<row9St
 		sb.append(",nameLevel5="+nameLevel5);
 		sb.append(",packageUnit="+String.valueOf(packageUnit));
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
+		sb.append(",marketCoef="+String.valueOf(marketCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
 		sb.append(",disease="+disease);
@@ -1191,6 +1204,12 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					return this.stdBoxCoef;
 				}
 				
+			    public float marketCoef;
+
+				public float getMarketCoef () {
+					return this.marketCoef;
+				}
+				
 			    public String manufacturerName;
 
 				public String getManufacturerName () {
@@ -1314,6 +1333,8 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					
 			        this.stdBoxCoef = dis.readFloat();
 					
+			        this.marketCoef = dis.readFloat();
+					
 					this.manufacturerName = readString(dis);
 					
 					this.therapeuticClass = readString(dis);
@@ -1406,6 +1427,10 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 				
 		            	dos.writeFloat(this.stdBoxCoef);
 					
+					// float
+				
+		            	dos.writeFloat(this.marketCoef);
+					
 					// String
 				
 						writeString(this.manufacturerName,dos);
@@ -1469,6 +1494,7 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 		sb.append(",nameLevel5="+nameLevel5);
 		sb.append(",packageUnit="+String.valueOf(packageUnit));
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
+		sb.append(",marketCoef="+String.valueOf(marketCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
 		sb.append(",disease="+disease);
@@ -1607,6 +1633,12 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					return this.stdBoxCoef;
 				}
 				
+			    public float marketCoef;
+
+				public float getMarketCoef () {
+					return this.marketCoef;
+				}
+				
 			    public String manufacturerName;
 
 				public String getManufacturerName () {
@@ -1730,6 +1762,8 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 					
 			        this.stdBoxCoef = dis.readFloat();
 					
+			        this.marketCoef = dis.readFloat();
+					
 					this.manufacturerName = readString(dis);
 					
 					this.therapeuticClass = readString(dis);
@@ -1822,6 +1856,10 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 				
 		            	dos.writeFloat(this.stdBoxCoef);
 					
+					// float
+				
+		            	dos.writeFloat(this.marketCoef);
+					
 					// String
 				
 						writeString(this.manufacturerName,dos);
@@ -1885,6 +1923,7 @@ public static class row8Struct implements routines.system.IPersistableRow<row8St
 		sb.append(",nameLevel5="+nameLevel5);
 		sb.append(",packageUnit="+String.valueOf(packageUnit));
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
+		sb.append(",marketCoef="+String.valueOf(marketCoef));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
 		sb.append(",disease="+disease);
@@ -2011,6 +2050,12 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					return this.stdBoxCoef;
 				}
 				
+			    public float coeffMarket;
+
+				public float getCoeffMarket () {
+					return this.coeffMarket;
+				}
+				
 			    public String manufacturerName;
 
 				public String getManufacturerName () {
@@ -2130,6 +2175,8 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					
 			        this.stdBoxCoef = dis.readFloat();
 					
+			        this.coeffMarket = dis.readFloat();
+					
 					this.manufacturerName = readString(dis);
 					
 					this.therapeuticClass = readString(dis);
@@ -2214,6 +2261,10 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 				
 		            	dos.writeFloat(this.stdBoxCoef);
 					
+					// float
+				
+		            	dos.writeFloat(this.coeffMarket);
+					
 					// String
 				
 						writeString(this.manufacturerName,dos);
@@ -2275,6 +2326,7 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append(",nameLevel5="+nameLevel5);
 		sb.append(",packageUnit="+String.valueOf(packageUnit));
 		sb.append(",stdBoxCoef="+String.valueOf(stdBoxCoef));
+		sb.append(",coeffMarket="+String.valueOf(coeffMarket));
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
 		sb.append(",disease="+disease);
@@ -2401,6 +2453,12 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					return this.stdBoxCoef;
 				}
 				
+			    public String coeffMarket;
+
+				public String getCoeffMarket () {
+					return this.coeffMarket;
+				}
+				
 			    public String manufacturerName;
 
 				public String getManufacturerName () {
@@ -2520,6 +2578,8 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					this.stdBoxCoef = readString(dis);
 					
+					this.coeffMarket = readString(dis);
+					
 					this.manufacturerName = readString(dis);
 					
 					this.therapeuticClass = readString(dis);
@@ -2606,6 +2666,10 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					
 					// String
 				
+						writeString(this.coeffMarket,dos);
+					
+					// String
+				
 						writeString(this.manufacturerName,dos);
 					
 					// String
@@ -2665,6 +2729,7 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		sb.append(",nameLevel5="+nameLevel5);
 		sb.append(",packageUnit="+packageUnit);
 		sb.append(",stdBoxCoef="+stdBoxCoef);
+		sb.append(",coeffMarket="+coeffMarket);
 		sb.append(",manufacturerName="+manufacturerName);
 		sb.append(",therapeuticClass="+therapeuticClass);
 		sb.append(",disease="+disease);
@@ -3330,7 +3395,7 @@ String dbUser_tDBOutput_1 = null;
    int batchSizeCounter_tDBOutput_1=0;
 
 int count_tDBOutput_1=0;
-	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"codelevel1\",\"codelevel2\",\"codelevel3\",\"codelevel4\",\"codelevel5\",\"namelevel1\",\"namelevel2\",\"namelevel3\",\"namelevel4\",\"namelevel5\",\"package_unit\",\"std_box_coef\",\"manufacturer_name\",\"therapeutic_class\",\"disease\",\"molecule\",\"attribute1\",\"attribute2\",\"attribute3\",\"attribute4\",\"attribute5\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"hub_id\",\"source\",\"codelevel1\",\"codelevel2\",\"codelevel3\",\"codelevel4\",\"codelevel5\",\"namelevel1\",\"namelevel2\",\"namelevel3\",\"namelevel4\",\"namelevel5\",\"package_unit\",\"std_box_coef\",\"market_coef\",\"manufacturer_name\",\"therapeutic_class\",\"disease\",\"molecule\",\"attribute1\",\"attribute2\",\"attribute3\",\"attribute4\",\"attribute5\") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	    
 	    java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
 	    
@@ -4286,6 +4351,7 @@ if(out1 != null) {
     row3.nameLevel5 = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "nameLevel5");
     row3.packageUnit = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "packageUnit");
     row3.stdBoxCoef = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "stdBoxCoef");
+    row3.coeffMarket = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "coeffMarket");
     row3.manufacturerName = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "manufacturerName");
     row3.therapeuticClass = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "therapeuticClass");
     row3.disease = utility_tExtractFields_1.UnPivot(doc_tExtractFields_1, "tag", "value", "disease");
@@ -4462,6 +4528,15 @@ if(row3 != null) {
                 row3.stdBoxCoef = null;
               }
               row2.stdBoxCoef=TypeConvert.String2float(row3.stdBoxCoef);            
+          } catch(java.lang.Exception e){
+            bHasError_tConvertType_1 = true;            
+              System.err.println(e.getMessage());          
+          }           
+          try {
+              if ("".equals(row3.coeffMarket)){  
+                row3.coeffMarket = null;
+              }
+              row2.coeffMarket=TypeConvert.String2float(row3.coeffMarket);            
           } catch(java.lang.Exception e){
             bHasError_tConvertType_1 = true;            
               System.err.println(e.getMessage());          
@@ -4749,6 +4824,7 @@ row8_tmp.nameLevel4 = row2.nameLevel4 ;
 row8_tmp.nameLevel5 = row2.nameLevel5 ;
 row8_tmp.packageUnit = row2.packageUnit ;
 row8_tmp.stdBoxCoef = row2.stdBoxCoef ;
+row8_tmp.marketCoef = row2.coeffMarket ;
 row8_tmp.manufacturerName = row2.manufacturerName ;
 row8_tmp.therapeuticClass = row2.therapeuticClass ;
 row8_tmp.disease = row2.disease ;
@@ -4874,6 +4950,9 @@ if(row8 != null) {
 
 	
 	row10.stdBoxCoef = row8.stdBoxCoef;
+
+	
+	row10.marketCoef = row8.marketCoef;
 
 	
 	row10.manufacturerName = row8.manufacturerName;
@@ -5079,49 +5158,51 @@ pstmt_tDBOutput_1.setNull(12, java.sql.Types.VARCHAR);
 
                     pstmt_tDBOutput_1.setFloat(14, row9.stdBoxCoef);
 
+                    pstmt_tDBOutput_1.setFloat(15, row9.marketCoef);
+
                     if(row9.manufacturerName == null) {
-pstmt_tDBOutput_1.setNull(15, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(15, row9.manufacturerName);
+pstmt_tDBOutput_1.setNull(16, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(16, row9.manufacturerName);
 }
 
                     if(row9.therapeuticClass == null) {
-pstmt_tDBOutput_1.setNull(16, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(16, row9.therapeuticClass);
+pstmt_tDBOutput_1.setNull(17, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(17, row9.therapeuticClass);
 }
 
                     if(row9.disease == null) {
-pstmt_tDBOutput_1.setNull(17, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(17, row9.disease);
+pstmt_tDBOutput_1.setNull(18, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(18, row9.disease);
 }
 
                     if(row9.molecule == null) {
-pstmt_tDBOutput_1.setNull(18, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(18, row9.molecule);
+pstmt_tDBOutput_1.setNull(19, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(19, row9.molecule);
 }
 
                     if(row9.attribute1 == null) {
-pstmt_tDBOutput_1.setNull(19, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(19, row9.attribute1);
+pstmt_tDBOutput_1.setNull(20, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(20, row9.attribute1);
 }
 
                     if(row9.attribute2 == null) {
-pstmt_tDBOutput_1.setNull(20, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(20, row9.attribute2);
+pstmt_tDBOutput_1.setNull(21, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(21, row9.attribute2);
 }
 
                     if(row9.attribute3 == null) {
-pstmt_tDBOutput_1.setNull(21, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(21, row9.attribute3);
+pstmt_tDBOutput_1.setNull(22, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(22, row9.attribute3);
 }
 
                     if(row9.attribute4 == null) {
-pstmt_tDBOutput_1.setNull(22, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(22, row9.attribute4);
+pstmt_tDBOutput_1.setNull(23, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(23, row9.attribute4);
 }
 
                     if(row9.attribute5 == null) {
-pstmt_tDBOutput_1.setNull(23, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(23, row9.attribute5);
+pstmt_tDBOutput_1.setNull(24, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(24, row9.attribute5);
 }
 
 			
@@ -11598,6 +11679,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     248072 characters generated by Talend Open Studio for Big Data 
- *     on the July 18, 2019 6:15:53 PM SGT
+ *     238781 characters generated by Talend Open Studio for Big Data 
+ *     on the September 1, 2019 7:26:24 PM CST
  ************************************************************************************************/

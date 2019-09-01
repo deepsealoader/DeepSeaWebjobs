@@ -181,7 +181,6 @@
 				<include>org.talend.libraries:log4j-1.2.16</include>
 				<include>org.example.deepsea.code:routines</include>
 				<include>org.talend.libraries:commons-collections-3.2.2</include>
-				<include>org.talend.libraries:commons-lang-2.6</include>
 				<include>org.talend.libraries:log4j-1.2.15</include>
 				<include>org.talend.libraries:jboss-serialization</include>
 				<include>org.talend.libraries:postgresql-8.3-603.jdbc3</include>
@@ -190,6 +189,7 @@
 				<include>org.talend.libraries:jersey-client-1.4</include>
 				<include>org.talend.libraries:mongo-java-driver-3.5.0</include>
 				<include>org.talend.libraries:trove</include>
+				<include>org.talend.libraries:commons-lang-2.6</include>
 				<include>org.talend.libraries:talendcsv</include>
 			</includes>
 			<!-- without version for talend libraries -->

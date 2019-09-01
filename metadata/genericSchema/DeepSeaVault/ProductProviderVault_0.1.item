@@ -21,6 +21,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKicCpEeipbvJffRKaTQ" name="name" id="10704" label="name" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_jyQKisCpEeipbvJffRKaTQ"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_3vEXYMPlEemngMUNnW6hiA" name="market_coef" label="marketCoef" length="-1" sourceType="FLOAT4" talendType="id_Float"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKj8CpEeipbvJffRKaTQ" name="manufacturer_name" id="10707" label="manufacturerName" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_jyQKkMCpEeipbvJffRKaTQ"/>
       </feature>

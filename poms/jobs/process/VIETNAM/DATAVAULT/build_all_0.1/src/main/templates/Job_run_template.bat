@@ -1,3 +1,0 @@
-%~d0
-cd %~dp0
-java -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 -cp .;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/dom4j-1.6.1.jar;../lib/jboss-serialization.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/mssql-jdbc.jar;../lib/talend_DB_mssqlUtil-1.2-20171017.jar;../lib/talend_file_enhanced_20070724.jar;../lib/talendcsv.jar;../lib/trove.jar;build_all_0_1.jar;sat_stms_customer_0_1.jar;link_stms_product_sales_0_1.jar;link_stms_customer_sales_0_1.jar;hub_zuelig_sales_0_1.jar;hub_stms_customer_0_1.jar;sat_stms_product_0_1.jar;hub_stms_sales_0_1.jar;sat_stms_sales_0_1.jar;hub_stms_product_0_1.jar;sat_zuelig_sales_0_1.jar;link_zuelig_product_sales_0_1.jar; deepsea.build_all_0_1.BUILD_ALL  %* 
