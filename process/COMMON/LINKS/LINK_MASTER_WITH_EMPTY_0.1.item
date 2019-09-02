@@ -386,7 +386,7 @@
       <column comment="" key="false" length="-1" name="oldValue" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row10">
         <mapperTableEntries name="id" expression="row4.id " type="id_String" nullable="true"/>
@@ -398,7 +398,7 @@
         <mapperTableEntries name="id" expression="row4.id " type="id_String" nullable="true"/>
         <mapperTableEntries name="oldValue" expression="row4.businessKey1 " type="id_String"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="!row4.businessKey1.equals(&quot;&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="row4.businessKey1 != null &amp;&amp; !row4.businessKey1.equals(&quot;&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="id" type="id_String" nullable="true"/>
         <mapperTableEntries name="source" type="id_String" nullable="true"/>
         <mapperTableEntries name="hash" type="id_String" nullable="true"/>
