@@ -125,7 +125,7 @@
     <elementParameter field="TEXT" name="HOST" value="&quot;outlook.office365.com&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="995"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;deepseath@servier.com&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="T0P5O3R+Y9VlMfXgxPDuEQ=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="vynP/+ncu6CaGb8kZhtNAA=="/>
     <elementParameter field="DIRECTORY" name="OUTPUT_DIRECTORY" value="globalMap.get(&quot;MAILS_FOLDER_PATH&quot;).toString()"/>
     <elementParameter field="TEXT" name="FILENAME_PATTERN" value="TalendDate.getDate(&quot;yyyyMMdd-hhmmss&quot;) + &quot;_&quot; + (counter_tPOP_1 + 1) + &quot;.mail&quot;"/>
     <elementParameter field="CHECK" name="ALL_EMAILS" value="true"/>
