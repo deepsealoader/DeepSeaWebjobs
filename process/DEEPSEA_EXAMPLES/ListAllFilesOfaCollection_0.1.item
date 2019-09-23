@@ -105,10 +105,10 @@
     <routinesParameter id="_HcwjIK6jEeiC2aJINdmZJQ" name="TalendStringUtil"/>
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
   </parameters>
-  <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
+  <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
-    <elementParameter field="TEXT" name="API_URL" value="&quot;http://deepsea.cloudapp.net&quot;"/>
-    <elementParameter field="TEXT" name="API_TOKEN_ID" value="&quot;YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU=&quot;"/>
+    <elementParameter field="TEXT" name="API_URL" value="&quot;http://deepsealoader.chinanorth2.cloudapp.chinacloudapi.cn&quot;"/>
+    <elementParameter field="TEXT" name="API_TOKEN_ID" value="&quot;cm9tdWFsZC5yb3Vzc2VhdUBzZXJ2aWVyLmNvbTpyb211YWxkcm91c3NlYXU=&quot;"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
     <elementParameter field="TEXT" name="WEBJOB_NAME" value="jobName"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
@@ -121,7 +121,7 @@
   <node componentName="tDeepSeaList" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaList_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
-    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.dksh.daily&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly&quot;"/>
     <elementParameter field="TEXT" name="BATCH_NAME" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
@@ -130,7 +130,7 @@
   <node componentName="tDeepSeaList" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaList_2" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
-    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.dksh.daily&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly&quot;"/>
     <elementParameter field="TEXT" name="BATCH_NAME" value="globalMap.get(&quot;tDeepSeaList_1_CURRENT_FILENAME&quot;).toString()"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
@@ -175,9 +175,12 @@
       <column comment="" key="false" length="-1" name="fileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDeepSeaConnect_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaConnect_1" target="tDeepSeaList_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
-  </connection>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tDeepSeaList_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaList_1" target="tDeepSeaList_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
@@ -197,6 +200,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDeepSeaConnect_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
@@ -206,5 +212,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaList_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
   </subjob>
 </talendfile:ProcessType>
