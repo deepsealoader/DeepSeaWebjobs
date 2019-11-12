@@ -1,38 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Development" jobType="Standard">
-  <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="COLLECTION1" prompt="COLLECTION1?" promptNeeded="false" type="id_String" value="sales.monthly"/>
-    <contextParameter comment="" name="COLLECTION2" prompt="COLLECTION2?" promptNeeded="false" type="id_String" value="sales.monthly.conso"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="Russia"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="Basic cm9tdWFsZC5yb3Vzc2VhdUBzZXJ2aWVyLmNvbTpyb211YWxkcm91c3NlYXU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="&quot;dd.MM.yyyy&quot;"/>
-    <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="deepseadb.documents.azure.cn"/>
-    <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="deepsea_russia"/>
-    <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="localhost"/>
-  </context>
-  <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="COLLECTION1" prompt="COLLECTION1?" promptNeeded="false" type="id_String" value="sales.monthly"/>
-    <contextParameter comment="" name="COLLECTION2" prompt="COLLECTION2?" promptNeeded="false" type="id_String" value="sales.monthly.conso"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="Russia"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="Basic cm9tdWFsZC5yb3Vzc2VhdUBzZXJ2aWVyLmNvbTpyb211YWxkcm91c3NlYXU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="localhost:8080"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="&quot;dd.MM.yyyy&quot;"/>
-    <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="deepseadb.documents.azure.cn"/>
-    <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="deepsea_russia"/>
-    <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="POSTGRES"/>
-  </context>
-  <context confirmationNeeded="false" name="Development">
-    <contextParameter comment="" name="COLLECTION1" prompt="COLLECTION1?" promptNeeded="false" type="id_String" value="sales.monthly"/>
-    <contextParameter comment="" name="COLLECTION2" prompt="COLLECTION2?" promptNeeded="false" type="id_String" value="sales.monthly.conso"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="Russia"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="Basic cm9tdWFsZC5yb3Vzc2VhdUBzZXJ2aWVyLmNvbTpyb211YWxkcm91c3NlYXU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="localhost:4040"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="&quot;dd.MM.yyyy&quot;"/>
-    <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="deepseadb.documents.azure.cn"/>
-    <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="deepsea_russia"/>
-    <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_09aFYN1-Eem0Ldsf_yDJ2w" type="id_String" value="localhost"/>
-  </context>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -53,7 +21,7 @@
     <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
     <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
     <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
-    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
     <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
     <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
     <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
@@ -136,42 +104,53 @@
     <routinesParameter id="_HdEsMK6jEeiC2aJINdmZJQ" name="TalendDate"/>
     <routinesParameter id="_HcwjIK6jEeiC2aJINdmZJQ" name="TalendStringUtil"/>
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
-    <routinesParameter id="_OBQaQMayEeifZpKmns2VLA" name="MongodbOperation"/>
   </parameters>
-  <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
-    <elementParameter field="TEXT" name="API_URL" value="&quot;http://localhost:4040&quot;"/>
-    <elementParameter field="TEXT" name="API_TOKEN_ID" value="&quot;cm9tdWFsZC5yb3Vzc2VhdUBzZXJ2aWVyLmNvbTpjaGFuZ2VpdA==&quot;"/>
-    <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
-    <elementParameter field="TEXT" name="WEBJOB_NAME" value="jobName"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Users/RRU_SG1/Documents/DeepSeaStudio/Russia/validation/Secondary&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES"/>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" value="&quot;*.txt&quot;" show="false"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tDeepSeaSync" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaSync_1" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
-    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly&quot;"/>
-    <elementParameter field="TEXT" name="BATCH_DATE" value="&quot;1559347200000&quot;"/>
-    <elementParameter field="TEXT" name="DEST_COLLECTION_NAME" value="&quot;sales.monthly.conso&quot;"/>
-    <elementParameter field="TEXT" name="TAGS" value="&quot;date,productCode,productName,customerCode,customerName,customerType,locality,address,quantity&quot;"/>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileCopy_1" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" value="&quot;C:/Users/RRU_SG1/Projects/Talend/workspace&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="&quot;C:/Users/RRU_SG1/Documents/DeepSeaStudio/Russia/validation&quot;"/>
+    <elementParameter field="CHECK" name="RENAME" value="false"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="&quot;NewName.temp&quot;" show="false"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_1"/>
   </node>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDeepSeaConnect_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaConnect_1" target="tDeepSeaSync_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileCopy_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaSync_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
