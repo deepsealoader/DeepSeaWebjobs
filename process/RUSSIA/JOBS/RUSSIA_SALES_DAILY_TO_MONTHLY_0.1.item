@@ -140,7 +140,7 @@
   </parameters>
   <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
-    <elementParameter field="TEXT" name="API_URL" value="&quot;http://localhost:4040&quot;"/>
+    <elementParameter field="TEXT" name="API_URL" value="&quot;http://deepsealoader.chinanorth2.cloudapp.chinacloudapi.cn&quot;"/>
     <elementParameter field="TEXT" name="API_TOKEN_ID" value="&quot;cm9tdWFsZC5yb3Vzc2VhdUBzZXJ2aWVyLmNvbTpjaGFuZ2VpdA==&quot;"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
     <elementParameter field="TEXT" name="WEBJOB_NAME" value="jobName"/>
@@ -154,9 +154,9 @@
   <node componentName="tDeepSeaSync" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaSync_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
-    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly&quot;"/>
-    <elementParameter field="TEXT" name="BATCH_DATE" value="&quot;1559347200000&quot;"/>
-    <elementParameter field="TEXT" name="DEST_COLLECTION_NAME" value="&quot;sales.monthly.conso&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly.tertiary&quot;"/>
+    <elementParameter field="TEXT" name="BATCH_DATE" value="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, &quot;2019-06-01 08:00:00&quot;).getTime()"/>
+    <elementParameter field="TEXT" name="DEST_COLLECTION_NAME" value="&quot;sales.monthly.tertiary.conso&quot;"/>
     <elementParameter field="TEXT" name="TAGS" value="&quot;date,productCode,productName,customerCode,customerName,customerType,locality,address,quantity&quot;"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
