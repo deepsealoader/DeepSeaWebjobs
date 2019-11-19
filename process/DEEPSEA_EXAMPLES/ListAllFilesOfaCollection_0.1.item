@@ -108,7 +108,7 @@
   <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
     <elementParameter field="TEXT" name="API_URL" value="&quot;http://deepsealoader.chinanorth2.cloudapp.chinacloudapi.cn&quot;"/>
-    <elementParameter field="TEXT" name="API_TOKEN_ID" value="&quot;cm9tdWFsZC5yb3Vzc2VhdUBzZXJ2aWVyLmNvbTpyb211YWxkcm91c3NlYXU=&quot;"/>
+    <elementParameter field="TEXT" name="API_TOKEN_ID" value="&quot;cm9tdWFsZC5yb3Vzc2VhdUBzZXJ2aWVyLmNvbTpjaGFuZ2VpdA==&quot;"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
     <elementParameter field="TEXT" name="WEBJOB_NAME" value="jobName"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
@@ -121,7 +121,7 @@
   <node componentName="tDeepSeaList" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaList_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
-    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly.secondary&quot;"/>
     <elementParameter field="TEXT" name="BATCH_NAME" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
@@ -130,7 +130,7 @@
   <node componentName="tDeepSeaList" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaList_2" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
-    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly.secondary&quot;"/>
     <elementParameter field="TEXT" name="BATCH_NAME" value="globalMap.get(&quot;tDeepSeaList_1_CURRENT_FILENAME&quot;).toString()"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
