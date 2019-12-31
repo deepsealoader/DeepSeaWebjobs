@@ -193,7 +193,7 @@
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $addFields: {'_fileRef': {$arrayToObject: {$map: {input: { $objectToArray: '$file' }, in: {k: {$cond:[{ $eq:[{'$substrCP':['$$this.k',0,1]},{$literal:'$'}] }, { $substrCP:['$$this.k',1,{$strLenCP:'$$this.k'}] }, '$$this.k'] }, v:'$$this.v'} } } } } }&quot;"/>
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $lookup: {from: 'master.files', localField: '_fileRef.id', foreignField: '_id', as: '_file'} }&quot;"/>
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $addFields: {'file': {$mergeObjects: '$_file'}} }&quot;"/>
-      <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $match : {'file.country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'), 'file.metadata.type' : '&quot; + context.getTYPE() + &quot;', 'sheetName' : '&quot; + context.getSHEET_NAME() + &quot;' } }&quot;"/>
+      <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $match : {'file.country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'), 'file.metadata.type' : '&quot; + context.getTYPE() + &quot;', 'sheetName' : '&quot; + context.getSHEET_NAME() + &quot;', 'file.metadata.current': 'yes' } }&quot;"/>
       <elementValue elementRef="AGGREGATION_STAGE" value="&quot;{ $project: { '_fileRef': 0, '_file': 0 } }&quot;"/>
     </elementParameter>
     <elementParameter field="TABLE" name="MAPPING">
@@ -386,7 +386,7 @@
       <column comment="" key="false" length="-1" name="marketCoef" nullable="false" originalDbColumnName="market_coef" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row8">
         <mapperTableEntries name="hubId" expression="row5.id " type="id_Integer"/>

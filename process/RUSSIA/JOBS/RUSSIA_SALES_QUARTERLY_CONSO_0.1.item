@@ -154,9 +154,9 @@
   <node componentName="tDeepSeaSync" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaSync_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
-    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly.tertiary&quot;"/>
-    <elementParameter field="TEXT" name="BATCH_DATE" value="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, &quot;2019-06-01 08:00:00&quot;).getTime()"/>
-    <elementParameter field="TEXT" name="DEST_COLLECTION_NAME" value="&quot;sales.monthly.tertiary.conso&quot;"/>
+    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.monthly.quarterly&quot;"/>
+    <elementParameter field="TEXT" name="BATCH_DATE" value="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, &quot;2019-06-01 00:00:00&quot;).getTime()"/>
+    <elementParameter field="TEXT" name="DEST_COLLECTION_NAME" value="&quot;sales.monthly.quarterly.conso&quot;"/>
     <elementParameter field="TEXT" name="TAGS" value="&quot;date,productCode,productName,customerCode,customerName,customerType,locality,address,quantity&quot;"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
