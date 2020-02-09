@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="test"/>
+    <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.dksh.daily"/>
     <contextParameter comment="" name="HOSTNAME" prompt="HOSTNAME?" promptNeeded="false" type="id_String" value="http://deepsea.cloudapp.net"/>
     <contextParameter comment="" name="AUTH_TOKEN" prompt="AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
   </context>

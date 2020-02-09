@@ -131,7 +131,7 @@ public class Clean
 		else if(checkDateFormat(date, DatePattern5)) {
 			if(defaultDate == null) {
 				if(defaultFormat == null) {
-					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yyyy", date));
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yy", date));
 				} else {
 					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate(defaultFormat, date));
 				}
