@@ -942,8 +942,6 @@
       <column comment="" key="false" length="-1" name="SourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameEn" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CoeffGeography" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SplitNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -960,8 +958,6 @@
         <mapperTableEntries name="SourceChannelCode" expression="row5.customerType " type="id_String" nullable="true"/>
         <mapperTableEntries name="NameEn" expression="row5.customerName " type="id_String" nullable="true"/>
         <mapperTableEntries name="NameLo" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CoeffGeography" expression="&quot;1&quot;" type="id_String" nullable="true"/>
-        <mapperTableEntries name="SplitNumber" expression="&quot;1&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute2" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute3" type="id_String" nullable="true"/>
@@ -1040,8 +1036,6 @@
       <column comment="" key="false" length="-1" name="SourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameEn" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CoeffGeography" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SplitNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1049,7 +1043,7 @@
       <column comment="" key="false" length="-1" name="Attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row20">
         <mapperTableEntries name="ServierCode" expression="row19.ServierCode " type="id_String" nullable="true"/>
@@ -1058,8 +1052,6 @@
         <mapperTableEntries name="SourceChannelCode" expression="row19.SourceChannelCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="NameEn" expression="row19.NameEn " type="id_String" nullable="true"/>
         <mapperTableEntries name="NameLo" expression="row19.NameLo " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CoeffGeography" expression="row19.CoeffGeography " type="id_String" nullable="true"/>
-        <mapperTableEntries name="SplitNumber" expression="row19.SplitNumber " type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute1" expression="row19.Attribute1 " type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute2" expression="row19.Attribute2 " type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute3" expression="row19.Attribute3 " type="id_String" nullable="true"/>
@@ -1073,8 +1065,6 @@
         <mapperTableEntries name="SourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="NameEn" type="id_String" nullable="true"/>
         <mapperTableEntries name="NameLo" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CoeffGeography" type="id_String" nullable="true"/>
-        <mapperTableEntries name="SplitNumber" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute2" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute3" type="id_String" nullable="true"/>
@@ -1103,8 +1093,6 @@
       <column comment="" key="false" length="-1" name="SourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameEn" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CoeffGeography" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SplitNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1178,8 +1166,6 @@
       <column comment="" key="false" length="-1" name="SourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameEn" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CoeffGeography" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SplitNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1189,7 +1175,7 @@
       <column key="false" length="255" name="MaybeNameEn" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row21">
         <mapperTableEntries name="ServierCode" expression="row10.ServierCode" type="id_String" nullable="true"/>
@@ -1198,8 +1184,6 @@
         <mapperTableEntries name="SourceChannelCode" expression="row10.SourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="NameEn" expression="row10.NameEn" type="id_String" nullable="true"/>
         <mapperTableEntries name="NameLo" expression="row10.NameLo" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CoeffGeography" expression="row10.CoeffGeography" type="id_String" nullable="true"/>
-        <mapperTableEntries name="SplitNumber" expression="row10.SplitNumber" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute1" expression="row10.Attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute2" expression="row10.Attribute2" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute3" expression="row10.Attribute3" type="id_String" nullable="true"/>
@@ -1215,8 +1199,6 @@
         <mapperTableEntries name="SourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="NameEn" type="id_String" nullable="true"/>
         <mapperTableEntries name="NameLo" type="id_String" nullable="true"/>
-        <mapperTableEntries name="CoeffGeography" type="id_String" nullable="true"/>
-        <mapperTableEntries name="SplitNumber" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute2" type="id_String" nullable="true"/>
         <mapperTableEntries name="Attribute3" type="id_String" nullable="true"/>
@@ -1287,10 +1269,6 @@
       <elementValue elementRef="INPUT_COLUMN" value="NameEn"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="NameLo"/>
       <elementValue elementRef="INPUT_COLUMN" value="NameLo"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="CoeffGeography"/>
-      <elementValue elementRef="INPUT_COLUMN" value="CoeffGeography"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="SplitNumber"/>
-      <elementValue elementRef="INPUT_COLUMN" value="SplitNumber"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="Attribute1"/>
       <elementValue elementRef="INPUT_COLUMN" value="Attribute1"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="Attribute2"/>
@@ -1321,8 +1299,6 @@
       <column comment="" key="false" length="-1" name="SourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameEn" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CoeffGeography" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SplitNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1349,8 +1325,6 @@
       <column comment="" key="false" length="-1" name="SourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameEn" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CoeffGeography" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SplitNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1389,10 +1363,6 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="NameLo"/>
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CoeffGeography"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SplitNumber"/>
-      <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Attribute1"/>
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Attribute2"/>
@@ -1429,8 +1399,6 @@
       <column comment="" key="false" length="-1" name="SourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameEn" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="NameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="CoeffGeography" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="SplitNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>

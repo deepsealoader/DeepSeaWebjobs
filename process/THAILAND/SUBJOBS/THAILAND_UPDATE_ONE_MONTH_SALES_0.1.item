@@ -363,7 +363,7 @@
     <elementParameter field="TEXT" name="LABEL" value="DifferentiateRows"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata comment="" connector="FLOW" label="metadata" name="orgRow">
+    <metadata comment="" label="metadata" name="orgRow">
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -388,7 +388,7 @@
       <column comment="" key="false" length="-1" name="expiryDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata comment="" connector="FLOW" label="metadata" name="newRow">
+    <metadata comment="" label="metadata" name="newRow">
       <column comment="" key="false" length="-1" name="num" nullable="false" pattern="" precision="-1" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -414,7 +414,7 @@
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="orgRow" expressionFilter="!row9.productCode.startsWith(&quot;5&quot;)" activateExpressionFilter="true" id="_lh22gM-1Eeib9oVpaXTd6w - metadata">
         <mapperTableEntries name="num" expression="row9.num " type="id_Long"/>
@@ -454,7 +454,7 @@
         <mapperTableEntries name="amount" expression="Clean.cleanNumber(row15.amount)" type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" expression="Clean.cleanNumber(row15.quantity)" type="id_String"/>
         <mapperTableEntries name="unitPrice" type="id_String" nullable="true"/>
-        <mapperTableEntries name="date" expression="TalendDate.formatDate(context.DEFAULT_DATE_FORMAT, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.date, context.BATCH_DATE))) " type="id_String"/>
+        <mapperTableEntries name="date" expression="TalendDate.formatDate(context.DEFAULT_DATE_FORMAT, TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row15.date, context.BATCH_DATE, null))) " type="id_String"/>
         <mapperTableEntries name="dateYear" type="id_String" nullable="true"/>
         <mapperTableEntries name="dateMonth" type="id_String" nullable="true"/>
         <mapperTableEntries name="marketCode" type="id_String" nullable="true"/>

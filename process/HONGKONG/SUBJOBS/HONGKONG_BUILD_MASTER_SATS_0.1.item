@@ -245,6 +245,8 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;hongkong.master.producthierarchy.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;codeLevel3&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>

@@ -10,8 +10,6 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_pmx80M6qEeiznP0ccyyRWw" name="source_channel_code" label="sourceChannelCode" talendType="id_String" nullable="false"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ruTqAM6qEeiznP0ccyyRWw" name="name_en" label="nameEn" talendType="id_String" nullable="false"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_t0TGIM6qEeiznP0ccyyRWw" name="name_lo" label="nameLo" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uV8aoM6qEeiznP0ccyyRWw" name="geography_coef" label="geographyCoef" length="-1" sourceType="FLOAT4" talendType="id_Float" nullable="false"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_xWXesM6qEeiznP0ccyyRWw" name="split_number" label="splitNumber" length="-1" sourceType="FLOAT4" talendType="id_Float" nullable="false"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_y-cPwM6qEeiznP0ccyyRWw" name="attribute1" label="attribute1" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BGr80M6rEeiznP0ccyyRWw" name="attribute2" label="attribute2" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CDwpEM6rEeiznP0ccyyRWw" name="attribute3" label="attribute3" talendType="id_String"/>

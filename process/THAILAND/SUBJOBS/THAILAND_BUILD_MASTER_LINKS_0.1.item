@@ -172,7 +172,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -210,7 +210,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_2"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="64">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_3" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -248,7 +248,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_3"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="320">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -286,7 +286,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_5"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="192">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_7" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -322,7 +322,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_7"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="320">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_8" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -358,7 +358,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_8"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="64">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_9" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -394,7 +394,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_9"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="320">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_10" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -430,7 +430,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_10"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="64">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_11" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -466,7 +466,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_11"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="192">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1920" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_12" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -502,7 +502,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_12"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_15" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -540,7 +540,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_15"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="192">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_16" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -578,7 +578,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_16"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="320">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_17" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -604,7 +604,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_17"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="64">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_18" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -642,7 +642,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_18"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_19" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -678,13 +678,49 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_19"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_13" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
-    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="LINK_MASTER_SALES_OBJECTIVE"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="SAL_MASTER"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_aqQvQPVvEei2cPDh7zbmJg"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_nQaEUL-hEeip__KOlv70Sw"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="0.1"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;IQVIA&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.producthierarchy.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.producthierarchy.iqvia&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TYPE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ProductHierarchy&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;servierCode&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;providerCode&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;product&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="SAL_PRODUCT_IQVIA"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_13"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_14" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="LINK_MASTER"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_zYv94L-bEeip__KOlv70Sw"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
@@ -694,33 +730,35 @@
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.markethierarchy.servier&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.salesobjectiveqty.servier&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.producthierarchy.iqvia&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TYPE"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;SalesObjective&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="QUOTA_TYPE"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Quantity&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;ProductHierarchy&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;IQVIA&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;market&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;therapeuticClass&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;providerCode&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;market&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales_objective_qty&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;product&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="LINK_MARKET_SALES_OBJECTIVES"/>
+    <elementParameter field="TEXT" name="LABEL" value="LINK_MARKET_PRODUCT_IQVIA"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRunJob_4"/>
+    <metadata connector="FLOW" name="tRunJob_14"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="416" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_20" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
-    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="LINK_MASTER_SALES_OBJECTIVE"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="LINK_MASTER_WITH_EMPTY"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_aqQvQPVvEei2cPDh7zbmJg"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_RrhBMBZhEemh-7SwNZgZnQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
@@ -728,29 +766,133 @@
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.markethierarchy.servier&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.sourcechannel.servier&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.salesobjectiveval.servier&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.markethierarchy.servier&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TYPE"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;SalesObjective&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="QUOTA_TYPE"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Value&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;MarketHierarchy&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;MarketHierarchy&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;market&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sourceChannelCode&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;therapeuticClass&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;market&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;source_channel&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE2"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales_objective_val&quot;"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;market&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="LINK_MARKET_SALES_OBJECTIVES"/>
+    <elementParameter field="TEXT" name="LABEL" value="LINK_SOURCE_CHANNEL_MARKET"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRunJob_6"/>
+    <metadata connector="FLOW" name="tRunJob_20"/>
   </node>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tRunJob_15">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_21" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="LINK_MASTER_WITH_MULTIPLE"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="__nEhIBZcEemh-7SwNZgZnQ"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;IQVIA&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.geographyhierarchy.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.iqvia&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TYPE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Customer&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;geographyCode&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;providerCode&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;geography&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;customer&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="LINK_GEOGRAPHY_CUSTOMER_IQVIA"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_21"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_22" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="CHECK_GEOGRAPHY_CUSTOMER_LINK"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_aoaVcAKyEem79L_UZPEC6Q"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;IQVIA&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.iqvia&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="CHECK_GEOGRAPHY_CUSTOMER_LINK_IQVIA"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_22"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_23" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="LINK_MASTER"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="_zYv94L-bEeip__KOlv70Sw"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SHEET_NAME"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;IQVIA&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.sourcechannel.servier&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="SOURCE2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;thailand.master.customer.iqvia&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TYPE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Customer&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sourceChannelCode&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="BUSINESS_KEY2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;providerCode&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE1"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;source_channel&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE2"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;customer&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="LINK_SOURCE_CHANNEL_CUSTOMER_IQVIA"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_23"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tRunJob_14">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk17" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_2" offsetLabelX="0" offsetLabelY="0" source="tRunJob_2" target="tRunJob_5">
@@ -768,7 +910,7 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_8" offsetLabelX="0" offsetLabelY="0" source="tRunJob_8" target="tRunJob_9">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk9" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_9" offsetLabelX="0" offsetLabelY="0" source="tRunJob_9" target="tRunJob_4">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_9" offsetLabelX="0" offsetLabelY="0" source="tRunJob_9" target="tRunJob_10">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk12" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_10" offsetLabelX="0" offsetLabelY="0" source="tRunJob_10" target="tRunJob_11">
@@ -776,9 +918,6 @@
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_11" offsetLabelX="0" offsetLabelY="0" source="tRunJob_11" target="tRunJob_12">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk11" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_12" offsetLabelX="0" offsetLabelY="0" source="tRunJob_12" target="tRunJob_6">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk22" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_15" offsetLabelX="0" offsetLabelY="0" source="tRunJob_15" target="tRunJob_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk6" show="false"/>
@@ -789,14 +928,26 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_17" offsetLabelX="0" offsetLabelY="0" source="tRunJob_17" target="tRunJob_18">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk19" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_18" offsetLabelX="0" offsetLabelY="0" source="tRunJob_18" target="tRunJob_7">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk21" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_19" offsetLabelX="0" offsetLabelY="0" source="tRunJob_19" target="tRunJob_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_19" offsetLabelX="0" offsetLabelY="0" source="tRunJob_19" target="tRunJob_13">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk23" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_4" offsetLabelX="0" offsetLabelY="0" source="tRunJob_4" target="tRunJob_10">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk20" show="false"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_13" offsetLabelX="0" offsetLabelY="0" source="tRunJob_13" target="tRunJob_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk25" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_14" offsetLabelX="0" offsetLabelY="0" source="tRunJob_14" target="tRunJob_20">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk26" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_20" offsetLabelX="0" offsetLabelY="0" source="tRunJob_20" target="tRunJob_15">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk27" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_21" offsetLabelX="0" offsetLabelY="0" source="tRunJob_21" target="tRunJob_22">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk21" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_22" offsetLabelX="0" offsetLabelY="0" source="tRunJob_22" target="tRunJob_23">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk28" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_23" offsetLabelX="0" offsetLabelY="0" source="tRunJob_23" target="tRunJob_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk29" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
@@ -874,12 +1025,32 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_13" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_14" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_20" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_21" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_22" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_23" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
