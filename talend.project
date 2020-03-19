@@ -1724,6 +1724,18 @@
       <relatedItems xmi:id="_CX2OoEvHEeqVf-VQKh5Wyg" id="_pz74IEu_EeqVf-VQKh5Wyg" version="Latest" type="context"/>
       <relatedItems xmi:id="_IObngEvHEeqVf-VQKh5Wyg" id="_cz_LsEvGEeqVf-VQKh5Wyg" version="Latest" type="job"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_XfSNEGmwEeqVVIiVmXSDFw">
+      <baseItem xmi:id="_XfSNEWmwEeqVVIiVmXSDFw" id="_Oc8p4GmwEeqVVIiVmXSDFw" version="0.1" type="job"/>
+      <relatedItems xmi:id="_XfSNEmmwEeqVVIiVmXSDFw" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XfSNE2mwEeqVVIiVmXSDFw" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XfSNFGmwEeqVVIiVmXSDFw" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XfSNFWmwEeqVVIiVmXSDFw" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XfSNFmmwEeqVVIiVmXSDFw" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XfSNF2mwEeqVVIiVmXSDFw" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XfSNGGmwEeqVVIiVmXSDFw" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XfSNGWmwEeqVVIiVmXSDFw" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_XfSNGmmwEeqVVIiVmXSDFw" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <deletedFolders>process/RUSSIA/SUBJOBS</deletedFolders>
     <migrationTask xmi:id="_HJ0ZAK6jEeiC2aJINdmZJQ" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
     <migrationTask xmi:id="_HJ0ZAa6jEeiC2aJINdmZJQ" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
