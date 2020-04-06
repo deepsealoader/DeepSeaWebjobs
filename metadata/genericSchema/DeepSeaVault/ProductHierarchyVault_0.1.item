@@ -39,6 +39,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKicCpEeipbvJffRKaTQ" name="namelevel5" id="10704" label="nameLevel5" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_jyQKisCpEeipbvJffRKaTQ"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Xjtz4HIxEeqSvZdsYo9Sug" name="dosage" label="dosage" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jyQKi8CpEeipbvJffRKaTQ" name="package_unit" id="10705" label="packageUnit" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
         <initialValue xmi:id="_jyQKjMCpEeipbvJffRKaTQ"/>
       </feature>

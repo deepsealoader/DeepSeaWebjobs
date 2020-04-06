@@ -7,7 +7,8 @@
     <contextParameter xmi:id="_duSgkMbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter xmi:id="_adoGcMbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Thailand"/>
     <contextParameter xmi:id="_oc1AMBY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_thailand"/>
-    <contextParameter xmi:id="_jxGsAEbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="&quot;dd/MM/yy&quot;"/>
+    <contextParameter xmi:id="_jxGsAEbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="dd/MM/yy"/>
+    <contextParameter xmi:id="_t5V5QHbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="2"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_1Qv74MoQEeiFhKycUBX9rg" confirmationNeeded="false" name="Development">
     <contextParameter xmi:id="_1Qv74coQEeiFhKycUBX9rg" comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
@@ -16,7 +17,8 @@
     <contextParameter xmi:id="_1Qv75MoQEeiFhKycUBX9rg" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter xmi:id="_1Qv75coQEeiFhKycUBX9rg" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Thailand"/>
     <contextParameter xmi:id="_oc1AMRY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_thailand"/>
-    <contextParameter xmi:id="_jxGsAUbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="&quot;dd/MM/yy&quot;"/>
+    <contextParameter xmi:id="_jxGsAUbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="dd/MM/yy"/>
+    <contextParameter xmi:id="_t5V5QXbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="2"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_VmfBgL73EeiwTrrgdMnqWg" confirmationNeeded="false" name="Production">
     <contextParameter xmi:id="_VmfBgb73EeiwTrrgdMnqWg" comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="MONGODB"/>
@@ -25,6 +27,7 @@
     <contextParameter xmi:id="_duSgkcbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter xmi:id="_adoGccbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Thailand"/>
     <contextParameter xmi:id="_oc1AMhY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_thailand"/>
-    <contextParameter xmi:id="_jxGsAkbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="&quot;dd/MM/yy&quot;"/>
+    <contextParameter xmi:id="_jxGsAkbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="dd/MM/yy"/>
+    <contextParameter xmi:id="_t5V5QnbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="2"/>
   </talendfile:ContextType>
 </xmi:XMI>

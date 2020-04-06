@@ -371,6 +371,27 @@ public class Clean
 		return matcher.find();
     }
 	
+	/**
+     * cleanString: Returns true if not null or empty, otherwise returns false.
+     * 
+     * {talendTypes} boolean | Boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("s") input: the string to clean
+     * 
+     * {example} cleanString("") # true
+     */
+	public static String codifyString(String prefix, String s) {
+		if(Clean.isNullOrEmpty(s)) {
+			return null;
+		}
+		
+		s = s.trim().toUpperCase();
+		s = s.replace(" \\+\\.\\/", "_");
+		return prefix + "_" + s;
+	}
+	
 	private static final Pattern DatePattern1 = Pattern.compile("^\\d{4}-\\d{2}-\\d{2}$");
 	private static final Pattern DatePattern2 = Pattern.compile("^\\d{4}/\\d{2}/\\d{2}$");	
 	private static final Pattern DatePattern3 = Pattern.compile("^\\d{4}\\d{2}\\d{2}$"); 

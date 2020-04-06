@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="SOURCE" prompt="SOURCE?" promptNeeded="false" type="id_String" value="myanmar.sales.mega.monthly"/>
     <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales"/>
-    <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.mega.monthly"/>
+    <contextParameter comment="" name="SOURCE_NAME" prompt="SOURCE_NAME?" promptNeeded="false" type="id_String" value="MEGA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="2"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="SOURCE" prompt="SOURCE?" promptNeeded="false" type="id_String" value="myanmar.sales.mega.monthly"/>
     <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales"/>
-    <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.mega.monthly"/>
+    <contextParameter comment="" name="SOURCE_NAME" prompt="SOURCE_NAME?" promptNeeded="false" type="id_String" value="MEGA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:8080"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="MONGODB"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="POSTGRES"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="2"/>
   </context>
   <context confirmationNeeded="false" name="Development">
-    <contextParameter comment="" name="SOURCE" prompt="SOURCE?" promptNeeded="false" type="id_String" value="myanmar.sales.mega.monthly"/>
     <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales"/>
-    <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.mega.monthly"/>
+    <contextParameter comment="" name="SOURCE_NAME" prompt="SOURCE_NAME?" promptNeeded="false" type="id_String" value="MEGA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:4040"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="2"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -234,12 +234,12 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="(String) globalMap.get(&quot;HUB_TABLE&quot;)"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;HUB_TABLE&quot;).toString()"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT&#xA;&#x9;hash&#xA;FROM&#xA;&#x9;&quot; + globalMap.get(&quot;HUB_TABLE&quot;) + &quot;&#xA;WHERE&#xA;&#x9;source='&quot; + context.getSOURCE() + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT&#xA;&#x9;hash&#xA;FROM&#xA;&#x9;&quot; + globalMap.get(&quot;HUB_TABLE&quot;).toString() + &quot;&#xA;WHERE&#xA;&#x9;source='&quot; + globalMap.get(&quot;SOURCE&quot;).toString() + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -361,7 +361,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;hub_&quot; + context.getTABLE()"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;HUB_TABLE&quot;).toString()"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="DELETE"/>
     <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false" show="false"/>
@@ -517,6 +517,10 @@
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;HUB_TABLE&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;hub_&quot; + context.getTABLE()"/>
+      <elementValue elementRef="KEY" value="&quot;COLLECTION&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;sales.&quot; +  context.getSOURCE_NAME().toLowerCase() + &quot;.monthly&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;SOURCE&quot;"/>
+      <elementValue elementRef="VALUE" value="context.getCOUNTRY().toLowerCase() + &quot;.sales.&quot; +  context.getSOURCE_NAME().toLowerCase() + &quot;.monthly&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="Initialize"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
@@ -548,7 +552,7 @@
     <elementParameter field="TEXT" name="COLLECTION" value="&quot;collections&quot;"/>
     <elementParameter field="CLOSED_LIST" name="QUERY_TYPE" value="FIND_QUERY"/>
     <elementParameter field="LABEL" name="NOTE_ISOLATION" value="Note : Surround String values in your query with single quotes&#xA;Note : If you are running on a Sharded Cluster, please make sure to include the shard key in the query."/>
-    <elementParameter field="MEMO" name="QUERY" value="&quot;{'country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'),'name': '&quot; + context.getCOLLECTION() + &quot;'}, {'_id':1}&quot;"/>
+    <elementParameter field="MEMO" name="QUERY" value="&quot;{'country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'),'name': '&quot; + globalMap.get(&quot;COLLECTION&quot;).toString() + &quot;'}, {'_id':1}&quot;"/>
     <elementParameter field="TABLE" name="AGGREGATION_STAGES" show="false"/>
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
@@ -696,12 +700,12 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="(String) globalMap.get(&quot;HUB_TABLE&quot;)"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;HUB_TABLE&quot;).toString()"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT&#xA;&#x9;hash&#xA;FROM&#xA;&#x9;&quot; + globalMap.get(&quot;HUB_TABLE&quot;) + &quot;&#xA;WHERE&#xA;&#x9;source='&quot; + context.getSOURCE() + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT&#xA;&#x9;hash&#xA;FROM&#xA;&#x9;&quot; + globalMap.get(&quot;HUB_TABLE&quot;).toString() + &quot;&#xA;WHERE&#xA;&#x9;source='&quot; + globalMap.get(&quot;SOURCE&quot;).toString() + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -868,7 +872,7 @@
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row7">
-        <mapperTableEntries name="source" expression="context.getSOURCE()" type="id_String"/>
+        <mapperTableEntries name="source" expression="globalMap.get(&quot;SOURCE&quot;).toString()" type="id_String"/>
         <mapperTableEntries name="hash" expression="globalMap.get(&quot;row12.hash&quot;).toString()" type="id_String"/>
         <mapperTableEntries name="businessKey" expression="row13.num" type="id_String"/>
       </outputTables>
@@ -905,7 +909,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="(String) globalMap.get(&quot;HUB_TABLE&quot;)"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;HUB_TABLE&quot;).toString()"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false" show="false"/>

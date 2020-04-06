@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.mega.monthly"/>
-    <contextParameter comment="" name="SOURCE" prompt="SOURCE?" promptNeeded="false" type="id_String" value="myanmar.sales.mega.monthly"/>
+    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="MYANMAR_BUILD_SALES_VAULT"/>
     <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales"/>
-    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="BUILD_SALES_VAULT"/>
+    <contextParameter comment="" name="SOURCE_NAME" prompt="SOURCE_NAME?" promptNeeded="false" type="id_String" value="MEGA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="2"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.mega.monthly"/>
-    <contextParameter comment="" name="SOURCE" prompt="SOURCE?" promptNeeded="false" type="id_String" value="myanmar.sales.mega.monthly"/>
+    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="MYANMAR_BUILD_SALES_VAULT"/>
     <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales"/>
-    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="BUILD_SALES_VAULT"/>
+    <contextParameter comment="" name="SOURCE_NAME" prompt="SOURCE_NAME?" promptNeeded="false" type="id_String" value="MEGA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:8080"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="MONGODB"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="POSTGRES"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="2"/>
   </context>
   <context confirmationNeeded="false" name="Development">
-    <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.mega.monthly"/>
-    <contextParameter comment="" name="SOURCE" prompt="SOURCE?" promptNeeded="false" type="id_String" value="myanmar.sales.mega.monthly"/>
+    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="MYANMAR_BUILD_SALES_VAULT"/>
     <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales"/>
-    <contextParameter comment="" name="WEBJOB_NAME" prompt="WEBJOB_NAME?" promptNeeded="false" type="id_String" value="BUILD_SALES_VAULT"/>
+    <contextParameter comment="" name="SOURCE_NAME" prompt="SOURCE_NAME?" promptNeeded="false" type="id_String" value="MEGA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Basic Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost:4040"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="&quot;MM/dd/yyyy&quot;"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="deepsea_myanmar"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="2"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="13" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="11" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="64" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
@@ -322,6 +322,10 @@
       <elementValue elementRef="VALUE" value="&quot;hub_&quot; + context.getTABLE()"/>
       <elementValue elementRef="KEY" value="&quot;SAT_TABLE&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;sat_&quot; + context.getTABLE()"/>
+      <elementValue elementRef="KEY" value="&quot;COLLECTION&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;sales.&quot; +  context.getSOURCE_NAME().toLowerCase() + &quot;.monthly&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;SOURCE&quot;"/>
+      <elementValue elementRef="VALUE" value="context.getCOUNTRY().toLowerCase() + &quot;.sales.&quot; +  context.getSOURCE_NAME().toLowerCase() + &quot;.monthly&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="Initialize"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
@@ -411,7 +415,7 @@
     <elementParameter field="TEXT" name="COLLECTION" value="&quot;collections&quot;"/>
     <elementParameter field="CLOSED_LIST" name="QUERY_TYPE" value="FIND_QUERY"/>
     <elementParameter field="LABEL" name="NOTE_ISOLATION" value="Note : Surround String values in your query with single quotes&#xA;Note : If you are running on a Sharded Cluster, please make sure to include the shard key in the query."/>
-    <elementParameter field="MEMO" name="QUERY" value="&quot;{'country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'),'name': '&quot; + context.getCOLLECTION() + &quot;'}, {'_id':1}&quot;"/>
+    <elementParameter field="MEMO" name="QUERY" value="&quot;{'country.$id': ObjectId('&quot; + globalMap.get(&quot;COUNTRY_ID&quot;).toString() + &quot;'),'name': '&quot; + globalMap.get(&quot;COLLECTION&quot;).toString() + &quot;'}, {'_id':1}&quot;"/>
     <elementParameter field="TABLE" name="AGGREGATION_STAGES" show="false"/>
     <elementParameter field="TABLE" name="MAPPING">
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
@@ -669,12 +673,12 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="(String) globalMap.get(&quot;HUB_TABLE&quot;)"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;HUB_TABLE&quot;).toString()"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT&#xA;&#x9;hash&#xA;FROM&#xA;&#x9;&quot; + globalMap.get(&quot;HUB_TABLE&quot;) + &quot; as a inner join &quot; + globalMap.get(&quot;SAT_TABLE&quot;) + &quot; as b on a.id=b.hub_id&#xA;WHERE&#xA;&#x9;a.source='&quot; + context.getSOURCE() + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT&#xA;&#x9;hash&#xA;FROM&#xA;&#x9;&quot; + globalMap.get(&quot;HUB_TABLE&quot;).toString() + &quot; as a inner join &quot; + globalMap.get(&quot;SAT_TABLE&quot;).toString() + &quot; as b on a.id=b.hub_id&#xA;WHERE&#xA;&#x9;a.source='&quot; + globalMap.get(&quot;SOURCE&quot;).toString() + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -740,6 +744,8 @@
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="bonusQuantity"/>
+      <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="unitPrice"/>
       <elementValue elementRef="KEY_VALUE" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
@@ -780,6 +786,7 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateYear" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -815,6 +822,7 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateYear" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -840,6 +848,7 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="false" pattern="context.DEFAULT_DATE_FORMAT" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateYear" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -885,8 +894,9 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" originalDbColumnName="product_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" originalDbColumnName="unit_price" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" originalDbColumnName="market_code" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketName" nullable="true" originalDbColumnName="market_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" originalDbColumnName="transaction_type" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -897,13 +907,13 @@
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" originalDbColumnName="credit_reason_code" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="date" expression="(row2.date != null) ? row2.date : (&quot;1/&quot; + row2.dateMonth + &quot;/&quot; + row2.dateYear) " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="row8">
         <mapperTableEntries name="hubId" expression="row5.id " type="id_Integer"/>
-        <mapperTableEntries name="source" expression="context.getSOURCE()" type="id_String"/>
+        <mapperTableEntries name="source" expression="globalMap.get(&quot;SOURCE&quot;).toString()" type="id_String"/>
         <mapperTableEntries name="geographyCode" expression="row2.geographyCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="locality" expression="row2.locality " type="id_String" nullable="true"/>
         <mapperTableEntries name="adminArea1" expression="row2.adminArea1 " type="id_String" nullable="true"/>
@@ -912,10 +922,11 @@
         <mapperTableEntries name="customerType" expression="row2.customerType " type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" expression="row2.productCode " type="id_String"/>
         <mapperTableEntries name="productName" expression="row2.productName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="amount" expression="row2.amount != null ? Float.valueOf(Clean.cleanNumber(row2.amount)) : null " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="amount" expression="row2.amount != null ? Float.valueOf(Clean.cleanNumber(row2.amount)) : 0 " type="id_Float" nullable="true"/>
         <mapperTableEntries name="quantity" expression="Float.valueOf(Clean.cleanNumber(row2.quantity)) " type="id_Float"/>
-        <mapperTableEntries name="date" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(Var.date, null, context.DEFAULT_DATE_FORMAT)) " type="id_Date"/>
+        <mapperTableEntries name="bonusQuantity" expression="row2.bonusQuantity != null ? Float.valueOf(Clean.cleanNumber(row2.bonusQuantity)) : 0 " type="id_Float" nullable="true"/>
         <mapperTableEntries name="unitPrice" expression="row2.unitPrice != null ? Float.valueOf(Clean.cleanNumber(row2.unitPrice)) : null " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="date" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(Var.date, null, context.DEFAULT_DATE_FORMAT)) " type="id_Date"/>
         <mapperTableEntries name="marketCode" expression="row2.marketCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="marketName" expression="row2.marketName " type="id_String" nullable="true"/>
         <mapperTableEntries name="transactionType" expression="row2.transactionType " type="id_String" nullable="true"/>
@@ -937,6 +948,7 @@
         <mapperTableEntries name="productName" type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" type="id_String"/>
+        <mapperTableEntries name="bonusQuantity" type="id_String" nullable="true"/>
         <mapperTableEntries name="unitPrice" type="id_String" nullable="true"/>
         <mapperTableEntries name="date" type="id_String"/>
         <mapperTableEntries name="dateYear" type="id_String" nullable="true"/>
@@ -969,12 +981,12 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="(String) globalMap.get(&quot;HUB_TABLE&quot;)"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;HUB_TABLE&quot;).toString()"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;&#x9;id,&#xA;&#x9;business_key,&#xA;&#x9;hash&#xA;FROM&#xA;&#x9;hub_&quot; + context.getTABLE() + &quot;&#xA;WHERE&#xA;&#x9;source='&quot; + context.getSOURCE() + &quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;&#x9;id,&#xA;&#x9;business_key,&#xA;&#x9;hash&#xA;FROM&#xA;&#x9;&quot; + globalMap.get(&quot;HUB_TABLE&quot;).toString() + &quot;&#xA;WHERE&#xA;&#x9;source='&quot; + globalMap.get(&quot;SOURCE&quot;).toString() + &quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1021,8 +1033,9 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" originalDbColumnName="product_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" originalDbColumnName="bonus_quantity" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" originalDbColumnName="unit_price" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" originalDbColumnName="market_code" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketName" nullable="true" originalDbColumnName="market_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" originalDbColumnName="transaction_type" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1056,8 +1069,9 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" originalDbColumnName="product_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" originalDbColumnName="bonus_quantity" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" originalDbColumnName="unit_price" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" originalDbColumnName="market_code" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketName" nullable="true" originalDbColumnName="market_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" originalDbColumnName="transaction_type" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1133,12 +1147,17 @@
       <elementValue elementRef="DATEPATTERN" value=""/>
       <elementValue elementRef="NULLABLE" value="false"/>
       <elementValue elementRef="MAX_LENGTH" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="bonusQuantity"/>
       <elementValue elementRef="SELECTED_TYPE" value="String"/>
       <elementValue elementRef="DATEPATTERN" value=""/>
       <elementValue elementRef="NULLABLE" value="false"/>
       <elementValue elementRef="MAX_LENGTH" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="unitPrice"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
       <elementValue elementRef="SELECTED_TYPE" value="String"/>
       <elementValue elementRef="DATEPATTERN" value=""/>
       <elementValue elementRef="NULLABLE" value="false"/>
@@ -1220,9 +1239,11 @@
       <elementValue elementRef="EMPTY_NULL" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="bonusQuantity"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="unitPrice"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="marketCode"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
@@ -1257,8 +1278,9 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" originalDbColumnName="product_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" originalDbColumnName="bonus_quantity" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" originalDbColumnName="unit_price" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" originalDbColumnName="market_code" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketName" nullable="true" originalDbColumnName="market_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" originalDbColumnName="transaction_type" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1282,8 +1304,9 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" originalDbColumnName="product_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" originalDbColumnName="bonus_quantity" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" originalDbColumnName="unit_price" pattern="" precision="-1" sourceType="" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" originalDbColumnName="market_code" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketName" nullable="true" originalDbColumnName="market_name" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" originalDbColumnName="transaction_type" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1357,7 +1380,7 @@
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="(String) globalMap.get(&quot;SAT_TABLE&quot;)"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;SAT_TABLE&quot;).toString()"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false" show="false"/>
@@ -1435,12 +1458,17 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="bonusQuantity"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="unitPrice"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1506,8 +1534,9 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" originalDbColumnName="product_name" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" originalDbColumnName="bonus_quantity" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" originalDbColumnName="unit_price" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" originalDbColumnName="market_code" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketName" nullable="true" originalDbColumnName="market_name" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" originalDbColumnName="transaction_type" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1530,8 +1559,9 @@
       <column comment="" key="false" length="-1" name="productName" nullable="true" originalDbColumnName="product_name" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="false" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" originalDbColumnName="bonus_quantity" pattern="" precision="0" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" originalDbColumnName="unit_price" pattern="" precision="-1" sourceType="FLOAT4" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date" nullable="false" originalDbColumnName="sales_date" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" originalDbColumnName="market_code" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketName" nullable="true" originalDbColumnName="market_name" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" originalDbColumnName="transaction_type" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1674,6 +1704,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="dateMonth"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="bonusQuantity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
@@ -1713,6 +1746,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="dateMonth"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="bonusQuantity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
@@ -1744,6 +1780,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="invoiceLineNumber"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="bonusQuantity"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

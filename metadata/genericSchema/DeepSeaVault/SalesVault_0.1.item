@@ -37,11 +37,12 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0d8_DEeib9oVpaXTd6w" name="quantity" id="29587" label="quantity" length="-1" precision="-1" sourceType="" talendType="id_Float" nullable="false">
         <initialValue xmi:id="_mAt0eM_DEeib9oVpaXTd6w"/>
       </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0ec_DEeib9oVpaXTd6w" name="sales_date" id="29588" label="date" length="-1" precision="-1" sourceType="" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
-        <initialValue xmi:id="_mAt0es_DEeib9oVpaXTd6w"/>
-      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_c4-2IHI2EeqSvZdsYo9Sug" name="bonus_quantity" label="bonusQuantity" length="-1" sourceType="FLOAT4" talendType="id_Float"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vQIIlEem3WtnqVTFReg" name="unit_price" label="unitPrice" length="-1" precision="-1" sourceType="" talendType="id_Float">
         <initialValue xmi:id="_0d7vQYIlEem3WtnqVTFReg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_mAt0ec_DEeib9oVpaXTd6w" name="sales_date" id="29588" label="date" length="-1" precision="-1" sourceType="" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <initialValue xmi:id="_mAt0es_DEeib9oVpaXTd6w"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_0d7vQoIlEem3WtnqVTFReg" name="market_code" label="marketCode" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_0d7vQ4IlEem3WtnqVTFReg"/>

@@ -3,6 +3,7 @@
   <TalendMetadata:GenericSchemaConnection xmi:id="_lh-yUM-1Eeib9oVpaXTd6w" comment="connectionComment" label="connectionLabel" dataPackage="_lh-yUc-1Eeib9oVpaXTd6w"/>
   <TalendMetadata:GenericPackage xmi:id="_lh-yUc-1Eeib9oVpaXTd6w" dataManager="_lh-yUM-1Eeib9oVpaXTd6w">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_lh-yUs-1Eeib9oVpaXTd6w" id="_n-jicM-1Eeib9oVpaXTd6w" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_HoR5AHKAEeqSvZdsYo9Sug" name="hash" label="hash" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_lh-yVc-1Eeib9oVpaXTd6w" name="num" id="4" label="num" length="-1" precision="-1" sourceType="" talendType="id_Long" nullable="false">
         <initialValue xmi:id="_lh-yVs-1Eeib9oVpaXTd6w"/>
       </feature>
@@ -36,17 +37,12 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V_3FAsywEemwqswTltxp1A" name="quantity" label="quantity" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false">
         <initialValue xmi:id="_V_3FA8ywEemwqswTltxp1A"/>
       </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_N3ftwHJTEeqSvZdsYo9Sug" name="bonusQuantity" label="bonusQuantity" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V_3FBMywEemwqswTltxp1A" name="unitPrice" label="unitPrice" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_V_3FBcywEemwqswTltxp1A"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V_3FBsywEemwqswTltxp1A" name="date" label="date" length="-1" precision="-1" sourceType="" talendType="id_String" nullable="false" pattern="context.DEFAULT_DATE_FORMAT">
         <initialValue xmi:id="_V_3FB8ywEemwqswTltxp1A"/>
-      </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V_3FCMywEemwqswTltxp1A" name="dateYear" label="dateYear" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_V_3FCcywEemwqswTltxp1A"/>
-      </feature>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V_3FCsywEemwqswTltxp1A" name="dateMonth" label="dateMonth" length="-1" precision="-1" sourceType="" talendType="id_String">
-        <initialValue xmi:id="_V_3FC8ywEemwqswTltxp1A"/>
       </feature>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_V_3FDMywEemwqswTltxp1A" name="marketCode" label="marketCode" length="-1" precision="-1" sourceType="" talendType="id_String">
         <initialValue xmi:id="_V_3FDcywEemwqswTltxp1A"/>

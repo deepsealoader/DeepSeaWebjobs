@@ -1,0 +1,113 @@
+package routines;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class Japanese {
+
+	/**
+	 * toDate: convert a date from Japanese calendar to a Western calendar.
+	 * 
+	 * 
+	 * {talendTypes} Date
+	 * 
+	 * {Category} User Defined
+	 * 
+	 * {param} Integer("period") input: The era (Meiji: 1, Taishō: 2, Showa: 3, Heisei: 4).
+	 * {param} Integer("year") input: The year.
+	 * {param} Integer("month") input: The month.
+	 * {param} Integer("day") input: The day.
+	 * 
+	 * {example} toDate(3, 26, 3, 6) # 1951-03-06
+	 */
+	public static java.util.Date toDate(Integer period, Integer year,
+			Integer month, Integer day) {
+		if (month == null) {
+			month = 1;
+		}
+		if (day == null) {
+			day = 1;
+		}
+		return Japanese.toDate(period.intValue(), year.intValue(),
+				month.intValue(), day.intValue());
+
+	}
+
+	/**
+	 * toDate: convert a date from Japanese calendar to a Western calendar.
+	 * 
+	 * 
+	 * {talendTypes} Date
+	 * 
+	 * {Category} User Defined
+	 * 
+	 * {param} int("period") input: The era (Meiji: 1, Taishō: 2, Showa: 3, Heisei: 4).
+	 * {param} int("year") input: The year.
+	 * {param} int("month") input: The month.
+	 * {param} int("day") input: The day.
+	 * 
+	 * {example} toDate(3, 26, 3, 6) # 1951-03-06
+	 */
+	public static java.util.Date toDate(int period, int year, int month, int day) {
+		if (period < 1 || period > 4) {
+			return null;
+		}
+		java.time.chrono.JapaneseEra era = java.time.chrono.JapaneseEra
+				.of(period - 2);
+		java.time.chrono.JapaneseDate startDate = java.time.chrono.JapaneseChronology.INSTANCE
+				.dateYearDay(era, year, 1);
+		java.time.LocalDate localDate = java.time.LocalDate
+				.ofEpochDay(startDate.toEpochDay());
+		localDate = localDate.plusMonths(month - 1).plusDays(day - 1);
+		return TalendDate.parseDate("yyyy-MM-dd", localDate.toString());
+	}
+
+	/**
+	 * toDate: convert a date from Japanese calendar to a Western calendar.
+	 * 
+	 * 
+	 * {talendTypes} Date
+	 * 
+	 * {Category} User Defined
+	 * 
+	 * {param} int("period") input: The era (Meiji: 1, Taishō: 2, Showa: 3, Heisei: 4).
+	 * {param} int("year") input: The year.
+	 * 
+	 * {example} toDate(3, 26) # 1951-01-01
+	 */
+	public static java.util.Date toDate(int period, int year) {
+		if (period < 1 || period > 4) {
+			return null;
+		}
+		int adjustYear = 0;
+		if(period == 1) {
+			if(year < 6) {
+				adjustYear = 6 - year;
+				year = 6;
+			}
+		}
+		java.time.chrono.JapaneseEra era = java.time.chrono.JapaneseEra
+				.of(period - 2);
+		java.time.chrono.JapaneseDate date = java.time.chrono.JapaneseChronology.INSTANCE
+				.dateYearDay(era, year, 1);
+		java.time.LocalDate localDate = java.time.LocalDate.ofEpochDay(date
+				.toEpochDay());
+		localDate.minusYears(adjustYear);
+		return TalendDate.parseDate("yyyy-MM-dd", localDate.toString());
+	}
+}
