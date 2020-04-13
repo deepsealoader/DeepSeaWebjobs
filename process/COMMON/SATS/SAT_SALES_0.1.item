@@ -907,7 +907,7 @@
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" originalDbColumnName="credit_reason_code" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="date" expression="(row2.date != null) ? row2.date : (&quot;1/&quot; + row2.dateMonth + &quot;/&quot; + row2.dateYear) " type="id_String"/>
       </varTables>
@@ -922,10 +922,10 @@
         <mapperTableEntries name="customerType" expression="row2.customerType " type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" expression="row2.productCode " type="id_String"/>
         <mapperTableEntries name="productName" expression="row2.productName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="amount" expression="row2.amount != null ? Float.valueOf(Clean.cleanNumber(row2.amount)) : 0 " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="quantity" expression="Float.valueOf(Clean.cleanNumber(row2.quantity)) " type="id_Float"/>
-        <mapperTableEntries name="bonusQuantity" expression="row2.bonusQuantity != null ? Float.valueOf(Clean.cleanNumber(row2.bonusQuantity)) : 0 " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="unitPrice" expression="row2.unitPrice != null ? Float.valueOf(Clean.cleanNumber(row2.unitPrice)) : null " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="amount" expression="!Clean.isNullOrEmpty(row2.amount) ? Float.valueOf(Clean.cleanNumber(row2.amount)) : 0 " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="quantity" expression="!Clean.isNullOrEmpty(row2.quantity) ? Float.valueOf(Clean.cleanNumber(row2.quantity)) : 0 " type="id_Float"/>
+        <mapperTableEntries name="bonusQuantity" expression="!Clean.isNullOrEmpty(row2.bonusQuantity) ? Float.valueOf(Clean.cleanNumber(row2.bonusQuantity)) : 0 " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="unitPrice" expression="!Clean.isNullOrEmpty(row2.unitPrice) ? Float.valueOf(Clean.cleanNumber(row2.unitPrice)) : null " type="id_Float" nullable="true"/>
         <mapperTableEntries name="date" expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(Var.date, null, context.DEFAULT_DATE_FORMAT)) " type="id_Date"/>
         <mapperTableEntries name="marketCode" expression="row2.marketCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="marketName" expression="row2.marketName " type="id_String" nullable="true"/>
@@ -933,7 +933,7 @@
         <mapperTableEntries name="invoiceNumber" expression="row2.invoiceNumber " type="id_String" nullable="true"/>
         <mapperTableEntries name="invoiceLineNumber" expression="row2.invoiceLineNumber " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="vendorBatchNumber" expression="row2.vendorBatchNumber " type="id_String" nullable="true"/>
-        <mapperTableEntries name="expiryDate" expression="row2.expiryDate != null ? TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row2.expiryDate, null, context.DEFAULT_DATE_FORMAT)) : null " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="expiryDate" expression="!Clean.isNullOrEmpty(row2.expiryDate)  ? TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, Clean.cleanDate(row2.expiryDate, null, context.DEFAULT_DATE_FORMAT)) : null " type="id_Date" nullable="true"/>
         <mapperTableEntries name="creditReasonCode" expression="row2.creditReasonCode " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">

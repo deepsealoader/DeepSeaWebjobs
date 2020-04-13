@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_3Ue9sX0wEeqZqslrfFhumQ" comment="connectionComment" label="connectionLabel" dataPackage="_8AG88cCmEeipbvJffRKaTQ"/>
+  <TalendMetadata:GenericPackage xmi:id="_8AG88cCmEeipbvJffRKaTQ" dataManager="_3Ue9sX0wEeqZqslrfFhumQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_8AG88sCmEeipbvJffRKaTQ" id="_I1mlwM6qEeiznP0ccyyRWw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7RlscH0wEeqZqslrfFhumQ" name="productCode" label="productCode" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7TNdEH0wEeqZqslrfFhumQ" name="productName" label="productName" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7U6GMH0wEeqZqslrfFhumQ" name="month" label="month" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_7WBggH0wEeqZqslrfFhumQ" name="price" label="price" talendType="id_String"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

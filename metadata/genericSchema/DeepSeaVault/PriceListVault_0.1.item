@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_W_7bwX0xEeqZqslrfFhumQ" comment="connectionComment" label="connectionLabel" dataPackage="_QZ0oEcCnEeipbvJffRKaTQ" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_QZ0oEcCnEeipbvJffRKaTQ" dataManager="_W_7bwX0xEeqZqslrfFhumQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_QZ0oEsCnEeipbvJffRKaTQ" id="_ZtYeIMCnEeipbvJffRKaTQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oE8CnEeipbvJffRKaTQ" name="hub_id" id="4598" label="hubId" length="-1" precision="-1" sourceType="INT4" talendType="id_Integer" nullable="false">
+        <initialValue xmi:id="_QZ0oFMCnEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_QZ0oFcCnEeipbvJffRKaTQ" name="source" id="4599" label="source" length="-1" precision="-1" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_QZ0oFsCnEeipbvJffRKaTQ"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bGTbQH0xEeqZqslrfFhumQ" name="month" label="month" length="-1" sourceType="TIMESTAMP" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_bH26cH0xEeqZqslrfFhumQ" name="price" label="price" length="-1" sourceType="FLOAT4" talendType="id_Float"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>
