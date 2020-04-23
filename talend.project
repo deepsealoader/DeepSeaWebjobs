@@ -1829,6 +1829,20 @@
       <relatedItems xmi:id="_nU9JcX0xEeqZqslrfFhumQ" id="_3UHxUH0wEeqZqslrfFhumQ - metadata" version="Latest" type="schema"/>
       <relatedItems xmi:id="_nU9Jcn0xEeqZqslrfFhumQ" id="_W_vOgH0xEeqZqslrfFhumQ - metadata" version="Latest" type="schema"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_7kBRMIN7EeqMqIFjAw1Z5w">
+      <baseItem xmi:id="_7kBRMYN7EeqMqIFjAw1Z5w" id="_7injAIN7EeqMqIFjAw1Z5w" version="0.2" type="job"/>
+      <relatedItems xmi:id="_7kBRMoN7EeqMqIFjAw1Z5w" id="_YGzSUBPfEemc7a44kBSjTQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="_7kBRM4N7EeqMqIFjAw1Z5w" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBRNIN7EeqMqIFjAw1Z5w" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBRNYN7EeqMqIFjAw1Z5w" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBRNoN7EeqMqIFjAw1Z5w" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBRN4N7EeqMqIFjAw1Z5w" id="Clean" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBROIN7EeqMqIFjAw1Z5w" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBROYN7EeqMqIFjAw1Z5w" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBROoN7EeqMqIFjAw1Z5w" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBRO4N7EeqMqIFjAw1Z5w" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_7kBRPIN7EeqMqIFjAw1Z5w" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <deletedFolders>process/THAILAND/JOBS</deletedFolders>
     <deletedFolders>process/MYANMAR/SUBJOBS</deletedFolders>
     <deletedFolders>process/MYANMAR/JOBS</deletedFolders>
