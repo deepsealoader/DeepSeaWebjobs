@@ -1,5 +1,7 @@
 {
+    "java.server.launchMode": "LightWeight",
+    "java.import.maven.enabled": false,
     "maven.excludedFolders": [
-        "**/poms/*"
+        "**/poms"
     ]
 }
