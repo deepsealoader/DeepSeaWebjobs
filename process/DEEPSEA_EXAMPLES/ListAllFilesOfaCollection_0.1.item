@@ -110,7 +110,9 @@
     <elementParameter field="TEXT" name="API_URL" value="&quot;http://deepsea.cloudapp.net/&quot;"/>
     <elementParameter field="TEXT" name="API_TOKEN_ID" value="&quot;YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU=&quot;"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
-    <elementParameter field="TEXT" name="WEBJOB_NAME" value="jobName"/>
+    <elementParameter field="CHECK" name="LOAD_WEBJOB" value="false"/>
+    <elementParameter field="TEXT" name="WEBJOB_NAME" value="jobName" show="false"/>
+    <elementParameter field="CHECK" name="LOAD_ROOT" value="true"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
     <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
@@ -122,7 +124,8 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaList_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.dksh.daily&quot;"/>
-    <elementParameter field="TEXT" name="BATCH_NAME" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_BATCH_DATE" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_DATE" value="" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -131,7 +134,8 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaList_2" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.dksh.daily&quot;"/>
-    <elementParameter field="TEXT" name="BATCH_NAME" value="globalMap.get(&quot;tDeepSeaList_1_CURRENT_FILENAME&quot;).toString()"/>
+    <elementParameter field="CHECK" name="USE_BATCH_DATE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_DATE" value="globalMap.get(&quot;tDeepSeaList_1_CURRENT_BATCHDATE&quot;).toString()"/>
     <elementParameter field="TEXT" name="LABEL" value="__UNIQUE_NAME__"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b>__UNIQUE_NAME__&lt;/b>&lt;br>__COMMENT__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
