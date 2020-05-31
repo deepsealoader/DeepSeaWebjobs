@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType xmi:id="_Eqk6AL73EeiwTrrgdMnqWg" confirmationNeeded="false" name="Default">
-    <contextParameter xmi:id="_Eqk6Ab73EeiwTrrgdMnqWg" comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
-    <contextParameter xmi:id="_nbzn0L74EeiwTrrgdMnqWg" comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
-    <contextParameter xmi:id="_xsk2kMZXEeiQEKsqaXt86w" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
-    <contextParameter xmi:id="_duSgkMbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
-    <contextParameter xmi:id="_adoGcMbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Japan"/>
-    <contextParameter xmi:id="_oc1AMBY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_japan"/>
-    <contextParameter xmi:id="_tOQi8EbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="dd/MM/yy"/>
+    <contextParameter xmi:id="_xsk2kMZXEeiQEKsqaXt86w" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-dev-prm-webapp002.azurewebsites.net"/>
+    <contextParameter xmi:id="_duSgkMbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
+    <contextParameter xmi:id="_adoGcMbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="JAPAN"/>
+    <contextParameter xmi:id="_tOQi8EbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
     <contextParameter xmi:id="_NlAPMHbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="3"/>
+    <contextParameter xmi:id="_JyY7YKLsEeqK-7HnS2Be-A" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-dev-prm-webapp001.azurewebsites.net"/>
+    <contextParameter xmi:id="_QtRC0KLsEeqK-7HnS2Be-A" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_1Qv74MoQEeiFhKycUBX9rg" confirmationNeeded="false" name="Development">
-    <contextParameter xmi:id="_1Qv74coQEeiFhKycUBX9rg" comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
-    <contextParameter xmi:id="_1Qv74soQEeiFhKycUBX9rg" comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
-    <contextParameter xmi:id="_1Qv748oQEeiFhKycUBX9rg" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost:4040"/>
-    <contextParameter xmi:id="_1Qv75MoQEeiFhKycUBX9rg" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
-    <contextParameter xmi:id="_1Qv75coQEeiFhKycUBX9rg" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Japan"/>
-    <contextParameter xmi:id="_oc1AMRY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_japan"/>
-    <contextParameter xmi:id="_tOQi8UbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="dd/MM/yy"/>
+    <contextParameter xmi:id="_1Qv748oQEeiFhKycUBX9rg" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="http://localhost:4040"/>
+    <contextParameter xmi:id="_1Qv75MoQEeiFhKycUBX9rg" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
+    <contextParameter xmi:id="_1Qv75coQEeiFhKycUBX9rg" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="v"/>
+    <contextParameter xmi:id="_tOQi8UbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
     <contextParameter xmi:id="_NlAPMXbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="3"/>
+    <contextParameter xmi:id="_JyY7YaLsEeqK-7HnS2Be-A" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="http://em50-dev-prm-webapp001.azurewebsites.net"/>
+    <contextParameter xmi:id="_QtRC0aLsEeqK-7HnS2Be-A" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_VmfBgL73EeiwTrrgdMnqWg" confirmationNeeded="false" name="Production">
-    <contextParameter xmi:id="_VmfBgb73EeiwTrrgdMnqWg" comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="MONGODB"/>
-    <contextParameter xmi:id="_nbzn0b74EeiwTrrgdMnqWg" comment="" name="POSTGRES_HOSTNAME" prompt="POSTGRES_HOSTNAME?" promptNeeded="false" type="id_String" value="POSTGRES"/>
-    <contextParameter xmi:id="_xsk2kcZXEeiQEKsqaXt86w" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost:8080"/>
-    <contextParameter xmi:id="_duSgkcbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Basic YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
-    <contextParameter xmi:id="_adoGccbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Japan"/>
-    <contextParameter xmi:id="_oc1AMhY9Eemh-7SwNZgZnQ" comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_japan"/>
-    <contextParameter xmi:id="_tOQi8kbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="dd/MM/yy"/>
+    <contextParameter xmi:id="_xsk2kcZXEeiQEKsqaXt86w" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-dev-prm-webapp002.azurewebsites.net"/>
+    <contextParameter xmi:id="_duSgkcbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
+    <contextParameter xmi:id="_adoGccbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="JAPAN"/>
+    <contextParameter xmi:id="_tOQi8kbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
     <contextParameter xmi:id="_NlAPMnbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="3"/>
+    <contextParameter xmi:id="_JyY7YqLsEeqK-7HnS2Be-A" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="http://em50-dev-prm-webapp001.azurewebsites.net"/>
+    <contextParameter xmi:id="_QtRC0qLsEeqK-7HnS2Be-A" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
   </talendfile:ContextType>
 </xmi:XMI>
