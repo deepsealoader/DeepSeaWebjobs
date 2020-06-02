@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType xmi:id="_Eqk6AL73EeiwTrrgdMnqWg" confirmationNeeded="false" name="Default">
-    <contextParameter xmi:id="_xsk2kMZXEeiQEKsqaXt86w" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-dev-prm-webapp002.azurewebsites.net"/>
+    <contextParameter xmi:id="_xsk2kMZXEeiQEKsqaXt86w" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="http://computer.workshop.xanadu:4040"/>
     <contextParameter xmi:id="_duSgkMbCEeifZpKmns2VLA" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter xmi:id="_adoGcMbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="JAPAN"/>
     <contextParameter xmi:id="_tOQi8EbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>

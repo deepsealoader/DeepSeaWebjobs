@@ -70,7 +70,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:dra8gOjwXPo7aApUUlPNsyIptsMxrA8ePTpIHe/7" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:vWkFR4TPnA7pP+DYlokMRMKV+qDSE3dzAi57MIFu" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -105,7 +105,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:eKWnNT5gPshemc85aLfdVlHxBADcDg/8grTbfhVL" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4tIZwWNIKAO2cfB+CPv5w3Hre0tFmJEkmV/1PYbn" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -133,59 +133,57 @@
     <routinesParameter id="_HdEsMK6jEeiC2aJINdmZJQ" name="TalendDate"/>
     <routinesParameter id="_HcwjIK6jEeiC2aJINdmZJQ" name="TalendStringUtil"/>
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
-    <routinesParameter id="_epuTwKGFEeqr0r86xvrRoA" name="Generator"/>
   </parameters>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1" show="false"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="10" show="false"/>
-    <elementParameter field="TABLE" name="VALUES" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="Key"/>
-      <elementValue elementRef="ARRAY" value="TalendString.getAsciiRandomString(6 )"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Name"/>
-      <elementValue elementRef="ARRAY" value="TalendDataGenerator.getFirstName()"/>
-    </elementParameter>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRowGenerator_1">
-      <column comment="" key="false" length="-1" name="Key" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-    </metadata>
   </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_2" show="false"/>
-    <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
-    <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="COUNTRY" value="&quot;APAC&quot;"/>
-    <elementParameter field="TEXT" name="RECORDCODE" value="&quot;deepsea.japan&quot;"/>
-    <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="&quot;test&quot;"/>
-    <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
-    <elementParameter field="TEXT" name="BATCH" value="1000"/>
-    <elementParameter field="TEXT" name="THREADNUM" value="0"/>
-    <elementParameter field="CHECK" name="USE_LOG" value="false"/>
-    <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
+  <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
+    <elementParameter field="TEXT" name="API_URL" value="context.getDEEPSEA_HOSTNAME()"/>
+    <elementParameter field="TEXT" name="API_TOKEN_ID" value="context.getDEEPSEA_AUTH_TOKEN()"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="300000"/>
+    <elementParameter field="CHECK" name="LOAD_WEBJOB" value="false"/>
+    <elementParameter field="TEXT" name="WEBJOB_NAME" value="jobName" show="false"/>
+    <elementParameter field="CHECK" name="LOAD_ROOT" value="true"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
     <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMCPOutput_2">
-      <column comment="" key="false" length="-1" name="Key" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
-      </column>
-      <column comment="" key="false" length="-1" name="Name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true">
-        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getFirstName&quot;,&quot;PARAMETERS&quot;:[],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendDataGenerator&quot;}"/>
-      </column>
-    </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tMCPOutput_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  <node componentName="tDeepSeaSync" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaSync_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
+    <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.suzuken&quot;"/>
+    <elementParameter field="TEXT" name="DEST_COLLECTION_NAME" value="&quot;sales.suzuken.conso&quot;"/>
+    <elementParameter field="CHECK" name="USE_BATCH_DATE" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_DATE" value="&quot;2020-07-01&quot;" show="false"/>
+    <elementParameter field="TABLE" name="TAGS">
+      <elementValue elementRef="TAG" value="&quot;date&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;productCode&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;productName&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;customerCode&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;customerName&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;quantity&quot;"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDeepSeaConnect_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRowGenerator_1" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaSync_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
