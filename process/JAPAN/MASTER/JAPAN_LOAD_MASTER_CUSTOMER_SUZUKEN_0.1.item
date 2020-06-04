@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:XSL7Bp4SkEWnciZ4ZGkSBdUKSXSJ6QzhTR50p+4K" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:m21qWSM9+1tzoUeK/zOmOUKs6xwjrYIOJZE/G7ZX" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:BvWGw0zNXm7YYLVdL5qyuldEYdjcm5LAbf7D0hLZ" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XaM3shHEn5DCUZMlvwb9Q3HTjX/zkv41O0vly5M8" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -174,7 +174,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="final String filename_tJava1 = globalMap.get(&quot;tDeepSeaList_1_CURRENT_FILENAME&quot;).toString();&#xA;final String hash_tJava1 = globalMap.get(&quot;tDeepSeaList_1_CURRENT_HASH&quot;).toString();&#xA;final org.json.JSONObject webjob_tJava1 = (org.json.JSONObject) globalMap.get(&quot;tDeepSeaConnect_1_WEBJOB&quot;);&#xA;&#xA;boolean filter_tJava1 = context.getFILENAME().equals(filename_tJava1);&#xA;&#xA;if (webjob_tJava1 != null &amp;&amp; webjob_tJava1.optJSONObject(&quot;context&quot;) != null) {&#xA;&#x9;filter_tJava1 &amp;= !hash_tJava1.equals(webjob_tJava1.optJSONObject(&quot;context&quot;).optString(&quot;last_completed_hash&quot;));&#xA;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="final String filename_tJava1 = globalMap.get(&quot;tDeepSeaList_1_CURRENT_FILENAME&quot;).toString();&#xA;final String hash_tJava1 = globalMap.get(&quot;tDeepSeaList_1_CURRENT_HASH&quot;).toString();&#xA;final org.json.JSONObject webjob_tJava1 = (org.json.JSONObject) globalMap.get(&quot;tDeepSeaConnect_1_WEBJOB&quot;);&#xA;&#xA;boolean filter_tJava1 = context.getFILENAME().equals(filename_tJava1);&#xA;&#xA;if (webjob_tJava1 != null &amp;&amp; webjob_tJava1.optJSONObject(&quot;context&quot;) != null) {&#xA;&#x9;//filter_tJava1 &amp;= !hash_tJava1.equals(webjob_tJava1.optJSONObject(&quot;context&quot;).optString(&quot;last_completed_hash&quot;));&#xA;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="Filter"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -286,7 +286,7 @@
       <column comment="" key="false" length="-1" name="sourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row2">
         <mapperTableEntries name="businessKey" expression="row1.providerCode" type="id_String"/>
@@ -308,7 +308,7 @@
         <mapperTableEntries name="geographyCode" expression="row1.geographyCode " type="id_String"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="row7">
-        <mapperTableEntries name="id" expression="row1.providerCode + &quot;*&quot; + row1.geographyCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="id" expression="row1.providerCode + &quot;*&quot; + row1.sourceChannelCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="businessKey" expression="row1.providerCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="sourceChannelCode" expression="row1.sourceChannelCode " type="id_String" nullable="true"/>
       </outputTables>
@@ -334,9 +334,11 @@
     <elementParameter field="TEXT" name="COUNTRY" value="&quot;APAC&quot;"/>
     <elementParameter field="TEXT" name="RECORDCODE" value="context.getSOURCE()"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="context.getTABLE() + &quot;_sourcechannel&quot;"/>
+    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
     <elementParameter field="TEXT" name="BATCH" value="1000"/>
     <elementParameter field="TEXT" name="THREADNUM" value="0"/>
+    <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
     <elementParameter field="CHECK" name="USE_LOG" value="false"/>
     <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
@@ -357,9 +359,11 @@
     <elementParameter field="TEXT" name="COUNTRY" value="&quot;APAC&quot;"/>
     <elementParameter field="TEXT" name="RECORDCODE" value="context.getSOURCE()"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="context.getTABLE() + &quot;_geography&quot;"/>
+    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
     <elementParameter field="TEXT" name="BATCH" value="1000"/>
     <elementParameter field="TEXT" name="THREADNUM" value="0"/>
+    <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
     <elementParameter field="CHECK" name="USE_LOG" value="false"/>
     <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
@@ -380,9 +384,11 @@
     <elementParameter field="TEXT" name="COUNTRY" value="&quot;APAC&quot;"/>
     <elementParameter field="TEXT" name="RECORDCODE" value="context.getSOURCE()"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="context.getTABLE()"/>
+    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
     <elementParameter field="TEXT" name="BATCH" value="1000"/>
     <elementParameter field="TEXT" name="THREADNUM" value="0"/>
+    <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
     <elementParameter field="CHECK" name="USE_LOG" value="false"/>
     <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
