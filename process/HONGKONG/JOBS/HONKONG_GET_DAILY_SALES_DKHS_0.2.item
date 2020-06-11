@@ -79,7 +79,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:dPzY4pMN+s0EMnYa8vwtbPduMl8hvOZ52KCfaqyN" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:VHG543tw/ZLTwqPZmplLfMxdksTcDYXOAb3s5nn2" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -114,7 +114,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:px9KmvoD5TSts/k5iRa+wx7a5HGpcidc/XluEz4X" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:vwkXvhb7Lq2dm4Yv7wa5HRJy/xPHl8G687dK7gpZ" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -149,7 +149,7 @@
     <elementParameter field="TEXT" name="HOST" value="&quot;outlook.office365.com&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="995"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;deepseahk@servier.com&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:QJadeFl+Efpx2U1LLHp9AECVscWx5dY7cVE9OZyqUuN8IftnijFvQ/ejcqJBTg=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:aIx/YwoHiZEa+aHKfLumSY1sPN/O3bpkPLL1cnELBjSHNGwWfNaSvdWzEUf5mQ=="/>
     <elementParameter field="DIRECTORY" name="OUTPUT_DIRECTORY" value="globalMap.get(&quot;MAILS_FOLDER_PATH&quot;).toString()"/>
     <elementParameter field="TEXT" name="FILENAME_PATTERN" value="TalendDate.getDate(&quot;yyyyMMdd-hhmmss&quot;) + &quot;_&quot; + (counter_tPOP_1 + 1) + &quot;.mail&quot;"/>
     <elementParameter field="CHECK" name="ALL_EMAILS" value="true"/>
@@ -354,7 +354,7 @@
     <elementParameter field="CHECK" name="EXTRACTPATH" value="false"/>
     <elementParameter field="CHECK" name="CHECKPASSWORD" value="false"/>
     <elementParameter field="CLOSED_LIST" name="DECRYPT_METHOD" value="ZIP4J_DECRYPT" show="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:neqegywVUc7hOwmmH26x2XclD8ODK/xtzLhl/tfj" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:5MTLrG0iOHFgCB39U7njiDmTJK7SFS8qdixMzDat" show="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CHECK" name="PRINTOUT" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -363,7 +363,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tFileUnarchive_1_CURRENT_FILEPATH&quot;).toString()"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:oknb/Hh0pCz9MIQUybIM6bt15KNv+HtLDlyJIVaR"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:MdzghfC7rrdQEW1p+PLu3fJnTJ/J0x5C02nVK9f+"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="0"/>
@@ -477,11 +477,11 @@
     <elementParameter field="TEXT" name="COLLECTION_NAME" value="context.getCOLLECTION()"/>
     <elementParameter field="CLOSED_LIST" name="FILE_MODE" value="CREATE"/>
     <elementParameter field="CHECK" name="RENAME_FILE" value="true"/>
-    <elementParameter field="FILE" name="NEW_FILE_NAME" value="globalMap.get(&quot;FILE_PATH&quot;).toString()"/>
+    <elementParameter field="FILE" name="NEW_FILE_NAME" value="globalMap.get(&quot;FILE_NAME&quot;).toString()"/>
     <elementParameter field="CHECK" name="USE_BATCH_DATE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_DATE" value="globalMap.get(&quot;BATCH_DATE&quot;).toString()"/>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:yZw5afvlZa5iOCsSztTjE57dUHnmN/yZcmYpoXGMprSxbtjiRw==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:rFsmMrF+cWjXr9K0vFPE3jJ6oAhWuGkyduXh4Z9onAksqfb9eA==" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tPOP_1" offsetLabelX="0" offsetLabelY="0" source="tPOP_1" target="tJava_1">
