@@ -1,2 +1,2 @@
 # TalendDeepSea
-Talend jobs fro DeepSea
+Talend jobs for DeepSea
