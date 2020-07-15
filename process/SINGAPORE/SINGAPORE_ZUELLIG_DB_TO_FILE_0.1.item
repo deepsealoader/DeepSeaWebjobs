@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="COLLECTIONINPUT_FILEPATH?" promptNeeded="true" type="id_Directory" value="C:/Users/RRU_SG1/Documents/DeepSeaStudio/Singapore/data/Zuellig/"/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="COLLECTIONINPUT_FILEPATH?" promptNeeded="true" type="id_Directory" value="C:/Users/RRU_SG1/Desktop/"/>
     <contextParameter comment="" name="HOSTNAME" prompt="HOSTNAME?" promptNeeded="false" type="id_String" value="http://deepsea.cloudapp.net"/>
     <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.zuellig.daily"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:vRfenCF0BJD4yjmkaOUY56tFq5Odp6QFokAfEFNG" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:+KyAklJcTz3VYhcDel8gQkMlF7wzBVoZsM3RFikM" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:GRejeiKWKF7/sjsw+o8TtNRwsaAlGfx2MZG/iVrv" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:RYa+apMB5fzybdqUH9xWZMZloNCRPXNGbdFUYURR" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -551,7 +551,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_DATE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_DATE" value="TalendDate.formatDate(&quot;yyyy-MM-01&quot;,TalendDate.parseDate(&quot;yyyyMMdd&quot;,globalMap.get(&quot;row9.firstDate&quot;).toString()))"/>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:wS26fydpdVpWhcFC1adfR8Do2t+uImahbqHyRVYle/jEIzImvQ==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:jHmi9myU0E8FIPqNbav0s/Dsp41CcKSOc35NUVyJMMa6qOxh0g==" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputPositional_1">
