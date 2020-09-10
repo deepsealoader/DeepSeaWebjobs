@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Development" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="JAPAN"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://computer.workshop.xanadu:4040"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="yyyyMMdd"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="JAPAN"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://localhost:8080"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="yyyyMMdd"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
   </context>
   <context confirmationNeeded="false" name="Development">
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="v"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp002.azurewebsites.net"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="yyyyMMdd"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
   </context>
   <parameters>
@@ -70,7 +70,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:mLirINtSIgVidDqtxUctubr4OxY2YDGViISHzKel" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:Ss7h8UWnFEcaK/pdoNtOn7oRXOkzO6cr3qE3xYLl" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -105,7 +105,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6Vw8brmKtExRJ5DWWvNvP51PWM45s7cFImdpYJot" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:0zldntxcrvVbhQFEkJEZ7O/4jp1nbkHVzAOIUaIx" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -133,6 +133,8 @@
     <routinesParameter id="_HdEsMK6jEeiC2aJINdmZJQ" name="TalendDate"/>
     <routinesParameter id="_HcwjIK6jEeiC2aJINdmZJQ" name="TalendStringUtil"/>
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
+    <routinesParameter id="_PEnHYMvHEeqtm-5g2Cq_iw" name="Ukraine"/>
+    <routinesParameter id="_lDf2IG_pEeqlSN8H7Du7PQ" name="Japanese"/>
   </parameters>
   <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
@@ -157,18 +159,12 @@
     <elementParameter field="TEXT" name="COLLECTION_NAME" value="&quot;sales.suzuken.conso&quot;"/>
     <elementParameter field="CHECK" name="USE_BATCH_DATE" value="false"/>
     <elementParameter field="TEXT" name="BATCH_DATE" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_FILTER" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="FILTER_CONDITION" value="Japanese.filter(&#xA;&#x9;(org.json.JSONObject) globalMap.get(&quot;tDeepSeaConnect_1_WEBJOB_CONTEXT&quot;),&#xA;&#x9;&quot;last_completed_hashes&quot;,&#xA;&#x9;globalMap.get(&quot;tDeepSeaList_1_CURRENT_HASH&quot;).toString())"/>
     <elementParameter field="TEXT" name="LABEL" value="ListSales"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="final String hash_tJava1 = globalMap.get(&quot;tDeepSeaList_1_CURRENT_HASH&quot;).toString();&#xA;final org.json.JSONObject context_tJava1 = (org.json.JSONObject) globalMap.get(&quot;tDeepSeaConnect_1_WEBJOB_CONTEXT&quot;);&#xA;&#xA;boolean filter_tJava1 = true;&#xA;&#xA;if (context_tJava1 != null &amp;&amp; context_tJava1.optString(&quot;last_completed_hashes&quot;) != null) {&#xA;&#x9;String[] hashes = context_tJava1.getString(&quot;last_completed_hashes&quot;).split(&quot;,&quot;);&#xA;&#x9;filter_tJava1 &amp;= !java.util.Arrays.asList(hashes).contains(hash_tJava1);&#xA;}&#xA;&#xA;filter_tJava1 = true;&#xA;&#xA;if (filter_tJava1) {&#xA;&#x9;if (globalMap.get(&quot;FIRST_FILE_DONE&quot;) == null) {&#xA;&#x9;&#x9;globalMap.put(&quot;MAPPING_NAME&quot;, &quot;suzuken_sales_first&quot;);&#xA;&#x9;&#x9;globalMap.put(&quot;FIRST_FILE_DONE&quot;, &quot;true&quot;);&#xA;&#x9;} else {&#xA;&#x9;&#x9;globalMap.put(&quot;MAPPING_NAME&quot;, &quot;suzuken_sales&quot;);&#xA;&#x9;}&#xA;}&#xA;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="LABEL" value="Filter"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_1"/>
-  </node>
-  <node componentName="tDeepSeaInput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
+  <node componentName="tDeepSeaInput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaInput_4" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="FILE_NAME" value="globalMap.get(&quot;tDeepSeaList_1_CURRENT_FILENAME&quot;).toString()"/>
@@ -186,6 +182,9 @@
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="rowNum"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sheetName"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
@@ -212,6 +211,7 @@
     <metadata connector="FLOW" label="metadata" name="tDeepSeaInput_4">
       <column comment="" key="false" length="-1" name="rowId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rowNum" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sheetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -220,7 +220,7 @@
       <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="160">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -250,7 +250,7 @@
       <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="row4">
-      <column comment="" key="true" length="-1" name="id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="id" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
@@ -259,7 +259,7 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row2">
         <mapperTableEntries name="businessKey" expression="row1.rowId" type="id_String"/>
-        <mapperTableEntries name="date" expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;,TalendDate.parseDate(context.DEFAULT_DATE_FORMAT, row1.date)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date" expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, Japanese.guessDate(row1.date)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" expression="row1.productCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="productName" expression="row1.productName " type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" expression="row1.customerCode " type="id_String" nullable="true"/>
@@ -272,13 +272,14 @@
         <mapperTableEntries name="productCode" expression="row1.productCode " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="row4">
-        <mapperTableEntries name="id" expression="row1.rowId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="id" expression="row1.rowId " type="id_String"/>
         <mapperTableEntries name="businessKey" expression="row1.rowId " type="id_String"/>
         <mapperTableEntries name="customerCode" expression="row1.customerCode  " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="rowId" type="id_String" nullable="true"/>
         <mapperTableEntries name="rowNum" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sheetName" type="id_String" nullable="true"/>
         <mapperTableEntries name="date" type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="productName" type="id_String" nullable="true"/>
@@ -288,7 +289,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="416">
+  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_2" show="false"/>
     <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
     <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
@@ -296,6 +297,9 @@
     <elementParameter field="TEXT" name="RECORDCODE" value="&quot;deepsea.japan.sales.suzuken&quot;"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="&quot;suzuken_sales_customer&quot;"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
+    <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
+    <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
+    <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
     <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
     <elementParameter field="TEXT" name="BATCH" value="1000"/>
     <elementParameter field="TEXT" name="THREADNUM" value="0"/>
@@ -308,12 +312,12 @@
     <elementParameter field="TEXT" name="LABEL" value="WriteSalesCustomer"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPOutput_2">
-      <column comment="" key="true" length="-1" name="id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="id" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="288">
+  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_1" show="false"/>
     <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
     <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
@@ -321,6 +325,9 @@
     <elementParameter field="TEXT" name="RECORDCODE" value="&quot;deepsea.japan.sales.suzuken&quot;"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="&quot;suzuken_sales_product&quot;"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
+    <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
+    <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
+    <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
     <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
     <elementParameter field="TEXT" name="BATCH" value="1000"/>
     <elementParameter field="TEXT" name="THREADNUM" value="0"/>
@@ -338,14 +345,24 @@
       <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
+  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_5" show="false"/>
     <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
     <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
     <elementParameter field="TEXT" name="COUNTRY" value="&quot;APAC&quot;"/>
     <elementParameter field="TEXT" name="RECORDCODE" value="&quot;deepsea.japan.sales.suzuken&quot;"/>
-    <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="globalMap.get(&quot;MAPPING_NAME&quot;).toString()"/>
+    <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="&quot;suzuken_sales&quot;"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
+    <elementParameter field="CHECK" name="USE_PARAMETERS" value="true"/>
+    <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="&quot;japanese_parameters&quot;"/>
+    <elementParameter field="TABLE" name="PARAMETERS">
+      <elementValue elementRef="KEY" value="&quot;ID&quot;"/>
+      <elementValue elementRef="VALUE" value="&quot;1&quot;"/>
+      <elementValue elementRef="KEY" value="&quot;startDate&quot;"/>
+      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyy-MM-01&quot;, Japanese.guessDate(row2.date))"/>
+      <elementValue elementRef="KEY" value="&quot;endDate&quot;"/>
+      <elementValue elementRef="VALUE" value="TalendDate.formatDate(&quot;yyyy-MM-01&quot;, TalendDate.addDate(Japanese.guessDate(row2.date), 1, &quot;MM&quot;)) "/>
+    </elementParameter>
     <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
     <elementParameter field="TEXT" name="BATCH" value="1000"/>
     <elementParameter field="TEXT" name="THREADNUM" value="0"/>
@@ -367,7 +384,7 @@
       <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tDeepSeaSetWebjobContext" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="544">
+  <node componentName="tDeepSeaSetWebjobContext" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaSetWebjobContext_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TABLE" name="CONTEXT">
@@ -378,7 +395,7 @@
     <elementParameter field="TEXT" name="LABEL" value="UpdateWebjobContext"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tMCPCatchException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="416">
+  <node componentName="tMCPCatchException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPCatchException_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_2"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -392,14 +409,14 @@
       <column comment="" key="false" length="-1" name="EXCEPTION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="416">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
-  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="416">
+  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaException_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="REASON" value="globalMap.get(&quot;row5.EXCEPTION&quot;).toString()"/>
@@ -413,7 +430,7 @@
     <elementParameter field="TEXT" name="FIELD_NEW_VALUE" value="globalMap.get(&quot;row5.FIELD_NEW_VALUE&quot;).toString()"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tMCPCatchException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="288">
+  <node componentName="tMCPCatchException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPCatchException_2" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -427,14 +444,14 @@
       <column comment="" key="false" length="-1" name="EXCEPTION" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="288">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_2"/>
   </node>
-  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="288">
+  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaException_2" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="REASON" value="globalMap.get(&quot;row6.EXCEPTION&quot;).toString()"/>
@@ -448,13 +465,13 @@
     <elementParameter field="TEXT" name="FIELD_NEW_VALUE" value="globalMap.get(&quot;row6.FIELD_NEW_VALUE&quot;).toString()"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tDeepSeaPostException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="544">
+  <node componentName="tDeepSeaPostException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaPostException_3" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="COMPONENT_LIST" name="EXCEPTION_NAME" value="tDeepSeaException_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tDeepSeaPostException" componentVersion="0.1" offsetLabelX="50" offsetLabelY="-82" posX="960" posY="160">
+  <node componentName="tDeepSeaPostException" componentVersion="0.1" offsetLabelX="50" offsetLabelY="-82" posX="800" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaPostException_2" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="COMPONENT_LIST" name="EXCEPTION_NAME" value="tDeepSeaException_2"/>
@@ -463,21 +480,19 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDeepSeaConnect_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tDeepSeaList_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaList_1" target="tJava_1">
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tDeepSeaList_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaList_1" target="tDeepSeaInput_4">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
   </connection>
-  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tDeepSeaInput_4">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="filter_tJava1"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="If1" show="false"/>
-  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDeepSeaInput_4" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaInput_4" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="sheetName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDeepSeaInput_4" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaInput_4" target="tDeepSeaSetWebjobContext_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="row2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_4" target="tMCPOutput_5">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -619,6 +634,9 @@
   <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tMCPOutput_2" offsetLabelX="0" offsetLabelY="0" source="tMCPOutput_2" target="tMCPCatchException_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1" show="false"/>
   </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tMCPOutput_2" offsetLabelX="0" offsetLabelY="0" source="tMCPOutput_2" target="tDeepSeaSetWebjobContext_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
   <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tMCPOutput_1" offsetLabelX="0" offsetLabelY="0" source="tMCPOutput_1" target="tMCPCatchException_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError2" show="false"/>
   </connection>
@@ -657,7 +675,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -669,11 +687,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaList_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaInput_4" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>

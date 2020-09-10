@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_oX1vUOOmEeqyjd-RDTN0Ug" name="repository.metadataGenericSchema" dataPackage="_oX1vUeOmEeqyjd-RDTN0Ug"/>
+  <TalendMetadata:GenericPackage xmi:id="_oX1vUeOmEeqyjd-RDTN0Ug" name="repository.metadataGenericSchema" dataManager="_oX1vUOOmEeqyjd-RDTN0Ug">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_oX1vUuOmEeqyjd-RDTN0Ug" id="_c1JvQOOmEeqyjd-RDTN0Ug" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oX1vU-OmEeqyjd-RDTN0Ug" name="productCode" label="productCode" talendType="id_String" nullable="false"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oX1vVOOmEeqyjd-RDTN0Ug" name="productName" label="productName" talendType="id_String" nullable="false"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oX1vVeOmEeqyjd-RDTN0Ug" name="geographyCode" label="geographyCode" talendType="id_String" nullable="false"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

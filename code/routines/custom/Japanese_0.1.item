@@ -21,6 +21,57 @@ package routines;
 public class Japanese {
 
 	/**
+     * guessDateFormat: parse a date string return a date.
+     * 
+     * 
+     * {talendTypes} Date
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("date") stringDate: The string need to be converted.
+     * 
+     * {example} guessDateFormat("12-19") # 01-12-2019.
+     */
+    public static java.util.Date guessDate(String stringDate) {
+    	return Japanese.guessDate(stringDate, stringDate);
+    }
+    
+    /**
+     * guessDateFormat: parse a date string return a date.
+     * 
+     * 
+     * {talendTypes} Date
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("date") stringDate: The string need to be converted.
+     * {param} string("date") defautlDate: The default to convert if stringDate is null or empty.
+     * 
+     * {example} guessDateFormat("12-19", "12-19") # 01-12-2019.
+     */
+    public static java.util.Date guessDate(String stringDate, String defautlDate) {
+    	if (Clean.isNullOrEmpty(stringDate)) {
+    		stringDate = defautlDate;
+    	}
+    	
+    	if (TalendDate.isDate(stringDate, "yyyyMM")) {
+    		return TalendDate.parseDate("yyyyMM", stringDate);
+    	} else if (TalendDate.isDate(stringDate, "yyyyMMdd")) {
+    		return TalendDate.parseDate("yyyyMMdd", stringDate);
+    	} else if (TalendDate.isDate(stringDate, "MM-yy")) {
+    		return TalendDate.parseDate("MM-yy", stringDate);
+    	} else if (TalendDate.isDate(stringDate, "dd/MM/yyyy")) {
+    		return TalendDate.parseDate("dd/MM/yyyy", stringDate);
+    	} else if (TalendDate.isDate(stringDate, "dd.MM.yyyy")) {
+    		return TalendDate.parseDate("dd.MM.yyyy", stringDate);
+    	}  else if (TalendDate.isDate(stringDate, "yyyy-MM-dd")) {
+    		return TalendDate.parseDate("yyyy-MM-dd", stringDate);
+    	} else {
+    		throw new RuntimeException("Can't parse the date: " + stringDate);
+    	}
+    }
+    
+	/**
 	 * toDate: convert a date from Japanese calendar to a Western calendar.
 	 * 
 	 * 
@@ -110,4 +161,27 @@ public class Japanese {
 		localDate.minusYears(adjustYear);
 		return TalendDate.parseDate("yyyy-MM-dd", localDate.toString());
 	}
+	
+	/**
+     * filter: check if some key of a given JSON object contains some value.
+     * 
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("context") context: The JSON object.
+     * {param} string("key") key: The key.
+     * {param} string("value") value: The value to check.
+     * 
+     * {example} filter(context, "hashes", "123") # true.
+     */
+    public static boolean filter(org.json.JSONObject context, String key, String value) {
+    	if (context == null || context.optString(key) == null) {
+    		return true;
+    	} else {
+    		java.util.List<String> values = java.util.Arrays.asList(context.getString(key).split(","));
+    		return !values.contains(value);
+    	}
+    }
 }

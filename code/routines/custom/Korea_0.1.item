@@ -1,0 +1,408 @@
+package routines;
+
+import java.util.Date;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class Korea {	
+	/**
+     * cleanString: Returns true if not null or empty, otherwise returns false.
+     * 
+     * {talendTypes} boolean | Boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("s") input: the string to clean
+     * 
+     * {example} cleanString("") # true
+     */
+	public static boolean isNullOrEmpty(String s) {
+		return s == null || s.trim().equals("");
+	}
+	
+	/**
+     * cleanString: Returns a given string if not null or empty, otherwise returns null.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("s") input: the string to clean
+     * 
+     * {example} cleanString("") # null
+     */
+	public static String cleanString(String s) {
+		if(Clean.isNullOrEmpty(s)) {
+			return null;
+		}
+
+		return s;
+	}
+	
+	/**
+     * cleanString: Returns a given string if not null or empty, otherwise returns  a given
+     * default string.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("s") input: the string to clean
+     * {param} String("d") input: the default string
+     * 
+     * {example} cleanString("", "none") # "none"
+     */
+	public static String cleanString(String s, String d) {
+		if(Clean.isNullOrEmpty(s)) {
+			return cleanString(d);
+		}
+
+		return s;
+	}
+	
+	/**
+     * cleanNumber: Cleans a given string representing a number, removing comma, 
+     * converting parenthesis as a negative, otherwise returns null.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("number") input: the string to clean
+     * 
+     * {example} cleanString("6,720.00") # "6720.00"
+     */
+	public static String cleanNumber(String number) {
+		if(Clean.isNullOrEmpty(number)) {
+			return null;
+		}
+		
+		number = number.replaceAll("\\(", "-"); // Replace (XXX) by -XXX
+		number = number.replaceAll(",|\\)", ""); // Removed format characters
+		number = number.replaceAll("-+", "-"); // Removed duplicated minus characters
+		return number;
+	}
+	
+	/**
+     * cleanDate: Cleans a given string representing a date and converting to "yyyy-MM-dd" format,
+     * otherwise returns a default date.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("date") input: the string to clean
+     * {param} String("defaultDate") input: the default date
+     * 
+     * {example} cleanDate("1975/06/12") # "1975-06-12"
+     */
+	public static String cleanDate(String date, String defaultDate, String defaultFormat) {
+		if(Clean.isNullOrEmpty(date)) {
+			return defaultDate;
+		}
+		
+		if(checkDateFormat(date, DatePattern1)) {
+			return date;
+		}
+		else if(checkDateFormat(date, DatePattern2)) {
+			return date.replaceAll("/", "-");
+		}
+		else if(checkDateFormat(date, DatePattern3)) {
+			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyyMMdd", date));
+		}
+		else if(checkDateFormat(date, DatePattern4)) {
+			if(defaultDate == null) {
+				if(defaultFormat == null) {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yyyy", date));
+				} else {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate(defaultFormat + "yy", date));
+				}
+			} else {
+				Date date1 = TalendDate.parseDate("yyyy-MM-dd", defaultDate);
+				Date date2 = TalendDate.parseDate("MM/dd/yyyy", date);
+				if(TalendDate.getPartOfDate("MONTH", date1) == TalendDate.getPartOfDate("MONTH", date2) && TalendDate.getPartOfDate("YEAR", date1) == TalendDate.getPartOfDate("YEAR", date2)) {
+					return TalendDate.formatDate("yyyy-MM-dd", date2);
+				} else {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("dd/MM/yyyy", date));
+				}
+			}
+		}
+		else if(checkDateFormat(date, DatePattern5)) {
+			if(defaultDate == null) {
+				if(defaultFormat == null) {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yy", date));
+				} else {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate(defaultFormat, date));
+				}
+			} else {
+				Date date1 = TalendDate.parseDate("yyyy-MM-dd", defaultDate);
+				Date date2 = TalendDate.parseDate("MM/dd/yy", date);
+				if(TalendDate.getPartOfDate("MONTH", date1) == TalendDate.getPartOfDate("MONTH", date2) && TalendDate.getPartOfDate("YEAR", date1) == TalendDate.getPartOfDate("YEAR", date2)) {
+					return TalendDate.formatDate("yyyy-MM-dd", date2);
+				} else {
+					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("dd/MM/yy", date));
+				}
+			}
+		}
+		else if(checkDateFormat(date, DatePattern6)) {
+			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyMM", date));
+		}
+		else if(checkDateFormat(date, DatePattern7)) {
+			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyyMM", date));
+		}
+		else if(checkDateFormat(date, DatePattern8)) {
+			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyy/MM", date));
+		}
+		else if(checkDateFormat(date, DatePattern9)) {
+			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyy년 MM월", date));
+		}
+		else {
+			return defaultDate;
+		}
+	}
+
+	/**
+     * cleanProductAndDosage: Concats a given product, dosage and package using the format 
+     * product|dosage|package. Returns null if the string is null or empty.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("product") input: the product
+     * {param} String("dosage") input: the dosage/package
+     * 
+     * {example} cleanProductAndDosage("DIAMICRON", "30mg100T") # "DIAMICRON|30|100"
+     */
+	public static String cleanProductAndDosage(String product, String dosage) {
+		if(Clean.isNullOrEmpty(product)) {
+			return null;
+		}
+
+		product = product.replaceAll(",", ""); // Remove commas
+		product = product.replaceAll("T", "T "); // Space after T
+		product = product.replaceAll("mg", "mg "); // Space after mg
+		
+		if(dosage != null && !dosage.equals("") && !product.contains(dosage)) {
+			
+			dosage = dosage.replaceAll(",", ""); // Remove commas
+			dosage = dosage.replaceAll("T", "T "); // Space after T
+			dosage = dosage.replaceAll("mg", "mg "); // Space after mg
+			
+			Matcher matcher = DosagePattern.matcher(dosage);
+			if(matcher.find()) {
+				String part1 = matcher.group(2); // dosage
+				String part2 = matcher.group(4); // package
+				
+				// Check if package or dosage are not inverted
+				if(part1.contains("T") || part2!= null && part2.contains("mg")) {
+					String tmp = part1;
+					part1 = part2;
+					part2 = tmp;
+				}
+				
+				if(part1 != null) {
+					part1 = part1.replaceAll("[^\\d\\.]", ""); // keep numbers only
+					if(!product.contains(part1)) {
+						product = product + " " + part1 + "mg";
+					}
+				}
+				
+				if(part2 != null) {
+					part2 = part2.replaceAll("[^\\d\\.]", ""); // keep numbers only
+					if(!product.contains(part2)) {
+						product = product + " " + part2 + "T";
+					}
+				}
+			}
+		}
+
+		Matcher matcher = ProductPattern.matcher(product);
+		if(!matcher.find()) {
+			return null;
+		}
+		
+		String part1 = matcher.group(1).replaceAll("\\(.*\\)", "");
+		String part2 = matcher.group(3); // dosage
+		String part3 = matcher.group(5); // package
+		
+		// Check if package or dosage are not inverted
+		if(part2.contains("T")|| part3 != null && part3.contains("mg")) {
+			String tmp = part2;
+			part2 = part3;
+			part3 = tmp;
+		}
+		
+		if(part2 != null && part3 != null) {
+			part2 = part2.replaceAll("[^\\d\\.]", ""); // keep numbers only
+			part3 = part3.replaceAll("[^\\d\\.]", ""); // keep numbers only
+			return part1.trim() + "|" + part2 + "|" + part3;
+		}
+		else if(part2 != null && part3 == null) {
+			part2 = part2.replaceAll("[^\\d\\.]", ""); // keep numbers only
+			return part1.trim() + "|" + part2 + "|0";
+		}
+		else if(part2 == null && part3 != null) {
+			part3 = part3.replaceAll("[^\\d\\.]", ""); // keep numbers only
+			return part1.trim() + "|0|" + part3;
+		}
+		else {
+			return part1.trim() + "|0|0";
+		}
+	}
+
+	/**
+     * cleanAddress: Returns a given string representing an address, removing unnecessary parts.
+     * Returns null if the string is null or empty.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("address") input: the string to clean
+     * 
+     * {example} cleanAddress("district locality street # (something)") # "district locality street #"
+     */
+	public static String cleanAddress(String address) {
+		if(Clean.isNullOrEmpty(address)) {
+			return null;
+		}
+		
+		address = address.replaceAll(",", ""); // Remove commas
+		address = address.replaceAll("\\(.*\\)", ""); // Remove parts in parenthesis
+		address = address.replaceAll(" +", " "); // Remove duplicate spaces
+		
+		Matcher matcher = AddressPattern.matcher(address);
+		if(!matcher.find()) {
+			return address.trim();
+		}
+
+		return matcher.group(1).trim() + " " + matcher.group(2).trim() + matcher.group(3);
+	}
+	
+	/**
+     * cleanPostalCode: Returns a given string representing an postal code with the format "XXX-XXX".
+     * Returns null if the string is null or empty.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("address") input: the string to clean
+     * 
+     * {example} cleanPostalCode("XXXXXX") # "XXX-XXX"
+     */
+	public static String cleanPostalCode(String postalCode) {
+		if(Clean.isNullOrEmpty(postalCode)) {
+			return null;
+		}
+		
+		postalCode = postalCode.replaceAll("-| ", ""); // Remove dashes and spaces
+		
+		if(postalCode.length() == 6) {
+			return postalCode.substring(0, 3) + "-" + postalCode.substring(3, 6);
+		}
+		else if(postalCode.length() == 4) {
+			return "0" + postalCode;
+		}
+		else if(postalCode.length() == 5) {
+			return postalCode;
+		}
+		else {
+			return null;
+		}
+	}
+	
+	/**
+     * cleanFilename: Returns a given file name without extension, otherwise null if the string
+     * is null or empty.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("filename") input: the file name
+     * 
+     * {example} cleanFilename("data.csv") # "data"
+     */
+	public static String cleanFilename(String filename) {
+		if(Clean.isNullOrEmpty(filename)) {
+			return null;
+		}
+		
+		filename = filename.replaceAll("\\(.*\\)", ""); // Remove parts in parenthesis 
+		filename = filename.replaceAll("\\..+$", ""); // Remove extensions
+		
+		return filename;
+	}
+	
+	/**
+     * cleanDeliveryType: returns a location type from the types information from Googlemap such
+     * as hospital.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("deliveryType") input: the string to clean
+     * {param} String("geoTypes") input: the googlemap types
+     * 
+     * {example} cleanDeliveryType("wholesaler", "['hospital']") # "hospital"
+     */
+	public static String cleanDeliveryType(String deliveryType, String geoTypes) {
+		if(Clean.isNullOrEmpty(geoTypes)) {
+			return deliveryType;
+		}
+		
+		if(geoTypes.contains("doctor") || geoTypes.contains("hospital")) {
+			return "hospital";
+		}
+		else {
+			return deliveryType;
+		}
+	}
+	
+	/*
+	 * Helper function to check if a string is a date with a given format.
+	 */
+	private static boolean checkDateFormat(String stringDate, Pattern pattern) {
+		Matcher matcher = pattern.matcher(stringDate);
+		return matcher.find();
+    }
+	
+	/**
+     * cleanString: Returns true if not null or empty, otherwise returns false.
+     * 
+     * {talendTypes} boolean | Boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("s") input: the string to clean
+     * 
+     * {example} cleanString("") # true
+     */
+	public static String codifyString(String prefix, String s) {
+		if(Clean.isNullOrEmpty(s)) {
+			return null;
+		}
+		
+		s = s.trim().toUpperCase();
+		s = s.replace(" \\+\\.\\/", "_");
+		return prefix + "_" + s;
+	}
+	
+	private static final Pattern DatePattern1 = Pattern.compile("^\\d{4}-\\d{2}-\\d{2}$");
+	private static final Pattern DatePattern2 = Pattern.compile("^\\d{4}/\\d{2}/\\d{2}$");	
+	private static final Pattern DatePattern3 = Pattern.compile("^\\d{4}\\d{2}\\d{2}$"); 
+	private static final Pattern DatePattern4 = Pattern.compile("^\\d{1,2}/\\d{1,2}/\\d{4}$");
+	private static final Pattern DatePattern5 = Pattern.compile("^\\d{1,2}/\\d{1,2}/\\d{2}$");
+	private static final Pattern DatePattern6 = Pattern.compile("^\\d{2}\\d{2}$");
+	private static final Pattern DatePattern7 = Pattern.compile("^\\d{4}\\d{2}$");
+	private static final Pattern DatePattern8 = Pattern.compile("^\\d{4}/\\d{2}$");
+	private static final Pattern DatePattern9 = Pattern.compile("^\\d{4}년 \\d{1,2}월$");
+
+	private static final Pattern AddressPattern = Pattern.compile("^(\\D+)(\\d+)(.*)$");
+
+	private static final Pattern ProductPattern = Pattern.compile("^(\\D+)((\\d[\\d\\.Tmg]*)(.*\\D(\\d[\\d\\.Tmg]*)){0,1})\\D*$");
+	private static final Pattern DosagePattern = Pattern.compile("^\\D*((\\d[\\d\\.Tmg]*)(.*\\D(\\d[\\d\\.Tmg]*)){0,1})\\D*$");
+}

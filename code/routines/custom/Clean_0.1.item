@@ -7,6 +7,29 @@ import java.util.regex.Matcher;
 public class Clean
 {	
 	/**
+     * filter: check if some key of a given JSON object contains some value.
+     * 
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("context") context: The JSON object.
+     * {param} string("key") key: The key.
+     * {param} string("value") value: The value to check.
+     * 
+     * {example} filter(context, "hashes", "123") # true.
+     */
+    public static boolean filter(org.json.JSONObject context, String key, String value) {
+    	if (context == null || context.optString(key) == null) {
+    		return true;
+    	} else {
+    		java.util.List<String> values = java.util.Arrays.asList(context.getString(key).split(","));
+    		return !values.contains(value);
+    	}
+    }
+    
+	/**
      * cleanString: Returns true if not null or empty, otherwise returns false.
      * 
      * {talendTypes} boolean | Boolean
@@ -94,6 +117,7 @@ public class Clean
      * 
      * {param} String("date") input: the string to clean
      * {param} String("defaultDate") input: the default date
+     * {param} String("defaultFormat") input: the default format
      * 
      * {example} cleanDate("1975/06/12") # "1975-06-12"
      */
@@ -154,166 +178,11 @@ public class Clean
 		else if(checkDateFormat(date, DatePattern8)) {
 			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyy/MM", date));
 		}
-		else if(checkDateFormat(date, DatePattern9)) {
-			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyy년 MM월", date));
-		}
 		else {
 			return defaultDate;
 		}
 	}
 
-	/**
-     * cleanProductAndDosage: Concats a given product, dosage and package using the format 
-     * product|dosage|package. Returns null if the string is null or empty.
-     * 
-     * {talendTypes} String
-     * 
-     * {Category} User Defined
-     * 
-     * {param} String("product") input: the product
-     * {param} String("dosage") input: the dosage/package
-     * 
-     * {example} cleanProductAndDosage("DIAMICRON", "30mg100T") # "DIAMICRON|30|100"
-     */
-	public static String cleanProductAndDosage(String product, String dosage) {
-		if(Clean.isNullOrEmpty(product)) {
-			return null;
-		}
-
-		product = product.replaceAll(",", ""); // Remove commas
-		product = product.replaceAll("T", "T "); // Space after T
-		product = product.replaceAll("mg", "mg "); // Space after mg
-		
-		if(dosage != null && !dosage.equals("") && !product.contains(dosage)) {
-			
-			dosage = dosage.replaceAll(",", ""); // Remove commas
-			dosage = dosage.replaceAll("T", "T "); // Space after T
-			dosage = dosage.replaceAll("mg", "mg "); // Space after mg
-			
-			Matcher matcher = DosagePattern.matcher(dosage);
-			if(matcher.find()) {
-				String part1 = matcher.group(2); // dosage
-				String part2 = matcher.group(4); // package
-				
-				// Check if package or dosage are not inverted
-				if(part1.contains("T") || part2!= null && part2.contains("mg")) {
-					String tmp = part1;
-					part1 = part2;
-					part2 = tmp;
-				}
-				
-				if(part1 != null) {
-					part1 = part1.replaceAll("[^\\d\\.]", ""); // keep numbers only
-					if(!product.contains(part1)) {
-						product = product + " " + part1 + "mg";
-					}
-				}
-				
-				if(part2 != null) {
-					part2 = part2.replaceAll("[^\\d\\.]", ""); // keep numbers only
-					if(!product.contains(part2)) {
-						product = product + " " + part2 + "T";
-					}
-				}
-			}
-		}
-
-		Matcher matcher = ProductPattern.matcher(product);
-		if(!matcher.find()) {
-			return null;
-		}
-		
-		String part1 = matcher.group(1).replaceAll("\\(.*\\)", "");
-		String part2 = matcher.group(3); // dosage
-		String part3 = matcher.group(5); // package
-		
-		// Check if package or dosage are not inverted
-		if(part2.contains("T")|| part3 != null && part3.contains("mg")) {
-			String tmp = part2;
-			part2 = part3;
-			part3 = tmp;
-		}
-		
-		if(part2 != null && part3 != null) {
-			part2 = part2.replaceAll("[^\\d\\.]", ""); // keep numbers only
-			part3 = part3.replaceAll("[^\\d\\.]", ""); // keep numbers only
-			return part1.trim() + "|" + part2 + "|" + part3;
-		}
-		else if(part2 != null && part3 == null) {
-			part2 = part2.replaceAll("[^\\d\\.]", ""); // keep numbers only
-			return part1.trim() + "|" + part2 + "|0";
-		}
-		else if(part2 == null && part3 != null) {
-			part3 = part3.replaceAll("[^\\d\\.]", ""); // keep numbers only
-			return part1.trim() + "|0|" + part3;
-		}
-		else {
-			return part1.trim() + "|0|0";
-		}
-	}
-
-	/**
-     * cleanAddress: Returns a given string representing an address, removing unnecessary parts.
-     * Returns null if the string is null or empty.
-     * 
-     * {talendTypes} String
-     * 
-     * {Category} User Defined
-     * 
-     * {param} String("address") input: the string to clean
-     * 
-     * {example} cleanAddress("district locality street # (something)") # "district locality street #"
-     */
-	public static String cleanAddress(String address) {
-		if(Clean.isNullOrEmpty(address)) {
-			return null;
-		}
-		
-		address = address.replaceAll(",", ""); // Remove commas
-		address = address.replaceAll("\\(.*\\)", ""); // Remove parts in parenthesis
-		address = address.replaceAll(" +", " "); // Remove duplicate spaces
-		
-		Matcher matcher = AddressPattern.matcher(address);
-		if(!matcher.find()) {
-			return address.trim();
-		}
-
-		return matcher.group(1).trim() + " " + matcher.group(2).trim() + matcher.group(3);
-	}
-	
-	/**
-     * cleanPostalCode: Returns a given string representing an postal code with the format "XXX-XXX".
-     * Returns null if the string is null or empty.
-     * 
-     * {talendTypes} String
-     * 
-     * {Category} User Defined
-     * 
-     * {param} String("address") input: the string to clean
-     * 
-     * {example} cleanPostalCode("XXXXXX") # "XXX-XXX"
-     */
-	public static String cleanPostalCode(String postalCode) {
-		if(Clean.isNullOrEmpty(postalCode)) {
-			return null;
-		}
-		
-		postalCode = postalCode.replaceAll("-| ", ""); // Remove dashes and spaces
-		
-		if(postalCode.length() == 6) {
-			return postalCode.substring(0, 3) + "-" + postalCode.substring(3, 6);
-		}
-		else if(postalCode.length() == 4) {
-			return "0" + postalCode;
-		}
-		else if(postalCode.length() == 5) {
-			return postalCode;
-		}
-		else {
-			return null;
-		}
-	}
-	
 	/**
      * cleanFilename: Returns a given file name without extension, otherwise null if the string
      * is null or empty.
@@ -338,49 +207,16 @@ public class Clean
 	}
 	
 	/**
-     * cleanDeliveryType: returns a location type from the types information from Googlemap such
-     * as hospital.
-     * 
-     * {talendTypes} String
-     * 
-     * {Category} User Defined
-     * 
-     * {param} String("deliveryType") input: the string to clean
-     * {param} String("geoTypes") input: the googlemap types
-     * 
-     * {example} cleanDeliveryType("wholesaler", "['hospital']") # "hospital"
-     */
-	public static String cleanDeliveryType(String deliveryType, String geoTypes) {
-		if(Clean.isNullOrEmpty(geoTypes)) {
-			return deliveryType;
-		}
-		
-		if(geoTypes.contains("doctor") || geoTypes.contains("hospital")) {
-			return "hospital";
-		}
-		else {
-			return deliveryType;
-		}
-	}
-	
-	/*
-	 * Helper function to check if a string is a date with a given format.
-	 */
-	private static boolean checkDateFormat(String stringDate, Pattern pattern) {
-		Matcher matcher = pattern.matcher(stringDate);
-		return matcher.find();
-    }
-	
-	/**
-     * cleanString: Returns true if not null or empty, otherwise returns false.
+     * codifyString: Buld a code from a stringh value.
      * 
      * {talendTypes} boolean | Boolean
      * 
      * {Category} User Defined
-     * 
+     *
+     * {param} String("prefix") input: a prefix to prepend to the code
      * {param} String("s") input: the string to clean
      * 
-     * {example} cleanString("") # true
+     * {example} codifyString("Diamicron MR", "PRODUCT") # "PRODUCT_DIAMICRON_MR"
      */
 	public static String codifyString(String prefix, String s) {
 		if(Clean.isNullOrEmpty(s)) {
@@ -392,6 +228,14 @@ public class Clean
 		return prefix + "_" + s;
 	}
 	
+	/*
+	 * Helper function to check if a string is a date with a given format.
+	 */
+	private static boolean checkDateFormat(String stringDate, Pattern pattern) {
+		Matcher matcher = pattern.matcher(stringDate);
+		return matcher.find();
+    }
+	
 	private static final Pattern DatePattern1 = Pattern.compile("^\\d{4}-\\d{2}-\\d{2}$");
 	private static final Pattern DatePattern2 = Pattern.compile("^\\d{4}/\\d{2}/\\d{2}$");	
 	private static final Pattern DatePattern3 = Pattern.compile("^\\d{4}\\d{2}\\d{2}$"); 
@@ -400,10 +244,4 @@ public class Clean
 	private static final Pattern DatePattern6 = Pattern.compile("^\\d{2}\\d{2}$");
 	private static final Pattern DatePattern7 = Pattern.compile("^\\d{4}\\d{2}$");
 	private static final Pattern DatePattern8 = Pattern.compile("^\\d{4}/\\d{2}$");
-	private static final Pattern DatePattern9 = Pattern.compile("^\\d{4}년 \\d{1,2}월$");
-
-	private static final Pattern AddressPattern = Pattern.compile("^(\\D+)(\\d+)(.*)$");
-
-	private static final Pattern ProductPattern = Pattern.compile("^(\\D+)((\\d[\\d\\.Tmg]*)(.*\\D(\\d[\\d\\.Tmg]*)){0,1})\\D*$");
-	private static final Pattern DosagePattern = Pattern.compile("^\\D*((\\d[\\d\\.Tmg]*)(.*\\D(\\d[\\d\\.Tmg]*)){0,1})\\D*$");
 }

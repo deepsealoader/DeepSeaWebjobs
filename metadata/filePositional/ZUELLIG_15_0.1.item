@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:PositionalFileConnection xmi:id="_KHhjwPJSEeq0H7uPduYr-w" name="ZUELLIG_15" dataPackage="_A-6YkXk0EeqIIbhqyqsenA" Server="Localhost 127.0.0.1" FilePath="C:/Users/RRU_SG1/Desktop/WorkZone/201909/Z0591924.15" Encoding="UTF-8" FieldSeparatorValue="&quot;5,3,6,6,8,3,8,20,7,10,3,2,1,3,10,10,1,*&quot;" RowSeparatorValue="&quot;\n&quot;" HeaderValue="0" RemoveEmptyRow="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_A-6YkXk0EeqIIbhqyqsenA" name="default" dataManager="_KHhjwPJSEeq0H7uPduYr-w">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_A-6Yknk0EeqIIbhqyqsenA" id="_B5EJIHkzEeqIIbhqyqsenA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k0oagHk7EeqIIbhqyqsenA" name="principalSapID" label="principalSapID" length="5" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_gbHDQHlAEeqIIbhqyqsenA" name="Column1" label="Column1" length="3" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6Yk3k0EeqIIbhqyqsenA" label="customerSdsID" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6YlHk0EeqIIbhqyqsenA" label="PrincipalSdsID" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jIJ4UHlAEeqIIbhqyqsenA" name="invoiceNo" label="invoiceNo" length="8" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_jMNR4HlAEeqIIbhqyqsenA" name="lineNo" label="lineNo" length="3" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_to-LsHlAEeqIIbhqyqsenA" name="date" label="date" length="8" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_uira4HlAEeqIIbhqyqsenA" name="productSapID" label="productSapID" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6Ylnk0EeqIIbhqyqsenA" label="quantity" length="7" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6Yl3k0EeqIIbhqyqsenA" label="amount" length="10" precision="4" talendType="id_Double" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6YmHk0EeqIIbhqyqsenA" label="lineType" length="3" talendType="id_Character" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6YmXk0EeqIIbhqyqsenA" label="transactionType" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_GD63oHlBEeqIIbhqyqsenA" name="Column6" label="Column6" length="1" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Jpy_4HlGEeqIIbhqyqsenA" name="Column8" label="Column8" length="3" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6Ymnk0EeqIIbhqyqsenA" label="Column7" length="10" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6Ym3k0EeqIIbhqyqsenA" label="unitPrice" length="10" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_A-6YnXk0EeqIIbhqyqsenA" label="Column10" length="1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_HGRakHlDEeqIIbhqyqsenA" name="Column12" label="Column12" length="3" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
