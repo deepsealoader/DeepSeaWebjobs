@@ -1,0 +1,122 @@
+package routines;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class DeepSeaFile {
+
+	/**
+     * matchFilename: check if some file matches a filename.
+     * 
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("globalMap") globalMap: The global map.
+     * {param} string("file") file: The file.
+     * {param} string("filename") filename: The filename to check.
+     * 
+     * {example} matchFilename(globalMap, "tDeepSeaList_1", "customer.xlsx") # true.
+     */
+    public static boolean matchFilename(java.util.Map<String, Object> globalMap, String file, String filename) {
+    	String fileFilename = globalMap.get(file + "_CURRENT_FILENAME").toString();
+    	return filename.equalsIgnoreCase(fileFilename);
+    }
+    
+    /**
+     * matchBatchDate: true if some file has batch date math some value, false otherwise.
+     * 
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("globalMap") globalMap: The global map.
+     * {param} string("file") file: The file.
+     * {param} string("batchDate") file: The batch date to check.
+     * 
+     * {example} matchMetadata(globalMap, "tDeepSeaList_1", "2020-10-01") # true.
+     */
+    public static boolean matchBatchDate(java.util.Map<String, Object> globalMap, String file, String batchDate) {
+    	String fileBatchdate = globalMap.get(file + "_CURRENT_BATCHDATE").toString();
+    	return fileBatchdate.startsWith(batchDate);
+    }
+    
+    /**
+     * matchMetadata: true if some file has metadata math some value, false otherwise.
+     * 
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("globalMap") globalMap: The global map.
+     * {param} string("file") file: The file.
+     * {param} string("key") file: The metadata key.
+     * {param} string("value") file: The value to check.
+     * 
+     * {example} matchMetadata(globalMap, "tDeepSeaList_1", "current", "yes") # true.
+     */
+    public static boolean matchMetadata(java.util.Map<String, Object> globalMap, String file, String key, String value) {
+    	org.json.JSONObject metadata = (org.json.JSONObject) globalMap.get(file + "_CURRENT_METADATA");
+    	return value.equalsIgnoreCase(metadata.optString(key));
+    }
+    
+	/**
+     * checkIfAlreadyProcessed: check if some file has been already processed by the webjob.
+     * 
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("globalMap") globalMap: The global map.
+     * {param} string("conn") conn: The conn.
+     * {param} string("file") file: The file.
+     * 
+     * {example} checkIfAlreadyProcessed(globalMap, "tDeepSeaConnect_1", "tDeepSeaList_1") # true.
+     */
+    public static boolean checkIfAlreadyProcessed(java.util.Map<String, Object> globalMap, String conn, String file) {
+    	org.json.JSONObject context = (org.json.JSONObject) globalMap.get(conn + "_WEBJOB_CONTEXT");
+    	if (context == null) {
+    		return false;
+    	} else {
+    		String lastCompletedHashes = context.optString("last_completed_hash");
+    		if (lastCompletedHashes == null || lastCompletedHashes.equals("")) {
+    			lastCompletedHashes = context.optString("last_completed_hashes");
+    			if (lastCompletedHashes == null || lastCompletedHashes.equals("")) {
+        			return false;
+        		}
+    		}
+    		String hash = globalMap.get(file + "_CURRENT_HASH").toString();
+    		return java.util.Arrays.asList(lastCompletedHashes.split(",")).contains(hash);
+    	}
+    }
+    
+    public static boolean checkIfNoExceptions(java.util.Map<String, Object> globalMap) {
+    	boolean result = true;
+    	for (java.util.Map.Entry<String, Object> entry : globalMap.entrySet()) {
+    		if (entry.getKey().endsWith("_EXCEPTIONS")) {
+    			org.json.JSONArray v = (org.json.JSONArray) entry.getValue();
+    			result &= v.length() == 0;
+    		}
+    	}
+    	return result;
+    }
+}

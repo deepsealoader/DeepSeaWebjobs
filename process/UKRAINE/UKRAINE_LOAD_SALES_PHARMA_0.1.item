@@ -70,7 +70,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:LIh0gXg+bQ7UO3Jnsfwxt/wNou32UAn/l5fWCuxg" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:uv7867uRBcRLeXATsMENOpdF1MBYSjoKBJQuq+Yx" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -105,7 +105,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Vijw8OFfR9Jm83rJ9pFUXlsiJNZW+RYLc2SaEcuz" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:61Qy4aCsPU31uKfnoelYWEyg1nGKyHvx1CYSyo8h" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -161,6 +161,7 @@
     <elementParameter field="TEXT" name="BATCH_DATE" value="" show="false"/>
     <elementParameter field="CHECK" name="USE_FILTER" value="true"/>
     <elementParameter field="MEMO_JAVA" name="FILTER_CONDITION" value="Ukraine.filter(&#xA;&#x9;(org.json.JSONObject) globalMap.get(&quot;tDeepSeaConnect_1_WEBJOB_CONTEXT&quot;),&#xA;&#x9;&quot;last_completed_hashes&quot;,&#xA;&#x9;globalMap.get(&quot;tDeepSeaList_1_CURRENT_HASH&quot;).toString())"/>
+    <elementParameter field="CHECK" name="USE_LOG_STAT" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ListAllSales"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
@@ -292,7 +293,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_5" show="false"/>
     <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
     <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="COUNTRY" value="&quot;APAC&quot;"/>
+    <elementParameter field="TEXT" name="REGION" value="&quot;EMEA&quot;"/>
     <elementParameter field="TEXT" name="RECORDCODE" value="&quot;deepsea.ukraine.sales&quot;"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="&quot;ukraine_sales&quot;"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
@@ -315,6 +316,7 @@
     <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
     <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
     <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_CATCH_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="WriteSales"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPOutput_5">
@@ -505,7 +507,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>

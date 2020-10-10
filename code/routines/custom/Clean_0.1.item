@@ -7,29 +7,6 @@ import java.util.regex.Matcher;
 public class Clean
 {	
 	/**
-     * filter: check if some key of a given JSON object contains some value.
-     * 
-     * 
-     * {talendTypes} boolean
-     * 
-     * {Category} User Defined
-     * 
-     * {param} string("context") context: The JSON object.
-     * {param} string("key") key: The key.
-     * {param} string("value") value: The value to check.
-     * 
-     * {example} filter(context, "hashes", "123") # true.
-     */
-    public static boolean filter(org.json.JSONObject context, String key, String value) {
-    	if (context == null || context.optString(key) == null) {
-    		return true;
-    	} else {
-    		java.util.List<String> values = java.util.Arrays.asList(context.getString(key).split(","));
-    		return !values.contains(value);
-    	}
-    }
-    
-	/**
      * cleanString: Returns true if not null or empty, otherwise returns false.
      * 
      * {talendTypes} boolean | Boolean
