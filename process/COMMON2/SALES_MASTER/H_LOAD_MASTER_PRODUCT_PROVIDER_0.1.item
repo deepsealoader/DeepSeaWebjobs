@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:bXFuJwVJwD7lBUAMn9g1P2p6HPmrS2B4Z8GbT134" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:UDGEr2F8q164m+m/hr0vQAaigzyCnhnEVfuNYq+i" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4/p+C0cE8VQXpZpBsix46DVApMyZAyRDTMlR56B8" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1r7Bc4BUqMl8j4FEdbHJqMScT2mYXBE0ahd8h/Dv" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -204,13 +204,16 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="servierCode"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="groupCode"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="providerCode"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="group"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="groupName"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="providerName"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="manufacturerName"/>
@@ -245,9 +248,10 @@
       <column comment="" key="false" length="-1" name="rowNum" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="sheetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="servierCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="groupCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="providerCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="group" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="groupName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="providerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -276,9 +280,10 @@
     <metadata connector="FLOW" name="row4">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="servierCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="groupCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="providerCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="group" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="groupName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="providerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -301,14 +306,15 @@
       <column comment="" key="false" length="-1" name="ROWID" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row4">
         <mapperTableEntries name="businessKey" expression="row3.providerCode " type="id_String"/>
         <mapperTableEntries name="servierCode" expression="row3.servierCode " type="id_String"/>
+        <mapperTableEntries name="groupCode" expression="row3.groupCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="providerCode" expression="row3.providerCode " type="id_String"/>
-        <mapperTableEntries name="group" expression="row3.group " type="id_String" nullable="true"/>
-        <mapperTableEntries name="name" expression="row3.name " type="id_String" nullable="true"/>
+        <mapperTableEntries name="groupName" expression="row3.groupName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="providerName" expression="row3.providerName" type="id_String" nullable="true"/>
         <mapperTableEntries name="manufacturerName" expression="row3.manufacturerName " type="id_String"/>
         <mapperTableEntries name="therapeuticClass" expression="row3.therapeuticClass " type="id_String"/>
         <mapperTableEntries name="molecule" expression="row3.molecule " type="id_String" nullable="true"/>
@@ -335,9 +341,10 @@
         <mapperTableEntries name="rowNum" type="id_String" nullable="true"/>
         <mapperTableEntries name="sheetName" type="id_String" nullable="true"/>
         <mapperTableEntries name="servierCode" type="id_String"/>
+        <mapperTableEntries name="groupCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="providerCode" type="id_String"/>
-        <mapperTableEntries name="group" type="id_String" nullable="true"/>
-        <mapperTableEntries name="name" type="id_String" nullable="true"/>
+        <mapperTableEntries name="groupName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="providerName" type="id_String" nullable="true"/>
         <mapperTableEntries name="manufacturerName" type="id_String" nullable="true"/>
         <mapperTableEntries name="therapeuticClass" type="id_String" nullable="true"/>
         <mapperTableEntries name="molecule" type="id_String" nullable="true"/>
@@ -375,9 +382,10 @@
     <metadata connector="FLOW" name="tMCPOutput_2">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="servierCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="groupCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="providerCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="group" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="groupName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="providerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -579,6 +587,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="rowId"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="groupName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
@@ -678,7 +689,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="name"/>
+      <elementValue elementRef="TRACE_COLUMN" value="providerName"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="nameLo"/>
@@ -694,6 +705,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="providerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="groupName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="groupCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

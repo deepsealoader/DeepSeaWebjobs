@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:E5YQLZ4aOXdLyDEP62PzNwBbSOk5DYbEQ0oLcA3f" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:p65cn0RVH3RDZ/oFx3XJI2xvbv2pS/NaUIG97PLy" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:z6gMvb73MPfmJVzt/2iPBWiR4yB8QxA6SBbxkotz" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:WVbDI2NrBbnP4QjobuJDAXxoIi7NNqJXfDEdNe7y" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -201,13 +201,19 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="sheetName"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="servierCode"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="therapeuticClass"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="therapeuticClassName"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="nameEn"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="nameLo"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="sourceChannelCode"/>
@@ -223,9 +229,11 @@
       <column comment="" key="false" length="-1" name="rowId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rowNum" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="sheetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="servierCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="therapeuticClassName" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameEn" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="coeffMarket" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -245,9 +253,11 @@
       <column comment="" key="false" length="-1" name="rowId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="rowNum" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="sheetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="servierCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="therapeuticClassName" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameEn" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLo" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="coeffMarket" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -288,12 +298,12 @@
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row4">
         <mapperTableEntries name="businessKey" expression="row2.therapeuticClass" type="id_String"/>
-        <mapperTableEntries name="servierCode" expression="row2.therapeuticClass" type="id_String" nullable="true"/>
+        <mapperTableEntries name="servierCode" expression="row2.servierCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="therapeuticClass" expression="row2.therapeuticClass " type="id_String"/>
         <mapperTableEntries name="therapeuticClassName" expression="row2.therapeuticClassName " type="id_String"/>
         <mapperTableEntries name="sourceChannelCode" expression="row2.sourceChannelCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="nameEn" expression="row2.market " type="id_String"/>
-        <mapperTableEntries name="nameLo" expression="row2.market " type="id_String" nullable="true"/>
+        <mapperTableEntries name="nameEn" expression="row2.nameEn " type="id_String"/>
+        <mapperTableEntries name="nameLo" expression="row2.nameLo " type="id_String" nullable="true"/>
         <mapperTableEntries name="marketCoef" expression="String.format(&quot;%.8f&quot;, Float.parseFloat(row2.coeffMarket)) " type="id_String"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="row5" expressionFilter="!Clean.isNullOrEmpty(row2.sourceChannelCode)" activateExpressionFilter="true">
@@ -306,9 +316,11 @@
         <mapperTableEntries name="rowId" type="id_String" nullable="true"/>
         <mapperTableEntries name="rowNum" type="id_String" nullable="true"/>
         <mapperTableEntries name="sheetName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="market" type="id_String"/>
+        <mapperTableEntries name="servierCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="therapeuticClass" type="id_String"/>
         <mapperTableEntries name="therapeuticClassName" type="id_String"/>
+        <mapperTableEntries name="nameEn" type="id_String"/>
+        <mapperTableEntries name="nameLo" type="id_String" nullable="true"/>
         <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="coeffMarket" type="id_String"/>
       </inputTables>
@@ -545,6 +557,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="rowId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="nameLo"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="servierCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
