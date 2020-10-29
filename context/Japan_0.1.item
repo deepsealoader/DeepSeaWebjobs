@@ -24,7 +24,7 @@
     <contextParameter xmi:id="_adoGccbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Japan"/>
     <contextParameter xmi:id="_tOQi8kbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
     <contextParameter xmi:id="_NlAPMnbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="3"/>
-    <contextParameter xmi:id="_JyY7YqLsEeqK-7HnS2Be-A" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
+    <contextParameter xmi:id="_JyY7YqLsEeqK-7HnS2Be-A" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="http://20.54.108.234"/>
     <contextParameter xmi:id="_QtRC0qLsEeqK-7HnS2Be-A" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
   </talendfile:ContextType>
 </xmi:XMI>

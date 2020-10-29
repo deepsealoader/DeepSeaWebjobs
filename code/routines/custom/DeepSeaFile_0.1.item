@@ -96,25 +96,38 @@ public class DeepSeaFile {
     	org.json.JSONObject context = (org.json.JSONObject) globalMap.get(conn + "_WEBJOB_CONTEXT");
     	if (context == null) {
     		return false;
-    	} else {
-    		String lastCompletedHashes = context.optString("last_completed_hash");
-    		if (lastCompletedHashes == null || lastCompletedHashes.equals("")) {
-    			lastCompletedHashes = context.optString("last_completed_hashes");
-    			if (lastCompletedHashes == null || lastCompletedHashes.equals("")) {
-        			return false;
-        		}
-    		}
-    		String hash = globalMap.get(file + "_CURRENT_HASH").toString();
-    		return java.util.Arrays.asList(lastCompletedHashes.split(",")).contains(hash);
     	}
+    	
+		String lastCompletedHashes = context.optString("last_completed_hash").trim();
+		if (lastCompletedHashes == null || lastCompletedHashes.equals("")) {
+			lastCompletedHashes = context.optString("last_completed_hashes").trim();
+			if (lastCompletedHashes == null || lastCompletedHashes.equals("")) {
+    			return false;
+    		}
+		}
+		
+		String hash = globalMap.get(file + "_CURRENT_HASH").toString();
+		return java.util.Arrays.asList(lastCompletedHashes.split(",")).contains(hash);
     }
     
-    public static boolean checkIfNoExceptions(java.util.Map<String, Object> globalMap) {
-    	boolean result = true;
+    /**
+     * checkIfExceptions: check if some exceptions has been thrown.
+     * 
+     * 
+     * {talendTypes} boolean
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("globalMap") globalMap: The global map.
+     * 
+     * {example} checkIfExceptions(globalMap) # true.
+     */
+    public static boolean checkIfExceptions(java.util.Map<String, Object> globalMap) {
+    	boolean result = false;
     	for (java.util.Map.Entry<String, Object> entry : globalMap.entrySet()) {
     		if (entry.getKey().endsWith("_EXCEPTIONS")) {
     			org.json.JSONArray v = (org.json.JSONArray) entry.getValue();
-    			result &= v.length() == 0;
+    			result |= v.length() > 0;
     		}
     	}
     	return result;

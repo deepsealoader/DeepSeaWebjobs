@@ -74,8 +74,25 @@ public class Clean
      * {example} cleanString("6,720.00") # "6720.00"
      */
 	public static String cleanNumber(String number) {
+		return Clean.cleanNumber(number, null);
+	}
+	
+	/**
+     * cleanNumber: Cleans a given string representing a number, removing comma, 
+     * converting parenthesis as a negative, otherwise returns a default value.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("number") input: the string to clean
+     * {param} String("defaultValue") input: the default value
+     * 
+     * {example} cleanString("6,720.00", "0.00") # "6720.00"
+     */
+	public static String cleanNumber(String number, String defaultValue) {
 		if(Clean.isNullOrEmpty(number)) {
-			return null;
+			return defaultValue;
 		}
 		
 		number = number.replaceAll("\\(", "-"); // Replace (XXX) by -XXX

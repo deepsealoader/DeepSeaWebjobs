@@ -6,17 +6,18 @@
     <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" type="id_String" value="*.xlsx"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN_11" prompt="DEEPSEA_AUTH_TOKEN_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-prd01-webapp003.azurewebsites.net"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME_11" prompt="DEEPSEA_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="dd/MM/yy"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN_11" prompt="DEEPSEA_AUTH_TOKEN_11?" promptNeeded="false" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME_11" prompt="DEEPSEA_HOSTNAME_11?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-prd01-webapp003.azurewebsites.net/mcp"/>
-    <contextParameter comment="" name="MONGODB_HOSTNAME_11" prompt="MONGODB_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="POSTGRES_DATABASE_11" prompt="POSTGRES_DATABASE_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="deepsea_thailand"/>
-    <contextParameter comment="" name="POSTGRES_HOSTNAME_11" prompt="POSTGRES_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
+    <contextParameter comment="" name="MONGODB_HOSTNAME_11" prompt="MONGODB_HOSTNAME_11?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="POSTGRES_DATABASE_11" prompt="POSTGRES_DATABASE_11?" promptNeeded="false" type="id_String" value="deepsea_thailand"/>
+    <contextParameter comment="" name="POSTGRES_HOSTNAME_11" prompt="POSTGRES_HOSTNAME_11?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
     <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="INPUT_DATE_FORMAT" prompt="INPUT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH"/>
@@ -24,17 +25,18 @@
     <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" type="id_String" value="*.xlsx"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN_11" prompt="DEEPSEA_AUTH_TOKEN_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN_11" prompt="DEEPSEA_AUTH_TOKEN_11?" promptNeeded="false" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://localhost:8080"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME_11" prompt="DEEPSEA_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost:8080"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="dd/MM/yy"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME_11" prompt="DEEPSEA_HOSTNAME_11?" promptNeeded="false" type="id_String" value="localhost:8080"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-prd01-webapp003.azurewebsites.net/mcp"/>
-    <contextParameter comment="" name="MONGODB_HOSTNAME_11" prompt="MONGODB_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MONGODB"/>
-    <contextParameter comment="" name="POSTGRES_DATABASE_11" prompt="POSTGRES_DATABASE_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="deepsea_thailand"/>
-    <contextParameter comment="" name="POSTGRES_HOSTNAME_11" prompt="POSTGRES_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="POSTGRES"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
+    <contextParameter comment="" name="MONGODB_HOSTNAME_11" prompt="MONGODB_HOSTNAME_11?" promptNeeded="false" type="id_String" value="MONGODB"/>
+    <contextParameter comment="" name="POSTGRES_DATABASE_11" prompt="POSTGRES_DATABASE_11?" promptNeeded="false" type="id_String" value="deepsea_thailand"/>
+    <contextParameter comment="" name="POSTGRES_HOSTNAME_11" prompt="POSTGRES_HOSTNAME_11?" promptNeeded="false" type="id_String" value="POSTGRES"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
     <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="INPUT_DATE_FORMAT" prompt="INPUT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
   </context>
   <context confirmationNeeded="false" name="Development">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH"/>
@@ -42,17 +44,18 @@
     <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" type="id_String" value="*.xlsx"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN_11" prompt="DEEPSEA_AUTH_TOKEN_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN_11" prompt="DEEPSEA_AUTH_TOKEN_11?" promptNeeded="false" type="id_String" value="Basic YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME_11" prompt="DEEPSEA_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost:4040"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="dd/MM/yy"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME_11" prompt="DEEPSEA_HOSTNAME_11?" promptNeeded="false" type="id_String" value="localhost:4040"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
-    <contextParameter comment="" name="MONGODB_HOSTNAME_11" prompt="MONGODB_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="POSTGRES_DATABASE_11" prompt="POSTGRES_DATABASE_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="deepsea_thailand"/>
-    <contextParameter comment="" name="POSTGRES_HOSTNAME_11" prompt="POSTGRES_HOSTNAME_11?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="MONGODB_HOSTNAME_11" prompt="MONGODB_HOSTNAME_11?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter comment="" name="POSTGRES_DATABASE_11" prompt="POSTGRES_DATABASE_11?" promptNeeded="false" type="id_String" value="deepsea_thailand"/>
+    <contextParameter comment="" name="POSTGRES_HOSTNAME_11" prompt="POSTGRES_HOSTNAME_11?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
     <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="INPUT_DATE_FORMAT" prompt="INPUT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="yyyyMMdd"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -97,7 +100,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:FWVq/2lXRtCpbZENn0u//+JPEE+PtdTVLdbnPM9O" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:JWng+9RUAaRibudyJKDfOtJQ0jdRf/nNUdgKoHOE" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -132,7 +135,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9aMwgVSGBBsRJxxiAqTHHRG8gsIEsrWyuOTSgAzT" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ShlusOnJXaIFnZI1HHPw5EOVbYVOVIf2nGRaABkf" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -313,7 +316,7 @@
       <elementValue elementRef="POS" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="true"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:4XQF5pWtL6SZp315bW5oIpUWkTal8Q25s93FvCuOILCapo2/w0t6PJlBPIl+U9J/NUGgZ8befQ=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:X/iZno7Nd6Bl2wql6eGwXxnD3UkvYnWYM2af2Zl9p55ZiPpGRRpjVaQQZ15DbYxiQFS8aGz3Mg=="/>
     <elementParameter field="TEXT" name="LABEL" value="SampleDate"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDeepSeaSample_1">
@@ -342,7 +345,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="date" expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, row1.date) " type="id_Date"/>
+        <mapperTableEntries name="date" expression="TalendDate.parseDate(context.INPUT_DATE_FORMAT, row1.date) " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="row1.date != null" columnNameFilter="">
         <mapperTableEntries name="billingDate" expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, Var.date) " type="id_String"/>
@@ -389,7 +392,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_DATE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_DATE" value="globalMap.get(&quot;BATCH_DATE&quot;).toString()"/>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="true"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:WKPds7hTn1/p1+96jcuf+KCt+Xyy47NVw0+eF4YcZ0jMOGuMlMyNRIQ5aZHWeOv4om10OoPQTQ=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:9ceI6QY58UlKWQLk9qC08qqRSI7IH6fxx4wtHgIorJShYvj4gd0S6VySYucOpXwdl378tNL9eQ=="/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tSetGlobalVar_1">
@@ -425,7 +428,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate8" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>

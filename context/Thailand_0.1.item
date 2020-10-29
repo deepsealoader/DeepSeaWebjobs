@@ -11,7 +11,7 @@
     <contextParameter xmi:id="_t5V5QHbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="2"/>
     <contextParameter xmi:id="_uqtmwONSEeqyjd-RDTN0Ug" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-prd01-webapp003.azurewebsites.net/mcp"/>
     <contextParameter xmi:id="_uqtmweNSEeqyjd-RDTN0Ug" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter xmi:id="_uqtmwuNSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-prd01-webapp003.azurewebsites.net"/>
+    <contextParameter xmi:id="_uqtmwuNSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter xmi:id="_uqtmw-NSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_1Qv74MoQEeiFhKycUBX9rg" confirmationNeeded="false" name="Development">
