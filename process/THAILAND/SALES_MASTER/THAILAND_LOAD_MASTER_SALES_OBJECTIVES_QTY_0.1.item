@@ -151,7 +151,7 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="JOBNAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="jobName"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="FILENAME"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="QUOTA_TYPE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;SalesObjective_Qty.xlsx&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales_objectiveqty&quot;"/>

@@ -32,7 +32,7 @@
     <contextParameter comment="" name="SOURCE_NAME" prompt="SOURCE_NAME?" promptNeeded="false" type="id_String" value="MEGA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="http://localhost:4040"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter comment="" name="POSTGRES_DATABASE" prompt="POSTGRES_DATABASE?" promptNeeded="false" type="id_String" value="deepsea_myanmar"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:eC9Bvevpvk+Wtbsohdgd6Rx2XVMAOxAE+MkO8y16" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:q3O/aG9rlsuWtKbL2xDqMwROgf/JGrFKqSO3JJua" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:v7+WJCsTVRFmUy0P6Eig7L2fvrN3uB77ET/A5+Op" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JUG2inYNuPuWegL2suhAwX4jdFXesKhJEgOuAR0n" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -161,7 +161,7 @@
     <elementParameter field="CHECK" name="SET_AUTHENTICATION_DATABASE" value="false" show="false"/>
     <elementParameter field="TEXT" name="AUTHENTICATION_DATABASE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:wu3S4wZXS/c2jeqqUaf8Q6oi59ZyzGthcyEZW311" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:2gwP2bqJYwMJ2ZPJlIofPGQtcb2TtGNHLHZSsAyf" show="false"/>
     <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" value="&quot;mongouser@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
@@ -180,7 +180,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="context.getPOSTGRES_DATABASE()"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;postgres&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5Q8Rs0KC7Xx9veOjc0BI/qulXx3pqmJlwx0rxhl9IMOyZNd+4OY="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Fda8wZoHXAI/uM6mndTR9phHrkZ5bVHFwDWR+w+G6645SrwnQDQ="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -342,7 +342,7 @@
     <elementParameter field="CHECK" name="SET_AUTHENTICATION_DATABASE" value="false" show="false"/>
     <elementParameter field="TEXT" name="AUTHENTICATION_DATABASE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:l7sXf4GZqdp9l2ME94X7Msg1BuoMZUo224Aytjb/" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:9s8K4Ghydyv/zwrNAGyqK1oDVf/II4XqjR2w8l25" show="false"/>
     <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" value="&quot;mongouser@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
@@ -398,7 +398,7 @@
     <elementParameter field="CHECK" name="SET_AUTHENTICATION_DATABASE" value="false" show="false"/>
     <elementParameter field="TEXT" name="AUTHENTICATION_DATABASE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:S+/YplnJokl8CylyfdVLsIe1heN1kp5WCf7RK914" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:U2O6977MQZoptgd1/b42/QGKuHHI9GjOC+LTVR19" show="false"/>
     <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" value="&quot;mongouser@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
@@ -454,7 +454,7 @@
     <elementParameter field="CHECK" name="SET_AUTHENTICATION_DATABASE" value="false" show="false"/>
     <elementParameter field="TEXT" name="AUTHENTICATION_DATABASE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:AkkJlZAa1n3mg/k18BmivNefm1ztKcFANvM7Z6Nf" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:IJLCUgJHjkboe7h0tw5/k3FHaUCiDu3Z8024zAqL" show="false"/>
     <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" value="&quot;mongouser@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
@@ -507,7 +507,7 @@
     <elementParameter field="CHECK" name="SET_AUTHENTICATION_DATABASE" value="false" show="false"/>
     <elementParameter field="TEXT" name="AUTHENTICATION_DATABASE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:NKhAhBoabd9tZmUdH6xY+MwaoFRFnOYz1v3/+s8B" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Rcy+X5h7UHbwPBgpoAfsBEun88TYAXElZ+HG7+aJ" show="false"/>
     <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" value="&quot;mongouser@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
@@ -606,7 +606,7 @@
     <elementParameter field="CHECK" name="SET_AUTHENTICATION_DATABASE" value="false" show="false"/>
     <elementParameter field="TEXT" name="AUTHENTICATION_DATABASE" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:8WCa8HEoK+niLQ4Dmh/qHqiKWDUw4P2jfdPFPw3/" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:oNSmqAF/ystQZGOt2m59FO6rlEej0OQtcE2AMCWi" show="false"/>
     <elementParameter field="TEXT" name="KRB_USER_PRINCIPAL" value="&quot;mongouser@EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_REALM" value="&quot;EXAMPLE.COM&quot;" show="false"/>
     <elementParameter field="TEXT" name="KRB_KDC" value="&quot;kdc.example.com&quot;" show="false"/>
@@ -651,7 +651,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/raOfiLZtPTUal+IHIbpiLwTtYCK5tPS/J/mnW5w" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9O4UxQl1pF8lPUIf99cKTB7oim0PIfLYty6bdNRN" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;HUB_TABLE&quot;).toString()"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -954,7 +954,7 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:dQLu/dXymdPNEGQL3Lcjim1T76WIcr/M9pv8cdik" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JrnGB52KEmE2OvVtAq13VCv+evITXVBIeT43jTFC" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;HUB_TABLE&quot;).toString()"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -1352,7 +1352,7 @@
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:lWs5kwc0cwUVmrygjGtlaOO5XDtXpD8rgHvYFxmo" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:RUMRq7sXzBaNFjSayaF0QfBYKRCLSNRok3/Iw0uC" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="globalMap.get(&quot;SAT_TABLE&quot;).toString()"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>

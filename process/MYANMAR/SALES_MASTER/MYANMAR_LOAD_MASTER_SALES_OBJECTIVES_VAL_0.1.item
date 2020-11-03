@@ -21,7 +21,7 @@
   <context confirmationNeeded="false" name="Development">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="http://localhost:4040"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
@@ -70,7 +70,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:MdhTIx8Iu4v8vVJNDQM7XSFgze7ebjsVQFRcQOp0" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:qaoGeWz6mwpTAYfjd5qfRSFQODdHKQMrcxOj6DSi" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -105,7 +105,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:8I7yR7OXdkHWTOFyEcIPVXljS+EfyOwluVerhnUD" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:A6WhykqoIHPasxj7oVBHXgZeXfpHfTWnxp6muJtV" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -151,8 +151,8 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="JOBNAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="jobName"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="FILENAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;SalesObjective_Val.xlsx&quot;"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="QUOTA_TYPE"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;Value&quot;"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="TABLE"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;sales_objectiveval&quot;"/>
     </elementParameter>

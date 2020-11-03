@@ -10,7 +10,7 @@
     <contextParameter xmi:id="_8uZnsRl7Eeu8XbY4258dZg" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_1Qv74MoQEeiFhKycUBX9rg" confirmationNeeded="false" name="Development">
-    <contextParameter xmi:id="_1Qv748oQEeiFhKycUBX9rg" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
+    <contextParameter xmi:id="_1Qv748oQEeiFhKycUBX9rg" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="http://localhost:4040"/>
     <contextParameter xmi:id="_1Qv75MoQEeiFhKycUBX9rg" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
     <contextParameter xmi:id="_1Qv75coQEeiFhKycUBX9rg" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Myanmar"/>
     <contextParameter xmi:id="_qZ9PUUbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="dd/MM/yy"/>

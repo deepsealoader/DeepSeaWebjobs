@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:qXdckaYxTG5SR0Eoxm3K091MZp3LL2/WfKEEiAZ5" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:RwNzEUdco7qPUI8haSW4Lh+4K8MCt/nRqPI32E42" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:KXxz0y/pW6tRPo19KGYhpaKACxz+cDLOGZbDrTYQ" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:UC6ATeJwUvlrfxlwqRwM8ialM3jxcU6CzOEIldct" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -147,6 +147,7 @@
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
     <routinesParameter id="_lDf2IG_pEeqlSN8H7Du7PQ" name="Japanese"/>
     <routinesParameter id="_JKP6MP7qEeqrcYurX7_DFw" name="DeepSeaFile"/>
+    <routinesParameter id="_48LqMCmnEemf_-JpfaxcDQ" name="Clean"/>
   </parameters>
   <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
@@ -253,17 +254,20 @@
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="month" expression="TalendDate.TO_CHAR(TalendDate.TO_DATE(row3.month, context.DEFAULT_DATE_FORMAT), &quot;yyyyMMdd&quot;) " type="id_String"/>
+        <mapperTableEntries name="monthDate" expression="TalendDate.TO_CHAR(TalendDate.TO_DATE(row3.month, context.DEFAULT_DATE_FORMAT), &quot;yyyy-MM-dd&quot;) " type="id_String"/>
+      </varTables>
       <outputTables sizeState="INTERMEDIATE" name="row4">
-        <mapperTableEntries name="businessKey" expression="row3.productCode + &quot;*&quot; + row3.month " type="id_String"/>
+        <mapperTableEntries name="businessKey" expression="row3.productCode + &quot;*&quot; + Var.month" type="id_String"/>
         <mapperTableEntries name="productCode" expression="row3.productCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="productName" expression="row3.productName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="month" expression="row3.month " type="id_String" nullable="true"/>
+        <mapperTableEntries name="month" expression="Var.monthDate" type="id_String" nullable="true"/>
         <mapperTableEntries name="price" expression="row3.price" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="row5">
-        <mapperTableEntries name="businessKey" expression="row3.productCode + &quot;*&quot; + row3.month " type="id_String" nullable="true"/>
-        <mapperTableEntries name="priceId" expression="row3.productCode + &quot;*&quot; + row3.month " type="id_String" nullable="true"/>
+        <mapperTableEntries name="businessKey" expression="row3.productCode + &quot;*&quot; + Var.month" type="id_String" nullable="true"/>
+        <mapperTableEntries name="priceId" expression="row3.productCode + &quot;*&quot; + Var.month" type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" expression="row3.productCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="ROW_ID" expression="row3.rowId " type="id_String" nullable="true"/>
       </outputTables>
