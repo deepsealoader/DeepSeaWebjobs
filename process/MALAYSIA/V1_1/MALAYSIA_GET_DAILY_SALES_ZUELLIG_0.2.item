@@ -4,7 +4,7 @@
     <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.zuellig.daily"/>
     <contextParameter comment="" name="HOSTNAME" prompt="HOSTNAME?" promptNeeded="false" type="id_String" value="http://deepsea.cloudapp.net/"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="Malaysia"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="Basic cGV0ZXIucGFya2VyQHNlcnZpZXIuY29tOnBhcmtlcg=="/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="cGV0ZXIucGFya2VyQHNlcnZpZXIuY29tOnBhcmtlcg=="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="https://em50-prd01-webapp003.azurewebsites.net"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
@@ -16,7 +16,7 @@
     <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.zuellig.daily"/>
     <contextParameter comment="" name="HOSTNAME" prompt="HOSTNAME?" promptNeeded="false" type="id_String" value="http://localhost:8080"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="Malaysia"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="Basic cGV0ZXIucGFya2VyQHNlcnZpZXIuY29tOnBhcmtlcg=="/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="cGV0ZXIucGFya2VyQHNlcnZpZXIuY29tOnBhcmtlcg=="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="http://localhost:8080"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="MONGODB"/>
@@ -28,7 +28,7 @@
     <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.zuellig.daily"/>
     <contextParameter comment="" name="HOSTNAME" prompt="HOSTNAME?" promptNeeded="false" type="id_String" value="http://localhost:4040"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="Malaysia"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="Basic cGV0ZXIucGFya2VyQHNlcnZpZXIuY29tOnBhcmtlcg=="/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="cGV0ZXIucGFya2VyQHNlcnZpZXIuY29tOnBhcmtlcg=="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="http://localhost:8080"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_YXT3sKuPEeqgt_R0AxxpVw" type="id_String" value="dd/MM/yy"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME" prompt="MONGODB_HOSTNAME?" promptNeeded="false" type="id_String" value="localhost"/>
@@ -79,7 +79,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:yAmpqsk74jvhpHpOIKEFGFIcwUS1Na2Ziz7Di0iz" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:c1z/Rd6WTnbSOniF3Tqejr9z99dUyRb1KkjPiuDw" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -114,7 +114,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:PWufKGtqrHQAdsgAnNvPT/qVhPyWHEIh4WS4y50e" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ly7FwOBOwR6m529/HxqXEtjFDCvnvzVMIrkRy4z1" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -149,7 +149,7 @@
     <elementParameter field="TEXT" name="HOST" value="&quot;outlook.office365.com&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="995"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;deepseasg@servier.com&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:11CbrbN2TlCT+phKH7oGbcnTbSVjFEdSadw59Fxyn8LDaGHqhTbotsbagVeRKw=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:xuovhC7baLdcon6kT4Yk6XjJbk93f6QSyLbAgMA1YGbsYCA2j19ywwBhpUJWLQ=="/>
     <elementParameter field="DIRECTORY" name="OUTPUT_DIRECTORY" value="globalMap.get(&quot;MAILS_FOLDER_PATH&quot;).toString()"/>
     <elementParameter field="TEXT" name="FILENAME_PATTERN" value="TalendDate.getDate(&quot;yyyyMMdd-hhmmss&quot;) + &quot;_&quot; + (counter_tPOP_1 + 1) + &quot;.mail&quot;"/>
     <elementParameter field="CHECK" name="ALL_EMAILS" value="true"/>
@@ -254,7 +254,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:yc5hX0RsS17yME9F9CcK+lX+uq1oErMg+rjP4ZOb"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:BhZkF3GUP3BDQGy8E1b15R5FXODsPB4g49Sg9eCS"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="0"/>
@@ -471,7 +471,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_DATE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_DATE" value="globalMap.get(&quot;BATCH_DATE&quot;).toString()"/>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:KZOs4IBGTCp7zXnnI6hPh4Qzuvx2cNEYt6gCjOBhzUfxy3lkOg==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:8JQIiCydZlCa68wAb8zEQp2NHoymE4pXlvBiZLBSDfPNHmBttg==" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tPOP_1" offsetLabelX="0" offsetLabelY="0" source="tPOP_1" target="tJava_1">

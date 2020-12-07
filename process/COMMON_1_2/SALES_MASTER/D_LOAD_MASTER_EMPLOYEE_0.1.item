@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:Ff2cWy2UAXB554F1rNprGx8BX2OwOXtBrTKd1AYz" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:UtivPMLZKBOk8vcQziz/Xj4DdEcKj8VUc6hqIIUh" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:yo2PurJ7LOPFwZDshd89JWR/BvKuWokF+KalaRDj" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:KTK8uzWtrS+09kq8pl7E+Bl/1xXSHPuKsA6d62qH" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -327,7 +327,7 @@
       <column comment="" key="false" length="-1" name="ROWID" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row2">
         <mapperTableEntries name="businessKey" expression="row8.servierCode " type="id_String"/>
@@ -343,7 +343,7 @@
         <mapperTableEntries name="jobTitleEn" expression="row8.jobTitleEn " type="id_String" nullable="true"/>
         <mapperTableEntries name="jobTitleLo" expression="row8.jobTitleLo " type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="row6">
+      <outputTables sizeState="INTERMEDIATE" name="row6" expressionFilter="!Clean.isNullOrEmpty(row8.geographyCode)" activateExpressionFilter="true">
         <mapperTableEntries name="businessKey" expression="row8.servierCode  + &quot;*&quot; + row8.geographyCode " type="id_String"/>
         <mapperTableEntries name="servierCode" expression="row8.servierCode " type="id_String"/>
         <mapperTableEntries name="geographyCode" expression="row8.geographyCode " type="id_String"/>
@@ -409,7 +409,7 @@
     <elementParameter field="TEXT" name="REGION" value="&quot;APAC&quot;"/>
     <elementParameter field="TEXT" name="RECORDCODE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="TalendString.unionString(&quot;_&quot;, context.getTABLE(), &quot;organization&quot;,  context.getCOUNTRY()).toLowerCase() "/>
-    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
     <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
     <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
     <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
@@ -469,7 +469,7 @@
     <elementParameter field="TEXT" name="REGION" value="&quot;APAC&quot;"/>
     <elementParameter field="TEXT" name="RECORDCODE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="TalendString.unionString(&quot;_&quot;, context.getTABLE(), &quot;geography&quot;,  context.getCOUNTRY()).toLowerCase() "/>
-    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
     <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
     <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
     <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
@@ -620,6 +620,7 @@
   <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPExceptionCatcher_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_3"/>
+    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ExceptionGeography"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPExceptionCatcher_1">
@@ -706,6 +707,7 @@
   <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPExceptionCatcher_2" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_2"/>
+    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="ExceptionOrganization"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPExceptionCatcher_2">
@@ -788,19 +790,6 @@
       <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
-  </node>
-  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1" show="false"/>
-    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_START" value="// start part of your Java code&#xA;      "/>
-    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="// here is the main part of the component,&#xA;// a piece of code executed in the row&#xA;// loop&#xA;"/>
-    <elementParameter field="MEMO_JAVA" name="CODE_END" value="if (DeepSeaFile.checkIfExceptions(globalMap)) {&#xA;&#x9;throw new TDieException();&#xA;}&#xA;      "/>
-    <elementParameter field="CHECK" name="Version_V2_0" value="false" show="false"/>
-    <elementParameter field="CHECK" name="Version_V3_2" value="false" show="false"/>
-    <elementParameter field="CHECK" name="Version_V4.0" value="true" show="false"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaFlex_1"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tSetGlobalVar_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
@@ -1013,15 +1002,12 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMCPExceptionCatcher_2" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_2" target="tJavaFlex_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
-  </connection>
   <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tAggregateRow_5" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_5" target="tDeepSeaException_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -1042,7 +1028,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -1054,11 +1040,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPExceptionCatcher_2" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaFlex_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>

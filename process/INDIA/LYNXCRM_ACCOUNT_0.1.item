@@ -44,7 +44,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:RejR2x0WwF6oy+jB57ZFQMXQr48Fr8I341dP2wTH" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:3fV/iPw89VgDk0xfYupRVDjYP+n56LQt8M9452wt" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -79,7 +79,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:fAXoRWGWbiuITVC5bN5tM7EkPnic/4IDjhDAU1PN" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:U4KtPJKFkAL3uDf94RpxcVOV0z4JUalvAn99Pr8w" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -107,6 +107,7 @@
     <routinesParameter id="_HdEsMK6jEeiC2aJINdmZJQ" name="TalendDate"/>
     <routinesParameter id="_HcwjIK6jEeiC2aJINdmZJQ" name="TalendStringUtil"/>
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
+    <routinesParameter id="_48LqMCmnEemf_-JpfaxcDQ" name="Clean"/>
   </parameters>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
@@ -119,7 +120,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;veeva_stg_restitution&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ce0J/2eDuQj3Cp9lRiNGAgF64wa2I7qSlYv+Y0fp"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XPHv8HcngQxI7t7n5PwNKeY33C8B9XPxdQVpZcD9"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -251,10 +252,10 @@
         <mapperTableEntries name="consent" expression="row1.consent" type="id_Boolean" nullable="true"/>
         <mapperTableEntries name="primaryBrick" expression="row1.primaryBrick" type="id_String" nullable="true"/>
         <mapperTableEntries name="brick" expression="row1.brick" type="id_String" nullable="true"/>
-        <mapperTableEntries name="address1" expression="row1.address1" type="id_String" nullable="true"/>
-        <mapperTableEntries name="address2" expression="row1.address2" type="id_String" nullable="true"/>
-        <mapperTableEntries name="address3" expression="row1.address3" type="id_String" nullable="true"/>
-        <mapperTableEntries name="address4" expression="row1.address4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="address1" expression="Clean.isNullOrEmpty(row1.address1)? null : row1.address1.replace(&quot;\\s+&quot;, &quot; &quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="address2" expression="Clean.isNullOrEmpty(row1.address2)? null : row1.address2.replace(&quot;\\s+&quot;, &quot; &quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="address3" expression="Clean.isNullOrEmpty(row1.address3)? null : row1.address3.replace(&quot;\\s+&quot;, &quot; &quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="address4" expression="Clean.isNullOrEmpty(row1.address4)? null : row1.address4.replace(&quot;\\s+&quot;, &quot; &quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="postalCode" expression="row1.postalCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="city" expression="row1.city" type="id_String" nullable="true"/>
       </outputTables>
