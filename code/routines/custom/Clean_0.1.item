@@ -201,7 +201,7 @@ public class Clean
 	}
 	
 	/**
-     * codifyString: Buld a code from a stringh value.
+     * codifyString: Build a code from a string value.
      * 
      * {talendTypes} boolean | Boolean
      * 
@@ -218,7 +218,7 @@ public class Clean
 		}
 		
 		s = s.trim().toUpperCase();
-		s = s.replace(" \\+\\.\\/", "_");
+		s = s.replaceAll(" \\+\\.\\/", "_");
 		return prefix + "_" + s;
 	}
 	
