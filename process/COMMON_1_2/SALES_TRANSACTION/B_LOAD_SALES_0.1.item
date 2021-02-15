@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:kt7JeABspUqGx2IygxkDMxnR9i9Uoz/DOBpJ2+ic" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:QljQLmaeFB3HX7yySv2isOa69YQvohHe7qfvO4Vd" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:A091UG5BImKX8SFGensHyBvgpnf4neZ/xIYOVZ8b" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1y3W3HlTauuXK/SVu3TeKfHdxwbLH5MRD6C2ztRs" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -471,9 +471,9 @@
       <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="row7" expressionFilter="row5.FIELD_NAME.equals(&quot;customer&quot;)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="row7" expressionFilter="row5.FIELD_NAME.equalsIgnoreCase(&quot;customer&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="businessKey" expression="row5.businessKey " type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" expression="row5.customerCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="ROWID" expression="row5.ROWID" type="id_String"/>
@@ -483,7 +483,7 @@
         <mapperTableEntries name="FIELD_OLD_VALUE" expression="row5.FIELD_OLD_VALUE " type="id_String" nullable="true"/>
         <mapperTableEntries name="EXCEPTION" expression="row5.EXCEPTION" type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="row8" expressionFilter="row5.FIELD_NAME.equals(&quot;customer&quot;)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="row8" expressionFilter="row5.FIELD_NAME.equalsIgnoreCase(&quot;customer&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="servierCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="providerCode" expression="row5.customerCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
@@ -734,9 +734,9 @@
       <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="row10" expressionFilter="row1.FIELD_NAME.equals(&quot;productProvider&quot;)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="row10" expressionFilter="row1.FIELD_NAME.equalsIgnoreCase(&quot;productProvider&quot;)" activateExpressionFilter="true">
         <mapperTableEntries name="businessKey" expression="row1.businessKey" type="id_String" nullable="true"/>
         <mapperTableEntries name="productCode" expression="row1.productCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="ROWID" expression="row1.ROWID" type="id_String" nullable="true"/>

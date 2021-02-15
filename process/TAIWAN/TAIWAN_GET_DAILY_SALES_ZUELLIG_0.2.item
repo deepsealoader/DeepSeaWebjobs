@@ -2,7 +2,7 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="COLLECTION" prompt="COLLECTION?" promptNeeded="false" type="id_String" value="sales.zuellig.daily"/>
-    <contextParameter comment="" name="HOSTNAME" prompt="HOSTNAME?" promptNeeded="false" type="id_String" value="http://deepsea.cloudapp.net"/>
+    <contextParameter comment="" name="HOSTNAME" prompt="HOSTNAME?" promptNeeded="false" type="id_String" value="http://deepsealoader.chinanorth2.cloudapp.chinacloudapi.cn"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_AaeqECgvEemFVuMGViEZbg" type="id_String" value="Taiwan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_AaeqECgvEemFVuMGViEZbg" type="id_String" value="Basic b21icmUuamF1bmVAc2Vydmllci5jb206b21icmUuamF1bmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_AaeqECgvEemFVuMGViEZbg" type="id_String" value="localhost"/>
@@ -79,7 +79,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:i/b2ax+NpGXYb477ZdSsaYiDk1rbJ14+xgv7QkU1" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:pBqAa0P+FRe0e1HO6kh2yk6Uu6kP7pwAseBtkjrx" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -114,7 +114,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4ZY/mE1xbIZHrU8uNsXWztewUZP/2bsbZjtzNY/h" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:uIpppP33Nr50780HUL6U7PJqHuhn9le6iV1TgTxI" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -149,7 +149,7 @@
     <elementParameter field="TEXT" name="HOST" value="&quot;outlook.office365.com&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="995"/>
     <elementParameter field="TEXT" name="USERNAME" value="&quot;deepseatw@servier.com&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:YxLWRM0KvBTIosuayYK9QTXYqEMEazeI/snMCOjTk0D7WsyxG6ejy4hurvO2dQ=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:3rG2zNxLAFaOzTBc9G/8EZj9QrNdNcr//Fxtv6bmg34VAx4WjjgHWkqrfGBjkA=="/>
     <elementParameter field="DIRECTORY" name="OUTPUT_DIRECTORY" value="globalMap.get(&quot;MAILS_FOLDER_PATH&quot;).toString()"/>
     <elementParameter field="TEXT" name="FILENAME_PATTERN" value="TalendDate.getDate(&quot;yyyyMMdd-hhmmss&quot;) + &quot;_&quot; + (counter_tPOP_1 + 1) + &quot;.mail&quot;"/>
     <elementParameter field="CHECK" name="ALL_EMAILS" value="true"/>
@@ -236,7 +236,7 @@
     <elementParameter field="CHECK" name="ERROR" value="false"/>
     <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
     <elementParameter field="TABLE" name="FILES">
-      <elementValue elementRef="FILEMASK" value="&quot;*.xlsx&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;*R9265a*.xlsx&quot;"/>
     </elementParameter>
     <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
@@ -254,13 +254,13 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:4P1oSLfKscNU55sOhfxaojPz1/hJfjZfZcGsDTQq"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Wy+ty0YrfVc9rR9C6UnJTahEY13fmrrkAQOM/5XR"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="0"/>
       <elementValue elementRef="USE_REGEX" value="false"/>
     </elementParameter>
-    <elementParameter field="TEXT" name="HEADER" value="4"/>
+    <elementParameter field="TEXT" name="HEADER" value="7"/>
     <elementParameter field="TEXT" name="FOOTER" value="0"/>
     <elementParameter field="TEXT" name="LIMIT" value="1"/>
     <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
@@ -320,9 +320,9 @@
       <column comment="" key="false" length="-1" name="batchDate" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="billingDate" expression="TalendDate.parseDate(&quot;M/d/yy&quot;,row1.billingDate) " type="id_Date"/>
+        <mapperTableEntries name="billingDate" expression="TalendDate.addDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;,row1.billingDate), 15, &quot;dd&quot;) " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="row1.billingDate != null" activateExpressionFilter="true">
         <mapperTableEntries name="billingDate" expression="TalendDate.formatDate(&quot;yyyy-MM&quot;, Var.billingDate) " type="id_String"/>
@@ -473,7 +473,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_DATE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_DATE" value="globalMap.get(&quot;BATCH_DATE&quot;).toString()"/>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:ABp+0TgcE7GuA0ewPkc1fpOpaIhOc6tSRc11A9KvDhlGu/GwoQ==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:qPtyNpM1iQ29IlCTGDhoSB7L78Yd59RGY1IFuKU3wF0JYHX7Bg==" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tPOP_1" offsetLabelX="0" offsetLabelY="0" source="tPOP_1" target="tJava_1">
