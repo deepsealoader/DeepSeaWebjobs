@@ -30,7 +30,7 @@
     <contextParameter comment="" name="DEEPSEA_HOSTNAME_11" prompt="DEEPSEA_HOSTNAME_11?" promptNeeded="false" type="id_String" value="localhost:8080"/>
     <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://20.54.108.234"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://20.54.34.235"/>
     <contextParameter comment="" name="MONGODB_HOSTNAME_11" prompt="MONGODB_HOSTNAME_11?" promptNeeded="false" type="id_String" value="MONGODB"/>
     <contextParameter comment="" name="POSTGRES_DATABASE_11" prompt="POSTGRES_DATABASE_11?" promptNeeded="false" type="id_String" value="deepsea_thailand"/>
     <contextParameter comment="" name="POSTGRES_HOSTNAME_11" prompt="POSTGRES_HOSTNAME_11?" promptNeeded="false" type="id_String" value="POSTGRES"/>
@@ -100,7 +100,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:68yjVeaR8VS9KqLhKbfyl0QMqdw4zyTlPZd56gcF" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:CFjL67RzI2kuUZfdAnIj4lkej1dj2AoKkV+Kgddd" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -135,7 +135,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Q1iyhZarONyZXSEL/Ec4MYULxzZGJQql0eipl7cF" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:kojuW+4JiQLOUPxIeh0y4WjHUOpkEbGi8lOtIgzr" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -283,7 +283,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_2" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.getINPUT_FILEPATH()"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
-    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
     <elementParameter field="CHECK" name="ERROR" value="false"/>
     <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
@@ -316,7 +316,7 @@
       <elementValue elementRef="POS" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="true"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Di9yoP5qY1rKw4iYT8KQ3vgqyw0HpFrlJ5/kTh30QcSpCIWWP+c7xvPsJE5zkNT4Uv1YRMQshg=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:gzh3zrTwsX5W56v0BG7VqTJPBjcZD+qEdZ+rBFON9/KzR8eGV3WRir7caWqIeuAtK2JP/fU7dA=="/>
     <elementParameter field="TEXT" name="LABEL" value="SampleDate"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDeepSeaSample_1">
@@ -345,7 +345,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="date" expression="TalendDate.parseDate(context.INPUT_DATE_FORMAT, row1.date) " type="id_Date"/>
+        <mapperTableEntries name="date" expression="TalendDate.parseDate(context.INPUT_DATE_FORMAT, row1.date.substring(0, context.INPUT_DATE_FORMAT.length())) " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="row1.date != null" columnNameFilter="">
         <mapperTableEntries name="billingDate" expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, Var.date) " type="id_String"/>
@@ -392,7 +392,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_DATE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_DATE" value="globalMap.get(&quot;BATCH_DATE&quot;).toString()"/>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="true"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:etMw2PBLh606ewGofzp1/wPsZ5NH1d8JHVZIL2vCM38QxmzSFvNIgD+hOcH0CVVmwhUuKn/zuA=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:q/t4lzuysHvxdJyzsQfl+P7FVhJSX04a/a9oakDoW1R68Wme3VhJMY2NQ/Akb2xOts4fagVk0g=="/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tSetGlobalVar_1">

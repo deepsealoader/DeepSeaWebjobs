@@ -77,7 +77,7 @@ public class Korea {
 			return null;
 		}
 		
-		number = number.replaceAll("\\(", "-"); // Replace (XXX) by -XXX
+		number = number.replaceAll("\\(", "-"); // Replace (000) by -000
 		number = number.replaceAll(",|\\)", ""); // Removed format characters
 		number = number.replaceAll("-+", "-"); // Removed duplicated minus characters
 		return number;
