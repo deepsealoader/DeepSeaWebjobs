@@ -4,27 +4,30 @@
     <contextParameter xmi:id="_adoGcMbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Thailand"/>
     <contextParameter xmi:id="_jxGsAEbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="MM/dd/yy"/>
     <contextParameter xmi:id="_t5V5QHbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="2"/>
-    <contextParameter xmi:id="_uqtmwONSEeqyjd-RDTN0Ug" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-prd01-webapp003.azurewebsites.net/mcp"/>
+    <contextParameter xmi:id="_uqtmwONSEeqyjd-RDTN0Ug" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter xmi:id="_uqtmweNSEeqyjd-RDTN0Ug" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter xmi:id="_uqtmwuNSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-prd01-webapp003.azurewebsites.net"/>
+    <contextParameter xmi:id="_uqtmwuNSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
     <contextParameter xmi:id="_uqtmw-NSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
+    <contextParameter xmi:id="_R02tkMkDEeuPdpZ8nG7sEA" comment="" name="REGION" prompt="REGION?" promptNeeded="false" type="id_String" value="APAC"/>
   </talendfile:ContextType>
-  <talendfile:ContextType xmi:id="_1Qv74MoQEeiFhKycUBX9rg" confirmationNeeded="false" name="Development">
+  <talendfile:ContextType xmi:id="_1Qv74MoQEeiFhKycUBX9rg" confirmationNeeded="false" name="Production_Test">
     <contextParameter xmi:id="_1Qv75coQEeiFhKycUBX9rg" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Thailand"/>
     <contextParameter xmi:id="_jxGsAUbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="MM/dd/yy"/>
     <contextParameter xmi:id="_t5V5QXbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="2"/>
-    <contextParameter xmi:id="_uquN0ONSEeqyjd-RDTN0Ug" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="http://20.54.51.126"/>
+    <contextParameter xmi:id="_uquN0ONSEeqyjd-RDTN0Ug" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter xmi:id="_uquN0eNSEeqyjd-RDTN0Ug" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter xmi:id="_uquN0uNSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="http://localhost:8080"/>
+    <contextParameter xmi:id="_uquN0uNSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="https://deepsealoader.servier.com"/>
     <contextParameter xmi:id="_uquN0-NSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
+    <contextParameter xmi:id="_R03UoMkDEeuPdpZ8nG7sEA" comment="" name="REGION" prompt="REGION?" promptNeeded="false" type="id_String" value="APAC"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_VmfBgL73EeiwTrrgdMnqWg" confirmationNeeded="false" name="Production">
     <contextParameter xmi:id="_adoGccbVEeifZpKmns2VLA" comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" type="id_String" value="Thailand"/>
     <contextParameter xmi:id="_jxGsAkbREemR-KUHQ0sYgQ" comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" type="id_String" value="MM/dd/yy"/>
     <contextParameter xmi:id="_t5V5QnbrEeqDWulauENjNQ" comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" type="id_String" value="2"/>
-    <contextParameter xmi:id="_uquN1ONSEeqyjd-RDTN0Ug" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="http://20.54.34.235"/>
+    <contextParameter xmi:id="_uquN1ONSEeqyjd-RDTN0Ug" comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter xmi:id="_uquN1eNSEeqyjd-RDTN0Ug" comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter xmi:id="_uquN1uNSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" type="id_String" value="http://localhost:8080"/>
     <contextParameter xmi:id="_uquN1-NSEeqyjd-RDTN0Ug" comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
+    <contextParameter xmi:id="_R03UockDEeuPdpZ8nG7sEA" comment="" name="REGION" prompt="REGION?" promptNeeded="false" type="id_String" value="APAC"/>
   </talendfile:ContextType>
 </xmi:XMI>

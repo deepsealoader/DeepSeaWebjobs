@@ -1,6 +1,10 @@
 package routines;
 
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
@@ -95,10 +99,37 @@ public class Clean
 			return defaultValue;
 		}
 		
+		// Case when number is in scientific notation
+		
+		if(number.contains("e") || number.contains("E")) {
+			number = new java.math.BigDecimal(number).toString();
+		}
+		
 		number = number.replaceAll("\\(", "-"); // Replace (000) by -000
 		number = number.replaceAll(",|\\)", ""); // Removed format characters
 		number = number.replaceAll("-+", "-"); // Removed duplicated minus characters
 		return number;
+	}
+	
+	/**
+     * cleanDateYearMonth: Cleans a given string representing a date and converting to "yyyy-MM-dd" format,
+     * otherwise returns a default date.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("dateYear") date: the year string to clean
+     * {param} String("dateMonth") defaultDate: the month string to clean
+     * {param} String("defaultDate") defaultDate: the default date
+     * 
+     * {example} cleanDate("1975/06/12", "1975-06-01", "yy/MM/dd") # "1975-06-12"
+     */
+	public static String cleanDateYearMonth(String dateYear, String dateMonth, String defaultDate) {
+		if(Clean.isNullOrEmpty(dateYear) || Clean.isNullOrEmpty(dateMonth)) {
+			return defaultDate;
+		}
+		return String.format("%04d-%02d-01", Integer.parseInt(dateYear), Integer.parseInt(dateMonth));
 	}
 	
 	/**
@@ -109,72 +140,120 @@ public class Clean
      * 
      * {Category} User Defined
      * 
-     * {param} String("date") input: the string to clean
-     * {param} String("defaultDate") input: the default date
-     * {param} String("defaultFormat") input: the default format
+     * {param} String("date") date: the string to clean
      * 
      * {example} cleanDate("1975/06/12") # "1975-06-12"
+     */
+	public static String cleanDate(String date) {
+		return Clean.cleanDate(date, null, null);
+	}
+	
+	/**
+     * cleanDate: Cleans a given string representing a date and converting to "yyyy-MM-dd" format,
+     * otherwise returns a default date.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("date") date: the string to clean
+     * {param} String("defaultDate") defaultDate: the default date
+     * 
+     * {example} cleanDate("1975/06/12", "1975-06-01") # "1975-06-12"
+     */
+	public static String cleanDate(String date, String defaultDate) {
+		return Clean.cleanDate(date, defaultDate, null);
+	}
+	
+	/**
+     * cleanDate: Cleans a given string representing a date and converting to "yyyy-MM-dd" format,
+     * otherwise returns a default date.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("date") date: the string to clean
+     * {param} String("defaultDate") defaultDate: the default date
+     * {param} String("defaultFormat") defaultFormat: the default format
+     * 
+     * {example} cleanDate("1975/06/12", "1975-06-01", "yy/MM/dd") # "1975-06-12"
      */
 	public static String cleanDate(String date, String defaultDate, String defaultFormat) {
 		if(Clean.isNullOrEmpty(date)) {
 			return defaultDate;
 		}
 		
-		if(checkDateFormat(date, DatePattern1)) {
-			return date;
+		// If a defaultFormat is supplied, try several format based ont it
+		
+		if (!Clean.isNullOrEmpty(defaultFormat)) {
+			// dd-MM-yy or yy-MM-dd and derivates
+			Date dateAsDate = Clean.tryParseDate(defaultFormat, date);
+			if (dateAsDate == null) {
+				// dd-MM-yyyy and derivates
+				dateAsDate = Clean.tryParseDate(defaultFormat + "yy", date);
+			}
+			if (dateAsDate == null) {
+				// yyyy-MM-dd and derivates
+				dateAsDate = Clean.tryParseDate("yy" + defaultFormat, date);
+			}
+			if (dateAsDate != null) {
+				return TalendDate.formatDate("yyyy-MM-dd", dateAsDate);
+			}
+			else {
+				return defaultDate;
+			}
 		}
-		else if(checkDateFormat(date, DatePattern2)) {
-			return date.replaceAll("/", "-");
+		
+		// Otherwise, loop through patterns and formats 
+		
+		Calendar defaultDateAsCalendar = null;
+		if (!Clean.isNullOrEmpty(defaultDate)) {
+			defaultDateAsCalendar = Calendar.getInstance();
+			defaultDateAsCalendar.setTime(TalendDate.parseDate("yyyy-MM-dd", defaultDate));
 		}
-		else if(checkDateFormat(date, DatePattern3)) {
-			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyyMMdd", date));
-		}
-		else if(checkDateFormat(date, DatePattern4)) {
-			if(Clean.isNullOrEmpty(defaultDate)) {
-				if(Clean.isNullOrEmpty(defaultFormat)) {
-					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yyyy", date));
-				} else {
-					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate(defaultFormat + "yy", date));
+
+		// We do not expect sales before 2000 and after next year !
+		
+		int minYear = 2000;
+		int maxYear = Calendar.getInstance().get(Calendar.YEAR) + 1;
+		
+		String foundMatchingDate = defaultDate;
+		
+		for(DateMatcher dateMatcher: Clean.getDateMatchers()) {
+			if (dateMatcher.match(date)) {
+				for(String format: dateMatcher.getFormats()) {
+					Date dateAsDate = Clean.tryParseDate(format, date);
+					if (dateAsDate == null) {
+						continue;
+					}
+					
+					Calendar dateAsCalendar = Calendar.getInstance();
+					dateAsCalendar.setTime(dateAsDate);
+
+					if(dateAsCalendar.get(Calendar.YEAR) < minYear || dateAsCalendar.get(Calendar.YEAR) > maxYear) {
+						continue;
+					}
+						
+					if (defaultDateAsCalendar == null) {
+						foundMatchingDate = TalendDate.formatDate("yyyy-MM-dd", dateAsDate);
+						break;
+					}
+					
+					if(defaultDateAsCalendar.get(Calendar.YEAR) == dateAsCalendar.get(Calendar.YEAR)
+							&& defaultDateAsCalendar.get(Calendar.MONTH) == dateAsCalendar.get(Calendar.MONTH)) {
+						foundMatchingDate = TalendDate.formatDate("yyyy-MM-dd", dateAsCalendar.getTime());
+						break;
+					}
 				}
-			} else {
-				Date date1 = TalendDate.parseDate("yyyy-MM-dd", defaultDate);
-				Date date2 = TalendDate.parseDate("MM/dd/yyyy", date);
-				if(TalendDate.getPartOfDate("MONTH", date1) == TalendDate.getPartOfDate("MONTH", date2) && TalendDate.getPartOfDate("YEAR", date1) == TalendDate.getPartOfDate("YEAR", date2)) {
-					return TalendDate.formatDate("yyyy-MM-dd", date2);
-				} else {
-					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("dd/MM/yyyy", date));
+				
+				if (foundMatchingDate != defaultDate) {
+					break;
 				}
 			}
 		}
-		else if(checkDateFormat(date, DatePattern5)) {
-			if(Clean.isNullOrEmpty(defaultDate)) {
-				if(Clean.isNullOrEmpty(defaultFormat)) {
-					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("MM/dd/yy", date));
-				} else {
-					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate(defaultFormat, date));
-				}
-			} else {
-				Date date1 = TalendDate.parseDate("yyyy-MM-dd", defaultDate);
-				Date date2 = TalendDate.parseDate("MM/dd/yy", date);
-				if(TalendDate.getPartOfDate("MONTH", date1) == TalendDate.getPartOfDate("MONTH", date2) && TalendDate.getPartOfDate("YEAR", date1) == TalendDate.getPartOfDate("YEAR", date2)) {
-					return TalendDate.formatDate("yyyy-MM-dd", date2);
-				} else {
-					return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("dd/MM/yy", date));
-				}
-			}
-		}
-		else if(checkDateFormat(date, DatePattern6)) {
-			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyMM", date));
-		}
-		else if(checkDateFormat(date, DatePattern7)) {
-			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyyMM", date));
-		}
-		else if(checkDateFormat(date, DatePattern8)) {
-			return TalendDate.formatDate("yyyy-MM-dd", TalendDate.parseDate("yyyy/MM", date));
-		}
-		else {
-			return defaultDate;
-		}
+		
+		return foundMatchingDate;
 	}
 
 	/**
@@ -367,20 +446,57 @@ public class Clean
         return result;
     }
 	
-	/*
-	 * Helper function to check if a string is a date with a given format.
-	 */
-	private static boolean checkDateFormat(String stringDate, Pattern pattern) {
-		Matcher matcher = pattern.matcher(stringDate);
-		return matcher.find();
-    }
+	private static List<DateMatcher> getDateMatchers() {
+		if (dateMatchers == null) {
+			Clean me = new Clean();
+			dateMatchers = Arrays.asList(
+				// yyyyMMdd and derivates
+				me.new DateMatcher("^\\d{8}$", "yyyyMMdd", "yyyyddMM", "ddMMyyyy", "MMddyyyy"),
+				me.new DateMatcher("^\\d{6}$", "yyyyMM", "MMyyyy"),
+				me.new DateMatcher("^\\d{4}$", "yyMM", "MMyy"),
+				// yyyy-MM-dd and derivates
+				me.new DateMatcher("^\\d{1,4}-\\d{1,2}-\\d{1,4}$", "yyyy-MM-dd", "yyyy-dd-MM", "dd-MM-yyyy", "MM-dd-yyyy", "yyyy-M-d", "yyyy-d-M", "d-M-yyyy", "M-d-yyyy", "yy-MM-dd", "yy-dd-MM", "dd-MM-yy", "MM-dd-yy", "yy-M-d", "yy-d-M", "d-M-yy", "M-d-yy"),
+				// yyyy-MM and derivates
+				me.new DateMatcher("^\\d{1,4}-\\d{1,4}$", "yyyy-MM", "yyyy-M", "yy-MM", "yy-M", "MM-yyyy", "M-yyyy", "yy-MM", "yy-M"),
+				// yyyy-MM-dd and derivates
+				me.new DateMatcher("^\\d{1,4}/\\d{1,2}/\\d{1,4}$", "yyyy/MM/dd", "yyyy/dd/MM", "dd/MM/yyyy", "MM/dd/yyyy", "yyyy/M/d", "yyyy/d/M", "d/M/yyyy", "M/d/yyyy", "yy/MM/dd", "yy/dd/MM", "dd/MM/yy", "MM/dd/yy", "yy/M/d", "yy/d/M", "d/M/yy", "M/d/yy"),
+				// yyyy-MM and derivates
+				me.new DateMatcher("^\\d{1,4}/\\d{1,4}$", "yyyy/MM", "yyyy/M", "yy/MM", "yy/M", "MM/yyyy", "M/yyyy", "yy/MM", "yy/M")
+			);
+		}
+		return dateMatchers;
+	}
+
+	private class DateMatcher {	
+		public DateMatcher(String pattern, String... formats) {
+			this.pattern = Pattern.compile(pattern);
+			this.formats = formats;
+		}
+		
+		private Pattern pattern;
+		public Pattern getPattern() {
+			return pattern;
+		}
+
+		private String[] formats;
+		public String[] getFormats() {
+			return formats;
+		}
+		
+		public boolean match(String stringDate) {
+			Matcher matcher = this.pattern.matcher(stringDate);
+			return matcher.find();
+	    }
+	}
 	
-	private static final Pattern DatePattern1 = Pattern.compile("^\\d{4}-\\d{2}-\\d{2}$");
-	private static final Pattern DatePattern2 = Pattern.compile("^\\d{4}/\\d{2}/\\d{2}$");	
-	private static final Pattern DatePattern3 = Pattern.compile("^\\d{4}\\d{2}\\d{2}$"); 
-	private static final Pattern DatePattern4 = Pattern.compile("^\\d{1,2}/\\d{1,2}/\\d{4}$");
-	private static final Pattern DatePattern5 = Pattern.compile("^\\d{1,2}/\\d{1,2}/\\d{2}$");
-	private static final Pattern DatePattern6 = Pattern.compile("^\\d{2}\\d{2}$");
-	private static final Pattern DatePattern7 = Pattern.compile("^\\d{4}\\d{2}$");
-	private static final Pattern DatePattern8 = Pattern.compile("^\\d{4}/\\d{2}$");
+	private static Date tryParseDate(String format, String date) {
+		try {
+			return TalendDate.TO_DATE(date, format);
+		}
+		catch(ParseException x) {
+			return null;
+		}
+	}
+	
+	private static List<DateMatcher> dateMatchers = null;
 }
