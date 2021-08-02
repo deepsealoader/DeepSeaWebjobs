@@ -73,7 +73,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:PQ8fBBHTEPlM6wZGk0KW19wFjIT11OgkRcD/rqDo" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:52KhnfASCtrjpJQdDPaqxfxrmSznTgEb4Y/ylVcT" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -108,7 +108,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:xPkdbP3lTnNm5nyS5RskesvWzSUxpSswUlxYIi9J" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JxZM8RHA+URP6F50ZzLNqfkkYJKDp/GHakMJBO4N" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -153,7 +153,7 @@
     <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
     <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
     <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
-    <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="240000"/>
     <elementParameter field="TEXT" name="LABEL" value="UpdateGeographyCoefficients"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPInput_1">

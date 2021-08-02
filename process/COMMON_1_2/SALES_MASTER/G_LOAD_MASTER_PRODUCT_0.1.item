@@ -85,7 +85,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:GCL+2OaB9zx/y2t+OM8U6AtUcQsxXei9aTeQbx/6" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EdiMRvhV5/WyF7DCfg0F+Lu4lX22t0odoqv9yqO6" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -120,7 +120,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:0yQN67sI9a5tuXA1mUdiv80m9DGDaoOcUTfH5MSA" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6vcJaXGtufvmS6JfCuzRf0m1cJlPaxXSQFbLwKVz" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -255,6 +255,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="molecule"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="brandStatus"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="attribute1"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
@@ -293,6 +296,7 @@
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="brandStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -300,7 +304,46 @@
       <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="160">
+  <node componentName="tNormalize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tNormalize_1" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="NORMALIZE_COLUMN" value="therapeuticClass"/>
+    <elementParameter field="TEXT" name="ITEMSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="DEDUPLICATE" value="true"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="ESCAPE_CHAR" value="ESCAPE_MODE_DOUBLED" show="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;\&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DISCARD_TRAILING_EMPTY_STR" value="true"/>
+    <elementParameter field="CHECK" name="TRIM" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tNormalize_1">
+      <column comment="" key="false" length="-1" name="rowId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="rowNum" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sheetName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel1" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel2" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel1" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel2" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="dosage" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="packageUnit" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="brandStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -333,6 +376,7 @@
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="brandStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -348,39 +392,40 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="codeLevel" expression="context.PRODUCT_LEVEL_CNT.equals(&quot;2&quot;) ? row3.codeLevel2 : (context.PRODUCT_LEVEL_CNT.equals(&quot;3&quot;) ? row3.codeLevel3 : row3.codeLevel4) " type="id_String"/>
+        <mapperTableEntries name="codeLevel" expression="context.PRODUCT_LEVEL_CNT.equals(&quot;2&quot;) ? row6.codeLevel2 : (context.PRODUCT_LEVEL_CNT.equals(&quot;3&quot;) ? row6.codeLevel3 : row6.codeLevel4) " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="row4">
         <mapperTableEntries name="businessKey" expression="Var.codeLevel" type="id_String"/>
-        <mapperTableEntries name="codeLevel1" expression="row3.codeLevel1 " type="id_String"/>
-        <mapperTableEntries name="codeLevel2" expression="row3.codeLevel2 " type="id_String"/>
-        <mapperTableEntries name="codeLevel3" expression="row3.codeLevel3 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="codeLevel4" expression="row3.codeLevel4 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="codeLevel5" expression="row3.codeLevel5 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="nameLevel1" expression="row3.nameLevel1 " type="id_String"/>
-        <mapperTableEntries name="nameLevel2" expression="row3.nameLevel2 " type="id_String"/>
-        <mapperTableEntries name="nameLevel3" expression="row3.nameLevel3 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="nameLevel4" expression="row3.nameLevel4 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="nameLevel5" expression="row3.nameLevel5 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="dosage" expression="row3.dosage " type="id_String" nullable="true"/>
-        <mapperTableEntries name="packageUnit" expression="row3.packageUnit " type="id_String"/>
-        <mapperTableEntries name="stdBoxCoef" expression="String.format(&quot;%.8f&quot;, Float.parseFloat(row3.stdBoxCoef)) " type="id_String"/>
-        <mapperTableEntries name="manufacturerName" expression="row3.manufacturerName " type="id_String"/>
-        <mapperTableEntries name="therapeuticClass" expression="row3.therapeuticClass " type="id_String"/>
-        <mapperTableEntries name="molecule" expression="row3.molecule " type="id_String" nullable="true"/>
-        <mapperTableEntries name="attribute1" expression="row3.attribute1 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="attribute2" expression="row3.attribute2 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="attribute3" expression="row3.attribute3 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="attribute4" expression="row3.attribute4 " type="id_String" nullable="true"/>
-        <mapperTableEntries name="attribute5" expression="row3.attribute5 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="codeLevel1" expression="row6.codeLevel1 " type="id_String"/>
+        <mapperTableEntries name="codeLevel2" expression="row6.codeLevel2 " type="id_String"/>
+        <mapperTableEntries name="codeLevel3" expression="row6.codeLevel3 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="codeLevel4" expression="row6.codeLevel4 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="codeLevel5" expression="row6.codeLevel5 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="nameLevel1" expression="row6.nameLevel1 " type="id_String"/>
+        <mapperTableEntries name="nameLevel2" expression="row6.nameLevel2 " type="id_String"/>
+        <mapperTableEntries name="nameLevel3" expression="row6.nameLevel3 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="nameLevel4" expression="row6.nameLevel4 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="nameLevel5" expression="row6.nameLevel5 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="dosage" expression="row6.dosage " type="id_String" nullable="true"/>
+        <mapperTableEntries name="packageUnit" expression="row6.packageUnit " type="id_String"/>
+        <mapperTableEntries name="stdBoxCoef" expression="String.format(&quot;%.8f&quot;, Float.parseFloat(row6.stdBoxCoef)) " type="id_String"/>
+        <mapperTableEntries name="manufacturerName" expression="row6.manufacturerName " type="id_String"/>
+        <mapperTableEntries name="therapeuticClass" expression="row6.therapeuticClass " type="id_String"/>
+        <mapperTableEntries name="molecule" expression="row6.molecule " type="id_String" nullable="true"/>
+        <mapperTableEntries name="brandStatus" expression="row6.brandStatus " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute1" expression="row6.attribute1 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute2" expression="row6.attribute2 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute3" expression="row6.attribute3 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute4" expression="row6.attribute4 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute5" expression="row6.attribute5 " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="row5">
-        <mapperTableEntries name="businessKey" expression="Var.codeLevel + &quot;*&quot; + row3.therapeuticClass " type="id_String"/>
+        <mapperTableEntries name="businessKey" expression="Var.codeLevel + &quot;*&quot; + row6.therapeuticClass " type="id_String"/>
         <mapperTableEntries name="servierCode" expression="Var.codeLevel " type="id_String"/>
-        <mapperTableEntries name="marketCode" expression="row3.therapeuticClass " type="id_String"/>
-        <mapperTableEntries name="ROWID" expression="row3.rowId " type="id_String"/>
+        <mapperTableEntries name="marketCode" expression="row6.therapeuticClass " type="id_String"/>
+        <mapperTableEntries name="ROWID" expression="row6.rowId " type="id_String"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="rowId" type="id_String" nullable="true"/>
         <mapperTableEntries name="rowNum" type="id_String" nullable="true"/>
         <mapperTableEntries name="sheetName" type="id_String" nullable="true"/>
@@ -400,6 +445,7 @@
         <mapperTableEntries name="manufacturerName" type="id_String"/>
         <mapperTableEntries name="therapeuticClass" type="id_String"/>
         <mapperTableEntries name="molecule" type="id_String" nullable="true"/>
+        <mapperTableEntries name="brandStatus" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
@@ -408,7 +454,135 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_2" show="false"/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
+      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="therapeuticClass"/>
+      <elementValue elementRef="FUNCTION" value="first"/>
+      <elementValue elementRef="INPUT_COLUMN" value="therapeuticClass"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="molecule"/>
+      <elementValue elementRef="FUNCTION" value="first"/>
+      <elementValue elementRef="INPUT_COLUMN" value="molecule"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute1"/>
+      <elementValue elementRef="FUNCTION" value="first"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute1"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute2"/>
+      <elementValue elementRef="FUNCTION" value="first"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute2"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute3"/>
+      <elementValue elementRef="FUNCTION" value="first"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute3"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute4"/>
+      <elementValue elementRef="FUNCTION" value="first"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute4"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute5"/>
+      <elementValue elementRef="FUNCTION" value="first"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute5"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="codeLevel1"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="codeLevel1"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="codeLevel2"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="codeLevel2"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="codeLevel3"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="codeLevel3"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="codeLevel4"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="codeLevel4"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="codeLevel5"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="codeLevel5"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="nameLevel1"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="nameLevel1"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="nameLevel2"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="nameLevel2"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="nameLevel3"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="nameLevel3"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="nameLevel4"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="nameLevel4"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="nameLevel5"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="nameLevel5"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="dosage"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="dosage"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="packageUnit"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="packageUnit"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="stdBoxCoef"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="stdBoxCoef"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="manufacturerName"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="manufacturerName"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="brandStatus"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="brandStatus"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Deduplicate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAggregateRow_2">
+      <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel1" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel2" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="codeLevel5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel1" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel2" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="nameLevel5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="dosage" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="packageUnit" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="stdBoxCoef" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="brandStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_2" show="false"/>
     <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
     <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
@@ -450,6 +624,7 @@
       <column comment="" key="false" length="-1" name="manufacturerName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="therapeuticClass" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="molecule" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="brandStatus" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -457,7 +632,36 @@
       <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="288">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_3" show="false"/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
+      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="servierCode"/>
+      <elementValue elementRef="INPUT_COLUMN" value="servierCode"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="marketCode"/>
+      <elementValue elementRef="INPUT_COLUMN" value="marketCode"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="ROWID"/>
+      <elementValue elementRef="FUNCTION" value="first"/>
+      <elementValue elementRef="INPUT_COLUMN" value="ROWID"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Deduplicate"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAggregateRow_3">
+      <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="servierCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="marketCode" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ROWID" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_1" show="false"/>
     <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
     <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
@@ -572,7 +776,7 @@
     <elementParameter field="CHECK" name="USE_RECORD" value="true"/>
     <elementParameter field="TEXT" name="RECORD_ID" value="row2.ROWID"/>
     <elementParameter field="CHECK" name="USE_FIELD" value="true"/>
-    <elementParameter field="TEXT" name="FIELD_NAME" value="&quot;MarketCode&quot;"/>
+    <elementParameter field="TEXT" name="FIELD_NAME" value="&quot;TherapeuticClass&quot;"/>
     <elementParameter field="TEXT" name="FIELD_VALUE" value="row2.marketCode"/>
     <elementParameter field="TEXT" name="FIELD_NEW_VALUE" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="POST_EXCEPTIONS" value="true"/>
@@ -605,7 +809,7 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDeepSeaInput_2" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaInput_2" target="tMap_2">
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDeepSeaInput_2" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaInput_2" target="tNormalize_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="sheetName"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -616,11 +820,18 @@
       <elementValue elementRef="TRACE_COLUMN" value="rowId"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="brandStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="row4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tMCPOutput_2">
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tNormalize_1" offsetLabelX="0" offsetLabelY="0" source="tNormalize_1" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="row4" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tAggregateRow_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="jobTitleEn"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -727,11 +938,14 @@
       <elementValue elementRef="TRACE_COLUMN" value="servierCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="brandStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="row5" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tMCPOutput_1">
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="row5" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tAggregateRow_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="ROWID"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -739,6 +953,19 @@
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tAggregateRow_2" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_2" target="tMCPOutput_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="brandStatus"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tAggregateRow_3" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_3" target="tMCPOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tMCPExceptionCatcher_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>

@@ -8,6 +8,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="4"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
@@ -17,6 +18,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="4"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
@@ -26,6 +28,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="4"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="APAC"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -70,7 +73,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:h5ZH/2kWlqFgXycomUiT4wd4IXs74l4lwQPV2d+s" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:tbchsukxQ6XEER2N9ICJIIdceaodxtqG6PCQ0r8C" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -105,7 +108,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:BrUiak3PXB81uiFuYKzJMeP576/5NyZvpvEJjfj9" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:z5NLqX3qSdh0KTvVEaZEamUWHlh2yfptfrftuFFG" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>

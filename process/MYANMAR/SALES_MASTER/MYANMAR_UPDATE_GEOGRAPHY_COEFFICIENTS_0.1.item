@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Myanmar"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EqQw8L73EeiwTrrgdMnqWg" type="id_String" value="Ym9iLm1vcmFuZUBzZXJ2aWVyLmNvbTptb3JhbmU="/>
@@ -73,7 +73,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:BhapfeLV7BSRE7PNZPHqy92V3dUYLcgJHSlUN47Z" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:1uam9tUyLdMEd3cAYiYJ28Ke8TVpxCl0VPCPaj7a" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -108,7 +108,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AYmTX/UQFNVz3RcvOOzVGkTMwyItfDAKvoOOJsZZ" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:lkwJFXY8wO6yVJijGtUnWuftyx3wU88uf+6T+arw" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>

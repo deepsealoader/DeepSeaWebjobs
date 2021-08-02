@@ -85,7 +85,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:OTkId7SWhqvDJjOFJXFYzgWOTRfdHF0SBDaDnnLc" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:iHqcj7FnCUzGCrHr9R+6OlTF/fMc5nBZ/yEAgFyY" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -120,7 +120,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:hMlJnKhFHOJmnABTIQx92COaD4hNb8CySYXw2hyj" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Vv2ZbVJLpkAefDnVCDD5G4oPpdU61nBRlXePyb57" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -225,6 +225,21 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="nameLo"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="address"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="latitude"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="longitude"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="attribute1"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
@@ -253,6 +268,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameEn" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameLo" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="city" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="longitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute1" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -281,6 +301,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameEn" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameLo" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="city" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="longitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute1" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -311,6 +336,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameEn" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameLo" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="city" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="longitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute1" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -340,6 +370,11 @@
         <mapperTableEntries name="sourceChannelCode" expression="row8.sourceChannelCode" type="id_String"/>
         <mapperTableEntries name="nameEn" expression="row8.nameEn" type="id_String"/>
         <mapperTableEntries name="nameLo" expression="row8.nameLo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="address" expression="row8.address " type="id_String" nullable="true"/>
+        <mapperTableEntries name="city" expression="row8.city " type="id_String" nullable="true"/>
+        <mapperTableEntries name="postalCode" expression="row8.postalCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="latitude" expression="Float.parseFloat(Clean.cleanNumber(row8.latitude, &quot;0&quot;)) " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="longitude" expression="Float.parseFloat(Clean.cleanNumber(row8.longitude, &quot;0&quot;)) " type="id_Float" nullable="true"/>
         <mapperTableEntries name="attribute1" expression="row8.attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute2" expression="row8.attribute2" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute3" expression="row8.attribute3" type="id_String" nullable="true"/>
@@ -368,6 +403,11 @@
         <mapperTableEntries name="sourceChannelCode" type="id_String"/>
         <mapperTableEntries name="nameEn" type="id_String"/>
         <mapperTableEntries name="nameLo" type="id_String" nullable="true"/>
+        <mapperTableEntries name="address" type="id_String" nullable="true"/>
+        <mapperTableEntries name="city" type="id_String" nullable="true"/>
+        <mapperTableEntries name="postalCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="latitude" type="id_String" nullable="true"/>
+        <mapperTableEntries name="longitude" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
         <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
@@ -425,6 +465,26 @@
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="attribute5"/>
       <elementValue elementRef="IGNORE_NULL" value="true"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="address"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="address"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="city"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="city"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="postalCode"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="postalCode"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="latitude"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="latitude"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="longitude"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="longitude"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;|&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="false"/>
@@ -440,6 +500,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameEn" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameLo" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="city" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="longitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute1" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -479,6 +544,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameEn" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="nameLo" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="city" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="latitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="longitude" nullable="true" pattern="" precision="-1" sourceType="" type="id_Float" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute1" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="attribute3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -816,6 +886,21 @@
       <elementValue elementRef="TRACE_COLUMN" value="rowId"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="address"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="city"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="latitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="longitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
@@ -922,6 +1007,21 @@
       <elementValue elementRef="TRACE_COLUMN" value="geographyCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="address"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="city"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="latitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="longitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
@@ -956,6 +1056,21 @@
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMCPOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="geographyCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="address"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="city"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="latitude"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="longitude"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

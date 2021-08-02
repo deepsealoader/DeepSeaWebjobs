@@ -74,10 +74,12 @@ public class GeoCode {
     public static String guessDeliveryCode(java.util.List<String[]> customers, String place, double lat, double lng) {
     	double min = Double.POSITIVE_INFINITY;
     	String result = null;
+    	
+    	place = place.replace("Ｃ", "センター");
 
     	for(int i = 0; i < customers.size(); i++) {
     		String[] customer = customers.get(i);
-
+    		
     		if(Clean.isNullOrEmpty(customer[15]) || Clean.isNullOrEmpty(customer[16])) {
     			continue;
     		}

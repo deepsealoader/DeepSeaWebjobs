@@ -9,7 +9,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:6Prp4mkS2LjUgUKxo1+K5ApC6E61eb2B9ypGJZhrZFGCea3DVR35wg2g"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:IT2CCDqq2aHM8qI8WH7nYRCcxWZchZ8gT6W4Eqhh63Qo1D10NOQd+bqI"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com"/>
   </context>
   <context confirmationNeeded="false" name="Production">
@@ -21,7 +21,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:+pRdgMj3WZzT6f+u02HK30LhI9H9nQDkeUjVN5a+Dy3Zv83TOKt1zHjS"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:PgntykkU+yKewqF1HrFijNUBZtP7K4kSc6x00VFk7bW4YQX9GcXP7XfB"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
@@ -33,7 +33,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:NQOzs8CiY8R8z8BEFS4rdsiNe8IMUro4qerX02Fxz1Cxvhh7iVhRzqXW"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:2Kbjk6exOjCR/MbjmUovo65Ubwgv6z5FHzcT1jMn5gJFt1SgXbuWg3P0"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com"/>
   </context>
   <parameters>
@@ -79,7 +79,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:zgvXBuHzidTdw5Ffubr7L1s05pdz5QXZj8gyOXH+" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:ZpYCK1Qwg+oI2J+SohCSmTJIL4hEjldSGcBXXHTX" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -114,7 +114,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XIxv0ay5Y1FLFBHDjJ0XhqZf8/4I0OJmOxzGIedu" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Z161auQTw6n1nT6vxUYhQfeEuqdotxo/QjK8Yrvx" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -144,7 +144,7 @@
     <routinesParameter id="_HdKLwK6jEeiC2aJINdmZJQ" name="TalendString"/>
     <routinesParameter id="_48LqMCmnEemf_-JpfaxcDQ" name="Clean"/>
   </parameters>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tCreateTemporaryFile_1_FILEPATH&quot;).toString()"/>
@@ -168,35 +168,19 @@
     <elementParameter field="TEXT" name="NB_RANDOM" value="10" show="false"/>
     <elementParameter field="CHECK" name="TRIMALL" value="false"/>
     <elementParameter field="TABLE" name="TRIMSELECT">
-      <elementValue elementRef="SCHEMA_COLUMN" value="channel"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brickCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productCode"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brickName"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productName"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="territory"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerCode"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="product"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="packCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pack"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="manufacturer"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act3"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act4"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="units"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="countingUnits"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesValues"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="amount"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
@@ -206,78 +190,46 @@
     <elementParameter field="CHECK" name="SPLITRECORD" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
     <elementParameter field="TABLE" name="DECODE_COLS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="channel"/>
-      <elementValue elementRef="DECODE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brickCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productCode"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brickName"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productName"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="territory"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerCode"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="product"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="packCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pack"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="manufacturer"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act3"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act4"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="units"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="countingUnits"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesValues"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="amount"/>
       <elementValue elementRef="DECODE" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="DESTINATION" value="" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileInputDelimited_1">
-      <column comment="" key="false" length="-1" name="channel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="territory" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="product" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="packCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pack" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="manufacturer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="units" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="countingUnits" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="salesValues" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="channel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="territory" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="product" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="packCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pack" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="manufacturer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="units" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="countingUnits" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="salesValues" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="date"/>
@@ -293,7 +245,7 @@
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="320">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -317,14 +269,14 @@
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="320">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_1" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="480">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_2" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tCreateTemporaryFile_1_FILEPATH&quot;).toString()"/>
@@ -348,35 +300,19 @@
     <elementParameter field="TEXT" name="NB_RANDOM" value="10" show="false"/>
     <elementParameter field="CHECK" name="TRIMALL" value="false"/>
     <elementParameter field="TABLE" name="TRIMSELECT">
-      <elementValue elementRef="SCHEMA_COLUMN" value="channel"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brickCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productCode"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brickName"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productName"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="territory"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerCode"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="product"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="packCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pack"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="manufacturer"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act3"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act4"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="units"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="countingUnits"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesValues"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="amount"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
@@ -386,78 +322,46 @@
     <elementParameter field="CHECK" name="SPLITRECORD" value="false" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
     <elementParameter field="TABLE" name="DECODE_COLS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="channel"/>
-      <elementValue elementRef="DECODE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brickCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productCode"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brickName"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productName"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="territory"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerCode"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="product"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="packCode"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pack"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="manufacturer"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act3"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act4"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="units"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="countingUnits"/>
-      <elementValue elementRef="DECODE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesValues"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="amount"/>
       <elementValue elementRef="DECODE" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="DESTINATION" value="" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileInputDelimited_2">
-      <column comment="" key="false" length="-1" name="channel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="territory" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="product" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="packCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pack" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="manufacturer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="units" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="countingUnits" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="salesValues" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="channel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="territory" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="product" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="packCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pack" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="manufacturer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="units" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="countingUnits" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="salesValues" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="480">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -487,33 +391,25 @@
       <outputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="row3.date.equals(globalMap.get(&quot;row5.date&quot;).toString())" activateExpressionFilter="true" columnNameFilter="">
         <mapperTableEntries name="batchDate" expression="row3.date" type="id_String" nullable="true"/>
         <mapperTableEntries name="date" expression="TalendDate.formatDate(context.getDEFAULT_DATE_FORMAT(),TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, row3.date)) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="productCode" expression="row3.packCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="productName" expression="row3.pack " type="id_String" nullable="true"/>
-        <mapperTableEntries name="customerCode" expression="row3.brickCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="customerName" expression="row3.brickName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="quantity" expression="row3.countingUnits " type="id_String" nullable="true"/>
-        <mapperTableEntries name="amount" expression="row3.salesValues " type="id_String" nullable="true"/>
+        <mapperTableEntries name="productCode" expression="row3.productCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="productName" expression="row3.productName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" expression="row3.customerCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerName" expression="row3.customerName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="quantity" expression="row3.quantity " type="id_String" nullable="true"/>
+        <mapperTableEntries name="amount" expression="row3.amount " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="channel" type="id_String" nullable="true"/>
         <mapperTableEntries name="date" type="id_String" nullable="true"/>
-        <mapperTableEntries name="brickCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="brickName" type="id_String" nullable="true"/>
-        <mapperTableEntries name="territory" type="id_String" nullable="true"/>
-        <mapperTableEntries name="product" type="id_String" nullable="true"/>
-        <mapperTableEntries name="packCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pack" type="id_String" nullable="true"/>
-        <mapperTableEntries name="manufacturer" type="id_String" nullable="true"/>
-        <mapperTableEntries name="act3" type="id_String" nullable="true"/>
-        <mapperTableEntries name="act4" type="id_String" nullable="true"/>
-        <mapperTableEntries name="market" type="id_String" nullable="true"/>
-        <mapperTableEntries name="units" type="id_String" nullable="true"/>
-        <mapperTableEntries name="countingUnits" type="id_String" nullable="true"/>
-        <mapperTableEntries name="salesValues" type="id_String" nullable="true"/>
+        <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="productName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="quantity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="amount" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tDeepSeaOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="736" posY="480">
+  <node componentName="tDeepSeaOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaOutput_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="FILE_NAME" value="globalMap.get(&quot;COLLECTION&quot;).toString() + &quot;-&quot; +globalMap.get(&quot;row5.date&quot;).toString() + &quot;.csv&quot;"/>
@@ -562,12 +458,14 @@
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;COLLECTION&quot;"/>
       <elementValue elementRef="VALUE" value="TalendString.unionString(&quot;.&quot;, &quot;sales&quot;, context.getPROVIDER(), &quot;conso&quot;).toLowerCase()"/>
+      <elementValue elementRef="KEY" value="&quot;COLLECTION_SAMPLE&quot;"/>
+      <elementValue elementRef="VALUE" value="TalendString.unionString(&quot;.&quot;, &quot;sales&quot;, context.getPROVIDER()).toLowerCase()"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="DeclareVariables"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSetGlobalVar_1"/>
   </node>
-  <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="96" posY="320">
+  <node componentName="tDeepSeaConnect" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
     <elementParameter field="TEXT" name="API_URL" value="context.getDEEPSEA_HOSTNAME()"/>
     <elementParameter field="TEXT" name="API_TOKEN_ID" value="context.getDEEPSEA_AUTH_TOKEN()"/>
@@ -584,7 +482,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tCreateTemporaryFile_1" show="false"/>
     <elementParameter field="CHECK" name="REMOVE" value="true"/>
     <elementParameter field="CHECK" name="USE_DEFAULT_DIR" value="true"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Users/RRU_SG1/Projects/Talend/workspace&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Users/RRU_SG1/OneDrive - Servier Monde/Desktop&quot;" show="false"/>
     <elementParameter field="CHECK" name="USE_PREFIX" value="true"/>
     <elementParameter field="LABEL" name="INFO_RANGE" value="The temporary file name should include template &quot;XXXX&quot;. Template is deprecated. Use Prefix instead." show="false"/>
     <elementParameter field="TEXT" name="TEMPLATE" value="&quot;talend_XXXX&quot;" show="false"/>
@@ -592,7 +490,7 @@
     <elementParameter field="TEXT" name="SUFFIX" value="&quot;tmp&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="192">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -622,14 +520,14 @@
       <column comment="" key="false" length="-1" name="dataFolderPath" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="192">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowToIterate_2" show="false"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_2"/>
   </node>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileList_1" show="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="globalMap.get(&quot;row7.dataFolderPath&quot;).toString()"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
@@ -651,144 +549,51 @@
     <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
-    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="FILE" name="FILENAME" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Qo0rEnf5diesBMYK4FKhfqsqRxGkmHwMmM7x6NWd"/>
-    <elementParameter field="CHECK" name="ALL_SHEETS" value="true"/>
-    <elementParameter field="TABLE" name="SHEETLIST" show="false"/>
-    <elementParameter field="TEXT" name="HEADER" value="3"/>
-    <elementParameter field="TEXT" name="FOOTER" value="0" show="false"/>
-    <elementParameter field="TEXT" name="LIMIT" value=""/>
-    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false" show="false"/>
-    <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
-    <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
-    <elementParameter field="CHECK" name="TRIMALL" value="true"/>
-    <elementParameter field="TABLE" name="TRIMSELECT" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="channel"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="relativeMonth"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brick"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="territory"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="product"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="packCode"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pack"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="manufacturer"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act3"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act4"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="units"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="countingUnits"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesValues"/>
-      <elementValue elementRef="TRIM" value="false"/>
+  <node componentName="tDeepSeaSample" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="736" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaSample_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
+    <elementParameter field="FILE" name="FILE_NAME" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
+    <elementParameter field="TEXT" name="COLLECTION_NAME" value="globalMap.get(&quot;COLLECTION_SAMPLE&quot;).toString()"/>
+    <elementParameter field="TEXT" name="LIMITS" value="0"/>
+    <elementParameter field="CHECK" name="USE_AUTO_MAP" value="true"/>
+    <elementParameter field="TEXT" name="TAGS_START_POS" value="3"/>
+    <elementParameter field="TABLE" name="TAGS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="dateMonth"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productCode"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productName"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="amount"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
     </elementParameter>
-    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false" show="false"/>
-    <elementParameter field="TABLE" name="DATESELECT" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="channel"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="relativeMonth"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="brick"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="territory"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="product"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="packCode"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="pack"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="manufacturer"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act3"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="act4"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="market"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="units"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="countingUnits"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesValues"/>
-      <elementValue elementRef="CONVERTDATE" value="false"/>
-      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
-    </elementParameter>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false" show="false"/>
-    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false" show="false"/>
-    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false" show="false"/>
-    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="EVENT_MODE"/>
-    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" value="true"/>
+    <elementParameter field="CHECK" name="USE_PASSWORD" value="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileInputExcel_1">
-      <column comment="" key="false" length="-1" name="channel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="relativeMonth" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brick" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="territory" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="product" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="packCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pack" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="manufacturer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="units" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="countingUnits" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="salesValues" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="channel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="relativeMonth" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brick" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="territory" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="product" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="packCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pack" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="manufacturer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="units" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="countingUnits" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="salesValues" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tDeepSeaSample_1">
+      <column comment="" key="false" length="-1" name="dateMonth" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="992" posY="192">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -803,61 +608,38 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="row8">
-      <column comment="" key="false" length="-1" name="channel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="territory" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="product" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="packCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pack" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="manufacturer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="units" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="countingUnits" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="salesValues" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="row8">
-        <mapperTableEntries name="channel" expression="row6.channel" type="id_String" nullable="true"/>
-        <mapperTableEntries name="date" expression="Clean.cleanDate(StringHandling.RIGHT(row6.relativeMonth, 7) + &quot;/01&quot;, null, &quot;yyyy/MM/dd&quot;) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="brickCode" expression="StringHandling.LEFT(row6.brick, 5) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="brickName" expression="StringHandling.RIGHT(row6.brick, StringHandling.LEN(row6.brick) - 6) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="territory" expression="row6.territory" type="id_String" nullable="true"/>
-        <mapperTableEntries name="product" expression="row6.product" type="id_String" nullable="true"/>
-        <mapperTableEntries name="packCode" expression="row6.packCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pack" expression="row6.pack" type="id_String" nullable="true"/>
-        <mapperTableEntries name="manufacturer" expression="row6.manufacturer" type="id_String" nullable="true"/>
-        <mapperTableEntries name="act3" expression="row6.act3" type="id_String" nullable="true"/>
-        <mapperTableEntries name="act4" expression="row6.act4" type="id_String" nullable="true"/>
-        <mapperTableEntries name="market" expression="row6.market" type="id_String" nullable="true"/>
-        <mapperTableEntries name="units" expression="row6.units" type="id_String" nullable="true"/>
-        <mapperTableEntries name="countingUnits" expression="row6.countingUnits" type="id_String" nullable="true"/>
-        <mapperTableEntries name="salesValues" expression="row6.salesValues" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date" expression="Clean.cleanDate(StringHandling.RIGHT(row9.dateMonth, 7) + &quot;/01&quot;, null, &quot;yyyy/MM/dd&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="productCode" expression="row9.productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="productName" expression="row9.productName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" expression="StringHandling.LEFT(row9.customerCode, 5) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerName" expression="StringHandling.RIGHT(row9.customerCode, StringHandling.LEN(row9.customerCode) - 6) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="quantity" expression="row9.quantity " type="id_String" nullable="true"/>
+        <mapperTableEntries name="amount" expression="row9.amount " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="channel" type="id_String" nullable="true"/>
-        <mapperTableEntries name="relativeMonth" type="id_String" nullable="true"/>
-        <mapperTableEntries name="brick" type="id_String" nullable="true"/>
-        <mapperTableEntries name="territory" type="id_String" nullable="true"/>
-        <mapperTableEntries name="product" type="id_String" nullable="true"/>
-        <mapperTableEntries name="packCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="pack" type="id_String" nullable="true"/>
-        <mapperTableEntries name="manufacturer" type="id_String" nullable="true"/>
-        <mapperTableEntries name="act3" type="id_String" nullable="true"/>
-        <mapperTableEntries name="act4" type="id_String" nullable="true"/>
-        <mapperTableEntries name="market" type="id_String" nullable="true"/>
-        <mapperTableEntries name="units" type="id_String" nullable="true"/>
-        <mapperTableEntries name="countingUnits" type="id_String" nullable="true"/>
-        <mapperTableEntries name="salesValues" type="id_String" nullable="true"/>
+      <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="dateMonth" type="id_String" nullable="true"/>
+        <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="productName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="quantity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="amount" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="192">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
@@ -888,21 +670,13 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
-      <column comment="" key="false" length="-1" name="channel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brickName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="territory" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="product" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="packCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pack" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="manufacturer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="act4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="units" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="countingUnits" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="salesValues" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tAggregateRow_1">
@@ -1001,6 +775,24 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="brickName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="amount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="quantity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productName"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -1126,6 +918,24 @@
       <elementValue elementRef="TRACE_COLUMN" value="brickName"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="amount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="quantity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
@@ -1140,14 +950,14 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tSetGlobalVar_1" offsetLabelX="0" offsetLabelY="0" source="tSetGlobalVar_1" target="tCreateTemporaryFile_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDeepSeaConnect_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaConnect_1" target="tFileInputDelimited_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tDeepSeaConnect_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaConnect_1" target="tRunJob_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tFlowToIterate_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tDeepSeaConnect_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_1" offsetLabelX="0" offsetLabelY="0" source="tRunJob_1" target="tFileInputDelimited_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFlowToIterate_2" offsetLabelX="0" offsetLabelY="0" source="tFlowToIterate_2" target="tFileList_1">
@@ -1155,76 +965,14 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
   </connection>
-  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputExcel_1">
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tDeepSeaSample_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate2" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tMap_2">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="relativeMonth"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="product"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="servierMKT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="salesValues"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="act3"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="countingUnits"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Channel"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="manufacturer"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="territory"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="units"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ATC"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="MKT_Description"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="packCode"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="act4"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="pack"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="MKT"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="market"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ATC_Description"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="brick"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="channel"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tDeepSeaSample_1" offsetLabelX="0" offsetLabelY="0" source="tDeepSeaSample_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="row8" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tFileOutputDelimited_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1232,6 +980,21 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="brickCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="amount"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="quantity"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerName"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

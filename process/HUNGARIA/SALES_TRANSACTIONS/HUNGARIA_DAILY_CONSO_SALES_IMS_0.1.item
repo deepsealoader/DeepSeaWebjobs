@@ -3,34 +3,34 @@
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IMS"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dd/MM/yy"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dd/MM/yyyy"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="2"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="EUE"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IMS"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="http://localhost:8080"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dd/MM/yy"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dd/MM/yyyy"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="2"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="EUE"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IMS"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://deepsealoader.servier.com"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dd/MM/yy"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="dd/MM/yyyy"/>
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="2"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="EUE"/>
   </context>
   <parameters>
@@ -76,7 +76,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:+Mn3vnd6BLlP1qn91fewXYxS5TPX18NfSof1ERxp" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:kIfo/hyl608LFT4yIulbQ1qb/08CU/kXSTVeyBOx" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -111,7 +111,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:QUeB/KXoYkxKrg7FgpD27Z6YQqukHxYb9pcfTCmp" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:HvcKcXus4Fx1lk3s7H6JFk1k4e0KyjRKTvH3HDNR" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>

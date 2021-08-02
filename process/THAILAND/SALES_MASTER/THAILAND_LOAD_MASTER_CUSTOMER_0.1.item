@@ -9,6 +9,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH,IQVIA"/>
@@ -19,6 +20,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH,IQVIA"/>
@@ -29,6 +31,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -73,7 +76,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:OI4ZsZ0B6Dw13edDTQ9T8yi5xyoOUmuD7BXNNukF" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:AhB7fBkKJcfmc0QqgflxK5P9x2gfybktjBIeklVZ" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -108,7 +111,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:YnbcygIlUlMR+uRMF4paVAXDT6nzgl3098oNxsQm" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Ys4xBD+9IvIndoCojJbQ5r5Cq1tzgdK4Tz2FzawH" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -144,7 +147,7 @@
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="E_LOAD_MASTER_CUSTOMER"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Development"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Production_Test"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="DEEPSEA:_Tv4TUPM9EeqYSPmC-SfBPQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
