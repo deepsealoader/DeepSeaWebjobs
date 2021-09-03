@@ -7,6 +7,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="b99ba142-5072-46c3-8ff1-9a4da3c47be0"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="3"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="Taiwan"/>
@@ -15,6 +16,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="b99ba142-5072-46c3-8ff1-9a4da3c47be0"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="https://mcpcloud.servier.com.cn"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="3"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="Taiwan"/>
@@ -23,6 +25,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="b99ba142-5072-46c3-8ff1-9a4da3c47be0"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="https://mcpcloud.servier.com.cn"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="3"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_6AvF8LYbEeuZYc3TFsbKrg" type="id_String" value="APAC"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -67,7 +70,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:FR5T+6yc2EvQumI8s3Fu9VPj439PMXRrGi1b5paK" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:2ZUXQkqCdgB3vf5XiH2DSj1kSiiqtkHxffgWI5jd" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -102,7 +105,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:B2l7F2PHjxD6k400tCdPqUXStnaJs2Zwr2zAeWNl" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:KDTU8KZJyq2MuhTrIX4Og8joHnhMxPO5hEDMLIR8" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -138,7 +141,7 @@
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="I_LOAD_MASTER_SALES_OBJECTIVES"/>
-    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Development"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Production_Test"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="DEEPSEA:_dqS7wPNCEeqYSPmC-SfBPQ"/>
     <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>

@@ -76,7 +76,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:12g4NGaZtx9i9sPRe1fJDudda98wLdNgTJ1rqowO" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:PFnSSogPOJM2zwum0QSKPhAzm9UHCSJwqD9sgi8O" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -111,7 +111,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:n2QezHEfHht3cjh0+bJQTzFQUPvog5Xzv+yaKeBQ" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:K349NO9WR8efse0eF9n6/sUFJBsFsaBjNrcLp/kx" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -158,7 +158,7 @@
     <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
     <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
     <elementParameter field="TEXT" name="REGION" value="context.getREGION()"/>
-    <elementParameter field="TEXT" name="COUNTRY" value="context.getCOUNTRY() + &quot;_APAC&quot;"/>
+    <elementParameter field="TEXT" name="COUNTRY" value="context.getCOUNTRY() + &quot;_&quot; + context.getREGION()"/>
     <elementParameter field="TEXT" name="VIEW_NAME" value="&quot;DEEPSEA_01_CheckProductCustomer&quot;"/>
     <elementParameter field="CHECK" name="USE_AUTO_MAP" value="true"/>
     <elementParameter field="TEXT" name="FIELDS_START_POS" value="0"/>

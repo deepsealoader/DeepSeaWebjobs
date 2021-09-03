@@ -2,7 +2,7 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:osCSITIVB2KCxiCMhgAfBHUs6L0Di9rsUxha9kIpQjkPN9Sd+m26hpxawpQ="/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:EgGw80qT7sk3vIsq4LPBf5NTNlD58U0vvPaia3MrtpjNHOpj0lXg6n1Nn98="/>
     <contextParameter comment="" name="EMAIL_FROM" prompt="EMAIL_FROM?" promptNeeded="false" type="id_String" value=".+@zuelligpharma\.com"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
@@ -13,7 +13,7 @@
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:4YOJVxoTWXeRbjF+7piMudvssoLxQ5gVw7DAT4iTTz1/hxOzDsz3e11yn2Y="/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:4ua32SAal/meglelkbE1/4mvk8avM89QmznErvyFFs8z9sSX9ubCGxep7Js="/>
     <contextParameter comment="" name="EMAIL_FROM" prompt="EMAIL_FROM?" promptNeeded="false" type="id_String" value=".+@zuelligpharma\.com"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
@@ -24,7 +24,7 @@
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:yYUf7o3mMmMAXkN4EJryr6e9vko612MM3TOaJg8rxsDv3EYC5I79dCu4U+c="/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:7VsHZSIJV9pDoF235ddE4SuRtIqDr1PGvWGxwxNKNGHlbdOdiYTwSdXkSAE="/>
     <contextParameter comment="" name="EMAIL_FROM" prompt="EMAIL_FROM?" promptNeeded="false" type="id_String" value=".+@zuelligpharma\.com"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
@@ -76,7 +76,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:c369gQk74/oE/VqofhhhGWoyMF2iMxHMhJTNomFV" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:/oB+M4SnryfjsEEpJyevcbi+BD+Ktv6mfSAhIsaE" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -111,7 +111,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FlnVhe4Duf2uN3wpxm1N5mJeTewPc+c/OMps987t" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JAzHLtpsXn0BgLdzRBWLWD1E9UD9cQ1fj/oS6Cxv" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -146,7 +146,7 @@
     <elementParameter field="TEXT" name="HOST" value="&quot;outlook.office365.com&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="995"/>
     <elementParameter field="TEXT" name="USERNAME" value="context.getEMAIL_USERNAME()"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:z74LI81dWwnr5Ikv7nkNfrb81y3pfobck9KY4kfOg8JonIbyJsY1O3ccQ5SMDsC2hjfcuXSxUg=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:fH1wkhNT7Y4KmOtKKLQ7hBWaiJa60ESSD5+I66p4vuwWMbIuKikvAo1HF+uQQeQfH5/ihZbe6w=="/>
     <elementParameter field="DIRECTORY" name="OUTPUT_DIRECTORY" value="globalMap.get(&quot;MAILS_FOLDER_PATH&quot;).toString()"/>
     <elementParameter field="TEXT" name="FILENAME_PATTERN" value="TalendDate.getDate(&quot;yyyyMMdd-hhmmss&quot;) + &quot;_&quot; + (counter_tPOP_1 + 1) + &quot;.mail&quot;"/>
     <elementParameter field="CHECK" name="ALL_EMAILS" value="true"/>
@@ -175,7 +175,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJava_3" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="javax.mail.Session session = javax.mail.Session.getDefaultInstance(System.getProperties());&#xA;&#xA;java.io.FileInputStream in = new java.io.FileInputStream(globalMap.get(&quot;tPOP_1_CURRENT_FILEPATH&quot;).toString());&#xA;javax.mail.internet.MimeMessage message = new javax.mail.internet.MimeMessage(session, in);&#xA;in.close();&#xA;&#xA;javax.mail.internet.MimeMultipart mp = (javax.mail.internet.MimeMultipart) message.getContent();&#xA;&#xA;for(int i = 0; i &lt; mp.getCount(); i++) {&#xA;&#x9;if (mp.getBodyPart(i).getContentType().equals(&quot;message/rfc822&quot;)) {&#xA;&#x9;&#x9;System.out.println(&quot;Found a part with message/rfc822&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;javax.mail.internet.MimeMessage m = (javax.mail.internet.MimeMessage) mp.getBodyPart(i).getContent();&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;java.io.FileOutputStream out = new java.io.FileOutputStream(globalMap.get(&quot;tPOP_1_CURRENT_FILEPATH&quot;).toString());&#x9;&#x9;&#xA;&#x9;&#x9;m.writeTo(out);&#x9;&#xA;&#x9;&#x9;out.close();&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="javax.mail.Session session = javax.mail.Session.getDefaultInstance(System.getProperties());&#xA;&#xA;java.io.FileInputStream in = new java.io.FileInputStream(globalMap.get(&quot;tPOP_1_CURRENT_FILEPATH&quot;).toString());&#xA;javax.mail.internet.MimeMessage message = new javax.mail.internet.MimeMessage(session, in);&#xA;in.close();&#xA;&#xA;if (message.getContent() instanceof javax.mail.internet.MimeMultipart) {&#xA;&#xA;javax.mail.internet.MimeMultipart mp = (javax.mail.internet.MimeMultipart) message.getContent();&#xA;&#xA;for(int i = 0; i &lt; mp.getCount(); i++) {&#xA;&#x9;if (mp.getBodyPart(i).getContentType().equals(&quot;message/rfc822&quot;)) {&#xA;&#x9;&#x9;System.out.println(&quot;Found a part with message/rfc822&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;javax.mail.internet.MimeMessage m = (javax.mail.internet.MimeMessage) mp.getBodyPart(i).getContent();&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;java.io.FileOutputStream out = new java.io.FileOutputStream(globalMap.get(&quot;tPOP_1_CURRENT_FILEPATH&quot;).toString());&#x9;&#x9;&#xA;&#x9;&#x9;m.writeTo(out);&#x9;&#xA;&#x9;&#x9;out.close();&#xA;&#x9;}&#xA;}&#xA;}&#xA;&#xA;&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="ExtractMessageRFC822"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>

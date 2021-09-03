@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_LOAD_ACTIVITIES_IQVIA"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IQVIA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -8,10 +10,11 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_LOAD_ACTIVITIES_IQVIA"/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IQVIA"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_LOAD_ACTIVITIES_IQVIA"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IQVIA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://localhost:8080"/>
@@ -19,10 +22,11 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_LOAD_ACTIVITIES_IQVIA"/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IQVIA"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_LOAD_ACTIVITIES_IQVIA"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IQVIA"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://deepsealoader.servier.com"/>
@@ -30,8 +34,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://deepsealoader.servier.com/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_LOAD_ACTIVITIES_IQVIA"/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IQVIA"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -76,7 +79,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:QEsAYVjP+MFkZVE7WA1/hhFCbHqVumUdHXx527HR" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:9KsSmvPBY+xcTm7hAkLG6MZipDxH6MYahpA/7oHa" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -111,7 +114,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JLWYVTONSxb/C2IDi6msQQIkYP/zq77w+H8/4TMY" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Qqtqufow61klg25csyIb2YYgPMCC04DiF+ncyoo2" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -180,7 +183,6 @@
     <elementParameter field="CHECK" name="USE_FILTER" value="false"/>
     <elementParameter field="MEMO_JAVA" name="FILTER_CONDITION" value="DeepSeaFile.matchFilename(globalMap, &quot;tDeepSeaList_1&quot;, &quot;activities.iqvia-2014-01-01.xlsx&quot;)" show="false"/>
     <elementParameter field="CHECK" name="USE_INCREMENTAL_MODE" value="true"/>
-    <elementParameter field="CHECK" name="MULTIPLE_MODE" value="true"/>
     <elementParameter field="CHECK" name="ENABLE_CATCH_DELETION" value="false"/>
     <elementParameter field="CHECK" name="USE_LOG_STAT" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="ListActivities"/>
@@ -595,7 +597,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_1" show="false"/>
     <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
     <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="REGION" value="&quot;APAC&quot;"/>
+    <elementParameter field="TEXT" name="REGION" value="context.getREGION()"/>
     <elementParameter field="TEXT" name="RECORDCODE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
     <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="TalendString.unionString(&quot;_&quot;, &quot;activities&quot;,  context.getCOUNTRY()).toLowerCase()"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>

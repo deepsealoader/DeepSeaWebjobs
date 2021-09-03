@@ -8,6 +8,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="b99ba142-5072-46c3-8ff1-9a4da3c47be0"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="3"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IQVIA"/>
@@ -17,6 +18,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="b99ba142-5072-46c3-8ff1-9a4da3c47be0"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="https://mcpcloud.servier.com.cn"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="3"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="IQVIA"/>
@@ -26,6 +28,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="b99ba142-5072-46c3-8ff1-9a4da3c47be0"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="https://mcpcloud.servier.com.cn"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="3"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="APAC"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -70,7 +73,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:/yAEeWa//Wau2pF29APRot5YBAVA7rLtUCduc/2J" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:RlLhz/tzoPuZ99VHuQ2HPYq+a68NHXRVXRZmLAWD" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -105,7 +108,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:br3i5E5iXwQlJbSvKl3OreZlz54PxIvBM5AWVH5m" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:QG0V1XQrYGRGYqcqi7989ZZcP+9Q08fsQjUMM0oV" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>

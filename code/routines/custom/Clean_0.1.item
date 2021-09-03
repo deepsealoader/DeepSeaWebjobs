@@ -474,9 +474,9 @@ public class Clean
 		}
 		
 		private Pattern pattern;
-		public Pattern getPattern() {
-			return pattern;
-		}
+//		public Pattern getPattern() {
+//			return pattern;
+//		}
 
 		private String[] formats;
 		public String[] getFormats() {
