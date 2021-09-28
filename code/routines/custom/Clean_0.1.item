@@ -102,7 +102,7 @@ public class Clean
 		// Case when number is in scientific notation
 		
 		if(number.contains("e") || number.contains("E")) {
-			number = new java.math.BigDecimal(number).toString();
+			number = new java.math.BigDecimal(number).toPlainString();
 		}
 		
 		number = number.replaceAll("\\(", "-"); // Replace (000) by -000

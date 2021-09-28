@@ -79,7 +79,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:9KsSmvPBY+xcTm7hAkLG6MZipDxH6MYahpA/7oHa" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:eowXTFAIpK1xnPzekLwv6okkY0mO4hpt7ULBK4UK" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -114,7 +114,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Qqtqufow61klg25csyIb2YYgPMCC04DiF+ncyoo2" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XML5VarPk+CAaEYgmRZtyrnxrURbVkNX+ZZx/L33" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -166,7 +166,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;COLLECTION&quot;"/>
-      <elementValue elementRef="VALUE" value="TalendString.unionString(&quot;.&quot;, &quot;activities&quot;, context.getPROVIDER()).toLowerCase()"/>
+      <elementValue elementRef="VALUE" value="TalendString.unionString(&quot;.&quot;, &quot;activities&quot;, context.getPROVIDER(), &quot;conso&quot;).toLowerCase()"/>
       <elementValue elementRef="KEY" value="&quot;SOURCE&quot;"/>
       <elementValue elementRef="VALUE" value="TalendString.unionString(&quot;.&quot;, &quot;deepsea&quot;, context.getCOUNTRY(), &quot;activities&quot;, context.getPROVIDER()).toLowerCase()"/>
     </elementParameter>

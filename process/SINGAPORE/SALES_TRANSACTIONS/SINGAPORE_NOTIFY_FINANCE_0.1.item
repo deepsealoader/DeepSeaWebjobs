@@ -4,7 +4,7 @@
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
     <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:0L6uf6iceUh2GQHvbGdIwo/7HivG8ReL+Y996xNKMETdenzZqa3sADsJWrs="/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:tgxXRGo4WrlVElCP8tpUx51ZBoQ7L9dVCdW5RDcgzV1tmzyiH9hQB0LrBro="/>
     <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com;maxime.perrot.business-france@servier.com"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
@@ -19,7 +19,7 @@
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
     <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:E5Id60uFUVrTm+U56ewMV9pOJAXf1mqcdkhWk9QhLuWcIlL51l9XMiOd/AY="/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:ABExrW9NPzCUx5OofQelcAsJBVLZdnbngRYGF1pvmuGZmlaFyZ0/dcAaX3M="/>
     <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="jennie.yeo@servier.com;huiling.ong@servier.com;sharon.tan@servier.com"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
@@ -34,7 +34,7 @@
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
     <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:Li+dv4Y44s00UMxS3YVrbcchu13b9qqXyar3K9w82cfd2pM31ktLyObpECU="/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:L10bhYyYsXfXa6CtlYcS3uPDfcVk7BY9hvAS+/aNnKriEkti/g/3UbBkHgE="/>
     <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com;maxime.perrot.business-france@servier.com"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
@@ -88,7 +88,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:OELeppqZf/i3O0TFcN37c/eHbo25gefgvnsC5aKr" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:ykCUyW+I5HpJhcObcoxxB/tQ8XBTufYYvri6UNJC" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -123,7 +123,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/nR/sZaNxxspd2Wdxe3X7y06UvDl7kpWRraQOggs" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:XrwpJDnzIKDf2SJmOEwXVctM4WZ76UvAS3zpVk1p" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -202,7 +202,6 @@
     <elementParameter field="CHECK" name="USE_FILTER" value="false"/>
     <elementParameter field="MEMO_JAVA" name="FILTER_CONDITION" value="DeepSeaFile.matchFilename(globalMap, &quot;tDeepSeaList_2&quot;, &quot;sales.zuellig-2021-02-01.xlsx&quot;)" show="false"/>
     <elementParameter field="CHECK" name="USE_INCREMENTAL_MODE" value="false"/>
-    <elementParameter field="CHECK" name="MULTIPLE_MODE" value="true" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_CATCH_DELETION" value="false" show="false"/>
     <elementParameter field="CHECK" name="USE_LOG_STAT" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ListSales"/>
@@ -363,7 +362,7 @@
         <mapperTableEntries name="customerCode" expression="row3.customerCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="finalCustomer" expression="row3.customerName " type="id_String" nullable="true"/>
         <mapperTableEntries name="batch" expression="row3.batchNumber " type="id_String" nullable="true"/>
-        <mapperTableEntries name="expiryDate" expression="TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, TalendDate.parseDate(&quot;yyyyMMdd&quot;, row3.expiryDate)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="expiryDate" expression="!Clean.isNullOrEmpty(row3.expiryDate) ? TalendDate.formatDate(&quot;yyyy-MM-dd&quot;, TalendDate.parseDate(&quot;yyyyMMdd&quot;, row3.expiryDate)) : null " type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" expression="Clean.cleanNumber(row3.quantity, &quot;0&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="priceLevel" expression="&quot;Custom&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="unitPrice" expression="Clean.cleanNumber(row3.unitPrice)" type="id_String" nullable="true"/>
@@ -469,7 +468,7 @@
     <elementParameter field="CLOSED_LIST" name="IMPORTANCE" value="Normal"/>
     <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.getEMAIL_USERNAME()"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="enc:system.encryption.key.v1:7YKHE9xgf6TMd16MPsC0zNYIztnHv/YYrfA/qI03dI5RDv76qGVeuzEGsmofMNw0EbujRk6xfg=="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="enc:system.encryption.key.v1:JRMsKICs1ERidATd7Ww3RL1zxjetxfA6ypZK7mWtGyDZJei9XQBdGgn88hlglGpCjDWvUlaINw=="/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="TEXT_SUBTYPE" value="html"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>

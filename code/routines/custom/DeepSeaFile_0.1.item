@@ -78,6 +78,29 @@ public class DeepSeaFile {
     	return value.equalsIgnoreCase(metadata.optString(key));
     }
     
+    /**
+     * getContextValue: retreive a value from the given with a given key.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("globalMap") globalMap: The global map.
+     * {param} string("conn") conn: The conn.
+     * {param} string("key") key: The key.
+     * 
+     * {example} getContextValue(globalMap, "tDeepSeaConnect_1", "dataPath") # "/usr/local/webjobs/inbox/43563498/".
+     */
+    public static String getContextValue(java.util.Map<String, Object> globalMap, String conn, String key) {
+    	org.json.JSONObject context = (org.json.JSONObject) globalMap.get(conn + "_WEBJOB_CONTEXT");
+    	if (context == null) {
+    		return null;
+    	} else {
+    		return context.optString(key);
+    	}
+    }
+    
 	/**
      * checkIfAlreadyProcessed: check if some file has been already processed by the webjob.
      * 
