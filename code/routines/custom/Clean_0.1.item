@@ -121,6 +121,26 @@ public class Clean
      * 
      * {param} String("dateYear") date: the year string to clean
      * {param} String("dateMonth") defaultDate: the month string to clean
+     * 
+     * {example} cleanDate("1975/06/12", "1975-06-01") # "1975-06-12"
+     */
+	public static String cleanDateYearMonth(String dateYear, String dateMonth) {
+		if(Clean.isNullOrEmpty(dateYear) || Clean.isNullOrEmpty(dateMonth)) {
+			return null;
+		}
+		return String.format("%04d-%02d-01", Integer.parseInt(dateYear), Integer.parseInt(dateMonth));
+	}
+	
+	/**
+     * cleanDateYearMonth: Cleans a given string representing a date and converting to "yyyy-MM-dd" format,
+     * otherwise returns a default date.
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} String("dateYear") date: the year string to clean
+     * {param} String("dateMonth") defaultDate: the month string to clean
      * {param} String("defaultDate") defaultDate: the default date
      * 
      * {example} cleanDate("1975/06/12", "1975-06-01", "yy/MM/dd") # "1975-06-12"

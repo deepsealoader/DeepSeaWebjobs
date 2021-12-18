@@ -76,7 +76,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:PFnSSogPOJM2zwum0QSKPhAzm9UHCSJwqD9sgi8O" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:/55dOUl6QG7kXFGu9zHb48lSwSDl9qW2JK5/DA2h" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -111,7 +111,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:K349NO9WR8efse0eF9n6/sUFJBsFsaBjNrcLp/kx" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:dsFiYOeisbZQEWFkbZwkJb2XmW6dRW+wgjt0c+p5" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -144,7 +144,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaConnect_1" show="false"/>
     <elementParameter field="TEXT" name="API_URL" value="context.getDEEPSEA_HOSTNAME()"/>
     <elementParameter field="TEXT" name="API_TOKEN_ID" value="context.getDEEPSEA_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="TIMEOUT" value="30000"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="0"/>
     <elementParameter field="CHECK" name="LOAD_WEBJOB" value="true"/>
     <elementParameter field="TEXT" name="WEBJOB_NAME" value="context.getJOBNAME()"/>
     <elementParameter field="CHECK" name="LOAD_ROOT" value="true"/>
@@ -177,7 +177,7 @@
     <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
     <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
     <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
-    <elementParameter field="TEXT" name="TIMEOUT" value="0"/>
+    <elementParameter field="TEXT" name="TIMEOUT" value="-1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPInput_1">
       <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>

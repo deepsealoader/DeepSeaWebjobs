@@ -74,7 +74,7 @@ public class DeepSeaFile {
      * {example} matchMetadata(globalMap, "tDeepSeaList_1", "current", "yes") # true.
      */
     public static boolean matchMetadata(java.util.Map<String, Object> globalMap, String file, String key, String value) {
-    	org.json.JSONObject metadata = (org.json.JSONObject) globalMap.get(file + "_CURRENT_METADATA");
+    	kong.unirest.json.JSONObject metadata = (kong.unirest.json.JSONObject) globalMap.get(file + "_CURRENT_METADATA");
     	return value.equalsIgnoreCase(metadata.optString(key));
     }
     
@@ -93,7 +93,7 @@ public class DeepSeaFile {
      * {example} getContextValue(globalMap, "tDeepSeaConnect_1", "dataPath") # "/usr/local/webjobs/inbox/43563498/".
      */
     public static String getContextValue(java.util.Map<String, Object> globalMap, String conn, String key) {
-    	org.json.JSONObject context = (org.json.JSONObject) globalMap.get(conn + "_WEBJOB_CONTEXT");
+    	kong.unirest.json.JSONObject context = (kong.unirest.json.JSONObject) globalMap.get(conn + "_WEBJOB_CONTEXT");
     	if (context == null) {
     		return null;
     	} else {
@@ -116,7 +116,7 @@ public class DeepSeaFile {
      * {example} checkIfAlreadyProcessed(globalMap, "tDeepSeaConnect_1", "tDeepSeaList_1") # true.
      */
     public static boolean checkIfAlreadyProcessed(java.util.Map<String, Object> globalMap, String conn, String file) {
-    	org.json.JSONObject context = (org.json.JSONObject) globalMap.get(conn + "_WEBJOB_CONTEXT");
+    	kong.unirest.json.JSONObject context = (kong.unirest.json.JSONObject) globalMap.get(conn + "_WEBJOB_CONTEXT");
     	if (context == null) {
     		return false;
     	}
