@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="LANCOS"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS"/>
-    <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}"/>
-    <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="LANCOS" internalId="_yIeXQGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS" internalId="_yIeXQWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}" internalId="_yIeXQmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}" internalId="_yIeXQ2IUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -15,10 +15,10 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="EUE"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="LANCOS"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS"/>
-    <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}"/>
-    <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="LANCOS" internalId="_yIeXRGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS" internalId="_yIeXRWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}" internalId="_yIeXRmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}" internalId="_yIeXR2IUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="http://localhost:8080"/>
@@ -29,10 +29,10 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="EUE"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="LANCOS"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS"/>
-    <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}"/>
-    <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="LANCOS" internalId="_yIeXSGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS" internalId="_yIeXSWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}" internalId="_yIeXSmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" type="id_String" value="{0}" internalId="_yIeXS2IUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://deepsealoader.servier.com"/>

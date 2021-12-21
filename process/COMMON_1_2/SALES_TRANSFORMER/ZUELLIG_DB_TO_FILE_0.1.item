@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_Directory" value=""/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="ZUELLIG_DB_TO_FILE"/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_Directory" value="" internalId="_yKUKUGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="ZUELLIG_DB_TO_FILE" internalId="_yKUKUWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_yKUKUmIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -13,9 +13,9 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="COLLECTIONINPUT_FILEPATH?" promptNeeded="false" type="id_Directory" value=""/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="ZUELLIG_DB_TO_FILE"/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="COLLECTIONINPUT_FILEPATH?" promptNeeded="false" type="id_Directory" value="" internalId="_yKUKU2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="ZUELLIG_DB_TO_FILE" internalId="_yKUKVGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_yKUKVWIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://localhost:8080"/>
@@ -25,9 +25,9 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="COLLECTIONINPUT_FILEPATH?" promptNeeded="false" type="id_Directory" value=""/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="ZUELLIG_DB_TO_FILE"/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="COLLECTIONINPUT_FILEPATH?" promptNeeded="false" type="id_Directory" value="" internalId="_yKUKVmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="ZUELLIG_DB_TO_FILE" internalId="_yKUKV2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_yKUKWGIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://deepsealoader.servier.com"/>

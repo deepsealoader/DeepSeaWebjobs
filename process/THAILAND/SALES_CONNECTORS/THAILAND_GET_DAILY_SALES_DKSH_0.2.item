@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:0EHpUYdqdYJHqLKJYzNoTwctcAQHKR4RDIcwaNWU0QGmaywHmA=="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com" internalId="_yhqTUGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:0EHpUYdqdYJHqLKJYzNoTwctcAQHKR4RDIcwaNWU0QGmaywHmA==" internalId="_yhqTUWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH" internalId="_yhqTUmIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -13,9 +13,9 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:7ofsTr6dCf33XJKaDeh2iuCXLKFiu1pHEOgbu1zJ9AihetXa6Q=="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com" internalId="_yhqTU2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:7ofsTr6dCf33XJKaDeh2iuCXLKFiu1pHEOgbu1zJ9AihetXa6Q==" internalId="_yhqTVGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH" internalId="_yhqTVWIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://localhost:8080"/>
@@ -25,9 +25,9 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:3ktQ5seoRJPt8/Y9eJHabvfiozSeYJHdaGm8+JkRJLJLsjuJ8w=="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseath@servier.com" internalId="_yhqTVmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:3ktQ5seoRJPt8/Y9eJHabvfiozSeYJHdaGm8+JkRJLJLsjuJ8w==" internalId="_yhqTV2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="DKSH" internalId="_yhqTWGIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com"/>

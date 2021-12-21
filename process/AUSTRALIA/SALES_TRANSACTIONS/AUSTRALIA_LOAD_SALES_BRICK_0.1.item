@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="BRICK"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="BRICK" internalId="_yA_2QGIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="Australia"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="ZGVlcHNlYS5hdXN0cmFsaWFAc2Vydmllci5jb206ZGVlcHNlYS5hdXN0cmFsaWE="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -12,7 +12,7 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="BRICK"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="BRICK" internalId="_yA_2QWIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="Australia"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="ZGVlcHNlYS5hdXN0cmFsaWFAc2Vydmllci5jb206ZGVlcHNlYS5hdXN0cmFsaWE="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="http://localhost:8080"/>
@@ -23,7 +23,7 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="BRICK"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="BRICK" internalId="_yA_2QmIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="Australia"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="ZGVlcHNlYS5hdXN0cmFsaWFAc2Vydmllci5jb206ZGVlcHNlYS5hdXN0cmFsaWE="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_xl_a0ACkEeyfO_-dPow_tA" type="id_String" value="https://deepsealoader.servier.com"/>

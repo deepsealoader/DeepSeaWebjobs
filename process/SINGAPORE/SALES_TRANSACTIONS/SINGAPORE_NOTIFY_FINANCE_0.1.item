@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE"/>
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:q0L6ZklVVV7boNUcaFNUgocIojoQ1s6ZKWeunxYfItx6kNLa71SpO25glfw="/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com;maxime.perrot.business-france@servier.com"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_ygmjYGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE" internalId="_ygmjYWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com" internalId="_ygmjYmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:q0L6ZklVVV7boNUcaFNUgocIojoQ1s6ZKWeunxYfItx6kNLa71SpO25glfw=" internalId="_ygmjY2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com;maxime.perrot.business-france@servier.com" internalId="_ygmjZGIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -16,11 +16,11 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE"/>
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:8zGZifw7/ZyyCbo3bbJ9cz16z9hOJo6Ji5XqQV0LbipkSYrF2xjR2qyV/R0="/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="jennie.yeo@servier.com;huiling.ong@servier.com;sharon.tan@servier.com"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_ygmjZWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE" internalId="_ygmjZmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com" internalId="_ygmjZ2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:8zGZifw7/ZyyCbo3bbJ9cz16z9hOJo6Ji5XqQV0LbipkSYrF2xjR2qyV/R0=" internalId="_ygmjaGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="jennie.yeo@servier.com;huiling.ong@servier.com;sharon.tan@servier.com" internalId="_ygmjaWIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="http://localhost:8080"/>
@@ -31,11 +31,11 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE"/>
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:xCQGMekT9cbm6Ok3TdFIYAV9ALMo30shjAgxfq59AZPDhBTn1iPNxiqkttQ="/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_ygmjamIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="SINGAPORE_NOTIFY_FINANCE" internalId="_ygmja2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseasg@servier.com" internalId="_ygmjbGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:xCQGMekT9cbm6Ok3TdFIYAV9ALMo30shjAgxfq59AZPDhBTn1iPNxiqkttQ=" internalId="_ygmjbWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com" internalId="_ygmjbmIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="https://deepsealoader.servier.com"/>

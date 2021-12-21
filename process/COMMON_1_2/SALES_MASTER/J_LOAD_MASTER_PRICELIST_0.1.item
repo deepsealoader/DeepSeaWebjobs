@@ -8,10 +8,10 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="FILENAME" prompt="FILENAME?" promptNeeded="false" type="id_String" value="PriceList.xlsx"/>
-    <contextParameter comment="" name="SHEET" prompt="SHEET?" promptNeeded="false" type="id_String" value="PriceList"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="pricelist"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_PRICELIST"/>
+    <contextParameter comment="" name="FILENAME" prompt="FILENAME?" promptNeeded="false" type="id_String" value="PriceList.xlsx" internalId="_yIKOMGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="SHEET" prompt="SHEET?" promptNeeded="false" type="id_String" value="PriceList" internalId="_yIKOMWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="pricelist" internalId="_yIKOMmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_PRICELIST" internalId="_yIKOM2IUEeyXKP3RF-GOag"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
@@ -21,10 +21,10 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="FILENAME" prompt="FILENAME?" promptNeeded="false" type="id_String" value="PriceList.xlsx"/>
-    <contextParameter comment="" name="SHEET" prompt="SHEET?" promptNeeded="false" type="id_String" value="PriceList"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="pricelist"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_PRICELIST"/>
+    <contextParameter comment="" name="FILENAME" prompt="FILENAME?" promptNeeded="false" type="id_String" value="PriceList.xlsx" internalId="_yIKONGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="SHEET" prompt="SHEET?" promptNeeded="false" type="id_String" value="PriceList" internalId="_yIKONWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="pricelist" internalId="_yIKONmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_PRICELIST" internalId="_yIKON2IUEeyXKP3RF-GOag"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
@@ -34,10 +34,10 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="FILENAME" prompt="FILENAME?" promptNeeded="false" type="id_String" value="PriceList.xlsx"/>
-    <contextParameter comment="" name="SHEET" prompt="SHEET?" promptNeeded="false" type="id_String" value="PriceList"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="pricelist"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_PRICELIST"/>
+    <contextParameter comment="" name="FILENAME" prompt="FILENAME?" promptNeeded="false" type="id_String" value="PriceList.xlsx" internalId="_yIKOOGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="SHEET" prompt="SHEET?" promptNeeded="false" type="id_String" value="PriceList" internalId="_yIKOOWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="pricelist" internalId="_yIKOOmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_PRICELIST" internalId="_yIKOO2IUEeyXKP3RF-GOag"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>

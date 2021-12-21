@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_File" value=""/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_File" value="" internalId="_yV3TAGIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -9,13 +9,13 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_GUESS_CUSTOMER_CODE"/>
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:ngvsRQ8X1Vtx+HQdww/U3CMEYMmg7+C9t9ImWnJpvvOIx3U0n4NvC4ZS3aQ="/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_GUESS_CUSTOMER_CODE" internalId="_yV3TAWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com" internalId="_yV3TAmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:ngvsRQ8X1Vtx+HQdww/U3CMEYMmg7+C9t9ImWnJpvvOIx3U0n4NvC4ZS3aQ=" internalId="_yV3TA2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com" internalId="_yV3TBGIUEeyXKP3RF-GOag"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_File" value=""/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_File" value="" internalId="_yV3TBWIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://localhost:8080"/>
@@ -23,13 +23,13 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_GUESS_CUSTOMER_CODE"/>
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:DYnx9LJU5ESlxtak48BWDfrCGvUX+YguwYWo28z6uzOuZI8CzDPmNSthEpY="/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_GUESS_CUSTOMER_CODE" internalId="_yV3TBmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com" internalId="_yV3TB2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:DYnx9LJU5ESlxtak48BWDfrCGvUX+YguwYWo28z6uzOuZI8CzDPmNSthEpY=" internalId="_yV3TCGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com" internalId="_yV3TCWIUEeyXKP3RF-GOag"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_File" value=""/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_File" value="" internalId="_yV3TCmIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://deepsealoader.servier.com"/>
@@ -37,10 +37,10 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_GUESS_CUSTOMER_CODE"/>
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:rRufDvwd4i96COCpKFLL2XDOb7FU+v77kHnrJgeHkxjrfa6Vggf1tH//2ho="/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="JAPAN_GUESS_CUSTOMER_CODE" internalId="_yV3TC2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com" internalId="_yV3TDGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:rRufDvwd4i96COCpKFLL2XDOb7FU+v77kHnrJgeHkxjrfa6Vggf1tH//2ho=" internalId="_yV3TDWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com" internalId="_yV3TDmIUEeyXKP3RF-GOag"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -988,6 +988,8 @@
     <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
     <elementParameter field="CHECK" name="FAILON" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="true"/>
+    <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="true"/>
     <metadata connector="FLOW" name="tFileCopy_1"/>
   </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="512">

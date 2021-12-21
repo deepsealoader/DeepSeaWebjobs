@@ -8,8 +8,8 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="3"/>
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_File" value=""/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="UGA"/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="true" type="id_File" value="" internalId="_yL43oGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="UGA" internalId="_yL43oWIUEeyXKP3RF-GOag"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="FRANCE"/>
@@ -19,8 +19,8 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="3"/>
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="false" type="id_File" value=""/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="UGA"/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="false" type="id_File" value="" internalId="_yL43omIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="UGA" internalId="_yL43o2IUEeyXKP3RF-GOag"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="FRANCE"/>
@@ -30,8 +30,8 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_5_m0cKvFEeqmz_nkrmyyyQ" type="id_String" value="3"/>
-    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="false" type="id_File" value=""/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="UGA"/>
+    <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="false" type="id_File" value="" internalId="_yL43pGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="UGA" internalId="_yL43pWIUEeyXKP3RF-GOag"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>

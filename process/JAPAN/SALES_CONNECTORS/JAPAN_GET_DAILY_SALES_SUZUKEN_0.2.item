@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:x0xq31IKKc0eZG2oM3khSq/DBN5L2t1q4Jbm9nB/q+oSptczbSg1R58Lihg="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="SUZUKEN"/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com" internalId="_yXAigGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:x0xq31IKKc0eZG2oM3khSq/DBN5L2t1q4Jbm9nB/q+oSptczbSg1R58Lihg=" internalId="_yXAigWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="SUZUKEN" internalId="_yXAigmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com" internalId="_yXAig2IUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -15,10 +15,10 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:xy4cPZsPhAxVmE48CbB2RBTUHivREbWoHE994LP3RNB+9elNQqiyKPj0Vfc="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="SUZUKEN"/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com;tomoyuki-tanaka@yakult.co.jp;toshio-takahashi@yakult.co.jp;yoichi-endo@yakult.co.jp;kazunori-daga@yakult.co.jp;asako-yamaki@yakult.co.jp;junpei-miyamoto@yakult.co.jp;akiyoshi-nagase@yakult.co.jp;takashi-fujii@yakult.co.jp"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com" internalId="_yXAihGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:xy4cPZsPhAxVmE48CbB2RBTUHivREbWoHE994LP3RNB+9elNQqiyKPj0Vfc=" internalId="_yXAihWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="SUZUKEN" internalId="_yXAihmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com;tomoyuki-tanaka@yakult.co.jp;toshio-takahashi@yakult.co.jp;yoichi-endo@yakult.co.jp;kazunori-daga@yakult.co.jp;asako-yamaki@yakult.co.jp;junpei-miyamoto@yakult.co.jp;akiyoshi-nagase@yakult.co.jp;takashi-fujii@yakult.co.jp" internalId="_yXAih2IUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://localhost:8080"/>
@@ -29,10 +29,10 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:Eah1VdnxYv/S8BygSWnSLqd9soHIaMOvNWL3fsfY0oOJXV7gbn8/YMuqGhE="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="SUZUKEN"/>
-    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com;tomoyuki-tanaka@yakult.co.jp;toshio-takahashi@yakult.co.jp;yoichi-endo@yakult.co.jp;kazunori-daga@yakult.co.jp;asako-yamaki@yakult.co.jp;junpei-miyamoto@yakult.co.jp;akiyoshi-nagase@yakult.co.jp;takashi-fujii@yakult.co.jp"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseajp@servier.com" internalId="_yXAiiGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:Eah1VdnxYv/S8BygSWnSLqd9soHIaMOvNWL3fsfY0oOJXV7gbn8/YMuqGhE=" internalId="_yXAiiWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="SUZUKEN" internalId="_yXAiimIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" type="id_String" value="romuald.rousseau@servier.com;tomoyuki-tanaka@yakult.co.jp;toshio-takahashi@yakult.co.jp;yoichi-endo@yakult.co.jp;kazunori-daga@yakult.co.jp;asako-yamaki@yakult.co.jp;junpei-miyamoto@yakult.co.jp;akiyoshi-nagase@yakult.co.jp;takashi-fujii@yakult.co.jp" internalId="_yXAii2IUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://deepsealoader.servier.com"/>

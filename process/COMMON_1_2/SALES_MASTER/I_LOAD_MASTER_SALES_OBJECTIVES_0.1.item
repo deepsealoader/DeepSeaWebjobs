@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES"/>
+    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity" internalId="_yHgt8GIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty" internalId="_yHgt8WIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES" internalId="_yHgt8mIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -14,9 +14,9 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES"/>
+    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity" internalId="_yHgt82IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty" internalId="_yHgt9GIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES" internalId="_yHgt9WIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://localhost:8080"/>
@@ -27,9 +27,9 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES"/>
+    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity" internalId="_yHgt9mIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty" internalId="_yHgt92IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES" internalId="_yHgt-GIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com"/>

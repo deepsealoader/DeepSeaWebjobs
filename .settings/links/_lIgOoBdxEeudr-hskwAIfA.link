@@ -1,0 +1,88 @@
+{
+  "itemId" : "_lIgOoBdxEeudr-hskwAIfA",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_pz74IEu_EeqVf-VQKh5Wyg",
+    "parameterList" : [ {
+      "id" : "_adoGcMbVEeifZpKmns2VLA",
+      "name" : "COUNTRY"
+    }, {
+      "id" : "_duSgkMbCEeifZpKmns2VLA",
+      "name" : "DEEPSEA_AUTH_TOKEN"
+    }, {
+      "id" : "_xsk2kMZXEeiQEKsqaXt86w",
+      "name" : "DEEPSEA_HOSTNAME"
+    }, {
+      "id" : "_tOQi8EbREemR-KUHQ0sYgQ",
+      "name" : "DEFAULT_DATE_FORMAT"
+    }, {
+      "id" : "_dPAYQRdwEeudr-hskwAIfA",
+      "name" : "MCP_AUTH_TOKEN"
+    }, {
+      "id" : "_dPAYQBdwEeudr-hskwAIfA",
+      "name" : "MCP_HOSTNAME"
+    }, {
+      "id" : "_-foLgHbqEeqDWulauENjNQ",
+      "name" : "PRODUCT_LEVEL_CNT"
+    }, {
+      "id" : "_Mu9x0MkDEeuPdpZ8nG7sEA",
+      "name" : "REGION"
+    } ]
+  }, {
+    "contextName" : "Production",
+    "repoId" : "_pz74IEu_EeqVf-VQKh5Wyg",
+    "parameterList" : [ {
+      "id" : "_adoGccbVEeifZpKmns2VLA",
+      "name" : "COUNTRY"
+    }, {
+      "id" : "_duSgkcbCEeifZpKmns2VLA",
+      "name" : "DEEPSEA_AUTH_TOKEN"
+    }, {
+      "id" : "_xsk2kcZXEeiQEKsqaXt86w",
+      "name" : "DEEPSEA_HOSTNAME"
+    }, {
+      "id" : "_tOQi8kbREemR-KUHQ0sYgQ",
+      "name" : "DEFAULT_DATE_FORMAT"
+    }, {
+      "id" : "_dPAYRRdwEeudr-hskwAIfA",
+      "name" : "MCP_AUTH_TOKEN"
+    }, {
+      "id" : "_dPAYRBdwEeudr-hskwAIfA",
+      "name" : "MCP_HOSTNAME"
+    }, {
+      "id" : "_-foLgnbqEeqDWulauENjNQ",
+      "name" : "PRODUCT_LEVEL_CNT"
+    }, {
+      "id" : "_Mu9x0skDEeuPdpZ8nG7sEA",
+      "name" : "REGION"
+    } ]
+  }, {
+    "contextName" : "Production_Test",
+    "repoId" : "_pz74IEu_EeqVf-VQKh5Wyg",
+    "parameterList" : [ {
+      "id" : "_1Qv75coQEeiFhKycUBX9rg",
+      "name" : "COUNTRY"
+    }, {
+      "id" : "_1Qv75MoQEeiFhKycUBX9rg",
+      "name" : "DEEPSEA_AUTH_TOKEN"
+    }, {
+      "id" : "_1Qv748oQEeiFhKycUBX9rg",
+      "name" : "DEEPSEA_HOSTNAME"
+    }, {
+      "id" : "_tOQi8UbREemR-KUHQ0sYgQ",
+      "name" : "DEFAULT_DATE_FORMAT"
+    }, {
+      "id" : "_dPAYQxdwEeudr-hskwAIfA",
+      "name" : "MCP_AUTH_TOKEN"
+    }, {
+      "id" : "_dPAYQhdwEeudr-hskwAIfA",
+      "name" : "MCP_HOSTNAME"
+    }, {
+      "id" : "_-foLgXbqEeqDWulauENjNQ",
+      "name" : "PRODUCT_LEVEL_CNT"
+    }, {
+      "id" : "_Mu9x0ckDEeuPdpZ8nG7sEA",
+      "name" : "REGION"
+    } ]
+  } ]
+}

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:aapHMPTdCy4SLLQlAlP6vr52dA3CRW8IlqUi3j1gKAcJkng61yfiXlyANSA="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com" internalId="_yMLykGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:aapHMPTdCy4SLLQlAlP6vr52dA3CRW8IlqUi3j1gKAcJkng61yfiXlyANSA=" internalId="_yMLykWIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_yMLykmIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -12,9 +12,9 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="3"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:teBMOXGnbiFNOerZ8NLsbqSq1ceijp/3b7bHodVl60QWdLJlwo0DGpSm7uw="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com" internalId="_yMLyk2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:teBMOXGnbiFNOerZ8NLsbqSq1ceijp/3b7bHodVl60QWdLJlwo0DGpSm7uw=" internalId="_yMLylGIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_yMLylWIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="http://localhost:8080"/>
@@ -23,9 +23,9 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="3"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:E7qk/5U+B0OnCKAbUF3/awI5JR/qvHcJqTa2PKdV+YNuXjAfJM2px9R+s8E="/>
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG"/>
+    <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" type="id_String" value="deepseahk@servier.com" internalId="_yMLylmIUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:E7qk/5U+B0OnCKAbUF3/awI5JR/qvHcJqTa2PKdV+YNuXjAfJM2px9R+s8E=" internalId="_yMLyl2IUEeyXKP3RF-GOag"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="ZUELLIG" internalId="_yMLymGIUEeyXKP3RF-GOag"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="HongKong"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="YmxhY2subW9ydGltZXJAc2Vydmllci5jb206bW9ydGltZXI="/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_auVhYLYYEeuZYc3TFsbKrg" type="id_String" value="https://deepsealoader.servier.com.cn"/>
