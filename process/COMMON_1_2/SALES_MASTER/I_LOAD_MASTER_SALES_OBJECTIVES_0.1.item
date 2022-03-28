@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC"/>
+    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Quantity" internalId="_8arDkGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="sales_objectiveqty" internalId="_8arDkWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES" internalId="_8arDkmxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand" internalId="_rxuSUJXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU=" internalId="_rxuSUZXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net" internalId="_rxuSUpXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy" internalId="_rxuSU5XiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_rxuSVJXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp" internalId="_rxuSVZXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2" internalId="_rxuSVpXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC" internalId="_rxuSV5XiEeyo1J6F1CttpQ"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://localhost:8080"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC"/>
+    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Quantity" internalId="_8arDk2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="sales_objectiveqty" internalId="_8arDlGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES" internalId="_8arDlWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand" internalId="_rxuSWJXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU=" internalId="_rxuSWZXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://localhost:8080" internalId="_rxuSWpXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy" internalId="_rxuSW5XiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_rxuSXJXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://deepsea-mcp.privatelink.servier.com" internalId="_rxuSXZXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2" internalId="_rxuSXpXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC" internalId="_rxuSX5XiEeyo1J6F1CttpQ"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" type="id_String" value="Quantity"/>
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" type="id_String" value="sales_objectiveqty"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC"/>
+    <contextParameter comment="" name="QUOTA_TYPE" prompt="QUOTA_TYPE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Quantity" internalId="_8arDlmxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="sales_objectiveqty" internalId="_8arDl2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="LOAD_MASTER_SALES_OBJECTIVES" internalId="_8arDmGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand" internalId="_rxuSYJXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU=" internalId="_rxuSYZXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com" internalId="_rxuSYpXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="MM/dd/yy" internalId="_rxuSY5XiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_rxuSZJXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com/mcp" internalId="_rxuSZZXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2" internalId="_rxuSZpXiEeyo1J6F1CttpQ"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="APAC" internalId="_rxuSZ5XiEeyo1J6F1CttpQ"/>
   </context>
   <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="160" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
@@ -82,7 +83,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:f46L+6iYfwgTtyW9NS8BtFmLRiTtgT4tj9xXu0fp" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:U9J3+kmFDHp8ZH7rdHjDHKyR7+gWatZp4qqJLGAG" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -117,7 +118,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:IRVE64MwL6k3Mhvp+3gIzm2QaWu02aPYRlFLVdc2" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:QKTI0B8U0skp2v3OwemIIyggjzuBgJRC8Cf3VTYF" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -176,7 +177,6 @@
     <elementParameter field="CHECK" name="USE_FILTER" value="true"/>
     <elementParameter field="MEMO_JAVA" name="FILTER_CONDITION" value="DeepSeaFile.matchMetadata(globalMap, &quot;tDeepSeaList_1&quot;, &quot;type&quot;, &quot;SalesObjective&quot;) &amp;&amp;&#xA;DeepSeaFile.matchMetadata(globalMap, &quot;tDeepSeaList_1&quot;, &quot;quotaType&quot;, context.getQUOTA_TYPE()) &amp;&amp;&#xA;DeepSeaFile.matchMetadata(globalMap, &quot;tDeepSeaList_1&quot;, &quot;current&quot;, &quot;yes&quot;)"/>
     <elementParameter field="CHECK" name="USE_INCREMENTAL_MODE" value="true"/>
-    <elementParameter field="CHECK" name="MULTIPLE_MODE" value="true"/>
     <elementParameter field="CHECK" name="ENABLE_CATCH_DELETION" value="false"/>
     <elementParameter field="CHECK" name="USE_LOG_STAT" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="StreamFiles"/>
@@ -212,42 +212,57 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="customerCode"/>
       <elementValue elementRef="TAG" value="&quot;customerCode&quot;"/>
       <elementValue elementRef="POS" value="6"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="attribute1"/>
+      <elementValue elementRef="TAG" value="&quot;attribute1&quot;"/>
+      <elementValue elementRef="POS" value="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TAG" value="&quot;attribute2&quot;"/>
+      <elementValue elementRef="POS" value="8"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="attribute3"/>
+      <elementValue elementRef="TAG" value="&quot;attribute3&quot;"/>
+      <elementValue elementRef="POS" value="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TAG" value="&quot;attribute4&quot;"/>
+      <elementValue elementRef="POS" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="attribute5"/>
+      <elementValue elementRef="TAG" value="&quot;attribute5&quot;"/>
+      <elementValue elementRef="POS" value="11"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m1"/>
       <elementValue elementRef="TAG" value="&quot;m1&quot;"/>
-      <elementValue elementRef="POS" value="7"/>
+      <elementValue elementRef="POS" value="12"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m2"/>
       <elementValue elementRef="TAG" value="&quot;m2&quot;"/>
-      <elementValue elementRef="POS" value="8"/>
+      <elementValue elementRef="POS" value="13"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m3"/>
       <elementValue elementRef="TAG" value="&quot;m3&quot;"/>
-      <elementValue elementRef="POS" value="9"/>
+      <elementValue elementRef="POS" value="14"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m4"/>
       <elementValue elementRef="TAG" value="&quot;m4&quot;"/>
-      <elementValue elementRef="POS" value="10"/>
+      <elementValue elementRef="POS" value="15"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m5"/>
       <elementValue elementRef="TAG" value="&quot;m5&quot;"/>
-      <elementValue elementRef="POS" value="11"/>
+      <elementValue elementRef="POS" value="16"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m6"/>
       <elementValue elementRef="TAG" value="&quot;m6&quot;"/>
-      <elementValue elementRef="POS" value="12"/>
+      <elementValue elementRef="POS" value="17"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m7"/>
       <elementValue elementRef="TAG" value="&quot;m7&quot;"/>
-      <elementValue elementRef="POS" value="13"/>
+      <elementValue elementRef="POS" value="18"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m8"/>
       <elementValue elementRef="TAG" value="&quot;m8&quot;"/>
-      <elementValue elementRef="POS" value="14"/>
+      <elementValue elementRef="POS" value="19"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m9"/>
       <elementValue elementRef="TAG" value="&quot;m9&quot;"/>
-      <elementValue elementRef="POS" value="15"/>
+      <elementValue elementRef="POS" value="20"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m10"/>
       <elementValue elementRef="TAG" value="&quot;m10&quot;"/>
-      <elementValue elementRef="POS" value="16"/>
+      <elementValue elementRef="POS" value="21"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m11"/>
       <elementValue elementRef="TAG" value="&quot;m11&quot;"/>
-      <elementValue elementRef="POS" value="17"/>
+      <elementValue elementRef="POS" value="22"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="m12"/>
       <elementValue elementRef="TAG" value="&quot;m12&quot;"/>
-      <elementValue elementRef="POS" value="18"/>
+      <elementValue elementRef="POS" value="23"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="ReadSalesObjectives"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -258,6 +273,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="m1" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="m2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="m3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -290,6 +310,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="m1" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="m2" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="m3" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -306,7 +331,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="output_row.rowId = input_row.rowId;&#xA;output_row.productCode = input_row.productCode;&#xA;output_row.marketCode = input_row.marketCode;&#xA;output_row.sourceChannelCode = input_row.sourceChannelCode;&#xA;output_row.geographyCode = input_row.geographyCode;&#xA;output_row.customerCode = input_row.customerCode;&#xA;output_row.fields = TalendString.unionString(&quot;|&quot;, &quot;0:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m1, &quot;0&quot;)), &quot;1:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m2, &quot;0&quot;)), &quot;2:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m3, &quot;0&quot;)), &quot;3:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m4, &quot;0&quot;)), &quot;4:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m5, &quot;0&quot;)), &quot;5:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m6, &quot;0&quot;)), &quot;6:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m7, &quot;0&quot;)), &quot;7:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m8, &quot;0&quot;)), &quot;8:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m9, &quot;0&quot;)), &quot;9:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m10, &quot;0&quot;)), &quot;10:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m11, &quot;0&quot;)), &quot;11:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m12, &quot;0&quot;)));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="output_row.rowId = input_row.rowId;&#xA;output_row.productCode = input_row.productCode;&#xA;output_row.marketCode = input_row.marketCode;&#xA;output_row.sourceChannelCode = input_row.sourceChannelCode;&#xA;output_row.geographyCode = input_row.geographyCode;&#xA;output_row.customerCode = input_row.customerCode;&#xA;output_row.attribute1 = input_row.attribute1;&#xA;output_row.attribute2 = input_row.attribute2;&#xA;output_row.attribute3 = input_row.attribute3;&#xA;output_row.attribute4 = input_row.attribute4;&#xA;output_row.attribute5 = input_row.attribute5;&#xA;output_row.fields = TalendString.unionString(&quot;|&quot;, &quot;0:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m1, &quot;0&quot;)), &quot;1:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m2, &quot;0&quot;)), &quot;2:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m3, &quot;0&quot;)), &quot;3:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m4, &quot;0&quot;)), &quot;4:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m5, &quot;0&quot;)), &quot;5:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m6, &quot;0&quot;)), &quot;6:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m7, &quot;0&quot;)), &quot;7:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m8, &quot;0&quot;)), &quot;8:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m9, &quot;0&quot;)), &quot;9:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m10, &quot;0&quot;)), &quot;10:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m11, &quot;0&quot;)), &quot;11:&quot; + Clean.cleanNumber(Clean.cleanString(input_row.m12, &quot;0&quot;)));"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="PrepareNormalize"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -317,6 +342,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fields" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
@@ -338,6 +368,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fields" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
@@ -363,6 +398,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="objectiveDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="objectiveValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -400,7 +440,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="fiscalStartDate" expression="TalendDate.TO_DATE(((org.json.JSONObject) globalMap.get(&quot;tDeepSeaList_1_CURRENT_METADATA&quot;)).get(&quot;fiscalStartDate&quot;).toString(), &quot;yyyy-MM-dd&quot;) " type="id_Date"/>
+        <mapperTableEntries name="fiscalStartDate" expression="TalendDate.TO_DATE(((kong.unirest.json.JSONObject) globalMap.get(&quot;tDeepSeaList_1_CURRENT_METADATA&quot;)).get(&quot;fiscalStartDate&quot;).toString(), &quot;yyyy-MM-dd&quot;) " type="id_Date"/>
         <mapperTableEntries name="month" expression="Integer.valueOf(row11.fields .split(&quot;:&quot;)[0]) " type="id_Integer"/>
         <mapperTableEntries name="objectiveDate" expression="TalendDate.ADD_TO_DATE(Var.fiscalStartDate, &quot;MM&quot;, Var.month) " type="id_Date"/>
         <mapperTableEntries name="objectiveId" expression="TalendString.unionString(&quot;*&quot;, TalendDate.TO_CHAR(Var.objectiveDate, &quot;yyyyMMdd&quot;), row11.productCode, row11.marketCode, row11.sourceChannelCode, row11.geographyCode, row11.customerCode) " type="id_String"/>
@@ -413,6 +453,11 @@
         <mapperTableEntries name="sourceChannelCode" expression="row11.sourceChannelCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="geographyCode" expression="row11.geographyCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" expression="row11.customerCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute1" expression="row11.attribute1 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute2" expression="row11.attribute2 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute3" expression="row11.attribute3 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute4" expression="row11.attribute4 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute5" expression="row11.attribute5 " type="id_String" nullable="true"/>
         <mapperTableEntries name="objectiveDate" expression="TalendDate.TO_CHAR(Var.objectiveDate, &quot;yyyy-MM-dd&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="objectiveValue" expression="String.format(&quot;%.2f&quot;, Float.parseFloat(Var.objectiveValue)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="fiscalStartDate" expression="TalendDate.TO_CHAR(Var.fiscalStartDate, &quot;yyyy-MM-dd&quot;) " type="id_String" nullable="true"/>
@@ -454,6 +499,11 @@
         <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute5" type="id_String" nullable="true"/>
         <mapperTableEntries name="fields" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
@@ -541,6 +591,26 @@
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="objectiveValue"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute1"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute1"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute2"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute2"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute3"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute3"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute4"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute4"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="attribute5"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="attribute5"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;|&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="false"/>
@@ -555,6 +625,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="objectiveDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="objectiveValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -689,6 +764,11 @@
       <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="objectiveDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="objectiveValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1319,6 +1399,21 @@
       <elementValue elementRef="TRACE_COLUMN" value="rowId"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
@@ -1371,6 +1466,21 @@
   <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tNormalize_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="rowId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -1536,6 +1646,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="fiscalStartDate"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
@@ -1639,6 +1752,21 @@
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMCPOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="fiscalStartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

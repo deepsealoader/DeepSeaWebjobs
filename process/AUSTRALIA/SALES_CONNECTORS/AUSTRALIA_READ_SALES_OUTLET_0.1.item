@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="SNOWFLAKE_URL" prompt="SNOWFLAKE_URL?" promptNeeded="false" type="id_String" value="tn75757.ap-southeast-2.snowflakecomputing.com"/>
-    <contextParameter comment="" name="SNOWFLAKE_USERNAME" prompt="SNOWFLAKE_USERNAME?" promptNeeded="false" type="id_String" value="servier_au_user"/>
-    <contextParameter comment="" name="SNOWFLAKE_PASSWORD" prompt="SNOWFLAKE_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:WTJ8zftiS/187dr0t5LohZSqiAEa5OBIlCwsfWTpOQaNIiezDYk="/>
-    <contextParameter comment="" name="SNOWFLAKE_WAREHOUSE" prompt="SNOWFLAKE_WAREHOUSE?" promptNeeded="false" type="id_String" value="IDP_DAUDAAS_OA_APSY_PREPROD_PLT1_READER_DWH"/>
-    <contextParameter comment="" name="SNOWFLAKE_DB" prompt="SNOWFLAKE_DB?" promptNeeded="false" type="id_String" value="SERVIER_AU"/>
-    <contextParameter comment="" name="SNOWFLAKE_ROLE" prompt="SNOWFLAKE_ROLE?" promptNeeded="false" type="id_String" value="CLIENT_READ_ONLY"/>
-    <contextParameter comment="" name="SNOWFLAKE_SCHEMA" prompt="SNOWFLAKE_SCHEMA?" promptNeeded="false" type="id_String" value="SERVIER_AU_PUBLISH"/>
-    <contextParameter comment="" name="OUTPUT_FILE" prompt="OUTPUT_FILE?" promptNeeded="false" type="id_Directory" value="C:/Users/RRU_SG1/Downloads/Data/outlet/"/>
+    <contextParameter comment="" name="SNOWFLAKE_URL" prompt="SNOWFLAKE_URL?" promptNeeded="false" type="id_String" value="tn75757.ap-southeast-2.snowflakecomputing.com" internalId="_8AELMGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="SNOWFLAKE_USERNAME" prompt="SNOWFLAKE_USERNAME?" promptNeeded="false" type="id_String" value="servier_au_user" internalId="_8AELMWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="SNOWFLAKE_PASSWORD" prompt="SNOWFLAKE_PASSWORD?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:WTJ8zftiS/187dr0t5LohZSqiAEa5OBIlCwsfWTpOQaNIiezDYk=" internalId="_8AELMmxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="SNOWFLAKE_WAREHOUSE" prompt="SNOWFLAKE_WAREHOUSE?" promptNeeded="false" type="id_String" value="IDP_DAUDAAS_OA_APSY_PREPROD_PLT1_READER_DWH" internalId="_8AELM2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="SNOWFLAKE_DB" prompt="SNOWFLAKE_DB?" promptNeeded="false" type="id_String" value="SERVIER_AU" internalId="_8AELNGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="SNOWFLAKE_ROLE" prompt="SNOWFLAKE_ROLE?" promptNeeded="false" type="id_String" value="CLIENT_READ_ONLY" internalId="_8AELNWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="SNOWFLAKE_SCHEMA" prompt="SNOWFLAKE_SCHEMA?" promptNeeded="false" type="id_String" value="SERVIER_AU_PUBLISH" internalId="_8AELNmxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="OUTPUT_FILE" prompt="OUTPUT_FILE?" promptNeeded="false" type="id_Directory" value="C:/Users/RRU_SG1/Downloads/Data/outlet/" internalId="_8AELN2xLEey5BJL-O6zF0w"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>

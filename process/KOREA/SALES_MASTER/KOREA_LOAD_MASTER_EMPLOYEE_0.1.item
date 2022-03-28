@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg=="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="dd/MM/yy"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="4"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_wbUw0KNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_wbUw0aNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net" internalId="_wbUw0qNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_wbUw06NuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_wbUw1KNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp" internalId="_wbUw1aNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_wbUw1qNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_wbUw16NuEeyJSZfLHYZTXg"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg=="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="http://localhost:8080"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="dd/MM/yy"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="4"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_wbUw2KNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_wbUw2aNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="http://localhost:8080" internalId="_wbUw2qNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_wbUw26NuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_wbUw3KNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="http://deepsea-mcp.privatelink.servier.com" internalId="_wbUw3aNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_wbUw3qNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_wbUw36NuEeyJSZfLHYZTXg"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg=="/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://deepsealoader.servier.com"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="dd/MM/yy"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="4"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_wbUw4KNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_wbUw4aNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://deepsealoader.servier.com" internalId="_wbUw4qNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_wbUw46NuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_wbUw5KNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://deepsealoader.servier.com/mcp" internalId="_wbUw5aNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_wbUw5qNuEeyJSZfLHYZTXg"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_wbUw56NuEeyJSZfLHYZTXg"/>
   </context>
   <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
@@ -73,7 +74,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:XgvWI2c6YiKWV8jB6ceuza2FqrSvFQtADpYRNodg" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:hoUhG+AiDQeG9ZYMFTbFMlHBa9Nutu0Z8rJWOVTu" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -108,7 +109,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:935BNhmuRD/BP8Ona6Z/zW2C8iDXLzUbm+kwjM/V" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:l+v9+jH3q1hAx9USHVFXw6ozK7IlkZHf2qwAaEUI" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -161,6 +162,10 @@
     <elementParameter field="RADIO" name="USE_CHILD_JVM_SETTING" value="true" show="false"/>
     <elementParameter field="RADIO" name="USE_CUSTOM_JVM_SETTING" value="false" show="false"/>
     <elementParameter field="TABLE" name="JVM_ARGUMENTS" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_CONTEXT" value="false"/>
+    <elementParameter field="TEXT" name="DYNAMIC_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXTRA_CLASSPATH" value="false" show="false"/>
+    <elementParameter field="TEXT" name="EXTRA_CLASSPATH" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__PROCESS__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>

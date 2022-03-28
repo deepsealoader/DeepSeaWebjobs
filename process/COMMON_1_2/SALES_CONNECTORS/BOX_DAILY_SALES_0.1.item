@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="BOX_CLIENT_ID" prompt="BOX_CLIENT_ID?" promptNeeded="false" type="id_String" value="6613r73b1blkhcf0iu4m6z2mibunof6f"/>
-    <contextParameter comment="" name="BOX_CLIENT_SECRET" prompt="BOX_CLIENT_SECRET?" promptNeeded="false" type="id_String" value="oEfEdxedn1ovx2OnxIovmGh6kVjf1wda"/>
-    <contextParameter comment="" name="BOX_BASE_PATH" prompt="BOX_BASE_PATH?" promptNeeded="false" type="id_String" value="All Files/APAC_JAPAN/IQVIA/*"/>
-    <contextParameter comment="" name="DATA_FOLDER_PATH" prompt="DATA_FOLDER_PATH?" promptNeeded="true" type="id_Directory" value=""/>
+    <contextParameter comment="" name="BOX_CLIENT_ID" prompt="BOX_CLIENT_ID?" promptNeeded="false" type="id_String" value="6613r73b1blkhcf0iu4m6z2mibunof6f" internalId="_8MVsoGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="BOX_CLIENT_SECRET" prompt="BOX_CLIENT_SECRET?" promptNeeded="false" type="id_String" value="oEfEdxedn1ovx2OnxIovmGh6kVjf1wda" internalId="_8MVsoWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="BOX_BASE_PATH" prompt="BOX_BASE_PATH?" promptNeeded="false" type="id_String" value="All Files/APAC_JAPAN/IQVIA/*" internalId="_8MVsomxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="DATA_FOLDER_PATH" prompt="DATA_FOLDER_PATH?" promptNeeded="true" type="id_Directory" value="" internalId="_8MVso2xLEey5BJL-O6zF0w"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32" show="false"/>

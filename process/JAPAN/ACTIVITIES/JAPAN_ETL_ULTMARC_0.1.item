@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="client_id" prompt="client_id?" promptNeeded="false" type="id_String" value="6613r73b1blkhcf0iu4m6z2mibunof6f"/>
-    <contextParameter comment="" name="client_secret" prompt="client_secret?" promptNeeded="false" type="id_String" value="oEfEdxedn1ovx2OnxIovmGh6kVjf1wda"/>
+    <contextParameter comment="" name="client_id" prompt="client_id?" promptNeeded="false" type="id_String" value="6613r73b1blkhcf0iu4m6z2mibunof6f" internalId="_8_b9gGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="client_secret" prompt="client_secret?" promptNeeded="false" type="id_String" value="oEfEdxedn1ovx2OnxIovmGh6kVjf1wda" internalId="_8_b9gWxLEey5BJL-O6zF0w"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32" show="false"/>

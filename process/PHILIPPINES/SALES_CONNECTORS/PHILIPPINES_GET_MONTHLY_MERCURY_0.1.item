@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="MERCURY"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="MERCURY" internalId="_9cz2AGxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="Philippines"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="ZGVlcHNlYS5waGlsaXBwaW5lc0BzZXJ2aWVyLmNvbTpkZWVwc2VhLnBoaWxpcHBpbmVz"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net"/>
@@ -10,10 +10,10 @@
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="3"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="APAC"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="PHILIPPINES_GET_DAILY_ZUELLIG"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="PHILIPPINES_GET_DAILY_ZUELLIG" internalId="_9cz2AWxLEey5BJL-O6zF0w"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="MERCURY"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="MERCURY" internalId="_9cz2AmxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="Philippines"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="ZGVlcHNlYS5waGlsaXBwaW5lc0BzZXJ2aWVyLmNvbTpkZWVwc2VhLnBoaWxpcHBpbmVz"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="https://deepsealoader.servier.com"/>
@@ -22,10 +22,10 @@
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="https://deepsealoader.servier.com/mcp"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="3"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="APAC"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="PHILIPPINES_GET_DAILY_ZUELLIG"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="PHILIPPINES_GET_DAILY_ZUELLIG" internalId="_9cz2A2xLEey5BJL-O6zF0w"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="MERCURY"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" type="id_String" value="MERCURY" internalId="_9cz2BGxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="Philippines"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="ZGVlcHNlYS5waGlsaXBwaW5lc0BzZXJ2aWVyLmNvbTpkZWVwc2VhLnBoaWxpcHBpbmVz"/>
     <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="http://localhost:8080"/>
@@ -34,7 +34,7 @@
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="http://deepsea-mcp.privatelink.servier.com"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="3"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_7tAtABqhEeyDlrogDiYkig" type="id_String" value="APAC"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="PHILIPPINES_GET_DAILY_ZUELLIG"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" type="id_String" value="PHILIPPINES_GET_DAILY_ZUELLIG" internalId="_9cz2BWxLEey5BJL-O6zF0w"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>

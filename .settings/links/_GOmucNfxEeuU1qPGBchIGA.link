@@ -1,0 +1,79 @@
+{
+  "itemId" : "_GOmucNfxEeuU1qPGBchIGA",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_EZed8CgpEemFVuMGViEZbg",
+    "parameterList" : [ {
+      "id" : "_adoGcMbVEeifZpKmns2VLA",
+      "name" : "COUNTRY"
+    }, {
+      "id" : "_uqtmw-NSEeqyjd-RDTN0Ug",
+      "name" : "DEEPSEA_AUTH_TOKEN"
+    }, {
+      "id" : "_uqtmwuNSEeqyjd-RDTN0Ug",
+      "name" : "DEEPSEA_HOSTNAME"
+    }, {
+      "id" : "_jxGsAEbREemR-KUHQ0sYgQ",
+      "name" : "DEFAULT_DATE_FORMAT"
+    }, {
+      "id" : "_uqtmweNSEeqyjd-RDTN0Ug",
+      "name" : "MCP_AUTH_TOKEN"
+    }, {
+      "id" : "_uqtmwONSEeqyjd-RDTN0Ug",
+      "name" : "MCP_HOSTNAME"
+    }, {
+      "id" : "_t5V5QHbrEeqDWulauENjNQ",
+      "name" : "PRODUCT_LEVEL_CNT"
+    } ]
+  }, {
+    "contextName" : "Production",
+    "repoId" : "_EZed8CgpEemFVuMGViEZbg",
+    "parameterList" : [ {
+      "id" : "_adoGccbVEeifZpKmns2VLA",
+      "name" : "COUNTRY"
+    }, {
+      "id" : "_uquN1-NSEeqyjd-RDTN0Ug",
+      "name" : "DEEPSEA_AUTH_TOKEN"
+    }, {
+      "id" : "_uquN1uNSEeqyjd-RDTN0Ug",
+      "name" : "DEEPSEA_HOSTNAME"
+    }, {
+      "id" : "_jxGsAkbREemR-KUHQ0sYgQ",
+      "name" : "DEFAULT_DATE_FORMAT"
+    }, {
+      "id" : "_uquN1eNSEeqyjd-RDTN0Ug",
+      "name" : "MCP_AUTH_TOKEN"
+    }, {
+      "id" : "_uquN1ONSEeqyjd-RDTN0Ug",
+      "name" : "MCP_HOSTNAME"
+    }, {
+      "id" : "_t5V5QnbrEeqDWulauENjNQ",
+      "name" : "PRODUCT_LEVEL_CNT"
+    } ]
+  }, {
+    "contextName" : "Production_Test",
+    "repoId" : "_EZed8CgpEemFVuMGViEZbg",
+    "parameterList" : [ {
+      "id" : "_1Qv75coQEeiFhKycUBX9rg",
+      "name" : "COUNTRY"
+    }, {
+      "id" : "_uquN0-NSEeqyjd-RDTN0Ug",
+      "name" : "DEEPSEA_AUTH_TOKEN"
+    }, {
+      "id" : "_uquN0uNSEeqyjd-RDTN0Ug",
+      "name" : "DEEPSEA_HOSTNAME"
+    }, {
+      "id" : "_jxGsAUbREemR-KUHQ0sYgQ",
+      "name" : "DEFAULT_DATE_FORMAT"
+    }, {
+      "id" : "_uquN0eNSEeqyjd-RDTN0Ug",
+      "name" : "MCP_AUTH_TOKEN"
+    }, {
+      "id" : "_uquN0ONSEeqyjd-RDTN0Ug",
+      "name" : "MCP_HOSTNAME"
+    }, {
+      "id" : "_t5V5QXbrEeqDWulauENjNQ",
+      "name" : "PRODUCT_LEVEL_CNT"
+    } ]
+  } ]
+}
