@@ -83,7 +83,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:cx4QK1WXLjXA1M5oSTvPtARiFObx3fbC69ebRL+s" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:ZgBw+a+iN39cPRu/5jGi2gXPfFqTvo2R8bkTMe1I" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -118,7 +118,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:r+mwfdQ1Si+jskT1wTYhjD+s6OIJorWisI2wYK06" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Ap5YCkiqB1GSY03fKW/bv/UnMTpOhddvXH73nyAG" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -198,7 +198,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_1" show="false"/>
     <elementParameter field="TABLE" name="VARIABLES">
       <elementValue elementRef="KEY" value="&quot;SOURCE&quot;"/>
-      <elementValue elementRef="VALUE" value="TalendString.unionString(&quot;.&quot;, &quot;sales&quot;, context.getPROVIDER(), context.getSUFIX_SRC()).toLowerCase()"/>
+      <elementValue elementRef="VALUE" value="context.getSUFIX_SRC().equals(&quot;&quot;) ? TalendString.unionString(&quot;.&quot;, &quot;sales&quot;, context.getPROVIDER()).toLowerCase() : TalendString.unionString(&quot;.&quot;, &quot;sales&quot;, context.getPROVIDER(), context.getSUFIX_SRC()).toLowerCase()"/>
       <elementValue elementRef="KEY" value="&quot;DESTINATION&quot;"/>
       <elementValue elementRef="VALUE" value="TalendString.unionString(&quot;.&quot;, &quot;sales&quot;, context.getPROVIDER(), context.getSUFIX_DST()).toLowerCase()"/>
     </elementParameter>
