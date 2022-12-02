@@ -98,17 +98,37 @@ public class Clean
 		if(Clean.isNullOrEmpty(number)) {
 			return defaultValue;
 		}
-		
+
 		// Case when number is in scientific notation
 		
 		if(number.contains("e") || number.contains("E")) {
 			number = new java.math.BigDecimal(number).toPlainString();
 		}
 		
+		// Case when number starts with a single decimal separator "."
+		
+		if(number.startsWith(".")) {
+			number = "0" + number;
+		}
+		
+		if(number.startsWith("-.")) {
+			number = "-0" + number.substring(1);
+		}
+		
+		number = number.replaceAll("^0+", "0"); // Remove leading 0s by one 0
 		number = number.replaceAll("\\(", "-"); // Replace (000) by -000
 		number = number.replaceAll(",|\\)", ""); // Removed format characters
 		number = number.replaceAll("-+", "-"); // Removed duplicated minus characters
-		return number;
+		
+		if (!number.equals("0") && !number.startsWith("0.")) {
+			number = number.replaceAll("^0", ""); // Remove leading 0
+		}
+		
+		if(number.equals("-")) {
+			return defaultValue;
+		} else {
+			return number;
+		}
 	}
 	
 	/**

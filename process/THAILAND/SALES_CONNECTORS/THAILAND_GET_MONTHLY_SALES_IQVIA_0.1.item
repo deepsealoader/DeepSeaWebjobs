@@ -9,7 +9,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_FazK1GxNEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp" internalId="_FazK1WxNEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2" internalId="_FazK1mxNEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:cb4PGx6287KYNjpwcEIp9ulN8BhsOxBXtL3K1zMq9CnhU9HAS9NO" internalId="_9wyh8WxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:uG8xddkUldmGpDhlPMsI8iQVrONLt5CyV2c2DaBLmZkVPXV2ShA=" internalId="_9wyh8WxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseath@servier.com" internalId="_9wyh8mxLEey5BJL-O6zF0w"/>
   </context>
   <context confirmationNeeded="false" name="Production">
@@ -21,7 +21,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_FazK22xNEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="http://deepsea-mcp.privatelink.servier.com" internalId="_FazK3GxNEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2" internalId="_FazK3WxNEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:msYLVkwZIOVtDBevPFnkK/acZelaNvypTiYv3ngvKu5LewFMvMFm" internalId="_9wyh9GxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:EyyjamBiKjdo1Eio6xEYdKi538xF6k+fECjt/9SkM8yABNX8zWU=" internalId="_9wyh9GxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseath@servier.com" internalId="_9wyh9WxLEey5BJL-O6zF0w"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
@@ -33,7 +33,7 @@
     <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_FazK4mxNEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="https://deepsealoader.servier.com/mcp" internalId="_FazK42xNEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="2" internalId="_FazK5GxNEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:EVzK2N8G0zi4Th+hZ0VwVNOgZPHfshUpLgc80CDgD/an/3ErheEm" internalId="_9wyh92xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:us2GqrHmquPZUzdijCY5LSgbeld+unUSa79zgaLIreVybMQthiY=" internalId="_9wyh92xLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseath@servier.com" internalId="_9wyh-GxLEey5BJL-O6zF0w"/>
   </context>
   <parameters>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:qDT2BRtBhmtZKX49VQSRI4hCaPMV8LhHXuoN9eTn" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:O5YEaHyEG8GyOruy/pVdO9QDB7KzHduRLHxZ5NdA" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -115,7 +115,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:uEh7QguCgv9XGgOiZ4nSTLS7qalRgeOREWqLV37Q" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6vKV4QNXvFwFpQzJOg8zKuFQXR0iXdGjpRheCnif" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -503,10 +503,7 @@
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
-    <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="EMAIL_FROM"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;.+@iqvia\\.com&quot;"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="true"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>

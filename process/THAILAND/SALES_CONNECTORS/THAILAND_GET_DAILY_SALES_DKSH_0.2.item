@@ -2,7 +2,7 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseath@servier.com" internalId="_9wTZwGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:kZgmTEg8QaSqJYph724iXcBPR+XgluzXgYMiTSo++GNkrk0eIq2x" internalId="_9wTZwWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:INxJD4cBElVJj51LaJvaI179tCWHoiYLAbjX17VSZUwfgTf4rFY=" internalId="_9wTZwWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DKSH" internalId="_9wTZwmxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand" internalId="_kmwIIIJUEeyQSJ573Sv-7w"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU=" internalId="_kmwIIYJUEeyQSJ573Sv-7w"/>
@@ -14,7 +14,7 @@
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseath@servier.com" internalId="_9wTZw2xLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:VMd9TncNmYvSmk6QqnijGp4MRSWS3aXfdtMXQP/Itz4JWzQo61U/" internalId="_9wTZxGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:U8P83jQqxgO0Xp5CbbhnWzzJyWTKJ1UA+i7vTuAHovVSwWJ6sBU=" internalId="_9wTZxGxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DKSH" internalId="_9wTZxWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand" internalId="_kmwvMIJUEeyQSJ573Sv-7w"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU=" internalId="_kmwvMYJUEeyQSJ573Sv-7w"/>
@@ -26,7 +26,7 @@
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseath@servier.com" internalId="_9wTZxmxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:VEhGSNEL4dt2vIiA8KWbB1LeZHRQTrgUpEIjfXBU+I5PDc2AKy6e" internalId="_9wTZx2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:jTaoOgeV1CeP7zARq2Le7V6nc4pEhGvMYdG+Vxs5U5tBCh2/VNw=" internalId="_9wTZx2xLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="DKSH" internalId="_9wTZyGxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="Thailand" internalId="_kmwvN4JUEeyQSJ573Sv-7w"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_EZed8CgpEemFVuMGViEZbg" type="id_String" value="YmlsbC5iYWxsYW50aW5lQHNlcnZpZXIuY29tOmJhbGxhbnRpbmU=" internalId="_kmwvOIJUEeyQSJ573Sv-7w"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:H/T5D20oBdGo44CaQlsl5ukYryU2ckUhyVeVD8cf" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:DIFPl1Uut/9cldUXKZ/yE1M01wZB33sYl9bMzKB1" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -115,7 +115,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:pz7qxOMGgwFCcHqrgOyw9nxhDAw7G6zvA00SZ4PF" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5fXE7eEmJWF4LWg5h0m2swqD3vlWPbHVsQGfvUwO" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -157,12 +157,7 @@
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
-    <elementParameter field="TABLE" name="CONTEXTPARAMS">
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="EMAIL_FROM"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;.+@dksh\\.com&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="EMAIL_SUBJECT"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;.*&quot;"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="true"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>

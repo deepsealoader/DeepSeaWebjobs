@@ -71,11 +71,12 @@ public class GeoCode {
     	};
     }
     
-    public static String guessDeliveryCode(java.util.List<String[]> customers, String place, double lat, double lng) {
+    public static String guessDeliveryCode(java.util.List<String[]> customers, String place, Double lat, Double lng) {
     	double min = Double.POSITIVE_INFINITY;
     	String result = null;
-    	
+
     	place = place.replace("Ｃ", "センター");
+    	place = place.replaceAll("ＳＤ.+（", "");
 
     	for(int i = 0; i < customers.size(); i++) {
     		String[] customer = customers.get(i);
@@ -88,7 +89,7 @@ public class GeoCode {
 
     		double custLat = Double.valueOf(customer[15]);
     		double custLng = Double.valueOf(customer[16]);
-    		double x2 = Math.min(GeoCode.distanceHaversine(lat, lng, custLat, custLng) / 430, 1);
+    		double x2 = (lat == null || lng == null) ? 1 : Math.min(GeoCode.distanceHaversine(lat, lng, custLat, custLng) / 430, 1);
     		
     		double dist = Math.sqrt(x1 * x1 + x2 * x2);
     		
@@ -105,12 +106,13 @@ public class GeoCode {
     	return result;
     }
     
-    public static String guessNearestCode(java.util.List<String[]> customers, String place, double lat, double lng) {
+    public static String guessNearestCode(java.util.List<String[]> customers, String place, Double lat, Double lng) {
     	double min = Double.POSITIVE_INFINITY;
     	double min_x2 = 0;
     	String result = null;
     	
     	place = place.replace("Ｃ", "センター");
+    	place = place.replaceAll("ＳＤ.+（", "");
     	
     	for(int i = 0; i < customers.size(); i++) {
     		String[] customer = customers.get(i);
@@ -120,10 +122,10 @@ public class GeoCode {
     		}
     		
     		double x1 = 1 - Clean.Jaccard(customer[4], place);
-
+    		
     		double custLat = Double.valueOf(customer[11]);
     		double custLng = Double.valueOf(customer[12]);
-    		double x2 = Math.min(GeoCode.distanceHaversine(lat, lng, custLat, custLng) / 45000, 1);
+    		double x2 = (lat == null || lng == null) ? 1 : Math.min(GeoCode.distanceHaversine(lat, lng, custLat, custLng) / 45000, 1);
     		
     		double dist = Math.sqrt(x1 * x1 + x2 * x2);
     		

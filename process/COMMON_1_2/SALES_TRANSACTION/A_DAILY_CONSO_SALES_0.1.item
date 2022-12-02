@@ -83,7 +83,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:ZgBw+a+iN39cPRu/5jGi2gXPfFqTvo2R8bkTMe1I" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:ZgpJxW3f+egI1hfB7tXBbu6b36GcsAfbE8X3dghy" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -118,7 +118,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Ap5YCkiqB1GSY03fKW/bv/UnMTpOhddvXH73nyAG" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AJfZ7y9UN98gT8LO5Z2OeBo2e8F+XigetA80zf1j" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -176,17 +176,29 @@
       <elementValue elementRef="TAG" value="&quot;customerCode&quot;"/>
       <elementValue elementRef="TAG" value="&quot;customerName&quot;"/>
       <elementValue elementRef="TAG" value="&quot;customerType&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;customerGroup&quot;"/>
       <elementValue elementRef="TAG" value="&quot;quantity&quot;"/>
       <elementValue elementRef="TAG" value="&quot;amount&quot;"/>
-      <elementValue elementRef="TAG" value="&quot;bonusQuantity&quot;"/>
       <elementValue elementRef="TAG" value="&quot;unitPrice&quot;"/>
-      <elementValue elementRef="TAG" value="&quot;batchNumber&quot;"/>
-      <elementValue elementRef="TAG" value="&quot;expiryDate&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;bonusQuantity&quot;"/>
       <elementValue elementRef="TAG" value="&quot;requesterName&quot;"/>
       <elementValue elementRef="TAG" value="&quot;invoiceNumber&quot;"/>
       <elementValue elementRef="TAG" value="&quot;invoiceLineNumber&quot;"/>
       <elementValue elementRef="TAG" value="&quot;transactionType&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;batchNumber&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;expiryDate&quot;"/>
       <elementValue elementRef="TAG" value="&quot;creditReasonCode&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;speciality&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;detailSpeciality&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;typeOfInsurance&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;numberOfBeds&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;patientTreatmentDays&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;numberOfPatients&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;adminArea1&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;adminArea2&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;locality&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;address&quot;"/>
+      <elementValue elementRef="TAG" value="&quot;postalCode&quot;"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>

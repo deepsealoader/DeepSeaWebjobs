@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="LANCOS" internalId="_8d1sUGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS" internalId="_8d1sUWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HANWHA_ONIVYDE" internalId="_8d1sUGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="KOREA_LOAD_SALES_HANWHA_ONIVYDE" internalId="_8d1sUWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="{0}" internalId="_8d1sUmxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="{0}" internalId="_8d1sU2xLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria" internalId="_1awbkKmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh" internalId="_1awbkamKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net" internalId="_1awbkqmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="M/d/yy" internalId="_1awbk6mKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_1awblKmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp" internalId="_1awblamKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="2" internalId="_1awblqmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="EUE" internalId="_1awbl6mKEeyVoYss6n6VUw"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_n6nn4GAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_n6nn4WAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net" internalId="_n6nn4mAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_n6nn42AXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_n6nn5GAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp" internalId="_n6nn5WAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_n6nn5mAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_n6nn52AXEe279_u3svQKMA"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="LANCOS" internalId="_8d1sVGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS" internalId="_8d1sVWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HANWHA_ONIVYDE" internalId="_8d1sVGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="KOREA_LOAD_SALES_HANWHA_ONIVYDE" internalId="_8d1sVWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="{0}" internalId="_8d1sVmxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="{0}" internalId="_8d1sV2xLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria" internalId="_1awbmKmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh" internalId="_1awbmamKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="http://localhost:8080" internalId="_1awbmqmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="M/d/yy" internalId="_1awbm6mKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_1awbnKmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="http://deepsea-mcp.privatelink.servier.com" internalId="_1awbnamKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="2" internalId="_1awbnqmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="EUE" internalId="_1awbn6mKEeyVoYss6n6VUw"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_n6nn6GAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_n6nn6WAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="http://localhost:8080" internalId="_n6nn6mAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_n6nn62AXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_n6nn7GAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="http://deepsea-mcp.privatelink.servier.com" internalId="_n6nn7WAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_n6nn7mAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_n6nn72AXEe279_u3svQKMA"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="LANCOS" internalId="_8d1sWGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HUNGARIA_LOAD_SALES_LANCOS" internalId="_8d1sWWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HANWHA_ONIVYDE" internalId="_8d1sWGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="KOREA_LOAD_SALES_HANWHA_ONIVYDE" internalId="_8d1sWWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PRODUCT_TEMPLATE" prompt="PRODUCT_TEMPLATE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="{0}" internalId="_8d1sWmxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="CUSTOMER_TEMPLATE" prompt="CUSTOMER_TEMPLATE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="{0}" internalId="_8d1sW2xLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="Hungaria" internalId="_1awboKmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="ZGVlcHNlYS5odW5nYXJpYUBzZXJ2aWVyLmNvbTpkZWVwc2VhLmh1bmdhcmlh" internalId="_1awboamKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://deepsealoader.servier.com" internalId="_1awboqmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="M/d/yy" internalId="_1awbo6mKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_1awbpKmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="https://deepsealoader.servier.com/mcp" internalId="_1awbpamKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="2" internalId="_1awbpqmKEeyVoYss6n6VUw"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_s6a3kMkBEeuPdpZ8nG7sEA" type="id_String" value="EUE" internalId="_1awbp6mKEeyVoYss6n6VUw"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_n6nn8GAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_n6nn8WAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://deepsealoader.servier.com" internalId="_n6nn8mAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_n6nn82AXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_n6nn9GAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://deepsealoader.servier.com/mcp" internalId="_n6nn9WAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_n6nn9mAXEe279_u3svQKMA"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_n6nn92AXEe279_u3svQKMA"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -88,7 +88,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:xvyKN8vKtYfYUb+l0hXeiDVDkMilRn6VDywCb1GF" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:s1KMIJyqcirs3EMrvm0mjP2kgBVIQxvDyYRuNpU1" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -123,7 +123,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:f/6Cg5H5Zhm9ZFwacea/ZBdR5Jgptd4vg6RUIV9s" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:c9CeVPCXKpFEJMi8NNKdxQRyrY2pFVKV+K5E7TmY" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -233,6 +233,9 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="customerType"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerGroup"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
@@ -243,6 +246,9 @@
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="bonusQuantity"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="requesterName"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoiceNumber"/>
@@ -263,9 +269,6 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="creditReasonCode"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="locality"/>
-      <elementValue elementRef="TAG" value=""/>
-      <elementValue elementRef="POS" value=""/>
       <elementValue elementRef="SCHEMA_COLUMN" value="speciality"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
@@ -284,6 +287,27 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="numberOfPatients"/>
       <elementValue elementRef="TAG" value=""/>
       <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adminArea1"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adminArea2"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="locality"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="address"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="indication"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="comment"/>
+      <elementValue elementRef="TAG" value=""/>
+      <elementValue elementRef="POS" value=""/>
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="ReadSales"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -300,23 +324,31 @@
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerGroup" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="requesterName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceLineNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="batchNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="expiryDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="speciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="detailSpeciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="typeOfInsurance" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfBeds" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="patientTreatmentDays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfPatients" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="indication" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="comment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
@@ -359,6 +391,8 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="customerType"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerGroup"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="amount"/>
@@ -366,6 +400,8 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="unitPrice"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="bonusQuantity"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="requesterName"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoiceNumber"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -379,8 +415,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="creditReasonCode"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="locality"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="speciality"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="detailSpeciality"/>
@@ -392,6 +426,20 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="patientTreatmentDays"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="numberOfPatients"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adminArea1"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adminArea2"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="locality"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="address"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="indication"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="comment"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
@@ -410,23 +458,31 @@
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerGroup" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="requesterName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceLineNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="batchNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="expiryDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="speciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="detailSpeciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="typeOfInsurance" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfBeds" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="patientTreatmentDays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfPatients" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="indication" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="comment" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="800" posY="160">
@@ -449,31 +505,37 @@
       <column comment="" key="false" length="-1" name="fileHash" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="month" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productProvider" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerGroup" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="productProvider" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROWID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="requesterName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceLineNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="vendorBatchNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="expiryDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="speciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="detailSpeciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="typeOfInsurance" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfBeds" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="patientTreatmentDays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfPatients" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ROWID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
@@ -492,31 +554,37 @@
         <mapperTableEntries name="fileHash" expression="globalMap.get(&quot;tDeepSeaList_1_CURRENT_HASH&quot;).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="date" expression="Var.date" type="id_String" nullable="true"/>
         <mapperTableEntries name="month" expression="Var.date.substring(0, 8) + &quot;01&quot; " type="id_String" nullable="true"/>
-        <mapperTableEntries name="productCode" expression="Var.productCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="productName" expression="Var.productName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="productProvider" expression="context.getPRODUCT_TEMPLATE().replace(&quot;{0}&quot;, Clean.cleanString(Var.productCode, &quot;null&quot;)) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="productCode" expression="Clean.cleanString(Var.productCode, context.getPRODUCT_TEMPLATE())" type="id_String" nullable="true"/>
+        <mapperTableEntries name="productName" expression="Clean.cleanString(Var.productName, context.getPRODUCT_TEMPLATE())" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer" expression="context.getCUSTOMER_TEMPLATE().replace(&quot;{0}&quot;, Clean.cleanString(Var.customerCode, &quot;null&quot;)) " type="id_String" nullable="true"/>
         <mapperTableEntries name="customerCode" expression="Var.customerCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="customerName" expression="Var.customerName " type="id_String" nullable="true"/>
         <mapperTableEntries name="customerType" expression="row9.customerType " type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerGroup" expression="row9.customerGroup " type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" expression="Var.quantity " type="id_String" nullable="true"/>
-        <mapperTableEntries name="amount" expression="Clean.cleanNumber(row9.amount) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="unitPrice" expression="Clean.cleanNumber(row9.unitPrice )" type="id_String" nullable="true"/>
+        <mapperTableEntries name="amount" expression="Var.amount" type="id_String" nullable="true"/>
+        <mapperTableEntries name="unitPrice" expression="Clean.cleanNumber(row9.unitPrice)" type="id_String" nullable="true"/>
         <mapperTableEntries name="bonusQuantity" expression="Var.bonusQuantity " type="id_String" nullable="true"/>
-        <mapperTableEntries name="productProvider" expression="context.getPRODUCT_TEMPLATE().replace(&quot;{0}&quot;, Var.productCode) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="customer" expression="context.getCUSTOMER_TEMPLATE().replace(&quot;{0}&quot;, Var.customerCode) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ROWID" expression="row9.rowId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="requesterName" expression="row9.requesterName " type="id_String" nullable="true"/>
         <mapperTableEntries name="invoiceNumber" expression="row9.invoiceNumber" type="id_String" nullable="true"/>
         <mapperTableEntries name="invoiceLineNumber" expression="row9.invoiceLineNumber " type="id_String" nullable="true"/>
         <mapperTableEntries name="transactionType" expression="row9.transactionType " type="id_String" nullable="true"/>
         <mapperTableEntries name="vendorBatchNumber" expression="row9.batchNumber " type="id_String" nullable="true"/>
         <mapperTableEntries name="expiryDate" expression="row9.expiryDate" type="id_String" nullable="true"/>
         <mapperTableEntries name="creditReasonCode" expression="row9.creditReasonCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="locality" expression="row9.locality " type="id_String" nullable="true"/>
         <mapperTableEntries name="speciality" expression="row9.speciality " type="id_String" nullable="true"/>
         <mapperTableEntries name="detailSpeciality" expression="row9.detailSpeciality " type="id_String" nullable="true"/>
         <mapperTableEntries name="typeOfInsurance" expression="row9.typeOfInsurance " type="id_String" nullable="true"/>
         <mapperTableEntries name="numberOfBeds" expression="row9.numberOfBeds " type="id_String" nullable="true"/>
         <mapperTableEntries name="patientTreatmentDays" expression="row9.patientTreatmentDays " type="id_String" nullable="true"/>
         <mapperTableEntries name="numberOfPatients" expression="row9.numberOfPatients " type="id_String" nullable="true"/>
+        <mapperTableEntries name="adminArea1" expression="row9.adminArea1 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="adminArea2" expression="row9.adminArea2 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="locality" expression="row9.locality " type="id_String" nullable="true"/>
+        <mapperTableEntries name="address" expression="row9.address " type="id_String" nullable="true"/>
+        <mapperTableEntries name="postalCode" expression="row9.postalCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROWID" expression="row9.rowId " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="rowId" type="id_String" nullable="true"/>
@@ -531,23 +599,31 @@
         <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerName" type="id_String" nullable="true"/>
         <mapperTableEntries name="customerType" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerGroup" type="id_String" nullable="true"/>
         <mapperTableEntries name="quantity" type="id_String" nullable="true"/>
         <mapperTableEntries name="amount" type="id_String" nullable="true"/>
         <mapperTableEntries name="unitPrice" type="id_String" nullable="true"/>
         <mapperTableEntries name="bonusQuantity" type="id_String" nullable="true"/>
+        <mapperTableEntries name="requesterName" type="id_String" nullable="true"/>
         <mapperTableEntries name="invoiceNumber" type="id_String" nullable="true"/>
         <mapperTableEntries name="invoiceLineNumber" type="id_String" nullable="true"/>
         <mapperTableEntries name="transactionType" type="id_String" nullable="true"/>
         <mapperTableEntries name="batchNumber" type="id_String" nullable="true"/>
         <mapperTableEntries name="expiryDate" type="id_String" nullable="true"/>
         <mapperTableEntries name="creditReasonCode" type="id_String" nullable="true"/>
-        <mapperTableEntries name="locality" type="id_String" nullable="true"/>
         <mapperTableEntries name="speciality" type="id_String" nullable="true"/>
         <mapperTableEntries name="detailSpeciality" type="id_String" nullable="true"/>
         <mapperTableEntries name="typeOfInsurance" type="id_String" nullable="true"/>
         <mapperTableEntries name="numberOfBeds" type="id_String" nullable="true"/>
         <mapperTableEntries name="patientTreatmentDays" type="id_String" nullable="true"/>
         <mapperTableEntries name="numberOfPatients" type="id_String" nullable="true"/>
+        <mapperTableEntries name="adminArea1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="adminArea2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="locality" type="id_String" nullable="true"/>
+        <mapperTableEntries name="address" type="id_String" nullable="true"/>
+        <mapperTableEntries name="postalCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="indication" type="id_String" nullable="true"/>
+        <mapperTableEntries name="comment" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -575,15 +651,21 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="month"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="productProvider"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="productCode"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="productName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customer"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="customerCode"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="customerType"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerGroup"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -593,11 +675,7 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="bonusQuantity"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="productProvider"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customer"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ROWID"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="requesterName"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="invoiceNumber"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -611,8 +689,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="creditReasonCode"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="locality"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="speciality"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="detailSpeciality"/>
@@ -625,6 +701,18 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="numberOfPatients"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adminArea1"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adminArea2"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="locality"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="address"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ROWID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
@@ -634,31 +722,37 @@
       <column comment="" key="false" length="-1" name="fileHash" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="month" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productProvider" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerGroup" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="productProvider" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROWID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="requesterName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceLineNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="vendorBatchNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="expiryDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="speciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="detailSpeciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="typeOfInsurance" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfBeds" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="patientTreatmentDays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfPatients" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ROWID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="160">
@@ -701,31 +795,37 @@
       <column comment="" key="false" length="-1" name="fileHash" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="month" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productProvider" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerGroup" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="quantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="amount" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="unitPrice" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="bonusQuantity" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="productProvider" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROWID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="requesterName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="invoiceLineNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="transactionType" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="vendorBatchNumber" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="expiryDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="creditReasonCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="speciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="detailSpeciality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="typeOfInsurance" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfBeds" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="patientTreatmentDays" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="numberOfPatients" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminArea2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="locality" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="address" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ROWID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="32">
@@ -1446,6 +1546,30 @@
       <elementValue elementRef="TRACE_COLUMN" value="locality"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="address"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerGroup"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="adminArea1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="adminArea2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="requesterName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="comment"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="indication"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
@@ -1511,6 +1635,27 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="locality"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="address"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerGroup"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="locality"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="adminArea1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="adminArea2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="requesterName"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
