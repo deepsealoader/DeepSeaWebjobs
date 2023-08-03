@@ -88,7 +88,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:s1KMIJyqcirs3EMrvm0mjP2kgBVIQxvDyYRuNpU1" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:8H5O9e3MIXGiLKw6a35hdNtUiYh1/B9veBD0isco" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -123,7 +123,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:c9CeVPCXKpFEJMi8NNKdxQRyrY2pFVKV+K5E7TmY" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:U2++Ky/eZSFp0LCdmpsMPzstsTn4PnM2BJS+CByZ" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -538,9 +538,9 @@
       <column comment="" key="false" length="-1" name="ROWID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="date" expression="Clean.isNullOrEmpty(row9.date)  ? Clean.cleanDateYearMonth(row9.dateYear, row9.dateMonth, row9.batchDate) : Clean.cleanDate(row9.date, row9.batchDate) " type="id_String"/>
+        <mapperTableEntries name="date" expression="Clean.isNullOrEmpty(row9.date)  ? Clean.cleanDateYearMonth(row9.dateYear, row9.dateMonth, row9.batchDate) : Clean.cleanDate(row9.date, row9.batchDate, context.DEFAULT_DATE_FORMAT) " type="id_String"/>
         <mapperTableEntries name="productCode" expression="Clean.cleanString(row9.productCode, row9.productName) " type="id_String"/>
         <mapperTableEntries name="productName" expression="Clean.cleanString(row9.productName, row9.productCode) " type="id_String"/>
         <mapperTableEntries name="customerCode" expression="Clean.cleanString(row9.customerCode, row9.customerName) " type="id_String"/>

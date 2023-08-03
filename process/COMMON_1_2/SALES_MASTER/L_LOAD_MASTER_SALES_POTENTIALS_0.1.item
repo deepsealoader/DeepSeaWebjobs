@@ -25,7 +25,7 @@
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="APAC" internalId="_Y180D0oMEe2S6tYIBnb1mg"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="sales_objectiveqty" internalId="_8arDl2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="TABLE" prompt="TABLE?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="sales_potential" internalId="_8arDl2xLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="JOBNAME" prompt="JOBNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="LOAD_MASTER_SALES_POTENTIALS" internalId="_8arDmGxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore" internalId="_Y180EEoMEe2S6tYIBnb1mg"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="dG9ueS5zdGFya0BzZXJ2aWVyLmNvbTp0b255LnN0YXJr" internalId="_Y180EUoMEe2S6tYIBnb1mg"/>
@@ -38,6 +38,8 @@
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xms1024M&quot;,&quot;-Xmx4096M&quot;]}" show="false"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="160" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
@@ -80,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:Y1d3QrDk1rgV+xAc9bqWaFQCq8IkwGAo8SApwwXT" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:qIOOqg715p2M2R8uTYHgPO8PMfBdYZOrDXnJw9r5" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -115,7 +117,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mtH/UGhzwv02RZFi0zpARpaDp473MbUrhTPuVHVw" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:o3toOXjSLUAycqcAdAEnekNOao037ioMDAAwDvwV" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -403,36 +405,11 @@
       <column comment="" key="false" length="-1" name="potentialDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="potentialValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" name="row6">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="potentialId" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="geographyCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" name="row7">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" name="row13">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" name="row14">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="marketCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" name="row19">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geography" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="product" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
@@ -458,36 +435,11 @@
         <mapperTableEntries name="potentialDate" expression="TalendDate.TO_CHAR(Var.potentialDate, &quot;yyyy-MM-dd&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="potentialValue" expression="Var.potentialValue" type="id_String" nullable="true"/>
         <mapperTableEntries name="fiscalStartDate" expression="TalendDate.TO_CHAR(Var.fiscalStartDate, &quot;yyyy-MM-dd&quot;) " type="id_String" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="row6" expressionFilter="!Clean.isNullOrEmpty(row11.geographyCode)" activateExpressionFilter="true">
-        <mapperTableEntries name="businessKey" expression="Var.potentialId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="potentialId" expression="Var.potentialId " type="id_String"/>
-        <mapperTableEntries name="geographyCode" expression="row11.geographyCode " type="id_String"/>
-        <mapperTableEntries name="ROW_ID" expression="row11.rowId " type="id_String" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="row7" expressionFilter="!Clean.isNullOrEmpty(row11.sourceChannelCode)" activateExpressionFilter="true">
-        <mapperTableEntries name="businessKey" expression="Var.potentialId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="potentialId" expression="Var.potentialId " type="id_String" nullable="true"/>
-        <mapperTableEntries name="sourceChannelCode" expression="row11.sourceChannelCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ROW_ID" expression="row11.rowId " type="id_String" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="row13">
-        <mapperTableEntries name="businessKey" expression="Var.potentialId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="potentialId" expression="Var.potentialId " type="id_String" nullable="true"/>
-        <mapperTableEntries name="productCode" expression="row11.productCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ROW_ID" expression="row11.rowId " type="id_String" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="row14" expressionFilter="!Clean.isNullOrEmpty(row11.marketCode) &amp;&amp; !row11.marketCode.equals(&quot;ALL&quot;) &amp;&amp; !row11.marketCode.equals(&quot;SERVIER&quot;)" activateExpressionFilter="true" columnNameFilter="">
-        <mapperTableEntries name="businessKey" expression="Var.potentialId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="potentialId" expression="Var.potentialId " type="id_String" nullable="true"/>
-        <mapperTableEntries name="marketCode" expression="row11.marketCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ROW_ID" expression="row11.rowId " type="id_String" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="row19" expressionFilter="!Clean.isNullOrEmpty(row11.customerCode)" activateExpressionFilter="true">
-        <mapperTableEntries name="businessKey" expression="Var.potentialId" type="id_String" nullable="true"/>
-        <mapperTableEntries name="potentialId" expression="Var.potentialId " type="id_String" nullable="true"/>
-        <mapperTableEntries name="customerCode" expression="row11.customerCode " type="id_String" nullable="true"/>
-        <mapperTableEntries name="ROW_ID" expression="row11.rowId " type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer" expression="row11.customerCode  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="geography" expression="row11.geographyCode  " type="id_String"/>
+        <mapperTableEntries name="market" expression="(!row11.marketCode.equals(&quot;ALL&quot;) &amp;&amp; !row11.marketCode.equals(&quot;SERVIER&quot;)) ? row11.marketCode : null " type="id_String" nullable="true"/>
+        <mapperTableEntries name="product" expression="row11.productCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannel" expression="row11.sourceChannelCode  " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row11" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="rowId" type="id_String" nullable="true"/>
@@ -505,69 +457,9 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="672">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_6" show="false"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="customerCode"/>
-      <elementValue elementRef="INPUT_COLUMN" value="customerCode"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Deduplicate"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tAggregateRow_6">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="544">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_5" show="false"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="marketCode"/>
-      <elementValue elementRef="INPUT_COLUMN" value="marketCode"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Deduplicate"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tAggregateRow_5">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="marketCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="productCode"/>
       <elementValue elementRef="INPUT_COLUMN" value="productCode"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="marketCode"/>
@@ -582,8 +474,22 @@
       <elementValue elementRef="INPUT_COLUMN" value="potentialDate"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="fiscalStartDate"/>
       <elementValue elementRef="INPUT_COLUMN" value="fiscalStartDate"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="customer"/>
+      <elementValue elementRef="INPUT_COLUMN" value="customer"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="geography"/>
+      <elementValue elementRef="INPUT_COLUMN" value="geography"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="market"/>
+      <elementValue elementRef="INPUT_COLUMN" value="market"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="product"/>
+      <elementValue elementRef="INPUT_COLUMN" value="product"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="sourceChannel"/>
+      <elementValue elementRef="INPUT_COLUMN" value="sourceChannel"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="potentialValue"/>
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="potentialValue"/>
@@ -630,93 +536,11 @@
       <column comment="" key="false" length="-1" name="potentialDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="potentialValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_2" show="false"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="sourceChannelCode"/>
-      <elementValue elementRef="INPUT_COLUMN" value="sourceChannelCode"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Deduplicate"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tAggregateRow_2">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_3" show="false"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="geographyCode"/>
-      <elementValue elementRef="INPUT_COLUMN" value="geographyCode"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Deduplicate"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tAggregateRow_3">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="potentialId" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="geographyCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_4" show="false"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="potentialId"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="productCode"/>
-      <elementValue elementRef="INPUT_COLUMN" value="productCode"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Deduplicate"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tAggregateRow_4">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geography" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="product" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="32">
@@ -733,16 +557,16 @@
       <elementValue elementRef="KEY" value="&quot;ID&quot;"/>
       <elementValue elementRef="VALUE" value="&quot;3&quot;"/>
       <elementValue elementRef="KEY" value="&quot;startDate&quot;"/>
-      <elementValue elementRef="VALUE" value="row4.fiscalStartDate"/>
+      <elementValue elementRef="VALUE" value="row28.fiscalStartDate"/>
       <elementValue elementRef="KEY" value="&quot;endDate&quot;"/>
-      <elementValue elementRef="VALUE" value="TalendDate.TO_CHAR(TalendDate.TO_DATE(TalendDate.addDate(row4.fiscalStartDate, &quot;yyyy-MM-dd&quot;, 11, &quot;MM&quot;), &quot;yyyy-MM-dd&quot;), &quot;yyyy-MM-dd&quot;)"/>
+      <elementValue elementRef="VALUE" value="TalendDate.TO_CHAR(TalendDate.TO_DATE(TalendDate.addDate(row28.fiscalStartDate, &quot;yyyy-MM-dd&quot;, 11, &quot;MM&quot;), &quot;yyyy-MM-dd&quot;), &quot;yyyy-MM-dd&quot;)"/>
       <elementValue elementRef="KEY" value="&quot;fileHash&quot;"/>
       <elementValue elementRef="VALUE" value="globalMap.get(&quot;tDeepSeaList_1_CURRENT_HASH&quot;).toString()"/>
       <elementValue elementRef="KEY" value="&quot;recordSource&quot;"/>
       <elementValue elementRef="VALUE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
     </elementParameter>
     <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
-    <elementParameter field="TEXT" name="BATCH" value="1000"/>
+    <elementParameter field="TEXT" name="BATCH" value="500"/>
     <elementParameter field="TEXT" name="THREADNUM" value="0"/>
     <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
     <elementParameter field="CHECK" name="USE_LOG" value="false"/>
@@ -752,7 +576,7 @@
     <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_CATCH_EXCEPTION" value="false"/>
     <elementParameter field="CHECK" name="SEND_EMPTY_FILE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="WriteSalesObjectives"/>
+    <elementParameter field="TEXT" name="LABEL" value="WriteSalesPotentials"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPOutput_1">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -769,161 +593,11 @@
       <column comment="" key="false" length="-1" name="potentialDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="potentialValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="544">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_5" show="false"/>
-    <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
-    <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="REGION" value="context.getREGION()"/>
-    <elementParameter field="TEXT" name="RECORDCODE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
-    <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="TalendString.unionString(&quot;_&quot;, context.getTABLE(), &quot;market&quot;,  context.getCOUNTRY()).toLowerCase() "/>
-    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
-    <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
-    <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
-    <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
-    <elementParameter field="TEXT" name="BATCH" value="1000"/>
-    <elementParameter field="TEXT" name="THREADNUM" value="0"/>
-    <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
-    <elementParameter field="CHECK" name="USE_LOG" value="false"/>
-    <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_CATCH_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="SEND_EMPTY_FILE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="WriteSalesObjectivesMarket"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMCPOutput_5">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="marketCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="672">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_6" show="false"/>
-    <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
-    <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="REGION" value="context.getREGION()"/>
-    <elementParameter field="TEXT" name="RECORDCODE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
-    <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="TalendString.unionString(&quot;_&quot;, context.getTABLE(), &quot;customer&quot;,  context.getCOUNTRY()).toLowerCase() "/>
-    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
-    <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
-    <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
-    <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
-    <elementParameter field="TEXT" name="BATCH" value="1000"/>
-    <elementParameter field="TEXT" name="THREADNUM" value="0"/>
-    <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
-    <elementParameter field="CHECK" name="USE_LOG" value="false"/>
-    <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_CATCH_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="SEND_EMPTY_FILE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="WriteSalesObjectivesCustomer"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMCPOutput_6">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_3" show="false"/>
-    <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
-    <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="REGION" value="context.getREGION()"/>
-    <elementParameter field="TEXT" name="RECORDCODE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
-    <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="TalendString.unionString(&quot;_&quot;, context.getTABLE(), &quot;geography&quot;,  context.getCOUNTRY()).toLowerCase() "/>
-    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
-    <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
-    <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
-    <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
-    <elementParameter field="TEXT" name="BATCH" value="1000"/>
-    <elementParameter field="TEXT" name="THREADNUM" value="0"/>
-    <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
-    <elementParameter field="CHECK" name="USE_LOG" value="false"/>
-    <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_CATCH_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="SEND_EMPTY_FILE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="WriteSalesObjectivesGeography"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMCPOutput_3">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="potentialId" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="geographyCode" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_2" show="false"/>
-    <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
-    <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="REGION" value="context.getREGION()"/>
-    <elementParameter field="TEXT" name="RECORDCODE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
-    <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="TalendString.unionString(&quot;_&quot;, context.getTABLE(), &quot;sourcechannel&quot;,  context.getCOUNTRY()).toLowerCase() "/>
-    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
-    <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
-    <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
-    <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
-    <elementParameter field="TEXT" name="BATCH" value="1000"/>
-    <elementParameter field="TEXT" name="THREADNUM" value="0"/>
-    <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
-    <elementParameter field="CHECK" name="USE_LOG" value="false"/>
-    <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_CATCH_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="SEND_EMPTY_FILE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="WriteSalesObjectivesSourceChannel"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMCPOutput_2">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMCPOutput" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPOutput_4" show="false"/>
-    <elementParameter field="TEXT" name="URL_HOST" value="context.getMCP_HOSTNAME()"/>
-    <elementParameter field="TEXT" name="TOKENID" value="context.getMCP_AUTH_TOKEN()"/>
-    <elementParameter field="TEXT" name="REGION" value="context.getREGION()"/>
-    <elementParameter field="TEXT" name="RECORDCODE" value="globalMap.get(&quot;SOURCE&quot;).toString()"/>
-    <elementParameter field="TEXT" name="TABLEMAPPINGNAME" value="TalendString.unionString(&quot;_&quot;, context.getTABLE(), &quot;product&quot;,  context.getCOUNTRY()).toLowerCase() "/>
-    <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="USE_PARAMETERS" value="false"/>
-    <elementParameter field="TEXT" name="TABLEPARAMETERSNAME" value="" show="false"/>
-    <elementParameter field="TABLE" name="PARAMETERS" show="false"/>
-    <elementParameter field="TEXT" name="DATA_BLOCK" value="5000"/>
-    <elementParameter field="TEXT" name="BATCH" value="1000"/>
-    <elementParameter field="TEXT" name="THREADNUM" value="0"/>
-    <elementParameter field="TEXT" name="MAX_EXCEPTIONS" value="100"/>
-    <elementParameter field="CHECK" name="USE_LOG" value="false"/>
-    <elementParameter field="FILE" name="LOG_PATH" value="&quot;C:/Users/RRU_SG1/Desktop/mcp_log.xlsx&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOSTNAME" value="" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="" show="false"/>
-    <elementParameter field="CHECK" name="ENABLE_CATCH_EXCEPTION" value="true"/>
-    <elementParameter field="CHECK" name="SEND_EMPTY_FILE" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="WriteSalesObjectivesProduct"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMCPOutput_4">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="potentialId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ROW_ID" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geography" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="product" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="-96">
@@ -936,20 +610,36 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSetGlobalVar_2"/>
   </node>
-  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="800">
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="800">
+  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPExceptionCatcher_1" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_3"/>
+    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_1"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ExceptionGeography"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPExceptionCatcher_1">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="geographyCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="marketCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="potentialDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="potentialValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geography" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="product" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -958,13 +648,77 @@
       <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="800">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rr7Q8EoLEe2S6tYIBnb1mg-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="row4">
+      <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="row4" expressionFilter="row3.FIELD_NAME.equalsIgnoreCase(&quot;geography&quot;)" activateExpressionFilter="true">
+        <mapperTableEntries name="businessKey" expression="row3.businessKey" type="id_String"/>
+        <mapperTableEntries name="geographyCode" expression="row3.geographyCode " type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" expression="row3.ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" expression="row3.FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" expression="row3.FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" expression="row3.FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" expression="row3.FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" expression="row3.EXCEPTION" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="businessKey" type="id_String"/>
+        <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="marketCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute5" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialValue" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fiscalStartDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geography" type="id_String"/>
+        <mapperTableEntries name="market" type="id_String" nullable="true"/>
+        <mapperTableEntries name="product" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_7" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
       <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="objectiveId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="objectiveId"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="geographyCode"/>
       <elementValue elementRef="INPUT_COLUMN" value="geographyCode"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="FIELD_NAME"/>
@@ -991,17 +745,16 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_7">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="geographyCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="800">
+  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaException_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="REASON" value="&quot;GeographyCode not found in Geography master file&quot;"/>
@@ -1017,26 +770,41 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDeepSeaException_1">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="geographyCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="928">
+  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPExceptionCatcher_2" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_2"/>
+    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_1"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ExceptionSourceChannel"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPExceptionCatcher_2">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="sourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="marketCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="potentialDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="potentialValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geography" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="product" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1045,13 +813,77 @@
       <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="928">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rr7Q8EoLEe2S6tYIBnb1mg-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="row6">
+      <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="row6" expressionFilter="row5.FIELD_NAME.equalsIgnoreCase(&quot;sourceChannel&quot;)" activateExpressionFilter="true">
+        <mapperTableEntries name="businessKey" expression="row5.businessKey" type="id_String"/>
+        <mapperTableEntries name="sourceChannelCode" expression="row5.sourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" expression="row5.ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" expression="row5.FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" expression="row5.FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" expression="row5.FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" expression="row5.FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" expression="row5.EXCEPTION" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="businessKey" type="id_String"/>
+        <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="marketCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute5" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialValue" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fiscalStartDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geography" type="id_String"/>
+        <mapperTableEntries name="market" type="id_String" nullable="true"/>
+        <mapperTableEntries name="product" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_8" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
       <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="objectiveId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="objectiveId"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="sourceChannelCode"/>
       <elementValue elementRef="INPUT_COLUMN" value="sourceChannelCode"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="FIELD_NAME"/>
@@ -1078,17 +910,16 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_8">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="sourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="928">
+  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaException_2" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="REASON" value="&quot;sourceChannelCode not found in SourceChannel master file&quot;"/>
@@ -1104,26 +935,41 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDeepSeaException_2">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="sourceChannelCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="1056">
+  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPExceptionCatcher_3" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_4"/>
+    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_1"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ExceptionProduct"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPExceptionCatcher_3">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="marketCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="potentialDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="potentialValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geography" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="product" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1132,13 +978,77 @@
       <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="1056">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rr7Q8EoLEe2S6tYIBnb1mg-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="row7">
+      <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="row7" expressionFilter="row16.FIELD_NAME.equalsIgnoreCase(&quot;product&quot;)" activateExpressionFilter="true">
+        <mapperTableEntries name="businessKey" expression="row16.businessKey" type="id_String"/>
+        <mapperTableEntries name="productCode" expression="row16.productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" expression="row16.ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" expression="row16.FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" expression="row16.FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" expression="row16.FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" expression="row16.FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" expression="row16.EXCEPTION" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row16" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="businessKey" type="id_String"/>
+        <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="marketCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute5" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialValue" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fiscalStartDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geography" type="id_String"/>
+        <mapperTableEntries name="market" type="id_String" nullable="true"/>
+        <mapperTableEntries name="product" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_9" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
       <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="objectiveId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="objectiveId"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="productCode"/>
       <elementValue elementRef="INPUT_COLUMN" value="productCode"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="FIELD_NAME"/>
@@ -1165,17 +1075,16 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_9">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="1056">
+  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaException_3" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="REASON" value="&quot;productCode not found in Product master file&quot;"/>
@@ -1191,26 +1100,41 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDeepSeaException_3">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="productCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="1184">
+  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPExceptionCatcher_4" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_5"/>
+    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_1"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ExceptionMarket"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPExceptionCatcher_4">
-      <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="marketCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="marketCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="potentialDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="potentialValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geography" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="product" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1219,13 +1143,77 @@
       <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="1184">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rr7Q8EoLEe2S6tYIBnb1mg-tMap_5-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="row9">
+      <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="marketCode" nullable="true" pattern="" precision="0" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="row9" expressionFilter="row18.FIELD_NAME.equalsIgnoreCase(&quot;market&quot;)" activateExpressionFilter="true">
+        <mapperTableEntries name="businessKey" expression="row18.businessKey" type="id_String"/>
+        <mapperTableEntries name="marketCode" expression="row18.marketCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" expression="row18.ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" expression="row18.FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" expression="row18.FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" expression="row18.FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" expression="row18.FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" expression="row18.EXCEPTION" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row18" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="businessKey" type="id_String"/>
+        <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="marketCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute5" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialValue" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fiscalStartDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geography" type="id_String"/>
+        <mapperTableEntries name="market" type="id_String" nullable="true"/>
+        <mapperTableEntries name="product" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_10" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
       <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="objectiveId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="objectiveId"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="marketCode"/>
       <elementValue elementRef="INPUT_COLUMN" value="marketCode"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="FIELD_NAME"/>
@@ -1252,17 +1240,16 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_10">
       <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="1184">
+  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaException_4" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="REASON" value="&quot;Market not found in the MarketHierarchy master file&quot;"/>
@@ -1278,26 +1265,41 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDeepSeaException_4">
       <column comment="" key="true" length="-1" name="businessKey" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="marketCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="1312">
+  <node componentName="tMCPExceptionCatcher" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPExceptionCatcher_5" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_6"/>
+    <elementParameter field="COMPONENT_LIST" name="OUTPUT_NAME" value="tMCPOutput_1"/>
     <elementParameter field="CHECK" name="DIE_IF_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="ExceptionCustomer"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPExceptionCatcher_5">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="productCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="marketCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="sourceChannelCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geographyCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="customerCode" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute1" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute2" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute3" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute4" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="attribute5" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="potentialDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="potentialValue" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="fiscalStartDate" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customer" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="geography" nullable="false" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="market" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="product" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sourceChannel" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1306,13 +1308,77 @@
       <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="1312">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="672">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_rr7Q8EoLEe2S6tYIBnb1mg-tMap_6-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="row10">
+      <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="row10" expressionFilter="row21.FIELD_NAME.equalsIgnoreCase(&quot;customer&quot;)" activateExpressionFilter="true">
+        <mapperTableEntries name="businessKey" expression="row21.businessKey" type="id_String"/>
+        <mapperTableEntries name="customerCode" expression="row21.customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" expression="row21.ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" expression="row21.FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" expression="row21.FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" expression="row21.FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" expression="row21.FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" expression="row21.EXCEPTION" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row21" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="businessKey" type="id_String"/>
+        <mapperTableEntries name="productCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="marketCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannelCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geographyCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customerCode" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute3" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute4" type="id_String" nullable="true"/>
+        <mapperTableEntries name="attribute5" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="potentialValue" type="id_String" nullable="true"/>
+        <mapperTableEntries name="fiscalStartDate" type="id_String" nullable="true"/>
+        <mapperTableEntries name="customer" type="id_String" nullable="true"/>
+        <mapperTableEntries name="geography" type="id_String"/>
+        <mapperTableEntries name="market" type="id_String" nullable="true"/>
+        <mapperTableEntries name="product" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sourceChannel" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ROW_ID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NAME" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_NEW_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIELD_OLD_VALUE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EXCEPTION" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_11" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="businessKey"/>
       <elementValue elementRef="INPUT_COLUMN" value="businessKey"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="objectiveId"/>
-      <elementValue elementRef="INPUT_COLUMN" value="objectiveId"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="customerCode"/>
       <elementValue elementRef="INPUT_COLUMN" value="customerCode"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="FIELD_NAME"/>
@@ -1339,17 +1405,16 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_11">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="1312">
+  <node componentName="tDeepSeaException" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="672">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDeepSeaException_5" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION_NAME" value="tDeepSeaConnect_1"/>
     <elementParameter field="TEXT" name="REASON" value="&quot;customerCode nout found in Customer master file&quot;"/>
@@ -1365,17 +1430,16 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDeepSeaException_5">
       <column comment="" key="true" length="-1" name="businessKey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="objectiveId" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customerCode" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="ROW_ID" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NAME" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_NEW_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="FIELD_OLD_VALUE" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column key="false" length="255" name="EXCEPTION" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMCPDie" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="1440">
+  <node componentName="tMCPDie" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMCPDie_1" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMCPDie_1"/>
@@ -1488,7 +1552,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="row2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tAggregateRow_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="row2" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tAggregateRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="jobTitleEn"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1649,214 +1713,419 @@
       <elementValue elementRef="TRACE_COLUMN" value="potentialDate"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="market"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geography"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="row6" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tAggregateRow_3">
+  <connection connectorName="FLOW" label="row28" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMCPOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="businessKey"/>
+      <elementValue elementRef="TRACE_COLUMN" value="market"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="potentialId"/>
+      <elementValue elementRef="TRACE_COLUMN" value="geography"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ROWID"/>
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannel"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
+      <elementValue elementRef="TRACE_COLUMN" value="customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row28" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="row7" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tMap_1" target="tAggregateRow_2">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="potentialId"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tMCPExceptionCatcher_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="row13" offsetLabelX="0" offsetLabelY="0" outputId="4" source="tMap_1" target="tAggregateRow_4">
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tMCPExceptionCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_1" target="tMap_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="ROWID"/>
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannelCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
+      <elementValue elementRef="TRACE_COLUMN" value="product"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="row14" offsetLabelX="0" offsetLabelY="0" outputId="5" source="tMap_1" target="tAggregateRow_5">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="marketCode"/>
+      <elementValue elementRef="TRACE_COLUMN" value="geographyCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row19" lineStyle="0" metaname="row19" offsetLabelX="0" offsetLabelY="0" outputId="6" source="tMap_1" target="tAggregateRow_6">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row19" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row20" lineStyle="0" metaname="tAggregateRow_6" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_6" target="tMCPOutput_6">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="marketCode"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="rowId"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row20" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row17" lineStyle="0" metaname="tAggregateRow_5" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_5" target="tMCPOutput_5">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="marketCode"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row17" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMCPOutput_1">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="fiscalStartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="market"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="attribute5"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TRACE_COLUMN" value="geography"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="businessKey"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="attribute1"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tAggregateRow_2" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_2" target="tMCPOutput_2">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="marketCode"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="rowId"/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialValue"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tAggregateRow_3" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_3" target="tMCPOutput_3">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="ROW_ID"/>
+      <elementValue elementRef="TRACE_COLUMN" value="customer"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tAggregateRow_4" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_4" target="tMCPOutput_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tMCPExceptionCatcher_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tMCPExceptionCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_1" target="tAggregateRow_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMCPExceptionCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_1" target="tMCPExceptionCatcher_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="row4" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tAggregateRow_7">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="objectiveId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="row22" lineStyle="0" metaname="tAggregateRow_7" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_7" target="tDeepSeaException_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row22" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tMCPExceptionCatcher_2" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_2" target="tAggregateRow_8">
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tMCPExceptionCatcher_2" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_2" target="tMap_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannelCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geographyCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fiscalStartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="market"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geography"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="businessKey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="marketCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialValue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMCPExceptionCatcher_2" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_2" target="tMCPExceptionCatcher_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="row6" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tAggregateRow_8">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="row23" lineStyle="0" metaname="tAggregateRow_8" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_8" target="tDeepSeaException_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row23" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tMCPExceptionCatcher_3" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_3" target="tAggregateRow_9">
+  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tMCPExceptionCatcher_3" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_3" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannelCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geographyCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fiscalStartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="market"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geography"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="businessKey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="marketCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialValue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMCPExceptionCatcher_3" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_3" target="tMCPExceptionCatcher_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="row7" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tAggregateRow_9">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="row24" lineStyle="0" metaname="tAggregateRow_9" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_9" target="tDeepSeaException_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row24" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row18" lineStyle="0" metaname="tMCPExceptionCatcher_4" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_4" target="tAggregateRow_10">
+  <connection connectorName="FLOW" label="row18" lineStyle="0" metaname="tMCPExceptionCatcher_4" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_4" target="tMap_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannelCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geographyCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fiscalStartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="market"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geography"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="businessKey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="marketCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialValue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row18" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMCPExceptionCatcher_4" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_4" target="tMCPExceptionCatcher_5">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="row9" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tAggregateRow_10">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="row25" lineStyle="0" metaname="tAggregateRow_10" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_10" target="tDeepSeaException_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row25" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row21" lineStyle="0" metaname="tMCPExceptionCatcher_5" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_5" target="tAggregateRow_11">
+  <connection connectorName="FLOW" label="row21" lineStyle="0" metaname="tMCPExceptionCatcher_5" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_5" target="tMap_6">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannelCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="product"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geographyCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="fiscalStartDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialDate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="sourceChannel"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customerCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="market"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="productCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="geography"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="businessKey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="marketCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="attribute2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="potentialValue"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="customer"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row21" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMCPExceptionCatcher_5" offsetLabelX="0" offsetLabelY="0" source="tMCPExceptionCatcher_5" target="tMCPDie_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="row10" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tAggregateRow_11">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row26" lineStyle="0" metaname="tAggregateRow_11" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_11" target="tDeepSeaException_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>

@@ -2,7 +2,7 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseajp@servier.com" internalId="_9EnYcGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:NxHsQyXy7x1z3l4IYfcn1WaijRUSpXgT8V31wYbg67sK8b93ZkOUORK8XfI=" internalId="_9EnYcWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:kLkehP8HfTZRwN27g4WE8+4tTCsysHk3c+VXnqVVleiwYs0MZT1IvC1W+JQ=" internalId="_9EnYcWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SUZUKEN" internalId="_9EnYcmxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan" internalId="_qXX9cG3QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c=" internalId="_qXX9cW3QEeyAt8V_vYUtoQ"/>
@@ -13,10 +13,11 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3" internalId="_qXX9dm3QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC" internalId="_qXX9d23QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="EMAIL_FROM" prompt="EMAIL_FROM?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="romuald\.rousseau@servier\.com" internalId="_vBywUAb-Ee2UPr2OZ-3mOQ"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="romuald.rousseau@servier.com" internalId="_JTJM8MLrEe2-f7NwYBI5QQ"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseajp@servier.com" internalId="_9EnYdGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:Hokqwprmeh4cq4aKdzkOqaFWSSm2K7vW5zxC8jZH5xirmcWNkQlBIy45ATs=" internalId="_9EnYdWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:risqMPRbRIalRrepoTqrgds1aBo6Rna7NTqypBybZior8y3T3k1UPxxROhE=" internalId="_9EnYdWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SUZUKEN" internalId="_9EnYdmxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan" internalId="_qXX9eG3QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c=" internalId="_qXX9eW3QEeyAt8V_vYUtoQ"/>
@@ -27,10 +28,11 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3" internalId="_qXX9fm3QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC" internalId="_qXX9f23QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="EMAIL_FROM" prompt="EMAIL_FROM?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="kiyokazu\.ishikawa@servier\.com" internalId="_vBywUQb-Ee2UPr2OZ-3mOQ"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="romuald.rousseau@servier.com;maxime.perrot@servier.com;kiyokazu.ishikawa@servier.com;mariko.senoo.part@servier.com;shigeru.okada@servier.com" internalId="_JTJM8cLrEe2-f7NwYBI5QQ"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseajp@servier.com" internalId="_9EnYeGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:uKuOQaEgZVe6QzF9ibr4Evo64Qj/EUwABmrwx3dklJwLxT8NoLGekBRqEeM=" internalId="_9EnYeWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:ZnWSZL0pD+ZARFr6QGuPDCZyD8bkiFi2toRTWg9DV/HCdXYNxy2OkYW7S1A=" internalId="_9EnYeWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SUZUKEN" internalId="_9EnYemxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan" internalId="_qXX9gG3QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c=" internalId="_qXX9gW3QEeyAt8V_vYUtoQ"/>
@@ -41,6 +43,7 @@
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3" internalId="_qXX9hm3QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC" internalId="_qXX9h23QEeyAt8V_vYUtoQ"/>
     <contextParameter comment="" name="EMAIL_FROM" prompt="EMAIL_FROM?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="kiyokazu\.ishikawa@servier\.com" internalId="_vBzXYAb-Ee2UPr2OZ-3mOQ"/>
+    <contextParameter comment="" name="EMAIL_TO" prompt="EMAIL_TO?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="romuald.rousseau@servier.com;maxime.perrot@servier.com;kiyokazu.ishikawa@servier.com;mariko.senoo.part@servier.com;shigeru.okada@servier.com" internalId="_JTJM8sLrEe2-f7NwYBI5QQ"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -86,7 +89,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:KR75wjCk1Io5GsJygIjzKGr8jEZEGECStdSqTyuc" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:EFyvmqI3bquI9p3QKyBEIil6LHvN6O8Bqgj1t1Ke" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -121,7 +124,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:0Mkv3d97XMa6h83kJxW/95eYZbvBsQIZtyllP5l2" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:MtujA1imAZLJQqgCZLhKLDLeaIQXq8tQdam9U78A" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -235,7 +238,7 @@
     <elementParameter field="CHECK" name="EXTRACTPATH" value="false"/>
     <elementParameter field="CHECK" name="CHECKPASSWORD" value="true"/>
     <elementParameter field="CLOSED_LIST" name="DECRYPT_METHOD" value="ZIP4J_DECRYPT"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:MYoFJ0/VZ6EV08TjrIBFQ6tmjOpWn5Z/dnrya60D8DPH27N/uQ=="/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Ome355XfV1441iz0VoWrAqM6oE2deewgJpntqi+lRqvmvpemVw=="/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="CHECK" name="PRINTOUT" value="true"/>
     <elementParameter field="CHECK" name="USE_ENCODING" value="true"/>
@@ -282,8 +285,6 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;).toString()"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="JOBNAME"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="jobName"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="EMAIL_TO"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;romuald.rousseau@servier.com;maxime.perrot@servier.com;kiyokazu.ishikawa@servier.com;mariko.senoo.part@servier.com&quot;"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>

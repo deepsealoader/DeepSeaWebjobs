@@ -1,55 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Production_Test" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SUZUKEN" internalId="_8hXhcGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HANWHA" internalId="_8hXhcGxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Users/RRU_SG1/Downloads/test" internalId="_8hXhcWxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="*.xlsx" internalId="_8hXhcmxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Onivyde" internalId="_8hXhc2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Cust_Sales_*.CSV" internalId="_8hXhcmxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_8hXhc2xLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="INPUT_DATE_FORMAT" prompt="INPUT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="yyyyMMdd" internalId="_8hXhdGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="BILLING_AS_BATCH" prompt="BILLING_AS_BATCH?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="false" internalId="_8hXhdWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="BILLING_AS_BATCH" prompt="BILLING_AS_BATCH?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true" internalId="_8hXhdWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="BILLING_SHIFT_DAYS" prompt="BILLING_SHIFT_DAYS?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0" internalId="_8hXhdmxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan" internalId="_Hqct4Ai8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c=" internalId="_Hqct4Qi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net" internalId="_Hqct4gi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="yyyyMMdd" internalId="_Hqct4wi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_Hqct5Ai8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp" internalId="_Hqct5Qi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3" internalId="_Hqct5gi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC" internalId="_Hqct5wi8Ee2M7Kk1-sF1kg"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_BahLUCCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_BahLUSCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net" internalId="_BahLUiCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_BahLUyCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_BahLVCCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp" internalId="_BahLVSCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_BahLViCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_BahLVyCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="OUTPUT_SUFFIX" prompt="OUTPUT_SUFFIX?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".xlsx" internalId="_3fQxMCCYEe6vfv3SZfUx5Q"/>
   </context>
   <context confirmationNeeded="false" name="Production">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SUZUKEN" internalId="_8hXhd2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HANWHA" internalId="_8hXhd2xLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Users/RRU_SG1/Downloads/test" internalId="_8hXheGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="*.xlsx" internalId="_8hXheWxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Onivyde" internalId="_8hXhemxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Cust_Sales_*.CSV" internalId="_8hXheWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_8hXhemxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="INPUT_DATE_FORMAT" prompt="INPUT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="yyyyMMdd" internalId="_8hXhe2xLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="BILLING_AS_BATCH" prompt="BILLING_AS_BATCH?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="false" internalId="_8hXhfGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="BILLING_AS_BATCH" prompt="BILLING_AS_BATCH?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true" internalId="_8hXhfGxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="BILLING_SHIFT_DAYS" prompt="BILLING_SHIFT_DAYS?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0" internalId="_8hXhfWxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan" internalId="_HqdU8Ai8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c=" internalId="_HqdU8Qi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://localhost:8080" internalId="_HqdU8gi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="yyyyMMdd" internalId="_HqdU8wi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_HqdU9Ai8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="http://deepsea-mcp.privatelink.servier.com" internalId="_HqdU9Qi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3" internalId="_HqdU9gi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC" internalId="_HqdU9wi8Ee2M7Kk1-sF1kg"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_BahLWCCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_BahLWSCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="http://localhost:8080" internalId="_BahLWiCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_BahLWyCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_BahLXCCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="http://deepsea-mcp.privatelink.servier.com" internalId="_BahLXSCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_BahLXiCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_BahLXyCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="OUTPUT_SUFFIX" prompt="OUTPUT_SUFFIX?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".xlsx" internalId="_3fQxMSCYEe6vfv3SZfUx5Q"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
-    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SUZUKEN" internalId="_8hXhfmxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="HANWHA" internalId="_8hXhfmxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="INPUT_FILEPATH" prompt="INPUT_FILEPATH?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="C:/Users/RRU_SG1/Downloads/test" internalId="_8hXhf2xLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="*.xlsx" internalId="_8hXhgGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Onivyde" internalId="_8hXhgWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="INPUT_FILEMASK" prompt="INPUT_FILEMASK?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="Cust_Sales_*.CSV" internalId="_8hXhgGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="INPUT_PASSWORD" prompt="INPUT_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_8hXhgWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="INPUT_DATE_FORMAT" prompt="INPUT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="yyyyMMdd" internalId="_8hXhgmxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="BILLING_AS_BATCH" prompt="BILLING_AS_BATCH?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="false" internalId="_8hXhg2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="BILLING_AS_BATCH" prompt="BILLING_AS_BATCH?" promptNeeded="false" repositoryContextId="built-in" type="id_Boolean" value="true" internalId="_8hXhg2xLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="BILLING_SHIFT_DAYS" prompt="BILLING_SHIFT_DAYS?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0" internalId="_8hXhhGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="Japan" internalId="_HqdU-Ai8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="YmxhY2sud2lkb3dAc2Vydmllci5jb206YmxhY2sud2lkb3c=" internalId="_HqdU-Qi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://deepsealoader.servier.com" internalId="_HqdU-gi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="yyyyMMdd" internalId="_HqdU-wi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_HqdU_Ai8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="https://deepsealoader.servier.com/mcp" internalId="_HqdU_Qi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="3" internalId="_HqdU_gi8Ee2M7Kk1-sF1kg"/>
-    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_QpMWYJZPEeqr3aHcaxh4lw" type="id_String" value="APAC" internalId="_HqdU_wi8Ee2M7Kk1-sF1kg"/>
+    <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="Korea" internalId="_BahLYCCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEEPSEA_AUTH_TOKEN" prompt="DEEPSEA_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="ZGVlcHNlYWtyQHNlcnZpZXIuY29tOmRlZXBzZWFrcg==" internalId="_BahLYSCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEEPSEA_HOSTNAME" prompt="DEEPSEA_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://deepsealoader.servier.com" internalId="_BahLYiCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="DEFAULT_DATE_FORMAT" prompt="DEFAULT_DATE_FORMAT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="yyyyMMdd" internalId="_BahLYyCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="MCP_AUTH_TOKEN" prompt="MCP_AUTH_TOKEN?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3bd200cb-c39b-49b8-a1f4-9011ef007c2e" internalId="_BahLZCCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="https://deepsealoader.servier.com/mcp" internalId="_BahLZSCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="3" internalId="_BahLZiCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="REGION" prompt="REGION?" promptNeeded="false" repositoryContextId="_ZBQOMFP9EeycebRi9GC5bQ" type="id_String" value="APAC" internalId="_BahLZyCXEe6vfv3SZfUx5Q"/>
+    <contextParameter comment="" name="OUTPUT_SUFFIX" prompt="OUTPUT_SUFFIX?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".xlsx" internalId="_3fQxMiCYEe6vfv3SZfUx5Q"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -95,7 +98,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:G2vhjLTeQm38HhLQWLsDltYZDc+Y6E2RiygR0gy7" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:GHDKrVgrzf5p2A/dc8yF+zfA2bVtrtdomPwCF3YN" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -130,7 +133,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Tjmc586CkT0ZwUk1vxaqTSjN1CqyBd7Okpc5m1Cs" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1OCiIti29oHE2/biEHpv87MggrdXMHr24kg4naZc" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -311,7 +314,7 @@
       <elementValue elementRef="POS" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:8youKZOeb8VVu5jDGELPFQzptKAH/feM4w5b99ehHjL4/D93Sj5jtY7eg2Du8wHPgRhPBaIoOQ==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:NxSFBmL39eYz8zCJ9957V+vblibcgCdsgMJvT3Bw7A24bN2lI8G2YbkyEjwodPiKWs2E0n1FBg==" show="false"/>
     <elementParameter field="TEXT" name="TIMEOUT" value="1800"/>
     <elementParameter field="TEXT" name="LABEL" value="SampleDate"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -384,11 +387,11 @@
     <elementParameter field="TEXT" name="COLLECTION_NAME" value="globalMap.get(&quot;COLLECTION&quot;).toString()"/>
     <elementParameter field="CLOSED_LIST" name="FILE_MODE" value="CREATE"/>
     <elementParameter field="CHECK" name="RENAME_FILE" value="true"/>
-    <elementParameter field="FILE" name="NEW_FILE_NAME" value="globalMap.get(&quot;COLLECTION&quot;).toString() + &quot;-&quot; +(context.getBILLING_AS_BATCH() ? globalMap.get(&quot;BATCH_DATE&quot;).toString() : globalMap.get(&quot;BILLING_DATE&quot;).toString()) +  &quot;.xlsx&quot;"/>
+    <elementParameter field="FILE" name="NEW_FILE_NAME" value="globalMap.get(&quot;COLLECTION&quot;).toString() + &quot;-&quot; +(context.getBILLING_AS_BATCH() ? globalMap.get(&quot;BATCH_DATE&quot;).toString() : globalMap.get(&quot;BILLING_DATE&quot;).toString()) + context.getOUTPUT_SUFFIX()"/>
     <elementParameter field="CHECK" name="USE_BATCH_DATE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_DATE" value="globalMap.get(&quot;BATCH_DATE&quot;).toString()"/>
     <elementParameter field="CHECK" name="USE_PASSWORD" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:r6dsiiZRdRjYrnpE9/Lz4SQV0Mu5oUCkzikqFDivd5cBmgjS4MPe2O+AsbJf3kuE35dqyVDUpA==" show="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:D8F0DA0AmIEuWltysowBg2FlDc0v1TXaIrHZqiyB9hxyQNvzGKoLwM8h0aOGjZWd9hyT3pCXXA==" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tDeepSeaConnect_1">
