@@ -9,8 +9,9 @@
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="https://em50-dev-prm-webapp004.azurewebsites.net/mcp" internalId="_11V3pVnHEe2yxonLQFAbaw"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="4" internalId="_11V3plnHEe2yxonLQFAbaw"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseasg@servier.com" internalId="_9oC1oGxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:7vH5AwDns2HFPnPOpHpMz6XK3IYLfBcbhIBnh93G6uCUFJjh8OOyAmB5xBA=" internalId="_9oC1oWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:NMjjMFBuCjIPuAPJHwhAK5U91fjhj7h7J+2/5398iKZNpHRkVWkupAM6dCM=" internalId="_9oC1oWxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ZUELLIG" internalId="_9oC1omxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="WEBJOB" prompt="WEBJOB?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SINGAPORE_GET_DAILY_SALES_ZUELLIG" internalId="_QGrKAEVzEe6uGaBmygHvbg"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore" internalId="_11WesVnHEe2yxonLQFAbaw"/>
@@ -21,8 +22,9 @@
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="http://deepsea-mcp.privatelink.servier.com" internalId="_11WetlnHEe2yxonLQFAbaw"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="4" internalId="_11Wet1nHEe2yxonLQFAbaw"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseasg@servier.com" internalId="_9oC1o2xLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:21edX+cRGRTAFcuGr5gfx5pzYT8b8qCvvddF2JljJaLCkSCE9kDBO6iiiGY=" internalId="_9oC1pGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:d+TxpbOxGZvidqYMbkQU3gi40Ev8xlOGeCEPDGo2ZdCv4JUUGNTGmLSEp58=" internalId="_9oC1pGxLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ZUELLIG" internalId="_9oC1pWxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="WEBJOB" prompt="WEBJOB?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SINGAPORE_GET_DAILY_SALES_ZUELLIG" internalId="_QGrxEEVzEe6uGaBmygHvbg"/>
   </context>
   <context confirmationNeeded="false" name="Production_Test">
     <contextParameter comment="" name="COUNTRY" prompt="COUNTRY?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="Singapore" internalId="_11WeuVnHEe2yxonLQFAbaw"/>
@@ -33,8 +35,9 @@
     <contextParameter comment="" name="MCP_HOSTNAME" prompt="MCP_HOSTNAME?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="https://deepsealoader.servier.com/mcp" internalId="_11WevlnHEe2yxonLQFAbaw"/>
     <contextParameter comment="" name="PRODUCT_LEVEL_CNT" prompt="PRODUCT_LEVEL_CNT?" promptNeeded="false" repositoryContextId="_OzYD4HPXEeqnJtdr_73J6A" type="id_String" value="4" internalId="_11Wev1nHEe2yxonLQFAbaw"/>
     <contextParameter comment="" name="EMAIL_USERNAME" prompt="EMAIL_USERNAME?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="deepseasg@servier.com" internalId="_9oC1pmxLEey5BJL-O6zF0w"/>
-    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:znVFe4ofqq8OHEXAwYUJF3uhgj+miLT6PSTk8mFJeb2pHTWFyBTadEq0zco=" internalId="_9oC1p2xLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="EMAIL_PASSWORD" prompt="EMAIL_PASSWORD?" promptNeeded="false" repositoryContextId="built-in" type="id_Password" value="enc:system.encryption.key.v1:5/InhNyX5VXIczO5oiwLm4Ls3wjDFn9S5yZib0VoyyXqWovUOJS5pBYQ1A4=" internalId="_9oC1p2xLEey5BJL-O6zF0w"/>
     <contextParameter comment="" name="PROVIDER" prompt="PROVIDER?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="ZUELLIG" internalId="_9oC1qGxLEey5BJL-O6zF0w"/>
+    <contextParameter comment="" name="WEBJOB" prompt="WEBJOB?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="SINGAPORE_GET_DAILY_SALES_ZUELLIG" internalId="_QGrxEUVzEe6uGaBmygHvbg"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -80,7 +83,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:3O/KEgU2MUckpIIBPG+3Sz3TAxHoypkPvS1buFOA" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:leh0fkM8PzxdW4LAFqRZjlZJcUlFUctN5GlrZS6N" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -115,7 +118,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:xvWGpQwXQVCOF1MZlR069ZHwDZeIat2Nk3q2Rn9R" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:pk4y92h/Hj14H21fSse9zaoV2BdoWcY8pPtjwpbO" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -160,8 +163,6 @@
     <elementParameter field="TABLE" name="CONTEXTPARAMS">
       <elementValue elementRef="PARAM_NAME_COLUMN" value="EMAIL_FROM"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="&quot;.+&quot;"/>
-      <elementValue elementRef="PARAM_NAME_COLUMN" value="JOBNAME"/>
-      <elementValue elementRef="PARAM_VALUE_COLUMN" value="jobName"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="true"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
